@@ -1,3 +1,11 @@
+<!-- 
+	**PCL2新闻主页**
+	By： Light Beacon（最亮的信标）
+	订阅地址：http://news.lightbeacon.top
+	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
+	协议：CC BY-NC-SA 3.0
+-->
+
 <StackPanel Margin="0,-10,0,0">
 <!--Animations Starts-->
 <StackPanel.Triggers>
@@ -172,6 +180,7 @@
 
 </StackPanel.Resources>
 <!--Styles Ends-->
+
 <!--Hints Starts-->
 <Border Margin="0,0,0,10" Height="30" Padding="2" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
 	<Grid Margin="10,0,0,0">
@@ -184,29 +193,6 @@
 	</Grid>
 </Border>
 <!--Hints Ends-->
-
-<!--<local:MyCard Margin="0,0,0,15" Title="📌⚠新闻主页服务器即将迁移">
-	<Border Background="#99ee6666" CornerRadius="4">
-		<StackPanel Margin="30,40,30,10">
-		<TextBlock Foreground="#883c4f" Text="        抱歉，由于服务器问题，新闻主页将于1/31后进行迁移，请在PCLII->设置->个性化->主页->联网更新中使用临时地址：" Padding="30,0,0,0" Margin="0,0,0,5"/>
-		<TextBox Text="http://image.lightbeacon.top:1142/News.xaml" FontSize="16" Foreground="#883c4f" Margin="25,0,0,0" FontWeight="Bold"/>
-		<TextBlock Foreground="#883c4f" Text="（↑右键可复制）" Padding="30,0,0,0" Margin="0,5,0,0" FontSize="12"/>
-		<TextBlock Foreground="#883c4f" Text="        本地址已停更 请使用最新地址。" Padding="30,0,0,0" Margin="0,5,0,0"/>
-	</StackPanel>
-	</Border>
-</local:MyCard>-->
-
-<!--<local:MyCard Margin="0,0,0,15" Title="正版验证服务器状态" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="60,40,30,10" Orientation="Horizontal">
-		<Image Source="http://image.lightbeacon.top:1142/authstats.png" Height="100"/>
-		<StackPanel Margin="20,0,20,0">
-		<TextBlock Margin="2" Text="Mojang提供的Mojang正版验证服务器状态" FontSize="18"/>
-		<TextBlock Margin="2" Text="每分钟更新一次，需要更新请重启启动器" FontSize="14"/>
-		<TextBlock Margin="2" Text="(将会在未来版本中不断完善)" FontSize="12"/>
-		<local:MyButton Margin="0,10,0,0" Height="30" Text="刷新" EventType="刷新主页"/>
-		</StackPanel>
-	</StackPanel>
-</local:MyCard>-->
 
 <!--Tmp News-->
 
@@ -238,9 +224,9 @@
 	</StackPanel>
 </local:MyCard>
 
-
+‏‍‌‎<!--Latest Version﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿-->
 <!--21w11a-->
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w15a" CanSwap="True">
+<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎‌‎1w15a" CanSwap="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -397,7 +383,7 @@
 </Grid>
 
 <!--1.16.5-->
-<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎.16.5" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌‎.16.5" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -740,7 +726,7 @@
 </Grid>
 
 <!--21w14a-->
-<local:MyCard Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w14a" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="21w14a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -799,7 +785,7 @@
 </local:MyCard>
 
 <!--21w11a-->
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w13a" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="2‌‎1w13a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -881,7 +867,7 @@
 </local:MyCard>
 
 <!--21w11a-->
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w11a" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎‌‎1w11a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -974,8 +960,8 @@
 	</StackPanel>
 </local:MyCard>
 
-<!--2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w10a-->
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w10a" CanSwap="True" IsSwaped="True">
+<!--2‏‍‌‎1w10a-->
+<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎‌‎1w10a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -1087,7 +1073,7 @@
 </local:MyCard>
 
 <!--21w08a/b-->
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w08a/b" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="2‌‎1w08a/b" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -1192,7 +1178,7 @@
 	</StackPanel>
 </local:MyCard>
 
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w07a" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎1w07a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -1262,7 +1248,7 @@
 	</StackPanel>
 </local:MyCard>
 
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w06a" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎‌‎1w06a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -1342,7 +1328,7 @@
 </local:MyCard>
 
 <!--21w05a/b-->
-<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎1w05a/b" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="21w05a/b" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -1887,5 +1873,4 @@
 	<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ " Foreground="{DynamicResource ColorBrush3}"/>
 	<TextBlock Text=" 授权。" />
 	</StackPanel>
-	
 </local:MyCard>	
