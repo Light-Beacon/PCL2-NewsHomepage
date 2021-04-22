@@ -6,7 +6,8 @@
 	协议：CC BY-NC-SA 3.0
 -->
 
-<StackPanel Margin="0,-10,0,0">
+<StackPanel Margin="0,-10,0,0" Opacity="{Binding Path=Value,ElementName=OpacitySlider}">
+
 <!--Animations Starts-->
 <StackPanel.Triggers>
     <EventTrigger RoutedEvent="StackPanel.Loaded">
@@ -180,7 +181,6 @@
 
 </StackPanel.Resources>
 <!--Styles Ends-->
-
 <!--Hints Starts-->
 <Border Margin="0,0,0,10" Height="30" Padding="2" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
 	<Grid Margin="10,0,0,0">
@@ -392,7 +392,7 @@
 </Grid>
 
 <!--21w11a-->
-<local:MyCard Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎‌‎1w15a" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="2‏‍‌‎‌‎1w15a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -1660,17 +1660,50 @@
 </local:MyCard>-->
 <!--News Ends-->
 
+</StackPanel>
+<local:MyCard Title="新闻主页选项" CanSwap="True" IsSwaped="True" Margin="0,10,0,0">
+<StackPanel Margin="10,20,0,10">
+	<TextBlock Grid.Column="0" Text="*以下为实验性功能 刷新后恢复初始设置" Margin="20,20,0,0"/>
+	<Grid Margin="40,20">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="60"/>
+			<ColumnDefinition Width="40"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock Grid.Column="0" Text="不透明度"/>
+		<Slider Grid.Column="2" Minimum="0" Maximum="1" x:Name="OpacitySlider" Value="1" TickFrequency="0.1" AutoToolTipPlacement="TopLeft" ToolTip="拖动调整"/>
+		<TextBlock Grid.Column="1" Text="{Binding Path=Value,ElementName=OpacitySlider}"/>
+	</Grid>
+	</StackPanel>
+</local:MyCard>
+
 <!--Refresh Button-->
 <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
 	<local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页"/>
 	<local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈"/>
 </StackPanel>
 
-</StackPanel>
-<local:MyCard Margin="0,0,0,15">
-	<StackPanel Margin="20,10,0,10" Orientation="Horizontal">
-	<TextBlock Text="无特殊声明本主页采用 " />
-	<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ " Foreground="{DynamicResource ColorBrush3}"/>
-	<TextBlock Text=" 授权。" />
+<Border Background="#CCFFFFFF" Height="140" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+	<StackPanel Margin="40,15,0,10" >
+		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5"/>
+		<TextBlock Text="By：最亮的信标（Light Beacon）" />
+
+		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+		<TextBlock Text="订阅地址:  " />
+		<local:MyTextButton Text="http://news.lightbeacon.top" EventType="复制文本" EventData="http://news.lightbeacon.top" ToolTip="点击复制到剪贴板"/>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+		<TextBlock Text="Github:  " />
+		<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github"/>
+		</StackPanel>
+		
+		<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+		<TextBlock Text="无特殊声明本主页采用 " />
+		<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ "/>
+		<TextBlock Text=" 授权。" />
+		</StackPanel>
 	</StackPanel>
-</local:MyCard>	
+</Border>
+
+
