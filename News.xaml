@@ -237,8 +237,162 @@
 	</StackPanel>
 </local:MyCard>
 
+<!--21w16a-->
+<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎‌‎1w16a" CanSwap="True">
+	<!--Header-->
+	<StackPanel Margin="30,40,30,20">
+		<Border Style="{StaticResource verImgBdr}">
+            <Border.Background>
+                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/snapshot-21w16a-header.jpg" Stretch="Uniform"/>
+            </Border.Background>
+            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/snapshot-21w16a-header.jpg" Opacity="0"/>
+        </Border>
+		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="21W16A"/>
+		</Border>
+		
+	<!--Detail-->
+	<TextBlock Margin="30,3,10,3" Text="注意：由于世界范围再更改，该版本不能加载 21w06a 至 21w14a 的世界。" />
+	
+	<TextBlock Text="新内容" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
+	
+		<StackPanel Style="{StaticResource ListStyle}">	
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="杜鹃花丛和盛开的杜鹃花丛可以使用骨粉使其生长为杜鹃树。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="加入了滴水石生长机制（钟乳石挂在滴水石块上并且上方是水源，钟乳石会逐渐生长，并在下方形成石笋，下方的石笋也会生长）。" />
+		<TextBlock Text="详细说明请阅读原文或查阅Wiki" Padding="10,0,0,0" Margin="0,0,0,5" FontSize="14" Foreground="#FF777777"/>
+
+		</StackPanel>
+
+	<TextBlock Text="更改" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="调整了粗矿和粗矿快的材质。" />
+
+		<Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/snapshot-21w16a-ore-texture-comparison.png" Margin="10,0,10,0"/>
+		<TextBlock Text="材质调整对比图" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15"/>		
+		
+		</StackPanel>
+	
+	<TextBlock Text="洞穴与山崖预览更改（1.18内容）" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+
+			<Ellipse/>
+			<TextBlock Style="{StaticResource ListItem}" Text="高度＜0的含水层有概率变为含熔岩层。" />
+			<Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/snapshot-21w16a-carousel.jpg" Margin="10,0,10,0"/>
+			<TextBlock Text="含熔岩层" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15"/>		
+
+			<Ellipse/>
+			<TextBlock Style="{StaticResource ListItem}" Text="矿脉现在能生成在地下了（y＞0 生成铜矿脉（混着花岗岩）， y＜0 生成铁矿脉（混着凝灰岩））。" />
+			
+		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}">
+
+			<StackPanel Style="{StaticResource ListStyle}">
+			<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
+			<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/ebe5698b1f6787e30662691f57511a08587db502/CavesAndCliffsPreview.zip" ToolTip="下载洞穴与山崖原型数据包"/>
+		
+			<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
+		
+        	</StackPanel>
+
+		</GroupBox>
+
+		</StackPanel>
+		
+	<TextBlock Text="技术性更改" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
+	
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="游玩时间统计项重命名为 play_time" />
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="增加了世界打开时间统计项 (total_world_time)。游戏暂停时该统计项仍会记录游戏时间。" />
+		
+		</StackPanel>
+
+	<TextBlock Text="详细信息请阅读完整日志。" />
+	<TextBlock Text="该版本修复了51个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
+	<!--Logs-->
+	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w16a" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1193689-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-21w16a" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+<!--News Starts-->
+
+<Grid Margin="0,0,0,15">
+	<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+	</Grid.ColumnDefinitions>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
+	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
+</Grid>
+
+<!--1.16.5-->
+<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌‎.16.5" CanSwap="True" IsSwaped="True">
+	<!--Header-->
+	<StackPanel Margin="30,40,30,20">
+		<Border Style="{StaticResource verImgBdr}">
+            <Border.Background>
+                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-16-5-header.jpg.transform/minecraft-image-large/image.jpg" Stretch="Uniform"/>
+            </Border.Background>
+            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-16-5-header.jpg.transform/minecraft-image-large/image.jpg" Opacity="0"/>
+        </Border>
+		<Border Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.16.5"/>
+		</Border>
+		
+	<TextBlock Text="该版本修复了2个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
+	<!--Logs-->
+	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/Java%E7%89%881.16.5" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1153097-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-16-5" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+
+<Grid Margin="0,0,0,15">
+	<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+	</Grid.ColumnDefinitions>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
+	<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
+</Grid>
+
 <!--21w11a-->
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎‌‎1w15a" CanSwap="True">
+<local:MyCard Margin="0,0,0,15" Title="最新快照 - 2‏‍‌‎‌‎1w15a" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -247,7 +401,7 @@
             </Border.Background>
             <Image Source="https://z3.ax1x.com/2021/04/15/cgFFoR.jpg" Opacity="0"/>
         </Border>
-		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+		<Border Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="21W15A"/>
 		</Border>
 		
@@ -353,389 +507,6 @@
 	</GroupBox>
 	</StackPanel>
 </local:MyCard>
-
-<local:MyCard Margin="0,0,0,15" Title="不会在4月12日进行账号迁移" CanSwap="True">
-	<StackPanel Margin="30,40,30,10">
-		<TextBlock Text="之前有人在启动器中发现了迁移日期（2021-4-12），但是并不是官方公告，目前该日期已被改为 2099-1-1。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-		<TextBlock Text="Mojang 员工 Ined：不同一些网站所言，今天（4-12）不会进行 Mojang 账号迁移。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-	<GroupBox Header="来源" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191123-1-1.html" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" Text="推特" EventData="https://twitter.com/Mojang_Ined/status/1381669725097357317" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
-
-<!--<local:MyCard Margin="0,0,0,15" Title="可能将于4月12日开始正版迁移" CanSwap="True">
-	<StackPanel Margin="40,40,30,20">
-		<TextBlock Margin="20,5,0,10" Text="    根据官启的文件，将会于2021年4月12日开始正版迁移。不过Mojang尚未正式公布，有可能此日期会变动。" />
-		<Image Margin="0,0,10,0" Source="http://image.lightbeacon.top:1142/news0002.png"  HorizontalAlignment="Left" MaxWidth="600"/>
-		<TextBlock Margin="20,5,0,10" Text="    不过在Mojang官方公布之前一切合并向你寻求你的账户信息（尤其是交易ID）仍都是骗子，请勿相信。" />
-		<local:MyButton Margin="0,10,0,0" Height="30" Text="刷新" EventType="刷新主页"/>
-		<TextBlock Text="2021/1/30" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10"/>
-	</StackPanel>
-</local:MyCard>-->
-
-<!--News Starts-->
-
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-			<ColumnDefinition Width="100"></ColumnDefinition>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
-
-<!--1.16.5-->
-<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌‎.16.5" CanSwap="True" IsSwaped="True">
-	<!--Header-->
-	<StackPanel Margin="30,40,30,20">
-		<Border Style="{StaticResource verImgBdr}">
-            <Border.Background>
-                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-16-5-header.jpg.transform/minecraft-image-large/image.jpg" Stretch="Uniform"/>
-            </Border.Background>
-            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-16-5-header.jpg.transform/minecraft-image-large/image.jpg" Opacity="0"/>
-        </Border>
-		<Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.16.5"/>
-		</Border>
-		
-	<TextBlock Text="该版本修复了2个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	<!--Logs-->
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/Java%E7%89%881.16.5" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1153097-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-16-5" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
-
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-			<ColumnDefinition Width="100"></ColumnDefinition>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="基  岩  资  讯" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
-
-<!--Beta 1.16.210.58-->
-<local:MyCard Margin="0,0,0,15" Title="Beta 1.16.210.58" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-	<TextBlock Text="Bug修复" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-	<TextBlock Text="技术性修复和改动" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		<StackPanel Style="{StaticResource ListStyle}">
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="在市场中的地图“Dragons！”中用上鞍的龙重新加载地图后，行为动画控制器不再停止工作
-"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="禁用了自定义生物群系功能中的实体加载"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了数据驱动方块的UV会轻微收缩并导致纹理元扭曲的问题"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了活塞推动的数据驱动方块不能正确工作的问题"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="简单物品，例如剑或镐，可以在其上应用一个偏移来调整渲染其的方式。注意：这个组件不应该应用到可附加物品上"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="新组件变量"/>		
-		</StackPanel>
-		
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/%E5%9F%BA%E5%B2%A9%E7%89%88beta_1.16.210.58" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1163937-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://feedback.minecraft.net/hc/en-us/articles/360056026212" />
-		</Grid>
-	</GroupBox>
-	<TextBlock Text="本次新闻部分来源于帅大2004(MCBBS)。" FontSize="14" Foreground="#FF777777" Margin="0,10,0,5"/>
-	</StackPanel>
-</local:MyCard>
-
-<!--Beta 1.16.210.57-->
-<local:MyCard Margin="0,0,0,15" Title="Beta 1.16.210.57" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-	<TextBlock Text="新内容" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	
-		<StackPanel Style="{StaticResource ListStyle}">
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="铜"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="避雷针"/>
-		
-		</StackPanel>
-	
-	<TextBlock Text="无障碍设置" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="当鼠标光标在UI框架外面时，可用键盘调整使用滑块的设置"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="当“聊天设置”菜单被打开时，屏幕阅读器会提示玩家相关内容"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了 UI 屏幕阅读器不会读出 权限 界面的权限开关选项的问题"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="屏幕阅读器现在会读出 Whisper 和 公告 类消息"/>
-		
-		</StackPanel>
-	
-	<TextBlock Text="性能和稳定性" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="改进了使用了 TemptGoal 的 actor 的性能"/>
-		</StackPanel>
-
-	<TextBlock Text="常规" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	
-		<StackPanel Style="{StaticResource ListStyle}">
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="还原了所有使用近战攻击的生物能攻击其上方或下方的目标的特性"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="该目标必须处于近战攻击能攻击到的范围内"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="红石粉(Redstone Dust)将不再显示为“红石”(Redstone)，而是“红石粉”(Redstone Dust)"/>
-		</StackPanel>
-		
-	<TextBlock Text="图形和用户界面" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="工具和盔甲选中时的配方将会显示被选中配方的背景"/>
-		
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="向支持光线追踪，以及不支持光线追踪的平台的 视频设置 中加入了更多有用的信息"/>
-		</StackPanel>
-		
-	<TextBlock Text="技术性改动" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="向方块事件响应“decrement_stack”加入了一个布尔参数“ignore_game_mode”，默认false。这样“decrement_stack”就不会在创造模式下默认减少物品堆叠"/>
-		</StackPanel>
-		
-	<TextBlock Text="结构方块" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="当实体被传送到存档已被卸载的位置，将不会移除此实体的计分板数据"/>
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="将一个结构动画传送至卸载状态时不再导致游戏崩溃"/>
-		</StackPanel>
-		
-<TextBlock Text="命令，脚本和Add-ons" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="当尝试从容器中取出或放入被锁定物品时，将会出现警告"/>
-		</StackPanel>
-				
-<TextBlock Text="已知问题" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="游戏刻不会改变方块状态 —— 这个问题意味着农作物不使用骨粉无法成熟，草方块不会传播，等等。我们计划在下一个 Beta 版本中修复此问题。"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="读取带有 Sculk Sensor 的结构方块可能导致游戏崩溃 "/>
-		</StackPanel>
-		
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/%E5%9F%BA%E5%B2%A9%E7%89%88beta_1.16.210.57" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1160035-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://feedback.minecraft.net/hc/en-us/articles/360055750032" />
-		</Grid>
-	</GroupBox>
-	<TextBlock Text="本次新闻部分来源于AzureZeng(MCBBS)。" FontSize="14" Foreground="#FF777777" Margin="0,10,0,5"/>
-	<TextBlock Text="本版本起的Beta版将不再显示Mojira上的bug，如需请查看完整日志。" FontSize="14" Foreground="#FF777777" Margin="0,0,0,15"/>
-	</StackPanel>
-</local:MyCard>
-
-<!--Beta 1.16.210.56-->
-<local:MyCard Margin="0,0,0,15" Title="Beta 1.16.210.56" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-	<TextBlock Text="新内容" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="滴水石锥"/>
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="潜声传感器"/>
-		</StackPanel>
-	
-	<TextBlock Text="常规" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了“猪排”成就和奖杯可以通过吃生猪排解锁的问题"/>	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了狐狸不能停下来吃浆果的问题"/>
-				
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="缺少现有世界的世界模板时，点击“下载世界模板”便可下载需要的世界模板"/>
-				
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了冒险模式的玩家可以放置自定义刷怪蛋的问题"/>
-		</StackPanel>
-	
-	<TextBlock Text="命令" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		<StackPanel Style="{StaticResource ListStyle}">
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="“/setblock”命令现在支持设置灵魂灯笼的连接状态"/>	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="“/setblock”命令现在支持设置锁链方块的旋转状态"/>
-				
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="“SetBlock”和“SetBlockAtPos”事件现在支持使用自定义方块状态"/>
-		</StackPanel>
-	
-	<TextBlock Text="方块" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了市场中特定的世界在手机和电脑之间互相加入领域或多人游戏时发生的方块数据错误的问题"/>
-		</StackPanel>
-		
-	<TextBlock Text="世界生成" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="保存有实体的.mcstructure文件加载进世界时不再导致游戏崩溃"/>
-		</StackPanel>
-		
-	<TextBlock Text="技术性改动" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="向方块事件响应“decrement_stack”加入了一个布尔参数“ignore_game_mode”，默认false。这样“decrement_stack”就不会在创造模式下默认减少物品堆叠"/>
-		</StackPanel>
-		
-	<TextBlock Text="已知问题" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="在安卓手机上暂停再继续游戏时可能会发生崩溃"/>	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="加载提示界面可能包含一些指向市场的无效链接"/>
-		</StackPanel>
-		
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/%E5%9F%BA%E5%B2%A9%E7%89%88beta_1.16.210.56" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1155649-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://feedback.minecraft.net/hc/en-us/articles/360055733571" />
-		</Grid>
-	</GroupBox>
-	<TextBlock Text="本次新闻部分来源于帅大2004(MCBBS)。" FontSize="14" Foreground="#FF777777" Margin="0,10,0,15"/>
-	</StackPanel>
-</local:MyCard>
-
-<!--Beta 1.16.210.55-->
-<local:MyCard Margin="0,0,0,15" Title="Beta 1.16.210.55" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-	<TextBlock Text="性能与稳定性" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了更改语言设置时可能发生的崩溃。"/>
-		</StackPanel>
-	
-	<TextBlock Text="常规" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		
-		<StackPanel Style="{StaticResource ListStyle}">
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了一个导致末影龙动画抖动的问题。"/>
-			
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="修复了一个阻止Actor初始化动画组件的问题。"/>
-		</StackPanel>
-		
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/%E5%9F%BA%E5%B2%A9%E7%89%88beta_1.16.210.55" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1152414-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://feedback.minecraft.net/hc/en-us/articles/360055393071" />
-		</Grid>
-	</GroupBox>
-	<TextBlock Text="本次新闻部分来源于帅大2004(MCBBS)。" FontSize="14" Foreground="#FF777777" Margin="0,10,0,15"/>
-	</StackPanel>
-</local:MyCard>
-
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-			<ColumnDefinition Width="100"></ColumnDefinition>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
 
 <!--21w14a-->
 <local:MyCard Margin="0,0,0,15" Title="21w14a" CanSwap="True" IsSwaped="True">
@@ -1811,7 +1582,24 @@
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
 </Grid>
 
-<local:MyCard Margin="0,10,0,35" Title="Minecraft Plus[愚人节]" RenderTransformOrigin="0.5,0.5" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="不会在4月12日进行账号迁移" CanSwap="True">
+	<StackPanel Margin="30,40,30,10">
+		<TextBlock Text="之前有人在启动器中发现了迁移日期（2021-4-12），但是并不是官方公告，目前该日期已被改为 2099-1-1。" Padding="30,0,0,0" Margin="0,0,0,5"/>
+		<TextBlock Text="Mojang 员工 Ined：不同一些网站所言，今天（4-12）不会进行 Mojang 账号迁移。" Padding="30,0,0,0" Margin="0,0,0,5"/>
+	<GroupBox Header="来源" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191123-1-1.html" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" Text="推特" EventData="https://twitter.com/Mojang_Ined/status/1381669725097357317" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+<local:MyCard Margin="0,10,0,15" Title="Minecraft Plus[愚人节]" RenderTransformOrigin="0.5,0.5" CanSwap="True" IsSwaped="True">
 	<local:MyCard.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
