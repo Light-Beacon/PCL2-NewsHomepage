@@ -185,10 +185,10 @@
 <Border Margin="0,0,0,10" Height="30" Padding="2" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
 	<Grid Margin="10,0,0,0">
 		<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000" >
-					📰 欢迎使用新闻主页！由 Ligth Beacon （最亮的信标）制作并更新！
+					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作并更新！
 		</TextBlock>
 		<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-					📰 你知道新闻主页的地址已经改成更好记的“news.lightbeacon.top”了吗？（兼容旧地址）。
+					📰 你知道新闻主页的地址已经改成更好记的“http://news.lightbeacon.top”了吗？（兼容旧地址）。
 		</TextBlock>
 	</Grid>
 </Border>
