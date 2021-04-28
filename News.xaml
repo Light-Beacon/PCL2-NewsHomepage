@@ -294,20 +294,6 @@
 		</GroupBox>
 
 		</StackPanel>
-		
-	<TextBlock Text="技术性更改" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15"/>
-	
-		<StackPanel Style="{StaticResource ListStyle}">	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="游玩时间统计项重命名为 play_time" />
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="增加了世界打开时间统计项 (total_world_time)。游戏暂停时该统计项仍会记录游戏时间。" />
-		
-		</StackPanel>
-
-	<TextBlock Text="详细信息请阅读完整日志。" />
 	<TextBlock Text="该版本修复了19个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
 	<!--Logs-->
 	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
