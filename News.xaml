@@ -313,7 +313,7 @@
 			<ColumnDefinition Width="10*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w19a" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread" IsEnabled="False"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1200064-1-1.html"/>
 			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w19a" />
 		</Grid>
 	</GroupBox>
