@@ -239,7 +239,7 @@
 		</Border>
 	<TextBlock Text="注意：此版本以及之后版本 Minecraft 需求 Java 16（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15"/>	
 	<!--Detail-->
-	<TextBlock Text="新内容" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>
+	<TextBlock Text="新内容" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
 	<TextBlock Text="进度" FontSize="18" Padding="40,0,0,0" Margin="0,0,0,15"/>
 
 		<TextBlock Text="译名尚未确定，加括号仅作参考。" Margin="60,0,0,20"/>
@@ -281,7 +281,7 @@
 
 		</StackPanel>
 
-	<TextBlock Text="更改" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>	
+	<TextBlock Text="更改" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>	
 
 		<StackPanel Style="{StaticResource ListStyle}">	
 		
@@ -302,7 +302,7 @@
 	
 		</StackPanel>
 	
-	<TextBlock Text="洞穴与山崖预览（1.18内容）" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>
+	<TextBlock Text="洞穴与山崖预览（1.18内容）" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
 			
 		<StackPanel Style="{StaticResource ListStyle}">
 		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}">
@@ -318,7 +318,7 @@
 		</GroupBox>
 		</StackPanel>
 
-	<TextBlock Text="技术性更改" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>
+	<TextBlock Text="技术性更改" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
 
 		<TextBlock Text="技术性翻译可能不准确，如果发现翻译错误，请在新闻主页的 github 上交 issue 或者 pr，感谢你的支持与理解。" Margin="60,0,0,20"/>
 
@@ -356,7 +356,7 @@
 
 		</StackPanel>
 
-		<TextBlock Text="进度（触发器与谓词） 与 性能分析数据报告" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>
+		<TextBlock Text="进度（触发器与谓词） 与 性能分析数据报告" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
 			<TextBlock Text="详见 Minecraft Wiki 或 阅读完整日志。"  Padding="50,0,0,0"/>
 
 	<TextBlock Text="该版本修复了59个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
