@@ -340,7 +340,10 @@
 		<TextBlock Style="{StaticResource ListItem}" Text="给玩家子谓词加入了 looking_at 限制。"/>
 
 		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="给 items 在物品谓词上扩展了 item 字段。"/>
+		<TextBlock Style="{StaticResource ListItem}" Text="物品谓词的 item 字段扩充为 items 。"/>
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="方块谓词的 block 字段扩充为 blocks 。"/>
 
 		<Ellipse/>
 		<TextBlock Style="{StaticResource ListItem}" Text="加入了 F3+L 快捷键来生成与维持游戏中的性能分析数据。（单人中的 F3+L 也会包含为集成服务器提供的报告）"/>
