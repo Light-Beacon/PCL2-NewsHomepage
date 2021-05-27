@@ -235,7 +235,7 @@
             <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-pre-release-1-header.jpg" Opacity="0"/>
         </Border>
 		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17PRE1"/>
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17 PRE1"/>
 		</Border>
 	<TextBlock Text="注意：此版本以及之后版本 Minecraft 需求 Java 16（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15"/>	
 	<!--Detail-->
@@ -353,7 +353,7 @@
 
 		</StackPanel>
 
-		<TextBlock Text="成就（触发器与谓词） 与 性能分析数据报告" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>
+		<TextBlock Text="进度（触发器与谓词） 与 性能分析数据报告" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush2}"/>
 			<TextBlock Text="详见 Minecraft Wiki 或 阅读完整日志。"  Padding="50,0,0,0"/>
 
 	<TextBlock Text="该版本修复了59个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
