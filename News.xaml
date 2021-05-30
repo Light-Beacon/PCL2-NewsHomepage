@@ -85,6 +85,7 @@
 <!--Template Ends-->
 
 <!--Styles Starts-->
+	<!--即将弃用-->
     <Style TargetType="Ellipse">
         <Setter Property="Fill" Value="{DynamicResource ColorBrush3}"/>
 		<Setter Property="HorizontalAlignment" Value="Left" />
@@ -127,21 +128,7 @@
 			<Setter Property="Grid.Column" Value="2"/>
 			<Setter Property="Text" Value="官网"/>
 		</Style>
-	<!--[W-I-P]
-		<Style x:Key="LogGrid" TargetType="Grid">
-		<Setter Property="UseLayoutRounding" Value="True"/>
-		<Setter Property="Margin" Value="10,10,10,10"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="Grid">
-					<ControlTemplate.ColumnDefinitions>
-						<ControlTemplate Width="20*"/>
-						<ControlTemplate Width="10*"/>
-						<ControlTemplate Width="10*"/>
-					</ControlTemplate.ColumnDefinitions>
-				</ControlTemplate>
-			</Setter.Value>
-		</Style>-->
+
 	<Style x:Key="Code" TargetType="Border">
         <Setter Property="Background" Value="#e0e0e0"/>
         <Setter Property="BorderBrush" Value="#444"/>
@@ -179,6 +166,32 @@
 		<Setter Property="CornerRadius" Value="5"/>
 	</Style>
 
+	<!--h2-->
+	<Style x:Key="h2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="28"/>
+		<Setter Property="Padding" Value="15,5"/>
+		<Setter Property="Margin" Value="5,15"/>
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+    </Style>
+
+	<!--h3-->
+	<Style x:Key="h3" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+		<Setter Property="Padding" Value="30,0"/>
+		<Setter Property="Margin" Value="10,0,10,10"/>
+		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+    </Style>
+
+	<!--footnote-->
+	<Style x:Key="footnote" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+		<Setter Property="Padding" Value="30,0"/>
+		<Setter Property="Margin" Value="0,20,0,15"/>
+		<Setter Property="Foreground" Value="#FF777777" />
+    </Style>
+
 </StackPanel.Resources>
 <!--Styles Ends-->
 <!--Hints Starts-->
@@ -195,7 +208,6 @@
 <!--Hints Ends-->
 
 <!--Tmp News-->
-
 <Grid Margin="0,0,0,15">
 	<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="1*"></ColumnDefinition>
@@ -237,10 +249,10 @@
 		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17 PRE1"/>
 		</Border>
-	<TextBlock Text="注意：此版本以及之后版本 Minecraft 需求 Java 16（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15"/>	
+	<TextBlock Text="注意：此版本以及之后版本 Minecraft 需求 Java 16（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,0"/>	
 	<!--Detail-->
-	<TextBlock Text="新内容" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
-	<TextBlock Text="进度" FontSize="18" Padding="40,0,0,0" Margin="0,0,0,15"/>
+	<TextBlock Text="新内容" Style="{StaticResource h2}"/>
+	<TextBlock Text="进度" Style="{StaticResource h3}"/>
 
 		<TextBlock Text="译名尚未确定，加括号仅作参考。" Margin="60,0,0,20"/>
 
@@ -281,7 +293,7 @@
 
 		</StackPanel>
 
-	<TextBlock Text="更改" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>	
+	<TextBlock Text="更改" Style="{StaticResource h2}"/>	
 
 		<StackPanel Style="{StaticResource ListStyle}">	
 		
@@ -302,23 +314,19 @@
 	
 		</StackPanel>
 	
-	<TextBlock Text="洞穴与山崖预览（1.18内容）" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
+	<TextBlock Text="洞穴与山崖预览（1.18内容）" Style="{StaticResource h2}"/>
 			
 		<StackPanel Style="{StaticResource ListStyle}">
-		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}">
-
-			<StackPanel Style="{StaticResource ListStyle}">
-			<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
-			<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/e0738fc94f08362fe2eff71f5bd46288d6647e21/CavesAndCliffsPreview.zip" ToolTip="下载洞穴与山崖原型数据包"/>
-		
-			<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
-		
+		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
+			<StackPanel>
+				<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/e0738fc94f08362fe2eff71f5bd46288d6647e21/CavesAndCliffsPreview.zip" ToolTip="下载洞穴与山崖原型数据包"/>
+				<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
         	</StackPanel>
-
 		</GroupBox>
 		</StackPanel>
 
-	<TextBlock Text="技术性更改" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
+	<TextBlock Text="技术性更改" Style="{StaticResource h2}"/>
 
 		<TextBlock Text="技术性翻译可能不准确，如果发现翻译错误，请在新闻主页的 github 上交 issue 或者 pr，感谢你的支持与理解。" Margin="60,0,0,20"/>
 
@@ -356,10 +364,10 @@
 
 		</StackPanel>
 
-		<TextBlock Text="进度（触发器与谓词） 与 性能分析数据报告" FontSize="20" Padding="30,0,0,0" Margin="0,10,0,15" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}"/>
+		<TextBlock Text="进度（触发器与谓词） 与 性能分析数据报告" Style="{StaticResource h2}"/>
 			<TextBlock Text="详见 Minecraft Wiki 或 阅读完整日志。"  Padding="50,0,0,0"/>
 
-	<TextBlock Text="该版本修复了59个Bug" FontSize="14" Foreground="#FF777777" Padding="30,0,0,0" Margin="0,10,0,15"/>
+	<TextBlock Text="该版本修复了59个Bug" Style="{StaticResource footnote}"/>
 
 	<!--Logs-->
 	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
