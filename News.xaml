@@ -224,7 +224,7 @@
 	</StackPanel>
 </local:MyCard>
 
-<!--21w20a-->
+<!-- 1.17-pre1 -->
 <local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新预发布版本 - 1.17-pre1" CanSwap="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
@@ -444,7 +444,7 @@
             <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/snapshot-21w20a-header.jpg" Opacity="0"/>
         </Border>
 		<Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}"/>
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="2‏‍‌‎‌‎1w20a"/>
 		</Border>
 	<TextBlock Text="注意：此版本以及之后版本 Minecraft 需求 Java 16（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15"/>	
 	<!--Detail-->
