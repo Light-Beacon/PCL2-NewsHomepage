@@ -123,8 +123,8 @@
 		<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
 			<Setter Property="Grid.Column" Value="1"/>
 			<Setter Property="Text" Value="MCBBS"/>
-			<!--temp-->
-			<Setter Property="IsEnabled" Value="False"/>
+			<!--temp
+			<Setter Property="IsEnabled" Value="False"/>-->
 		</Style>
 		<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
 			<Setter Property="Grid.Column" Value="2"/>
@@ -274,7 +274,7 @@
 			<ColumnDefinition Width="10*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-rc1" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206553-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206671-1-1.html"/>
 			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-release-candidate-1" />
 		</Grid>
 	</GroupBox>
@@ -390,7 +390,7 @@
 			<ColumnDefinition Width="10*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-pre5" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206553-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206669-1-1.html"/>
 			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-17-pre-release-2" />
 		</Grid>
 	</GroupBox>
