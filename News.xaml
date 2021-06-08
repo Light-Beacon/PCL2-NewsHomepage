@@ -246,6 +246,20 @@
 		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17"/>
 		</Border>
+
+		<TextBlock Text="注意：Minecraft Java版 1.17 需求 Java 16或更高版本（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15"/>	
+		<local:MyButton Height="35" Margin="80,10" Text="点击下载 JDK 16.0.1" EventType="下载文件" EventData="https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_windows-x64_bin.zip" ToolTip="下载 JDK 16.0.1"/>		
+
+		<TextBlock Text="洞穴与山崖预览（1.18内容）" Style="{StaticResource h2}"/>	
+		<StackPanel Style="{StaticResource ListStyle}">
+		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
+			<StackPanel>
+				<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip" ToolTip="下载最新洞穴与山崖原型数据包"/>
+				<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
+        	</StackPanel>
+		</GroupBox>
+		</StackPanel>
 	<StackPanel>
 		<StackPanel.Resources>
 		<Style TargetType="Image">
@@ -276,6 +290,7 @@
     	</Style>
 
 		</StackPanel.Resources>
+
 		<!--Details-->
 		<TextBlock Text="新内容" Style="{StaticResource h2}"/>	
 		<TextBlock Text="方块" Style="{StaticResource h3}"/>	
