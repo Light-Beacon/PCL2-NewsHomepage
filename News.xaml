@@ -254,7 +254,7 @@
 		<StackPanel Style="{StaticResource ListStyle}">
 		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
 			<StackPanel>
-				<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
+				<TextBlock Text="由于 Minecraft 开发计划变动，预计在 1.17 加入的地形生成已被推迟到 1.18 ，但你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip" ToolTip="下载最新洞穴与山崖原型数据包"/>
 				<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
         	</StackPanel>
@@ -1241,9 +1241,6 @@
 		<TextBlock Text="2021/1/22" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10"/>
 	</StackPanel>
 </local:MyCard>	
-<!--local:MyCard Margin="0,0,0,15">
-	<local:MyLoading Margin="0,20,0,15" Text="预计下一次更新加入(咕)"/>
-</local:MyCard>-->
 <!--News Ends-->
 
 
