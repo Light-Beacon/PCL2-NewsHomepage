@@ -239,9 +239,9 @@
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
             <Border.Background>
-                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-release-header.jpg" Stretch="Uniform"/>
+                <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Stretch="Uniform"/>
             </Border.Background>
-            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-release-header.jpg" Opacity="0"/>
+            <Image Source="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Opacity="0"/>
         </Border>
 		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17"/>
@@ -305,7 +305,7 @@
 		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
 		"紫晶芽"
 		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/af/Small_Amethyst_Bud_JE1.png"
+		"https://www.lightbeacon.top/pnh/newimgs/1_17/Small_Amethyst_Bud.png"
 		/></StackPanel></Border></local:MyButton>
 
 		<local:MyButton EventType="打开网页" EventData=
@@ -313,7 +313,7 @@
 		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
 		"紫水晶簇"
 		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/60/Amethyst_Cluster_JE1.png"
+		"https://www.lightbeacon.top/pnh/newimgs/1_17/Amethyst_Cluster_JE1.png"
 		/></StackPanel></Border></local:MyButton>
 
 		<local:MyButton EventType="打开网页" EventData=
