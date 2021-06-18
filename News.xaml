@@ -962,7 +962,7 @@
 			<TextBlock Text="闪烁标语" Style="{StaticResource h4}"/>
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了11个闪烁表语" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了11个闪烁标语" />
 			</StackPanel>
 
 			<TextBlock Text="标签" Style="{StaticResource h4}"/>
@@ -1001,19 +1001,8 @@
 				<Ellipse/>
 				<TextBlock Style="{StaticResource ListItem}" Text="铁砧物品名称字符上限提高到50。" />
 			</StackPanel>
-		<TextBlock Text="方块" Style="{StaticResource h3}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="时钟、指南针和磁石指针材质更改" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="皮革盔甲可使玩家免疫冰冻伤害，皮革马铠可使马免疫冰冻伤害" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="迷之炖菜满饥饿值也可食用" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="食用河豚的中毒效果降至II" />
-			</StackPanel>
-		
-		<TextBlock Text="方块" Style="{StaticResource h3}"/>
+
+		<TextBlock Text="物品" Style="{StaticResource h3}"/>
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 				<Ellipse/>
 				<TextBlock Style="{StaticResource ListItem}" Text="时钟、指南针和磁石指针材质更改" />
