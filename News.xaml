@@ -222,6 +222,13 @@
 </Border>
 <!--Hints Ends-->
 
+<local:MyCard Margin="0,0,0,15" Title="如遇 PCL2 因为主页问题报错请将 PCL2 升级至最新版" CanSwap="True" IsSwaped="True">
+	<StackPanel Margin="50,50,50,20">
+		<TextBlock Text="由于新增了 1.17 历史版本的链接并且只有 2.0.4+ 的 PCL 支持，所以需要将PCL升至最新版本，以防止报错。" Margin="0,0,0,5"/>
+		<TextBlock Text="新版本也修了不少 bug，为啥不升呢（"  Margin="0,0,0,5"/>
+	</StackPanel>
+</local:MyCard>
+
 <!--Tmp News-->
 <Grid Margin="0,0,0,15">
 	<Grid.ColumnDefinitions>
@@ -234,7 +241,102 @@
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
 </Grid>
 
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新正式版 - 1‌‎.17" CanSwap="True">
+<!-- 1.17.1-pre4 -->
+<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新预发布版 - 1.17.1-pre1" CanSwap="True" >
+	<!--Header-->
+	<StackPanel Margin="30,40,30,20">
+		<Border Style="{StaticResource verImgBdr}">
+            <Border.Background>
+                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-pre-release-1-header.jpg" Stretch="Uniform"/>
+            </Border.Background>
+            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-pre-release-1-header.jpg" Opacity="0"/>
+        </Border>
+		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17 PRE4" />
+		</Border>
+	<!--Detail-->
+	<TextBlock Text="更改" Style="{StaticResource h2}"/>	
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
+
+		</StackPanel>
+
+	<TextBlock Text="洞穴与山崖预览（1.18内容）" Style="{StaticResource h2}"/>	
+		<StackPanel Style="{StaticResource ListStyle}">
+		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
+			<StackPanel>
+				<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip" ToolTip="下载洞穴与山崖原型数据包"/>
+				<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
+        	</StackPanel>
+		</GroupBox>
+		</StackPanel>
+
+	<TextBlock Text="该版本修复了25个Bug" Style="{StaticResource footnote}"/>
+	<TextBlock Text="该新闻部分图片与内容来源于 SpicroGoft(卡狗) (MCBBS)。"  Margin="30,0,0,10"/>
+	<!--Logs-->
+	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-pre1" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1211734-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-pre-release-1" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+<local:MyCard Margin="0,0,0,15" Title="“洞穴与山崖” 更新将会分为两次更新" CanSwap="True" IsSwaped="True">
+	<StackPanel Margin="30,40,30,10">
+		<TextBlock Text="由于技术问题以及其他原因，“洞穴与山崖”将会在夏季更新非地形生成的其它内容，冬季更新地形生成，目前已更新的地形生成内容已在 21w15a 中被移除。" Padding="30,0,0,0" Margin="0,0,0,5"/>
+		<TextBlock Text="考古系统被推迟到明年，时间待定。" Padding="30,0,0,0" Margin="0,0,0,5"/>
+	<GroupBox Header="阅读原文" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191594-1-1.html" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" Text="官网" EventData="https://www.minecraft.net/zh-hans/article/a-caves---cliffs-announcement" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+<Grid Margin="0,0,0,15">
+	<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+	</Grid.ColumnDefinitions>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
+	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
+</Grid>
+
+<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌‎.17" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -243,7 +345,7 @@
             </Border.Background>
             <Image Source="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Opacity="0"/>
         </Border>
-		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+		<Border Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17"/>
 		</Border>
 
@@ -1124,27 +1226,79 @@
 	</StackPanel>
 </local:MyCard>
 
-<local:MyCard Margin="0,0,0,15" Title="“洞穴与山崖” 更新将会分为两次更新" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-		<TextBlock Text="由于技术问题以及其他原因，“洞穴与山崖”将会在夏季更新非地形生成的其它内容，冬季更新地形生成，目前已更新的地形生成内容已在 21w15a 中被移除。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-		<TextBlock Text="考古系统被推迟到明年，时间待定。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-	<GroupBox Header="阅读原文" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191594-1-1.html" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" Text="官网" EventData="https://www.minecraft.net/zh-hans/article/a-caves---cliffs-announcement" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
-
 <!--更多-->
-<!--<local:MyCard Margin="0,0,0,20">
-	<local:MyListItem Margin="10" EventType="打开帮助" EventData="test.json"/>
-</local:MyCard>-->
+<Grid Margin="10,10,10,40" Height="40" Width="300">
+<Grid.Triggers>
+	<EventTrigger RoutedEvent="Loaded" >
+        <BeginStoryboard>
+			<Storyboard>
+				<ColorAnimation
+					Storyboard.TargetName="view"
+					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+					To="#777777" Duration="0:0:0.0"/>
+				<ColorAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="#BBFFFFFF"/>
+				<ColorAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="#777777"/>
+			</Storyboard>
+        </BeginStoryboard>
+    </EventTrigger>
+	<EventTrigger RoutedEvent="MouseEnter" >
+        <BeginStoryboard>
+			<Storyboard>
+				<ColorAnimation
+					Storyboard.TargetName="view"
+					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+					To="{Binding}" Duration="0:0:0.25"/>
+				<ColorAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="{Binding}" Duration="0:0:0.25"/>
+				<DoubleAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="Width"
+					To="260" Duration="0:0:0.1"/>
+				<ColorAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="{Binding}" Duration="0:0:0.25"/>
+			</Storyboard>
+        </BeginStoryboard>
+    </EventTrigger>
+	<EventTrigger RoutedEvent="MouseLeave" >
+        <BeginStoryboard>
+			<Storyboard>
+				<ColorAnimation
+					Storyboard.TargetName="view"
+					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+					To="#777777" Duration="0:0:0.75"/>
+				<ColorAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+					To="#BBFFFFFF" Duration="0:0:0.5"/>
+				<DoubleAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="Width"
+					To="240" Duration="0:0:0.1"/>
+				<ColorAnimation
+					Storyboard.TargetName="viewBdr"
+					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
+					To="#777777" Duration="0:0:0.75"/>
+			</Storyboard>
+		</BeginStoryboard>
+    </EventTrigger>
+</Grid.Triggers>
+
+<local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/history/1.17.json">
+		<Border x:Name="viewBdr" Height="40" Width="240" Background="{StaticResource ColorBrush6}" Opacity="1" CornerRadius="4" BorderThickness="1.5" BorderBrush="{StaticResource ColorBrush4}">
+			<TextBlock x:Name="view" Text="浏览 1.17 更新历史"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold"/>
+		</Border>
+	</local:MyButton>
+</Grid>
 
 <Grid Margin="0,0,0,15">
 	<Grid.ColumnDefinitions>
