@@ -20,11 +20,11 @@
 				<DoubleAnimation BeginTime="0:0:0.1"
 					Storyboard.TargetName="verBorder"
 					Storyboard.TargetProperty="Width"
-					From="0" To="190" Duration="0:0:0.15"/>
+					From="0" To="200" Duration="0:0:0.15"/>
 				<DoubleAnimation BeginTime="0:0:0.5"
 					Storyboard.TargetName="verBorder"
 					Storyboard.TargetProperty="Width"
-					From="190" To="160" Duration="0:0:0.1"/>
+					From="200" To="180" Duration="0:0:0.1"/>
 			</Storyboard>
         </BeginStoryboard>
     </EventTrigger>
@@ -167,7 +167,7 @@
 	<Style x:Key="verTxtBdr" TargetType="Border">
 		<Setter Property="Margin" Value="0,-22,-1,0"/>
 		<Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
-		<Setter Property="Width" Value="160"/>
+		<Setter Property="Width" Value="180"/>
 		<Setter Property="Height" Value="40"/>
 		<Setter Property="CornerRadius" Value="5"/>
 	</Style>
