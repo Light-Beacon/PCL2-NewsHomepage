@@ -275,9 +275,7 @@
 		</GroupBox>
 		</StackPanel>
 
-	<TextBlock Text="该版本修复了8个Bug" Style="{StaticResource footnote}"/>
-	<TextBlock Text="包括修复钻石矿石生成数量少、绿宝石矿石生成数量多等问题。" Style="{StaticResource footnote}"/>
-	
+	<TextBlock Text="该版本修复了8个Bug，其中包括修复钻石矿石生成数量少、绿宝石矿石生成数量多等问题。" Style="{StaticResource footnote}"/>
 	<!--Logs-->
 	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
