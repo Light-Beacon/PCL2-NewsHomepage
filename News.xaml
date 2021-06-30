@@ -255,6 +255,15 @@
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1 PRE2" />
 		</Border>
 	<!--Detail-->
+	<TextBlock Text="新内容" Style="{StaticResource h2}"/>	
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="礦藝文言版即日可用（加入了文言翻译）。" />
+
+		</StackPanel>
+
 	<TextBlock Text="技术性修改" Style="{StaticResource h2}"/>	
 
 		<StackPanel Style="{StaticResource ListStyle}">	
