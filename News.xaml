@@ -241,15 +241,15 @@
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
 </Grid>
 
-<!-- 1.17.1-pre3 -->
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新预发布版 - 1.17.1-pre3" CanSwap="True" >
+<!-- 1.17.1-rc1 -->
+<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新发布候选 - 1.17.1-rc1" CanSwap="True" >
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
             <Border.Background>
-                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-pre-release-2-header.jpg" Stretch="Uniform"/>
+                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-release-candidate-1-header(2).jpg" Stretch="Uniform"/>
             </Border.Background>
-            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-pre-release-2-header.jpg" Opacity="0"/>
+            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-release-candidate-1-header(2).jpg" Opacity="0"/>
         </Border>
 		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1 PRE3" />
@@ -266,7 +266,7 @@
 		</GroupBox>
 		</StackPanel>
 
-	<TextBlock Text="该版本修复了7个Bug" Style="{StaticResource footnote}"/>
+	<TextBlock Text="该版本修复了1个Bug" Style="{StaticResource footnote}"/>
 	<!--Logs-->
 	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -275,9 +275,9 @@
 			<ColumnDefinition Width="10*"></ColumnDefinition>
 			<ColumnDefinition Width="10*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-pre3" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1216721-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-pre-release-2" />
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-rc1" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1217192-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-release-candidate-1" />
 		</Grid>
 	</GroupBox>
 	</StackPanel>
@@ -310,6 +310,48 @@
 	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
 </Grid>
+
+<!-- 1.17.1-pre3 -->
+<local:MyCard Margin="0,0,0,15" Title="1.17.1-pre3" CanSwap="True" IsSwaped="True">
+	<!--Header-->
+	<StackPanel Margin="30,40,30,20">
+		<Border Style="{StaticResource verImgBdr}">
+            <Border.Background>
+                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-pre-release-2-header.jpg" Stretch="Uniform"/>
+            </Border.Background>
+            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-pre-release-2-header.jpg" Opacity="0"/>
+        </Border>
+		<Border Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1 PRE3" />
+		</Border>
+	<!--Detail-->
+	<TextBlock Text="洞穴与山崖预览（1.18内容）" Style="{StaticResource h2}"/>	
+		<StackPanel Style="{StaticResource ListStyle}">
+		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
+			<StackPanel>
+				<TextBlock Text="你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip" ToolTip="下载洞穴与山崖原型数据包"/>
+				<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
+        	</StackPanel>
+		</GroupBox>
+		</StackPanel>
+
+	<TextBlock Text="该版本修复了7个Bug" Style="{StaticResource footnote}"/>
+	<!--Logs-->
+	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-pre3" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1216721-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-pre-release-2" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
 
 <!-- 1.17.1-pre2 -->
 <local:MyCard Margin="0,0,0,15" Title="1.17.1-pre2" CanSwap="True" IsSwaped="True">
