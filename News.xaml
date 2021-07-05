@@ -256,7 +256,7 @@
 		</Border>
 	<!--Detail-->
 
-	<TextBlock Text="该版本具体更改不可见" Style="{StaticResource footnote}"/>
+	<TextBlock Text="该版本具体更改不可见（估计是在修安全性漏洞）" Style="{StaticResource footnote}"/>
 	<!--Logs-->
 	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
