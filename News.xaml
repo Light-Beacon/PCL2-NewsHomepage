@@ -241,8 +241,82 @@
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
 </Grid>
 
+<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
+	<!--Header-->
+	<StackPanel Margin="30,40,30,20">
+		<Border Style="{StaticResource verImgBdr}">
+            <Border.Background>
+                <ImageBrush ImageSource="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-release-header.jpg" Stretch="Uniform"/>
+            </Border.Background>
+            <Image Source="https://www.minecraft.net/content/dam/games/minecraft/screenshots/1-17-1-release-header.jpg" Opacity="0"/>
+        </Border>
+		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1 RC1" />
+		</Border>
+	<!--Detail-->
+	<TextBlock Text="更改" Style="{StaticResource h2}"/>	
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
+
+		</StackPanel>
+
+	<TextBlock Text="技术性修改" Style="{StaticResource h2}"/>	
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="被命名过的生物死亡会记录到日志。" />
+
+		</StackPanel>	
+
+	<TextBlock Text="该版本修复了1个Bug" Style="{StaticResource footnote}"/>
+	<!--Logs-->
+	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+<Grid Margin="0,0,0,15">
+	<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+	</Grid.ColumnDefinitions>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
+	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
+</Grid>
+
 <!-- 1.17.1-rc2 -->
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新发布候选 - 1.17.1-rc2" CanSwap="True" >
+<local:MyCard Margin="0,0,0,15" Title="最新发布候选 - 1.17.1-rc2" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -251,7 +325,7 @@
             </Border.Background>
             <Image Source="https://www.lightbeacon.top/pnh/newimgs/1-17-1-release-candidate-1-header.jpg" Opacity="0"/>
         </Border>
-		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+		<Border Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1 RC2" />
 		</Border>
 	<!--Detail-->
@@ -289,17 +363,6 @@
 	</GroupBox>
 	</StackPanel>
 </local:MyCard>
-
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-			<ColumnDefinition Width="100"></ColumnDefinition>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
 
 <local:MyCard Margin="0,0,0,15" Title="1.17.1-rc1" CanSwap="True" IsSwaped="True">
 	<!--Header-->
@@ -511,7 +574,7 @@
 	</StackPanel>
 </local:MyCard>
 
-<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌‎.17" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="重大更新 - 1‌‎.17" CanSwap="True" IsSwaped="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
