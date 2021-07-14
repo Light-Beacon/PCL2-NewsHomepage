@@ -244,7 +244,7 @@
 <local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 1" CanSwap="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。正式快照将于9月发布。" />
 		<Border Style="{StaticResource verImgBdr}">
             <Border.Background>
                 <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform"/>
