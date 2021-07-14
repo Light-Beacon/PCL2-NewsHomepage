@@ -241,7 +241,100 @@
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
 </Grid>
 
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
+<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 1" CanSwap="True">
+	<!--Header-->
+	<StackPanel Margin="30,40,30,20">
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。" />
+		<Border Style="{StaticResource verImgBdr}">
+            <Border.Background>
+                <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform"/>
+            </Border.Background>
+            <Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0"/>
+        </Border>
+		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP1" />
+		</Border>
+		<TextBlock Margin="30,3,10,3" Text="洞穴与山崖预览数据包已被移入该版本。" />
+	<!--Detail-->
+	<TextBlock Text="与 1.17(洞穴与山崖第一部分) 对比 " Style="{StaticResource h2}"/>	
+
+		<StackPanel Style="{StaticResource ListStyle}">	
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="扩展了世界高度与深度（Y -64~319）" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="[新增] 新的山地生物群系（高耸的山峰、覆雪山峰、林地、草甸和雪坡）" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴种类(奶酪洞穴，意面洞穴，以及面条洞穴)" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="加入了地下的水位（独立于海平面）和岩浆位" />
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴生物群系将会在地下和山体中自然生成（繁茂洞穴，溶洞）" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="新的矿石分布" />
+
+		<Image Height="500" Source="https://attachment.mcbbs.net/data/myattachment/forum/202107/14/010016xee9cb7eb7nw67rc.png" Margin="10,0,10,0"/>
+		<TextBlock Text="矿石分布对比图(由 SPGoding 翻译)" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="大型矿脉" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="统一山脉、洞穴和洞口" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="怪物只在完全黑暗时生成" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化，群系交界处现在会更平滑地过渡" />
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="地形现在会更平滑，高差也更大" />
+		
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="暖水深海能够自然生成了"/>
+
+		<Ellipse/>
+		<TextBlock Style="{StaticResource ListItem}" Text="移除了放大化世界和巨型生物群系"/>
+
+
+		</StackPanel>
+
+	<TextBlock Text="安装方法" Style="{StaticResource h2}"/>
+		<StackPanel Style="{StaticResource ListStyle}">	
+		<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+		<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0"/>
+		<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0"/>
+		<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件"/>
+		<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0"/>
+		<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0"/>
+		<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0"/>
+		<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0"/>
+		</StackPanel>	
+
+	<TextBlock Text="本文参考了 xiang_xge 的译文与 Minecraft Wiki 上的有关条目" Style="{StaticResource footnote}"/>
+	<!--Logs-->
+	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+			<ColumnDefinition Width="10*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp1" ColorType="Highlight"/>
+			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1223884-1-1.html"/>
+			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
+		</Grid>
+	</GroupBox>
+	</StackPanel>
+</local:MyCard>
+
+<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
 	<!--Header-->
 	<StackPanel Margin="30,40,30,20">
 		<Border Style="{StaticResource verImgBdr}">
@@ -250,7 +343,7 @@
             </Border.Background>
             <Image Source="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Opacity="0"/>
         </Border>
-		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+		<Border Style="{StaticResource verTxtBdr}">
 			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1" />
 		</Border>
 	<!--Detail-->
