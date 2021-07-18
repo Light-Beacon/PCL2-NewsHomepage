@@ -8,1527 +8,1677 @@
 
 <StackPanel Margin="0,-10,0,0" Opacity="{Binding Path=Value,ElementName=OpacitySlider}">
 
-<!--Animations Starts-->
-<StackPanel.Triggers>
-    <EventTrigger RoutedEvent="StackPanel.Loaded">
-        <BeginStoryboard>
-			<Storyboard>
-				<DoubleAnimation
-					Storyboard.TargetName="verBorder"
-					Storyboard.TargetProperty="Width"
-					From="0" To="0" Duration="0:0:0.1"/>
-				<DoubleAnimation BeginTime="0:0:0.1"
-					Storyboard.TargetName="verBorder"
-					Storyboard.TargetProperty="Width"
-					From="0" To="200" Duration="0:0:0.15"/>
-				<DoubleAnimation BeginTime="0:0:0.5"
-					Storyboard.TargetName="verBorder"
-					Storyboard.TargetProperty="Width"
-					From="200" To="180" Duration="0:0:0.1"/>
-			</Storyboard>
-        </BeginStoryboard>
-    </EventTrigger>
-    <EventTrigger RoutedEvent="StackPanel.Loaded" >
-           <BeginStoryboard>
-			<Storyboard x:Name="animation1" RepeatBehavior="Forever" >
-				<ColorAnimation
-					Storyboard.TargetName="NewsHint"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#FF000000" To="#FF000000" Duration="0:0:0"/>
-				<ColorAnimation BeginTime="0:0:5"
-					Storyboard.TargetName="NewsHint"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#FF000000" To="#00000000" Duration="0:0:1"/>
-				<ColorAnimation BeginTime="0:0:13"
-					Storyboard.TargetName="NewsHint"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#00000000" To="#FF000000" Duration="0:0:1"/>
-				<ColorAnimation
-					Storyboard.TargetName="Hint2"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#00000000" To="#00000000" Duration="0:0:0"/>
-				<ColorAnimation BeginTime="0:0:6"
-					Storyboard.TargetName="Hint2"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#00000000" To="#FF000000" Duration="0:0:1"/>
-				<ColorAnimation BeginTime="0:0:12"
-					Storyboard.TargetName="Hint2"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#FF000000" To="#00000000" Duration="0:0:1"/>
-			</Storyboard>
-        </BeginStoryboard>
-    </EventTrigger>
-	<EventTrigger RoutedEvent="StackPanel.Loaded" >
-           <BeginStoryboard>
-			<Storyboard x:Name="animation202141" RepeatBehavior="Forever" >
-				<ColorAnimation BeginTime="0:0:0"
-					Storyboard.TargetName="MinecraftPlus"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#FFEE9999" To="#FF99EE99" Duration="0:0:1"/>
-				<ColorAnimation BeginTime="0:0:1"
-					Storyboard.TargetName="MinecraftPlus"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#FF99EE99" To="#FF9999EE" Duration="0:0:1"/>
-				<ColorAnimation BeginTime="0:0:2"
-					Storyboard.TargetName="MinecraftPlus"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					From="#FF9999EE" To="#FFEE9999" Duration="0:0:1"/>
-			</Storyboard>
-        </BeginStoryboard>
-    </EventTrigger>
-</StackPanel.Triggers>
-<!--Animations Ends-->
+	<!--Animations Starts-->
+	<StackPanel.Triggers>
+		<EventTrigger RoutedEvent="StackPanel.Loaded">
+			<BeginStoryboard>
+				<Storyboard>
+					<DoubleAnimation Storyboard.TargetName="verBorder" Storyboard.TargetProperty="Width" From="0" To="0" Duration="0:0:0.1" />
+					<DoubleAnimation BeginTime="0:0:0.1" Storyboard.TargetName="verBorder" Storyboard.TargetProperty="Width" From="0" To="200" Duration="0:0:0.15" />
+					<DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="verBorder" Storyboard.TargetProperty="Width" From="200" To="180" Duration="0:0:0.1" />
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="StackPanel.Loaded">
+			<BeginStoryboard>
+				<Storyboard x:Name="animation1" RepeatBehavior="Forever">
+					<ColorAnimation Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#FF000000" Duration="0:0:0" />
+					<ColorAnimation BeginTime="0:0:5" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
+					<ColorAnimation BeginTime="0:0:13" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
+					<ColorAnimation Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#00000000" Duration="0:0:0" />
+					<ColorAnimation BeginTime="0:0:6" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
+					<ColorAnimation BeginTime="0:0:12" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="StackPanel.Loaded">
+			<BeginStoryboard>
+				<Storyboard x:Name="animation202141" RepeatBehavior="Forever">
+					<ColorAnimation BeginTime="0:0:0" Storyboard.TargetName="MinecraftPlus" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FFEE9999" To="#FF99EE99" Duration="0:0:1" />
+					<ColorAnimation BeginTime="0:0:1" Storyboard.TargetName="MinecraftPlus" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF99EE99" To="#FF9999EE" Duration="0:0:1" />
+					<ColorAnimation BeginTime="0:0:2" Storyboard.TargetName="MinecraftPlus" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF9999EE" To="#FFEE9999" Duration="0:0:1" />
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+	</StackPanel.Triggers>
+	<!--Animations Ends-->
 
-<StackPanel.Resources>
-<!--Template Starts-->
-	
-<!--Template Ends-->
+	<StackPanel.Resources>
+		<!--Template Starts-->
 
-<!--Styles Starts-->
-	<!--即将弃用-->
-    <Style TargetType="Ellipse">
-        <Setter Property="Fill" Value="{DynamicResource ColorBrush3}"/>
-		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="Height" Value="8" />
-		<Setter Property="Width" Value="8" />
-		<Setter Property="Margin" Value="0,0,10,0" />
-    </Style>
-	<Style TargetType="TextBlock">
-        <Setter Property="TextWrapping" Value="Wrap"/>
-		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontSize" Value="16" />
-		<Setter Property="Foreground" Value="Black"/>
-    </Style>
-	<Style x:Key="ListItem" TargetType="TextBlock">
-		<Setter Property="Margin" Value="15,-15,5,15"/>
-        <Setter Property="TextWrapping" Value="Wrap"/>
-		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontSize" Value="16" />
-		<Setter Property="Foreground" Value="Black"/>
-    </Style>
-	<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
-		<Setter Property="Margin" Value="15,-15,5,15"/>
-		<Setter Property="TextElement.FontSize" Value="20" />
-    </Style>
-	<Style x:Key="ListStyle" TargetType="StackPanel">
-        <Setter Property="Margin" Value="45,0,0,5"/>
-    </Style>
-	<Style x:Key="Read" TargetType="local:MyButton">
-        <Setter Property="Margin" Value="0,0,10,0"/>
-        <Setter Property="Height" Value="35"/>
-		<Setter Property="Padding" Value="13,0,13,0"/>
-		<Setter Property="EventType" Value="打开网页"/>
-    </Style>
+		<!--Template Ends-->
+
+		<!--Styles Starts-->
+		<!--即将弃用-->
+		<Style TargetType="Ellipse">
+			<Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Height" Value="8" />
+			<Setter Property="Width" Value="8" />
+			<Setter Property="Margin" Value="0,0,10,0" />
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Foreground" Value="Black" />
+		</Style>
+		<Style x:Key="ListItem" TargetType="TextBlock">
+			<Setter Property="Margin" Value="15,-15,5,15" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Foreground" Value="Black" />
+		</Style>
+		<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+			<Setter Property="Margin" Value="15,-15,5,15" />
+			<Setter Property="TextElement.FontSize" Value="20" />
+		</Style>
+		<Style x:Key="ListStyle" TargetType="StackPanel">
+			<Setter Property="Margin" Value="45,0,0,5" />
+		</Style>
+		<Style x:Key="Read" TargetType="local:MyButton">
+			<Setter Property="Margin" Value="0,0,10,0" />
+			<Setter Property="Height" Value="35" />
+			<Setter Property="Padding" Value="13,0,13,0" />
+			<Setter Property="EventType" Value="打开网页" />
+		</Style>
 		<Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-			<Setter Property="Grid.Column" Value="0"/>
-			<Setter Property="Text" Value="Minecraft Wiki"/>
+			<Setter Property="Grid.Column" Value="0" />
+			<Setter Property="Text" Value="Minecraft Wiki" />
 			<!--<Setter Property="ColorType" Value="Highlight"/>-->
 		</Style>
 		<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-			<Setter Property="Grid.Column" Value="1"/>
-			<Setter Property="Text" Value="MCBBS"/>
+			<Setter Property="Grid.Column" Value="1" />
+			<Setter Property="Text" Value="MCBBS" />
 			<!--temp
 			<Setter Property="IsEnabled" Value="False"/>-->
 		</Style>
 		<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-			<Setter Property="Grid.Column" Value="2"/>
-			<Setter Property="Text" Value="官网"/>
+			<Setter Property="Grid.Column" Value="2" />
+			<Setter Property="Text" Value="官网" />
 		</Style>
 
-	<Style x:Key="Code" TargetType="Border">
-        <Setter Property="Background" Value="#e0e0e0"/>
-        <Setter Property="BorderBrush" Value="#444"/>
-		<Setter Property="CornerRadius" Value="1"/>
-		<Setter Property="Margin" Value="5,0,5,0"/>
-		<Setter Property="BorderThickness" Value="1"/>
-    </Style>
-	<Style TargetType="TextBox">
-		<Setter Property="Background" Value="{x:Null}"/>
-		<Setter Property="Padding" Value="3,0,3,0"/>
-		<Setter Property="IsReadOnly" Value="True"/>
-		<Setter Property="BorderBrush" Value="{x:Null}"/>
-	</Style>
-	<Style x:Key="verImgBdr" TargetType="Border">
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="BorderThickness" Value="4"/>
-		<Setter Property="VerticalAlignment" Value="Top"/>
-		<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/>
-		<Setter Property="CornerRadius" Value="7"/>
-	</Style>
-	<Style x:Key="verTxtBlk" TargetType="TextBlock">
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="TextAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/>
-		<Setter Property="Width" Value="160"/>
-		<Setter Property="TextWrapping" Value="Wrap"/>
-		<Setter Property="FontSize" Value="28"/>
-	</Style>
-	<Style x:Key="verTxtBdr" TargetType="Border">
-		<Setter Property="Margin" Value="0,-22,-1,0"/>
-		<Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
-		<Setter Property="Width" Value="180"/>
-		<Setter Property="Height" Value="40"/>
-		<Setter Property="CornerRadius" Value="5"/>
-	</Style>
+		<Style x:Key="Code" TargetType="Border">
+			<Setter Property="Background" Value="#e0e0e0" />
+			<Setter Property="BorderBrush" Value="#444" />
+			<Setter Property="CornerRadius" Value="1" />
+			<Setter Property="Margin" Value="5,0,5,0" />
+			<Setter Property="BorderThickness" Value="1" />
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="Background" Value="{x:Null}" />
+			<Setter Property="Padding" Value="3,0,3,0" />
+			<Setter Property="IsReadOnly" Value="True" />
+			<Setter Property="BorderBrush" Value="{x:Null}" />
+		</Style>
+		<Style x:Key="verImgBdr" TargetType="Border">
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="BorderThickness" Value="4" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="CornerRadius" Value="7" />
+		</Style>
+		<Style x:Key="verTxtBlk" TargetType="TextBlock">
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="TextAlignment" Value="Center" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+			<Setter Property="Width" Value="160" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="FontSize" Value="28" />
+		</Style>
+		<Style x:Key="verTxtBdr" TargetType="Border">
+			<Setter Property="Margin" Value="0,-22,-1,0" />
+			<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="Width" Value="180" />
+			<Setter Property="Height" Value="40" />
+			<Setter Property="CornerRadius" Value="5" />
+		</Style>
 
-	<!--h2-->
-	<Style x:Key="h2" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="28"/>
-		<Setter Property="Padding" Value="15,5"/>
-		<Setter Property="Margin" Value="5,15"/>
-		<Setter Property="FontWeight" Value="Bold" />
-		<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
-    </Style>
+		<!--h2-->
+		<Style x:Key="h2" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="28" />
+			<Setter Property="Padding" Value="15,5" />
+			<Setter Property="Margin" Value="5,15" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+		</Style>
 
-	<!--h3-->
-	<Style x:Key="h3" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="20"/>
-		<Setter Property="Padding" Value="30,0"/>
-		<Setter Property="Margin" Value="10,0,10,10"/>
-		<Setter Property="FontWeight" Value="Bold" />
-		<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-    </Style>
+		<!--h3-->
+		<Style x:Key="h3" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="20" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="10,0,10,10" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+		</Style>
 
-	<!--h4-->
-	<Style x:Key="h4" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="16"/>
-		<Setter Property="Padding" Value="30,0"/>
-		<Setter Property="Margin" Value="10,0,10,10"/>
-		<Setter Property="FontWeight" Value="Bold" />
-		<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-    </Style>
+		<!--h4-->
+		<Style x:Key="h4" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="10,0,10,10" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+		</Style>
 
-	<!--footnote-->
-	<Style x:Key="footnote" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="14"/>
-		<Setter Property="Padding" Value="30,0"/>
-		<Setter Property="Margin" Value="0,20,0,15"/>
-		<Setter Property="Foreground" Value="#FF777777" />
-    </Style>
+		<!--footnote-->
+		<Style x:Key="footnote" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="14" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="0,20,0,15" />
+			<Setter Property="Foreground" Value="#FF777777" />
+		</Style>
 
-</StackPanel.Resources>
-<!--Styles Ends-->
-<!--Hints Starts-->
-<Border Margin="0,0,0,10" Height="30" Padding="2" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
-	<Grid Margin="10,0,0,0">
-		<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000" >
+	</StackPanel.Resources>
+	<!--Styles Ends-->
+	<!--Hints Starts-->
+	<Border Margin="0,0,0,10" Height="30" Padding="2" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+		<Grid Margin="10,0,0,0">
+			<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
 					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作并更新！
 		</TextBlock>
-		<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
+			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
 					📰 你知道新闻主页的地址已经改成更好记的“http://news.lightbeacon.top”了吗？（兼容旧地址）。
 		</TextBlock>
+		</Grid>
+	</Border>
+	<!--Hints Ends-->
+
+	<local:MyCard Margin="0,0,0,15" Title="如遇 PCL2 因为主页问题报错请将 PCL2 升级至最新版" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="50,50,50,20">
+			<TextBlock Text="由于新增了 1.17 历史版本的链接并且只有 2.0.4+ 的 PCL 支持，所以需要将PCL升至最新版本，以防止报错。" Margin="0,0,0,5" />
+			<TextBlock Text="新版本也修了不少 bug，为啥不升呢（" Margin="0,0,0,5" />
+		</StackPanel>
+	</local:MyCard>
+
+	<!--Tmp News-->
+	<Grid Margin="0,0,0,15">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
-</Border>
-<!--Hints Ends-->
 
-<local:MyCard Margin="0,0,0,15" Title="如遇 PCL2 因为主页问题报错请将 PCL2 升级至最新版" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="50,50,50,20">
-		<TextBlock Text="由于新增了 1.17 历史版本的链接并且只有 2.0.4+ 的 PCL 支持，所以需要将PCL升至最新版本，以防止报错。" Margin="0,0,0,5"/>
-		<TextBlock Text="新版本也修了不少 bug，为啥不升呢（"  Margin="0,0,0,5"/>
-	</StackPanel>
-</local:MyCard>
+	<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP1" />
+			</Border>
+			<TextBlock Margin="30,3,10,3" Text="洞穴与山崖预览数据包已被移入该版本。" />
+			<!--Detail-->
+			<TextBlock Text="与 1.17(洞穴与山崖第一部分) 对比 " Style="{StaticResource h2}" />
 
-<!--Tmp News-->
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="扩展了世界高度与深度（Y -64~319）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[新增] 新的山地生物群系（高耸的山峰、覆雪山峰、林地、草甸和雪坡）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴种类(奶酪洞穴，意面洞穴，以及面条洞穴)" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了地下的水位（独立于海平面）和岩浆位" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴生物群系将会在地下和山体中自然生成（繁茂洞穴，溶洞）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的矿石分布" />
+
+				<Image MaxHeight="500" Source="https://attachment.mcbbs.net/data/myattachment/forum/202107/14/010016xee9cb7eb7nw67rc.png" Margin="10,0,10,0" />
+				<TextBlock Text="矿石分布对比图(由 SPGoding 翻译)" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="大型矿脉" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="统一山脉、洞穴和洞口" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物只在完全黑暗时生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化，群系交界处现在会更平滑地过渡" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形现在会更平滑，高差也更大" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="暖水深海能够自然生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了放大化世界和巨型生物群系" />
+
+
+			</StackPanel>
+
+			<TextBlock Text="安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 xiang_xge 的译文与 Minecraft Wiki 上的有关条目" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1223884-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
+
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="被命名过的生物死亡会记录到日志。" />
+
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了42个Bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="“洞穴与山崖” 更新将会分为两次更新" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="30,40,30,10">
+			<TextBlock Text="由于技术问题以及其他原因，“洞穴与山崖”将会在夏季更新非地形生成的其它内容，冬季更新地形生成，目前已更新的地形生成内容已在 21w15a 中被移除。" Padding="30,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="考古系统被推迟到明年，时间待定。" Padding="30,0,0,0" Margin="0,0,0,5" />
+			<GroupBox Header="阅读原文" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191594-1-1.html" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" Text="官网" EventData="https://www.minecraft.net/zh-hans/article/a-caves---cliffs-announcement" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<Grid Margin="0,0,0,15">
+		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="1*"></ColumnDefinition>
 			<ColumnDefinition Width="100"></ColumnDefinition>
 			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
-
-<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 1" CanSwap="True">
-	<!--Header-->
-	<StackPanel Margin="30,40,30,20">
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。正式快照将于9月发布。" />
-		<Border Style="{StaticResource verImgBdr}">
-            <Border.Background>
-                <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform"/>
-            </Border.Background>
-            <Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0"/>
-        </Border>
-		<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP1" />
-		</Border>
-		<TextBlock Margin="30,3,10,3" Text="洞穴与山崖预览数据包已被移入该版本。" />
-	<!--Detail-->
-	<TextBlock Text="与 1.17(洞穴与山崖第一部分) 对比 " Style="{StaticResource h2}"/>	
-
-		<StackPanel Style="{StaticResource ListStyle}">	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="扩展了世界高度与深度（Y -64~319）" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="[新增] 新的山地生物群系（高耸的山峰、覆雪山峰、林地、草甸和雪坡）" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴种类(奶酪洞穴，意面洞穴，以及面条洞穴)" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="加入了地下的水位（独立于海平面）和岩浆位" />
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴生物群系将会在地下和山体中自然生成（繁茂洞穴，溶洞）" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="新的矿石分布" />
-
-		<Image MaxHeight="500" Source="https://attachment.mcbbs.net/data/myattachment/forum/202107/14/010016xee9cb7eb7nw67rc.png" Margin="10,0,10,0"/>
-		<TextBlock Text="矿石分布对比图(由 SPGoding 翻译)" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15"/>
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="大型矿脉" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="统一山脉、洞穴和洞口" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="怪物只在完全黑暗时生成" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化，群系交界处现在会更平滑地过渡" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="地形现在会更平滑，高差也更大" />
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="暖水深海能够自然生成了"/>
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="移除了放大化世界和巨型生物群系"/>
-
-
-		</StackPanel>
-
-	<TextBlock Text="安装方法" Style="{StaticResource h2}"/>
-		<StackPanel Style="{StaticResource ListStyle}">	
-		<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-		<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0"/>
-		<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0"/>
-		<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件"/>
-		<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0"/>
-		<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0"/>
-		<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0"/>
-		<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0"/>
-		</StackPanel>	
-
-	<TextBlock Text="本文参考了 xiang_xge 的译文与 Minecraft Wiki 上的有关条目" Style="{StaticResource footnote}"/>
-	<!--Logs-->
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp1" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1223884-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+		<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+	</Grid>
 
-<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
-	<!--Header-->
-	<StackPanel Margin="30,40,30,20">
-		<Border Style="{StaticResource verImgBdr}">
-            <Border.Background>
-                <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Stretch="Uniform"/>
-            </Border.Background>
-            <Image Source="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Opacity="0"/>
-        </Border>
-		<Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1" />
-		</Border>
-	<!--Detail-->
-	<TextBlock Text="更改" Style="{StaticResource h2}"/>	
+	<local:MyCard Margin="0,0,0,15" Title="重大更新 - 1‌‎.17" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17" />
+			</Border>
 
-		<StackPanel Style="{StaticResource ListStyle}">	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
+			<TextBlock Text="注意：Minecraft Java版 1.17 需求 Java 16或更高版本（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15" />
+			<local:MyButton Height="35" Margin="80,10" Text="点击下载 JDK 16.0.1" EventType="下载文件" EventData="https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_windows-x64_bin.zip" ToolTip="下载 JDK 16.0.1" />
 
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
-
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
-
-		</StackPanel>
-
-	<TextBlock Text="技术性修改" Style="{StaticResource h2}"/>	
-
-		<StackPanel Style="{StaticResource ListStyle}">	
-		
-		<Ellipse/>
-		<TextBlock Style="{StaticResource ListItem}" Text="被命名过的生物死亡会记录到日志。" />
-
-		</StackPanel>	
-
-	<TextBlock Text="该版本修复了42个Bug" Style="{StaticResource footnote}"/>
-	<!--Logs-->
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
-
-<local:MyCard Margin="0,0,0,15" Title="“洞穴与山崖” 更新将会分为两次更新" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-		<TextBlock Text="由于技术问题以及其他原因，“洞穴与山崖”将会在夏季更新非地形生成的其它内容，冬季更新地形生成，目前已更新的地形生成内容已在 21w15a 中被移除。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-		<TextBlock Text="考古系统被推迟到明年，时间待定。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-	<GroupBox Header="阅读原文" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191594-1-1.html" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" Text="官网" EventData="https://www.minecraft.net/zh-hans/article/a-caves---cliffs-announcement" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
-
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-			<ColumnDefinition Width="100"></ColumnDefinition>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
-
-<local:MyCard Margin="0,0,0,15" Title="重大更新 - 1‌‎.17" CanSwap="True" IsSwaped="True">
-	<!--Header-->
-	<StackPanel Margin="30,40,30,20">
-		<Border Style="{StaticResource verImgBdr}">
-            <Border.Background>
-                <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Stretch="Uniform"/>
-            </Border.Background>
-            <Image Source="https://www.lightbeacon.top/pnh/newimgs/1-17-release-header.jpg" Opacity="0"/>
-        </Border>
-		<Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17"/>
-		</Border>
-
-		<TextBlock Text="注意：Minecraft Java版 1.17 需求 Java 16或更高版本（现在大多数玩家安装的是Java 8）。否则启动游戏会崩溃。" Padding="30,0,0,0" Margin="0,10,0,15"/>	
-		<local:MyButton Height="35" Margin="80,10" Text="点击下载 JDK 16.0.1" EventType="下载文件" EventData="https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_windows-x64_bin.zip" ToolTip="下载 JDK 16.0.1"/>		
-
-		<TextBlock Text="洞穴与山崖预览（1.18内容）" Style="{StaticResource h2}"/>	
-		<StackPanel Style="{StaticResource ListStyle}">
-		<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
+			<TextBlock Text="洞穴与山崖预览（1.18内容）" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<GroupBox Header="关于预览" BorderBrush="{DynamicResource ColorBrush3}" Padding="20,0">
+					<StackPanel>
+						<TextBlock Text="由于 Minecraft 开发计划变动，预计在 1.17 加入的地形生成已被推迟到 1.18 ，但你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0" />
+						<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip" ToolTip="下载最新洞穴与山崖原型数据包" />
+						<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。" Margin="0,0,0,10" />
+					</StackPanel>
+				</GroupBox>
+			</StackPanel>
 			<StackPanel>
-				<TextBlock Text="由于 Minecraft 开发计划变动，预计在 1.17 加入的地形生成已被推迟到 1.18 ，但你可以使用官方提供的数据包来尝试后期的地形生成。" Margin="0,10,0,0"/>
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/622bf0fd298e1e164ecd05d866045ed5941283cf/CavesAndCliffsPreview.zip" ToolTip="下载最新洞穴与山崖原型数据包"/>
-				<TextBlock Text="注意：数据包不能被添加至已创建的世界。使用数据包创建的世界会被标记为实验性世界，这些世界不保证能在之后的版本中继续使用。"  Margin="0,0,0,10"/>
-        	</StackPanel>
-		</GroupBox>
-		</StackPanel>
-	<StackPanel>
-		<StackPanel.Resources>
-		<Style TargetType="Image">
-        	<Setter Property="MaxWidth" Value="70px"/>
-        	<Setter Property="MaxHeight" Value="70px"/>
-			<Setter Property="Margin" Value="3"/>
-    	</Style>
-		<Style TargetType="Border">
-			<Setter Property="Background" Value="{DynamicResource ColorBrush7}"/>
-        	<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/>
-        	<Setter Property="BorderThickness" Value="2px"/>
-			<Setter Property="CornerRadius" Value="5"/>
-			<Setter Property="Margin" Value="2px"/>
-    	</Style>
-		<Style x:Key="NameBdr" TargetType="Border">
-        	<Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
-        	<Setter Property="BorderThickness" Value="0"/>
-			<Setter Property="CornerRadius" Value="5,5,0,0"/>
-			<Setter Property="Margin" Value="-2,-2,-2,2"/>
-    	</Style>
-		<Style TargetType="TextBlock">
-        	<Setter Property="HorizontalAlignment" Value="Center"/>
-        	<Setter Property="VerticalAlignment" Value="Center"/>
-			<Setter Property="Grid.Row" Value="0"/>
-			<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/>
-			<Setter Property="FontSize" Value="12px"/>
-			<Setter Property="Margin" Value="8px,2px"/>
-    	</Style>
-
-		</StackPanel.Resources>
-
-		<!--Details-->
-		<TextBlock Text="新内容" Style="{StaticResource h2}"/>	
-		<TextBlock Text="方块" Style="{StaticResource h3}"/>	
-		<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-			<WrapPanel.Resources>
-			<Style TargetType="local:MyButton">
-        		<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块"/>
-			</Style>
-			</WrapPanel.Resources>
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/紫晶芽"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"紫晶芽"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1a/Small_Amethyst_Bud_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/紫水晶簇"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"紫水晶簇"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1b/Amethyst_Cluster_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/紫水晶母岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"紫水晶母岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/02/Budding_Amethyst_JE3_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/紫水晶块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"紫水晶块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/e2/Block_of_Amethyst_JE3_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/方解石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"方解石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/45/Calcite_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-		
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/平滑玄武岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"平滑玄武岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/b5/Smooth_Basalt_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/凝灰岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"凝灰岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/96/Tuff_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/遮光玻璃"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"遮光玻璃"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/43/Tinted_Glass_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/铜矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"铜矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/fd/Copper_Ore_JE2_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/铜块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"铜块（及其锈蚀变种）"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/86/Copper_Block_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/切制铜块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"切制铜块（及其锈蚀变种）"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/71/Cut_Copper_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/切制铜台阶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"切制铜台阶（及其锈蚀变种）"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/59/Cut_Copper_Slab_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/切制铜楼梯"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"切制铜楼梯（及其锈蚀变种）"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/65/Cut_Copper_Stairs_%28N%29_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton> 
-		
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/避雷针"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"避雷针"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/c/c1/Lightning_Rod_JE3.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/滴水石锥"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"滴水石锥"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/68/Pointed_Dripstone_Tip_Merge_%28D%29_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/滴水石块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"滴水石块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/32/Dripstone_Block_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/发光地衣"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"发光地衣"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/e5/Glow_Lichen_%28D%29_JE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/杜鹃花丛"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"杜鹃花丛"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/5e/Azalea_JE2_BE2.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/盛开的杜鹃花丛"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"盛开的杜鹃花丛"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/4a/Flowering_Azalea_JE2_BE2.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/杜鹃树叶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"杜鹃树叶"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/b6/Azalea_Leaves_JE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/盛开的杜鹃树叶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"盛开的杜鹃树叶"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8a/Flowering_Azalea_Leaves_JE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/苔藓块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"苔藓块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/c/c0/Moss_Block_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/苔藓地毯"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"苔藓地毯"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/49/Moss_Carpet_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/洞穴藤蔓"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"洞穴藤蔓"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/45/Cave_Vines_Plant_%28berries%29_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton> 
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/小型垂滴叶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"小型垂滴叶"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/2/28/Small_Dripleaf_JE3.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/大型垂滴叶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"大型垂滴叶"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/4d/Big_Dripleaf_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/缠根泥土"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"缠根泥土"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/dd/Rooted_Dirt_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/垂根"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"垂根"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/82/Hanging_Roots_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/孢子花"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"孢子花"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8d/Spore_Blossom_%28bottom_view%29_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深板岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深板岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/9c/Deepslate_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/錾制深板岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"錾制深板岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/36/Chiseled_Deepslate_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/磨制深板岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"磨制深板岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f7/Polished_Deepslate_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深板岩砖"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深板岩砖"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/3a/Deepslate_Bricks_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深板岩瓦"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深板岩瓦"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/eb/Deepslate_Tiles_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/裂纹深板岩砖"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"裂纹深板岩砖"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/87/Cracked_Deepslate_Bricks_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/裂纹深板岩瓦"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"裂纹深板岩瓦"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f7/Cracked_Deepslate_Tiles_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深板岩圆石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深板岩圆石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/d1/Cobbled_Deepslate_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层煤矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层煤矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/0b/Deepslate_Coal_Ore_JE1_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层铁矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层铁矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/48/Deepslate_Iron_Ore_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层铜矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层铜矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/6f/Deepslate_Copper_Ore_JE2_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层青金石矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层青金石矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/94/Deepslate_Lapis_Lazuli_Ore_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层金矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层金矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1d/Deepslate_Gold_Ore_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层红石矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层红石矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/70/Deepslate_Redstone_Ore_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层钻石矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层钻石矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/73/Deepslate_Diamond_Ore_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/深层绿宝石矿石"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"深层绿宝石矿石"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/3b/Emerald_Ore_JE3_BE3.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/被虫蚀的深板岩"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"被虫蚀的深板岩"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/9c/Deepslate_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/蜡烛"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"蜡烛"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/30/Candle.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/细雪"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"细雪"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/7c/Powder_Snow_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/粗铁块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"粗铁块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/74/Block_of_Raw_Iron_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/粗铜块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"粗铁块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/94/Block_of_Raw_Copper_JE2_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/粗金块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"粗金块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a7/Block_of_Raw_Gold_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/Sculk Sensor"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"Sculk Sensor"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a8/Sculk_Sensor_JE1_BE2.gif"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/光源方块"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"光源方块"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/7c/Light_0_JE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		</WrapPanel>
-
-		<TextBlock Text="物品" Style="{StaticResource h3}"/>
-		<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-			<WrapPanel.Resources>
-			<Style TargetType="local:MyButton">
-        		<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品"/>
-			</Style>
-			</WrapPanel.Resources>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/紫水晶碎片"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"紫水晶碎片"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/7b/Amethyst_Shard_JE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/铜锭"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"铜锭"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/91/Copper_Ingot_JE2_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/望远镜"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"望远镜"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/04/Spyglass_JE3.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/细雪桶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"细雪桶"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/5c/Powder_Snow_Bucket_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/美西螈桶"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"美西螈桶"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/06/Bucket_of_Axolotl_JE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/美西螈刷怪蛋"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"美西螈刷怪蛋"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/b1/Axolotl_Spawn_Egg_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/发光鱿鱼刷怪蛋"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"发光鱿鱼刷怪蛋"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/39/Glow_Squid_Spawn_Egg_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/山羊刷怪蛋"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"山羊刷怪蛋"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/35/Goat_Spawn_Egg_JE1_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/荧光墨囊"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"荧光墨囊"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/75/Glow_Ink_Sac_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/发光浆果"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"发光浆果"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/93/Glow_Berries_JE1_BE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/粗铁"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"粗铁"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/d2/Raw_Iron_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/粗铜"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"粗铜"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1b/Raw_Copper_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/粗金"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"粗金"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/6f/Raw_Gold_JE3_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/收纳袋"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"收纳袋"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/2/26/Bundle_Filled_JE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		</WrapPanel>
-
-		<TextBlock Text="实体" Style="{StaticResource h3}"/>	
-		<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-			<WrapPanel.Resources>
-			<Style TargetType="local:MyButton">
-        		<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该实体"/>
-			</Style>
-			</WrapPanel.Resources>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/美西螈"
-		><Border Width="80px"><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"美西螈"
-		/></Border><Image Margin="0,12,0,0" Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/db/Lucy_Axolotl_JE2_BE2.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/发光鱿鱼"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"发光鱿鱼"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/2/2a/Glow_Squid_JE1.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/山羊"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"山羊"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/52/Goat.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/荧光物品展示框"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"荧光物品展示框"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/3f/Glow_Item_Frame_JE1_BE3.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/标记"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"标记"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/d2/Blank.png"
-		/></StackPanel></Border></local:MyButton>
-
-		</WrapPanel>
-
-		<TextBlock Text="世界生成" Style="{StaticResource h3}"/>
-		<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-			<WrapPanel.Resources>
-			<Style TargetType="local:MyButton">
-        		<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该结构"/>
-			</Style>
-			</WrapPanel.Resources>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/杜鹃树"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"杜鹃树"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/4e/Azalea_Tree.png"
-		/></StackPanel></Border></local:MyButton>
-
-		<local:MyButton EventType="打开网页" EventData=
-		"https://minecraft.fandom.com/zh/wiki/紫晶洞"
-		><Border><StackPanel><Border Style="{StaticResource NameBdr}"><TextBlock Text=
-		"紫晶洞"
-		/></Border><Image Source=
-		"https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1c/Amethyst_Geode_JE2.png"
-		/></StackPanel></Border></local:MyButton>
-		</WrapPanel>
-
-		<TextBlock Text="命令" Style="{StaticResource h3}"/>
-		<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-			<Ellipse/>
-			<TextBlock Style="{StaticResource ListItem}" Text="/item" />
-
-			<Ellipse/>
-			<TextBlock Style="{StaticResource ListItem}" Text="/perf" />
-		</StackPanel>
-
-		<TextBlock Text="游戏内容" Style="{StaticResource h3}"/>
-		<TextBlock Text="进度" Style="{StaticResource h4}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-			<Ellipse/>
-			<TextBlock Style="{StaticResource ListItem}" Text="新增了11个进度" />
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					<Style x:Key="NameBdr" TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="0" />
+						<Setter Property="CornerRadius" Value="5,5,0,0" />
+						<Setter Property="Margin" Value="-2,-2,-2,2" />
+					</Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+
+				</StackPanel.Resources>
+
+				<!--Details-->
+				<TextBlock Text="新内容" Style="{StaticResource h2}" />
+				<TextBlock Text="方块" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
+						</Style>
+					</WrapPanel.Resources>
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫晶芽">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="紫晶芽" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1a/Small_Amethyst_Bud_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶簇">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="紫水晶簇" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1b/Amethyst_Cluster_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶母岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="紫水晶母岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/02/Budding_Amethyst_JE3_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="紫水晶块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/e2/Block_of_Amethyst_JE3_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/方解石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="方解石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/45/Calcite_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/平滑玄武岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="平滑玄武岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/b5/Smooth_Basalt_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/凝灰岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="凝灰岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/96/Tuff_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/遮光玻璃">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="遮光玻璃" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/43/Tinted_Glass_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/铜矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="铜矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/fd/Copper_Ore_JE2_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/铜块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="铜块（及其锈蚀变种）" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/86/Copper_Block_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/切制铜块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="切制铜块（及其锈蚀变种）" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/71/Cut_Copper_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/切制铜台阶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="切制铜台阶（及其锈蚀变种）" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/59/Cut_Copper_Slab_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/切制铜楼梯">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="切制铜楼梯（及其锈蚀变种）" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/65/Cut_Copper_Stairs_%28N%29_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/避雷针">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="避雷针" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/c/c1/Lightning_Rod_JE3.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/滴水石锥">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="滴水石锥" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/68/Pointed_Dripstone_Tip_Merge_%28D%29_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/滴水石块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="滴水石块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/32/Dripstone_Block_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光地衣">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="发光地衣" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/e5/Glow_Lichen_%28D%29_JE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/杜鹃花丛">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="杜鹃花丛" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/5e/Azalea_JE2_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/盛开的杜鹃花丛">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="盛开的杜鹃花丛" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/4a/Flowering_Azalea_JE2_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/杜鹃树叶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="杜鹃树叶" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/b6/Azalea_Leaves_JE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/盛开的杜鹃树叶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="盛开的杜鹃树叶" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8a/Flowering_Azalea_Leaves_JE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/苔藓块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="苔藓块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/c/c0/Moss_Block_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/苔藓地毯">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="苔藓地毯" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/49/Moss_Carpet_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/洞穴藤蔓">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="洞穴藤蔓" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/45/Cave_Vines_Plant_%28berries%29_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/小型垂滴叶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="小型垂滴叶" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/2/28/Small_Dripleaf_JE3.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/大型垂滴叶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="大型垂滴叶" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/4d/Big_Dripleaf_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/缠根泥土">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="缠根泥土" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/dd/Rooted_Dirt_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/垂根">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="垂根" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/82/Hanging_Roots_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/孢子花">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="孢子花" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8d/Spore_Blossom_%28bottom_view%29_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深板岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/9c/Deepslate_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/錾制深板岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="錾制深板岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/36/Chiseled_Deepslate_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/磨制深板岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="磨制深板岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f7/Polished_Deepslate_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩砖">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深板岩砖" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/3a/Deepslate_Bricks_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩瓦">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深板岩瓦" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/eb/Deepslate_Tiles_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/裂纹深板岩砖">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="裂纹深板岩砖" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/87/Cracked_Deepslate_Bricks_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/裂纹深板岩瓦">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="裂纹深板岩瓦" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f7/Cracked_Deepslate_Tiles_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩圆石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深板岩圆石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/d1/Cobbled_Deepslate_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层煤矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层煤矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/0b/Deepslate_Coal_Ore_JE1_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层铁矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层铁矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/48/Deepslate_Iron_Ore_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层铜矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层铜矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/6f/Deepslate_Copper_Ore_JE2_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层青金石矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层青金石矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/94/Deepslate_Lapis_Lazuli_Ore_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层金矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层金矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1d/Deepslate_Gold_Ore_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层红石矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层红石矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/70/Deepslate_Redstone_Ore_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层钻石矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层钻石矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/73/Deepslate_Diamond_Ore_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层绿宝石矿石">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="深层绿宝石矿石" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/3b/Emerald_Ore_JE3_BE3.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/被虫蚀的深板岩">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="被虫蚀的深板岩" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/9c/Deepslate_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/蜡烛">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="蜡烛" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/30/Candle.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/细雪">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="细雪" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/7c/Powder_Snow_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铁块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="粗铁块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/74/Block_of_Raw_Iron_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铜块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="粗铁块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/94/Block_of_Raw_Copper_JE2_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗金块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="粗金块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a7/Block_of_Raw_Gold_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Sculk Sensor">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Sculk Sensor" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a8/Sculk_Sensor_JE1_BE2.gif" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/光源方块">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="光源方块" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/7c/Light_0_JE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+				<TextBlock Text="物品" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶碎片">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="紫水晶碎片" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/7b/Amethyst_Shard_JE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/铜锭">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="铜锭" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/91/Copper_Ingot_JE2_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/望远镜">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="望远镜" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/04/Spyglass_JE3.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/细雪桶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="细雪桶" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/5c/Powder_Snow_Bucket_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/美西螈桶">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="美西螈桶" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/06/Bucket_of_Axolotl_JE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/美西螈刷怪蛋">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="美西螈刷怪蛋" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/b1/Axolotl_Spawn_Egg_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光鱿鱼刷怪蛋">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="发光鱿鱼刷怪蛋" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/39/Glow_Squid_Spawn_Egg_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/山羊刷怪蛋">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="山羊刷怪蛋" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/35/Goat_Spawn_Egg_JE1_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/荧光墨囊">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="荧光墨囊" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/7/75/Glow_Ink_Sac_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光浆果">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="发光浆果" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/93/Glow_Berries_JE1_BE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铁">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="粗铁" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/d2/Raw_Iron_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铜">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="粗铜" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1b/Raw_Copper_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗金">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="粗金" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/6/6f/Raw_Gold_JE3_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/收纳袋">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="收纳袋" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/2/26/Bundle_Filled_JE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+				<TextBlock Text="实体" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该实体" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/美西螈">
+						<Border Width="80px">
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="美西螈" />
+								</Border>
+								<Image Margin="0,12,0,0" Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/db/Lucy_Axolotl_JE2_BE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光鱿鱼">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="发光鱿鱼" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/2/2a/Glow_Squid_JE1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/山羊">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="山羊" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/5/52/Goat.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/荧光物品展示框">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="荧光物品展示框" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/3/3f/Glow_Item_Frame_JE1_BE3.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/标记">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="标记" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/d/d2/Blank.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+				<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该结构" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/杜鹃树">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="杜鹃树" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/4e/Azalea_Tree.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫晶洞">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="紫晶洞" />
+								</Border>
+								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/1/1c/Amethyst_Geode_JE2.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+				</WrapPanel>
+
+				<TextBlock Text="命令" Style="{StaticResource h3}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="/item" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="/perf" />
+				</StackPanel>
+
+				<TextBlock Text="游戏内容" Style="{StaticResource h3}" />
+				<TextBlock Text="进度" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了11个进度" />
+				</StackPanel>
+				<TextBlock Text="战利品表" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了新功能" />
+				</StackPanel>
+				<TextBlock Text="死亡信息" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了冻死的死亡信息" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了关于钟乳石的死亡信息" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了在石笋上摔死的死亡信息" />
+				</StackPanel>
+				<TextBlock Text="粒子" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了15个粒子类型" />
+				</StackPanel>
+
+				<TextBlock Text="常规" Style="{StaticResource h3}" />
+				<TextBlock Text="闪烁标语" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了11个闪烁标语" />
+				</StackPanel>
+
+				<TextBlock Text="标签" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了一堆标签" />
+				</StackPanel>
+
+				<TextBlock Text="语言" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入俄语（革命前）语言翻译。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入繁体中文（香港）语言翻译。" />
+				</StackPanel>
 			</StackPanel>
-		<TextBlock Text="战利品表" Style="{StaticResource h4}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-			<Ellipse/>
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了新功能" />
-			</StackPanel>
-		<TextBlock Text="死亡信息" Style="{StaticResource h4}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="新增了冻死的死亡信息" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="新增了关于钟乳石的死亡信息" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="新增了在石笋上摔死的死亡信息" />
-			</StackPanel>
-		<TextBlock Text="粒子" Style="{StaticResource h4}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了15个粒子类型" />
-			</StackPanel>
-		
-		<TextBlock Text="常规" Style="{StaticResource h3}"/>
-			<TextBlock Text="闪烁标语" Style="{StaticResource h4}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了11个闪烁标语" />
-			</StackPanel>
 
-			<TextBlock Text="标签" Style="{StaticResource h4}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了一堆标签" />
-			</StackPanel>
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
 
-			<TextBlock Text="语言" Style="{StaticResource h4}"/>
+			<TextBlock Text="方块" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="加入俄语（革命前）语言翻译。" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="加入繁体中文（香港）语言翻译。" />
-			</StackPanel>
-		</StackPanel>
-
-	<TextBlock Text="更改" Style="{StaticResource h2}"/>
-
-		<TextBlock Text="方块" Style="{StaticResource h3}"/>
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="炼药锅可以存放细雪" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="草径重命名为土径" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="被虫蚀的方块破坏用时是对应非虫蚀方块的一半" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="结构方块数据模式被隐藏" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="告示牌可使用荧光墨囊来提高其文本亮度，使用墨囊恢复。" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="告示牌材质更改。" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="矿石材质更改。" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="铁砧物品名称字符上限提高到50。" />
 			</StackPanel>
 
-		<TextBlock Text="物品" Style="{StaticResource h3}"/>
+			<TextBlock Text="物品" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="时钟、指南针和磁石指针材质更改" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="皮革盔甲可使玩家免疫冰冻伤害，皮革马铠可使马免疫冰冻伤害" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="迷之炖菜满饥饿值也可食用" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="食用河豚的中毒效果降至II" />
 			</StackPanel>
-		
-		<TextBlock Text="实体" Style="{StaticResource h3}"/>
+
+			<TextBlock Text="实体" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="潜影贝被其他潜影贝发射的导弹击中时有概率生成一只新的潜影贝" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="溺尸有概率掉落铜锭，不再掉落金锭" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="骷髅陷入细雪22秒（440游戏刻）后会转化为流浪者" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="狐狸会主动寻找并吃下发光浆果，且可使用发光浆果繁殖" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="守卫者、远古守卫者和北极熊被火烧死时会掉落熟鱼，而不是生鱼" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="蜜蜂会把盛开的杜鹃花丛和盛开的杜鹃树叶视为花，并且会为洞穴藤蔓传粉" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="鱿鱼现在能被拴绳拴住" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="经验球不再会被已死亡的玩家吸引" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="矿车现在可以在水下移动，但是很慢" />
 			</StackPanel>
 
-		<TextBlock Text="世界生成" Style="{StaticResource h3}"/>
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="废弃矿井的片段不再完全浮空生成" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="废弃矿井有必要时会生成用于支撑桥梁的原木立柱或拉起矿井廊道的锁链" />
 			</StackPanel>
 
-		<TextBlock Text="命令格式" Style="{StaticResource h3}"/>
+			<TextBlock Text="命令格式" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="移除 /replaceitem 并由新命令 /item 替代" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="/give 现在一次最多可以给予100组物品" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="移除了 /debug report 命令，其功能被调试组合键F3 + L和命令 /perf 取代" />
 			</StackPanel>
 
-		<TextBlock Text="游戏内容" Style="{StaticResource h3}"/>
+			<TextBlock Text="游戏内容" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="如果玩家有中毒或凋零的效果，黄色伤害吸收心现在将保持黄色，而不是显示为空" />
 			</StackPanel>
 
-		<TextBlock Text="常规" Style="{StaticResource h3}"/>
+			<TextBlock Text="常规" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="更新了制作人员名单的文本，以与基岩版同步" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="现在按住空格键可以加快终末之诗和鸣谢名单的滚动速度。按住空格键的同时按住Ctrl键会让滚动速度变得更快。同时按住两个Ctrl键时滚动速度达到最高" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="数据包和资源包中 pack.mcmeta 里的 pack_version 版本数字从6升级到7" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="菜单界面按住 Shift 键点击按钮时会回退至上一个选项" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="菜单界面滑条按钮现在可以通过鼠标滚轮调整" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="调试模式现在需要按住 Alt 键并点击世界类型按钮来访问，取代了 Shift 键" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="自定义世界向维度类型加入了height和min_y参数" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="服务器移除了max-build-height服务器设置" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="更改了无法连接到认证服务器的错误消息，现在的描述是“无法访问”而不是“维护停机”" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="创造模式物品栏“红石”标签页现在按照方块使用频率重新排序，并将黏液块和蜂蜜块移到了“红石”标签页" />	
-				<Ellipse/>
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="创造模式物品栏“红石”标签页现在按照方块使用频率重新排序，并将黏液块和蜂蜜块移到了“红石”标签页" />
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="游戏现在基于OpenGL 3.2 core profile运行" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="游戏现在需要 Java 16" FontWeight="Bold" />
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="从minecraft.jar中移除了一些未使用的材质"/>
-				<Ellipse/>
-				<TextBlock Style="{StaticResource ListItem}" Text="菜单界面背景更改为紫晶洞"/>	
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从minecraft.jar中移除了一些未使用的材质" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="菜单界面背景更改为紫晶洞" />
 			</StackPanel>
 
-		<TextBlock Text="技术性" Style="{StaticResource h3}"/>
-		<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse/>
+			<TextBlock Text="技术性" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="“游玩时间”统计项的本地化键名被重命名为 play_time " />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="即使游戏暂停，“世界打开时间”统计项  (total_world_time)  也会计算时间。" />
-				<Ellipse/>
+				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="若玩家曾永久性拒绝使用服务器资源包，如果此资源包需要强制使用，则现在依然会展示资源包提示信息（而非直接让用户断开连接）" />
 			</StackPanel>
 
-	<TextBlock Text="该版本修复了 317 个Bug" Style="{StaticResource footnote}"/>
-	<TextBlock Text="该新闻是摘录，如果需要更全面、详细的信息请浏览 Minecraft Wiki。" Margin="30,0,0,10"/>
-	<TextBlock Text="该新闻部分图片与内容来源于 Minecraft Wiki。"  Margin="30,0,0,10"/>
-	<!--Logs-->
-	<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+			<TextBlock Text="该版本修复了 317 个Bug" Style="{StaticResource footnote}" />
+			<TextBlock Text="该新闻是摘录，如果需要更全面、详细的信息请浏览 Minecraft Wiki。" Margin="30,0,0,10" />
+			<TextBlock Text="该新闻部分图片与内容来源于 Minecraft Wiki。" Margin="30,0,0,10" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/Java%E7%89%881.17" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1178898-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/caves---cliffs--part-i-out-today-java" />
+				</Grid>
+			</GroupBox>
+
+			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
+
+		</StackPanel>
+	</local:MyCard>
+
+	<!--更多-->
+	<Grid Margin="10,10,10,40" Height="40" Width="300">
+		<Grid.Triggers>
+			<EventTrigger RoutedEvent="Loaded">
+				<BeginStoryboard>
+					<Storyboard>
+						<ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.0" />
+						<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" />
+						<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+			<EventTrigger RoutedEvent="MouseEnter">
+				<BeginStoryboard>
+					<Storyboard>
+						<ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+						<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+						<DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="260" Duration="0:0:0.1" />
+						<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+			<EventTrigger RoutedEvent="MouseLeave">
+				<BeginStoryboard>
+					<Storyboard>
+						<ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
+						<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" Duration="0:0:0.5" />
+						<DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="240" Duration="0:0:0.1" />
+						<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
+					</Storyboard>
+				</BeginStoryboard>
+			</EventTrigger>
+		</Grid.Triggers>
+
+		<local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/history/1.17.json">
+			<Border x:Name="viewBdr" Height="40" Width="240" Background="{StaticResource ColorBrush6}" Opacity="1" CornerRadius="4" BorderThickness="1.5" BorderBrush="{StaticResource ColorBrush4}">
+				<TextBlock x:Name="view" Text="浏览 1.17 更新历史" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold" />
+			</Border>
+		</local:MyButton>
+	</Grid>
+
+	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft-zh.gamepedia.com/Java%E7%89%881.17" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1178898-1-1.html"/>
-			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/caves---cliffs--part-i-out-today-java" />
-		</Grid>
-	</GroupBox>
-
-	<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。"  Margin="10,10,0,10" Foreground="#666666"/>
-
-	</StackPanel>
-</local:MyCard>
-
-<!--更多-->
-<Grid Margin="10,10,10,40" Height="40" Width="300">
-<Grid.Triggers>
-	<EventTrigger RoutedEvent="Loaded" >
-        <BeginStoryboard>
-			<Storyboard>
-				<ColorAnimation
-					Storyboard.TargetName="view"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					To="#777777" Duration="0:0:0.0"/>
-				<ColorAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-					To="#BBFFFFFF"/>
-				<ColorAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-					To="#777777"/>
-			</Storyboard>
-        </BeginStoryboard>
-    </EventTrigger>
-	<EventTrigger RoutedEvent="MouseEnter" >
-        <BeginStoryboard>
-			<Storyboard>
-				<ColorAnimation
-					Storyboard.TargetName="view"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					To="{Binding}" Duration="0:0:0.25"/>
-				<ColorAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-					To="{Binding}" Duration="0:0:0.25"/>
-				<DoubleAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="Width"
-					To="260" Duration="0:0:0.1"/>
-				<ColorAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-					To="{Binding}" Duration="0:0:0.25"/>
-			</Storyboard>
-        </BeginStoryboard>
-    </EventTrigger>
-	<EventTrigger RoutedEvent="MouseLeave" >
-        <BeginStoryboard>
-			<Storyboard>
-				<ColorAnimation
-					Storyboard.TargetName="view"
-					Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-					To="#777777" Duration="0:0:0.75"/>
-				<ColorAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-					To="#BBFFFFFF" Duration="0:0:0.5"/>
-				<DoubleAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="Width"
-					To="240" Duration="0:0:0.1"/>
-				<ColorAnimation
-					Storyboard.TargetName="viewBdr"
-					Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-					To="#777777" Duration="0:0:0.75"/>
-			</Storyboard>
-		</BeginStoryboard>
-    </EventTrigger>
-</Grid.Triggers>
-
-<local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/history/1.17.json">
-		<Border x:Name="viewBdr" Height="40" Width="240" Background="{StaticResource ColorBrush6}" Opacity="1" CornerRadius="4" BorderThickness="1.5" BorderBrush="{StaticResource ColorBrush4}">
-			<TextBlock x:Name="view" Text="浏览 1.17 更新历史"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold"/>
-		</Border>
-	</local:MyButton>
-</Grid>
-
-<Grid Margin="0,0,0,15">
-	<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="1*"></ColumnDefinition>
 			<ColumnDefinition Width="100"></ColumnDefinition>
 			<ColumnDefinition Width="1*"></ColumnDefinition>
-	</Grid.ColumnDefinitions>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0"/>
-	<TextBlock Text="周  边  消  息" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center"/>
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2"/>
-</Grid>
-
-<local:MyCard Margin="0,0,0,15" Title="不会在4月12日进行账号迁移" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-		<TextBlock Text="之前有人在启动器中发现了迁移日期（2021-4-12），但是并不是官方公告，目前该日期已被改为 2099-1-1。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-		<TextBlock Text="Mojang 员工 Ined：不同一些网站所言，今天（4-12）不会进行 Mojang 账号迁移。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-	<GroupBox Header="来源" BorderBrush="{DynamicResource ColorBrush3}">
-		<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="20*"></ColumnDefinition>
-			<ColumnDefinition Width="10*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
-			<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191123-1-1.html" ColorType="Highlight"/>
-			<local:MyButton Style="{StaticResource Read1}" Text="推特" EventData="https://twitter.com/Mojang_Ined/status/1381669725097357317" />
-		</Grid>
-	</GroupBox>
-	</StackPanel>
-</local:MyCard>
-
-<local:MyCard Margin="0,10,0,15" Title="Minecraft Plus[愚人节]" RenderTransformOrigin="0.5,0.5" CanSwap="True" IsSwaped="True">
-	<local:MyCard.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-	</local:MyCard.RenderTransform>
-	<Border Background="#99DDDDCC" CornerRadius="4">
-		<StackPanel Margin="30,40,30,10">
-			<TextBlock Text="Mojang的最新科技。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-			<TextBlock Text="完全免费。" Padding="30,0,0,0" Margin="0,0,0,5"/>
-			<TextBlock Text="二十年秘密研究匠心独创！" Padding="30,0,0,0" Margin="0,0,0,5"/>
-			<TextBlock Text="隆重推出！" Padding="30,0,0,0" Margin="0,0,0,5" FontSize="20"/>
-			<TextBlock Text="Minecraft Plus!!!!!!!" Padding="30,0,0,0" Margin="0,50,0,-20" FontSize="44" x:Name="MinecraftPlus" FontWeight="Bold">
-			<TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-15"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-			</TextBlock>
-			<TextBlock Text="心动不如行动！点击下方按钮下载！" Padding="30,0,0,0" Margin="0,0,0,20"/>
-			<local:MyButton Margin="0,0,10,0" Width="300" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" Text="点我下载!" EventType="下载文件" EventData="https://plus.minecraft.net/screensaver.zip">
-			<local:MyButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-1"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-			</local:MyButton.RenderTransform>
-			</local:MyButton>
-			<TextBlock Text="虽然就是个屏保..." Padding="30,0,0,0" Margin="0,0,0,5" FontSize="10" Foreground="#DDDDCC"/>
-		</StackPanel>
-	</Border>
-</local:MyCard>
-
-<local:MyCard Margin="0,0,0,15" Title="新闻主页更新：过旧新闻将会迁移至帮助页" CanSwap="True" IsSwaped="true">
-	<StackPanel Margin="40,40,30,20">
-		<TextBlock Margin="20,5,0,10" Text="新闻主页过时新闻太过冗长，预计PCL2支持在线获取帮助页后将部分过期快照迁移至帮助页。"/>
-		<TextBlock Text="2021/3/25" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10"/>
-<!--		<local:MyListItem Margin="0,0,0,10" EventType="打开帮助" EventData="https://www.lightbeacon.top/news_image/test.xaml" />-->
-	</StackPanel>
-</local:MyCard>	
-
-<local:MyCard Margin="0,0,0,15" Title="M‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎inecraft Crowdin新增文言文翻译" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="40,40,30,20">
-		<TextBlock Margin="20,5,0,10" Text="    文言文翻译已被加入Minecraft Crowdin，有望在未来版本加入到游戏中。" />
-		<Image Margin="0,0,10,0" Source="https://www.lightbeacon.top/news_image/news0001.png"  HorizontalAlignment="Left" MaxWidth="600"/>
-		<TextBlock Text="2021/1/22" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10"/>
-	</StackPanel>
-</local:MyCard>	
-<!--News Ends-->
-
-
-<local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
-	<StackPanel Margin="30,40,30,10">
-		<TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5"/>
-		<TextBlock Text="  但有人往PCL2反馈提交新闻主页Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16"/>
-		<TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的Github仓库交issue而不是在PCL2反馈交反馈（PCL2不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5"/>
-		<TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5"/>
-		<Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
-			<TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25"/>
-		</Border>
-	</StackPanel>
-</local:MyCard>
-</StackPanel>
-<local:MyCard Title="新闻主页选项" CanSwap="True" IsSwaped="True" Margin="0,10,0,0">
-<StackPanel Margin="10,20,0,10">
-	<TextBlock Grid.Column="0" Text="*以下为实验性功能 刷新后恢复初始设置" Margin="20,20,0,0"/>
-	<Grid Margin="40,20">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="60"/>
-			<ColumnDefinition Width="40"/>
-			<ColumnDefinition Width="*"/>
-		</Grid.ColumnDefinitions>
-		<TextBlock Grid.Column="0" Text="不透明度"/>
-		<Slider Grid.Column="2" Minimum="0" Maximum="1" x:Name="OpacitySlider" Value="1" TickFrequency="0.1" AutoToolTipPlacement="TopLeft" ToolTip="拖动调整"/>
-		<TextBlock Grid.Column="1" Text="{Binding Path=Value,ElementName=OpacitySlider}"/>
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+		<TextBlock Text="周  边  消  息" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
+
+	<local:MyCard Margin="0,0,0,15" Title="不会在4月12日进行账号迁移" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="30,40,30,10">
+			<TextBlock Text="之前有人在启动器中发现了迁移日期（2021-4-12），但是并不是官方公告，目前该日期已被改为 2099-1-1。" Padding="30,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="Mojang 员工 Ined：不同一些网站所言，今天（4-12）不会进行 Mojang 账号迁移。" Padding="30,0,0,0" Margin="0,0,0,5" />
+			<GroupBox Header="来源" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191123-1-1.html" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" Text="推特" EventData="https://twitter.com/Mojang_Ined/status/1381669725097357317" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,10,0,15" Title="Minecraft Plus[愚人节]" RenderTransformOrigin="0.5,0.5" CanSwap="True" IsSwaped="True">
+		<local:MyCard.RenderTransform>
+			<TransformGroup>
+				<ScaleTransform />
+				<SkewTransform />
+				<RotateTransform Angle="0" />
+				<TranslateTransform />
+			</TransformGroup>
+		</local:MyCard.RenderTransform>
+		<Border Background="#99DDDDCC" CornerRadius="4">
+			<StackPanel Margin="30,40,30,10">
+				<TextBlock Text="Mojang的最新科技。" Padding="30,0,0,0" Margin="0,0,0,5" />
+				<TextBlock Text="完全免费。" Padding="30,0,0,0" Margin="0,0,0,5" />
+				<TextBlock Text="二十年秘密研究匠心独创！" Padding="30,0,0,0" Margin="0,0,0,5" />
+				<TextBlock Text="隆重推出！" Padding="30,0,0,0" Margin="0,0,0,5" FontSize="20" />
+				<TextBlock Text="Minecraft Plus!!!!!!!" Padding="30,0,0,0" Margin="0,50,0,-20" FontSize="44" x:Name="MinecraftPlus" FontWeight="Bold">
+					<TextBlock.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform Angle="-15" />
+							<TranslateTransform />
+						</TransformGroup>
+					</TextBlock.RenderTransform>
+				</TextBlock>
+				<TextBlock Text="心动不如行动！点击下方按钮下载！" Padding="30,0,0,0" Margin="0,0,0,20" />
+				<local:MyButton Margin="0,0,10,0" Width="300" Height="35" HorizontalAlignment="Center" Padding="13,0,13,0" Text="点我下载!" EventType="下载文件" EventData="https://plus.minecraft.net/screensaver.zip">
+					<local:MyButton.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform />
+							<SkewTransform />
+							<RotateTransform Angle="-1" />
+							<TranslateTransform />
+						</TransformGroup>
+					</local:MyButton.RenderTransform>
+				</local:MyButton>
+				<TextBlock Text="虽然就是个屏保..." Padding="30,0,0,0" Margin="0,0,0,5" FontSize="10" Foreground="#DDDDCC" />
+			</StackPanel>
+		</Border>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="新闻主页更新：过旧新闻将会迁移至帮助页" CanSwap="True" IsSwaped="true">
+		<StackPanel Margin="40,40,30,20">
+			<TextBlock Margin="20,5,0,10" Text="新闻主页过时新闻太过冗长，预计PCL2支持在线获取帮助页后将部分过期快照迁移至帮助页。" />
+			<TextBlock Text="2021/3/25" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10" />
+			<!--		<local:MyListItem Margin="0,0,0,10" EventType="打开帮助" EventData="https://www.lightbeacon.top/news_image/test.xaml" />-->
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="M‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎inecraft Crowdin新增文言文翻译" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="40,40,30,20">
+			<TextBlock Margin="20,5,0,10" Text="    文言文翻译已被加入Minecraft Crowdin，有望在未来版本加入到游戏中。" />
+			<Image Margin="0,0,10,0" Source="https://www.lightbeacon.top/news_image/news0001.png" HorizontalAlignment="Left" MaxWidth="600" />
+			<TextBlock Text="2021/1/22" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10" />
+		</StackPanel>
+	</local:MyCard>
+	<!--News Ends-->
+
+
+	<local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="30,40,30,10">
+			<TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="  但有人往PCL2反馈提交新闻主页Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16" />
+			<TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的Github仓库交issue而不是在PCL2反馈交反馈（PCL2不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
+				<TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
+			</Border>
+		</StackPanel>
+	</local:MyCard>
+</StackPanel><local:MyCard Title="新闻主页选项" CanSwap="True" IsSwaped="True" Margin="0,10,0,0">
+	<StackPanel Margin="10,20,0,10">
+		<TextBlock Grid.Column="0" Text="*以下为实验性功能 刷新后恢复初始设置" Margin="20,20,0,0" />
+		<Grid Margin="40,20">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="60" />
+				<ColumnDefinition Width="40" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Column="0" Text="不透明度" />
+			<Slider Grid.Column="2" Minimum="0" Maximum="1" x:Name="OpacitySlider" Value="1" TickFrequency="0.1" AutoToolTipPlacement="TopLeft" ToolTip="拖动调整" />
+			<TextBlock Grid.Column="1" Text="{Binding Path=Value,ElementName=OpacitySlider}" />
+		</Grid>
 	</StackPanel>
 </local:MyCard>
-
 <!--Refresh Button-->
 <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
-	<local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页"/>
-	<local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈"/>
+	<local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
+	<local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
 </StackPanel>
-
 <Border Background="#CCFFFFFF" Height="140" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
-	<StackPanel Margin="40,15,0,10" >
-		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5"/>
+	<StackPanel Margin="40,15,0,10">
+		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
 		<TextBlock Text="By：最亮的信标（Light Beacon）" />
 
 		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-		<TextBlock Text="订阅地址:  " />
-		<local:MyTextButton Text="http://news.lightbeacon.top" EventType="复制文本" EventData="http://news.lightbeacon.top" ToolTip="点击复制到剪贴板"/>
+			<TextBlock Text="订阅地址:  " />
+			<local:MyTextButton Text="http://news.lightbeacon.top" EventType="复制文本" EventData="http://news.lightbeacon.top" ToolTip="点击复制到剪贴板" />
 		</StackPanel>
 
 		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-		<TextBlock Text="Github:  " />
-		<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github"/>
+			<TextBlock Text="Github:  " />
+			<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
 		</StackPanel>
-		
+
 		<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-		<TextBlock Text="无特殊声明本主页采用 " />
-		<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ "/>
-		<TextBlock Text=" 授权。" />
+			<TextBlock Text="无特殊声明本主页采用 " />
+			<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ " />
+			<TextBlock Text=" 授权。" />
 		</StackPanel>
 	</StackPanel>
 </Border>
