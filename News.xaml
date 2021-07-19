@@ -208,7 +208,7 @@
 	<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
 					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
@@ -269,7 +269,7 @@
 
 			</StackPanel>
 
-			<TextBlock Text="安装方法" Style="{StaticResource h2}" />
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
