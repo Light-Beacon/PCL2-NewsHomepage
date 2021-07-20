@@ -212,6 +212,7 @@
 	<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 2" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。正式快照将于9月发布。" />
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
 					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
@@ -221,8 +222,7 @@
 			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP2" />
 			</Border>
-			<local:MyHint Margin="0,7,0,3" IsWarn="True" Text="该版本打开实验快照1的世界时会出现错误，请重新创建世界。" />
-			<local:MyHint Margin="0,7,0,3" IsWarn="False" Text="该版本无法直接安装，且暂时不在PCLII的版本列表中，请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开实验快照1的世界时会出现错误，请重新创建世界。" />
 			<!--Detail-->
 			<TextBlock Text="相比于EXP1的更新" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
