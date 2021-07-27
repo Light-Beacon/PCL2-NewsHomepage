@@ -1751,11 +1751,11 @@
 		</Border>
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="新闻主页更新：过旧新闻将会迁移至帮助页" CanSwap="True" IsSwaped="true">
+<!-- Outdated News
+		<local:MyCard Margin="0,0,0,15" Title="新闻主页更新：过旧新闻将会迁移至帮助页" CanSwap="True" IsSwaped="true">
 		<StackPanel Margin="40,40,30,20">
 			<TextBlock Margin="20,5,0,10" Text="新闻主页过时新闻太过冗长，预计PCL2支持在线获取帮助页后将部分过期快照迁移至帮助页。" />
 			<TextBlock Text="2021/3/25" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10" />
-			<!--		<local:MyListItem Margin="0,0,0,10" EventType="打开帮助" EventData="https://www.lightbeacon.top/news_image/test.xaml" />-->
 		</StackPanel>
 	</local:MyCard>
 
@@ -1765,7 +1765,7 @@
 			<Image Margin="0,0,10,0" Source="https://www.lightbeacon.top/news_image/news0001.png" HorizontalAlignment="Left" MaxWidth="600" />
 			<TextBlock Text="2021/1/22" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10" />
 		</StackPanel>
-	</local:MyCard>
+	</local:MyCard>-->
 	<!--News Ends-->
 
 
