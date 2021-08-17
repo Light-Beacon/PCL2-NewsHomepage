@@ -184,7 +184,7 @@
 					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作并更新！
 		</TextBlock>
 			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-					📰 你知道 "http://news.bugjump.net" 也可以跳转到新闻主页了吗。
+					📰 你知道新闻主页的地址已经改成更好记的“http://news.lightbeacon.top”了吗？（兼容旧地址）。
 		</TextBlock>
 		</Grid>
 	</Border>
@@ -209,7 +209,94 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
-	<local:MyCard x:Name="TOPNEW" Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 3" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 4" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="目前PCL II尚未将该快照添加到列表，请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP4" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP3的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="神殿类建筑改动: 现在沙漠神殿将有部分埋在地下，并且丛林神庙和沙漠神殿不再生成在水上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地和沙漠将会更大，再像以前那样出现微小的生物群系的几率更小。陶瓦山将会更高。繁茂恶地中的草和树将在更高的位置生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的生成更加顺滑，噪声会更少 (又来了)。这样就会生成更少的微生物群系 (没错，又来了)。总体调整了生物群系生成的位置，以减少生物群系之间相互交错的现象" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了热带生物群系地表会结冰的现象，并且提高了雪层的生成高度。这样应该就不会出现类似丛林树木上有雪这样的怪事情" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="雪层不会再土土的了。这次是真的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="使峭壁的地形不再特别“峭”。并且调整了破碎地形和峭壁的位置，使其看起来更加吻合" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="降低了河流被切断和山地地形变为干河峡谷的几率。河流在生成时会更倾向于在山区地形中开辟一条峡湾，或者让地势变高，在山区之间生成一个马鞍谷。这样无论你是走路还是划船，都会变得更加舒适，并且河流也会比以前更宽" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="降低了安山岩团簇、闪长岩团簇和花岗岩团簇生成在地表的几率。这样应该会减少石头地形上类似喷漆时到处都是漆点的表面" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="石岸有时候就生成沙砾层（条），闪长岩层（条），花岗岩层（条），安山岩层（条）。石峰有时候也会生成沙砾层（条），方解石层（条），花岗岩层（条），安山岩层（条）。终于不用为了搞到方解石而去找紫晶洞了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更多铁！虽然你还是得通过下矿或者爬山来找铁。但是还是更多铁" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽变得更像沼泽了。我们调整了沼泽的位置，这仅仅是为了它们高兴。现在沼泽不太可能沿着海岸线拓展到很远的地方了，且沼泽中的河流往往更浅" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞中的铜团簇将会更多。快去溶洞生物群系多找点铜吧！或者找一个更大的铜矿脉" />
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/b92a360cbae2eb896a62964ad8c06c3493b6c390/1_18_experimental-snapshot-4.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-4” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文来源于 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1247924-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p67u6p/minecraft_118_experimental_snapshot_4_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新测试版的PCL II已支持自动安装该版本，正式版尚未更新，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
