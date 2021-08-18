@@ -262,7 +262,7 @@
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="溶洞中的铜团簇将会更多。快去溶洞生物群系多找点铜吧！或者找一个更大的铜矿脉" />
-
+			</StackPanel>
 			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
@@ -293,8 +293,7 @@
 					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p67u6p/minecraft_118_experimental_snapshot_4_is_out/" />
 				</Grid>
 			</GroupBox>
-		</StackPanel>
-	</StackPanel>
+		</StackPanel>	
 	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
