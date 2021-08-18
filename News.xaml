@@ -263,6 +263,7 @@
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="溶洞中的铜团簇将会更多。快去溶洞生物群系多找点铜吧！或者找一个更大的铜矿脉" />
 			</StackPanel>
+			
 			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
@@ -296,7 +297,7 @@
 		</StackPanel>	
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新测试版的PCL II已支持自动安装该版本，正式版尚未更新，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
@@ -306,7 +307,7 @@
 				</Border.Background>
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
 			</Border>
-			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+			<Border Style="{StaticResource verTxtBdr}">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP3" />
 			</Border>
 			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开EXP1的世界时会出现错误，请重新创建世界。" />
