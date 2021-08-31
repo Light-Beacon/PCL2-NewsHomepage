@@ -226,7 +226,7 @@
 	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 5" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="目前PCL II尚未将该快照添加到列表，请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新测试版的PCL II已支持自动安装该版本，正式版尚未更新，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
 					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
@@ -332,7 +332,7 @@
 	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 4" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="目前PCL II尚未将该快照添加到列表，请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新测试版的PCL II已支持自动安装该版本，正式版尚未更新，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
 					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
