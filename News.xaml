@@ -226,7 +226,7 @@
 	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 7" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="（PCL2我在催龙猫了）其它启动器请手动按照下文的提示安装。" />
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
 					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
