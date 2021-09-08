@@ -222,8 +222,91 @@
 		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
- 
-	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 6" CanSwap="True">
+	
+	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 7" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="（PCL2我在催龙猫了）其它启动器请手动按照下文的提示安装。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP7" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP6的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴能在任意高度生成了，不再限制于y&lt;130。这意味着你有时可能会在从山岭中发现小小的开放洞穴和裂缝。注意脚下。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形的某些部位非常略微平滑了一些（译者注：原文如此）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="鞘翅在滑翔时不再消耗耐久度，只有在使用烟花火箭的时候才会小号。因此你没什么必要去给它敲个经验修补或者耐久，况且现在有了更高的悬崖高山来供你起飞。" />
+
+				<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="烟花鞘翅太快了，导致其它交通方式都变得很多余。我们想稍微平衡一下。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="即便在之前版本的MC中，玩家用烟花鞘翅到处乱飞导致大多数服务器都会变卡，因为他们飞行速度超过了区块能加载的速度。新的世界高度下这种情况会变得更糟。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在有了更多的地形可以享受，不会想还要再快速掠过它们呢，对吧？:)" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="注意滑翔的速度并未改变，这次改变只对烟花鞘翅产生的加速生效。"/>
+				</StackPanel>
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="就是这些了。我告诉过你，这是一次小小的快照。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="啥？你问沼泽？不，我们这次没动沼泽，它们目前正喜乐参半。" />
+
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/ab4ecebb133f56dd4c4c4c3257f030a947ddea84/1_18_experimental-snapshot-7.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-7” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp7" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1259375-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pkalqg/minecraft_118_experimental_snapshot_7_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 6" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
