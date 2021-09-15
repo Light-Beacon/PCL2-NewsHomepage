@@ -204,10 +204,10 @@
 	</Border>
 	<!--Hints Ends-->
 
-	<local:MyCard Margin="0,0,0,15" Title="如遇 PCL2 因为主页问题报错请将 PCL2 升级至最新版" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="📢咕咕提示" CanSwap="True" IsSwaped="True">
 		<StackPanel Margin="50,50,50,20">
-			<TextBlock Text="由于新增了 1.17 历史版本的链接并且只有 2.0.4+ 的 PCL 支持，所以需要将PCL升至最新版本，以防止报错。" Margin="0,0,0,5" />
-			<TextBlock Text="新版本也修了不少 bug，为啥不升呢（" Margin="0,0,0,5" />
+			<TextBlock Text="实在抱歉，由于本人学业原因可能无法及时更新新闻主页。" Margin="0,0,0,5" />
+			<TextBlock Text="新闻主页最慢将会于新快照发布的36h内更新。" Margin="0,0,0,5" />
 		</StackPanel>
 	</local:MyCard>
 
