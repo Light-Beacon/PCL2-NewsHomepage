@@ -158,7 +158,7 @@
 		<Style x:Key="h2" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="28" />
 			<Setter Property="Padding" Value="15,5" />
-			<Setter Property="Margin" Value="5,15" />
+			<Setter Property="Margin" Value="5,15,5,10" />
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
 		</Style>
@@ -167,7 +167,7 @@
 		<Style x:Key="h3" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="20" />
 			<Setter Property="Padding" Value="30,0" />
-			<Setter Property="Margin" Value="10,0,10,10" />
+			<Setter Property="Margin" Value="-10,0,10,12" />
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
 		</Style>
@@ -176,7 +176,7 @@
 		<Style x:Key="h4" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="16" />
 			<Setter Property="Padding" Value="30,0" />
-			<Setter Property="Margin" Value="10,0,10,10" />
+			<Setter Property="Margin" Value="5,0,10,10" />
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
 		</Style>
@@ -222,699 +222,437 @@
 		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
-	
-	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - 1.18 Experimental Snapshot 7" CanSwap="True">
+
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w37a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w37a.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w37a.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP7" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W37A" />
 			</Border>
-
 			<!--Detail-->
-			<TextBlock Text="相比于EXP6的更新" Style="{StaticResource h2}" />
+			<TextBlock Text="新特性" Style="{StaticResource h2}" />
+			<TextBlock Text="生物群系" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴能在任意高度生成了，不再限制于y&lt;130。这意味着你有时可能会在从山岭中发现小小的开放洞穴和裂缝。注意脚下。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了噪声洞穴和含水层" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="地形的某些部位非常略微平滑了一些（译者注：原文如此）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了滴水石洞地下生物群系" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="鞘翅在滑翔时不再消耗耐久度，只有在使用烟花火箭的时候才会消耗。因此你没什么必要去给它敲个经验修补或者耐久，况且现在有了更高的悬崖高山来供你起飞。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了Grove（林海雪原）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了Lofty peaks（巍峨山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了繁茂洞穴地下生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Meadow （草甸）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowcapped （覆雪山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowy slopes （覆雪山坡）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Stony peaks （石顶山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的矿物分布和大矿脉" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="主世界建筑和生成上限已被拓展" />
+			</StackPanel>
+
+			<TextBlock Text="方块" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="附魔台现在会发光，但亮度不是很高" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
+			</StackPanel>
+
+			<TextBlock Text="滴水石洞生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有很多滴水石，顶上有，地上也有，还有小水洼" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在一些地方有大块的石笋和石钟乳，还有由滴水石构成的立柱" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有额外的铜矿" />
+			</StackPanel>
+
+			<TextBlock Text="GROVE （林海雪原）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="多雪的地形，有高耸的云杉树和细雪陷阱。穿好皮革靴子！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在山峰下或丘陵顶部的高海拔地区生成。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="这儿有狼、兔子和狐狸。" />
+			</StackPanel>
+
+
+			<TextBlock Text="LOFTY PEAKS （巍峨山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="壮观而嶙峋的山峰，有石头和雪打顶" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有山羊出没" />
+			</StackPanel>
+
+			<TextBlock Text="SNOWCAPPED PEAKS （覆雪山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="比较平坦的山顶，冰雪覆盖" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊。" />
+			</StackPanel>
+
+			<TextBlock Text="SNOWY SLOPES （覆雪山坡）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="白雪皑皑的地形，有一些细雪陷阱。你最好带个皮革靴子来！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在高海拔的山峰底下或丘陵顶部生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生成兔子和山羊" />
+			</StackPanel>
+
+			<TextBlock Text="STONY PEAKS （石顶山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="可能嶙峋，也可能平坦，不过都是石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有时有方解石条带生成" />
+			</StackPanel>
+
+			<TextBlock Text="繁茂洞穴生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="苔藓从顶上覆盖到脚下" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="孢子花从洞穴顶长出来，掉下粒子效果" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有粘土池，垂滴叶从其中长出" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有杜鹃花丛，有的还在开花" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="杜鹃花树喜欢把根扎进繁茂洞穴里，所以如果你发现了杜鹃花树，无论是在地表还是在地下，那都意味着你找到了一个繁茂洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="藤蔓和发光浆果从洞穴顶长出来，照亮洞穴" />
+			</StackPanel>
+
+			<TextBlock Text="MEADOW BIOME （草甸）群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="草木繁茂，鲜花绽放。倾向于在平原或大山旁的高处生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有时有一棵高大的橡树或白桦树，常常有蜜蜂巢。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="想想《音乐之声》！（P.S. 此处原文是对《音乐之声》的致敬）。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="驴、兔子和绵羊遍野。" />
+			</StackPanel>
+
+			<TextBlock Text="大型矿脉" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿脉是那种大而稀有、外观如蛇的地下矿物聚集形态" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿脉可以在 y 0 到 y 50 之间生成，混有花岗岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿脉可以在 y -60 和 y -8 之间生成，混有凝灰岩" />
+			</StackPanel>
+
+			<TextBlock Text="噪声洞穴和含水层" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴是一种新的生成洞穴的方式，提供了更自然的变种。生成得可能相当大！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴有大致三类：" />
 
 				<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="烟花鞘翅太快了，导致其它交通方式都变得很多余。我们想稍微平衡一下。" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="即便在之前版本的MC中，玩家用烟花鞘翅到处乱飞导致大多数服务器都会变卡，因为他们飞行速度超过了区块能加载的速度。新的世界高度下这种情况会变得更糟。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="奶酪洞穴。像奶酪上的孔。经常生成各种尺寸的洞穴。" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在有了更多的地形可以享受，不会想还要再快速掠过它们呢，对吧？:)" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="意大利面洞穴。曲里拐弯，扭七扭八。" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="注意滑翔的速度并未改变，这次改变只对烟花鞘翅产生的加速生效。"/>
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴。更细更扭，容易引起幽闭恐惧。" />
+
 				</StackPanel>
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="就是这些了。我告诉过你，这是一次小小的快照。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="一点都不响！跟实际的“噪声”没啥关系，噪声是描述其生成方式的术语" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="啥？你问沼泽？不，我们这次没动沼泽，它们目前正喜乐参半。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧式洞穴仍会生成，新旧系统合二为一，生成有趣的洞穴系统" />
 
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层是有本地水平面的一块区域，和海平面独立。
+				含水层用于在世界生成阶段生成噪声洞穴内的水体。
+				有时会生成相当大的地底湖！也可能在山体内部和地表生成。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="y0 以下的含水层有时会被熔岩替代" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="岩浆块有时会在地下水体的底部生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="之前用于生成地下水体的工具都被移除了" />
 			</StackPanel>
-			
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/ab4ecebb133f56dd4c4c4c3257f030a947ddea84/1_18_experimental-snapshot-7.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-7” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
-				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
-			</StackPanel>
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-					</Grid.ColumnDefinitions>
-					<Grid.RowDefinitions>
-						<RowDefinition/>
-						<RowDefinition/>
-					</Grid.RowDefinitions>
-					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp7" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1259375-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
-					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pkalqg/minecraft_118_experimental_snapshot_7_is_out/" />
-					</Grid>
-			</GroupBox>
-		</StackPanel>	
-	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 6" CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP6" />
-			</Border>
-
-			<!--Detail-->
-			<TextBlock Text="相比于EXP5的更新" Style="{StaticResource h2}" />
+			<TextBlock Text="生物生成" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="调整了新山地群系的位置，使它更符合山地的地形与温度。树林与雪坡在山地上生成得更加稀少了。在寒冷的气候中，树林与雪坡的生成位置更低；而在炎热的气候中，树林与雪坡的生成位置更高" />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物现在只会在来自方块的亮度为 0 的地方生成（天光仍和以前一样地阻止怪物生成）" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="调整了生物群系布局以减少生成微型寒冷生物群系的概率，比如森林中生成的一小片积雪的冻原（鸟屎微型生物群系）。这仍有可能发生，但不会那么常见了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了一个 bug：多人游戏中的玩家可能会遭遇到比预计的多或极少的怪物，特别是当其他玩家在飞行时" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="修复了上一个快照一次意外的改变使繁茂洞穴更小且更支离破碎。现在应该和实验性快照4一样正常了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="巨型针叶林与巨型云杉针叶林从生物群系布局角度来说不再被算作寒冷生物群系了。所以这些生物群系更少的与积雪生物群系混在一起。这会使其它生物群系产生一个小改组以维持整体的平衡" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="稍微削减了水泉的数量" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="稍微增加了水底的岩浆块数量，使在含水层潜水时拥有更多找到空气的机会" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="更洞穴的海底！海洋/河流底下的含水层更容易与地下连接。这代表着你会更容易从海床上找到通往某个洞穴的入口，而不是被海床生生切断。这样做的一个结果就是：在海洋下面 y0-y40 的洞穴都有可能被海水淹没。如果你在某个地下湖泊中潜水，最后可能从某个海底离开了洞穴" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="水下峡谷它回来了。现在负责雕刻洞穴的雕刻器可以雕刻海底的沙子和沙砾了，所以，水下峡谷和水下洞穴不再会被隐藏在一层沙子或者沙砾下面。相比于MC 1.17，水下峡谷不再使用一套特殊的雕刻器，而是和雕刻噪声洞穴雕刻器一致，只是把它移到了水下而已。所以，这个版本的水下峡谷会和1.17的水下峡谷长得不太一样，但是更自然了。岩浆块依旧有可能在其内生成，就像其他的含水洞穴一样" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="马、骡和驴现在会跟随手持金胡萝卜、金苹果、附魔金苹果的玩家。这样你的马就可以更容易的趟过一条深深的河！与之类似的还有羊驼会跟随手持干草块的玩家" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="上边就是全部了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="等等，还有一件事。差点忘了沼泽。沼泽现在可以在干燥地区生成。这不在最后一个快照中做改动是有一些道理的，因为有时候会有一个小小的区域比周围都更加干燥，这会导致微生物群系的问题发生，比如沼泽中有一块小小的沙漠。现在沼泽不会再碎片化了，并且它们觉得很赞" />
-			</StackPanel>
-			
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/4697c84c6a347d0b8766759d5b00bc5a00b1b858/1_18_experimental-snapshot-6.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-6” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
-				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
 			</StackPanel>
 
-			<TextBlock Text="本文部分借鉴了 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-					</Grid.ColumnDefinitions>
-					<Grid.RowDefinitions>
-						<RowDefinition/>
-						<RowDefinition/>
-					</Grid.RowDefinitions>
-					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp6" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1257121-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
-					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pfui87/minecraft_118_experimental_snapshot_6_is_out/" />
-					</Grid>
-			</GroupBox>
-		</StackPanel>	
-	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 5" CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP5" />
-			</Border>
-
-			<!--Detail-->
-			<TextBlock Text="相比于EXP4的更新" Style="{StaticResource h2}" />
+			<TextBlock Text="新的矿物分布" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="山峰更高耸了！像颇受好评的基岩版 beta 的山峰一样，现在某些山峰会有锯齿状突起了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿物分布现在适应新的世界高度，并加入了新的挖矿策略" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="山地和山峰群系现在总体来说面积更大了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在没有哪个 y 值是挖所有矿的最好选择了，你必须做出取舍" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="提升了平均山地高度，修复了实验性快照 4 中不小心让山峰更矮更平滑的问题。然后我们又要调低山地的高度，来让山峰更高，所以可能就抵消了。我们故意避免让山地和山峰超过 y=260 左右的高度，这样玩家才能在山峰上建点什么东西。如果某些不听话的山地试图再窜高，就会被无情地削成高原" />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿在 y 72 之下生成，在 y=16 最多" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有钻石的化石不再在高于深板岩层生成" />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿也在 112 之上生成，越高越多。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="给沼泽稍微搬家到了内陆，因为它们会把脏兮兮的泥水漏进海洋。海洋很开心，沼泽有些小怨气。以及，沼泽中的树现在会稍微扎根深一点了，所以沼泽湖泊会更有生机一些" />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在 y 0 和 y 96 之间生成，在 y=48 最多" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="雕刻器洞穴现在可以雕刻红沙和方解石了，这样这些方块就不会悬空了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在滴水石洞中生成得更多" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="调整了河流的深度和河岸的陡峭程度。河流现在不太可能在超级深，以至于在平地显得不合群了。河流和沼泽融合得更好了，它们现在会吞噬沼泽或和沼泽合并，而不是钻条洞过去。沼泽很喜欢这个，不那么违和了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="青金石在 y 64 之下生成，在 y=0 最多。然而，在 y -32 之下或 y 32 之上生成的青金石不会暴露在空气中，要么是被埋起来，要么是在水里" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="小湖泊地物现在不会在干燥炎热的群系（沙漠、热带草原和恶地）中放置了。减少了湖泊地物在其他群系中放置的概率" />
+				<TextBlock Style="{StaticResource ListItem}" Text="煤在 y 0 之上生成，y=96 及以上达到峰值" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="小山坡和悬空山（技术上的说法就是三维噪声）在平地中生成更频繁了。这个特性在实验性快照 4 中不小心被移除了，因此平地就会显得过于平坦乏味" />
+				<TextBlock Style="{StaticResource ListItem}" Text="金在 y 32 之下生成，在 y=-16 最多" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了破碎的地形和破碎的热带草原群系，并将其以更加平坦的沙滩代替" />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地（非标准译名：粘土山）仍可以发现更多的金" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="涌泉会在更多的方块中生成，例如泥土和雪块，增加了山间小泉和瀑布生成的几率。另外繁茂洞穴现在会生成涌泉了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="修复了代码里让人极其难受的一个小缩进错误。其实没有什么问题，我也不知道为什么更新日志会有这个" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="让恶地稍微变小了一点。就一点，它们还是会很大的，别担心" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了（好吧，重新加入了）丛林边缘群系。如果我们保留这个群系的话我们大概会给它重新起个名字，因为它已经不是边缘群系了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="调整了蘑菇岛群系，这样蘑菇岛就更加像个岛的样子了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="溶洞群系会在超出洞穴入口范围时放置石头，而不是草。这样应该就可以让溶洞的入口不那么草了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="移除了实验性快照 3 做出的高度怪物生成调整。我们对社区对此的讨论表示感谢。我们决定暂时先撤销这个改动，等有时间的时候我们会再细调" />
-			</StackPanel>
-			
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/d9cb7f6fb4e440862adfb40a385d83e3f8d154db/1_18_experimental-snapshot-5.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-5” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
-				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
-			</StackPanel>
-
-			<TextBlock Text="本文来源于 电量量 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-						<ColumnDefinition/>
-					</Grid.ColumnDefinitions>
-					<Grid.RowDefinitions>
-						<RowDefinition/>
-						<RowDefinition/>
-					</Grid.RowDefinitions>
-					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp5" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1253372-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
-					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pbd2pr/minecraft_118_experimental_snapshot_5_is_out/" />
-					</Grid>
-			</GroupBox>
-		</StackPanel>	
-	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 4" CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
-			</Border>
-			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP4" />
-			</Border>
-
-			<!--Detail-->
-			<TextBlock Text="相比于EXP3的更新" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="神殿类建筑改动: 现在沙漠神殿将有部分埋在地下，并且丛林神庙和沙漠神殿不再生成在水上" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="恶地和沙漠将会更大，再像以前那样出现微小的生物群系的几率更小。陶瓦山将会更高。繁茂恶地中的草和树将在更高的位置生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的生成更加顺滑，噪声会更少 (又来了)。这样就会生成更少的微生物群系 (没错，又来了)。总体调整了生物群系生成的位置，以减少生物群系之间相互交错的现象" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="移除了热带生物群系地表会结冰的现象，并且提高了雪层的生成高度。这样应该就不会出现类似丛林树木上有雪这样的怪事情" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="雪层不会再土土的了。这次是真的" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="使峭壁的地形不再特别“峭”。并且调整了破碎地形和峭壁的位置，使其看起来更加吻合" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="降低了河流被切断和山地地形变为干河峡谷的几率。河流在生成时会更倾向于在山区地形中开辟一条峡湾，或者让地势变高，在山区之间生成一个马鞍谷。这样无论你是走路还是划船，都会变得更加舒适，并且河流也会比以前更宽" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="降低了安山岩团簇、闪长岩团簇和花岗岩团簇生成在地表的几率。这样应该会减少石头地形上类似喷漆时到处都是漆点的表面" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="石岸有时候就生成沙砾层（条），闪长岩层（条），花岗岩层（条），安山岩层（条）。石峰有时候也会生成沙砾层（条），方解石层（条），花岗岩层（条），安山岩层（条）。终于不用为了搞到方解石而去找紫晶洞了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="更多铁！虽然你还是得通过下矿或者爬山来找铁。但是还是更多铁" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沼泽变得更像沼泽了。我们调整了沼泽的位置，这仅仅是为了它们高兴。现在沼泽不太可能沿着海岸线拓展到很远的地方了，且沼泽中的河流往往更浅" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="溶洞中的铜团簇将会更多。快去溶洞生物群系多找点铜吧！或者找一个更大的铜矿脉" />
-			</StackPanel>
-			
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/b92a360cbae2eb896a62964ad8c06c3493b6c390/1_18_experimental-snapshot-4.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-4” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
-				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
-			</StackPanel>
-
-			<TextBlock Text="本文来源于 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp4" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1247924-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
-					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p67u6p/minecraft_118_experimental_snapshot_4_is_out/" />
-				</Grid>
-			</GroupBox>
-		</StackPanel>	
-	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP3" />
-			</Border>
-			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开EXP1的世界时会出现错误，请重新创建世界。" />
-			<!--Detail-->
-			<TextBlock Text="相比于EXP2的更新" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="为避免温度错乱（比如雪地生物群系在沙漠中间）而调整了生物群系的位置。温度错乱还是有的，但是变少了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="再次调整了生物群系位置，以允许更多的噪声和多样性地形。其实就是把上个快照的一些调整还原了。这说明微群系更有可能再次生成了，但是通常会在对应的温度下生成（比如平原中的小森林群系）" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="红沙回来了！我们调整了恶地，这样他们有的时候就会和高原一起生成在平坦的地方，红沙也就会在更高的地方的地方生成了（为了适应高度平均更高了的地形）" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="山峰和繁华山地群系会更少出现在平坦的、低纬度的地区" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="覆雪山脉和冰雪山峰现在不会在雪块下方生成泥土了。现在山地不再土土的了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了新的山地群系：石头山峰。这只是覆雪山峰和冰雪山峰的一个变种，它使用了石头和沙砾，而不是雪和冰。这被用来防止温度错乱，比如一个冰雪山峰生成在丛林附近" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="给新的山地群系加入了结构。掠夺者前哨站现在会在所有山地群系中生成。村庄现在会在繁华山地中生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="微调了沙滩，这样他们就会在平坦的海岸线上生成，而不是高耸一些的地方。另外也减少了石滩的数量" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="海岸线和河岸现在不太可能会被洞穴的含水层搞乱了。也就是说，本地水平面通常会在不涉及河流或海洋的时候被使用，而与海洋或河流接触的洞穴入口和峡谷会使用海平面" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="陆地中的低海拔地区将不太可能会含水洞穴填满了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="含水层的位置可以更低，并且更有可能与深层的洞穴系统连接了。这意味着如果你从地表潜入一个深湖（或者在山地中），你有时候会发现空气洞，并于洞穴系统相连接" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了更有可能生成的含水层变种，以减少被水填满的洞穴生成在各种地方。地下湖泊和被水淹的地区将更可能分散出去，而不是聚集在一起" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沼泽现在不太可能覆盖干燥或寒冷的群系了，并且它们不再会防止悬在空中的水。沼泽现在甚至更开心了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沙漠神殿会在地表生成了，而不是固定的 y 轴数值上" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="被风蚀的恶地现在不会在水面上生成悬空的柱子了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="草不再会在水下生成了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了错误的地表放置几率，比如草生成在沙漠里" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了河流在干燥的山地峡谷中生成的几率。我们不支持在海平面上方生成河流，所以如果山地峡谷在海平面上方生成，它就是干燥的" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="生物生成不会在低地形中加速或在高地形减速了。新的生成速度差不多是 1.17 的 y=64 的速度。这一更改使得生物生成在新的主世界中更加一致" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="修复了联机时玩家会面对更多或者更少的怪物的问题，特别是其他玩家在飞行的时候。每一个玩家的怪物分配现在均衡了" />
-			</StackPanel>
-
-			<TextBlock Text="已知问题" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Text="红石在 y 16 之下生成。到 y -32 之下，生成逐渐增多" />
 				
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="打开EXP1的世界会出现错误。所以你需要重开新世界" />
+				<TextBlock Style="{StaticResource ListItem}" Text="钻石在 y 16 之下生成，越往下越多" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="性能低下（性能优化会在接下来的正常快照中进行）" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="下界地形炸开了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="末地柱（黑曜石柱子）不生成了（但是他们还是会在重生末影龙的时候重新生成）" />
-				
+				<TextBlock Style="{StaticResource ListItem}" Text="钻石更不容易在空气中暴露，所以你可能更多会发现埋起来的钻石或在水下的钻石而不是直接暴露于空气中的（野生矿洞钻石收益变低了）" />
 			</StackPanel>
 
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/846648ff9fe60310d584061261de43010e5c722b/1_18_experimental-snapshot-3.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-3” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
-				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
-			</StackPanel>
-
-			<TextBlock Text="本文参考了 电量量 和 xiang_xge 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp3" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1242805-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
-					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p1pc9d/minecraft_118_experimental_snapshot_3_is_out/" />
-				</Grid>
-			</GroupBox>
-		</StackPanel>
-	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 2" CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP2" />
-			</Border>
-			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开实验快照1的世界时会出现错误，请重新创建世界。" />
-			<!--Detail-->
-			<TextBlock Text="相比于EXP1的更新" Style="{StaticResource h2}" />
+			<TextBlock Text="选项" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的放置变得更加平滑，减少了地形中的微型生物群系，生物群系现在规模会稍微大一些，并不再那么碎片化" />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了辅助功能选项用于禁用雷暴时的天空闪烁" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="将云层高度从128提升到192" />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了用于指定播放设备的选项" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="将山脉（即原来的山脉生物群系）改名为峭壁， 将沙砾山地改名为沙砾丘陵" />
+				<TextBlock Style="{StaticResource ListItem}" Text="在控制选项中添加了“切换疾跑”和“切换潜行”" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沙滩现在变得更宽阔了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="把一些应当在其他地方的按键绑定从控制选项中挪走了" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="羊会在 meadow（繁花山丘） 生物群系生成了。增加了兔子的生成，减少了驴的生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="兰花不再于 meadow 生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沼泽现在会正确地生成了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了缺失的生物群系：冰刺之地和风蚀恶地" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了地下生物群系与地面生物群系干涉的几率。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="绿宝石和虫蚀石头现在会在新的山脉群系生成了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="怪物会在新的山脉群系生成了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在 meadow 现在会生成一棵孤独的树，而且时常会附有一个蜂巢" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了地形生成时出现的浮空沙子和沙砾，解决的方法是将底部替换为砂岩或者石头" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，骷髅，蜘蛛和洞穴蜘蛛的刷怪笼现在会在亮度等级11以内生成怪物" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了芝士洞穴的平均大小（不过依然有可能生成大洞穴！），并减少了芝士洞穴干涉到地面的几率" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="为大型洞穴的入口加入了一些缓冲，使得它们不再会直接深入到深板岩的高度层" />
 			</StackPanel>
 
-			<TextBlock Text="已知问题" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="打开实验快照1的世界会出现错误。所以你需要重开新世界" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="性能优化不妙（我们会在之后正常发布的快照中改进性能表现）" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="下界地形是坏的" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="末地柱现在不会生成（但是当你复活末影龙的时候就会生成了……）" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="红沙现在会比较难以收集，因为恶地通常会生成在高原上" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="含水层有时会以丑陋的方式破坏海岸线" />
-				
-			</StackPanel>
-
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/0adfe4f321aa45248fc88ac888bed5556633e7fb/1_18_experimental-snapshot-2.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-2” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
-			</StackPanel>
-
-			<TextBlock Text="本文参考了 Kascade 的译文 (MCBBS)。加括号为未定译名。" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp2" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1228756-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
-					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/oo3pvy/minecraft_118_experimental_snapshot_2_is_out/" />
-				</Grid>
-			</GroupBox>
-		</StackPanel>
-	</local:MyCard>
-	
-	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 1" CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP1" />
-			</Border>
-			<TextBlock Margin="30,3,10,3" Text="洞穴与山崖预览数据包已被移入该版本。" />
-			<!--Detail-->
-			<TextBlock Text="与 1.17(洞穴与山崖第一部分) 对比 " Style="{StaticResource h2}" />
-
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="扩展了世界高度与深度（Y -64~319）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="生成范围和建筑范围上下各拓展了 64 方块，总计 384 方块" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="[新增] 新的山地生物群系（高耸的山峰、覆雪山峰、林地、草甸和雪坡）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="地下特性、结构和洞穴生成一路走低到 y-64" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴种类(奶酪洞穴，意面洞穴，以及面条洞穴)" />
+				<TextBlock Style="{StaticResource ListItem}" Text="例外：花岗岩、闪长岩和安山岩还有泥土不会在 y0 以下生成" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了地下的水位（独立于海平面）和岩浆位" />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了上述三种岩石的生成位置和尺寸" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴生物群系将会在地下和山体中自然生成（繁茂洞穴，溶洞）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="滴水石群不再能在普通洞穴中找到，只能在滴水石洞生物群系中找到" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的矿石分布" />
-
-				<Image MaxHeight="500" Source="https://attachment.mcbbs.net/data/myattachment/forum/202107/14/010016xee9cb7eb7nw67rc.png" Margin="10,0,10,0" />
-				<TextBlock Text="矿石分布对比图(由 SPGoding 翻译)" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15" />
+				<TextBlock Style="{StaticResource ListItem}" Text="从 y0 到以下深板岩逐渐取代所有石头" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="大型矿脉" />
+				<TextBlock Style="{StaticResource ListItem}" Text="深板岩团块不再在 y0 以上生成" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="统一山脉、洞穴和洞口" />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形形状和高程和生物群系无关了。例如，森林和沙漠可以在小山坡上生成，不再需要特定的生物群系" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="怪物只在完全黑暗时生成" />
+				<TextBlock Style="{StaticResource ListItem}" Text="那三种岩石在 y 60 之上的生成减少了" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化，群系交界处现在会更平滑地过渡" />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙砾带可以在石质海岸生成" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="地形现在会更平滑，高差也更大" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="暖水深海能够自然生成了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="移除了放大化世界和巨型生物群系" />
-
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽的树可以在水中扎根两格深了（之前是一格）" />
 
 			</StackPanel>
 
-			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
-				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
-				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
-				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
-				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0" />
-				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="灾厄村民不再攻击小村民" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在只在繁茂洞穴生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在有自己独立的生物上限" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="云的高度从 128 升到 192" />
+
 			</StackPanel>
 
-			<TextBlock Text="本文参考了 xiang_xge 的译文与 Minecraft Wiki 上的有关条目" Style="{StaticResource footnote}" />
+			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用包含光照更新数据的客户端区块更新网络数据包取代了之前的。单独的光照更新数据包依然存在，只当光照更新而区块无更新时发送。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="视距现在会圆柱状加载，而不是正方形" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="关于世界生成噪声的信息现在会在调试界面显示" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 illageralt，符文般的字体，来自Minecraft Dungeons（《我的世界：地下城》），现在只能通过指令使用" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了启动选项 --jfrProfile 以及指令 jfr 使用 Java FlightRecorder 采集信息，以及一些自定义事件。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="战利品表函数 set_contents 和 set_loot_table 现在需要 type 字段，其应是一个有效的方块实体类型。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在 1.2(“pre-anvil”) 之前存储的世界现在不能再直接打开了。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="数据包格式版本升至 8" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的视频选项 “更新优先级”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了记分板、记分器和队伍名的长度限制" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="刷怪笼现在无视亮度限制" />
+
+			</StackPanel>
+
+			<TextBlock Text="JFR 数据采集" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Margin="10,10" Text="详见原文或之前新闻，在此不做赘述。" />
+			</StackPanel>
+
+			<TextBlock Text="战利品表" Style="{StaticResource h3}" />
+			<TextBlock Text="修改的参数 SET_CONTENTS, SET_LOOT_TABLE" Style="{StaticResource h4}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的必填字段 type。会写入 BlockEntityTag.id，以确保在版本间迁移正确" />
+			</StackPanel>
+
+			<TextBlock Text="旧世界转换" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="Minecraft 1.2 (“pre-anvil”) 之前的世界现在需要在本快照之前的版本里先转一次，才能正常打开" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="1.6.4 及之前的版本转换得最好——之后的世界会有不正确的生物群系信息" />
+			</StackPanel>
+
+			<TextBlock Text="更新优先级设置" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="该设置决定了单帧有哪些区块会同步更新。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最保守的选项“邻近”对应着和之前一样的更新方式。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的选项“由玩家”和“无”大大缩减了放置和移除方块（特别是会发光的）时的卡顿，但可能偶尔导致世界更新时视觉上的延迟。" />
+			</StackPanel>
+
+			<TextBlock Text="刷怪笼数据修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Text="详见原文，在此不做赘述。" Margin="10,0" />
+			</StackPanel>
+
+			<TextBlock />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -923,12 +661,14 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp1" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1223884-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w37a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1261439-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w37a" />
 				</Grid>
 			</GroupBox>
-		</StackPanel>
+
+			<TextBlock Text="该版本修复了 44 个Bug。该新闻原译者：山雀雀（MCBBS），稍作修改。" Style="{StaticResource footnote}" />
+		</StackPanel>	
 	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
@@ -979,6 +719,7 @@
 
 			<TextBlock Text="该版本修复了42个Bug" Style="{StaticResource footnote}" />
 			<!--Logs-->
+
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
 					<Grid.ColumnDefinitions>
@@ -989,23 +730,6 @@
 					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
-				</Grid>
-			</GroupBox>
-		</StackPanel>
-	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="“洞穴与山崖” 更新将会分为两次更新" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="30,40,30,10">
-			<TextBlock Text="由于技术问题以及其他原因，“洞穴与山崖”将会在夏季更新非地形生成的其它内容，冬季更新地形生成，目前已更新的地形生成内容已在 21w15a 中被移除。" Padding="30,0,0,0" Margin="0,0,0,5" />
-			<TextBlock Text="考古系统被推迟到明年，时间待定。" Padding="30,0,0,0" Margin="0,0,0,5" />
-			<GroupBox Header="阅读原文" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" Text="MCBBS" EventData="https://www.mcbbs.net/thread-1191594-1-1.html" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" Text="官网" EventData="https://www.minecraft.net/zh-hans/article/a-caves---cliffs-announcement" />
 				</Grid>
 			</GroupBox>
 		</StackPanel>
@@ -2131,6 +1855,714 @@
 
 			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
 
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 7" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP7"/>
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP6的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴能在任意高度生成了，不再限制于y&lt;130。这意味着你有时可能会在从山岭中发现小小的开放洞穴和裂缝。注意脚下。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形的某些部位非常略微平滑了一些（译者注：原文如此）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="鞘翅在滑翔时不再消耗耐久度，只有在使用烟花火箭的时候才会消耗。因此你没什么必要去给它敲个经验修补或者耐久，况且现在有了更高的悬崖高山来供你起飞。" />
+
+				<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="烟花鞘翅太快了，导致其它交通方式都变得很多余。我们想稍微平衡一下。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="即便在之前版本的MC中，玩家用烟花鞘翅到处乱飞导致大多数服务器都会变卡，因为他们飞行速度超过了区块能加载的速度。新的世界高度下这种情况会变得更糟。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在有了更多的地形可以享受，不会想还要再快速掠过它们呢，对吧？:)" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="注意滑翔的速度并未改变，这次改变只对烟花鞘翅产生的加速生效。"/>
+				</StackPanel>
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="就是这些了。我告诉过你，这是一次小小的快照。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="啥？你问沼泽？不，我们这次没动沼泽，它们目前正喜乐参半。" />
+
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/ab4ecebb133f56dd4c4c4c3257f030a947ddea84/1_18_experimental-snapshot-7.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-7” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp7" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1259375-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pkalqg/minecraft_118_experimental_snapshot_7_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 6" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP6" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP5的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了新山地群系的位置，使它更符合山地的地形与温度。树林与雪坡在山地上生成得更加稀少了。在寒冷的气候中，树林与雪坡的生成位置更低；而在炎热的气候中，树林与雪坡的生成位置更高" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了生物群系布局以减少生成微型寒冷生物群系的概率，比如森林中生成的一小片积雪的冻原（鸟屎微型生物群系）。这仍有可能发生，但不会那么常见了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了上一个快照一次意外的改变使繁茂洞穴更小且更支离破碎。现在应该和实验性快照4一样正常了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="巨型针叶林与巨型云杉针叶林从生物群系布局角度来说不再被算作寒冷生物群系了。所以这些生物群系更少的与积雪生物群系混在一起。这会使其它生物群系产生一个小改组以维持整体的平衡" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="稍微削减了水泉的数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="稍微增加了水底的岩浆块数量，使在含水层潜水时拥有更多找到空气的机会" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更洞穴的海底！海洋/河流底下的含水层更容易与地下连接。这代表着你会更容易从海床上找到通往某个洞穴的入口，而不是被海床生生切断。这样做的一个结果就是：在海洋下面 y0-y40 的洞穴都有可能被海水淹没。如果你在某个地下湖泊中潜水，最后可能从某个海底离开了洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="水下峡谷它回来了。现在负责雕刻洞穴的雕刻器可以雕刻海底的沙子和沙砾了，所以，水下峡谷和水下洞穴不再会被隐藏在一层沙子或者沙砾下面。相比于MC 1.17，水下峡谷不再使用一套特殊的雕刻器，而是和雕刻噪声洞穴雕刻器一致，只是把它移到了水下而已。所以，这个版本的水下峡谷会和1.17的水下峡谷长得不太一样，但是更自然了。岩浆块依旧有可能在其内生成，就像其他的含水洞穴一样" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="马、骡和驴现在会跟随手持金胡萝卜、金苹果、附魔金苹果的玩家。这样你的马就可以更容易的趟过一条深深的河！与之类似的还有羊驼会跟随手持干草块的玩家" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="上边就是全部了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="等等，还有一件事。差点忘了沼泽。沼泽现在可以在干燥地区生成。这不在最后一个快照中做改动是有一些道理的，因为有时候会有一个小小的区域比周围都更加干燥，这会导致微生物群系的问题发生，比如沼泽中有一块小小的沙漠。现在沼泽不会再碎片化了，并且它们觉得很赞" />
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/4697c84c6a347d0b8766759d5b00bc5a00b1b858/1_18_experimental-snapshot-6.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-6” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文部分借鉴了 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp6" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1257121-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pfui87/minecraft_118_experimental_snapshot_6_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 5" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP5" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP4的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山峰更高耸了！像颇受好评的基岩版 beta 的山峰一样，现在某些山峰会有锯齿状突起了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山地和山峰群系现在总体来说面积更大了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="提升了平均山地高度，修复了实验性快照 4 中不小心让山峰更矮更平滑的问题。然后我们又要调低山地的高度，来让山峰更高，所以可能就抵消了。我们故意避免让山地和山峰超过 y=260 左右的高度，这样玩家才能在山峰上建点什么东西。如果某些不听话的山地试图再窜高，就会被无情地削成高原" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有钻石的化石不再在高于深板岩层生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="给沼泽稍微搬家到了内陆，因为它们会把脏兮兮的泥水漏进海洋。海洋很开心，沼泽有些小怨气。以及，沼泽中的树现在会稍微扎根深一点了，所以沼泽湖泊会更有生机一些" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="雕刻器洞穴现在可以雕刻红沙和方解石了，这样这些方块就不会悬空了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了河流的深度和河岸的陡峭程度。河流现在不太可能在超级深，以至于在平地显得不合群了。河流和沼泽融合得更好了，它们现在会吞噬沼泽或和沼泽合并，而不是钻条洞过去。沼泽很喜欢这个，不那么违和了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="小湖泊地物现在不会在干燥炎热的群系（沙漠、热带草原和恶地）中放置了。减少了湖泊地物在其他群系中放置的概率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="小山坡和悬空山（技术上的说法就是三维噪声）在平地中生成更频繁了。这个特性在实验性快照 4 中不小心被移除了，因此平地就会显得过于平坦乏味" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了破碎的地形和破碎的热带草原群系，并将其以更加平坦的沙滩代替" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="涌泉会在更多的方块中生成，例如泥土和雪块，增加了山间小泉和瀑布生成的几率。另外繁茂洞穴现在会生成涌泉了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了代码里让人极其难受的一个小缩进错误。其实没有什么问题，我也不知道为什么更新日志会有这个" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="让恶地稍微变小了一点。就一点，它们还是会很大的，别担心" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了（好吧，重新加入了）丛林边缘群系。如果我们保留这个群系的话我们大概会给它重新起个名字，因为它已经不是边缘群系了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了蘑菇岛群系，这样蘑菇岛就更加像个岛的样子了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞群系会在超出洞穴入口范围时放置石头，而不是草。这样应该就可以让溶洞的入口不那么草了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了实验性快照 3 做出的高度怪物生成调整。我们对社区对此的讨论表示感谢。我们决定暂时先撤销这个改动，等有时间的时候我们会再细调" />
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/d9cb7f6fb4e440862adfb40a385d83e3f8d154db/1_18_experimental-snapshot-5.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-5” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文来源于 电量量 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp5" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1253372-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pbd2pr/minecraft_118_experimental_snapshot_5_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 4" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP4" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP3的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="神殿类建筑改动: 现在沙漠神殿将有部分埋在地下，并且丛林神庙和沙漠神殿不再生成在水上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地和沙漠将会更大，再像以前那样出现微小的生物群系的几率更小。陶瓦山将会更高。繁茂恶地中的草和树将在更高的位置生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的生成更加顺滑，噪声会更少 (又来了)。这样就会生成更少的微生物群系 (没错，又来了)。总体调整了生物群系生成的位置，以减少生物群系之间相互交错的现象" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了热带生物群系地表会结冰的现象，并且提高了雪层的生成高度。这样应该就不会出现类似丛林树木上有雪这样的怪事情" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="雪层不会再土土的了。这次是真的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="使峭壁的地形不再特别“峭”。并且调整了破碎地形和峭壁的位置，使其看起来更加吻合" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="降低了河流被切断和山地地形变为干河峡谷的几率。河流在生成时会更倾向于在山区地形中开辟一条峡湾，或者让地势变高，在山区之间生成一个马鞍谷。这样无论你是走路还是划船，都会变得更加舒适，并且河流也会比以前更宽" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="降低了安山岩团簇、闪长岩团簇和花岗岩团簇生成在地表的几率。这样应该会减少石头地形上类似喷漆时到处都是漆点的表面" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="石岸有时候就生成沙砾层（条），闪长岩层（条），花岗岩层（条），安山岩层（条）。石峰有时候也会生成沙砾层（条），方解石层（条），花岗岩层（条），安山岩层（条）。终于不用为了搞到方解石而去找紫晶洞了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更多铁！虽然你还是得通过下矿或者爬山来找铁。但是还是更多铁" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽变得更像沼泽了。我们调整了沼泽的位置，这仅仅是为了它们高兴。现在沼泽不太可能沿着海岸线拓展到很远的地方了，且沼泽中的河流往往更浅" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞中的铜团簇将会更多。快去溶洞生物群系多找点铜吧！或者找一个更大的铜矿脉" />
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/b92a360cbae2eb896a62964ad8c06c3493b6c390/1_18_experimental-snapshot-4.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-4” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文来源于 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1247924-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p67u6p/minecraft_118_experimental_snapshot_4_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP3" />
+			</Border>
+			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开EXP1的世界时会出现错误，请重新创建世界。" />
+			<!--Detail-->
+			<TextBlock Text="相比于EXP2的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为避免温度错乱（比如雪地生物群系在沙漠中间）而调整了生物群系的位置。温度错乱还是有的，但是变少了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="再次调整了生物群系位置，以允许更多的噪声和多样性地形。其实就是把上个快照的一些调整还原了。这说明微群系更有可能再次生成了，但是通常会在对应的温度下生成（比如平原中的小森林群系）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红沙回来了！我们调整了恶地，这样他们有的时候就会和高原一起生成在平坦的地方，红沙也就会在更高的地方的地方生成了（为了适应高度平均更高了的地形）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山峰和繁华山地群系会更少出现在平坦的、低纬度的地区" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="覆雪山脉和冰雪山峰现在不会在雪块下方生成泥土了。现在山地不再土土的了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了新的山地群系：石头山峰。这只是覆雪山峰和冰雪山峰的一个变种，它使用了石头和沙砾，而不是雪和冰。这被用来防止温度错乱，比如一个冰雪山峰生成在丛林附近" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="给新的山地群系加入了结构。掠夺者前哨站现在会在所有山地群系中生成。村庄现在会在繁华山地中生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="微调了沙滩，这样他们就会在平坦的海岸线上生成，而不是高耸一些的地方。另外也减少了石滩的数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="海岸线和河岸现在不太可能会被洞穴的含水层搞乱了。也就是说，本地水平面通常会在不涉及河流或海洋的时候被使用，而与海洋或河流接触的洞穴入口和峡谷会使用海平面" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="陆地中的低海拔地区将不太可能会含水洞穴填满了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层的位置可以更低，并且更有可能与深层的洞穴系统连接了。这意味着如果你从地表潜入一个深湖（或者在山地中），你有时候会发现空气洞，并于洞穴系统相连接" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了更有可能生成的含水层变种，以减少被水填满的洞穴生成在各种地方。地下湖泊和被水淹的地区将更可能分散出去，而不是聚集在一起" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽现在不太可能覆盖干燥或寒冷的群系了，并且它们不再会防止悬在空中的水。沼泽现在甚至更开心了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙漠神殿会在地表生成了，而不是固定的 y 轴数值上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="被风蚀的恶地现在不会在水面上生成悬空的柱子了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="草不再会在水下生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了错误的地表放置几率，比如草生成在沙漠里" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了河流在干燥的山地峡谷中生成的几率。我们不支持在海平面上方生成河流，所以如果山地峡谷在海平面上方生成，它就是干燥的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物生成不会在低地形中加速或在高地形减速了。新的生成速度差不多是 1.17 的 y=64 的速度。这一更改使得生物生成在新的主世界中更加一致" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了联机时玩家会面对更多或者更少的怪物的问题，特别是其他玩家在飞行的时候。每一个玩家的怪物分配现在均衡了" />
+			</StackPanel>
+
+			<TextBlock Text="已知问题" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="打开EXP1的世界会出现错误。所以你需要重开新世界" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="性能低下（性能优化会在接下来的正常快照中进行）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="下界地形炸开了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="末地柱（黑曜石柱子）不生成了（但是他们还是会在重生末影龙的时候重新生成）" />
+				
+			</StackPanel>
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/846648ff9fe60310d584061261de43010e5c722b/1_18_experimental-snapshot-3.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-3” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 电量量 和 xiang_xge 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1242805-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p1pc9d/minecraft_118_experimental_snapshot_3_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP2" />
+			</Border>
+			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开实验快照1的世界时会出现错误，请重新创建世界。" />
+			<!--Detail-->
+			<TextBlock Text="相比于EXP1的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的放置变得更加平滑，减少了地形中的微型生物群系，生物群系现在规模会稍微大一些，并不再那么碎片化" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将云层高度从128提升到192" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将山脉（即原来的山脉生物群系）改名为峭壁， 将沙砾山地改名为沙砾丘陵" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙滩现在变得更宽阔了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="羊会在 meadow（繁花山丘） 生物群系生成了。增加了兔子的生成，减少了驴的生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="兰花不再于 meadow 生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽现在会正确地生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了缺失的生物群系：冰刺之地和风蚀恶地" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了地下生物群系与地面生物群系干涉的几率。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="绿宝石和虫蚀石头现在会在新的山脉群系生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物会在新的山脉群系生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在 meadow 现在会生成一棵孤独的树，而且时常会附有一个蜂巢" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了地形生成时出现的浮空沙子和沙砾，解决的方法是将底部替换为砂岩或者石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，骷髅，蜘蛛和洞穴蜘蛛的刷怪笼现在会在亮度等级11以内生成怪物" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了芝士洞穴的平均大小（不过依然有可能生成大洞穴！），并减少了芝士洞穴干涉到地面的几率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为大型洞穴的入口加入了一些缓冲，使得它们不再会直接深入到深板岩的高度层" />
+			</StackPanel>
+
+			<TextBlock Text="已知问题" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="打开实验快照1的世界会出现错误。所以你需要重开新世界" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="性能优化不妙（我们会在之后正常发布的快照中改进性能表现）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="下界地形是坏的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="末地柱现在不会生成（但是当你复活末影龙的时候就会生成了……）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红沙现在会比较难以收集，因为恶地通常会生成在高原上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层有时会以丑陋的方式破坏海岸线" />
+				
+			</StackPanel>
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/0adfe4f321aa45248fc88ac888bed5556633e7fb/1_18_experimental-snapshot-2.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-2” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 Kascade 的译文 (MCBBS)。加括号为未定译名。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1228756-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/oo3pvy/minecraft_118_experimental_snapshot_2_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+	
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP1" />
+			</Border>
+			<TextBlock Margin="30,3,10,3" Text="洞穴与山崖预览数据包已被移入该版本。" />
+			<!--Detail-->
+			<TextBlock Text="与 1.17(洞穴与山崖第一部分) 对比 " Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="扩展了世界高度与深度（Y -64~319）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[新增] 新的山地生物群系（高耸的山峰、覆雪山峰、林地、草甸和雪坡）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴种类(奶酪洞穴，意面洞穴，以及面条洞穴)" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了地下的水位（独立于海平面）和岩浆位" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴生物群系将会在地下和山体中自然生成（繁茂洞穴，溶洞）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的矿石分布" />
+
+				<Image MaxHeight="500" Source="https://attachment.mcbbs.net/data/myattachment/forum/202107/14/010016xee9cb7eb7nw67rc.png" Margin="10,0,10,0" />
+				<TextBlock Text="矿石分布对比图(由 SPGoding 翻译)" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="大型矿脉" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="统一山脉、洞穴和洞口" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物只在完全黑暗时生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化，群系交界处现在会更平滑地过渡" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形现在会更平滑，高差也更大" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="暖水深海能够自然生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了放大化世界和巨型生物群系" />
+
+
+			</StackPanel>
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 xiang_xge 的译文与 Minecraft Wiki 上的有关条目" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1223884-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+				</Grid>
+			</GroupBox>
 		</StackPanel>
 	</local:MyCard>
 
