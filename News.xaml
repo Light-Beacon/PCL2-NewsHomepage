@@ -223,436 +223,68 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w37a" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w38a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w37a.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w38a.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w37a.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w38a.jpg" Opacity="0" />
 			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W37A" />
+			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W38A" />
 			</Border>
 			<!--Detail-->
-			<TextBlock Text="新特性" Style="{StaticResource h2}" />
-			<TextBlock Text="生物群系" Style="{StaticResource h3}" />
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当你胳膊擦到墙壁的时候，疾跑状态不会再变成行走状态了。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了矿石分布。" />
+			</StackPanel>
+			<TextBlock Text="矿石分布" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了噪声洞穴和含水层" />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿石最高上限到了y=95（和最开始设计的一样）" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了滴水石洞地下生物群系" />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加了铜矿石的数量" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Grove（林海雪原）生物群系" />
+				<TextBlock Style="{StaticResource ListItem}" Text="和其它矿石相同，青金石不再以点状分布，而是以块状矿簇分布。" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Lofty peaks（巍峨山峰）生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了繁茂洞穴地下生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Meadow （草甸）生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowcapped （覆雪山峰）生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowy slopes （覆雪山坡）生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Stony peaks （石顶山峰）生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的矿物分布和大矿脉" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="主世界建筑和生成上限已被拓展" />
 			</StackPanel>
 
-			<TextBlock Text="方块" Style="{StaticResource h3}" />
+			<TextBlock Text="疾跑" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="附魔台现在会发光，但亮度不是很高" />
+				<TextBlock Style="{StaticResource ListItem}" Text="在之前任何与方块之间的碰撞都会停止疾跑，如果玩家行进方向与接触面角度很小，那么玩家将会保持疾跑，如果较大，那么疾跑任会停止。" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
 			</StackPanel>
+			
 
-			<TextBlock Text="滴水石洞生物群系" Style="{StaticResource h3}" />
+			<TextBlock Text="技术性更改" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有很多滴水石，顶上有，地上也有，还有小水洼" />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增了设置“Simulation distance（模拟距离）”（实体不会在模拟距离以外进行更新）" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在一些地方有大块的石笋和石钟乳，还有由滴水石构成的立柱" />
+				<TextBlock Style="{StaticResource ListItem}" Text="最大后台线程数增加（7 -> 255）" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有额外的铜矿" />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加在加载世界时对玩家信息的反馈（对玩家地图部分数据上传以帮助 Mojang 改进地形生成）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="以上详情请见原文或MCWiki" />
 			</StackPanel>
-
-			<TextBlock Text="GROVE （林海雪原）" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="多雪的地形，有高耸的云杉树和细雪陷阱。穿好皮革靴子！" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在山峰下或丘陵顶部的高海拔地区生成。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="这儿有狼、兔子和狐狸。" />
-			</StackPanel>
-
-
-			<TextBlock Text="LOFTY PEAKS （巍峨山峰）" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="壮观而嶙峋的山峰，有石头和雪打顶" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有山羊出没" />
-			</StackPanel>
-
-			<TextBlock Text="SNOWCAPPED PEAKS （覆雪山峰）" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="比较平坦的山顶，冰雪覆盖" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊。" />
-			</StackPanel>
-
-			<TextBlock Text="SNOWY SLOPES （覆雪山坡）" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="白雪皑皑的地形，有一些细雪陷阱。你最好带个皮革靴子来！" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在高海拔的山峰底下或丘陵顶部生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="生成兔子和山羊" />
-			</StackPanel>
-
-			<TextBlock Text="STONY PEAKS （石顶山峰）" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="可能嶙峋，也可能平坦，不过都是石头" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有时有方解石条带生成" />
-			</StackPanel>
-
-			<TextBlock Text="繁茂洞穴生物群系" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="苔藓从顶上覆盖到脚下" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="孢子花从洞穴顶长出来，掉下粒子效果" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有粘土池，垂滴叶从其中长出" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有杜鹃花丛，有的还在开花" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="杜鹃花树喜欢把根扎进繁茂洞穴里，所以如果你发现了杜鹃花树，无论是在地表还是在地下，那都意味着你找到了一个繁茂洞穴" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="藤蔓和发光浆果从洞穴顶长出来，照亮洞穴" />
-			</StackPanel>
-
-			<TextBlock Text="MEADOW BIOME （草甸）群系" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="草木繁茂，鲜花绽放。倾向于在平原或大山旁的高处生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="有时有一棵高大的橡树或白桦树，常常有蜜蜂巢。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="想想《音乐之声》！（P.S. 此处原文是对《音乐之声》的致敬）。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="驴、兔子和绵羊遍野。" />
-			</StackPanel>
-
-			<TextBlock Text="大型矿脉" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="矿脉是那种大而稀有、外观如蛇的地下矿物聚集形态" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铜矿脉可以在 y 0 到 y 50 之间生成，混有花岗岩" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铁矿脉可以在 y -60 和 y -8 之间生成，混有凝灰岩" />
-			</StackPanel>
-
-			<TextBlock Text="噪声洞穴和含水层" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴是一种新的生成洞穴的方式，提供了更自然的变种。生成得可能相当大！" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴有大致三类：" />
-
-				<StackPanel Style="{StaticResource ListStyle}">
-
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="奶酪洞穴。像奶酪上的孔。经常生成各种尺寸的洞穴。" />
-
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="意大利面洞穴。曲里拐弯，扭七扭八。" />
-
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴。更细更扭，容易引起幽闭恐惧。" />
-
-				</StackPanel>
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="一点都不响！跟实际的“噪声”没啥关系，噪声是描述其生成方式的术语" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="旧式洞穴仍会生成，新旧系统合二为一，生成有趣的洞穴系统" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="含水层是有本地水平面的一块区域，和海平面独立。
-				含水层用于在世界生成阶段生成噪声洞穴内的水体。
-				有时会生成相当大的地底湖！也可能在山体内部和地表生成。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="y0 以下的含水层有时会被熔岩替代" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="岩浆块有时会在地下水体的底部生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="之前用于生成地下水体的工具都被移除了" />
-			</StackPanel>
-
-			<TextBlock Text="生物生成" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="怪物现在只会在来自方块的亮度为 0 的地方生成（天光仍和以前一样地阻止怪物生成）" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="修复了一个 bug：多人游戏中的玩家可能会遭遇到比预计的多或极少的怪物，特别是当其他玩家在飞行时" />
-
-			</StackPanel>
-
-			<TextBlock Text="新的矿物分布" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="矿物分布现在适应新的世界高度，并加入了新的挖矿策略" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在没有哪个 y 值是挖所有矿的最好选择了，你必须做出取舍" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铁矿在 y 72 之下生成，在 y=16 最多" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铁矿也在 112 之上生成，越高越多。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在 y 0 和 y 96 之间生成，在 y=48 最多" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在滴水石洞中生成得更多" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="青金石在 y 64 之下生成，在 y=0 最多。然而，在 y -32 之下或 y 32 之上生成的青金石不会暴露在空气中，要么是被埋起来，要么是在水里" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="煤在 y 0 之上生成，y=96 及以上达到峰值" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="金在 y 32 之下生成，在 y=-16 最多" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="恶地（非标准译名：粘土山）仍可以发现更多的金" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="红石在 y 16 之下生成。到 y -32 之下，生成逐渐增多" />
-				
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="钻石在 y 16 之下生成，越往下越多" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="钻石更不容易在空气中暴露，所以你可能更多会发现埋起来的钻石或在水下的钻石而不是直接暴露于空气中的（野生矿洞钻石收益变低了）" />
-			</StackPanel>
-
-			<TextBlock Text="选项" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了辅助功能选项用于禁用雷暴时的天空闪烁" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了用于指定播放设备的选项" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在控制选项中添加了“切换疾跑”和“切换潜行”" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="把一些应当在其他地方的按键绑定从控制选项中挪走了" />
-
-			</StackPanel>
-
-			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="生成范围和建筑范围上下各拓展了 64 方块，总计 384 方块" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="地下特性、结构和洞穴生成一路走低到 y-64" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="例外：花岗岩、闪长岩和安山岩还有泥土不会在 y0 以下生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="调整了上述三种岩石的生成位置和尺寸" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="滴水石群不再能在普通洞穴中找到，只能在滴水石洞生物群系中找到" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="从 y0 到以下深板岩逐渐取代所有石头" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="深板岩团块不再在 y0 以上生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="地形形状和高程和生物群系无关了。例如，森林和沙漠可以在小山坡上生成，不再需要特定的生物群系" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="那三种岩石在 y 60 之上的生成减少了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沙砾带可以在石质海岸生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="沼泽的树可以在水中扎根两格深了（之前是一格）" />
-
-			</StackPanel>
-
-			<TextBlock Text="更改" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="灾厄村民不再攻击小村民" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在只在繁茂洞穴生成" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在有自己独立的生物上限" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="云的高度从 128 升到 192" />
-
-			</StackPanel>
-
-			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="用包含光照更新数据的客户端区块更新网络数据包取代了之前的。单独的光照更新数据包依然存在，只当光照更新而区块无更新时发送。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="视距现在会圆柱状加载，而不是正方形" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="关于世界生成噪声的信息现在会在调试界面显示" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了 illageralt，符文般的字体，来自Minecraft Dungeons（《我的世界：地下城》），现在只能通过指令使用" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="添加了启动选项 --jfrProfile 以及指令 jfr 使用 Java FlightRecorder 采集信息，以及一些自定义事件。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="战利品表函数 set_contents 和 set_loot_table 现在需要 type 字段，其应是一个有效的方块实体类型。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在 1.2(“pre-anvil”) 之前存储的世界现在不能再直接打开了。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="数据包格式版本升至 8" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的视频选项 “更新优先级”" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="移除了记分板、记分器和队伍名的长度限制" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="刷怪笼现在无视亮度限制" />
-
-			</StackPanel>
-
-			<TextBlock Text="JFR 数据采集" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<TextBlock Style="{StaticResource ListItem}" Margin="10,10" Text="详见原文或之前新闻，在此不做赘述。" />
-			</StackPanel>
-
-			<TextBlock Text="战利品表" Style="{StaticResource h3}" />
-			<TextBlock Text="修改的参数 SET_CONTENTS, SET_LOOT_TABLE" Style="{StaticResource h4}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的必填字段 type。会写入 BlockEntityTag.id，以确保在版本间迁移正确" />
-			</StackPanel>
-
-			<TextBlock Text="旧世界转换" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="Minecraft 1.2 (“pre-anvil”) 之前的世界现在需要在本快照之前的版本里先转一次，才能正常打开" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="1.6.4 及之前的版本转换得最好——之后的世界会有不正确的生物群系信息" />
-			</StackPanel>
-
-			<TextBlock Text="更新优先级设置" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="该设置决定了单帧有哪些区块会同步更新。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="最保守的选项“邻近”对应着和之前一样的更新方式。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的选项“由玩家”和“无”大大缩减了放置和移除方块（特别是会发光的）时的卡顿，但可能偶尔导致世界更新时视觉上的延迟。" />
-			</StackPanel>
-
-			<TextBlock Text="刷怪笼数据修改" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<TextBlock Style="{StaticResource ListItem}" Text="详见原文，在此不做赘述。" Margin="10,0" />
-			</StackPanel>
-
-			<TextBlock />
+		
+			<TextBlock Text="该版本修复了 15 个Bug" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -661,13 +293,11 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w37a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1261439-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w37a" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w38a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1263529-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w38a" />
 				</Grid>
-			</GroupBox>
-
-			<TextBlock Text="该版本修复了 44 个Bug。该新闻原译者：山雀雀（MCBBS），稍作修改。" Style="{StaticResource footnote}" />
+			</GroupBox>	
 		</StackPanel>	
 	</local:MyCard>
 
@@ -1858,6 +1488,520 @@
 		</StackPanel>
 	</local:MyCard>
 
+	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
+
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="被命名过的生物死亡会记录到日志。" />
+
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了42个Bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<!--BEGIN IsSwaped="True" -->
+
+	<local:MyCard Margin="0,0,0,15" Title="21w37a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w37a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w37a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W37A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="新特性" Style="{StaticResource h2}" />
+			<TextBlock Text="生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了噪声洞穴和含水层" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了滴水石洞地下生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Grove（林海雪原）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Lofty peaks（巍峨山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了繁茂洞穴地下生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Meadow （草甸）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowcapped （覆雪山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowy slopes （覆雪山坡）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Stony peaks （石顶山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的矿物分布和大矿脉" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="主世界建筑和生成上限已被拓展" />
+			</StackPanel>
+
+			<TextBlock Text="方块" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="附魔台现在会发光，但亮度不是很高" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
+			</StackPanel>
+
+			<TextBlock Text="滴水石洞生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有很多滴水石，顶上有，地上也有，还有小水洼" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在一些地方有大块的石笋和石钟乳，还有由滴水石构成的立柱" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有额外的铜矿" />
+			</StackPanel>
+
+			<TextBlock Text="GROVE （林海雪原）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="多雪的地形，有高耸的云杉树和细雪陷阱。穿好皮革靴子！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在山峰下或丘陵顶部的高海拔地区生成。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="这儿有狼、兔子和狐狸。" />
+			</StackPanel>
+
+
+			<TextBlock Text="LOFTY PEAKS （巍峨山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="壮观而嶙峋的山峰，有石头和雪打顶" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有山羊出没" />
+			</StackPanel>
+
+			<TextBlock Text="SNOWCAPPED PEAKS （覆雪山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="比较平坦的山顶，冰雪覆盖" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊。" />
+			</StackPanel>
+
+			<TextBlock Text="SNOWY SLOPES （覆雪山坡）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="白雪皑皑的地形，有一些细雪陷阱。你最好带个皮革靴子来！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在高海拔的山峰底下或丘陵顶部生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生成兔子和山羊" />
+			</StackPanel>
+
+			<TextBlock Text="STONY PEAKS （石顶山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="可能嶙峋，也可能平坦，不过都是石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有时有方解石条带生成" />
+			</StackPanel>
+
+			<TextBlock Text="繁茂洞穴生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="苔藓从顶上覆盖到脚下" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="孢子花从洞穴顶长出来，掉下粒子效果" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有粘土池，垂滴叶从其中长出" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有杜鹃花丛，有的还在开花" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="杜鹃花树喜欢把根扎进繁茂洞穴里，所以如果你发现了杜鹃花树，无论是在地表还是在地下，那都意味着你找到了一个繁茂洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="藤蔓和发光浆果从洞穴顶长出来，照亮洞穴" />
+			</StackPanel>
+
+			<TextBlock Text="MEADOW BIOME （草甸）群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="草木繁茂，鲜花绽放。倾向于在平原或大山旁的高处生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有时有一棵高大的橡树或白桦树，常常有蜜蜂巢。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="想想《音乐之声》！（P.S. 此处原文是对《音乐之声》的致敬）。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="驴、兔子和绵羊遍野。" />
+			</StackPanel>
+
+			<TextBlock Text="大型矿脉" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿脉是那种大而稀有、外观如蛇的地下矿物聚集形态" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿脉可以在 y 0 到 y 50 之间生成，混有花岗岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿脉可以在 y -60 和 y -8 之间生成，混有凝灰岩" />
+			</StackPanel>
+
+			<TextBlock Text="噪声洞穴和含水层" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴是一种新的生成洞穴的方式，提供了更自然的变种。生成得可能相当大！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴有大致三类：" />
+
+				<StackPanel Style="{StaticResource ListStyle}">
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="奶酪洞穴。像奶酪上的孔。经常生成各种尺寸的洞穴。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="意大利面洞穴。曲里拐弯，扭七扭八。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴。更细更扭，容易引起幽闭恐惧。" />
+
+				</StackPanel>
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="一点都不响！跟实际的“噪声”没啥关系，噪声是描述其生成方式的术语" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧式洞穴仍会生成，新旧系统合二为一，生成有趣的洞穴系统" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层是有本地水平面的一块区域，和海平面独立。
+				含水层用于在世界生成阶段生成噪声洞穴内的水体。
+				有时会生成相当大的地底湖！也可能在山体内部和地表生成。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="y0 以下的含水层有时会被熔岩替代" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="岩浆块有时会在地下水体的底部生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="之前用于生成地下水体的工具都被移除了" />
+			</StackPanel>
+
+			<TextBlock Text="生物生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物现在只会在来自方块的亮度为 0 的地方生成（天光仍和以前一样地阻止怪物生成）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了一个 bug：多人游戏中的玩家可能会遭遇到比预计的多或极少的怪物，特别是当其他玩家在飞行时" />
+
+			</StackPanel>
+
+			<TextBlock Text="新的矿物分布" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿物分布现在适应新的世界高度，并加入了新的挖矿策略" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在没有哪个 y 值是挖所有矿的最好选择了，你必须做出取舍" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿在 y 72 之下生成，在 y=16 最多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿也在 112 之上生成，越高越多。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在 y 0 和 y 96 之间生成，在 y=48 最多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在滴水石洞中生成得更多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="青金石在 y 64 之下生成，在 y=0 最多。然而，在 y -32 之下或 y 32 之上生成的青金石不会暴露在空气中，要么是被埋起来，要么是在水里" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="煤在 y 0 之上生成，y=96 及以上达到峰值" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="金在 y 32 之下生成，在 y=-16 最多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地（非标准译名：粘土山）仍可以发现更多的金" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红石在 y 16 之下生成。到 y -32 之下，生成逐渐增多" />
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="钻石在 y 16 之下生成，越往下越多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="钻石更不容易在空气中暴露，所以你可能更多会发现埋起来的钻石或在水下的钻石而不是直接暴露于空气中的（野生矿洞钻石收益变低了）" />
+			</StackPanel>
+
+			<TextBlock Text="选项" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了辅助功能选项用于禁用雷暴时的天空闪烁" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了用于指定播放设备的选项" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在控制选项中添加了“切换疾跑”和“切换潜行”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="把一些应当在其他地方的按键绑定从控制选项中挪走了" />
+
+			</StackPanel>
+
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生成范围和建筑范围上下各拓展了 64 方块，总计 384 方块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地下特性、结构和洞穴生成一路走低到 y-64" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="例外：花岗岩、闪长岩和安山岩还有泥土不会在 y0 以下生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了上述三种岩石的生成位置和尺寸" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="滴水石群不再能在普通洞穴中找到，只能在滴水石洞生物群系中找到" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从 y0 到以下深板岩逐渐取代所有石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="深板岩团块不再在 y0 以上生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形形状和高程和生物群系无关了。例如，森林和沙漠可以在小山坡上生成，不再需要特定的生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="那三种岩石在 y 60 之上的生成减少了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙砾带可以在石质海岸生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽的树可以在水中扎根两格深了（之前是一格）" />
+
+			</StackPanel>
+
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="灾厄村民不再攻击小村民" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在只在繁茂洞穴生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在有自己独立的生物上限" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="云的高度从 128 升到 192" />
+
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用包含光照更新数据的客户端区块更新网络数据包取代了之前的。单独的光照更新数据包依然存在，只当光照更新而区块无更新时发送。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="视距现在会圆柱状加载，而不是正方形" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="关于世界生成噪声的信息现在会在调试界面显示" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 illageralt，符文般的字体，来自Minecraft Dungeons（《我的世界：地下城》），现在只能通过指令使用" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了启动选项 --jfrProfile 以及指令 jfr 使用 Java FlightRecorder 采集信息，以及一些自定义事件。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="战利品表函数 set_contents 和 set_loot_table 现在需要 type 字段，其应是一个有效的方块实体类型。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在 1.2(“pre-anvil”) 之前存储的世界现在不能再直接打开了。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="数据包格式版本升至 8" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的视频选项 “更新优先级”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了记分板、记分器和队伍名的长度限制" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="刷怪笼现在无视亮度限制" />
+
+			</StackPanel>
+
+			<TextBlock Text="JFR 数据采集" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Margin="10,10" Text="详见原文或之前新闻，在此不做赘述。" />
+			</StackPanel>
+
+			<TextBlock Text="战利品表" Style="{StaticResource h3}" />
+			<TextBlock Text="修改的参数 SET_CONTENTS, SET_LOOT_TABLE" Style="{StaticResource h4}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的必填字段 type。会写入 BlockEntityTag.id，以确保在版本间迁移正确" />
+			</StackPanel>
+
+			<TextBlock Text="旧世界转换" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="Minecraft 1.2 (“pre-anvil”) 之前的世界现在需要在本快照之前的版本里先转一次，才能正常打开" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="1.6.4 及之前的版本转换得最好——之后的世界会有不正确的生物群系信息" />
+			</StackPanel>
+
+			<TextBlock Text="更新优先级设置" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="该设置决定了单帧有哪些区块会同步更新。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最保守的选项“邻近”对应着和之前一样的更新方式。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的选项“由玩家”和“无”大大缩减了放置和移除方块（特别是会发光的）时的卡顿，但可能偶尔导致世界更新时视觉上的延迟。" />
+			</StackPanel>
+
+			<TextBlock Text="刷怪笼数据修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Text="详见原文，在此不做赘述。" Margin="10,0" />
+			</StackPanel>
+
+			<TextBlock />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w37a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1261439-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w37a" />
+				</Grid>
+			</GroupBox>
+
+			<TextBlock Text="该版本修复了 44 个Bug。该新闻原译者：山雀雀（MCBBS），稍作修改。" Style="{StaticResource footnote}" />
+		</StackPanel>	
+	</local:MyCard>
+
 	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 7" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
@@ -2145,7 +2289,7 @@
 				</Border.Background>
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/exp1-header.jpg" Opacity="0" />
 			</Border>
-			<Border x:Name="verBorder" Style="{StaticResource verTxtBdr}">
+			<Border Style="{StaticResource verTxtBdr}">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP4" />
 			</Border>
 
