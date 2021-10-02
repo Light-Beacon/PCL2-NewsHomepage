@@ -223,68 +223,89 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w38a" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w39a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w38a.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w39a.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w38a.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w39a.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W38A" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W39A" />
 			</Border>
 			<!--Detail-->
-			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<TextBlock Text="新增特性" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="当你胳膊擦到墙壁的时候，疾跑状态不会再变成行走状态了。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="修复了矿石分布。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了洞穴与山崖第二部分的进度。" />
 			</StackPanel>
-			<TextBlock Text="矿石分布" Style="{StaticResource h3}" />
+			<TextBlock Text="进度" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="铜矿石最高上限到了y=95（和最开始设计的一样）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="“上天入地”：从主世界的顶部掉落到底部" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="增加了铜矿石的数量" />
+				<TextBlock Style="{StaticResource ListItem}" Text="“温暖如家”：在主世界中骑乘炽足兽在岩浆中走过50个方块" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="和其它矿石相同，青金石不再以点状分布，而是以块状矿簇分布。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="“星际商人”：和一个在建筑高度极限的村民进行交易" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“音乐之声”：在草甸生物群系播放音乐" />
 
 			</StackPanel>
 
-			<TextBlock Text="疾跑" Style="{StaticResource h3}" />
+			<TextBlock Text="21w39a 的修改内容" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在之前任何与方块之间的碰撞都会停止疾跑，如果玩家行进方向与接触面角度很小，那么玩家将会保持疾跑，如果较大，那么疾跑任会停止。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了山峰，让小的山丘看起来更像锯齿状的山峰，而非平平的土丘" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
+				<TextBlock Style="{StaticResource ListItem}" Text="草甸的独树现在总会有一个蜂巢了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溺尸现在会在滴水石洞穴的含水层中生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸不再会生成在滴水石洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="埋藏的宝藏箱子里会有水下呼吸药水了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将默认亮度调整为50" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重新设计了物品栏界面里面的效果示意图，使得打开配方书时也能看到效果" />	
 			</StackPanel>
 			
 
-			<TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+			<TextBlock Text="状态效果" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新增了设置“Simulation distance（模拟距离）”（实体不会在模拟距离以外进行更新）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="你的状态效果列表现在放在物品栏界面的右边展示，而不再是左边了" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="最大后台线程数增加（7 -> 255）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="当物品栏界面的状态效果可见时，就不再显示于游戏视角，以减少屏幕卡顿" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="增加在加载世界时对玩家信息的反馈（对玩家地图部分数据上传以帮助 Mojang 改进地形生成）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在有两种状态效果列表的呈现模式：紧凑/经典" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="以上详情请见原文或MCWiki" />
+				<TextBlock Style="{StaticResource ListItem}" Text="游戏会根据当前可用的屏幕尺寸，自动在两种呈现方式中切换（包括在打开配方书的时候）" />
 			</StackPanel>
-		
-			<TextBlock Text="该版本修复了 15 个Bug" Style="{StaticResource footnote}" />
+			
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="详见Minecraft Wiki或更新日志原文" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 10 个Bug ， 本文翻译由 Kanonymous（卡狗）于MCBBS上发布" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -293,9 +314,9 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w38a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1263529-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w38a" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w39a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1264912-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w39a" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
@@ -1489,6 +1510,84 @@
 	</local:MyCard>
 
 	<!--BEGIN IsSwaped="True" -->
+
+	<local:MyCard Margin="0,0,0,15" Title="21w38a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w38a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w38a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W38A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当你胳膊擦到墙壁的时候，疾跑状态不会再变成行走状态了。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了矿石分布。" />
+			</StackPanel>
+			<TextBlock Text="矿石分布" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿石最高上限到了y=95（和最开始设计的一样）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加了铜矿石的数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="和其它矿石相同，青金石不再以点状分布，而是以块状矿簇分布。" />
+
+			</StackPanel>
+
+			<TextBlock Text="疾跑" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在之前任何与方块之间的碰撞都会停止疾跑，如果玩家行进方向与接触面角度很小，那么玩家将会保持疾跑，如果较大，那么疾跑任会停止。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
+			</StackPanel>
+			
+
+			<TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增了设置“Simulation distance（模拟距离）”（实体不会在模拟距离以外进行更新）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最大后台线程数增加（7 -> 255）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加在加载世界时对玩家信息的反馈（对玩家地图部分数据上传以帮助 Mojang 改进地形生成）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="以上详情请见原文或MCWiki" />
+			</StackPanel>
+		
+			<TextBlock Text="该版本修复了 15 个Bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w38a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1263529-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w38a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="21w37a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
