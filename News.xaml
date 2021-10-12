@@ -267,10 +267,18 @@
 					</Border>
 					</local:MyButton>
 				</Border>
-				<Border Background="#3D3D3F" Grid.Column="1" Margin="10" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://minecraft.fandom.com/zh/wiki/Minecraft_Live_2021" EventType="打开网页" ToolTip="尚未公布">
-					<Border Background="#666668" CornerRadius="5" Padding="10">
-						<TextBlock Text="?" Foreground="#3D3D3F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" />
+				<Border Background="#345894" Grid.Column="1" Margin="10" Padding="0,0,0,5" CornerRadius="5">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV1sq4y1d7St" EventType="打开网页" ToolTip="点击打开B站观看视频">
+					<Border Background="#4270BB" CornerRadius="5" Padding="10">
+						<StackPanel Margin="0,5">
+							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/ALLAY.png" Margin="1,1,1,6"/>
+							<TextBlock Text="ALLAY" Foreground="#192A47" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+							<StackPanel Margin="5">
+							<TextBlock Text="  一种[生成方式未知]悬浮生物。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  全身呈蓝色，类似于恼鬼。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  玩家给予其一种物品，它会收集相应物品后会把收集到的物品丢至音符块附近。（可能还会跳舞？）" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							</StackPanel>
+						</StackPanel>
 					</Border>
 					</local:MyButton>
 				</Border>
