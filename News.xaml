@@ -274,18 +274,27 @@
 							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/ALLAY.png" Margin="1,1,1,6"/>
 							<TextBlock Text="ALLAY" Foreground="#192A47" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 							<StackPanel Margin="5">
-							<TextBlock Text="  一种小巧的蓝色飞行生物。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  会被音符盒的乐声吸引，也会随着音乐起舞。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  若玩家给出某种物品，它会前去寻找更多相同或相似的物品，并将其放在玩家附近的音符盒上。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  一种小巧的蓝色飞行生物。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  会被音符盒的乐声吸引，也会随着音乐起舞。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  若玩家给出某种物品，它会前去寻找更多相同或相似的物品，并将其放在玩家附近的音符盒上。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
 							</StackPanel>
 						</StackPanel>
 					</Border>
 					</local:MyButton>
 				</Border>
-				<Border Background="#3D3D3F" Grid.Column="2" Margin="10" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://minecraft.fandom.com/zh/wiki/Minecraft_Live_2021" EventType="打开网页" ToolTip="尚未公布">
-					<Border Background="#666668" CornerRadius="5" Padding="10">
-						<TextBlock Text="?" Foreground="#3D3D3F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="Bold" />
+				<Border Background="#87502D" Grid.Column="2" Margin="10" Padding="0,0,0,5" CornerRadius="5">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV15v41137jx" EventType="打开网页" ToolTip="点击打开B站观看视频">
+					<Border Background="#BB7042" CornerRadius="5" Padding="10">
+						<StackPanel Margin="0,5">
+							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/COPPER_GOLEM.png" Margin="1,1,1,6"/>
+							<TextBlock Text="铜傀儡" Foreground="#3B2314" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+							<StackPanel Margin="5">
+							<TextBlock Text="  一种形似机器人的生物。" Foreground="#3B2314" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  随着时间推移会逐渐被氧化。" Foreground="#3B2314" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  会被被铜按钮所吸引，并随机按下铜按钮。" Foreground="#3B2314" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  若该生物胜出将同时加入铜按钮。" Foreground="#3B2314" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							</StackPanel>
+						</StackPanel>
 					</Border>
 					</local:MyButton>
 				</Border>
