@@ -314,16 +314,28 @@
 					<ColumnDefinition Width="*"></ColumnDefinition>
 					<ColumnDefinition Width="*"></ColumnDefinition>
 				</Grid.ColumnDefinitions>
-				<Border Background="#518730" Grid.Column="0" Margin="10" Padding="0,0,0,5" CornerRadius="5">
+				<Border Background="#3D3D3F" Grid.Column="0" Margin="10" Padding="0,0,0,5" CornerRadius="5">
 					<local:MyButton EventData="https://www.bilibili.com/video/BV1hb4y1Y72Q" EventType="打开网页" ToolTip="点击打开B站观看视频">
-					<Border Background="#70BB42" CornerRadius="5" Padding="10">
+					<Border Background="#666668" CornerRadius="5" Padding="10">
 					<StackPanel Margin="0,5">
-						<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/GLARE.png" Margin="1,1,1,6"/>
-						<TextBlock Text="GLARE" Foreground="#233B14" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+						<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/GLARE_OUT.png" Margin="1,1,1,6"/>
+						<TextBlock Text="GLARE" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 						<StackPanel Margin="5">
-						<TextBlock Text="  一种出现于暗处的悬浮生物。" Foreground="#233B14" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-						<TextBlock Text="  全身呈黄绿色，且面部只露出双眼。" Foreground="#233B14" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-						<TextBlock Text="  会飞向光照等级可支持怪物生成的区域，并逐渐变得暴躁，以警示玩家。" Foreground="#233B14" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<TextBlock Text="  一种出现于暗处的悬浮生物。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<TextBlock Text="  全身呈黄绿色，且面部只露出双眼。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<TextBlock Text="  会飞向光照等级可支持怪物生成的区域，并逐渐变得暴躁，以警示玩家。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<Border BorderBrush="#DD3333" BorderThickness="4" Margin="-10,-300,0,-20" Height="70" Width="150">
+							<Border.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform />
+									<SkewTransform />
+									<RotateTransform Angle="-15" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Border.RenderTransform>
+							<TextBlock Text="淘汰" HorizontalAlignment="Center" FontSize="44" Foreground="#DD3333" FontWeight="Bold" >	
+						</TextBlock>
+						</Border>
 						</StackPanel>
 					</StackPanel>
 					</Border>
