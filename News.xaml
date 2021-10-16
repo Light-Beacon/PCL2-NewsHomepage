@@ -306,6 +306,7 @@
 	
 	<local:MyCard Margin="0,0,0,15" Title="MINECRAFT LIVE 2021 系列 - 投票选出下一个生物！" CanSwap="True">
 		<StackPanel Margin="10,30,10,20">
+			<TextBlock Margin="2" Text="   🔴 生物投票正在动态更新中（指谁淘汰了）"/>
 			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
 			<Grid UseLayoutRounding="True">
 				<Grid.ColumnDefinitions>
