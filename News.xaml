@@ -245,6 +245,95 @@
 	</Grid>
 
 
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w42a" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w42a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w42a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W42A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w42a 的新增内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="游戏中加入了新的音乐" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在单人游戏中加入了世界自动保存指示器" />
+			</StackPanel>
+
+			<TextBlock Text="音乐" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="给主世界（生存模式下）和主菜单新增了一些音乐，作曲： Lena Raine 与 Kumi Tanioka。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增了一个唱片，《Otherside（对面）》，由Lena Raine创作。 能够在要塞走廊箱子罕见地找到，也能在地牢的箱子里极为罕见地找到。" />
+			</StackPanel>
+
+
+			<TextBlock Text="21w42a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="世界出生点算法已被修改，现在通过气候因素来生成玩家" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="世界生成调整" />
+
+			</StackPanel>
+
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="熔岩泉现在可在山地中和积雪地形中生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="水泉不再在 y 大于 192 处生成，并且轻微地降低了其生成率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地（粘土山）的金矿生成位置更高了" />
+				
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用 “block_marker” 替代了 “light” 和 “barrier” 粒子效果。" />
+			</StackPanel>
+
+			<TextBlock Text="粒子" Style="{StaticResource h3}" />
+			<TextBlock Text="BLOCK_MARKER" Style="{StaticResource h4}" />		
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用声明好位置的粒子来渲染模型以配置方块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调用方法与方块粒子相同（比如 block_marker wheat [age=2]）" />
+				
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 7 个Bug ，粒子内容翻译由 xiang_xge 于MCBBS上提供" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w42a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1270584-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w42a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
 	<local:MyCard Margin="0,0,0,15" Title="MINECRAFT LIVE 2021 系列 - ALLAY 胜出！" CanSwap="True">
 		<StackPanel Margin="10,30,10,20">
 			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
@@ -329,69 +418,6 @@
 		</StackPanel>
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w41a" CanSwap="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w41a.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w41a.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W41A" />
-			</Border>
-			<!--Detail-->
-			<TextBlock Text="21w41a 的修改内容" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="主菜单的背景现在展示洞穴与山崖第二部分的场景" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="恶地矿井现在生成在更高的地方" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="紫晶洞现在只在Y=30及以下的高度生成，稀有度与1.17类似" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="增大了对着障碍物冲刺并且不会停下冲刺的角度" />
-			</StackPanel>
-
-			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="修改了区块渲染管线的优先级" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在在较大渲染距离下高速飞行时，应该不会出现有一块未渲染的“洞”了" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="服务器类已被签名" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的用于生成主世界的随机数生成器" />
-
-			</StackPanel>
-
-			<TextBlock Text="该版本修复了 19 个Bug ，本文部分内容翻译由 我真的按了 于MCBBS上发布" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w41a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1269031-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w41a" />
-				</Grid>
-			</GroupBox>	
-		</StackPanel>	
-	</local:MyCard>
-
-	
-	
 	<!-- SEARCH BEGIN -->
 
 	
@@ -1583,6 +1609,67 @@
 	</local:MyCard>
 
 	<!--BEGIN IsSwaped="True" -->
+	<local:MyCard Margin="0,0,0,15" Title="21w41a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w41a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w41a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W41A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w41a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="主菜单的背景现在展示洞穴与山崖第二部分的场景" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地矿井现在生成在更高的地方" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="紫晶洞现在只在Y=30及以下的高度生成，稀有度与1.17类似" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增大了对着障碍物冲刺并且不会停下冲刺的角度" />
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修改了区块渲染管线的优先级" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在较大渲染距离下高速飞行时，应该不会出现有一块未渲染的“洞”了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="服务器类已被签名" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的用于生成主世界的随机数生成器" />
+
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 19 个Bug ，本文部分内容翻译由 我真的按了 于MCBBS上发布" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w41a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1269031-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w41a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
 
 	<local:MyCard Margin="0,0,0,15" Title="21w40a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
