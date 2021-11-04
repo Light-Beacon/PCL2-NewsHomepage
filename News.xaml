@@ -244,80 +244,76 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
+	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w43a" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w44a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w43a.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w44a.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w43a.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w44a.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W43A" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W44A" />
 			</Border>
 			<!--Detail-->
-			<TextBlock Text="21w43a 的新增内容" Style="{StaticResource h2}" />
+			<TextBlock Text="21w44a 的新增内容" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="当你升级一个世界存档时，新旧世界的边缘过渡部分将被调整" />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧世界高度的区块升级到新世界高度时，其Y=0以下会按新世界生成机制生成。" />
 			</StackPanel>
 
-			<TextBlock Text="旧世界升级" Style="{StaticResource h3}" />
+			<TextBlock Text="选项" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="当生成的地形靠近旧区块时，新地形会被调整来适配旧世界的原有地形" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的 “在线选项” 选项界面，位于原先主菜单上的 “Realms的通知” 选项以及多人游戏暂停菜单上的 “难度” 位置上。" />
+				<StackPanel Style="{StaticResource ListStyle}">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="“Realms的通知” 被移入此界面。" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在旧世界区块中，如果y=0处是基岩，那么下方将会被填满深板岩" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“允许列入服务器玩家列表”选项，用于设置是否允许服务器将自己的ID公开展示在在线玩家列表中。" />
 
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在此快照中升级的世界将永久保留这个深板岩层，因此如果你想让旧区块高度小于0的地方能有洞穴生成的话，请在升级前做好备份。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“服务器难度”，用于显示当前的服务器难度。" />
+				</StackPanel>
+			</StackPanel>
 
+			<TextBlock Text="server.properties" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="旧区块中y=0到y=4之间的基岩将会被替换为深板岩" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="y=-64的地方会生成新的基岩层" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了hide-online-players，用于服务端收到客户端的状态请求时是否发送在线玩家列表。" />
 			</StackPanel>
 
 
 			<TextBlock Text="21w43a 的修改内容" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="优先更新视频设置已重命名为 Chunk Builder" />
+				<TextBlock Style="{StaticResource ListItem}" Text="将主世界的所有50种生物群系都列入了进度探索的时光的达成要求中" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="减少了河流沿岸和海洋海岸线附近被淹没的洞穴数量" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="含水层水位变化减少，因此会有更大的区域处于相同水位下。 这意味着地下瀑布会变少，使得在地下行船会轻松一些" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="岩浆含水层常见度降低" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="限制大垂滴叶只能放置在粘土、草方块、泥土、耕地、苔藓、含根泥土、灰化土和菌丝上" />
+				<TextBlock Style="{StaticResource ListItem}" Text="睡觉现在只会在下雨时重置天气变化过程" />
 			</StackPanel>
 
 
 			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="方块和流体滴落的一些内部细节已经修改来加快保存时间。虽然外表上好像没什么变化，但是你可以试着用你的红石装置测试一下（当然，记得在世界的副本或备份上做实验)" />
-				
+				<TextBlock Style="{StaticResource ListItem}" Text="现在当JFR分析从外部来源启动时，网络封包有关的JFR事件会被合并在一起，而不是一个封包对应一个事件" />
+
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="区块格式已被更新" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在方块和液体也会受到模拟距离的控制" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将模拟距离选项的最小值从2个区块上调到5个区块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优化了实体碰撞。" />
 			</StackPanel>
 
-			<TextBlock Text="世界数据：区块格式" Style="{StaticResource h3}" />	
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="详见原文" />		
-			</StackPanel>
-
-			<TextBlock Text="该版本修复了 8 个Bug ，翻译由 xiang_xge 于MCBBS上提供" Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 24 个Bug ，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -326,12 +322,77 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w43a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1272347-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w43a" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w44a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1274137-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w44a" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
+	</local:MyCard>
+
+	
+	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
+
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="被命名过的生物死亡会记录到日志。" />
+
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了42个Bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
 	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="MINECRAFT LIVE 2021 系列 - ALLAY 胜出！" CanSwap="True" IsSwaped="True">
@@ -415,73 +476,6 @@
 				</Border>
 			</Grid>
 			</Border>
-		</StackPanel>
-	</local:MyCard>
-
-	<!-- SEARCH BEGIN -->
-
-	
-	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_17/1_17_1/1-17-1-release-header.jpg" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.17.1" />
-			</Border>
-			<!--Detail-->
-			<TextBlock Text="更改" Style="{StaticResource h2}" />
-
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="蓝色美西螈现在只能通过繁育获得。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="非尖叫类型的山羊现在有一定几率繁育出尖叫山羊。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在在山羊跳跃或冲撞时也能向其施加状态效果。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="将溺尸掉落铜锭的概率提升为 11% + 2% * 抢夺等级。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="细雪现在在炼药锅的积累速度是原来的两倍（不过还是很慢！）。" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，僵尸村民，尸壳和溺尸现在不再会拾起荧光墨囊。" />
-
-			</StackPanel>
-
-			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-
-			<StackPanel Style="{StaticResource ListStyle}">
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="被命名过的生物死亡会记录到日志。" />
-
-			</StackPanel>
-
-			<TextBlock Text="该版本修复了42个Bug" Style="{StaticResource footnote}" />
-			<!--Logs-->
-
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
-				</Grid>
-			</GroupBox>
 		</StackPanel>
 	</local:MyCard>
 
@@ -1609,6 +1603,95 @@
 	</local:MyCard>
 
 	<!--BEGIN IsSwaped="True" -->
+
+	<local:MyCard Margin="0,0,0,15" Title="1w43a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w43a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w43a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W43A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w43a 的新增内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当你升级一个世界存档时，新旧世界的边缘过渡部分将被调整" />
+			</StackPanel>
+
+			<TextBlock Text="旧世界升级" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当生成的地形靠近旧区块时，新地形会被调整来适配旧世界的原有地形" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在旧世界区块中，如果y=0处是基岩，那么下方将会被填满深板岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在此快照中升级的世界将永久保留这个深板岩层，因此如果你想让旧区块高度小于0的地方能有洞穴生成的话，请在升级前做好备份。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧区块中y=0到y=4之间的基岩将会被替换为深板岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="y=-64的地方会生成新的基岩层" />
+			</StackPanel>
+
+
+			<TextBlock Text="21w43a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优先更新视频设置已重命名为 Chunk Builder" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了河流沿岸和海洋海岸线附近被淹没的洞穴数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层水位变化减少，因此会有更大的区域处于相同水位下。 这意味着地下瀑布会变少，使得在地下行船会轻松一些" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="岩浆含水层常见度降低" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="限制大垂滴叶只能放置在粘土、草方块、泥土、耕地、苔藓、含根泥土、灰化土和菌丝上" />
+			</StackPanel>
+
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="方块和流体滴落的一些内部细节已经修改来加快保存时间。虽然外表上好像没什么变化，但是你可以试着用你的红石装置测试一下（当然，记得在世界的副本或备份上做实验)" />
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="区块格式已被更新" />
+			</StackPanel>
+
+			<TextBlock Text="世界数据：区块格式" Style="{StaticResource h3}" />	
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="详见原文" />		
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 8 个Bug ，翻译由 xiang_xge 于MCBBS上提供" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w43a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1272347-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w43a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="21w42a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
