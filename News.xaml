@@ -246,74 +246,49 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 21w44a" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 1.18-pre1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w44a.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/pre1.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w44a.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/pre1.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W44A" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE1" />
 			</Border>
 			<!--Detail-->
-			<TextBlock Text="21w44a 的新增内容" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="旧世界高度的区块升级到新世界高度时，其Y=0以下会按新世界生成机制生成。" />
-			</StackPanel>
 
-			<TextBlock Text="选项" Style="{StaticResource h3}" />
+			<TextBlock Text="1.18-pre1 的修改内容" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的 “在线选项” 选项界面，位于原先主菜单上的 “Realms的通知” 选项以及多人游戏暂停菜单上的 “难度” 位置上。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="放大化世界和巨型生物群系世界适应了新的地形，现在它们重新回到了创建世界菜单中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从世界创建菜单中删除了世界类型“洞穴”和“浮岛”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新旧地形间的过渡不再那么“突兀”了" />
 				<StackPanel Style="{StaticResource ListStyle}">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="“Realms的通知” 被移入此界面。" />
-
+					<TextBlock Style="{StaticResource ListItem}" Text="地表高度过渡？有！" />
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了“允许列入服务器玩家列表”选项，用于设置是否允许服务器将自己的ID公开展示在在线玩家列表中。" />
-
+					<TextBlock Style="{StaticResource ListItem}" Text="生物群系过渡？当然！" />
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了“服务器难度”，用于显示当前的服务器难度。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="洞穴系统过渡？这个要视情况而定..." />
 				</StackPanel>
-			</StackPanel>
 
-			<TextBlock Text="server.properties" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了hide-online-players，用于服务端收到客户端的状态请求时是否发送在线玩家列表。" />
-			</StackPanel>
-
-
-			<TextBlock Text="21w43a 的修改内容" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="将主世界的所有50种生物群系都列入了进度探索的时光的达成要求中" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="睡觉现在只会在下雨时重置天气变化过程" />
 			</StackPanel>
 
 
 			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在当JFR分析从外部来源启动时，网络封包有关的JFR事件会被合并在一起，而不是一个封包对应一个事件" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在方块和液体也会受到模拟距离的控制" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="将模拟距离选项的最小值从2个区块上调到5个区块" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="优化了实体碰撞。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="--report 数据生成器中的选项现在创建完整的worldgen参考文件，而不仅仅是生物群系" />
 			</StackPanel>
 
-			<TextBlock Text="该版本修复了 24 个Bug ，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 45 个Bug ，本文来源于 Aurora_Feather 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -322,9 +297,9 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w44a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1274137-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w44a" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1275943-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-1" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
@@ -1604,7 +1579,91 @@
 
 	<!--BEGIN IsSwaped="True" -->
 
-	<local:MyCard Margin="0,0,0,15" Title="1w43a" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="21w44a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/21w44a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/21w44a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W44A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w44a 的新增内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧世界高度的区块升级到新世界高度时，其Y=0以下会按新世界生成机制生成。" />
+			</StackPanel>
+
+			<TextBlock Text="选项" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的 “在线选项” 选项界面，位于原先主菜单上的 “Realms的通知” 选项以及多人游戏暂停菜单上的 “难度” 位置上。" />
+				<StackPanel Style="{StaticResource ListStyle}">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="“Realms的通知” 被移入此界面。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“允许列入服务器玩家列表”选项，用于设置是否允许服务器将自己的ID公开展示在在线玩家列表中。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“服务器难度”，用于显示当前的服务器难度。" />
+				</StackPanel>
+			</StackPanel>
+
+			<TextBlock Text="server.properties" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了hide-online-players，用于服务端收到客户端的状态请求时是否发送在线玩家列表。" />
+			</StackPanel>
+
+
+			<TextBlock Text="21w44a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将主世界的所有50种生物群系都列入了进度探索的时光的达成要求中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="睡觉现在只会在下雨时重置天气变化过程" />
+			</StackPanel>
+
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在当JFR分析从外部来源启动时，网络封包有关的JFR事件会被合并在一起，而不是一个封包对应一个事件" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在方块和液体也会受到模拟距离的控制" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将模拟距离选项的最小值从2个区块上调到5个区块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优化了实体碰撞。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 24 个Bug ，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w44a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1274137-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w44a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w43a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -1887,10 +1946,10 @@
 
 				<StackPanel Style="{StaticResource ListStyle}">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="举个例子，添加了更多的非暴露钻石矿" />
+					<TextBlock Style="{StaticResource ListItem}" Text="举个例子，添加了更多的非暴露的钻石矿" />
 
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="铁矿石也能生成在y=80以上了，且挖的更高铁矿更多" />
+					<TextBlock Style="{StaticResource ListItem}" Text="铁矿石也能生成在y=80以上了，且挖的地方更高铁矿更多" />
 
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="更多金矿生成于y=-48以下" />
