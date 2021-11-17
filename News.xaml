@@ -20,7 +20,7 @@
      									          \/_/             \_/__/         
 	**PCL2新闻主页**
 	By： Light Beacon（最亮的信标）
-	订阅地址：http://news.lightbeacon.top
+	订阅地址：http://news.bugjump.net 或 http://news.lightbeacon.top
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
 	协议：CC BY-NC-SA 3.0
 -->
@@ -217,7 +217,7 @@
 					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作并更新！
 		</TextBlock>
 			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-					📰 你知道新闻主页的地址已经改成更好记的“http://news.lightbeacon.top”了吗？（兼容旧地址）。
+					📰 新闻主页快要过他的一岁生日了！
 		</TextBlock>
 		</Grid>
 	</Border>
@@ -246,49 +246,27 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 1.18-pre1" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 1.18-pre2" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/pre1.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/pre2.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/pre1.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/pre2.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE1" />
 			</Border>
 			<!--Detail-->
-
-			<TextBlock Text="1.18-pre1 的修改内容" Style="{StaticResource h2}" />
+			<TextBlock Text="⚠务必注意：从此版本开始 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-pre2 的技术性修改" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="放大化世界和巨型生物群系世界适应了新的地形，现在它们重新回到了创建世界菜单中" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="从世界创建菜单中删除了世界类型“洞穴”和“浮岛”" />
-
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新旧地形间的过渡不再那么“突兀”了" />
-				<StackPanel Style="{StaticResource ListStyle}">
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="地表高度过渡？有！" />
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="生物群系过渡？当然！" />
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="洞穴系统过渡？这个要视情况而定..." />
-				</StackPanel>
-
+				<TextBlock Style="{StaticResource ListItem}" Text="最低需求Java版本由16升至17。" />
 			</StackPanel>
 
-
-			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="--report 数据生成器中的选项现在创建完整的worldgen参考文件，而不仅仅是生物群系" />
-			</StackPanel>
-
-			<TextBlock Text="该版本修复了 45 个Bug ，本文来源于 Aurora_Feather 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 43 个Bug " Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -297,9 +275,9 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre1" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1275943-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-1" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277170-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
@@ -1578,6 +1556,64 @@
 	</local:MyCard>
 
 	<!--BEGIN IsSwaped="True" -->
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/pre1.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/pre1.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}" >
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE1" />
+			</Border>
+			<!--Detail-->
+
+			<TextBlock Text="1.18-pre1 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="放大化世界和巨型生物群系世界适应了新的地形，现在它们重新回到了创建世界菜单中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从世界创建菜单中删除了世界类型“洞穴”和“浮岛”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新旧地形间的过渡不再那么“突兀”了" />
+				<StackPanel Style="{StaticResource ListStyle}">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="地表高度过渡？有！" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="生物群系过渡？当然！" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="洞穴系统过渡？这个要视情况而定..." />
+				</StackPanel>
+
+			</StackPanel>
+
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="--report 数据生成器中的选项现在创建完整的worldgen参考文件，而不仅仅是生物群系" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 45 个Bug ，本文来源于 Aurora_Feather 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1275943-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="21w44a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
@@ -3533,7 +3569,12 @@
 
 		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
 			<TextBlock Text="订阅地址:  " />
-			<local:MyTextButton Text="http://news.lightbeacon.top" EventType="复制文本" EventData="http://news.lightbeacon.top" ToolTip="点击复制到剪贴板" />
+			<local:MyTextButton Text="http://news.bugjump.net" EventType="复制文本" EventData="http://news.bugjump.net" ToolTip="点击复制到剪贴板" />
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+			<TextBlock Text="官方网站:  " />
+			<local:MyTextButton Text="http://news.bugjump.net" EventType="打开网页" EventData="http://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
 		</StackPanel>
 
 		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
