@@ -246,7 +246,7 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 1.18-pre2" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 1.18-pre3\4" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -256,17 +256,17 @@
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/pre2.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE2" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE4" />
 			</Border>
 			<!--Detail-->
-			<TextBlock Text="⚠务必注意：从此版本开始 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
-			<TextBlock Text="1.18-pre2 的技术性修改" Style="{StaticResource h2}" />
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-pre3 的技术性修改" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="最低需求Java版本由16升至17。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在启动服务端server.jar时指定了空的bundlerMainClass属性时，服务端会只校验并解压文件，然后退出。" />
 			</StackPanel>
 
-			<TextBlock Text="该版本修复了 43 个Bug " Style="{StaticResource footnote}" />
+			<TextBlock Text="pre3修复了 18 个Bug, pre4修复了 4 个Bug, 本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -275,7 +275,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre3" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277170-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
 				</Grid>
@@ -1556,6 +1556,44 @@
 	</local:MyCard>
 
 	<!--BEGIN IsSwaped="True" -->
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre2" CanSwap="True" BEGIN IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/pre2.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/pre2.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：从此版本开始 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-pre2 的技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最低需求Java版本由16升至17。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 43 个Bug " Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277170-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
 	<local:MyCard Margin="0,0,0,15" Title="1.18-pre1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
