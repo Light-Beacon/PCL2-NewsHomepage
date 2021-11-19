@@ -1557,7 +1557,7 @@
 
 	<!--BEGIN IsSwaped="True" -->
 
-	<local:MyCard Margin="0,0,0,15" Title="1.18-pre2" CanSwap="True" BEGIN IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre2" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -1577,7 +1577,7 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="最低需求Java版本由16升至17。" />
 			</StackPanel>
 
-			<TextBlock Text="该版本修复了 43 个Bug " Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 43 个Bug" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -3554,14 +3554,6 @@
 		<StackPanel Margin="40,40,30,20">
 			<TextBlock Margin="20,5,0,10" Text="新闻主页过时新闻太过冗长，预计PCL2支持在线获取帮助页后将部分过期快照迁移至帮助页。" />
 			<TextBlock Text="2021/3/25" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10" />
-		</StackPanel>
-	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="M‏‍‌‎﻿‍‍​‏‏‌‏‎‍‌​‏﻿‍‌‍‍‎​‏‏‌‍‌﻿﻿​‏‍‌‍‎‏‏​‏‏‌​﻿﻿﻿​‏‏‌​‍‎‏​﻿‏‎​﻿‎‍​﻿‎﻿​﻿‍‏​‏‏‌​‌‍‏​﻿‎‏​‍﻿‌​‍﻿﻿​﻿‌‏​﻿‌‎inecraft Crowdin新增文言文翻译" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="40,40,30,20">
-			<TextBlock Margin="20,5,0,10" Text="    文言文翻译已被加入Minecraft Crowdin，有望在未来版本加入到游戏中。" />
-			<Image Margin="0,0,10,0" Source="https://www.lightbeacon.top/news_image/news0001.png" HorizontalAlignment="Left" MaxWidth="600" />
-			<TextBlock Text="2021/1/22" FontSize="14" Foreground="#FF777777" Margin="0,10,0,10" />
 		</StackPanel>
 	</local:MyCard>-->
 	<!--News Ends-->
