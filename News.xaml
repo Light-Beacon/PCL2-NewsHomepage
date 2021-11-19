@@ -3602,7 +3602,7 @@
 			<local:MyTextButton Text="http://news.bugjump.net" EventType="复制文本" EventData="http://news.bugjump.net" ToolTip="点击复制到剪贴板" />
 		</StackPanel>
 
-		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
 			<TextBlock Text="官方网站:  " />
 			<local:MyTextButton Text="http://news.bugjump.net" EventType="打开网页" EventData="http://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
 		</StackPanel>
