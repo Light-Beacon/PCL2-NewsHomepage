@@ -3703,7 +3703,7 @@
 	<local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
 	<local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
 </StackPanel>
-<Border Background="#CCFFFFFF" Height="140" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+<Border Background="#CCFFFFFF" Height="160" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
 	<StackPanel Margin="40,15,0,10">
 		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
 		<TextBlock Text="By：最亮的信标（Light Beacon）" />
