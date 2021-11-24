@@ -3,7 +3,8 @@
 在PCL2中提供MC相关新闻的主页
 
 订阅地址： **`http://news.bugjump.net`**
-网站地址： **`http://news.bugjump.net`**
+
+网站地址： [http://news.bugjump.net](http://news.bugjump.net)
 
 授权协议：[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 
