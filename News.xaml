@@ -217,7 +217,7 @@
 					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作并更新！
 		</TextBlock>
 			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-					📰 新闻主页快要过他的一岁生日了！
+					📰 新闻主页一岁辣！
 		</TextBlock>
 		</Grid>
 	</Border>
@@ -230,7 +230,155 @@
 		</StackPanel>
 	</local:MyCard>
 
-
+	<local:MyCard Margin="0,0,0,15" Title="新闻主页一岁啦！" CanSwap="True">
+		<StackPanel Margin="30,50,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Viewbox Stretch="fill">
+					<Canvas Width="1200" Height="513">
+						<Canvas Canvas.Top="0.4" Width="1200" Height="513" ClipToBounds="True">
+							<!--Background-->
+							<Rectangle Width="1200" Height="513" Fill="#CFB661" />
+							<Rectangle Canvas.Left="944.55" Canvas.Top="315.05" Width="187" Height="187" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-30" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="20.47" Canvas.Top="283.04" Width="173" Height="173" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-26.000002" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="847.88" Canvas.Top="52.02" Width="159" Height="159" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="22" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="364.79" Canvas.Top="49.4" Width="162" Height="162" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="34.000004" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="1021.2" Canvas.Top="116.27" Width="103" Height="103" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-71" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="283.66" Canvas.Top="481.04" Width="99" Height="99" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-120" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="641.95" Canvas.Top="209" Width="120" Height="120" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-112" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="848.35" Canvas.Top="466.6" Width="137" Height="137" RadiusX="53" RadiusY="53" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-128.00002" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="513.7" Canvas.Top="443.76" Width="173" Height="173" RadiusX="53" RadiusY="53" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-76.99999" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="126.56" Canvas.Top="165.7" Width="100" Height="100" RadiusX="38" RadiusY="38" Fill="#C4AD5F">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-103.00001" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+						</Canvas>
+						<Canvas Canvas.Left="330" Canvas.Top="58" Width="540" Height="384.4" ClipToBounds="True">
+							<!--Cake-->
+							<Canvas.Effect>
+								<DropShadowEffect Color="#7F646464" Opacity="0.2	" BlurRadius="4" Direction="-45" ShadowDepth="5" />
+							</Canvas.Effect>
+							<Rectangle Canvas.Left="87" Canvas.Top="147.8" Width="64" Height="21" RadiusX="3" RadiusY="3" Fill="#CF6262" />
+							<Rectangle Canvas.Left="389" Canvas.Top="147.8" Width="64" Height="21" RadiusX="3" RadiusY="3" Fill="#CF6262" />
+							<Ellipse Canvas.Left="258" Width="24" Height="64" Fill="#C6CB846C" />
+							<Ellipse Canvas.Left="263" Canvas.Top="21.4" Width="14" Height="38" Fill="#D6CBAD6C" />
+							<Rectangle Canvas.Left="249" Canvas.Top="31.4" Width="42" Height="147" RadiusX="6" RadiusY="6" Fill="#5DA0A9" />
+							<Rectangle Canvas.Top="178.4" Width="540" Height="206" RadiusX="19" RadiusY="19" Fill="#A16B3F" />
+							<Rectangle Canvas.Top="171.4" Width="540" Height="207" RadiusX="19" RadiusY="19" Fill="#B67C4D" />
+							<Rectangle Canvas.Top="204.4" Width="87" Height="76" RadiusX="20" RadiusY="20" Fill="#C7C7C7" />
+							<Rectangle Canvas.Left="151" Canvas.Top="198.4" Width="87" Height="76" RadiusX="20" RadiusY="20" Fill="#C7C7C7" />
+							<Rectangle Canvas.Left="151" Canvas.Top="203.4" Width="87" Height="76" RadiusX="20" RadiusY="20" Fill="#C7C7C7" />
+							<Rectangle Canvas.Left="453" Canvas.Top="204.4" Width="87" Height="76" RadiusX="20" RadiusY="20" Fill="#C7C7C7" />
+							<Rectangle Canvas.Left="302" Canvas.Top="203.4" Width="87" Height="76" RadiusX="20" RadiusY="20" Fill="#C7C7C7" />
+							<Rectangle Canvas.Top="158.4" Width="540" Height="91" RadiusX="19" RadiusY="19" Fill="#D3D3D3" />
+							<Rectangle Canvas.Left="87" Canvas.Top="203.4" Width="64" Height="68" RadiusX="20" RadiusY="20" Fill="#B67C4D" />
+							<Rectangle Canvas.Left="238" Canvas.Top="207.4" Width="64" Height="68" RadiusX="20" RadiusY="20" Fill="#B67C4D" />
+							<Rectangle Canvas.Left="389" Canvas.Top="203.4" Width="64" Height="68" RadiusX="20" RadiusY="20" Fill="#B67C4D" />
+							<Rectangle Canvas.Top="203.4" Width="87" Height="68" RadiusX="20" RadiusY="20" Fill="#D3D3D3" />
+							<Rectangle Canvas.Left="151" Canvas.Top="203.4" Width="87" Height="68" RadiusX="20" RadiusY="20" Fill="#D3D3D3" />
+							<Rectangle Canvas.Left="302" Canvas.Top="204.4" Width="87" Height="68" RadiusX="20" RadiusY="20" Fill="#D3D3D3" />
+							<Rectangle Canvas.Left="453" Canvas.Top="208.4" Width="87" Height="68" RadiusX="20" RadiusY="20" Fill="#D3D3D3" />
+							<Rectangle Canvas.Left="245.65" Canvas.Top="65.03" Width="54" Height="7" RadiusX="3" RadiusY="3" Fill="#D3D3D3">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-33" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="246" Canvas.Top="91.4" Width="54" Height="7" RadiusX="3" RadiusY="3" Fill="#D3D3D3">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-33" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="246" Canvas.Top="116.41" Width="54" Height="7" RadiusX="3" RadiusY="3" Fill="#D3D3D3">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-33" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="246" Canvas.Top="142.81" Width="54" Height="7" RadiusX="3" RadiusY="3" Fill="#D3D3D3">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-33" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle Canvas.Left="246" Canvas.Top="171" Width="54" Height="7" RadiusX="3" RadiusY="3" Fill="#D3D3D3">
+								<Rectangle.RenderTransform>
+									<TransformGroup>
+										<RotateTransform Angle="-33" />
+									</TransformGroup>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+						</Canvas>
+					</Canvas>
+				</Viewbox>
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="BIRTHDAY" />
+			</Border>
+			<TextBlock Text="感谢大家一年以来的支持。" Margin="0,0,0,5" />
+		</StackPanel>
+	</local:MyCard>
 	
 	<!--Tmp News-->
 	<Grid Margin="0,0,0,15">
