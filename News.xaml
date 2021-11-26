@@ -20,6 +20,7 @@
      									          \/_/             \_/__/         
 	**PCL2新闻主页**
 	By： Light Beacon（最亮的信标）
+	维护：最亮的信标（Light Beacon）、空辰KC
 	订阅地址：http://news.bugjump.net 或 http://news.lightbeacon.top
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
 	协议：CC BY-NC-SA 3.0
@@ -214,7 +215,7 @@
 	<Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
 		<Grid Margin="10,0,0,0">
 			<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作并更新！
+					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作，空辰KC负责维护。
 		</TextBlock>
 			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
 					📰 新闻主页一岁辣！
@@ -223,10 +224,9 @@
 	</Border>
 	<!--Hints Ends-->
 
-	<local:MyCard Margin="0,0,0,15" Title="📢 咕咕提示" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="📢 关于近半年的维护工作" CanSwap="True">
 		<StackPanel Margin="30,50,30,20">
-			<TextBlock Text="实在抱歉，由于本人学业原因可能无法及时更新新闻主页。" Margin="0,0,0,5" />
-			<TextBlock Text="新闻主页最慢将会于新快照发布的36h内更新。" Margin="0,0,0,5" />
+			<TextBlock Text="由于本人要去参加高考，最近半年的维护工作主要由空辰KC负责。" Margin="0,0,0,5" />
 		</StackPanel>
 	</local:MyCard>
 
@@ -410,7 +410,7 @@
 			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
 
 
-			<TextBlock Text="该版本修复了1个bug，本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -3920,11 +3920,11 @@
 	<local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
 	<local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
 </StackPanel>
-<Border Background="#CCFFFFFF" Height="160" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+<Border Background="#CCFFFFFF" Height="180" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
 	<StackPanel Margin="40,15,0,10">
 		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
 		<TextBlock Text="By：最亮的信标（Light Beacon）" />
-
+		<TextBlock Text="维护：最亮的信标（Light Beacon）、空辰KC" />
 		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
 			<TextBlock Text="订阅地址:  " />
 			<local:MyTextButton Text="http://news.bugjump.net" EventType="复制文本" EventData="http://news.bugjump.net" ToolTip="点击复制到剪贴板" />
