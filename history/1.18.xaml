@@ -1,7 +1,7 @@
 <!-- 
-	**PCL2新闻主页存档（1.17）**
-	By： Light Beacon（最亮的信标）
-	订阅地址：http://news.lightbeacon.top
+	**PCL2新闻主页存档（1.18）**
+	By： Light Beacon（最亮的信标）嘿嘿嘿还有 空辰KC
+	订阅地址：http://news.bugjump.net
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
 	协议：CC BY-NC-SA 3.0
 -->
@@ -161,7 +161,7 @@
 	<!--Styles Ends-->
 	<!--Hints Starts-->
 	<!--Hints Ends-->
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用“http://news.lightbeacon.top”。" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用“http://news.bugjump.net”。" />
 
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
@@ -2345,7 +2345,7 @@
 
 			<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
 				<TextBlock Text="订阅地址:  " />
-				<local:MyTextButton Text="http://news.lightbeacon.top" EventType="复制文本" EventData="http://news.lightbeacon.top" ToolTip="点击复制到剪贴板" />
+				<local:MyTextButton Text="http://news.bugjump.net" EventType="复制文本" EventData="http://news.bugjump.net" ToolTip="点击复制到剪贴板" />
 			</StackPanel>
 
 			<StackPanel Orientation="Horizontal" Margin="0,2,0,0">

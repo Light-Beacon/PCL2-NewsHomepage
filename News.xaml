@@ -224,7 +224,7 @@
 	</Border>
 	<!--Hints Ends-->
 
-	<local:MyCard Margin="0,0,0,15" Title="📢 关于近半年的维护工作" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="📢 关于近半年的维护工作" CanSwap="True" IsSwaped="True">
 		<StackPanel Margin="30,50,30,20">
 			<TextBlock Text="由于本人要去参加高考，最近半年的维护工作主要由空辰KC负责。" Margin="0,0,0,5" />
 		</StackPanel>
