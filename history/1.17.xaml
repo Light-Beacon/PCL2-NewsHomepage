@@ -126,7 +126,7 @@
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
 		</Style>
-		
+
 		<!--footnote-->
 		<Style x:Key="footnote" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="14" />
@@ -152,7 +152,7 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.17.1" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="1.17.1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -217,7 +217,7 @@
 	</local:MyCard>
 
 
-	<local:MyCard Margin="0,0,0,15" Title="重大更新 - 1‌‎.17" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="1‌.17" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
