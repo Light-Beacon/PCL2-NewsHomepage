@@ -118,6 +118,15 @@
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
 		</Style>
 
+		<!--h4-->
+		<Style x:Key="h4" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="5,0,10,10" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+		</Style>
+		
 		<!--footnote-->
 		<Style x:Key="footnote" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="14" />
