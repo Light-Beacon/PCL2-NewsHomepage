@@ -230,7 +230,7 @@
 		</StackPanel>
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="新闻主页一岁啦！" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="新闻主页一岁啦！" CanSwap="True" IsSwaped="True" >
 		<StackPanel Margin="30,50,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Viewbox Stretch="fill">
