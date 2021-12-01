@@ -38,11 +38,15 @@
 			<Setter Property="FontSize" Value="16" />
 			<Setter Property="Foreground" Value="Black" />
 		</Style>
+		<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+			<Setter Property="Margin" Value="15,-15,5,15" />
+			<Setter Property="TextElement.FontSize" Value="20" />
+		</Style>
 		<Style x:Key="ListStyle" TargetType="StackPanel">
-			<Setter Property="Margin" Value="45,0,0,5" />
+			<Setter Property="Margin" Value="22,0,14,5" />
 		</Style>
 		<Style x:Key="Read" TargetType="local:MyButton">
-			<Setter Property="Margin" Value="0,0,10,0" />
+			<Setter Property="Margin" Value="0,0,5,5" />
 			<Setter Property="Height" Value="35" />
 			<Setter Property="Padding" Value="13,0,13,0" />
 			<Setter Property="EventType" Value="打开网页" />
@@ -52,15 +56,33 @@
 			<Setter Property="Text" Value="Minecraft Wiki" />
 			<!--<Setter Property="ColorType" Value="Highlight"/>-->
 		</Style>
+		<Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
+			<Setter Property="Grid.Row" Value="0"/>
+			<Setter Property="Grid.ColumnSpan" Value="3"/>
+		</Style>
 		<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
 			<Setter Property="Grid.Column" Value="1" />
 			<Setter Property="Text" Value="MCBBS" />
-			<!--temp
-			<Setter Property="IsEnabled" Value="False"/>-->
+		</Style>
+		<Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
+			<Setter Property="Grid.Column" Value="0" />
+			<Setter Property="Grid.Row" Value="1" />
 		</Style>
 		<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-			<Setter Property="Grid.Column" Value="2" />
+			<Setter Property="Grid.Column" Value="2"/>
 			<Setter Property="Text" Value="官网" />
+		</Style>
+		<Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
+			<Setter Property="Grid.Column" Value="1" />
+			<Setter Property="Grid.Row" Value="1" />
+		</Style>
+		<Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+			<Setter Property="Grid.Column" Value="3" />
+			<Setter Property="Text" Value="Reddit" />
+		</Style>
+		<Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
+			<Setter Property="Grid.Column" Value="2"/>
+			<Setter Property="Grid.Row" Value="1" />
 		</Style>
 
 		<Style x:Key="Code" TargetType="Border">
@@ -95,7 +117,7 @@
 		<Style x:Key="verTxtBdr" TargetType="Border">
 			<Setter Property="Margin" Value="0,-22,-1,0" />
 			<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-			<Setter Property="Width" Value="160" />
+			<Setter Property="Width" Value="180" />
 			<Setter Property="Height" Value="40" />
 			<Setter Property="CornerRadius" Value="5" />
 		</Style>
@@ -104,7 +126,7 @@
 		<Style x:Key="h2" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="28" />
 			<Setter Property="Padding" Value="15,5" />
-			<Setter Property="Margin" Value="5,15" />
+			<Setter Property="Margin" Value="5,15,5,10" />
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
 		</Style>
@@ -113,7 +135,7 @@
 		<Style x:Key="h3" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="20" />
 			<Setter Property="Padding" Value="30,0" />
-			<Setter Property="Margin" Value="10,0,10,10" />
+			<Setter Property="Margin" Value="-10,0,10,12" />
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
 		</Style>
@@ -139,7 +161,7 @@
 	<!--Styles Ends-->
 	<!--Hints Starts-->
 	<!--Hints Ends-->
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.17 历史版本的存档，使用新闻主页请用“http://news.lightbeacon.top”。存档页面年久失修，大部分图由于直接用的MC官网，现在Mojang给MC官网升级了一波防护导致图片获取失败...已知问题" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用“http://news.lightbeacon.top”。" />
 
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
