@@ -393,23 +393,64 @@
 	</Grid>
 
 	<!-- SEARCH BEGIN -->
-
-<local:MyCard Margin="0,0,0,15" Title="最新发布候选 - 1.18.1-rc2" CanSwap="True" >
+	
+<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌.18.1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1-rc1.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1-rc1.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1.png" Opacity="0" />
 			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-rc2" />
+			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1" />
 			</Border>
-			<!--Detail-->
-			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
 
-			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<local:MyButton Height="35" Margin="80,10" Text="点击下载 JDK 17" EventType="下载文件" EventData="https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip" ToolTip="下载 JDK 17" />
+            <StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					<Style x:Key="NameBdr" TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="0" />
+						<Setter Property="CornerRadius" Value="5,5,0,0" />
+						<Setter Property="Margin" Value="-2,-2,-2,2" />
+					</Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="修复了玩家在低带宽状态下连接服务器会导致超时的错误" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="世界的雾现在会在玩家距离更远的地方出现来提高远处地形的可见性" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="雾现在渲染为圆柱形体积，而不是球形体积" />
+				</StackPanel>
+
+			<TextBlock Text="该版本修复了 6 个Bug，部分文案来源于MCBBS。" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -418,15 +459,112 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-rc2" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1282804-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-release-candidate-1" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1283289-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-18-1" />
 				</Grid>
-			</GroupBox>	
-		</StackPanel>	
+			</GroupBox>
+
+		</StackPanel>
 	</local:MyCard>
-	
-<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌.18" CanSwap="True">
+
+	<local:MyCard Margin="0,0,0,15" Title="MINECRAFT LIVE 2021 系列 - ALLAY 胜出！" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="10,30,10,20">
+			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
+			<Grid UseLayoutRounding="True">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Border Background="#3D3D3F" Grid.Column="0" Margin="10" Padding="0,0,0,5" CornerRadius="5">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV1hb4y1Y72Q" EventType="打开网页" ToolTip="已被淘汰">
+					<Border Background="#666668" CornerRadius="5" Padding="10">
+					<StackPanel Margin="0,5">
+						<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/GLARE_OUT.png" Margin="1,1,1,6"/>
+						<TextBlock Text="GLARE" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+						<StackPanel Margin="5">
+						<TextBlock Text="  一种出现于暗处的悬浮生物。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<TextBlock Text="  全身呈黄绿色，且面部只露出双眼。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<TextBlock Text="  会飞向光照等级可支持怪物生成的区域，并逐渐变得暴躁，以警示玩家。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+						<Border BorderBrush="#DD3333" BorderThickness="4" Margin="-10,-300,0,-20" Height="70" Width="150">
+							<Border.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform />
+									<SkewTransform />
+									<RotateTransform Angle="-15" />
+									<TranslateTransform />
+								</TransformGroup>
+							</Border.RenderTransform>
+							<TextBlock Text="淘汰" HorizontalAlignment="Center" FontSize="44" Foreground="#DD3333" FontWeight="Bold" >	
+						</TextBlock>
+						</Border>
+						</StackPanel>
+					</StackPanel>
+					</Border>
+					</local:MyButton>
+				</Border>
+				<Border Background="#345894" Grid.Column="1" Margin="10" Padding="0,0,0,5" CornerRadius="5">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV1sq4y1d7St" EventType="打开网页" ToolTip="点击打开B站观看视频">
+					<Border Background="#4270BB" CornerRadius="5" Padding="10">
+						<StackPanel Margin="0,5">
+							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/ALLAY.png" Margin="1,1,1,6"/>
+							<TextBlock Text="ALLAY" Foreground="#192A47" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+							<StackPanel Margin="5">
+								<TextBlock Text="  一种小巧的蓝色飞行生物。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  会被音符盒的乐声吸引，也会随着音乐起舞。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  若玩家给出某种物品，它会前去寻找更多相同或相似的物品，并将其放在玩家附近的音符盒上。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							</StackPanel>
+						</StackPanel>
+					</Border>
+					</local:MyButton>
+				</Border>
+				<Border Background="#3D3D3F" Grid.Column="2" Margin="10" Padding="0,0,0,5" CornerRadius="5">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV15v41137jx" EventType="打开网页" ToolTip="已被淘汰">
+					<Border Background="#666668" CornerRadius="5" Padding="10">
+						<StackPanel Margin="0,5">
+							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/COPPER_GOLEM_OUT.png" Margin="1,1,1,6"/>
+							<TextBlock Text="铜傀儡" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+							<StackPanel Margin="5">
+							<TextBlock Text="  一种形似机器人的生物。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  随着时间推移会逐渐被氧化。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  会被被铜按钮所吸引，并随机按下铜按钮。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  若该生物胜出将同时加入铜按钮。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<Border BorderBrush="#DD3333" BorderThickness="4" Margin="-10,-300,0,-20" Height="70" Width="150">
+								<Border.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform />
+										<SkewTransform />
+										<RotateTransform Angle="-15" />
+										<TranslateTransform />
+									</TransformGroup>
+								</Border.RenderTransform>
+								<TextBlock Text="淘汰" HorizontalAlignment="Center" FontSize="44" Foreground="#DD3333" FontWeight="Bold" >	
+							</TextBlock>
+							</Border>
+							</StackPanel>
+						</StackPanel>
+					</Border>
+					</local:MyButton>
+				</Border>
+			</Grid>
+			</Border>
+		</StackPanel>
+	</local:MyCard>
+
+	<Grid Margin="0,0,0,15">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+		<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+	</Grid>
+
+	<!--BEGIN IsSwaped="True" -->
+	<local:MyCard Margin="0,0,0,15" Title="1‌.18" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -435,7 +573,7 @@
 				</Border.Background>
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/release_update/1_18.png" Opacity="0" />
 			</Border>
-			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+			<Border Style="{StaticResource verTxtBdr}">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18" />
 			</Border>
 
@@ -983,103 +1121,69 @@
 
 		</StackPanel>
 	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="MINECRAFT LIVE 2021 系列 - ALLAY 胜出！" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="10,30,10,20">
-			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
-			<Grid UseLayoutRounding="True">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="*"></ColumnDefinition>
-					<ColumnDefinition Width="*"></ColumnDefinition>
-					<ColumnDefinition Width="*"></ColumnDefinition>
-				</Grid.ColumnDefinitions>
-				<Border Background="#3D3D3F" Grid.Column="0" Margin="10" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://www.bilibili.com/video/BV1hb4y1Y72Q" EventType="打开网页" ToolTip="已被淘汰">
-					<Border Background="#666668" CornerRadius="5" Padding="10">
-					<StackPanel Margin="0,5">
-						<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/GLARE_OUT.png" Margin="1,1,1,6"/>
-						<TextBlock Text="GLARE" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-						<StackPanel Margin="5">
-						<TextBlock Text="  一种出现于暗处的悬浮生物。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-						<TextBlock Text="  全身呈黄绿色，且面部只露出双眼。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-						<TextBlock Text="  会飞向光照等级可支持怪物生成的区域，并逐渐变得暴躁，以警示玩家。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-						<Border BorderBrush="#DD3333" BorderThickness="4" Margin="-10,-300,0,-20" Height="70" Width="150">
-							<Border.RenderTransform>
-								<TransformGroup>
-									<ScaleTransform />
-									<SkewTransform />
-									<RotateTransform Angle="-15" />
-									<TranslateTransform />
-								</TransformGroup>
-							</Border.RenderTransform>
-							<TextBlock Text="淘汰" HorizontalAlignment="Center" FontSize="44" Foreground="#DD3333" FontWeight="Bold" >	
-						</TextBlock>
-						</Border>
-						</StackPanel>
-					</StackPanel>
-					</Border>
-					</local:MyButton>
-				</Border>
-				<Border Background="#345894" Grid.Column="1" Margin="10" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://www.bilibili.com/video/BV1sq4y1d7St" EventType="打开网页" ToolTip="点击打开B站观看视频">
-					<Border Background="#4270BB" CornerRadius="5" Padding="10">
-						<StackPanel Margin="0,5">
-							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/ALLAY.png" Margin="1,1,1,6"/>
-							<TextBlock Text="ALLAY" Foreground="#192A47" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-							<StackPanel Margin="5">
-								<TextBlock Text="  一种小巧的蓝色飞行生物。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-								<TextBlock Text="  会被音符盒的乐声吸引，也会随着音乐起舞。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-								<TextBlock Text="  若玩家给出某种物品，它会前去寻找更多相同或相似的物品，并将其放在玩家附近的音符盒上。" Foreground="#192A47" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							</StackPanel>
-						</StackPanel>
-					</Border>
-					</local:MyButton>
-				</Border>
-				<Border Background="#3D3D3F" Grid.Column="2" Margin="10" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://www.bilibili.com/video/BV15v41137jx" EventType="打开网页" ToolTip="已被淘汰">
-					<Border Background="#666668" CornerRadius="5" Padding="10">
-						<StackPanel Margin="0,5">
-							<Image Source="https://www.lightbeacon.top/pnh/newimgs/MCL/2021/COPPER_GOLEM_OUT.png" Margin="1,1,1,6"/>
-							<TextBlock Text="铜傀儡" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-							<StackPanel Margin="5">
-							<TextBlock Text="  一种形似机器人的生物。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  随着时间推移会逐渐被氧化。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  会被被铜按钮所吸引，并随机按下铜按钮。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  若该生物胜出将同时加入铜按钮。" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<Border BorderBrush="#DD3333" BorderThickness="4" Margin="-10,-300,0,-20" Height="70" Width="150">
-								<Border.RenderTransform>
-									<TransformGroup>
-										<ScaleTransform />
-										<SkewTransform />
-										<RotateTransform Angle="-15" />
-										<TranslateTransform />
-									</TransformGroup>
-								</Border.RenderTransform>
-								<TextBlock Text="淘汰" HorizontalAlignment="Center" FontSize="44" Foreground="#DD3333" FontWeight="Bold" >	
-							</TextBlock>
-							</Border>
-							</StackPanel>
-						</StackPanel>
-					</Border>
-					</local:MyButton>
-				</Border>
-			</Grid>
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1-rc3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1-rc1.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1-rc1.jpg" Opacity="0" />
 			</Border>
-		</StackPanel>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-rc3" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了一个严重的安全问题" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-rc3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1283167-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
 	</local:MyCard>
+	
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1-rc2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1-rc1.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.1-rc1.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-rc2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
 
-	<Grid Margin="0,0,0,15">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-			<ColumnDefinition Width="100"></ColumnDefinition>
-			<ColumnDefinition Width="1*"></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-		<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-	</Grid>
-
-	<!--BEGIN IsSwaped="True" -->
+			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-rc2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1282804-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="1.18.1-rc1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
