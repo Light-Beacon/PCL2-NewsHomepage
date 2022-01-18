@@ -229,12 +229,6 @@
 			<TextBlock Text="由于本人要去参加高考，最近半年的维护工作主要由空辰KC负责。" Margin="0,0,0,5" />
 		</StackPanel>
 	</local:MyCard>
-
-	<local:MyCard Margin="0,0,0,15" Title="📢 新闻主页已完全支持SSL" CanSwap="True" >
-		<StackPanel Margin="30,50,30,20">
-			<TextBlock Text="现在可以用https协议浏览新闻主页辣（把自动更新链接的http后边加个s就行）。" Margin="0,0,0,5" />
-		</StackPanel>
-	</local:MyCard>
 	
 	<!--Tmp News-->
 	<Grid Margin="0,0,0,15">
@@ -249,6 +243,12 @@
 	</Grid>
 
 	<!-- SEARCH BEGIN -->
+
+	<local:MyCard Margin="0,0,0,15" Title="喜报！MOJANG 的服务器炸了（已修复）" CanSwap="True" >
+		<StackPanel Margin="30,50,30,20">
+			<TextBlock Text="由于 MOJANG 进行后台维护更新，导致 Minecraft 和 Minecraft Dungeons 的服务受到影响，会出现玩家无法登录的情况。现已修复完毕。" Margin="0,0,0,5" />
+		</StackPanel>
+	</local:MyCard>
 	
 <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌.18.1" CanSwap="True">
 		<!--Header-->
