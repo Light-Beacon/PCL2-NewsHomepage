@@ -244,13 +244,13 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="多人游戏受到影响（已修复）" CanSwap="True" >
+	<local:MyCard Margin="0,0,0,15" Title="多人游戏受到影响（已修复）" CanSwap="True" IsSwaped="True">
 		<StackPanel Margin="30,50,30,20">
 			<TextBlock Text="由于 MOJANG 进行后台维护更新，Minecraft 和 Minecraft Dungeons 的服务受到影响，导致玩家可能无法正常进入服务器。现已修复完毕。" Margin="0,0,0,5" />
 		</StackPanel>
 	</local:MyCard>
 	
-<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌.18.1" CanSwap="True">
+<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.18.1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
