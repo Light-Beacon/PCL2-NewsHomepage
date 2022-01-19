@@ -244,10 +244,53 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="多人游戏受到影响（已修复）" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="30,50,30,20">
-			<TextBlock Text="由于 MOJANG 进行后台维护更新，Minecraft 和 Minecraft Dungeons 的服务受到影响，导致玩家可能无法正常进入服务器。现已修复完毕。" Margin="0,0,0,5" />
-		</StackPanel>
+	<local:MyCard Margin="0,0,0,15" Title="最新快照版 - 22w03a" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/22w03a.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/22w03a.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w03a" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="22w03a 的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="种子“0”不再被当作特殊情况处理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在会自动去除在输入的种子之前/之后的多余空格" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="末影箱在圣诞节期间不会再呈现礼品盒纹理" />
+			</StackPanel>
+
+			<TextBlock Text="22w03a 的技术性更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="locate 命令现在可以使用命名空间 ID 参数" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增命令：placefeature" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 43 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w03a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1295048-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w03a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
 	</local:MyCard>
 	
 <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.18.1" CanSwap="True">
