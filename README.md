@@ -6,7 +6,7 @@
 
 网站地址： [https://news.bugjump.net](https://news.bugjump.net)
 
-授权协议：[CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+授权协议：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## 使用
 

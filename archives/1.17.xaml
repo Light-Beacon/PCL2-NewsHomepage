@@ -3,7 +3,7 @@
 	By： Light Beacon（最亮的信标）
 	订阅地址：https://news.bugjump.net
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
-	协议：CC BY-NC-SA 3.0
+	License (协议)：CC BY-NC-SA 4.0
 -->
 
 <StackPanel Margin="0,-10,0,0" Opacity="{Binding Path=Value,ElementName=OpacitySlider}">
@@ -3654,7 +3654,7 @@
 
 			<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
 				<TextBlock Text="无特殊声明本主页采用 " />
-				<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ " />
+				<local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
 				<TextBlock Text=" 授权。" />
 			</StackPanel>
 		</StackPanel>

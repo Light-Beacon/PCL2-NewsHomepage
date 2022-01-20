@@ -1,7 +1,7 @@
 
 <!--
-	 	     ___       ___                                                  
-     		    /\_ \    /'___`\                                                
+	 	              ___       ___                                                  
+     		         /\_ \    /'___`\                                                
        _____     ___\//\ \  /\_\ /\ \       ___      __   __  __  __    ____      
      /\ '__`\  /'___\\ \ \ \/_/// /__     /' _ `\  /'__`\/\ \/\ \/\ \  /',__\     
      \ \ \L\ \/\ \__/ \_\ \_  // /_\ \    /\ \/\ \/\  __/\ \ \_/ \_/ \/\__, `\    
@@ -16,14 +16,14 @@
        \ \ \ \ \/\ \L\ \/\ \/\ \/\ \/\  __/    \ \ \L\ \/\ \L\.\_/\ \L\ \/\  __/  
         \ \_\ \_\ \____/\ \_\ \_\ \_\ \____\    \ \ ,__/\ \__/.\_\ \____ \ \____\ 
          \/_/\/_/\/___/  \/_/\/_/\/_/\/____/     \ \ \/  \/__/\/_/\/___L\ \/____/  
-     						  \ \_\             /\____/        
-     					           \/_/             \_/__/         
+     					         				  \ \_\             /\____/        
+     					       				       \/_/             \_/__/         
 	**PCL2新闻主页**
 	By： Light Beacon（最亮的信标）
 	维护：最亮的信标（Light Beacon）、空辰KC
 	订阅地址：http://news.bugjump.net 或 http://news.lightbeacon.top
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
-	协议：CC BY-NC-SA 3.0
+	协议：CC BY-NC-SA 4.0
 -->
 
 <StackPanel Margin="0,-10,0,0" Opacity="{Binding Path=Value,ElementName=OpacitySlider}">
@@ -1293,7 +1293,7 @@
 
 		<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
 			<TextBlock Text="无特殊声明本主页采用 " />
-			<local:MyTextButton Text="CC BY-NC-SA 3.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/ " />
+			<local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
 			<TextBlock Text=" 授权。" />
 		</StackPanel>
 	</StackPanel>
