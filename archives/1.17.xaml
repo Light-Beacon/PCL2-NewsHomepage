@@ -139,7 +139,7 @@
 	<!--Styles Ends-->
 	<!--Hints Starts-->
 	<!--Hints Ends-->
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.17 历史版本的存档，使用新闻主页请用“https://news.bugjump.net”。存档页面年久失修，大部分图由于直接用的MC官网，现在Mojang给MC官网升级了一波防护导致图片获取失败...已知问题" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.17 历史版本的存档，使用新闻主页请用“https://news.bugjump.net”。存档页面年久失修，大部分图由于来源于 Minecraft 官网，现在 Mojang 给 Minecraft 官网升级了一波防护导致图片获取失败...已知问题" />
 
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
