@@ -215,7 +215,7 @@
 	<Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
 		<Grid Margin="10,0,0,0">
 			<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-					🧨 祝大家新年快乐！
+					🎇 祝大家新年快乐！
 		</TextBlock>
 			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
 					📰 欢迎使用新闻主页！由 Light Beacon （最亮的信标）制作，空辰KC负责维护。
@@ -227,6 +227,12 @@
 	<local:MyCard Margin="0,0,0,15" Title="📢 关于近半年的维护工作" CanSwap="True" IsSwaped="True">
 		<StackPanel Margin="30,50,30,20">
 			<TextBlock Text="由于本人要去参加高考，最近半年的维护工作主要由空辰KC负责。" Margin="0,0,0,5" />
+		</StackPanel>
+	</local:MyCard>
+	
+	<local:MyCard Margin="0,0,0,15" Title="新年快乐" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="30,50,30,20">
+			<TextBlock Text="乐乐乐乐乐乐乐————" Margin="0,0,0,5" />
 		</StackPanel>
 	</local:MyCard>
 	
