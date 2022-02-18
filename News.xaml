@@ -250,6 +250,229 @@
 
 	<!-- SEARCH BEGIN -->
 
+	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - Deep Dark Experimental Snapshot 1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/deepdark1.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deepdark1.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="Deep Dark Experimental Snapshot 1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：实验性快照只能打开当前版本创建的存档，请务必新建存档游玩！" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<local:MyButton Height="35" Margin="80,10" Text="点击下载实验性快照压缩包" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/b1e589c1d6ed73519797214bc796e53f5429ac46/1_19_deep_dark_experimental_snapshot-1.zip" ToolTip="下载 ZIP" />
+			<local:MyButton Height="35" Margin="80,10" Text="Java 版实验性快照游玩指导（MCBBS）" EventType="前往mcbbs" EventData="https://www.mcbbs.net/thread-1306425-1-1.html" ToolTip="实验性快照游玩指导" />
+			<StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					<Style x:Key="NameBdr" TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="0" />
+						<Setter Property="CornerRadius" Value="5,5,0,0" />
+						<Setter Property="Margin" Value="-2,-2,-2,2" />
+					</Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="新内容" Style="{StaticResource h2}" />
+				<TextBlock Text="方块" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Reinforced Deepslate（暂未确认译名）" />
+								</Border>
+								<Image Source="" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Sculk">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Sculk（暂未确认译名）" />
+								</Border>
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Sculk_BE1.gif" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Sculk_Catalyst">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Sculk Catalyst（暂未确认译名）" />
+								</Border>
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Sculk_Catalyst_BE1.gif" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Sculk_Sherieker">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Sculk Shrieker（暂未确认译名）" />
+								</Border>
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Sculk_Shrieker_BE1.gif" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Sculk_Vein">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Sculk Vein（暂未确认译名）" />
+								</Border>
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Sculk_Vein_BE1.gif" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+				<TextBlock Text="物品" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E5%88%B7%E6%80%AA%E8%9B%8B">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="刷怪蛋（Warden）" />
+								</Border>
+								<Image Source="" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+				<TextBlock Text="生物" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Warden（暂未确认译名）" />
+								</Border>
+								<Image Source="" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+
+				<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该结构" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Ancient City（暂未确认译名）" />
+								</Border>
+								<Image Source="" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="Deep Dark（暂未确认译名）" />
+								</Border>
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/release_update/aquifer.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+				</WrapPanel>
+
+				<TextBlock Text="游戏内容" Style="{StaticResource h3}" />
+				<TextBlock Text="附魔" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了 Swift Sneak 魔咒（暂未确认译名）" />
+				</StackPanel>
+				<TextBlock Text="状态效果" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了黑暗效果" />
+				</StackPanel>
+
+				<TextBlock Text="常规" Style="{StaticResource h3}" />
+				<TextBlock Text="选项" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了新的辅助功能选项“Darkness Effect”（暂未确认译名）" />
+				</StackPanel>
+
+			</StackPanel>
+			<TextBlock Text="本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/a-very-scary-snapshot" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
 	<local:MyCard Margin="0,0,0,15" Title="最新快照版 - 22w07a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
