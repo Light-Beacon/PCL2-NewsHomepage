@@ -250,6 +250,75 @@
 
 	<!-- SEARCH BEGIN -->
 
+
+	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.18.2-pre1" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre1.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre1.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18.2-pre1 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在32位环境中运行Minecraft的用户将在主菜单中收到32位环境即将结束支持的警告。" />
+			</StackPanel>
+			<TextBlock Text="1.18.2-pre1 的技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="数据包的版本现在为9。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在可以在实验性数据包中添加自定义结构了。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="locate 和 locatebiome 命令现在支持标签 (以#为前缀，以区别于正常的ID)。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="locate 命令的参数现在是一个配置的结构，而不是一个结构类型。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在很多的洞穴生成可以通过数据包进行配置" />
+			</StackPanel>
+			<TextBlock Text="可配置的山洞生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为密度功能增加了一个新的注册表（洞穴是由这些功能组合而成的）。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声设置有了一个新的字段noise_router（并移除了几个标志）。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声路由器将洞穴生成的数据驱动部分与代码的其他部分连接起来。" />
+			</StackPanel>
+			<TextBlock Text="配置好的结构和结构组合" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="实验性数据包可以增加新的结构组合。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="位置谓词中的feature字段现在引用了配置的地物。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="exploration_map 战利品表函数的destination字段现在是一个配置的地物标签ID。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="exploration_map战利品表函数不再自动设置地图的显示名称。" />
+			</StackPanel>
+			<TextBlock Text="副作用" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="海豚现在会更准确地选择最近的结构，而不考虑其类型。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="堡垒遗迹的边界现在与结构的形状更为精确了一点。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 7 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1306738-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+	
+
 	<local:MyCard Margin="0,0,0,15" Title="最新实验性快照 - Deep Dark Experimental Snapshot 1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
@@ -310,7 +379,7 @@
 								<Border Style="{StaticResource NameBdr}">
 									<TextBlock Text="Reinforced Deepslate（暂未确认译名）" />
 								</Border>
-								<Image Source="" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Reinforced_Deepslate_JE1.png" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
@@ -332,7 +401,7 @@
 								<Border Style="{StaticResource NameBdr}">
 									<TextBlock Text="Sculk Catalyst（暂未确认译名）" />
 								</Border>
-								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Sculk_Catalyst_BE1.gif" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Sculk_Catalyst_Bloom_BE1.gif" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
@@ -462,51 +531,17 @@
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
 					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1306497-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/a-very-scary-snapshot" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照版 - 22w07a" CanSwap="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-			<Border Style="{StaticResource verImgBdr}">
-				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/22w07a.png" Stretch="Uniform" />
-				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/22w07a.png" Opacity="0" />
-			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w07a" />
-			</Border>
-			<!--Detail-->
-			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
-			<TextBlock Text="22w07a 的技术性更新" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“生物群系标签”现在被用于确定结构可以在哪些生物群系中生成。" />
-			</StackPanel>
-			<TextBlock Text="该版本修复了 9 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w07a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1306053-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w07a" />
-				</Grid>
-			</GroupBox>	
-		</StackPanel>	
-	</local:MyCard>
-	
 <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.18.1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
@@ -1150,6 +1185,42 @@
 			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
 
 		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="22w07a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/22w07a.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/22w07a.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w07a" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="22w07a 的技术性更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“生物群系标签”现在被用于确定结构可以在哪些生物群系中生成。" />
+			</StackPanel>
+			<TextBlock Text="该版本修复了 9 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w07a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1306053-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w07a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
 	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="22w06a" CanSwap="True" IsSwaped="True">
