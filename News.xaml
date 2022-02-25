@@ -338,7 +338,7 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Reinforced_Deepslate">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -409,7 +409,7 @@
 								<Border Style="{StaticResource NameBdr}">
 									<TextBlock Text="刷怪蛋（Warden）" />
 								</Border>
-								<Image Source="" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Warden_Spawn_Egg.png" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
@@ -424,7 +424,7 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Warden">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -446,7 +446,7 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Ancient_City">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -457,7 +457,7 @@
 						</Border>
 					</local:MyButton>
 
-                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88Deep_Dark_Experimental_Snapshot_1">
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Deep_Dark">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1221,7 +1221,7 @@
 		</StackPanel>	
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.18.2-pre1" CanSwap="True" IsSwaped="True">
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-pre1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
