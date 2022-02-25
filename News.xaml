@@ -251,27 +251,22 @@
 	<!-- SEARCH BEGIN -->
 
 
-	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.18.2-pre2" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新预选版本 - 1.18.2-rc1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre2.png" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-rc1.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre2.png" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-rc1.png" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre2" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-rc1" />
 			</Border>
 			<!--Detail-->
 			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
-			<TextBlock Text="1.18.2-pre2 的新内容" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了样条密度函数：一种通用的放置方块的方法，可使用户通过其表达几乎所有的使用三次样条的函数。" />
-			</StackPanel>
 
-			<TextBlock Text="该版本修复了 5 个bug，本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 2 个bug" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -280,9 +275,9 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre2" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1307746-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-2" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1308811-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-release-candidate-1" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
@@ -435,7 +430,7 @@
 								<Border Style="{StaticResource NameBdr}">
 									<TextBlock Text="Warden（暂未确认译名）" />
 								</Border>
-								<Image Source="" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Warden.gif" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
@@ -457,7 +452,7 @@
 								<Border Style="{StaticResource NameBdr}">
 									<TextBlock Text="Ancient City（暂未确认译名）" />
 								</Border>
-								<Image Source="" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Ancient_City.png" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
@@ -468,7 +463,7 @@
 								<Border Style="{StaticResource NameBdr}">
 									<TextBlock Text="Deep Dark（暂未确认译名）" />
 								</Border>
-								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/release_update/aquifer.png" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/deep_dark_experimental_snapshot_1/Deep_Dark.png" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
@@ -1155,6 +1150,75 @@
 			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
 
 		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-pre3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre2.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre2.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre3" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了 7 个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1308327-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-pre2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre2.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/1.18.2-pre2.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18.2-pre2 的新内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了样条密度函数：一种通用的放置方块的方法，可使用户通过其表达几乎所有的使用三次样条的函数。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 5 个bug，本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1307746-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
 	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.18.2-pre1" CanSwap="True" IsSwaped="True">
