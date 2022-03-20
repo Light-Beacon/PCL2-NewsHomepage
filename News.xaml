@@ -263,9 +263,9 @@
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/22w11a.png" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/22w11a.jpg" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/22w11a.png" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/22w11a.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="Deep Dark" />
@@ -2232,7 +2232,7 @@
 			</Border>
 		</local:MyButton>
 	</Grid>
-	
+
 	<Grid Margin="10,10,10,40" Height="40" Width="300">
 		<Grid.Triggers>
 			<EventTrigger RoutedEvent="Loaded">
