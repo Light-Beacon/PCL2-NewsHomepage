@@ -321,7 +321,7 @@
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
-									<TextBlock Text="Warden 刷怪蛋" />
+									<TextBlock Text="监守者刷怪蛋" />
 								</Border>
 								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w12a/Warden_Spawn_Egg.png" />
 							</StackPanel>
@@ -338,13 +338,13 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Warden">
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/监守者">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
-									<TextBlock Text="Warden （暂未确认译名）" />
+									<TextBlock Text="监守者" />
 								</Border>
-								<Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/e/e6/Warden_JE1.gif/revision/latest/scale-to-width-down/375?cb=20210904045034" />
+								<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w12a/Warden.gif" />
 							</StackPanel>
 						</Border>
 					</local:MyButton>
