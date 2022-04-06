@@ -29,7 +29,7 @@
 
 	<!--Animations Starts-->
 	<StackPanel.Triggers>
-		<EventTrigger RoutedEvent="StackPanel.Loaded">
+		<!--<EventTrigger RoutedEvent="StackPanel.Loaded">
 			<BeginStoryboard>
 				<Storyboard>
 					<DoubleAnimation Storyboard.TargetName="verBorder" Storyboard.TargetProperty="Width" From="0" To="0" Duration="0:0:0.1" />
@@ -37,7 +37,7 @@
 					<DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="verBorder" Storyboard.TargetProperty="Width" From="200" To="180" Duration="0:0:0.1" />
 				</Storyboard>
 			</BeginStoryboard>
-		</EventTrigger>
+		</EventTrigger>-->
 		<EventTrigger RoutedEvent="StackPanel.Loaded">
 			<BeginStoryboard>
 				<Storyboard x:Name="animation1" RepeatBehavior="Forever">
