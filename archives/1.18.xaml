@@ -155,14 +155,14 @@
 			<Setter Property="Padding" Value="30,0" />
 			<Setter Property="Margin" Value="0,20,0,15" />
 			<Setter Property="Foreground" Value="#FF777777" />
-
+		</Style>
+		
 		<!--ButtonNameBorder-->
 		<Style x:Key="NameBdr" TargetType="Border">
 			<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
 			<Setter Property="BorderThickness" Value="0" />
 			<Setter Property="CornerRadius" Value="5,5,0,0" />
 			<Setter Property="Margin" Value="-2,-2,-2,2" />
-		</Style>
 		</Style>
 
 	</StackPanel.Resources>
