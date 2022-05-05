@@ -301,7 +301,7 @@
 					<TextBlock Style="{StaticResource ListItem}" Text="加入了 /place 命令，可以用来放置地物、拼图和结构" />
 				</StackPanel>
 
-				<TextBlock Text="更改" Style="{StaticResource h3}" />
+				<TextBlock Text="更改" Style="{StaticResource h2}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="现在悦灵会跟随无法看见的给予其物品的玩家。" />
