@@ -2179,6 +2179,12 @@
 	<!--News Ends-->
 
 
+	<local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="30,50,30,20">
+			<TextBlock Text="Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
+		</StackPanel>
+	</local:MyCard>
+	
 	<local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
 		<StackPanel Margin="30,40,30,10">
 			<TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
@@ -2188,12 +2194,6 @@
 			<Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
 				<TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
 			</Border>
-		</StackPanel>
-	</local:MyCard>
-	
-	<local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="30,50,30,20">
-			<TextBlock Text="Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
 		</StackPanel>
 	</local:MyCard>
 
