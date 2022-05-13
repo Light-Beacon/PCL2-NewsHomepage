@@ -343,8 +343,7 @@
 				<TextBlock Text="PLACE模板" Style="{StaticResource h4}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="place 命令现在还可以将模板放置在指定位置。用法：
-place template <template> [pos] [rotation] [mirror] [integrity] [seed]。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="place 命令现在还可以将模板放置在指定位置。" />
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="place template 现在的使用方式类似于在UI中使用结构方块的加载按钮。" />
 				</StackPanel>
