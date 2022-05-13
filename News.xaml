@@ -289,7 +289,7 @@
 					</Style>
 				</StackPanel.Resources>
 				<!--Details-->
-				<TextBlock Text="修改内容" Style="{StaticResource h}" />
+				<TextBlock Text="修改内容" Style="{StaticResource h2}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="监守者和铁傀儡现在只能在固体方块上生成" />
