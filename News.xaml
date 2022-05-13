@@ -251,17 +251,17 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 22w18a" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 22w19a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/22w18a.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/22w19a.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w18a.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w19a.png" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="22W18A" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22W19A" />
 			</Border>
 			<!--Detail-->
 			<StackPanel>
@@ -289,28 +289,79 @@
 					</Style>
 				</StackPanel.Resources>
 				<!--Details-->
-				<TextBlock Text="新内容" Style="{StaticResource h2}" />
+				<TextBlock Text="修改内容" Style="{StaticResource h}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了 /place 命令，可以用来放置地物、拼图和结构" />
+					<TextBlock Style="{StaticResource ListItem}" Text="监守者和铁傀儡现在只能在固体方块上生成" />
 				</StackPanel>
 
-				<TextBlock Text="更改" Style="{StaticResource h2}" />
+				<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="现在悦灵会跟随无法看见的给予其物品的玩家。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以启用聊天预览，这会在聊天框上显示一个受服务器控制的预览。" />
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="现在悦灵仅会在玩家64格外才不再跟随玩家。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="对locate和place命令的更改。" />
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="更改了“潜行100级”进度的描述。" />
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="/placefeature 合并到 /place 命令中" />
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以为客户端定义不同的聊天样式格式。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="Point of Interest tags" />
 				</StackPanel>
 
+				<TextBlock Text="聊天预览" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以在 server.properties 中设置 previews-chat=true 来启用聊天预览。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="当它启动后，聊天框上将出现一个受服务器控制的预览界面，显示消息发送时的样子。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="服务器里可以使用这个功能来预览消息，例如表情和彩色聊天" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="聊天预览会在你输入聊天消息时，甚至是发送之前将其发送给服务器" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="然后服务器将实时返回带样式的预览" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="这允许服务器使用动态消息样式，同时仍允许对聊天进行安全签名" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="当你使用聊天预览进入服务器的时候，客户端上将显示一个警告窗口，但你可以在“聊天设置”中完全禁用这个窗口" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="动态聊天的的样式可以有服务器决定，这只在启用聊天预览启动后才会生效" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="玩家可以在“聊天设置”中启用“仅显示已签名的聊天”来始终显示原始签名的消息" />
+				</StackPanel>
 			</StackPanel>
-			<TextBlock Text="该版本修复了 31 个bug，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+				<TextBlock Text="命令" Style="{StaticResource h3}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="添加了用于 place 命令的模板子命令。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="locate 命令移动到了 locate structure, locatebiome 移动到了 locate biome。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="添加了 locate poi <type: point_of_interest_type>" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="服务器现在还将在玩家连接后发送一个额外的图标和MOTD数据包" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="这允许设置 enable-status=false 的服务器给已上线的玩家设置图标和MOTD" />
+				</StackPanel>
+				<TextBlock Text="PLACE模板" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="place 命令现在还可以将模板放置在指定位置。用法：
+place template <template> [pos] [rotation] [mirror] [integrity] [seed]。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="place template 现在的使用方式类似于在UI中使用结构方块的加载按钮。" />
+				</StackPanel>
+			</StackPanel>
+				<TextBlock Text="兴趣点类型" Style="{StaticResource h3}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="移除了 unemployed 和 nitwit point_of_interest_type 标签。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="为所有没有职业的村民添加了 point_of_interest_type/acquirable_job_site 标签。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="为村庄中的兴趣点添加了 point_of_interest_type/village 标签。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="为蜜蜂的兴趣点添加了 point_of_interest_type/bee_home 标签。" />
+				</StackPanel>
+			</StackPanel>
+			<TextBlock Text="该版本修复了 25 个bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -319,9 +370,9 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w18a" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1335891-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-22w18a" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w19a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1338607-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-22w19a" />
 				</Grid>
 			</GroupBox>	
 		</StackPanel>	
@@ -465,6 +516,82 @@
 		<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
+
+		<local:MyCard Margin="0,0,0,15" Title="22w18a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/22w18a.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w18a.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22W18A" />
+			</Border>
+			<!--Detail-->
+			<StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="新内容" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了 /place 命令，可以用来放置地物、拼图和结构" />
+				</StackPanel>
+
+				<TextBlock Text="更改" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="现在悦灵会跟随无法看见的给予其物品的玩家。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="现在悦灵仅会在玩家64格外才不再跟随玩家。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="更改了“潜行100级”进度的描述。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="/placefeature 合并到 /place 命令中" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以为客户端定义不同的聊天样式格式。" />
+				</StackPanel>
+
+			</StackPanel>
+			<TextBlock Text="该版本修复了 31 个bug，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w18a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1335891-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-22w18a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="22w17a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
