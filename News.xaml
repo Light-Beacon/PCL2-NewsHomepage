@@ -302,7 +302,9 @@
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="添加游戏事件传送，带有5的振动频率" />
 				</StackPanel>
+			</StackPanel>	
 			<TextBlock Text="该版本修复了 55 个bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
+			
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
