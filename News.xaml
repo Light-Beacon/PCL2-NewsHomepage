@@ -20,7 +20,7 @@
 	**PCL2新闻主页**
 	By： Light Beacon（最亮的信标）
 	维护：最亮的信标（Light Beacon）、空辰KC
-	订阅地址：http://news.bugjump.net 或 http://news.lightbeacon.top
+	订阅地址：https://news.bugjump.net
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
 	协议：CC BY-NC-SA 4.0
 -->
@@ -222,7 +222,7 @@
 	<Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
 		<Grid Margin="10,0,0,0">
 			<TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-					🎂 Minecraft 13 岁了！
+					📰 新闻主页由 Light Beacon （最亮的信标）制作，空辰KC负责维护。
 		</TextBlock>
 			<TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
 					📰 如果您的账号未迁移且无法登录，请看新闻主页最下边的提示。
