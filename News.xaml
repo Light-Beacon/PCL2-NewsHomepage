@@ -251,7 +251,7 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新预览版 - 1.19-pre4" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新预览版 - 1.19-pre5" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -261,7 +261,7 @@
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE4" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE5" />
 			</Border>
 			<!--Detail-->
 			<StackPanel>
@@ -292,11 +292,11 @@
 				<TextBlock Text="修改内容" Style="{StaticResource h2}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="他们发了 pre-5 来修几个 bug。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="MOJANG发了 pre-5 来修几个 bug。(是谁又在水版本)" />
 				</StackPanel>
 				
 			</StackPanel>	
-			<TextBlock Text="该版本修复了 11 个bug，本文来源于 Minecraft Wiki " Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 11 个bug " Style="{StaticResource footnote}" />
 			
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
