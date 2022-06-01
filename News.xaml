@@ -251,17 +251,17 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新预览版 - 1.19-pre2、pre3" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新预览版 - 1.19-pre4" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre2.png" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre2.png" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE3" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE4" />
 			</Border>
 			<!--Detail-->
 			<StackPanel>
@@ -289,58 +289,26 @@
 					</Style>
 				</StackPanel.Resources>
 				<!--Details-->
-				<TextBlock Text="PRE-3 修改内容" Style="{StaticResource h2}" />
+				<TextBlock Text="新增内容" Style="{StaticResource h2}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="监守者的音波攻击现在会无视盔甲魔咒（如：保护）的减伤效果" />
-				</StackPanel>
-
-				<TextBlock Text="PRE-3 技术性修改" Style="{StaticResource h2}" />
-				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="item_interact_start 不再是一种可侦测的振动，这能让更多特定种类的动作能被检测，例如 drink 和 eat，但是 item_interact_finish 依然可被侦测" />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了马来语（爪夷文）。" />
 				</StackPanel>
 				
-				<TextBlock Text="PRE-2 修改内容" Style="{StaticResource h2}" />
-				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="如果监守者被卡在液体中，它会消失，而不是钻入地中" />
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="如果把方块装在头盔的位置，不再会播放穿上装备时的声音" />
-				</StackPanel>
-
-				<TextBlock Text="PRE-2 技术性修改" Style="{StaticResource h2}" />
-				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="添加游戏事件传送，带有5的振动频率" />
-				</StackPanel>
 			</StackPanel>	
-			<TextBlock Text="pre2 修复了 55 个bug，该部分来源于 满床迷离(MCBBS)" Style="{StaticResource footnote}" />
-			<TextBlock Text="pre3 修复了 18 个bug，该部分来源于 卡狗(MCBBS)" Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 6 个bug，本文来源于 Minecraft Wiki " Style="{StaticResource footnote}" />
 			
 			<!--Logs-->
-			<GroupBox Header="阅读完整日志(PRE2)" BorderBrush="{DynamicResource ColorBrush3}">
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="20*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre2" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1342922-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-2" />
-				</Grid>
-			</GroupBox>
-			<GroupBox Header="阅读完整日志(PRE3)" BorderBrush="{DynamicResource ColorBrush3}">
-				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="20*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-						<ColumnDefinition Width="10*"></ColumnDefinition>
-					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre3" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1343533-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-2" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1345543-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-4" />
 				</Grid>
 			</GroupBox>
 		</StackPanel>	
@@ -486,6 +454,100 @@
 	</Grid>
 
 
+	<local:MyCard Margin="0,0,0,15" Title="1.19-pre2、pre3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre2.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre2.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE3" />
+			</Border>
+			<!--Detail-->
+			<StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="PRE-3 修改内容" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="监守者的音波攻击现在会无视盔甲魔咒（如：保护）的减伤效果" />
+				</StackPanel>
+
+				<TextBlock Text="PRE-3 技术性修改" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="item_interact_start 不再是一种可侦测的振动，这能让更多特定种类的动作能被检测，例如 drink 和 eat，但是 item_interact_finish 依然可被侦测" />
+				</StackPanel>
+				
+				<TextBlock Text="PRE-2 修改内容" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="如果监守者被卡在液体中，它会消失，而不是钻入地中" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="如果把方块装在头盔的位置，不再会播放穿上装备时的声音" />
+				</StackPanel>
+
+				<TextBlock Text="PRE-2 技术性修改" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="添加游戏事件传送，带有5的振动频率" />
+				</StackPanel>
+			</StackPanel>	
+			<TextBlock Text="pre2 修复了 55 个bug，该部分来源于 满床迷离(MCBBS)" Style="{StaticResource footnote}" />
+			<TextBlock Text="pre3 修复了 18 个bug，该部分来源于 卡狗(MCBBS)" Style="{StaticResource footnote}" />
+			
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志(PRE2)" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1342922-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-2" />
+				</Grid>
+			</GroupBox>
+			<GroupBox Header="阅读完整日志(PRE3)" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1343533-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-2" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
 	<local:MyCard Margin="0,0,0,15" Title="1.19-pre1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
