@@ -251,17 +251,17 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新预览版 - 1.19-pre5" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新候选版本 - 1.19-rc1" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-rc1.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-rc1.png" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE5" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 RC1" />
 			</Border>
 			<!--Detail-->
 			<StackPanel>
@@ -289,14 +289,14 @@
 					</Style>
 				</StackPanel.Resources>
 				<!--Details-->
-				<TextBlock Text="修改内容" Style="{StaticResource h2}" />
+				<TextBlock Text="候选版本" Style="{StaticResource h2}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="MOJANG发了 pre-5 来修几个 bug。(是谁又在水版本)" />
+					<TextBlock Style="{StaticResource ListItem}" Text="MOJANG现在发布了（并且希望是唯一的）荒野更新的候选版本。如果这个版本没有重大问题，在发布正式版前将不会有更多的改变。" />
 				</StackPanel>
 				
 			</StackPanel>	
-			<TextBlock Text="该版本修复了 11 个bug " Style="{StaticResource footnote}" />
+			<TextBlock Text="该版本修复了 1 个bug，本文来源于 MCBBS " Style="{StaticResource footnote}" />
 			
 			<!--Logs-->
 			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
@@ -306,9 +306,9 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre5" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1346177-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-4" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1346517-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-release-candidate-1" />
 				</Grid>
 			</GroupBox>
 		</StackPanel>	
@@ -453,6 +453,68 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
+	<local:MyCard Margin="0,0,0,15" Title="1.19-pre5" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19-pre4.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19 PRE5" />
+			</Border>
+			<!--Detail-->
+			<StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="修改内容" Style="{StaticResource h2}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="MOJANG发了 pre-5 来修几个 bug。(是谁又在水版本)" />
+				</StackPanel>
+				
+			</StackPanel>	
+			<TextBlock Text="该版本修复了 11 个bug " Style="{StaticResource footnote}" />
+			
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-pre5" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1346177-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-pre-release-4" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
 	<local:MyCard Margin="0,0,0,15" Title="1.19-pre4" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
