@@ -270,9 +270,10 @@
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="在6月7日，Minecraft Java版和基岩版捆绑包 就要把两个版本的游戏放在一起卖了。物如其名，一次购买，你将能够通过这个捆绑包一起获得两个游戏，这也将会成为 Windows PC 上的标准版，且是唯一可用的原版 Minecraft。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="同时 1.19荒野更新 的正式版也会发布。"/>
 				</StackPanel>
 			</StackPanel>	
-			<TextBlock Text="本文来源于 MCBBS " Style="{StaticResource footnote}" />
 		</StackPanel>	
 	</local:MyCard>
 
