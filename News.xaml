@@ -237,6 +237,58 @@
 		</StackPanel>
 	</local:MyCard>
 	
+	<local:MyCard Margin="0,0,0,15" Title="Minecraft PC 捆绑包将于6月7日正式上线！" CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<!--Detail-->
+			<StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="在6月7日，Minecraft Java版和基岩版捆绑包 就要把两个版本的游戏放在一起卖了。物如其名，一次购买，你将能够通过这个捆绑包一起获得两个游戏，这也将会成为 Windows PC 上的标准版，且是唯一可用的原版 Minecraft。" />
+				
+			</StackPanel>	
+			<TextBlock Text="本文来源于 MCBBS " Style="{StaticResource footnote}" />
+		</StackPanel>	
+	</local:MyCard>
+			
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.19-rc2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1346871-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-release-candidate-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
 	<!--Tmp News-->
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
