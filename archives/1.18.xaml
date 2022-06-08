@@ -182,7 +182,122 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
-	
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_18/22w07a.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_18/22w07a.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="新内容 ＆ 更改" Style="{StaticResource h2}" />
+				<TextBlock Text="方块" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="末影箱现在不会在圣诞节期间使用圣诞礼物纹理。" />
+					</StackPanel>
+				<TextBlock Text="生物" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="海豚会更准确地选择离其最近的结构，而无论结构的类型如何。" />
+					</StackPanel>
+				<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="堡垒遗迹稍微提高了结构边界箱的准确度，现在会更贴近结构本身的形状。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="worldgen结构中以前只能使用元素ID列表的一些字段现在可以使用标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="一些标签字段现在要求在ID前面加上 # ，但是它们暂不接受元素列表。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="噪声设置中的结构字段不再将要塞与非要塞结构相独立，每种结构在JSON中的级别现在都是平等的，用其中的type指定结构的类型。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数字0的种子不再按照特殊情况处理。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="输入的种子前后的任何空格现在都会被去掉。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="将超平坦世界“红石俱备”预设的顶层方块高度由Y=-9提升至Y=55，以防止史莱姆生成。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="更改了超平坦世界“水世界”预设，将原先的沙子替换成沙砾，并在基岩层上方增加了64层深板岩，以解决此预设世界中海底神殿的生成问题。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="自定义世界生成在已配置结构文件中加入了biomes字段，值是一个标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="自定义世界生成加入了样条密度函数：一种通用的放置方块的方法，可使用户通过其表达几乎所有的使用三次样条的函数。" />
+					</StackPanel>
+				<TextBlock Text="命令格式" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="加入了 /placefeature，更改了 /locate 和 /locatebiome。" />
+					</StackPanel>
+				<TextBlock Text="常规" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="合规性要求：根据韩国游戏相关法律要求，为韩国玩家加入了计时器，用于提醒其适时休息。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：在“Chunk”一行中加入了玩家当前所处的区块在区域文件中的位置和此区域文件的文件名。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将“Chunk”一行中的玩家于区块内部的位置移至“Block”一行的尾部的方括号中。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将“Terrain”行合并进“Multinoise”行，并更名为“NoiseRouter”。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="语言：加入了弗留利语。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="资源包：加入了与新合规性要求有关的regional_compliancies.json，位于assets/[命名空间]下。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：加入了#fall_damage_resetting方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：现在可以为所有在注册表（Registry）中出现的类型定义标签。在此之前，只有方块、物品、液体、实体类型、游戏事件以及函数可以定义标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：在原版数据包中加入了生物群系标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：加入了用于指定结构可以在哪些生物群系中生成的生物群系标签，存储于tags/worldgen/biome/has_structure下。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：加入了结构地物标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：移除了细雪的#goat_spawnable_on方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：雪块和细雪现在拥有#azalea_root_replaceable方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：移除了泥土的#dripstone_replaceable_blocks方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：从#azalea_root_replaceable标签中移除了#lush_ground_replaceable，并加入了#base_stone_overworld、#dirt、clay、gravel和sand。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数据包：将数据包版本由8提高到9。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数据包：现在可在实验性数据包中添加自定义结构，即游戏现在可生成并存储由数据驱动的配置的结构。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数据包：现在可通过数据包对一些洞穴生成机制进行配置。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="日志：Log4j升级到2.17.0。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="常规：由于对32位运行环境的操作系统即将结束支持，在主菜单上向使用该环境启动游戏的用户加入了警告信息。" />
+					</StackPanel>
+
+
+			<TextBlock Text="该版本修复了 93 个bug，本文来源于 Minecraft Wiki " Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2#.E6.96.B9.E5.9D.97" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1309730-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-18-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+
 	<local:MyCard Margin="0,0,0,15" Title="1.18.2-rc1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
