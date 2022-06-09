@@ -1155,7 +1155,7 @@
 	</Grid>
 
 	<!--更多-->
-	<Grid Margin="10,10,10,10" Height="40" Width="300">
+	<Grid Margin="10,10,10,30" Height="40" Width="300">
 		<Grid.Triggers>
 			<EventTrigger RoutedEvent="Loaded">
 				<BeginStoryboard>
