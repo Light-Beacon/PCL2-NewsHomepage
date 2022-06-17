@@ -250,7 +250,7 @@
 		</StackPanel>
 	</local:MyCard>
 
-	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 22w14a" CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新快照 - 22w24a" CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
@@ -260,7 +260,7 @@
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w24a.jpg" Opacity="0" />
 			</Border>
 			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="22W14A" />
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22W24A" />
 			</Border>
 
 			<TextBlock Text="新内容" Style="{StaticResource h2}" />
