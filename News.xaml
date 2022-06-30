@@ -184,9 +184,9 @@
 
 		<!--h3-->
 		<Style x:Key="h3" TargetType="TextBlock">
-			<Setter Property="FontSize" Value="20" />
+			<Setter Property="FontSize" Value="22" />
 			<Setter Property="Padding" Value="30,0" />
-			<Setter Property="Margin" Value="-10,0,10,12" />
+			<Setter Property="Margin" Value="-10,0,10,17" />
 			<Setter Property="FontWeight" Value="Bold" />
 			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
 		</Style>
@@ -243,54 +243,103 @@
 		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
-
-	<local:MyCard Margin="0,0,0,15" Title="最新候选版本 - 1.19.1-rc1" CanSwap="True">
+	
+	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.19.1 pre2 " CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc1.jpg" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/22w17a.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc1.jpg" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w17a.png" Opacity="0" />
 			</Border>
-			<Border Style="{StaticResource verTxtBdr}">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1 RC1" />
+			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE2" />
 			</Border>
-
-			<TextBlock Text="更改" Style="{StaticResource h2}" />
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="更新了聊天信息举报选项的类型。" />
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="每次聊天信息举报发送的信息数量增加。" />
-			</StackPanel>
-			
-			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送信息。" />
-				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令。例如 /say 可以被使用。" />
-					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
-				</StackPanel>
-			</StackPanel>
-			
-			<TextBlock Text="本文来源于 Mithey 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
-			<!--Logs-->
-			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+			<!--Details-->
+<TextBlock Text="1.19.1-pre2的更改" Style="{StaticResource h2}" />
+<TextBlock Text="聊天信任状态" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名的消息或经过服务器篡改的消息现在会被标记"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="缺失签名或签名无效的消息现在会被标记为“不安全”"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被检测为更改过的消息会被标记为“已修改”"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="消息的信任状态会以带颜色的标记和一个图标显示"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="带颜色的标记会一直可见"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天栏打开的时候可见"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="光标在图标上悬浮将会提供有关于信任状态的更多信息"/>
+</StackPanel>
+<TextBlock Text="1.19.1-pre2的技术性更改" Style="{StaticResource h2}" />
+<TextBlock Text="聊天类型" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="加入了 chat_type 注册的聊天类型现在只会用于玩家聊天，并不再包含系统消息了"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型已被移除"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天类型现在已经经过简化并且现在只需要定义 chat 和 narration 修饰"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天类型现在不支持 overlays"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="系统消息应该用于显示 overlays"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="SERVER.PROPERTIES" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="enforce-secure-profile 对于专用服务器现在默认设置为 true"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition Width="20*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/1.19.1-rc1 " ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1354856-1-1.html" />
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-1" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-000000"/>
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-2" />
 				</Grid>
-			</GroupBox>
-		</StackPanel>
+			</GroupBox><TextBlock Text="本次更新共修复了7个bug" Style="{StaticResource footnote}" /></StackPanel>	
 	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="近日微软登录不稳定" CanSwap="True" IsSwaped="True">
@@ -1220,6 +1269,55 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
+	<local:MyCard Margin="0,0,0,15" Title="最新候选版本 - 1.19.1-rc1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc1.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc1.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1 RC1" />
+			</Border>
+
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更新了聊天信息举报选项的类型。" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="每次聊天信息举报发送的信息数量增加。" />
+			</StackPanel>
+			
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送信息。" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令。例如 /say 可以被使用。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
+				</StackPanel>
+			</StackPanel>
+			
+			<TextBlock Text="本文来源于 Mithey 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/1.19.1-rc1 " ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1354856-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
 	<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre1" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
@@ -1259,7 +1357,6 @@
 			</GroupBox>
 		</StackPanel>
 	</local:MyCard>
-
 
 	<local:MyCard Margin="0,0,0,15" Title="22w24a" CanSwap="True" IsSwaped="True">
 		<!--Header-->
