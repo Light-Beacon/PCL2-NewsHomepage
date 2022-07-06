@@ -243,12 +243,6 @@
 		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
-	
-	<local:MyCard Margin="0,0,0,15" Title="近日微软登录不稳定" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="30,40,30,20">
-			<TextBlock Margin="10,10,10,15" Text="时常会有登录不上去的情况，目前 Mojang 已采取措施缓解。"/>
-		</StackPanel>
-	</local:MyCard>
 
 	<!-- SEARCH BEGIN -->
 
