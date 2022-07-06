@@ -299,7 +299,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
 					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre3" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-"/>
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1359631-1-1.html"/>
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-3" />
 				</Grid>
 			</GroupBox><TextBlock Text="这次共修复了6个bug捏~" Style="{StaticResource footnote}" /></StackPanel>	
@@ -315,7 +315,7 @@
 		<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
-	
+
 	<local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1‌.19" CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
