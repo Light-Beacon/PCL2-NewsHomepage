@@ -1238,7 +1238,7 @@
 				</Border.Background>
 				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/22w17a.png" Opacity="0" />
 			</Border>
-			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+			<Border Style="{StaticResource verTxtBdr}">
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1 PRE2" />
 			</Border>
 			<!--Details-->
