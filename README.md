@@ -16,6 +16,10 @@
 4. 在 “下载地址” 栏中输入地址：`https://news.bugjump.net`
 5. 返回启动页，完成！
 
+### 高阶使用
+
+如果您需要通过 PCL 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`（或该域名下任何以.json结尾的地址）
+
 ## 注意事项
 
 请确保PCL2的版本为 ***Snapshot* (测试版) 1.0.4** 或 ***Release* (正式版) 1.0.5** 及**以上**。
