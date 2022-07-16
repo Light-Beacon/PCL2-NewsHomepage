@@ -1253,7 +1253,7 @@
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
 
-	<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre4 " CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre4 " CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
