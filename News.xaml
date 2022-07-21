@@ -246,80 +246,38 @@
 
 	<!-- SEARCH BEGIN -->
 
-	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.19.1-pre5 " CanSwap="True">
+	<local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.19.1-pre6 " CanSwap="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 			<Border Style="{StaticResource verImgBdr}">
 				<Border.Background>
-					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre5.png" Stretch="Uniform" />
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre6.png" Stretch="Uniform" />
 				</Border.Background>
-				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre5.png" Opacity="0" />
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre6.png" Opacity="0" />
 			</Border>
-			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
-				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE5" />
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE6" />
 			</Border>
 			<!--Details-->
-<TextBlock Text="更改" Style="{StaticResource h2}" />
-<TextBlock Text="聊天" Style="{StaticResource h3}" />
+<TextBlock Text="1.19.1-pre6 的修改内容" Style="{StaticResource h2}" />
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="编写聊天信息时，聊天的签名状态会用一个颜色指示器显示出来"/>
+<TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在掉落 5 经验而非 20 经验"/>
 </StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边（如果启用了的话)"/>
+<TextBlock Style="{StaticResource ListItem}" Text="发送消息的签名指示器的颜色经过调整以改进无障碍访问"/>
 </StackPanel>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
+<TextBlock Text="1.19.1-pre6 的技术性修改" Style="{StaticResource h2}" />
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示绿色"/>
-</StackPanel>
+<TextBlock Style="{StaticResource ListItem}" Text="文本组件的run_command 点击事件不再支持任何发送聊天消息的指令了"/>
 </StackPanel>
 <StackPanel Style="{StaticResource ListStyle}">
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="如果聊天预览开启了，而且预览消息等待被签名，那么指示器就会显示橙色"/>
+<TextBlock Style="{StaticResource ListItem}" Text="应使用/tellraw 替代"/>
 </StackPanel>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="聊天预览的背景在预览信息还未签名时颜色会更淡一些"/>
-</StackPanel>
-<TextBlock Text="聊天预览" Style="{StaticResource h3}" />
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="加入了「发送时……」聊天预览选项，使得聊天预览仅在即将发送信息时更新"/>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="要确认发送信息，需要再按一次回车键"/>
-</StackPanel>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="之前的 「开启」 选项现在改名为「在修改后……」"/>
-</StackPanel>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="「在修改后……」模式不会再显示预览，如果服务器还没有修改过消息的话"/>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="聊天预览在单人模式中也启用，且在使用有选择器选项的命令时也会显示，例如 /say"/>
-</StackPanel>
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景"/>
-</StackPanel>
-<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-<StackPanel Style="{StaticResource ListStyle}">
-<Ellipse />
-<TextBlock Style="{StaticResource ListItem}" Text="team_msg_command 聊天类型现在分隔为 team_msg_command_incoming 和 team_msg_command_outgoing"/>
 </StackPanel>
 <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -328,11 +286,11 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" ColorType="Highlight" />
-					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1362948-1-1.html"/>
-					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-5" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre6" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1364665-1-1.html"/>
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-1-pre-release-6" />
 				</Grid>
-			</GroupBox><TextBlock Text="本文使用了由卡狗于MCBBS上发布的译文" Style="{StaticResource footnote}" /></StackPanel>	
+			</GroupBox><TextBlock Text="本次共修复了10个bug，本文来源于 苦力怕553 （MCBBS）上的译文" Style="{StaticResource footnote}" /></StackPanel>	
 	</local:MyCard>
 
 	<Grid Margin="0,0,0,15">
@@ -1252,6 +1210,95 @@
 		<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	</Grid>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre5 " CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre5.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre5.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE5" />
+			</Border>
+			<!--Details-->
+<TextBlock Text="更改" Style="{StaticResource h2}" />
+<TextBlock Text="聊天" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="编写聊天信息时，聊天的签名状态会用一个颜色指示器显示出来"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边（如果启用了的话)"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示绿色"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="如果聊天预览开启了，而且预览消息等待被签名，那么指示器就会显示橙色"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天预览的背景在预览信息还未签名时颜色会更淡一些"/>
+</StackPanel>
+<TextBlock Text="聊天预览" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="加入了「发送时……」聊天预览选项，使得聊天预览仅在即将发送信息时更新"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="要确认发送信息，需要再按一次回车键"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="之前的 「开启」 选项现在改名为「在修改后……」"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="「在修改后……」模式不会再显示预览，如果服务器还没有修改过消息的话"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天预览在单人模式中也启用，且在使用有选择器选项的命令时也会显示，例如 /say"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景"/>
+</StackPanel>
+<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="team_msg_command 聊天类型现在分隔为 team_msg_command_incoming 和 team_msg_command_outgoing"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1362948-1-1.html"/>
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-5" />
+				</Grid>
+			</GroupBox><TextBlock Text="本文使用了由卡狗于MCBBS上发布的译文" Style="{StaticResource footnote}" /></StackPanel>	
+	</local:MyCard>
 
 	<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre4 " CanSwap="True" IsSwaped="True">
 		<!--Header-->
