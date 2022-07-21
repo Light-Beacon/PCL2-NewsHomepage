@@ -259,7 +259,7 @@
 				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE6" />
 			</Border>
 			<!--Details-->
-<TextBlock Text="1.19.1-pre6 的修改内容" Style="{StaticResource h2}" />
+<TextBlock Text="修改" Style="{StaticResource h2}" />
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
 <TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在掉落 5 经验而非 20 经验"/>
@@ -268,7 +268,7 @@
 <Ellipse />
 <TextBlock Style="{StaticResource ListItem}" Text="发送消息的签名指示器的颜色经过调整以改进无障碍访问"/>
 </StackPanel>
-<TextBlock Text="1.19.1-pre6 的技术性修改" Style="{StaticResource h2}" />
+<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
 <TextBlock Style="{StaticResource ListItem}" Text="文本组件的run_command 点击事件不再支持任何发送聊天消息的指令了"/>
