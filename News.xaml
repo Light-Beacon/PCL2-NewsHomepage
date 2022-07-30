@@ -1461,7 +1461,7 @@
 <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-RC3" />
 </Border>
 <!--Details-->
-<TextBlock Text="#1.19.1-rc3 的技术性修改" Style="{StaticResource h0}" />
+<TextBlock Text="1.19.1-rc3 的技术性修改" Style="{StaticResource h2}" />
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
 <TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用自定义字体负的或大于 32 的字形宽度。"/>
