@@ -503,7 +503,7 @@
 <Ellipse />
 <TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play"/>
 </StackPanel>
-<TextBlock Text="##多人游戏安全聊天签名" Style="{StaticResource h0}" />
+<TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
 <StackPanel Style="{StaticResource ListStyle}">
 <Ellipse />
 <TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文。"/>
