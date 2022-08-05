@@ -18,7 +18,7 @@
 
 ### 高阶使用
 
-如果您需要通过 PCL 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`（或该域名下任何以.json结尾的地址）
+如果您需要通过 PCL 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`
 
 ## 注意事项
 
