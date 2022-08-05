@@ -212,7 +212,60 @@
 		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
 		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
 	  </Grid>
-	  <local:MyCard Margin="0,0,0,15" Title="最新候选版 - 1.19.2-rc2 " CanSwap="True">
+	  <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.2 " CanSwap="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+		  <Border Style="{StaticResource verImgBdr}">
+			<Border.Background>
+			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2.jpg" Stretch="Uniform" />
+			</Border.Background>
+			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2.jpg" Opacity="0" />
+		  </Border>
+		  <Border Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2" />
+		  </Border>
+		  <!--Details-->
+		  <TextBlock Text="修复" Style="{StaticResource h2}" />
+		  <StackPanel Style="{StaticResource ListStyle}">
+			<Ellipse />
+			<TextBlock Style="{StaticResource ListItem}" Text="修复了玩家被踢出启用安全聊天的服务器的问题" />
+		  </StackPanel>
+		  <StackPanel Style="{StaticResource ListStyle}">
+			<Ellipse />
+			<TextBlock Style="{StaticResource ListItem}" Text="修复了社交屏幕的崩溃" />
+		  </StackPanel>
+		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+			  <Grid.ColumnDefinitions>
+				<ColumnDefinition Width="20*">
+				</ColumnDefinition>
+				<ColumnDefinition Width="10*">
+				</ColumnDefinition>
+				<ColumnDefinition Width="10*">
+				</ColumnDefinition>
+			  </Grid.ColumnDefinitions>
+			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
+			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html" />
+			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" />
+			</Grid>
+		  </GroupBox>
+		  <TextBlock Text="本文来源 ff98sha（MCBBS）" Style="{StaticResource footnote}" />
+		</StackPanel>
+	  </local:MyCard>
+	  <Grid Margin="0,0,0,15">
+		<Grid.ColumnDefinitions>
+		  <ColumnDefinition Width="1*">
+		  </ColumnDefinition>
+		  <ColumnDefinition Width="100">
+		  </ColumnDefinition>
+		  <ColumnDefinition Width="1*">
+		  </ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+		<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+	  </Grid>
+	  <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc2 " CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
 		  <Border Style="{StaticResource verImgBdr}">
@@ -248,19 +301,42 @@
 		  <TextBlock Text="MJ又在水版本号了" Style="{StaticResource footnote}" />
 		</StackPanel>
 	  </local:MyCard>
-	  <Grid Margin="0,0,0,15">
-		<Grid.ColumnDefinitions>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="100">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-		<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-	  </Grid>
+	  <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc1 " CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+		  <Border Style="{StaticResource verImgBdr}">
+			<Border.Background>
+			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Stretch="Uniform" />
+			</Border.Background>
+			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Opacity="0" />
+		  </Border>
+		  <Border Style="{StaticResource verTxtBdr}">
+			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2-RC1" />
+		  </Border>
+		  <!--Details-->
+		  <TextBlock Text="修复" Style="{StaticResource h2}" />
+		  <StackPanel Style="{StaticResource ListStyle}">
+			<Ellipse />
+			<TextBlock Style="{StaticResource ListItem}" Text="修复了一个启用安全聊天时的服务器连接问题" />
+		  </StackPanel>
+		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+			  <Grid.ColumnDefinitions>
+				<ColumnDefinition Width="20*">
+				</ColumnDefinition>
+				<ColumnDefinition Width="10*">
+				</ColumnDefinition>
+				<ColumnDefinition Width="10*">
+				</ColumnDefinition>
+			  </Grid.ColumnDefinitions>
+			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" ColorType="Highlight" />
+			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370332-1-1.html" />
+			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
+			</Grid>
+		  </GroupBox>
+		  <TextBlock Text="您好是的，纯粹是水版本..." Style="{StaticResource footnote}" />
+		</StackPanel>
+	  </local:MyCard>
 	  <local:MyCard Margin="0,0,0,15" Title="1.19.1 " CanSwap="True" IsSwaped="True">
 		<!--Header-->
 		<StackPanel Margin="30,40,30,20">
@@ -544,55 +620,6 @@
 			</Grid>
 		  </GroupBox>
 		  <TextBlock Text="本次共修复了 41 个bug，本文来源于 AzureZeng（MCBBS） 上的译文" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <Grid Margin="0,0,0,15">
-		<Grid.ColumnDefinitions>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="100">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-		<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-	  </Grid>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc1 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2-RC1" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="修复" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="修复了一个启用安全聊天时的服务器连接问题" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370332-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="您好是的，纯粹是水版本..." Style="{StaticResource footnote}" />
 		</StackPanel>
 	  </local:MyCard>
 	  <local:MyCard Margin="0,0,0,15" Title="1.19.1-rc3 " CanSwap="True" IsSwaped="True">
