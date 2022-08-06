@@ -25,1178 +25,1178 @@
 	协议：CC BY-NC-SA 4.0
 -->
 <StackPanel>
-	<StackPanel Margin="0,-10,0,0">
-	  <!--Animations Starts-->
-	  <StackPanel.Triggers>
-		<EventTrigger RoutedEvent="StackPanel.Loaded">
-		  <BeginStoryboard>
-			<Storyboard x:Name="animation1" RepeatBehavior="Forever">
-			  <ColorAnimation Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#FF000000" Duration="0:0:0" />
-			  <ColorAnimation BeginTime="0:0:5" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
-			  <ColorAnimation BeginTime="0:0:13" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
-			  <ColorAnimation Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#00000000" Duration="0:0:0" />
-			  <ColorAnimation BeginTime="0:0:6" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
-			  <ColorAnimation BeginTime="0:0:12" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
-			</Storyboard>
-		  </BeginStoryboard>
-		</EventTrigger>
-	  </StackPanel.Triggers>
-	  <!--Animations Ends-->
-	  <StackPanel.Resources>
-		<!--Template Starts-->
-		<!--Template Ends-->
-		<!--Styles Starts-->
-		<!--即将弃用-->
-		<Style TargetType="Ellipse">
-		  <Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
-		  <Setter Property="HorizontalAlignment" Value="Left" />
-		  <Setter Property="Height" Value="8" />
-		  <Setter Property="Width" Value="8" />
-		  <Setter Property="Margin" Value="0,0,10,0" />
-		</Style>
-		<Style TargetType="TextBlock">
-		  <Setter Property="TextWrapping" Value="Wrap" />
-		  <Setter Property="HorizontalAlignment" Value="Left" />
-		  <Setter Property="FontSize" Value="16" />
-		  <Setter Property="Foreground" Value="Black" />
-		</Style>
-		<Style x:Key="ListItem" TargetType="TextBlock">
-		  <Setter Property="Margin" Value="15,-15,5,15" />
-		  <Setter Property="TextWrapping" Value="Wrap" />
-		  <Setter Property="HorizontalAlignment" Value="Left" />
-		  <Setter Property="FontSize" Value="16" />
-		  <Setter Property="Foreground" Value="Black" />
-		</Style>
-		<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
-		  <Setter Property="Margin" Value="15,-15,5,15" />
-		  <Setter Property="TextElement.FontSize" Value="20" />
-		</Style>
-		<Style x:Key="ListStyle" TargetType="StackPanel">
-		  <Setter Property="Margin" Value="22,0,14,5" />
-		</Style>
-		<Style x:Key="Read" TargetType="local:MyButton">
-		  <Setter Property="Margin" Value="0,0,5,5" />
-		  <Setter Property="Height" Value="35" />
-		  <Setter Property="Padding" Value="13,0,13,0" />
-		  <Setter Property="EventType" Value="打开网页" />
-		</Style>
-		<Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-		  <Setter Property="Grid.Column" Value="0" />
-		  <Setter Property="Text" Value="Minecraft Wiki" />
-		  <!--<Setter Property="ColorType" Value="Highlight"/>-->
-		</Style>
-		<Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
-		  <Setter Property="Grid.Row" Value="0" />
-		  <Setter Property="Grid.ColumnSpan" Value="3" />
-		</Style>
-		<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-		  <Setter Property="Grid.Column" Value="1" />
-		  <Setter Property="Text" Value="MCBBS" />
-		</Style>
-		<Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
-		  <Setter Property="Grid.Column" Value="0" />
-		  <Setter Property="Grid.Row" Value="1" />
-		</Style>
-		<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-		  <Setter Property="Grid.Column" Value="2" />
-		  <Setter Property="Text" Value="官网" />
-		</Style>
-		<Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
-		  <Setter Property="Grid.Column" Value="1" />
-		  <Setter Property="Grid.Row" Value="1" />
-		</Style>
-		<Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-		  <Setter Property="Grid.Column" Value="3" />
-		  <Setter Property="Text" Value="Reddit" />
-		</Style>
-		<Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
-		  <Setter Property="Grid.Column" Value="2" />
-		  <Setter Property="Grid.Row" Value="1" />
-		</Style>
-		<Style x:Key="Code" TargetType="Border">
-		  <Setter Property="Background" Value="#e0e0e0" />
-		  <Setter Property="BorderBrush" Value="#444" />
-		  <Setter Property="CornerRadius" Value="1" />
-		  <Setter Property="Margin" Value="5,0,5,0" />
-		  <Setter Property="BorderThickness" Value="1" />
-		</Style>
-		<Style TargetType="TextBox">
-		  <Setter Property="Background" Value="{x:Null}" />
-		  <Setter Property="Padding" Value="3,0,3,0" />
-		  <Setter Property="IsReadOnly" Value="True" />
-		  <Setter Property="BorderBrush" Value="{x:Null}" />
-		</Style>
-		<Style x:Key="verImgBdr" TargetType="Border">
-		  <Setter Property="HorizontalAlignment" Value="Center" />
-		  <Setter Property="BorderThickness" Value="4" />
-		  <Setter Property="VerticalAlignment" Value="Top" />
-		  <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
-		  <Setter Property="CornerRadius" Value="7" />
-		</Style>
-		<Style x:Key="verTxtBlk" TargetType="TextBlock">
-		  <Setter Property="HorizontalAlignment" Value="Center" />
-		  <Setter Property="TextAlignment" Value="Center" />
-		  <Setter Property="VerticalAlignment" Value="Center" />
-		  <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-		  <Setter Property="Width" Value="160" />
-		  <Setter Property="TextWrapping" Value="Wrap" />
-		  <Setter Property="FontSize" Value="28" />
-		</Style>
-		<Style x:Key="verTxtBdr" TargetType="Border">
-		  <Setter Property="Margin" Value="0,-22,-1,0" />
-		  <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-		  <Setter Property="Width" Value="180" />
-		  <Setter Property="Height" Value="40" />
-		  <Setter Property="CornerRadius" Value="5" />
-		</Style>
-		<!--h2-->
-		<Style x:Key="h2" TargetType="TextBlock">
-		  <Setter Property="FontSize" Value="28" />
-		  <Setter Property="Padding" Value="15,5" />
-		  <Setter Property="Margin" Value="5,15,5,10" />
-		  <Setter Property="FontWeight" Value="Bold" />
-		  <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
-		</Style>
-		<!--h3-->
-		<Style x:Key="h3" TargetType="TextBlock">
-		  <Setter Property="FontSize" Value="22" />
-		  <Setter Property="Padding" Value="30,0" />
-		  <Setter Property="Margin" Value="-10,0,10,17" />
-		  <Setter Property="FontWeight" Value="Bold" />
-		  <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-		</Style>
-		<!--h4-->
-		<Style x:Key="h4" TargetType="TextBlock">
-		  <Setter Property="FontSize" Value="16" />
-		  <Setter Property="Padding" Value="30,0" />
-		  <Setter Property="Margin" Value="5,0,10,10" />
-		  <Setter Property="FontWeight" Value="Bold" />
-		  <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-		</Style>
-		<!--footnote-->
-		<Style x:Key="footnote" TargetType="TextBlock">
-		  <Setter Property="FontSize" Value="14" />
-		  <Setter Property="Padding" Value="30,0" />
-		  <Setter Property="Margin" Value="0,20,0,15" />
-		  <Setter Property="Foreground" Value="#FF777777" />
-		  <Setter Property="TextWrapping" Value="Wrap" />
-		</Style>
-		<!--ButtonNameBorder-->
-		<Style x:Key="NameBdr" TargetType="Border">
-		  <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-		  <Setter Property="BorderThickness" Value="0" />
-		  <Setter Property="CornerRadius" Value="5,5,0,0" />
-		  <Setter Property="Margin" Value="-2,-2,-2,2" />
-		</Style>
-	  </StackPanel.Resources>
-	  <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
-		<Grid Margin="10,0,0,0">
-		  <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-				  📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
-	  </TextBlock>
-		  <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-				  📰 如果您的账号未迁移且无法登录，请看新闻主页最下边的提示。
-	  </TextBlock>
-		</Grid>
-	  </Border>
-	  <Grid Margin="0,0,0,15">
-		<Grid.ColumnDefinitions>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="100">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-		<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-	  </Grid>
-	  <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.2 " CanSwap="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2.jpg" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2.jpg" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="修复" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="修复了玩家被踢出启用安全聊天的服务器的问题" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="修复了社交屏幕的崩溃" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="本文来源 ff98sha（MCBBS）" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <Grid Margin="0,0,0,15">
-		<Grid.ColumnDefinitions>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="100">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-		<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-	  </Grid>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc2 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2-RC2" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="修复" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="别看了就是修了个崩溃问题" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc2" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370643-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="MJ又在水版本号了" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc1 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.2-rc1.jpg" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2-RC1" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="修复" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="修复了一个启用安全聊天时的服务器连接问题" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370332-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="您好是的，纯粹是水版本..." Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.1 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1.png" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1.png" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="特性" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="添加了悦灵的复制能力" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="对幽匿催发体进行了部分调整" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了聊天可信状态" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="为聊天预览功能添加了新选项" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了玩家举报功能" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="悦灵将会围绕着正在播放音乐的唱片机跳舞" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="如果悦灵在跳舞时拿着紫水晶碎片，将会进行复制。悦灵的复制有5分钟冷却时间" />
-		  </StackPanel>
-		  <TextBlock Text="幽匿催发体" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在将掉落5经验，之前是20经验" />
-		  </StackPanel>
-		  <TextBlock Text="聊天" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="将聊天滚动条移动到了右边" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="输入聊天消息时，聊天的签名状态会用一个颜色指示器显示出来" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边(如果启用了的话)" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示蓝色" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="若开启聊天预览，而且预览消息等待被签名，那么指示器就会显示橙色" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="预览消息还未签名时，聊天预览的背景色会更淡一些" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="当服务器未启用 强制安全聊天 选项时，连接服务器时会出现警告提醒框" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在社交屏幕会将玩家最近看到的消息条目置顶" />
-		  </StackPanel>
-		  <TextBlock Text="聊天可信状态" Style="{StaticResource h4}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名或者被服务器篡改过的消息现在会被标记" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="缺少签名或者无效签名的消息会被标记为 “不安全”" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="被篡改过的消息会被标记为 “被修改”" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="消息的可信状态现在会用彩色指示器和图标来显示" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="彩色指示器会始终保持可见状态" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天界面打开时可见" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="指针悬停在图标上时会提供更多关于可信状态的消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="对于被修改过的消息，原始安全文本也会被显示在提示框中" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="系统消息 (非玩家聊天，比如命令的输出) 会使用灰色指示器展示" />
-		  </StackPanel>
-		  <TextBlock Text="聊天预览" Style="{StaticResource h4}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了“发送时”聊天预览选项，使得聊天预览仅在即将发送消息时更新" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="要确认发送消息，需要再按一次Enter/Return键" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="之前的“开启”选项现在改名为“输入时”" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="“输入时”模式时，若消息还未被服务器修改，不会再显示预览消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天预览现在会在单人模式中启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
-		  </StackPanel>
-		  <TextBlock Text="玩家举报" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在你可以在游戏中举报发送违规消息的玩家。举报者需要选择违反规定的个人聊天记录内容，以及举报的类型，这将会为我们的审核团队提供相关的聊天语境，以方便采取相关措施。该功能可在 社交互动 界面找到" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="可在举报时选择多条消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="选中的消息附近的一些附加消息一样会被发送，为我们的审核团队更好的理解语境" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天举报的类型可以从聊天举报分类中选择" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天举报分类的界面有一个“了解关于玩家举报的内容”的按钮，链接至一个相关的说明文章" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="附加注释可以用于提供与举报有关的细节和消息" />
-		  </StackPanel>
-		  <TextBlock Text="账户停用和封禁" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="若你的账户被禁止多人游戏，游戏启动时将会显示一个提示文本" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="封禁账户的原因和持续时间将会在这个界面中显示" />
-		  </StackPanel>
-		  <TextBlock Text="REALMS(领域服)" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="被 Java Realms 敏感词过滤器过滤的消息会用黄色标志标识" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="在 Realms 中，若玩家向一个或多个玩家发送的聊天被成功过滤，该玩家将会被提醒" />
-		  </StackPanel>
-		  <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用于负的，或大于 32 的步进宽度(advances)的自定义字体" />
-		  </StackPanel>
-		  <TextBlock Text="聊天类型" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="添加到 chat_types 注册表的聊天类型现在仅被用于玩家聊天，而不会被用于系统消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型被移除了" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天类型已被简化，现在只需要定义 chat 和 narration 装饰" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天类型不再支持覆盖" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="需要使用系统消息来显示覆盖" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="msg_command 聊天类型已被分割为 msg_command_incoming 和 msg_command_outgoing" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="team_msg_command聊天类型现在分割为team_msg_command_incoming和team_msg_command_outgoing" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="team_name聊天类型参数现已被重命名为target，此聊天类型参数现被msg_command_outgoing使用" />
-		  </StackPanel>
-		  <TextBlock Text="组件" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="诸如 /say 这类可以向玩家产生已签名消息的命令现在不允许使用，请使用/tellraw命令" />
-		  </StackPanel>
-		  <TextBlock Text="游戏事件" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play" />
-		  </StackPanel>
-		  <TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文" />
-		  </StackPanel>
-		  <TextBlock Text="服务器" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="对于专用服务器，enforce-secure-profile选项现在默认为true" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="服务器日志中，不安全消息会带有 [Not Secure] 前缀标记" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在自定义服务器可以通过新的网络数据包为常规聊天设置独有的自动补全选项" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息，但这并不能从聊天日志中删除玩家的聊天消息" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1367391-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-1" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="本次共修复了 41 个bug，本文来源于 AzureZeng（MCBBS） 上的译文" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.1-rc3 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc3.png" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc3.png" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-RC3" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="特性" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="添加了悦灵的复制能力" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="对幽匿催发体进行了部分调整" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了聊天可信状态" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="为聊天预览功能添加了新选项" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了玩家举报功能" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="悦灵将会围绕着正在播放音乐的唱片机跳舞" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="如果悦灵在跳舞时拿着紫水晶碎片，将会进行复制。悦灵的复制有5分钟冷却时间" />
-		  </StackPanel>
-		  <TextBlock Text="幽匿催发体" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在将掉落5经验，之前是20经验" />
-		  </StackPanel>
-		  <TextBlock Text="聊天" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="将聊天滚动条移动到了右边" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="输入聊天消息时，聊天的签名状态会用一个颜色指示器显示出来" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边(如果启用了的话)" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示蓝色" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="若开启聊天预览，而且预览消息等待被签名，那么指示器就会显示橙色" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="预览消息还未签名时，聊天预览的背景色会更淡一些" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="当服务器未启用 强制安全聊天 选项时，连接服务器时会出现警告提醒框" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在社交屏幕会将玩家最近看到的消息条目置顶" />
-		  </StackPanel>
-		  <TextBlock Text="聊天可信状态" Style="{StaticResource h4}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名或者被服务器篡改过的消息现在会被标记" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="缺少签名或者无效签名的消息会被标记为 “不安全”" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="被篡改过的消息会被标记为 “被修改”" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="消息的可信状态现在会用彩色指示器和图标来显示" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="彩色指示器会始终保持可见状态" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天界面打开时可见" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="指针悬停在图标上时会提供更多关于可信状态的消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="对于被修改过的消息，原始安全文本也会被显示在提示框中" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="系统消息 (非玩家聊天，比如命令的输出) 会使用灰色指示器展示" />
-		  </StackPanel>
-		  <TextBlock Text="聊天预览" Style="{StaticResource h4}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了“发送时”聊天预览选项，使得聊天预览仅在即将发送消息时更新" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="要确认发送消息，需要再按一次Enter/Return键" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="之前的“开启”选项现在改名为“输入时”" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="“输入时”模式时，若消息还未被服务器修改，不会再显示预览消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天预览现在会在单人模式中启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
-		  </StackPanel>
-		  <TextBlock Text="玩家举报" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在你可以在游戏中举报发送违规消息的玩家。举报者需要选择违反规定的个人聊天记录内容，以及举报的类型，这将会为我们的审核团队提供相关的聊天语境，以方便采取相关措施。该功能可在 社交互动 界面找到" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="可在举报时选择多条消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="选中的消息附近的一些附加消息一样会被发送，为我们的审核团队更好的理解语境" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天举报的类型可以从聊天举报分类中选择" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天举报分类的界面有一个“了解关于玩家举报的内容”的按钮，链接至一个相关的说明文章" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="附加注释可以用于提供与举报有关的细节和消息" />
-		  </StackPanel>
-		  <TextBlock Text="账户停用和封禁" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="若你的账户被禁止多人游戏，游戏启动时将会显示一个提示文本" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="封禁账户的原因和持续时间将会在这个界面中显示" />
-		  </StackPanel>
-		  <TextBlock Text="REALMS(领域服)" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="被 Java Realms 敏感词过滤器过滤的消息会用黄色标志标识" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="在 Realms 中，若玩家向一个或多个玩家发送的聊天被成功过滤，该玩家将会被提醒" />
-		  </StackPanel>
-		  <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用于负的，或大于 32 的步进宽度(advances)的自定义字体" />
-		  </StackPanel>
-		  <TextBlock Text="聊天类型" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="添加到 chat_types 注册表的聊天类型现在仅被用于玩家聊天，而不会被用于系统消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型被移除了" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天类型已被简化，现在只需要定义 chat 和 narration 装饰" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天类型不再支持覆盖" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="需要使用系统消息来显示覆盖" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="msg_command 聊天类型已被分割为 msg_command_incoming 和 msg_command_outgoing" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="team_msg_command聊天类型现在分割为team_msg_command_incoming和team_msg_command_outgoing" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="team_name聊天类型参数现已被重命名为target，此聊天类型参数现被msg_command_outgoing使用" />
-		  </StackPanel>
-		  <TextBlock Text="组件" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送消息" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="诸如 /say 这类可以向玩家产生已签名消息的命令现在不允许使用，请使用/tellraw命令" />
-		  </StackPanel>
-		  <TextBlock Text="游戏事件" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play" />
-		  </StackPanel>
-		  <TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文" />
-		  </StackPanel>
-		  <TextBlock Text="服务器" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="对于专用服务器，enforce-secure-profile选项现在默认为true" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="服务器日志中，不安全消息会带有 [Not Secure] 前缀标记" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在自定义服务器可以通过新的网络数据包为常规聊天设置独有的自动补全选项" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息，但这并不能从聊天日志中删除玩家的聊天消息" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc3" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1366950-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-3" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="本次共修复了10个bug，本文来源于 苦力怕553 （MCBBS） 上的译文" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.1-rc2 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc2.jpg" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-rc2.jpg" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-RC2" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="更改" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在连接到不要求强制安全聊天的服务器时会弹出警告" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="调整了聊天预览选项的名称" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text=" “修改时”改为“输入时”" />
-			</StackPanel>
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="“发送时”的英文原文由“On Send”改为“While Sending”" />
-			</StackPanel>
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc2" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1365048-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-2" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="本次共修复了 2 个漏洞，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.1-pre6 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre6.png" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre6.png" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE6" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="修改" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在掉落 5 经验而非 20 经验" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="发送消息的签名指示器的颜色经过调整以改进无障碍访问" />
-		  </StackPanel>
-		  <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="文本组件的run_command 点击事件不再支持任何发送聊天消息的指令了" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="应使用/tellraw 替代" />
-			</StackPanel>
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre6" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1364665-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-1-pre-release-6" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="本次共修复了11个bug，本文来源于 苦力怕553 在MCBBS上的译文" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="1.19.1-pre5 " CanSwap="True" IsSwaped="True">
-		<!--Header-->
-		<StackPanel Margin="30,40,30,20">
-		  <Border Style="{StaticResource verImgBdr}">
-			<Border.Background>
-			  <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre5.png" Stretch="Uniform" />
-			</Border.Background>
-			<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre5.png" Opacity="0" />
-		  </Border>
-		  <Border Style="{StaticResource verTxtBdr}">
-			<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE5" />
-		  </Border>
-		  <!--Details-->
-		  <TextBlock Text="更改" Style="{StaticResource h2}" />
-		  <TextBlock Text="聊天" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="编写聊天信息时，聊天的签名状态会用一个颜色指示器显示出来" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边（如果启用了的话)" />
-			</StackPanel>
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示绿色" />
-			</StackPanel>
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="如果聊天预览开启了，而且预览消息等待被签名，那么指示器就会显示橙色" />
-			</StackPanel>
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天预览的背景在预览信息还未签名时颜色会更淡一些" />
-		  </StackPanel>
-		  <TextBlock Text="聊天预览" Style="{StaticResource h3}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了「发送时……」聊天预览选项，使得聊天预览仅在即将发送信息时更新" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="要确认发送信息，需要再按一次回车键" />
-			</StackPanel>
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<StackPanel Style="{StaticResource ListStyle}">
-			  <Ellipse />
-			  <TextBlock Style="{StaticResource ListItem}" Text="之前的 「开启」 选项现在改名为「在修改后……」" />
-			</StackPanel>
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="「在修改后……」模式不会再显示预览，如果服务器还没有修改过消息的话" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="聊天预览在单人模式中也启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
-		  </StackPanel>
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
-		  </StackPanel>
-		  <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}">
-			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="team_msg_command 聊天类型现在分隔为 team_msg_command_incoming 和 team_msg_command_outgoing" />
-		  </StackPanel>
-		  <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-			<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-			  <Grid.ColumnDefinitions>
-				<ColumnDefinition Width="20*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-				<ColumnDefinition Width="10*">
-				</ColumnDefinition>
-			  </Grid.ColumnDefinitions>
-			  <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" ColorType="Highlight" />
-			  <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1362948-1-1.html" />
-			  <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-5" />
-			</Grid>
-		  </GroupBox>
-		  <TextBlock Text="本文使用了由卡狗于MCBBS上发布的译文" Style="{StaticResource footnote}" />
-		</StackPanel>
-	  </local:MyCard>
-	  <Grid Margin="10,10,10,30" Height="40" Width="300">
-		<Grid.Triggers>
-		  <EventTrigger RoutedEvent="Loaded">
-			<BeginStoryboard>
-			  <Storyboard>
-				<ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.0" />
-				<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" />
-				<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" />
-			  </Storyboard>
-			</BeginStoryboard>
-		  </EventTrigger>
-		  <EventTrigger RoutedEvent="MouseEnter">
-			<BeginStoryboard>
-			  <Storyboard>
-				<ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
-				<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
-				<DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="260" Duration="0:0:0.1" />
-				<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
-			  </Storyboard>
-			</BeginStoryboard>
-		  </EventTrigger>
-		  <EventTrigger RoutedEvent="MouseLeave">
-			<BeginStoryboard>
-			  <Storyboard>
-				<ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
-				<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" Duration="0:0:0.5" />
-				<DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="240" Duration="0:0:0.1" />
-				<ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
-			  </Storyboard>
-			</BeginStoryboard>
-		  </EventTrigger>
-		</Grid.Triggers>
-		<local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/archives_list.json">
-		  <Border x:Name="viewBdr" Height="40" Width="240" Background="{StaticResource ColorBrush6}" Opacity="1" CornerRadius="4" BorderThickness="1.5" BorderBrush="{StaticResource ColorBrush4}">
-			<TextBlock x:Name="view" Text="浏览更早版本更新历史" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold" />
-		  </Border>
-		</local:MyButton>
-	  </Grid>
-	  <Grid Margin="0,0,0,15">
-		<Grid.ColumnDefinitions>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="100">
-		  </ColumnDefinition>
-		  <ColumnDefinition Width="1*">
-		  </ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-		<TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-	  </Grid>
-	  <local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="30,50,30,20">
-		  <TextBlock Text="Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
-		</StackPanel>
-	  </local:MyCard>
-	  <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
-		<StackPanel Margin="30,40,30,10">
-		  <TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
-		  <TextBlock Text="  但有人往PCL2反馈提交新闻主页Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16" />
-		  <TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的Github仓库交issue而不是在PCL2反馈交反馈（PCL2不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
-		  <TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5" />
-		  <Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
-			<TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
-		  </Border>
-		</StackPanel>
-	  </local:MyCard>
-	</StackPanel>
-	<StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
-	  <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
-	  <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
-	</StackPanel>
-	<Border Background="#CCFFFFFF" Height="180" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
-	  <StackPanel Margin="40,15,0,10">
-		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
-		<TextBlock Text="By：最亮的信标（Light Beacon）" />
-		<TextBlock Text="维护：最亮的信标（Light Beacon）、空辰KC" />
-		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-		  <TextBlock Text="订阅地址:  " />
-		  <local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
-		</StackPanel>
-		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-		  <TextBlock Text="官方网站:  " />
-		  <local:MyTextButton Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
-		</StackPanel>
-		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-		  <TextBlock Text="Github:  " />
-		  <local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
-		</StackPanel>
-		<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-		  <TextBlock Text="无特殊声明本主页采用 " />
-		  <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
-		  <TextBlock Text=" 授权。" />
-		</StackPanel>
-	  </StackPanel>
-	</Border>
+  <StackPanel Margin="0,-10,0,0">
+    <!--Animations Starts-->
+    <StackPanel.Triggers>
+      <EventTrigger RoutedEvent="StackPanel.Loaded">
+        <BeginStoryboard>
+          <Storyboard x:Name="animation1" RepeatBehavior="Forever">
+            <ColorAnimation Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#FF000000" Duration="0:0:0" />
+            <ColorAnimation BeginTime="0:0:5" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
+            <ColorAnimation BeginTime="0:0:13" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
+            <ColorAnimation Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#00000000" Duration="0:0:0" />
+            <ColorAnimation BeginTime="0:0:6" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
+            <ColorAnimation BeginTime="0:0:12" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger>
+    </StackPanel.Triggers>
+    <!--Animations Ends-->
+    <StackPanel.Resources>
+      <!--Template Starts-->
+      <!--Template Ends-->
+      <!--Styles Starts-->
+      <!--即将弃用-->
+      <Style TargetType="Ellipse">
+        <Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Height" Value="8" />
+        <Setter Property="Width" Value="8" />
+        <Setter Property="Margin" Value="0,0,10,0" />
+      </Style>
+      <Style TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="Black" />
+      </Style>
+      <Style x:Key="ListItem" TargetType="TextBlock">
+        <Setter Property="Margin" Value="15,-15,5,15" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="Black" />
+      </Style>
+      <Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+        <Setter Property="Margin" Value="15,-15,5,15" />
+        <Setter Property="TextElement.FontSize" Value="20" />
+      </Style>
+      <Style x:Key="ListStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="22,0,14,5" />
+      </Style>
+      <Style x:Key="Read" TargetType="local:MyButton">
+        <Setter Property="Margin" Value="0,0,5,5" />
+        <Setter Property="Height" Value="35" />
+        <Setter Property="Padding" Value="13,0,13,0" />
+        <Setter Property="EventType" Value="打开网页" />
+      </Style>
+      <Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Text" Value="Minecraft Wiki" />
+        <!--<Setter Property="ColorType" Value="Highlight"/>-->
+      </Style>
+      <Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="Grid.ColumnSpan" Value="3" />
+      </Style>
+      <Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="Text" Value="MCBBS" />
+      </Style>
+      <Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Grid.Row" Value="1" />
+      </Style>
+      <Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+        <Setter Property="Grid.Column" Value="2" />
+        <Setter Property="Text" Value="官网" />
+      </Style>
+      <Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="Grid.Row" Value="1" />
+      </Style>
+      <Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+        <Setter Property="Grid.Column" Value="3" />
+        <Setter Property="Text" Value="Reddit" />
+      </Style>
+      <Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
+        <Setter Property="Grid.Column" Value="2" />
+        <Setter Property="Grid.Row" Value="1" />
+      </Style>
+      <Style x:Key="Code" TargetType="Border">
+        <Setter Property="Background" Value="#e0e0e0" />
+        <Setter Property="BorderBrush" Value="#444" />
+        <Setter Property="CornerRadius" Value="1" />
+        <Setter Property="Margin" Value="5,0,5,0" />
+        <Setter Property="BorderThickness" Value="1" />
+      </Style>
+      <Style TargetType="TextBox">
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Padding" Value="3,0,3,0" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="BorderBrush" Value="{x:Null}" />
+      </Style>
+      <Style x:Key="verImgBdr" TargetType="Border">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="BorderThickness" Value="4" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+        <Setter Property="CornerRadius" Value="7" />
+      </Style>
+      <Style x:Key="verTxtBlk" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+        <Setter Property="Width" Value="160" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="FontSize" Value="28" />
+      </Style>
+      <Style x:Key="verTxtBdr" TargetType="Border">
+        <Setter Property="Margin" Value="0,-22,-1,0" />
+        <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+        <Setter Property="Width" Value="180" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="CornerRadius" Value="5" />
+      </Style>
+      <!--h2-->
+      <Style x:Key="h2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="28" />
+        <Setter Property="Padding" Value="15,5" />
+        <Setter Property="Margin" Value="5,15,5,10" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+      </Style>
+      <!--h3-->
+      <Style x:Key="h3" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="Padding" Value="30,0" />
+        <Setter Property="Margin" Value="-10,0,10,17" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+      </Style>
+      <!--h4-->
+      <Style x:Key="h4" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Padding" Value="30,0" />
+        <Setter Property="Margin" Value="5,0,10,10" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+      </Style>
+      <!--footnote-->
+      <Style x:Key="footnote" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Padding" Value="30,0" />
+        <Setter Property="Margin" Value="0,20,0,15" />
+        <Setter Property="Foreground" Value="#FF777777" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+      </Style>
+      <!--ButtonNameBorder-->
+      <Style x:Key="NameBdr" TargetType="Border">
+        <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="CornerRadius" Value="5,5,0,0" />
+        <Setter Property="Margin" Value="-2,-2,-2,2" />
+      </Style>
+    </StackPanel.Resources>
+    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+        <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
+    </TextBlock>
+        <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
+                📰 如果您的账号未迁移且无法登录，请看新闻主页最下边的提示。
+    </TextBlock>
+      </Grid>
+    </Border>
+    <Grid Margin="0,0,0,15">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="100">
+        </ColumnDefinition>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+      <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+    </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.2 " CanSwap="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2.jpg" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2.jpg" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="修复" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="修复了玩家被踢出启用安全聊天的服务器的问题" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="修复了社交屏幕的崩溃" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本文来源 ff98sha（MCBBS）" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <Grid Margin="0,0,0,15">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="100">
+        </ColumnDefinition>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+      <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+    </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc2 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2-rc1.jpg" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2-rc1.jpg" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2-RC2" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="修复" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="别看了就是修了个崩溃问题" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370643-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="MJ又在水版本号了" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.2-rc1 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2-rc1.jpg" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2-rc1.jpg" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2-RC1" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="修复" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="修复了一个启用安全聊天时的服务器连接问题" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370332-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="您好是的，纯粹是水版本..." Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.1 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="特性" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="添加了悦灵的复制能力" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="对幽匿催发体进行了部分调整" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了聊天可信状态" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="为聊天预览功能添加了新选项" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了玩家举报功能" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="悦灵将会围绕着正在播放音乐的唱片机跳舞" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="如果悦灵在跳舞时拿着紫水晶碎片，将会进行复制。悦灵的复制有5分钟冷却时间" />
+        </StackPanel>
+        <TextBlock Text="幽匿催发体" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在将掉落5经验，之前是20经验" />
+        </StackPanel>
+        <TextBlock Text="聊天" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="将聊天滚动条移动到了右边" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="输入聊天消息时，聊天的签名状态会用一个颜色指示器显示出来" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边(如果启用了的话)" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示蓝色" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="若开启聊天预览，而且预览消息等待被签名，那么指示器就会显示橙色" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="预览消息还未签名时，聊天预览的背景色会更淡一些" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="当服务器未启用 强制安全聊天 选项时，连接服务器时会出现警告提醒框" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在社交屏幕会将玩家最近看到的消息条目置顶" />
+        </StackPanel>
+        <TextBlock Text="聊天可信状态" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名或者被服务器篡改过的消息现在会被标记" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="缺少签名或者无效签名的消息会被标记为 “不安全”" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="被篡改过的消息会被标记为 “被修改”" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="消息的可信状态现在会用彩色指示器和图标来显示" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="彩色指示器会始终保持可见状态" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天界面打开时可见" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="指针悬停在图标上时会提供更多关于可信状态的消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="对于被修改过的消息，原始安全文本也会被显示在提示框中" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="系统消息 (非玩家聊天，比如命令的输出) 会使用灰色指示器展示" />
+        </StackPanel>
+        <TextBlock Text="聊天预览" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了“发送时”聊天预览选项，使得聊天预览仅在即将发送消息时更新" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="要确认发送消息，需要再按一次Enter/Return键" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="之前的“开启”选项现在改名为“输入时”" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="“输入时”模式时，若消息还未被服务器修改，不会再显示预览消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天预览现在会在单人模式中启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
+        </StackPanel>
+        <TextBlock Text="玩家举报" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在你可以在游戏中举报发送违规消息的玩家。举报者需要选择违反规定的个人聊天记录内容，以及举报的类型，这将会为我们的审核团队提供相关的聊天语境，以方便采取相关措施。该功能可在 社交互动 界面找到" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="可在举报时选择多条消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="选中的消息附近的一些附加消息一样会被发送，为我们的审核团队更好的理解语境" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报的类型可以从聊天举报分类中选择" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报分类的界面有一个“了解关于玩家举报的内容”的按钮，链接至一个相关的说明文章" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="附加注释可以用于提供与举报有关的细节和消息" />
+        </StackPanel>
+        <TextBlock Text="账户停用和封禁" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="若你的账户被禁止多人游戏，游戏启动时将会显示一个提示文本" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="封禁账户的原因和持续时间将会在这个界面中显示" />
+        </StackPanel>
+        <TextBlock Text="REALMS(领域服)" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="被 Java Realms 敏感词过滤器过滤的消息会用黄色标志标识" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="在 Realms 中，若玩家向一个或多个玩家发送的聊天被成功过滤，该玩家将会被提醒" />
+        </StackPanel>
+        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用于负的，或大于 32 的步进宽度(advances)的自定义字体" />
+        </StackPanel>
+        <TextBlock Text="聊天类型" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="添加到 chat_types 注册表的聊天类型现在仅被用于玩家聊天，而不会被用于系统消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型被移除了" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型已被简化，现在只需要定义 chat 和 narration 装饰" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型不再支持覆盖" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="需要使用系统消息来显示覆盖" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="msg_command 聊天类型已被分割为 msg_command_incoming 和 msg_command_outgoing" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="team_msg_command聊天类型现在分割为team_msg_command_incoming和team_msg_command_outgoing" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="team_name聊天类型参数现已被重命名为target，此聊天类型参数现被msg_command_outgoing使用" />
+        </StackPanel>
+        <TextBlock Text="组件" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="诸如 /say 这类可以向玩家产生已签名消息的命令现在不允许使用，请使用/tellraw命令" />
+        </StackPanel>
+        <TextBlock Text="游戏事件" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play" />
+        </StackPanel>
+        <TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文" />
+        </StackPanel>
+        <TextBlock Text="服务器" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="对于专用服务器，enforce-secure-profile选项现在默认为true" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="服务器日志中，不安全消息会带有 [Not Secure] 前缀标记" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在自定义服务器可以通过新的网络数据包为常规聊天设置独有的自动补全选项" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息，但这并不能从聊天日志中删除玩家的聊天消息" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1367391-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-1" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本次共修复了 41 个bug，本文来源于 AzureZeng（MCBBS） 上的译文" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.1-rc3 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-rc3.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-rc3.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-RC3" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="特性" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="添加了悦灵的复制能力" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="对幽匿催发体进行了部分调整" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了聊天可信状态" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="为聊天预览功能添加了新选项" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了玩家举报功能" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="悦灵将会围绕着正在播放音乐的唱片机跳舞" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="如果悦灵在跳舞时拿着紫水晶碎片，将会进行复制。悦灵的复制有5分钟冷却时间" />
+        </StackPanel>
+        <TextBlock Text="幽匿催发体" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在将掉落5经验，之前是20经验" />
+        </StackPanel>
+        <TextBlock Text="聊天" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="将聊天滚动条移动到了右边" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="输入聊天消息时，聊天的签名状态会用一个颜色指示器显示出来" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边(如果启用了的话)" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示蓝色" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="若开启聊天预览，而且预览消息等待被签名，那么指示器就会显示橙色" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="预览消息还未签名时，聊天预览的背景色会更淡一些" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="当服务器未启用 强制安全聊天 选项时，连接服务器时会出现警告提醒框" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在社交屏幕会将玩家最近看到的消息条目置顶" />
+        </StackPanel>
+        <TextBlock Text="聊天可信状态" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名或者被服务器篡改过的消息现在会被标记" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="缺少签名或者无效签名的消息会被标记为 “不安全”" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="被篡改过的消息会被标记为 “被修改”" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="消息的可信状态现在会用彩色指示器和图标来显示" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="彩色指示器会始终保持可见状态" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天界面打开时可见" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="指针悬停在图标上时会提供更多关于可信状态的消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="对于被修改过的消息，原始安全文本也会被显示在提示框中" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="系统消息 (非玩家聊天，比如命令的输出) 会使用灰色指示器展示" />
+        </StackPanel>
+        <TextBlock Text="聊天预览" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了“发送时”聊天预览选项，使得聊天预览仅在即将发送消息时更新" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="要确认发送消息，需要再按一次Enter/Return键" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="之前的“开启”选项现在改名为“输入时”" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="“输入时”模式时，若消息还未被服务器修改，不会再显示预览消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天预览现在会在单人模式中启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
+        </StackPanel>
+        <TextBlock Text="玩家举报" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在你可以在游戏中举报发送违规消息的玩家。举报者需要选择违反规定的个人聊天记录内容，以及举报的类型，这将会为我们的审核团队提供相关的聊天语境，以方便采取相关措施。该功能可在 社交互动 界面找到" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="可在举报时选择多条消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="选中的消息附近的一些附加消息一样会被发送，为我们的审核团队更好的理解语境" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报的类型可以从聊天举报分类中选择" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报分类的界面有一个“了解关于玩家举报的内容”的按钮，链接至一个相关的说明文章" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="附加注释可以用于提供与举报有关的细节和消息" />
+        </StackPanel>
+        <TextBlock Text="账户停用和封禁" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="若你的账户被禁止多人游戏，游戏启动时将会显示一个提示文本" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="封禁账户的原因和持续时间将会在这个界面中显示" />
+        </StackPanel>
+        <TextBlock Text="REALMS(领域服)" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="被 Java Realms 敏感词过滤器过滤的消息会用黄色标志标识" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="在 Realms 中，若玩家向一个或多个玩家发送的聊天被成功过滤，该玩家将会被提醒" />
+        </StackPanel>
+        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用于负的，或大于 32 的步进宽度(advances)的自定义字体" />
+        </StackPanel>
+        <TextBlock Text="聊天类型" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="添加到 chat_types 注册表的聊天类型现在仅被用于玩家聊天，而不会被用于系统消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型被移除了" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型已被简化，现在只需要定义 chat 和 narration 装饰" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型不再支持覆盖" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="需要使用系统消息来显示覆盖" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="msg_command 聊天类型已被分割为 msg_command_incoming 和 msg_command_outgoing" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="team_msg_command聊天类型现在分割为team_msg_command_incoming和team_msg_command_outgoing" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="team_name聊天类型参数现已被重命名为target，此聊天类型参数现被msg_command_outgoing使用" />
+        </StackPanel>
+        <TextBlock Text="组件" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送消息" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="诸如 /say 这类可以向玩家产生已签名消息的命令现在不允许使用，请使用/tellraw命令" />
+        </StackPanel>
+        <TextBlock Text="游戏事件" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play" />
+        </StackPanel>
+        <TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文" />
+        </StackPanel>
+        <TextBlock Text="服务器" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="对于专用服务器，enforce-secure-profile选项现在默认为true" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="服务器日志中，不安全消息会带有 [Not Secure] 前缀标记" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在自定义服务器可以通过新的网络数据包为常规聊天设置独有的自动补全选项" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息，但这并不能从聊天日志中删除玩家的聊天消息" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc3" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1366950-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-3" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本次共修复了10个bug，本文来源于 苦力怕553 （MCBBS） 上的译文" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.1-rc2 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-rc2.jpg" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-rc2.jpg" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-RC2" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="现在连接到不要求强制安全聊天的服务器时会弹出警告" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="调整了聊天预览选项的名称" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" “修改时”改为“输入时”" />
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="“发送时”的英文原文由“On Send”改为“While Sending”" />
+          </StackPanel>
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1365048-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-2" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本次共修复了 2 个漏洞，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.1-pre6 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-pre6.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-pre6.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE6" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在掉落 5 经验而非 20 经验" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="发送消息的签名指示器的颜色经过调整以改进无障碍访问" />
+        </StackPanel>
+        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="文本组件的run_command 点击事件不再支持任何发送聊天消息的指令了" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="应使用/tellraw 替代" />
+          </StackPanel>
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre6" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1364665-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-1-pre-release-6" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本次共修复了11个bug，本文来源于 苦力怕553 在MCBBS上的译文" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.1-pre5 " CanSwap="True" IsSwaped="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-pre5.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-pre5.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE5" />
+        </Border>
+        <!--Details-->
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <TextBlock Text="聊天" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="编写聊天信息时，聊天的签名状态会用一个颜色指示器显示出来" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边（如果启用了的话)" />
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示绿色" />
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="如果聊天预览开启了，而且预览消息等待被签名，那么指示器就会显示橙色" />
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天预览的背景在预览信息还未签名时颜色会更淡一些" />
+        </StackPanel>
+        <TextBlock Text="聊天预览" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="加入了「发送时……」聊天预览选项，使得聊天预览仅在即将发送信息时更新" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="要确认发送信息，需要再按一次回车键" />
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="之前的 「开启」 选项现在改名为「在修改后……」" />
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="「在修改后……」模式不会再显示预览，如果服务器还没有修改过消息的话" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="聊天预览在单人模式中也启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
+        </StackPanel>
+        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="team_msg_command 聊天类型现在分隔为 team_msg_command_incoming 和 team_msg_command_outgoing" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1362948-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-5" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本文使用了由卡狗于MCBBS上发布的译文" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <Grid Margin="10,10,10,30" Height="40" Width="300">
+      <Grid.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+          <BeginStoryboard>
+            <Storyboard>
+              <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.0" />
+              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" />
+              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" />
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseEnter">
+          <BeginStoryboard>
+            <Storyboard>
+              <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+              <DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="260" Duration="0:0:0.1" />
+              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseLeave">
+          <BeginStoryboard>
+            <Storyboard>
+              <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
+              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" Duration="0:0:0.5" />
+              <DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="240" Duration="0:0:0.1" />
+              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+      </Grid.Triggers>
+      <local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/archives_list.json">
+        <Border x:Name="viewBdr" Height="40" Width="240" Background="{StaticResource ColorBrush6}" Opacity="1" CornerRadius="4" BorderThickness="1.5" BorderBrush="{StaticResource ColorBrush4}">
+          <TextBlock x:Name="view" Text="浏览更早版本更新历史" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold" />
+        </Border>
+      </local:MyButton>
+    </Grid>
+    <Grid Margin="0,0,0,15">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="100">
+        </ColumnDefinition>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+      <TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+    </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,50,30,20">
+        <TextBlock Text="Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,10">
+        <TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
+        <TextBlock Text="  但有人往PCL2反馈提交新闻主页Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16" />
+        <TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的Github仓库交issue而不是在PCL2反馈交反馈（PCL2不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
+        <TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5" />
+        <Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
+          <TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
+        </Border>
+      </StackPanel>
+    </local:MyCard>
   </StackPanel>
+  <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
+    <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
+    <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
+  </StackPanel>
+  <Border Background="#CCFFFFFF" Height="180" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+    <StackPanel Margin="40,15,0,10">
+      <TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
+      <TextBlock Text="By：最亮的信标（Light Beacon）" />
+      <TextBlock Text="维护：最亮的信标（Light Beacon）、空辰KC" />
+      <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+        <TextBlock Text="订阅地址:  " />
+        <local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+        <TextBlock Text="官方网站:  " />
+        <local:MyTextButton Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+        <TextBlock Text="Github:  " />
+        <local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
+      </StackPanel>
+      <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+        <TextBlock Text="无特殊声明本主页采用 " />
+        <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
+        <TextBlock Text=" 授权。" />
+      </StackPanel>
+    </StackPanel>
+  </Border>
+</StackPanel>
