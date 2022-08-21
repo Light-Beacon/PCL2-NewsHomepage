@@ -212,6 +212,13 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="同时拥有 Java 版与基岩版将会获得新披风 " CanSwap="True">
+      <StackPanel Margin="30,40,30,20">
+        <TextBlock Text="    之前 Mojang 就在迁移的时候表示会为那些同时买了基岩版和 Java 版的人一个小礼物。" Margin="0,0,0,5" />
+        <TextBlock Text="    近日Mojang（已删除的消息）表示：如果你在 2022 年 6 月 6 日前微软账号同时拥有基岩版和 Java 版，你将会收到原版披风作为奖励。" Margin="0,0,0,5" />
+        <TextBlock Text="    （图片待传）（其实是自己搞的新闻主页生成器还没加插入图片的功能，明天就做（（（" Margin="0,0,0,5" />
+      </StackPanel>
+    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.2 " CanSwap="True">
       <!--Header-->
       <StackPanel Margin="30,40,30,20">
@@ -1154,9 +1161,9 @@
       <TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,50,30,20">
-        <TextBlock Text="Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
+    <local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft " CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <TextBlock Text="    Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
