@@ -142,6 +142,12 @@
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="FontSize" Value="28" />
       </Style>
+      <Style x:Key="imgTitle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#FF777777" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0,0,0,15" />
+      </Style>
       <Style x:Key="verTxtBdr" TargetType="Border">
         <Setter Property="Margin" Value="0,-22,-1,0" />
         <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
@@ -216,7 +222,8 @@
       <StackPanel Margin="30,40,30,20">
         <TextBlock Text="    之前 Mojang 就在迁移的时候表示会为那些同时买了基岩版和 Java 版的人一个小礼物。" Margin="0,0,0,5" />
         <TextBlock Text="    近日Mojang（已删除的消息）表示：如果你在 2022 年 6 月 6 日前微软账号同时拥有基岩版和 Java 版，你将会收到原版披风作为奖励。" Margin="0,0,0,5" />
-        <TextBlock Text="    （图片待传）（其实是自己搞的新闻主页生成器还没加插入图片的功能，明天就做（（（" Margin="0,0,0,5" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/VanillaCapePreview.jpg" Margin="10,0,10,0" />
+        <TextBlock Text="漏出的披风图片" Style="{StaticResource imgTitle}" />
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.2 " CanSwap="True">
