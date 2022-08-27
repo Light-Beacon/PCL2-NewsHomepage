@@ -218,7 +218,12 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="同时拥有 Java 版与基岩版将会获得新披风 " CanSwap="True">
+    <local:MyCard Margin="0,0,0,15" Title="Minecraft Live 将在北京时间16日临晨举行 " CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <TextBlock Text="    Mojang 宣布，今年的 Minecraft Live 将在 10 月 15 日（北京时间16日凌晨）举办。预计会有 1.20 更新内容。且 Mojang 发布视频表示会从之前的错误中吸取教训，不再宣布还没确定下来的内容。" Margin="0,0,0,5" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="同时拥有 Java 版与基岩版将会获得新披风 " CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <TextBlock Text="    之前 Mojang 就在迁移的时候表示会为那些同时买了基岩版和 Java 版的人一个小礼物。" Margin="0,0,0,5" />
         <TextBlock Text="    近日Mojang（已删除的消息）表示：如果你在 2022 年 6 月 6 日前微软账号同时拥有基岩版和 Java 版，你将会收到原版披风作为奖励。" Margin="0,0,0,5" />
