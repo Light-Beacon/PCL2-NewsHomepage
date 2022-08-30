@@ -57,7 +57,7 @@
       <Style TargetType="TextBlock">
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Foreground" Value="Black" />
       </Style>
       <Style x:Key="ListItem" TargetType="TextBlock">
@@ -218,13 +218,13 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="同时拥有 Java 版与基岩版将会获得新披风 " CanSwap="True">
+    <local:MyCard Margin="0,0,0,15" Title="同时拥有 Java 版与基岩版将会获得新披风（更新） " CanSwap="True">
       <StackPanel Margin="30,40,30,20">
         <TextBlock Text="    前情提要：之前 Mojang 就在迁移的时候表示会为那些同时买了 Java 版和基岩版的人一个小礼物。" Margin="0,0,0,5" />
         <TextBlock Text="    近日 Mojang 表示：如果你在 2022 年 6 月 6 日（Java版和基岩版开始打包出售）前微软账号同时拥有 Java 版和基岩版，你在两个版本里都会收到原版披风作为奖励。" Margin="0,0,0,5" />
         <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/VanillaCapePreview.jpg" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="11个穿着原版披风的Alex，但是你只能拿到一个披风" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="    无论是购买获取或使用兑换代码获取的 Java 版或基岩版，只要一个账号同时拥有两个版本都能收到披风。这意味着之前 “买 Java 版换 Win10 版” 时你得到的的 Win10 版绑定的微软账号和 Java 版（6月6日前）迁移过去的只要是同一个号都会收到披风。" Margin="0,0,0,5" />
+        <TextBlock Text="11个穿着原版披风的Alex，但你只能拿到一个披风" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="    无论是购买获取或使用兑换代码获取的 Java 版或基岩版，只要一个账号同时拥有两个版本都能收到披风。这意味着之前 “买 Java 版换 Win10 版” 时你得到的 Win10 版所绑定的微软账号和 Java 版（6月6日前）迁移过去的只要是同一个号都会收到披风。" Margin="0,0,0,5" />
         <TextBlock Text="    奖励将在8月31日开始发放，最多可能需要两周才会加入到你的账号。" Margin="0,0,0,5" />
         <TextBlock Text="    同一个人但 Java 版和基岩版不在同一个账号上的人不会收到奖励。" Margin="0,0,0,5" />
       </StackPanel>
