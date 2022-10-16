@@ -218,21 +218,40 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="原版披风下发时间延长到一个月 " CanSwap="True">
+    <local:MyCard Margin="0,0,0,15" Title="Minecraft Live 消息速览 " CanSwap="True">
       <StackPanel Margin="30,40,30,20">
-        <TextBlock Text="    更新：Mojang把披风下发时间延长到一个月" Margin="0,0,0,5" />
-        <TextBlock Text="    前情提要：之前 Mojang 就在迁移的时候表示会为那些同时买了 Java 版和基岩版的人一个小礼物。" Margin="0,0,0,5" />
-        <TextBlock Text="    近日 Mojang 表示：如果你在 2022 年 6 月 6 日（Java版和基岩版开始打包出售）前微软账号同时拥有 Java 版和基岩版，你在两个版本里都会收到原版披风作为奖励。" Margin="0,0,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/VanillaCapePreview.jpg" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="11个穿着原版披风的Alex，但你只能拿到一个披风" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="    无论是购买获取或使用兑换代码获取的 Java 版或基岩版，只要一个账号同时拥有两个版本都能收到披风。这意味着之前 “买 Java 版换 Win10 版” 时你得到的 Win10 版所绑定的微软账号和 Java 版（6月6日前）迁移过去的只要是同一个号都会收到披风。" Margin="0,0,0,5" />
-        <TextBlock Text="    奖励将在8月31日开始发放，最多可能需要一个月才会加入到你的账号。" Margin="0,0,0,5" />
-        <TextBlock Text="    同一个人但 Java 版和基岩版不在同一个账号上的人不会收到奖励。" Margin="0,0,0,5" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="Minecraft Live 将在北京时间10月16日凌晨举行 " CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <TextBlock Text="    Mojang 宣布，今年的 Minecraft Live 将在 10 月 15 日（北京时间16日凌晨）举办。预计会有 1.20 更新内容。且 Mojang 发布视频表示会从之前的错误中吸取教训，不再宣布还没确定下来的内容。" Margin="0,0,0,5" />
+        <TextBlock Text="Minecraft 即将到来的更新内容" Style="{StaticResource h2}" />
+        <TextBlock Text="骆驼" Style="{StaticResource h3}" />
+        <TextBlock Text="    新的可供骑乘的生物，可同时搭载两名玩家。" Margin="0,0,0,5" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/camels.png" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="夕阳下的骆驼" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="    骆驼很高，一些生物（如僵尸）无法攻击骆驼上的玩家，但骆驼后座的玩家可以对其进行攻击。" Margin="0,0,0,5" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/cameland2players.png" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="骆驼后座的玩家可以进行攻击" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="    骆驼的食物是仙人掌。" Margin="0,0,0,5" />
+        <TextBlock Text="新版书架" Style="{StaticResource h3}" />
+        <TextBlock Text="    新版书架上的书可以随意拿取和放置" Margin="0,0,0,5" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/newbookshelf.png" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="新的书架" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="    新版书架也可以通过比较器产生红石信号" Margin="0,0,0,5" />
+        <TextBlock Text="竹子系方块" Style="{StaticResource h3}" />
+        <TextBlock Text="    竹子也可以当木头一类方块用了，还有新的竹筏" Margin="0,0,0,5" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/bamboo.png" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="竹子系方块与竹筏" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="悬挂告示牌" Style="{StaticResource h3}" />
+        <TextBlock Text="    新的告示牌，拥有三种不同的悬挂形式，也可以用不同的木头（含竹子）制作" Margin="0,0,0,5" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/newsign.png" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="悬挂告示牌" Style="{StaticResource imgTitle}" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/signs.png" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="各种各样的悬挂告示牌" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="Sniffer" Style="{StaticResource h3}" />
+        <TextBlock Text="    本次 MobVote 的获胜者，一个已经消失灭迹的远古生物，它的蛋潜兴许藏在水下遗迹中，等待着玩家的发现" Margin="0,0,0,5" />
+        <TextBlock Text="    它可以找到远古种子，长出新的独特植物，种子长出的植物只有装饰用途" Margin="0,0,0,5" />
+        <TextBlock Text="其它" Style="{StaticResource h2}" />
+        <TextBlock Text="    Mojang已承诺本次 Minecraft Live 展示内容将会全部实装" Margin="0,0,0,5" />
+        <TextBlock Text="    1.20 更新名称未定" Margin="0,0,0,5" />
+        <TextBlock Text="    &#xD;&#xA;本文图源MCBBS" Margin="0,0,0,5" />
+        <TextBlock Text="    &#xD;&#xA;" Margin="0,0,0,5" />
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.2 " CanSwap="True">
