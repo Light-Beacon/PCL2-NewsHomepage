@@ -1,5 +1,7 @@
 # PCL2新闻主页
 
+<div align="center"><img src="https://www.lightbeacon.top/pnh/newsimgs/header.jpg" alt="新闻主页 Header"/></div>
+
 在PCL2中提供MC相关新闻的主页
 
 订阅地址： **`https://news.bugjump.net`**
