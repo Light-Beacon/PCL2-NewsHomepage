@@ -23,1835 +23,1476 @@
 	订阅地址：https://news.bugjump.net
 	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
 	协议：CC BY-NC-SA 4.0
--->
-<StackPanel>
-  <StackPanel Margin="0,-10,0,0">
-    <!--Animations Starts-->
-    <StackPanel.Triggers>
-      <EventTrigger RoutedEvent="StackPanel.Loaded">
-        <BeginStoryboard>
-          <Storyboard x:Name="animation1" RepeatBehavior="Forever">
+--><StackPanel xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PCL2" ><StackPanel Margin="0,-10,0,0">
+	<!--Animations Starts-->
+	<StackPanel.Triggers><EventTrigger RoutedEvent="StackPanel.Loaded">
+    <BeginStoryboard>
+        <Storyboard x:Name="animation1" RepeatBehavior="Forever">
             <ColorAnimation Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#FF000000" Duration="0:0:0" />
             <ColorAnimation BeginTime="0:0:5" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
             <ColorAnimation BeginTime="0:0:13" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
             <ColorAnimation Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#00000000" Duration="0:0:0" />
             <ColorAnimation BeginTime="0:0:6" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
             <ColorAnimation BeginTime="0:0:12" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
-          </Storyboard>
-        </BeginStoryboard>
-      </EventTrigger>
-    </StackPanel.Triggers>
-    <!--Animations Ends-->
-    <StackPanel.Resources>
-      <!--Template Starts-->
-      <!--Template Ends-->
-      <!--Styles Starts-->
-      <!--即将弃用-->
-      <Style TargetType="Ellipse">
-        <Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
-        <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="Height" Value="8" />
-        <Setter Property="Width" Value="8" />
-        <Setter Property="Margin" Value="0,0,10,0" />
-      </Style>
-      <Style TargetType="TextBlock">
-        <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="Foreground" Value="Black" />
-      </Style>
-      <Style x:Key="ListItem" TargetType="TextBlock">
-        <Setter Property="Margin" Value="15,-15,5,15" />
-        <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="FontSize" Value="16" />
-        <Setter Property="Foreground" Value="Black" />
-      </Style>
-      <Style x:Key="ListItemLink" TargetType="local:MyTextButton">
-        <Setter Property="Margin" Value="15,-15,5,15" />
-        <Setter Property="TextElement.FontSize" Value="20" />
-      </Style>
-      <Style x:Key="ListStyle" TargetType="StackPanel">
-        <Setter Property="Margin" Value="22,0,14,5" />
-      </Style>
-      <Style x:Key="Read" TargetType="local:MyButton">
-        <Setter Property="Margin" Value="0,0,5,5" />
-        <Setter Property="Height" Value="35" />
-        <Setter Property="Padding" Value="13,0,13,0" />
-        <Setter Property="EventType" Value="打开网页" />
-      </Style>
-      <Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-        <Setter Property="Grid.Column" Value="0" />
-        <Setter Property="Text" Value="Minecraft Wiki" />
-        <!--<Setter Property="ColorType" Value="Highlight"/>-->
-      </Style>
-      <Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
-        <Setter Property="Grid.Row" Value="0" />
-        <Setter Property="Grid.ColumnSpan" Value="3" />
-      </Style>
-      <Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-        <Setter Property="Grid.Column" Value="1" />
-        <Setter Property="Text" Value="MCBBS" />
-      </Style>
-      <Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
-        <Setter Property="Grid.Column" Value="0" />
-        <Setter Property="Grid.Row" Value="1" />
-      </Style>
-      <Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-        <Setter Property="Grid.Column" Value="2" />
-        <Setter Property="Text" Value="官网" />
-      </Style>
-      <Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
-        <Setter Property="Grid.Column" Value="1" />
-        <Setter Property="Grid.Row" Value="1" />
-      </Style>
-      <Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-        <Setter Property="Grid.Column" Value="3" />
-        <Setter Property="Text" Value="Reddit" />
-      </Style>
-      <Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
-        <Setter Property="Grid.Column" Value="2" />
-        <Setter Property="Grid.Row" Value="1" />
-      </Style>
-      <Style x:Key="Code" TargetType="Border">
-        <Setter Property="Background" Value="#e0e0e0" />
-        <Setter Property="BorderBrush" Value="#444" />
-        <Setter Property="CornerRadius" Value="1" />
-        <Setter Property="Margin" Value="5,0,5,0" />
-        <Setter Property="BorderThickness" Value="1" />
-      </Style>
-      <Style TargetType="TextBox">
-        <Setter Property="Background" Value="{x:Null}" />
-        <Setter Property="Padding" Value="3,0,3,0" />
-        <Setter Property="IsReadOnly" Value="True" />
-        <Setter Property="BorderBrush" Value="{x:Null}" />
-      </Style>
-      <Style x:Key="verImgBdr" TargetType="Border">
-        <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="BorderThickness" Value="4" />
-        <Setter Property="VerticalAlignment" Value="Top" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
-        <Setter Property="CornerRadius" Value="7" />
-      </Style>
-      <Style x:Key="verTxtBlk" TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="TextAlignment" Value="Center" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-        <Setter Property="Width" Value="160" />
-        <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="FontSize" Value="28" />
-      </Style>
-      <Style x:Key="imgTitle" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="Foreground" Value="#FF777777" />
-        <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="Margin" Value="0,0,0,15" />
-      </Style>
-      <Style x:Key="verTxtBdr" TargetType="Border">
-        <Setter Property="Margin" Value="0,-22,-1,0" />
-        <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-        <Setter Property="Width" Value="180" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="CornerRadius" Value="5" />
-      </Style>
-      <!--h2-->
-      <Style x:Key="h2" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="28" />
-        <Setter Property="Padding" Value="15,5" />
-        <Setter Property="Margin" Value="5,15,5,10" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
-      </Style>
-      <!--h3-->
-      <Style x:Key="h3" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="22" />
-        <Setter Property="Padding" Value="30,0" />
-        <Setter Property="Margin" Value="-10,0,10,17" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-      </Style>
-      <!--h4-->
-      <Style x:Key="h4" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="16" />
-        <Setter Property="Padding" Value="30,0" />
-        <Setter Property="Margin" Value="5,0,10,10" />
-        <Setter Property="FontWeight" Value="Bold" />
-        <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-      </Style>
-      <!--footnote-->
-      <Style x:Key="footnote" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="14" />
-        <Setter Property="Padding" Value="30,0" />
-        <Setter Property="Margin" Value="0,20,0,15" />
-        <Setter Property="Foreground" Value="#FF777777" />
-        <Setter Property="TextWrapping" Value="Wrap" />
-      </Style>
-      <!--ButtonNameBorder-->
-      <!--ImageButtonStyle-->
-      <Style x:Key="ImgBtnImg" TargetType="Image">
-        <Setter Property="MaxWidth" Value="70px" />
-        <Setter Property="MaxHeight" Value="70px" />
-        <Setter Property="Margin" Value="3" />
-      </Style>
-      <Style x:Key="ImgBtnBdr" TargetType="Border">
-        <Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
-        <Setter Property="BorderThickness" Value="2px" />
-        <Setter Property="CornerRadius" Value="5" />
-        <Setter Property="Margin" Value="2px" />
-      </Style>
-      <Style x:Key="NameBdr" TargetType="Border">
-        <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="CornerRadius" Value="5,5,0,0" />
-        <Setter Property="Margin" Value="-2,-2,-2,2" />
-      </Style>
-      <Style x:Key="ImgBtnTxt" TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Grid.Row" Value="0" />
-        <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-        <Setter Property="FontSize" Value="12px" />
-        <Setter Property="Margin" Value="8px,2px" />
-      </Style>
-    </StackPanel.Resources>
-    <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
-      <Grid Margin="10,0,0,0">
+        </Storyboard>
+    </BeginStoryboard>
+</EventTrigger></StackPanel.Triggers>
+	<!--Animations Ends-->
+
+	<StackPanel.Resources>
+		<!--Template Starts-->
+		<!--Template Ends-->
+		<!--Styles Starts--><!--即将弃用-->
+<Style TargetType="Ellipse">
+    <Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="Height" Value="8" />
+    <Setter Property="Width" Value="8" />
+    <Setter Property="Margin" Value="0,0,10,0" />
+</Style>
+<Style TargetType="TextBlock">
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Foreground" Value="Black" />
+</Style>
+<Style x:Key="ListItem" TargetType="TextBlock">
+    <Setter Property="Margin" Value="15,-15,5,15" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="Foreground" Value="Black" />
+</Style>
+<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+    <Setter Property="Margin" Value="15,-15,5,15" />
+    <Setter Property="TextElement.FontSize" Value="20" />
+</Style>
+<Style x:Key="ListStyle" TargetType="StackPanel">
+    <Setter Property="Margin" Value="22,0,14,5" />
+</Style>
+<Style x:Key="Read" TargetType="local:MyButton">
+    <Setter Property="Margin" Value="0,0,5,5" />
+    <Setter Property="Height" Value="35" />
+    <Setter Property="Padding" Value="13,0,13,0" />
+    <Setter Property="EventType" Value="打开网页" />
+</Style>
+<Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+    <Setter Property="Grid.Column" Value="0" />
+    <Setter Property="Text" Value="Minecraft Wiki" />
+    <!--<Setter Property="ColorType" Value="Highlight"/>-->
+</Style>
+<Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
+    <Setter Property="Grid.Row" Value="0"/>
+    <Setter Property="Grid.ColumnSpan" Value="3"/>
+</Style>
+<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+    <Setter Property="Grid.Column" Value="1" />
+    <Setter Property="Text" Value="MCBBS" />
+</Style>
+<Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
+    <Setter Property="Grid.Column" Value="0" />
+    <Setter Property="Grid.Row" Value="1" />
+</Style>
+<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+    <Setter Property="Grid.Column" Value="2"/>
+    <Setter Property="Text" Value="官网" />
+</Style>
+<Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
+    <Setter Property="Grid.Column" Value="1" />
+    <Setter Property="Grid.Row" Value="1" />
+</Style>
+<Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+    <Setter Property="Grid.Column" Value="3" />
+    <Setter Property="Text" Value="Reddit" />
+</Style>
+<Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
+    <Setter Property="Grid.Column" Value="2"/>
+    <Setter Property="Grid.Row" Value="1" />
+</Style>
+<Style x:Key="Code" TargetType="Border">
+    <Setter Property="Background" Value="#e0e0e0" />
+    <Setter Property="BorderBrush" Value="#444" />
+    <Setter Property="CornerRadius" Value="1" />
+    <Setter Property="Margin" Value="5,0,5,0" />
+    <Setter Property="BorderThickness" Value="1" />
+</Style>
+<Style TargetType="TextBox">
+    <Setter Property="Background" Value="{x:Null}" />
+    <Setter Property="Padding" Value="3,0,3,0" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="BorderBrush" Value="{x:Null}" />
+</Style>
+<Style x:Key="verImgBdr" TargetType="Border">
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="BorderThickness" Value="4" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+    <Setter Property="CornerRadius" Value="7" />
+</Style>
+<Style x:Key="verTxtBlk" TargetType="TextBlock">
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="TextAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+    <Setter Property="Width" Value="160" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="FontSize" Value="28" />
+</Style>
+<Style x:Key="imgTitle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Foreground" Value="#FF777777" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="Margin" Value="0,0,0,15" />
+</Style>
+<Style x:Key="verTxtBdr" TargetType="Border">
+    <Setter Property="Margin" Value="0,-22,-1,0" />
+    <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+    <Setter Property="Width" Value="180" />
+    <Setter Property="Height" Value="40" />
+    <Setter Property="CornerRadius" Value="5" />
+</Style>
+
+<!--h2-->
+<Style x:Key="h2" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="28" />
+    <Setter Property="Padding" Value="15,5" />
+    <Setter Property="Margin" Value="5,15,5,10" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+</Style>
+
+<!--h3-->
+<Style x:Key="h3" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="22" />
+    <Setter Property="Padding" Value="30,0" />
+    <Setter Property="Margin" Value="-10,0,10,17" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+</Style>
+
+<!--h4-->
+<Style x:Key="h4" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="Padding" Value="30,0" />
+    <Setter Property="Margin" Value="5,0,10,10" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+</Style>
+
+<!--footnote-->
+<Style x:Key="footnote" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Padding" Value="30,0" />
+    <Setter Property="Margin" Value="0,20,0,15" />
+    <Setter Property="Foreground" Value="#FF777777" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+</Style>
+
+<!--ButtonNameBorder-->
+
+<!--ImageButtonStyle-->
+<Style x:Key="ImgBtnImg" TargetType="Image">
+	<Setter Property="MaxWidth" Value="70px" />
+	<Setter Property="MaxHeight" Value="70px" />
+	<Setter Property="Margin" Value="3" />
+</Style>
+<Style x:Key="ImgBtnBdr" TargetType="Border">
+	<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+	<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+	<Setter Property="BorderThickness" Value="2px" />
+	<Setter Property="CornerRadius" Value="5" />
+	<Setter Property="Margin" Value="2px" />
+</Style>
+<Style x:Key="NameBdr" TargetType="Border">
+    <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="CornerRadius" Value="5,5,0,0" />
+    <Setter Property="Margin" Value="-2,-2,-2,2" />
+</Style>
+<Style x:Key="ImgBtnTxt" TargetType="TextBlock">
+	<Setter Property="HorizontalAlignment" Value="Center" />
+	<Setter Property="VerticalAlignment" Value="Center" />
+	<Setter Property="Grid.Row" Value="0" />
+	<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+	<Setter Property="FontSize" Value="12px" />
+	<Setter Property="Margin" Value="8px,2px" />
+</Style></StackPanel.Resources><Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+    <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
                 📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
                 📰 如果您的账号未迁移且无法登录，请看新闻主页最下边的提示。
     </TextBlock>
-      </Grid>
-    </Border>
-    <Grid Margin="0,0,0,15">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-      </Grid.ColumnDefinitions>
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 22w45a " CanSwap="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w45a.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w45a.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="22W45A" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="新特性" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="增加了新的离线玩家默认皮肤" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了竹方块以及去皮竹块" />
-        </StackPanel>
-        <TextBlock Text="更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="荒野更新的音乐声音略减" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当潜影盒打开时，它会破坏并掉落附着在其打开面的方块（如火把）" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="当潜影盒开启时，需要支撑的方块无法放置在其打开面" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="旁观者选项中的“传送到队友处” 选项现在只展示给有可行目标玩家的团队" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="在“控制”菜单中添加了默认关闭的“管理员项目”选项" />
-        </StackPanel>
-        <TextBlock Text="恼鬼" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="更换了恼鬼的模型与纹理" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="恼鬼的碰撞箱现在稍微大了点，使其更加好对付" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="创造模式物品栏的变化" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当以下条件齐全，管理员专属的物品将会出现在新的“管理工具”选项卡:" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="控制菜单中管理员物品选项被设为 ON" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="拥有管理员权限" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="如果在物品栏打开时丧失管理员权限，则该选项卡将立即隐藏" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="现在还包括结构方块和以及各种亮度的光源方块" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="后略，详见更新日志" />
-        </StackPanel>
-        <TextBlock Text="22W45A 的技术性修改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="/publish 指令现在可以通过新的参数来启用命令并设置默认游戏模式" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="新语法: /publish [allowCommands] [gamemode] [port]" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="修改了“开放到局域网”界面" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="现在可以在界面中选取开放局域网世界的端口" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="游戏模式和允许作弊按钮现在使用世界的默认值" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="资源包版本现在为 12" />
-        </StackPanel>
-        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="马在穿过下界传送门时会窒息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="缩放后的地图的悬浮提示中依然显示原先的缩放值" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="不能将水桶中的水倒入含水方块里" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="影人愤怒/尖叫声音事件对应的字幕与闲置声音的相同" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="商家交易选择数据包（客户端发送至服务端）不检查负指数" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="玩家坐标与下界传送门不同步" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="有序配方中的空槽位匹配了空标签" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="如果启用“行距”聊天设置，聊天栏中的悬停和点击事件将被覆盖" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="使用新的网络协议后，玩家无法进入离线服务器" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w45a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1395379-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w45a" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="部分译文来自cutemiku，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="Minecraft Live 消息速览 " CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <TextBlock Text="Minecraft 即将到来的更新内容" Style="{StaticResource h2}" />
-        <TextBlock Text="骆驼" Style="{StaticResource h3}" />
-        <TextBlock Text="    新的可供骑乘的生物，可同时搭载两名玩家。" Margin="0,0,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/camels.png" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="夕阳下的骆驼" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="    骆驼很高，一些生物（如僵尸）无法攻击骆驼上的玩家，但骆驼后座的玩家可以对其进行攻击。" Margin="0,0,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/cameland2players.png" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="骆驼后座的玩家可以进行攻击" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="    骆驼的食物是仙人掌。" Margin="0,0,0,5" />
-        <TextBlock Text="新版书架" Style="{StaticResource h3}" />
-        <TextBlock Text="    新版书架上的书可以随意拿取和放置" Margin="0,0,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/newbookshelf.png" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="新的书架" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="    新版书架也可以通过比较器产生红石信号" Margin="0,0,0,5" />
-        <TextBlock Text="竹子系方块" Style="{StaticResource h3}" />
-        <TextBlock Text="    竹子也可以当木头一类方块用了，还有新的竹筏" Margin="0,0,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/bamboo.png" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="竹子系方块与竹筏" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="悬挂告示牌" Style="{StaticResource h3}" />
-        <TextBlock Text="    新的告示牌，拥有三种不同的悬挂形式，也可以用不同的木头（含竹子）制作" Margin="0,0,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/newsign.png" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="悬挂告示牌" Style="{StaticResource imgTitle}" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/signs.png" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="各种各样的悬挂告示牌" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="Sniffer" Style="{StaticResource h3}" />
-        <TextBlock Text="    本次 MobVote 的获胜者，一个已经消失灭迹的远古生物，它的蛋潜兴许藏在水下遗迹中，等待着玩家的发现" Margin="0,0,0,5" />
-        <TextBlock Text="    它可以找到远古种子，长出新的独特植物，种子长出的植物只有装饰用途" Margin="0,0,0,5" />
-        <TextBlock Text="其它" Style="{StaticResource h2}" />
-        <TextBlock Text="    Mojang已承诺本次 Minecraft Live 展示内容将会全部实装" Margin="0,0,0,5" />
-        <TextBlock Text="    1.20 更新名称未定" Margin="0,0,0,5" />
-        <TextBlock Text="    &#xD;&#xA;本文图源MCBBS" Margin="0,0,0,5" />
-      </StackPanel>
-    </local:MyCard>
-    <Grid Margin="0,0,0,15">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-      </Grid.ColumnDefinitions>
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-    </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="1.19.2 " CanSwap="True" IsSwaped="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2.jpg" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2.jpg" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="修复" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="修复了玩家被踢出启用安全聊天的服务器的问题" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="修复了社交屏幕的崩溃" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本文来源 ff98sha（MCBBS）" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <Grid Margin="0,0,0,15">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-      </Grid.ColumnDefinitions>
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-    </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="22w44a " CanSwap="True" IsSwaped="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w44a.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w44a.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="22W44A" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="竹马赛克可以作为燃料" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="有关创造模式背包的更多变更" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="有关怪物刷怪笼的变更" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="有关刷怪蛋的变更" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="有关脚步声的变更" />
-        </StackPanel>
-        <TextBlock Text="创造模式背包的变更" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="略，详见完整日志" />
-        </StackPanel>
-        <TextBlock Text="怪物刷怪笼" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被玩家放置时，刷怪笼不会拥有一个默认生成的生物类型了 (之前是猪)" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="若生成生物类型未定义，不会产生火焰粒子了" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="重命名为 Monster Spawner 以与基岩版相匹配，并移除了紫色文字颜色" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="鼠标中键选取方块现在可对刷怪笼方块生效" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在生物类型会展示在刷怪笼物品堆上方的悬浮说明中" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="若生物类型尚未定义，悬浮说明会说明怎样设置" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="刷怪蛋" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="将末影龙、铁傀儡、雪傀儡、凋灵生物刷怪蛋添加到了创造模式" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="为防止意外破坏玩家的建筑，末影龙和凋灵刷怪蛋仅可通过指令取得" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="为了和恶魂刷怪蛋相区分，修改了北极熊刷怪蛋的颜色" />
-        </StackPanel>
-        <TextBlock Text="音效" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="在地毯、睡莲、小型紫晶芽上走动时，可以听到脚步声了" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="穿过下界苗、发光地衣、绯红菌索、诡异菌索时，可以听见脚步声了" />
-        </StackPanel>
-        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-        <TextBlock Text="游戏规则" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了 blockExplosionDropDecay, mobExplosionDropDecay 和 tntExplosionDropDecay 游戏规则" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="设为 false 时，所有被爆炸摧毁的方块都会掉落物品" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="设为 true 时，方块将根据距离爆炸中心的距离随机掉落物品" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="对 TNT 默认设为 false，对其他方块和生物默认设为 true" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了 snowAccumulationHeight 游戏规则" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="下雪时，此游戏规则决定了可在每个方块上积累的雪层最大数量" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="默认为 1，设为 0 时会导致雪根本不会产生，设为 8 或更高会产生完整方块高度大小的雪" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了 waterSourceConversion 和 lavaSourceConversion 游戏规则" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="设为 true 时，允许此种液体的新源头形成" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="默认对水设为 true，对熔岩设为 false" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了 globalSoundEvents 游戏规则，控制某些游戏瞬间是否可以无视距离，被所有玩家听到" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="默认设为 true" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="在疾跑状态下脱离可骑乘实体后，疾跑状态不会解除" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="海龟没有繁殖冷却期" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="重建世界时清空种子输入框不会使用随机种子，而是会继续使用原种子" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="青蛙应用缓降时，行走动画也会放慢速度" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当使用--server 参数加入服务器时，不会向玩家展示安全聊天警告或聊天预览警告界面" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="骆驼在寻路时不会越过1.5格高的方块" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="生物总是朝向南方，即使给定了旋转值" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="存在保存了的玩家举报草稿时，按下 ESC 键会导致游戏崩溃" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="只输入举报类型时，不会提示是否将聊天举报存为草稿" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w44a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1393549-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w44a" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本文来源：苦力怕553（MCBBS）、漏洞翻译由 SPXX 提供" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="22w43a " CanSwap="True" IsSwaped="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w43a.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w43a.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="22W43A" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="修改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="更改了骆驼的刷怪蛋的颜色" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="调整了骆驼走路的动画" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="栅栏门的中心不会为其下方的方块提供支撑" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报界面现在显示被举报的玩家加入聊天" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="更多的创造模式物品栏的更改" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="为玩家举报添加了草稿功能" />
-        </StackPanel>
-        <TextBlock Text="更多的创造模式物品栏的更改" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="因为一大堆反馈的提交，所以我们再次更改了创造模式物品栏的顺序" />
-        </StackPanel>
-        <TextBlock Text="添加了玩家聊天举报的草稿功能" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当离开玩家聊天举报界面时，举报内容可以直接放弃或作为草稿保存" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="当举报界面被强制关掉时（例如玩家突然死亡），举报内容默认作为草稿保存" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="保存的草稿将一直保存，直到玩家退出服务器或离开这个世界" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="当离开时，会提示是否放弃或提交这个举报" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="将线性代数类型迁移到 Java OpenGL 数学库(JOML)" />
-        </StackPanel>
-        <TextBlock Text="网络协议" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以在玩家接收的的第一个聊天数据包中缓慢分发个人信息公钥" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="个人信息公钥现在无需重连就可刷新" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="客户端现在会在收到新的登录包时刷新聊天会话" />
-        </StackPanel>
-        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="DeathTime 的值大于20的生物行为表现异常" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="盾牌的格挡方向不正确" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="盾牌无法格挡末地水晶的爆炸" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="盾牌无法格挡床和重生锚的爆炸" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被盾牌挡下的恶魂火球爆炸后仍能造成伤害" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当破坏高海草的其中一个方块时，其他方块被连带破坏时变为空气而不是水" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="喷溅型水瓶不会扑灭生物和玩家" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="村民变成僵尸后，重新进入世界会使其丢失原有的交易折扣" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="在水中会受到伤害的生物在船上不会受到伤害" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="其它漏洞详见完整更新日志" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w43a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1391775-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w43a" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本文翻译取自sky_tianle（MCBBS），漏洞翻译由 SPXX 志愿者提供" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="22w42a " CanSwap="True" IsSwaped="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="22W42A" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="    注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Margin="0,0,0,5" />
-        <TextBlock Text="    你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Margin="0,0,0,5" />
-        <TextBlock Text="新特性" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="一些实验性特性以及通过内置数据包的形式可以被使用" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="收纳袋现在以实验性特性回归" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="增加了新的 “全景滚动速度” 无障碍选项" />
-        </StackPanel>
-        <TextBlock Text="实验性特性" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="一些实验性特性现在需要启用才能在世界中体现" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="一些特性在创建世界时以内置数据包的方式启用" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="特性切换本意是隐藏未完成或实验性特性，以确保已经存在的世界不受到影响" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="使用实验性特性的世界将会在世界选择列表中被标记为 “实验性”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="已经存在的世界不能切换实验性特性启用状态" />
-        </StackPanel>
-        <TextBlock Text="骆驼" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="骆驼可以装备马鞍，可以同时承载两位玩家" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="骆驼会在沙漠村庄中自然生成" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="骆驼很高" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="大多数敌对生物在你坐在骆驼上时够不到你" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="它们可以无需蓄力而越过栅栏" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="骆驼非常优雅，但脾气也不是太好" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="它们会随机地坐下" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="在坐下的时候，很难去让其移动" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="骆驼要么走得很慢，要么跑得飞快" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="它们也可以损耗耐力向前冲去" />
-        </StackPanel>
-        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-          <WrapPanel.Resources>
-            <Style TargetType="local:MyButton">
-              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
-            </Style>
-          </WrapPanel.Resources>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/骆驼">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="骆驼" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a/Camel.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-        </WrapPanel>
-        <TextBlock Text="竹子类" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="新方块" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹板" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹门" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹活板门" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹告示牌" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹楼梯" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹台阶" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹栅栏" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹栅栏门" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹按钮" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹压力板" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="竹马赛克" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="竹筏与竹运输筏" />
-        </StackPanel>
-        <TextBlock Text="錾制书架" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="由 6个木板 和 3个木质台阶 合成" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="能存放书、书与笔、成书和附魔书，最多能放下6本" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="比较器可以检测最后一本书的放置/移出" />
-        </StackPanel>
-        <TextBlock Text="悬挂告示牌" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="悬挂告示牌比普通告示牌造价更高，由2个锁链与6个去皮原木合成6个悬挂告示牌" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="可以以以下方式悬挂" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="在方块下悬挂" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="在方块旁悬挂" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="在另一个悬挂告示牌旁或下悬挂" />
-          </StackPanel>
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="不像普通告示牌那样，它们在周围没有方块支撑时无法直接支撑在地上" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="但当支撑方块移除后，悬挂告示牌不会掉落" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="音效" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="各种木头变体现在在放置、破坏、在其上行走时拥有独特的声音" />
-        </StackPanel>
-        <TextBlock Text="更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="重置了创造物品栏标签" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天的更改" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="Realms 新闻按钮现在打开链接前会弹出确认提示" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="要塞生成代码更加高效，导致要塞位置偏移" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="它们仍在同心环内生成，但它们在同心环内的位置可能有略微变化" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="创造物品栏" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="方块与物品重新分类并排序，详见完整更新日志" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="移除石化橡木台阶，但仍可通过指令放置" />
-        </StackPanel>
-        <TextBlock Text="聊天" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="移除了聊天预览" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被服务器管理员删除的聊天消息将会替换为提示而不再是直接隐藏" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被删除的消息会在隐藏前显示至少三秒" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天信任状态指示微调" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="部分过滤的聊天信息会变成灰色乱码，鼠标悬浮时会显示其被过滤" />
-        </StackPanel>
-        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="详见完整日志" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w42a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1390920-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w42a" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="可能不是最终译名" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="1.19.1 " CanSwap="True" IsSwaped="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="特性" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了悦灵的复制能力" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="对幽匿催发体进行了部分调整" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入了聊天可信状态" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="为聊天预览功能添加了新选项" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入了玩家举报功能" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="悦灵将会围绕着正在播放音乐的唱片机跳舞" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="如果悦灵在跳舞时拿着紫水晶碎片，将会进行复制。悦灵的复制有5分钟冷却时间" />
-        </StackPanel>
-        <TextBlock Text="幽匿催发体" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在将掉落5经验，之前是20经验" />
-        </StackPanel>
-        <TextBlock Text="聊天" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="将聊天滚动条移动到了右边" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="输入聊天消息时，聊天的签名状态会用一个颜色指示器显示出来" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边(如果启用了的话)" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示蓝色" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="若开启聊天预览，而且预览消息等待被签名，那么指示器就会显示橙色" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="预览消息还未签名时，聊天预览的背景色会更淡一些" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当服务器未启用 强制安全聊天 选项时，连接服务器时会出现警告提醒框" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在社交屏幕会将玩家最近看到的消息条目置顶" />
-        </StackPanel>
-        <TextBlock Text="聊天可信状态" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名或者被服务器篡改过的消息现在会被标记" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="缺少签名或者无效签名的消息会被标记为 “不安全”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被篡改过的消息会被标记为 “被修改”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="消息的可信状态现在会用彩色指示器和图标来显示" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="彩色指示器会始终保持可见状态" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天界面打开时可见" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="指针悬停在图标上时会提供更多关于可信状态的消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="对于被修改过的消息，原始安全文本也会被显示在提示框中" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="系统消息 (非玩家聊天，比如命令的输出) 会使用灰色指示器展示" />
-        </StackPanel>
-        <TextBlock Text="聊天预览" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入了“发送时”聊天预览选项，使得聊天预览仅在即将发送消息时更新" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="要确认发送消息，需要再按一次Enter/Return键" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="之前的“开启”选项现在改名为“输入时”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="“输入时”模式时，若消息还未被服务器修改，不会再显示预览消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天预览现在会在单人模式中启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
-        </StackPanel>
-        <TextBlock Text="玩家举报" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在你可以在游戏中举报发送违规消息的玩家。举报者需要选择违反规定的个人聊天记录内容，以及举报的类型，这将会为我们的审核团队提供相关的聊天语境，以方便采取相关措施。该功能可在 社交互动 界面找到" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="可在举报时选择多条消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="选中的消息附近的一些附加消息一样会被发送，为我们的审核团队更好的理解语境" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报的类型可以从聊天举报分类中选择" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报分类的界面有一个“了解关于玩家举报的内容”的按钮，链接至一个相关的说明文章" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="附加注释可以用于提供与举报有关的细节和消息" />
-        </StackPanel>
-        <TextBlock Text="账户停用和封禁" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="若你的账户被禁止多人游戏，游戏启动时将会显示一个提示文本" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="封禁账户的原因和持续时间将会在这个界面中显示" />
-        </StackPanel>
-        <TextBlock Text="REALMS(领域服)" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被 Java Realms 敏感词过滤器过滤的消息会用黄色标志标识" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="在 Realms 中，若玩家向一个或多个玩家发送的聊天被成功过滤，该玩家将会被提醒" />
-        </StackPanel>
-        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用于负的，或大于 32 的步进宽度(advances)的自定义字体" />
-        </StackPanel>
-        <TextBlock Text="聊天类型" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加到 chat_types 注册表的聊天类型现在仅被用于玩家聊天，而不会被用于系统消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型被移除了" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型已被简化，现在只需要定义 chat 和 narration 装饰" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型不再支持覆盖" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="需要使用系统消息来显示覆盖" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="msg_command 聊天类型已被分割为 msg_command_incoming 和 msg_command_outgoing" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="team_msg_command聊天类型现在分割为team_msg_command_incoming和team_msg_command_outgoing" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="team_name聊天类型参数现已被重命名为target，此聊天类型参数现被msg_command_outgoing使用" />
-        </StackPanel>
-        <TextBlock Text="组件" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="诸如 /say 这类可以向玩家产生已签名消息的命令现在不允许使用，请使用/tellraw命令" />
-        </StackPanel>
-        <TextBlock Text="游戏事件" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play" />
-        </StackPanel>
-        <TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文" />
-        </StackPanel>
-        <TextBlock Text="服务器" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="对于专用服务器，enforce-secure-profile选项现在默认为true" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="服务器日志中，不安全消息会带有 [Not Secure] 前缀标记" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在自定义服务器可以通过新的网络数据包为常规聊天设置独有的自动补全选项" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息，但这并不能从聊天日志中删除玩家的聊天消息" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1367391-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-1" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本次共修复了 41 个bug，本文来源于 AzureZeng（MCBBS） 上的译文" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="1.19.1-rc3 " CanSwap="True" IsSwaped="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-rc3.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.1-rc3.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-RC3" />
-        </Border>
-        <!--Details-->
-        <TextBlock Text="特性" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加了悦灵的复制能力" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="对幽匿催发体进行了部分调整" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入了聊天可信状态" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="为聊天预览功能添加了新选项" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入了玩家举报功能" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="悦灵将会围绕着正在播放音乐的唱片机跳舞" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="如果悦灵在跳舞时拿着紫水晶碎片，将会进行复制。悦灵的复制有5分钟冷却时间" />
-        </StackPanel>
-        <TextBlock Text="幽匿催发体" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体现在将掉落5经验，之前是20经验" />
-        </StackPanel>
-        <TextBlock Text="聊天" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="将聊天滚动条移动到了右边" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="输入聊天消息时，聊天的签名状态会用一个颜色指示器显示出来" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="指示器会显示在聊天输入区的左边，或者是在聊天预览区的左边(如果启用了的话)" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="如果聊天是签名过的，那么指示器会显示蓝色" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="若开启聊天预览，而且预览消息等待被签名，那么指示器就会显示橙色" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="预览消息还未签名时，聊天预览的背景色会更淡一些" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="当服务器未启用 强制安全聊天 选项时，连接服务器时会出现警告提醒框" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在社交屏幕会将玩家最近看到的消息条目置顶" />
-        </StackPanel>
-        <TextBlock Text="聊天可信状态" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="没有经过安全聊天系统签名或者被服务器篡改过的消息现在会被标记" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="缺少签名或者无效签名的消息会被标记为 “不安全”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被篡改过的消息会被标记为 “被修改”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="消息的可信状态现在会用彩色指示器和图标来显示" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="彩色指示器会始终保持可见状态" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="图标仅会在聊天界面打开时可见" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="指针悬停在图标上时会提供更多关于可信状态的消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="对于被修改过的消息，原始安全文本也会被显示在提示框中" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="系统消息 (非玩家聊天，比如命令的输出) 会使用灰色指示器展示" />
-        </StackPanel>
-        <TextBlock Text="聊天预览" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入了“发送时”聊天预览选项，使得聊天预览仅在即将发送消息时更新" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="要确认发送消息，需要再按一次Enter/Return键" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="之前的“开启”选项现在改名为“输入时”" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="“输入时”模式时，若消息还未被服务器修改，不会再显示预览消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天预览现在会在单人模式中启用，且在使用有选择器选项的命令时也会显示，例如 /say" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="预览悬浮事件与点击事件现在有高亮，而且有不透明背景" />
-        </StackPanel>
-        <TextBlock Text="玩家举报" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在你可以在游戏中举报发送违规消息的玩家。举报者需要选择违反规定的个人聊天记录内容，以及举报的类型，这将会为我们的审核团队提供相关的聊天语境，以方便采取相关措施。该功能可在 社交互动 界面找到" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="可在举报时选择多条消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="选中的消息附近的一些附加消息一样会被发送，为我们的审核团队更好的理解语境" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报的类型可以从聊天举报分类中选择" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天举报分类的界面有一个“了解关于玩家举报的内容”的按钮，链接至一个相关的说明文章" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="附加注释可以用于提供与举报有关的细节和消息" />
-        </StackPanel>
-        <TextBlock Text="账户停用和封禁" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="若你的账户被禁止多人游戏，游戏启动时将会显示一个提示文本" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="封禁账户的原因和持续时间将会在这个界面中显示" />
-        </StackPanel>
-        <TextBlock Text="REALMS(领域服)" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="被 Java Realms 敏感词过滤器过滤的消息会用黄色标志标识" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="在 Realms 中，若玩家向一个或多个玩家发送的聊天被成功过滤，该玩家将会被提醒" />
-        </StackPanel>
-        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天输入框将不会应用于负的，或大于 32 的步进宽度(advances)的自定义字体" />
-        </StackPanel>
-        <TextBlock Text="聊天类型" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="添加到 chat_types 注册表的聊天类型现在仅被用于玩家聊天，而不会被用于系统消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="system 和 game_info 聊天类型被移除了" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型已被简化，现在只需要定义 chat 和 narration 装饰" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天类型不再支持覆盖" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="需要使用系统消息来显示覆盖" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="msg_command 聊天类型已被分割为 msg_command_incoming 和 msg_command_outgoing" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="team_msg_command聊天类型现在分割为team_msg_command_incoming和team_msg_command_outgoing" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="team_name聊天类型参数现已被重命名为target，此聊天类型参数现被msg_command_outgoing使用" />
-        </StackPanel>
-        <TextBlock Text="组件" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="run_command 点击事件不再支持直接发送消息" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在仅支持命令" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="这意味着其值现在必须带有 ‘/’ 前缀" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="诸如 /say 这类可以向玩家产生已签名消息的命令现在不允许使用，请使用/tellraw命令" />
-        </StackPanel>
-        <TextBlock Text="游戏事件" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="加入的游戏事件：jukebox_play，jukebox_stop_play" />
-        </StackPanel>
-        <TextBlock Text="多人游戏安全聊天签名" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在将会进行数字签名验证，也将用于校验玩家举报中，聊天内容的上下文" />
-        </StackPanel>
-        <TextBlock Text="服务器" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="对于专用服务器，enforce-secure-profile选项现在默认为true" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="服务器日志中，不安全消息会带有 [Not Secure] 前缀标记" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="现在自定义服务器可以通过新的网络数据包为常规聊天设置独有的自动补全选项" />
-        </StackPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息，但这并不能从聊天日志中删除玩家的聊天消息" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc3" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1366950-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-3" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本次共修复了10个bug，本文来源于 苦力怕553 （MCBBS） 上的译文" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <Grid Margin="10,10,10,30" Height="40" Width="300">
-      <Grid.Triggers>
+</Border><Grid Margin="0,0,0,15">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+<ColumnDefinition Width="100"></ColumnDefinition>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+<TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+</Grid><local:MyCard Margin="0,0,0,15" Title="最新快照 - 22w46a " CanSwap="True">
+<!--Header-->
+<StackPanel Margin="30,40,30,20">
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w46a.png" Stretch="Uniform" />
+</Border.Background>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w46a.png" Opacity="0" />
+</Border>
+<Border Style="{StaticResource verTxtBdr}">
+<TextBlock Style="{StaticResource verTxtBlk}" Text="22W46A" />
+</Border>
+<!--Details-->
+<TextBlock Text="实验性特性" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="通过指向特定槽位，现可将书放入到雕纹书架中的任意槽位，或从任意槽位中移除"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="将生物头颅放置在音符盒上方，若由玩家或红石信号驱动发声，音符盒将会播放这种生物的一种环境音效"/>
+</StackPanel>
+<TextBlock Text="猪灵生物头颅" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被闪电苦力怕击杀时，猪灵将会掉落其头颅"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被红石信号驱动或被玩家佩戴并行走时，猪灵头颅将会拍打耳朵"/>
+</StackPanel>
+<TextBlock Text="更改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在下界维度，末影人、骷髅和凋灵骷髅现在仅会在亮度 7 及以下生成 (而非亮度 11 及以下)"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="此项调整旨在削弱一些基于传送门的生物农场"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="欢迎就此提出反馈（原文如此）"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为竹块和去皮竹块添加了新的顶部纹理"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="对竹板纹理进行了一些调整，以与其他木板类变体保持类似的分块花纹"/>
+</StackPanel>
+<TextBlock Text="创造模式背包的更改" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="略"/>
+</StackPanel>
+<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="末影人被击杀时，其持有的方块将使用战利品表来生成掉落物"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="对纹理加载和拼接做出了修改"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="翻译文件和 pack.mcmeta 现可直接包含以 UTF-8 编码的非 ASCII 字符，而非使用转义序列"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了新的遥测事件"/>
+</StackPanel>
+<TextBlock Text="遥测" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为了改进玩家体验收集的游戏数据"/>
+</StackPanel>
+<TextBlock Text="遥测透明度" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了遥测数据收集界面"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="此界面将展示与已发送的数据类型有关的信息"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="所发送数据的等级可在 “最少” 和 “全部” 间选择"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="“最少” 仅发送必要数据"/>
+</StackPanel>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="“所有” 将会发送必要数据和可选数据"/>
+</StackPanel>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="默认数据等级为 “最少” (仅必要数据)"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="每项由客户端发送的遥测事件现在都会记录在磁盘中"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="旧的日志文件会在 7 天后移除"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="这些文件可在 logs/telemetry 目录下找到"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="访问此目录的快捷方式是遥测数据收集界面中的 “打开我的数据”"/>
+</StackPanel>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="必要遥测事件" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了 WorldUnloaded 事件"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="从 WorldLoaded 事件中移除了客户端 java 版本"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="包含游戏模式，客户端或服务端是否被修改，以及游戏版本等信息"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="WorldLoaded 和 WorldUnloaded 是一对 (以秒数和时间刻) 计算世界会话持续时长的事件。"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="来自 WorldLoaded 的数据会在游戏世界加载时发送，来自 WorldUnloaded 的数据会在游戏世界被关闭时发送 (退出到主界面，与服务器断开连接)。"/>
+</StackPanel>
+<TextBlock Text="可选遥测事件" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="PerformanceMetrics 包含例如帧率、渲染性能、内存使用、操作系统以及客户端/服务端是否被修改等数据。"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="WorldLoadTimes 包含了以毫秒为单位的世界加载总时长，是否为新世界，以及游戏版本和平台等详细信息。"/>
+</StackPanel>
+<TextBlock Text="纹理加载的更改" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="上下文背景：游戏加载时，所有用于方块和物品模型的纹理需要合并到单个图像中，称为 “atlas”"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为改进加载性能，方块与物品的纹理会在被方块和物品模型处理前加载"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="默认地，不在 textures/item 和 textures/block 目录中的纹理不会被自动识别，不会被加载"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="资源包现在可以拥有配置文件，位于 atlases 目录，控制 atlas 中包含哪些图像"/>
+</StackPanel>
+<TextBlock Text="ATLAS 配置文件" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="略，见完整日志"/>
+</StackPanel>
+<TextBlock Text="命令" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="新命令：fillbiome"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为命令 execute 添加了新的子命令 execute if|unless biome"/>
+</StackPanel>
+<TextBlock Text="FILLBIOME" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="能完整修改整个区域的生物群系，注意：因为生物群系并不是按方块存储的，所以受影响的位置可能与所选的位置匹配不会很准确。"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="具体用法略"/>
+</StackPanel>
+<TextBlock Text="EXECUTE" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="命令 Execute 现在可以将生物群系用作条件"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="语法：execute if|unless biome <pos> <biome>"/>
+</StackPanel>
+<TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="长效药水效果剩余时间显示为 **:** 易引起误导"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="文本光标可以同时出现在多个输入框里"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="打开“编辑服务器信息”窗口时不会自动聚焦“服务器名称”文本框"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="tick 函数标签总是先于 load 运行"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="禁用 spectatorsGenerateChunks 游戏规则并重新加载世界会使游戏卡在加载地形的界面"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="加载地形的界面不能在 2 秒内关闭"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="玩家死亡时切换维度后有时候会卡在加载地形的界面"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="末地水晶在高于玩家足部的位置也会对其造成向上的击退"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="村民和猪灵不能开关门"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="启用 Programmer Art 纹理包会导致创造模式物品栏菜单的纹理损坏"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w46a" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1397102-1-1.html"/>
+<local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w46a" />
+</Grid>
+</GroupBox><TextBlock Text="本文翻译由苦力怕553（MCBBS）提供，略有更改，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" /></StackPanel>	
+</local:MyCard><local:MyCard Margin="0,0,0,15" Title="Minecraft Live 消息速览 " CanSwap="True" IsSwaped="True">
+<StackPanel Margin="30,40,30,20"><TextBlock Text="Minecraft 即将到来的更新内容" Style="{StaticResource h2}" />
+<TextBlock Text="骆驼" Style="{StaticResource h3}" />
+<TextBlock Text="    新的可供骑乘的生物，可同时搭载两名玩家。" Margin="0,0,0,5"/>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/camels.png" Margin="10,0,10,0" MaxHeight="200"/><TextBlock Text="夕阳下的骆驼" Style="{StaticResource imgTitle}" /><TextBlock Text="    骆驼很高，一些生物（如僵尸）无法攻击骆驼上的玩家，但骆驼后座的玩家可以对其进行攻击。" Margin="0,0,0,5"/>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/cameland2players.png" Margin="10,0,10,0" MaxHeight="200"/><TextBlock Text="骆驼后座的玩家可以进行攻击" Style="{StaticResource imgTitle}" /><TextBlock Text="    骆驼的食物是仙人掌。" Margin="0,0,0,5"/>
+<TextBlock Text="新版书架" Style="{StaticResource h3}" />
+<TextBlock Text="    新版书架上的书可以随意拿取和放置" Margin="0,0,0,5"/>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/newbookshelf.png" Margin="10,0,10,0" MaxHeight="200"/><TextBlock Text="新的书架" Style="{StaticResource imgTitle}" /><TextBlock Text="    新版书架也可以通过比较器产生红石信号" Margin="0,0,0,5"/>
+<TextBlock Text="竹子系方块" Style="{StaticResource h3}" />
+<TextBlock Text="    竹子也可以当木头一类方块用了，还有新的竹筏" Margin="0,0,0,5"/>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/bamboo.png" Margin="10,0,10,0" MaxHeight="200"/><TextBlock Text="竹子系方块与竹筏" Style="{StaticResource imgTitle}" /><TextBlock Text="悬挂告示牌" Style="{StaticResource h3}" />
+<TextBlock Text="    新的告示牌，拥有三种不同的悬挂形式，也可以用不同的木头（含竹子）制作" Margin="0,0,0,5"/>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/newsign.png" Margin="10,0,10,0" MaxHeight="200"/><TextBlock Text="悬挂告示牌" Style="{StaticResource imgTitle}" /><Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/signs.png" Margin="10,0,10,0" MaxHeight="200"/><TextBlock Text="各种各样的悬挂告示牌" Style="{StaticResource imgTitle}" /><TextBlock Text="Sniffer" Style="{StaticResource h3}" />
+<TextBlock Text="    本次 MobVote 的获胜者，一个已经消失灭迹的远古生物，它的蛋潜兴许藏在水下遗迹中，等待着玩家的发现" Margin="0,0,0,5"/>
+<TextBlock Text="    它可以找到远古种子，长出新的独特植物，种子长出的植物只有装饰用途" Margin="0,0,0,5"/>
+<TextBlock Text="其它" Style="{StaticResource h2}" />
+<TextBlock Text="    Mojang已承诺本次 Minecraft Live 展示内容将会全部实装" Margin="0,0,0,5"/>
+<TextBlock Text="    1.20 更新名称未定" Margin="0,0,0,5"/>
+<TextBlock Text="    
+本文图源MCBBS" Margin="0,0,0,5"/>
+</StackPanel>	
+</local:MyCard><Grid Margin="0,0,0,15">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+<ColumnDefinition Width="100"></ColumnDefinition>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+<TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+</Grid><local:MyCard Margin="0,0,0,15" Title="1.19.2 " CanSwap="True" IsSwaped="True">
+<!--Header-->
+<StackPanel Margin="30,40,30,20">
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2.jpg" Stretch="Uniform" />
+</Border.Background>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.2.jpg" Opacity="0" />
+</Border>
+<Border Style="{StaticResource verTxtBdr}">
+<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.2" />
+</Border>
+<!--Details-->
+<TextBlock Text="修复" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="修复了玩家被踢出启用安全聊天的服务器的问题"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="修复了社交屏幕的崩溃"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html"/>
+<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" />
+</Grid>
+</GroupBox><TextBlock Text="本文来源 ff98sha（MCBBS）" Style="{StaticResource footnote}" /></StackPanel>	
+</local:MyCard><Grid Margin="0,0,0,15">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+<ColumnDefinition Width="100"></ColumnDefinition>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+</Grid><local:MyCard Margin="0,0,0,15" Title="22w45a " CanSwap="True" IsSwaped="True">
+<!--Header-->
+<StackPanel Margin="30,40,30,20">
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w45a.png" Stretch="Uniform" />
+</Border.Background>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w45a.png" Opacity="0" />
+</Border>
+<Border Style="{StaticResource verTxtBdr}">
+<TextBlock Style="{StaticResource verTxtBlk}" Text="22W45A" />
+</Border>
+<!--Details-->
+<TextBlock Text="新特性" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="增加了新的离线玩家默认皮肤"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了竹方块以及去皮竹块"/>
+</StackPanel>
+<TextBlock Text="更改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="荒野更新的音乐声音略减"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当潜影盒打开时，它会破坏并掉落附着在其打开面的方块（如火把）"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当潜影盒开启时，需要支撑的方块无法放置在其打开面"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="旁观者选项中的“传送到队友处” 选项现在只展示给有可行目标玩家的团队"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在“控制”菜单中添加了默认关闭的“管理员项目”选项"/>
+</StackPanel>
+<TextBlock Text="恼鬼" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="更换了恼鬼的模型与纹理"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="恼鬼的碰撞箱现在稍微大了点，使其更加好对付"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="创造模式物品栏的变化" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当以下条件齐全，管理员专属的物品将会出现在新的“管理工具”选项卡:"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="控制菜单中管理员物品选项被设为 ON"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="拥有管理员权限"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="如果在物品栏打开时丧失管理员权限，则该选项卡将立即隐藏"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="现在还包括结构方块和以及各种亮度的光源方块"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="后略，详见更新日志"/>
+</StackPanel>
+<TextBlock Text="22W45A 的技术性修改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="/publish 指令现在可以通过新的参数来启用命令并设置默认游戏模式"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="新语法: /publish [allowCommands] [gamemode] [port]"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="修改了“开放到局域网”界面"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="现在可以在界面中选取开放局域网世界的端口"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="游戏模式和允许作弊按钮现在使用世界的默认值"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="资源包版本现在为 12"/>
+</StackPanel>
+<TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="马在穿过下界传送门时会窒息"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="缩放后的地图的悬浮提示中依然显示原先的缩放值"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="不能将水桶中的水倒入含水方块里"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="影人愤怒/尖叫声音事件对应的字幕与闲置声音的相同"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="商家交易选择数据包（客户端发送至服务端）不检查负指数"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="玩家坐标与下界传送门不同步"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="有序配方中的空槽位匹配了空标签"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="如果启用“行距”聊天设置，聊天栏中的悬停和点击事件将被覆盖"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="使用新的网络协议后，玩家无法进入离线服务器"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w45a" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1395379-1-1.html"/>
+<local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w45a" />
+</Grid>
+</GroupBox><TextBlock Text="部分译文来自cutemiku，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" /></StackPanel>	
+</local:MyCard><local:MyCard Margin="0,0,0,15" Title="22w44a " CanSwap="True" IsSwaped="True">
+<!--Header-->
+<StackPanel Margin="30,40,30,20">
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w44a.png" Stretch="Uniform" />
+</Border.Background>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w44a.png" Opacity="0" />
+</Border>
+<Border Style="{StaticResource verTxtBdr}">
+<TextBlock Style="{StaticResource verTxtBlk}" Text="22W44A" />
+</Border>
+<!--Details-->
+<TextBlock Text="更改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹马赛克可以作为燃料"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="有关创造模式背包的更多变更"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="有关怪物刷怪笼的变更"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="有关刷怪蛋的变更"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="有关脚步声的变更"/>
+</StackPanel>
+<TextBlock Text="创造模式背包的变更" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="略，详见完整日志"/>
+</StackPanel>
+<TextBlock Text="怪物刷怪笼" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被玩家放置时，刷怪笼不会拥有一个默认生成的生物类型了 (之前是猪)"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="若生成生物类型未定义，不会产生火焰粒子了"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="重命名为 Monster Spawner 以与基岩版相匹配，并移除了紫色文字颜色"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="鼠标中键选取方块现在可对刷怪笼方块生效"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="现在生物类型会展示在刷怪笼物品堆上方的悬浮说明中"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="若生物类型尚未定义，悬浮说明会说明怎样设置"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="刷怪蛋" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="将末影龙、铁傀儡、雪傀儡、凋灵生物刷怪蛋添加到了创造模式"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为防止意外破坏玩家的建筑，末影龙和凋灵刷怪蛋仅可通过指令取得"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为了和恶魂刷怪蛋相区分，修改了北极熊刷怪蛋的颜色"/>
+</StackPanel>
+<TextBlock Text="音效" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在地毯、睡莲、小型紫晶芽上走动时，可以听到脚步声了"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="穿过下界苗、发光地衣、绯红菌索、诡异菌索时，可以听见脚步声了"/>
+</StackPanel>
+<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+<TextBlock Text="游戏规则" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了 blockExplosionDropDecay, mobExplosionDropDecay 和 tntExplosionDropDecay 游戏规则"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="设为 false 时，所有被爆炸摧毁的方块都会掉落物品"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="设为 true 时，方块将根据距离爆炸中心的距离随机掉落物品"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="对 TNT 默认设为 false，对其他方块和生物默认设为 true"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了 snowAccumulationHeight 游戏规则"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="下雪时，此游戏规则决定了可在每个方块上积累的雪层最大数量"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="默认为 1，设为 0 时会导致雪根本不会产生，设为 8 或更高会产生完整方块高度大小的雪"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了 waterSourceConversion 和 lavaSourceConversion 游戏规则"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="设为 true 时，允许此种液体的新源头形成"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="默认对水设为 true，对熔岩设为 false"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="添加了 globalSoundEvents 游戏规则，控制某些游戏瞬间是否可以无视距离，被所有玩家听到"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="默认设为 true"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在疾跑状态下脱离可骑乘实体后，疾跑状态不会解除"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="海龟没有繁殖冷却期"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="重建世界时清空种子输入框不会使用随机种子，而是会继续使用原种子"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="青蛙应用缓降时，行走动画也会放慢速度"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当使用--server 参数加入服务器时，不会向玩家展示安全聊天警告或聊天预览警告界面"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="骆驼在寻路时不会越过1.5格高的方块"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="生物总是朝向南方，即使给定了旋转值"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="存在保存了的玩家举报草稿时，按下 ESC 键会导致游戏崩溃"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="只输入举报类型时，不会提示是否将聊天举报存为草稿"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w44a" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1393549-1-1.html"/>
+<local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w44a" />
+</Grid>
+</GroupBox><TextBlock Text="本文来源：苦力怕553（MCBBS）、漏洞翻译由 SPXX 提供" Style="{StaticResource footnote}" /></StackPanel>	
+</local:MyCard><local:MyCard Margin="0,0,0,15" Title="22w43a " CanSwap="True" IsSwaped="True">
+<!--Header-->
+<StackPanel Margin="30,40,30,20">
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w43a.png" Stretch="Uniform" />
+</Border.Background>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w43a.png" Opacity="0" />
+</Border>
+<Border Style="{StaticResource verTxtBdr}">
+<TextBlock Style="{StaticResource verTxtBlk}" Text="22W43A" />
+</Border>
+<!--Details-->
+<TextBlock Text="修改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="更改了骆驼的刷怪蛋的颜色"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="调整了骆驼走路的动画"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="栅栏门的中心不会为其下方的方块提供支撑"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天举报界面现在显示被举报的玩家加入聊天"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="更多的创造模式物品栏的更改"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="为玩家举报添加了草稿功能"/>
+</StackPanel>
+<TextBlock Text="更多的创造模式物品栏的更改" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="因为一大堆反馈的提交，所以我们再次更改了创造模式物品栏的顺序"/>
+</StackPanel>
+<TextBlock Text="添加了玩家聊天举报的草稿功能" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当离开玩家聊天举报界面时，举报内容可以直接放弃或作为草稿保存"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当举报界面被强制关掉时（例如玩家突然死亡），举报内容默认作为草稿保存"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="保存的草稿将一直保存，直到玩家退出服务器或离开这个世界"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当离开时，会提示是否放弃或提交这个举报"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="将线性代数类型迁移到 Java OpenGL 数学库(JOML)"/>
+</StackPanel>
+<TextBlock Text="网络协议" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以在玩家接收的的第一个聊天数据包中缓慢分发个人信息公钥"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="个人信息公钥现在无需重连就可刷新"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="客户端现在会在收到新的登录包时刷新聊天会话"/>
+</StackPanel>
+<TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="DeathTime 的值大于20的生物行为表现异常"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="盾牌的格挡方向不正确"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="盾牌无法格挡末地水晶的爆炸"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="盾牌无法格挡床和重生锚的爆炸"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被盾牌挡下的恶魂火球爆炸后仍能造成伤害"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="当破坏高海草的其中一个方块时，其他方块被连带破坏时变为空气而不是水"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="喷溅型水瓶不会扑灭生物和玩家"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="村民变成僵尸后，重新进入世界会使其丢失原有的交易折扣"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在水中会受到伤害的生物在船上不会受到伤害"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="其它漏洞详见完整更新日志"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w43a" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1391775-1-1.html"/>
+<local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w43a" />
+</Grid>
+</GroupBox><TextBlock Text="本文翻译取自sky_tianle（MCBBS），漏洞翻译由 SPXX 志愿者提供" Style="{StaticResource footnote}" /></StackPanel>	
+</local:MyCard><local:MyCard Margin="0,0,0,15" Title="22w42a " CanSwap="True" IsSwaped="True">
+<!--Header-->
+<StackPanel Margin="30,40,30,20">
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a.png" Stretch="Uniform" />
+</Border.Background>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a.png" Opacity="0" />
+</Border>
+<Border Style="{StaticResource verTxtBdr}">
+<TextBlock Style="{StaticResource verTxtBlk}" Text="22W42A" />
+</Border>
+<!--Details-->
+<TextBlock Text="    注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Margin="0,0,0,5"/>
+<TextBlock Text="    你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Margin="0,0,0,5"/>
+<TextBlock Text="新特性" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="一些实验性特性以及通过内置数据包的形式可以被使用"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="收纳袋现在以实验性特性回归"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="增加了新的 “全景滚动速度” 无障碍选项"/>
+</StackPanel>
+<TextBlock Text="实验性特性" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="一些实验性特性现在需要启用才能在世界中体现"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="一些特性在创建世界时以内置数据包的方式启用"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="特性切换本意是隐藏未完成或实验性特性，以确保已经存在的世界不受到影响"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="使用实验性特性的世界将会在世界选择列表中被标记为 “实验性”"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="已经存在的世界不能切换实验性特性启用状态"/>
+</StackPanel>
+<TextBlock Text="骆驼" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="骆驼可以装备马鞍，可以同时承载两位玩家"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="骆驼会在沙漠村庄中自然生成"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="骆驼很高"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="大多数敌对生物在你坐在骆驼上时够不到你"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="它们可以无需蓄力而越过栅栏"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="骆驼非常优雅，但脾气也不是太好"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="它们会随机地坐下"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在坐下的时候，很难去让其移动"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="骆驼要么走得很慢，要么跑得飞快"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="它们也可以损耗耐力向前冲去"/>
+</StackPanel>
+<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+<WrapPanel.Resources>
+<Style TargetType="local:MyButton">
+<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" /></Style></WrapPanel.Resources><local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/骆驼">
+<Border Style="{StaticResource ImgBtnBdr}">
+<StackPanel>
+<Border Style="{StaticResource NameBdr}">
+<TextBlock Text="骆驼" Style="{StaticResource ImgBtnTxt}"/>
+</Border>
+<Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a/Camel.png" Style="{StaticResource ImgBtnImg}"/>
+</StackPanel>
+</Border>
+</local:MyButton></WrapPanel><TextBlock Text="竹子类" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="新方块"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹板"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹门"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹活板门"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹告示牌"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹楼梯"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹台阶"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹栅栏"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹栅栏门"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹按钮"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹压力板"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹马赛克"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="竹筏与竹运输筏"/>
+</StackPanel>
+<TextBlock Text="錾制书架" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="由 6个木板 和 3个木质台阶 合成"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="能存放书、书与笔、成书和附魔书，最多能放下6本"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="比较器可以检测最后一本书的放置/移出"/>
+</StackPanel>
+<TextBlock Text="悬挂告示牌" Style="{StaticResource h4}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="悬挂告示牌比普通告示牌造价更高，由2个锁链与6个去皮原木合成6个悬挂告示牌"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="可以以以下方式悬挂"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在方块下悬挂"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在方块旁悬挂"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在另一个悬挂告示牌旁或下悬挂"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="不像普通告示牌那样，它们在周围没有方块支撑时无法直接支撑在地上"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="但当支撑方块移除后，悬挂告示牌不会掉落"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="音效" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="各种木头变体现在在放置、破坏、在其上行走时拥有独特的声音"/>
+</StackPanel>
+<TextBlock Text="更改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="重置了创造物品栏标签"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天的更改"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="Realms 新闻按钮现在打开链接前会弹出确认提示"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="要塞生成代码更加高效，导致要塞位置偏移"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="它们仍在同心环内生成，但它们在同心环内的位置可能有略微变化"/>
+</StackPanel>
+</StackPanel>
+<TextBlock Text="创造物品栏" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="方块与物品重新分类并排序，详见完整更新日志"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="移除石化橡木台阶，但仍可通过指令放置"/>
+</StackPanel>
+<TextBlock Text="聊天" Style="{StaticResource h3}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="移除了聊天预览"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被服务器管理员删除的聊天消息将会替换为提示而不再是直接隐藏"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="被删除的消息会在隐藏前显示至少三秒"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天信任状态指示微调"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="部分过滤的聊天信息会变成灰色乱码，鼠标悬浮时会显示其被过滤"/>
+</StackPanel>
+<TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="详见完整日志"/>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+<ColumnDefinition Width="10*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w42a" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1390920-1-1.html"/>
+<local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w42a" />
+</Grid>
+</GroupBox><TextBlock Text="可能不是最终译名" Style="{StaticResource footnote}" /></StackPanel>	
+</local:MyCard><Grid Margin="10,10,10,30" Height="40" Width="300">
+    <Grid.Triggers>
         <EventTrigger RoutedEvent="Loaded">
-          <BeginStoryboard>
-            <Storyboard>
-              <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.0" />
-              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" />
-              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" />
-            </Storyboard>
-          </BeginStoryboard>
+            <BeginStoryboard>
+                <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.0" />
+                    <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" />
+                    <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" />
+                </Storyboard>
+            </BeginStoryboard>
         </EventTrigger>
         <EventTrigger RoutedEvent="MouseEnter">
-          <BeginStoryboard>
-            <Storyboard>
-              <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
-              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
-              <DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="260" Duration="0:0:0.1" />
-              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
-            </Storyboard>
-          </BeginStoryboard>
+            <BeginStoryboard>
+                <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+                    <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+                    <DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="260" Duration="0:0:0.1" />
+                    <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{Binding}" Duration="0:0:0.25" />
+                </Storyboard>
+            </BeginStoryboard>
         </EventTrigger>
         <EventTrigger RoutedEvent="MouseLeave">
-          <BeginStoryboard>
-            <Storyboard>
-              <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
-              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" Duration="0:0:0.5" />
-              <DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="240" Duration="0:0:0.1" />
-              <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
-            </Storyboard>
-          </BeginStoryboard>
+            <BeginStoryboard>
+                <Storyboard>
+                    <ColorAnimation Storyboard.TargetName="view" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
+                    <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#BBFFFFFF" Duration="0:0:0.5" />
+                    <DoubleAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="Width" To="240" Duration="0:0:0.1" />
+                    <ColorAnimation Storyboard.TargetName="viewBdr" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#777777" Duration="0:0:0.75" />
+                </Storyboard>
+            </BeginStoryboard>
         </EventTrigger>
-      </Grid.Triggers>
-      <local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/archives_list.json">
+    </Grid.Triggers>
+    <local:MyButton EventType="打开帮助" EventData="http://www.lightbeacon.top/pnh/archives_list.json">
         <Border x:Name="viewBdr" Height="40" Width="240" Background="{StaticResource ColorBrush6}" Opacity="1" CornerRadius="4" BorderThickness="1.5" BorderBrush="{StaticResource ColorBrush4}">
-          <TextBlock x:Name="view" Text="浏览更早版本更新历史" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold" />
+                <TextBlock x:Name="view" Text="浏览更早版本更新历史" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="{StaticResource ColorBrush4}" FontWeight="Bold" />
         </Border>
-      </local:MyButton>
-    </Grid>
-    <Grid Margin="0,0,0,15">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-      </Grid.ColumnDefinitions>
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-    </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft " CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <TextBlock Text="    Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,10">
-        <TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
-        <TextBlock Text="  但有人往PCL2反馈提交新闻主页Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16" />
-        <TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的Github仓库交issue而不是在PCL2反馈交反馈（PCL2不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
-        <TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5" />
-        <Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
-          <TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
-        </Border>
-      </StackPanel>
-    </local:MyCard>
-    <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
-      <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
-      <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
-    </StackPanel>
-    <Border Background="#CCFFFFFF" Height="200" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
-      <StackPanel Margin="40,15,0,10">
-        <TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
-        <TextBlock Text="By：最亮的信标（Light Beacon）" />
-        <TextBlock Text="维护：最亮的信标（Light Beacon）、空辰KC" />
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-          <TextBlock Text="订阅地址:  " />
-          <local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-          <TextBlock Text="官方网站:  " />
-          <local:MyTextButton Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-          <TextBlock Text="Github:  " />
-          <local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
-        </StackPanel>
-        <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
-          <TextBlock Text="无特殊声明本主页采用 " />
-          <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
-          <TextBlock Text=" 授权。" />
-        </StackPanel>
-      </StackPanel>
-    </Border>
-  </StackPanel>
-</StackPanel>
+    </local:MyButton>
+</Grid><Grid Margin="0,0,0,15">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+<ColumnDefinition Width="100"></ColumnDefinition>
+<ColumnDefinition Width="1*"></ColumnDefinition>
+</Grid.ColumnDefinitions>
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+<TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+</Grid><local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft " CanSwap="True" IsSwaped="True">
+<StackPanel Margin="30,40,30,20"><TextBlock Text="    Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Margin="0,0,0,5"/>
+</StackPanel>	
+</local:MyCard><local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
+		<StackPanel Margin="30,40,30,10">
+			<TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="  但有人往PCL2反馈提交新闻主页Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16" />
+			<TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的Github仓库交issue而不是在PCL2反馈交反馈（PCL2不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
+				<TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
+			</Border>
+		</StackPanel>
+	</local:MyCard><StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
+	<local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
+	<local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
+</StackPanel><Border Background="#CCFFFFFF" Height="200" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+	<StackPanel Margin="40,15,0,10">
+		<TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
+		<TextBlock Text="By：最亮的信标（Light Beacon）" />
+		<TextBlock Text="维护：最亮的信标（Light Beacon）、空辰KC" />
+		<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+			<TextBlock Text="订阅地址:  " />
+			<local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+			<TextBlock Text="官方网站:  " />
+			<local:MyTextButton Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+			<TextBlock Text="Github:  " />
+			<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
+		</StackPanel>
+
+		<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+			<TextBlock Text="无特殊声明本主页采用 " />
+			<local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
+			<TextBlock Text=" 授权。" />
+		</StackPanel>
+	</StackPanel>
+</Border></StackPanel></StackPanel>
