@@ -244,9 +244,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.png" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.jpg" Opacity="0" />
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.png" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="两周年" />
