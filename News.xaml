@@ -222,7 +222,7 @@
                 📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-                📰 如果您的账号未迁移且无法登录，请看新闻主页最下边的提示。
+                🎂 新闻主页两岁了！
     </TextBlock>
       </Grid>
     </Border>
@@ -239,6 +239,24 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="新闻主页两周年" CanSwap="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.jpg" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.jpg" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="两周年" />
+        </Border>
+        <!--Details-->
+        <StackPanel Style="{StaticResource ListStyle}">
+          <TextBlock Text="不知不觉新闻主页已经两岁了，感谢大家的支持！" />
+        </StackPanel>
+      </StackPanel>
+    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.19.3-pre2 " CanSwap="True">
       <!--Header-->
       <StackPanel Margin="30,40,30,20">
