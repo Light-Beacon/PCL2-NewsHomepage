@@ -57,8 +57,13 @@
       <Style TargetType="TextBlock">
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Foreground" Value="Black" />
+      </Style>
+      <Style x:Key="PGTextBlock" TargetType="TextBlock">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Margin" Value="25,5,0,5" />
+        <Setter Property="FontSize" Value="16" />
       </Style>
       <Style x:Key="ListItem" TargetType="TextBlock">
         <Setter Property="Margin" Value="15,-15,5,15" />
@@ -140,7 +145,7 @@
         <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
         <Setter Property="Width" Value="160" />
         <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="FontSize" Value="28" />
+        <Setter Property="FontSize" Value="24" />
       </Style>
       <Style x:Key="imgTitle" TargetType="TextBlock">
         <Setter Property="FontSize" Value="14" />
@@ -151,7 +156,7 @@
       <Style x:Key="verTxtBdr" TargetType="Border">
         <Setter Property="Margin" Value="0,-22,-1,10" />
         <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-        <Setter Property="Width" Value="180" />
+        <Setter Property="Width" Value="190" />
         <Setter Property="Height" Value="40" />
         <Setter Property="CornerRadius" Value="5" />
       </Style>
@@ -252,7 +257,7 @@
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE2" />
         </Border>
         <!--Details-->
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Margin="20,5,0,5" />
+        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
         <TextBlock Text="修改内容" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -304,7 +309,7 @@
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE1" />
         </Border>
         <!--Details-->
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Margin="20,5,0,5" />
+        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
         <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -929,8 +934,8 @@
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W42A" />
         </Border>
         <!--Details-->
-        <TextBlock Text="注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Margin="20,5,0,5" />
-        <TextBlock Text="你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Margin="20,5,0,5" />
+        <TextBlock Text="注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Style="{StaticResource PGTextBlock}" />
         <TextBlock Text="新特性" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -3821,4 +3826,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2022/11/28 17:59:09 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2022/11/28 19:00:38 -->
