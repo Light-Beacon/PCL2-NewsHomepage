@@ -244,7 +244,51 @@
       <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.19.3-pre3" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="最新候选版 - 1.19.3-rc1" CanSwap="True" IsSwaped="False">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.3-rc1.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.3-rc1.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-RC1" />
+        </Border>
+        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 平滑光照的最低和最高等级不再有区别" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 一些地方的 Tab 键导航问题" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在生物开始转化后移除引发该转化的方块，转化不会停止" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 世界边界的纹理会随玩家 Y 轴坐标变化而在两个位置间跳动" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 创造模式下，背包中有药水时无法用玻璃瓶从水中盛水" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" /data modify 会认为 NBT 过大，而/data merge 不会" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1401299-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-release-candidate-1" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.3-pre3" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
@@ -3840,4 +3884,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2022/11/30 11:41:15 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2022/12/2 0:01:27 -->
