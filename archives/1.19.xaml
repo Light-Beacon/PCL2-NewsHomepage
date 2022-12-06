@@ -244,7 +244,7 @@
       <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新候选版 - 1.19.3-rc2" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="1.19.3-rc2" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
@@ -3920,4 +3920,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2022/12/6 18:06:45 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2022/12/6 20:47:02 -->
