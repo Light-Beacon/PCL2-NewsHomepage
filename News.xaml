@@ -227,7 +227,7 @@
                 📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-                🎂 新闻主页两岁了！
+                🎇 新年快乐！
     </TextBlock>
       </Grid>
     </Border>
@@ -977,24 +977,6 @@
       <TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="新闻主页两周年" CanSwap="True">
-      <!--Header-->
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="两周年" />
-        </Border>
-        <!--Details-->
-        <StackPanel Style="{StaticResource ListStyle}">
-          <TextBlock Text="不知不觉新闻主页已经两岁了，感谢大家的支持！" />
-        </StackPanel>
-      </StackPanel>
-    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="未迁移的账号在三月十日后无法正常游玩 Minecraft" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <TextBlock Text="Mojang 于今年三月十日启动了强制迁移，没有将自己的 Mojang 账号迁移到微软账号的玩家无法正常登录 Minecraft。玩家迁移完成后方可恢复。" Style="{StaticResource PGTextBlock}" />
@@ -1015,7 +997,7 @@
       <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
       <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
     </StackPanel>
-    <Border Background="#CCFFFFFF" Height="420" Margin="-25,10,-25,-200" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+    <Border Background="#A0FFFFFF" Height="20720" Margin="-25,10,-25,-20500" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
       <StackPanel Margin="40,15,0,10">
         <TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
         <TextBlock Text="By：最亮的信标（Light Beacon）" />
@@ -1037,7 +1019,7 @@
           <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
           <TextBlock Text=" 授权。" />
         </StackPanel>
-        <Border Height="200" Background="{DynamicResource ColorBrush7}" Margin="-40,10,0,0">
+        <Border Height="20500" Background="{DynamicResource ColorBrush7}" Opacity="0.3" Margin="-40,10,0,0">
           <StackPanel>
             <Grid Margin="0,7,0,15">
               <Grid.ColumnDefinitions>
@@ -1048,9 +1030,9 @@
                 <ColumnDefinition Width="1*">
                 </ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-              <TextBlock Text="到  底  啦" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+              <TextBlock Text="到  底  啦" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
             </Grid>
             <TextBlock Margin="105,2,0,0" Text="（PCL2提示）" />
           </StackPanel>
@@ -1059,4 +1041,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2022/12/8 13:20:19 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/1/5 23:41:47 -->
