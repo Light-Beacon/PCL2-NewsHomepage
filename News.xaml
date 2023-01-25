@@ -231,10 +231,6 @@
     </TextBlock>
       </Grid>
     </Border>
-    <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
-      <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
-      <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
-    </StackPanel>
     <Grid Margin="0,0,0,15">
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="1*">
@@ -1335,6 +1331,10 @@
         </Border>
       </StackPanel>
     </local:MyCard>
+    <StackPanel Margin="0,10,0,20" HorizontalAlignment="Center" Orientation="Horizontal">
+      <local:MyButton Width="300" Height="35" Padding="13,0,13,0" Text="刷新" EventType="刷新主页" Margin="0,0,10,0" ToolTip="点击刷新新闻主页" />
+      <local:MyButton Width="100" Height="35" Padding="13,0,13,0" Text="反馈" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 Github 提交反馈" />
+    </StackPanel>
     <Border Background="#A0FFFFFF" Height="20720" Margin="-25,10,-25,-20500" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
       <StackPanel Margin="40,15,0,10">
         <TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
@@ -1379,4 +1379,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/1/25 14:23:28 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/1/25 14:25:07 -->
