@@ -248,9 +248,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w05a.png" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/" Opacity="0" />
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w05a.png" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W05A" />
@@ -349,7 +349,7 @@
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w05a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="未生成，请手动复制" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1424054-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w05a" />
           </Grid>
         </GroupBox>
@@ -1397,4 +1397,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/2/2 0:27:53 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/2/2 0:32:03 -->
