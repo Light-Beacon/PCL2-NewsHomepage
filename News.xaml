@@ -244,85 +244,99 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w04a" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w05a" CanSwap="True" IsSwaped="False">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w04a.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w04a.png" Opacity="0" />
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W04A" />
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W05A" />
         </Border>
-        <TextBlock Text=" 更改" Style="{StaticResource h2}" />
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 减弱物品和盔甲上的附魔光效" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更新了创建世界界面" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 对盔甲或鞘翅交互现在可以使其替换掉已装备的物品" />
+        </StackPanel>
+        <TextBlock Text="无障碍" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更改菜单UI的提示位置使按钮仍可以正常阅读" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 无障碍菜单中新增了两个选项，可以调整附魔光效的动画速度与透明度" />
+        </StackPanel>
+        <TextBlock Text="新创建世界界面" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在整个界面被分为三个标签页" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" “游戏”标签页：可以设置世界名称，游戏模式，难度以及是否启用作弊" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" “世界”标签页：可以设置世界类型，世界种子，结构生成开关，是否启用奖励箱" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" “更多”标签页：可以设置游戏规则与数据包选择" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在编辑世界界面移除了导入设置按钮与其对应的导出设置按钮" />
+        </StackPanel>
+        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+        <TextBlock Text="纹饰图案与材料" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 大体为覆写调色板更改，此处略" />
+        </StackPanel>
+        <TextBlock Text="命令" Style="{StaticResource h3}" />
+        <TextBlock Text="effect" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" infinite(无限)现在可以应用于效果时间了" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 无限的效果时间在玩家物品栏界面显示为&quot;∞&quot;" />
+          </StackPanel>
         </StackPanel>
         <TextBlock Text="实验性特性" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 新增盔甲装饰系统" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲纹饰现在可以应用于皮革护甲上了" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 重新设计锻造台" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲纹饰的材料现在可以与盔甲材料相同" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 修改下界合金装备合成方式" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 沙丘盔甲纹饰的纹理调整，其胸甲的标志向上移动了几个像素" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 锻造模版的战利品表调整" />
         </StackPanel>
-        <TextBlock Text="锻造模版" Style="{StaticResource h3}" />
+        <TextBlock Text="锻造模版的战利品表调整" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 现在在锻造台上合成需要：锻造模版+锻造材料+锻造对象" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 不同的模版、材料会有不同的效果" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 现有两类模版：下界合金升级模版与盔甲装饰模版" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 锻造模版会在锻造台上使用后消耗" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 可以在工作台中使用7个钻石+1个模版对应的材料方块+1个锻造模版来复制一份锻造模版" />
-        </StackPanel>
-        <TextBlock Text="下界合金装备" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 现在合成下界合金装备额外再需要一个下界合金升级锻造模版" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 在堡垒遗迹宝箱中可以发现下界合金升级锻造模版，每个堡垒遗迹内至少有两个" />
-        </StackPanel>
-        <TextBlock Text="盔甲装饰" Style="{StaticResource h4}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 一共有11种模版（确定图案）、10种材料（确定材质）可以用来装饰" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲装饰单纯是装饰性功能，不会提供属性加成" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 所有盔甲都能装饰，除了皮革盔甲" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 锻造模版可以在结构的宝箱中找到，具体见完整日志" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 下列常见的盔甲纹饰每次在箱子中找到都会生成两个模版" />
           <StackPanel Style="{StaticResource ListStyle}">
             <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 除了海底神殿的，其会在远古守卫者死亡时有几率掉落" />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 沙丘、海岸、荒野、哨兵" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 这是为了给予新玩家机会理解锻造模版在使用后会被消耗" />
           </StackPanel>
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲图案的材质不能与盔甲本身的材质相同" />
-        </StackPanel>
-        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
+          <TextBlock Style="{StaticResource ListItem}" Text=" 下界合金升级锻造模版生成概率改为常见模版的两倍" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 因为我们想要下界合金升级更具有挑战性，我们感觉原来的生成概率并没有鼓励在玩家发现第一个下界合金模版后进行更多的探索" />
+          </StackPanel>
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 主要为资源包更改，详见完整日志" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 每个要塞图书馆都会至少有一个眼眸盔甲纹饰锻造模板" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 命令 execute on: origin 添加了新的关系" />
-        </StackPanel>
-        <TextBlock Text="修复的漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
+          <TextBlock Style="{StaticResource ListItem}" Text=" 林地府邸发现恼鬼盔甲纹饰锻造模板的概率大夫提升" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 爆炸保护不会降低击退的效果，除非等级很高" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" “复述功能：不可用”在辅助功能初始化时没有变灰" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 所有山羊角的工具提示及吹奏音效都变成了“沉思”" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 资源包选择菜单中，无法通过键盘导航选中不兼容的资源包" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲纹饰锻造模板总体更加常见了" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 我们更希望玩家去探索获得锻造模版，使玩家觉得自己剩下了7个钻石，如果锻造模版太稀有这种情况就不会发生，意味着玩家没有被鼓励去探索更多的结构" />
+          </StackPanel>
         </StackPanel>
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -334,12 +348,12 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w04a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1421388-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w04a" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w05a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="未生成，请手动复制" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w05a" />
           </Grid>
         </GroupBox>
-        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
+        <TextBlock Text="这次脚注没东西，因为全部都是我翻的，没啥好bug也" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="Minecraft Live 消息速览" CanSwap="True" IsSwaped="True">
@@ -696,6 +710,104 @@
       <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="23w04a" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w04a.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w04a.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W04A" />
+        </Border>
+        <TextBlock Text=" 更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 减弱物品和盔甲上的附魔光效" />
+        </StackPanel>
+        <TextBlock Text="实验性特性" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 新增盔甲装饰系统" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 重新设计锻造台" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 修改下界合金装备合成方式" />
+        </StackPanel>
+        <TextBlock Text="锻造模版" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在在锻造台上合成需要：锻造模版+锻造材料+锻造对象" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 不同的模版、材料会有不同的效果" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现有两类模版：下界合金升级模版与盔甲装饰模版" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 锻造模版会在锻造台上使用后消耗" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 可以在工作台中使用7个钻石+1个模版对应的材料方块+1个锻造模版来复制一份锻造模版" />
+        </StackPanel>
+        <TextBlock Text="下界合金装备" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在合成下界合金装备额外再需要一个下界合金升级锻造模版" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在堡垒遗迹宝箱中可以发现下界合金升级锻造模版，每个堡垒遗迹内至少有两个" />
+        </StackPanel>
+        <TextBlock Text="盔甲装饰" Style="{StaticResource h4}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 一共有11种模版（确定图案）、10种材料（确定材质）可以用来装饰" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲装饰单纯是装饰性功能，不会提供属性加成" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 所有盔甲都能装饰，除了皮革盔甲" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 锻造模版可以在结构的宝箱中找到，具体见完整日志" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 除了海底神殿的，其会在远古守卫者死亡时有几率掉落" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲图案的材质不能与盔甲本身的材质相同" />
+        </StackPanel>
+        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 主要为资源包更改，详见完整日志" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 命令 execute on: origin 添加了新的关系" />
+        </StackPanel>
+        <TextBlock Text="修复的漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 爆炸保护不会降低击退的效果，除非等级很高" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" “复述功能：不可用”在辅助功能初始化时没有变灰" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 所有山羊角的工具提示及吹奏音效都变成了“沉思”" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 资源包选择菜单中，无法通过键盘导航选中不兼容的资源包" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w04a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1421388-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w04a" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="23w03a" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
@@ -1175,100 +1287,6 @@
         <TextBlock Text="漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="1.19.3-pre3" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.3-pre3.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.3-pre3.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE3" />
-        </Border>
-        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 潜影盒被破坏或替换后仍能播放关闭音效" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 合成界面内知识之书的纹理未被更新" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 复制多层嵌套的NBT标签会导致栈内存溢出" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 玩家重生后打开箱子、陷阱箱和木桶不会显示动画和播放音效" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 实体碰撞在渲染线程上运行" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 以死亡状态加入世界时，玩家的披风和第二层皮肤无法在服务器环境中被客户端渲染" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre3" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1400691-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-3" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="1.19.3-pre2" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.3-pre1.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.3-pre1.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE2" />
-        </Border>
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
-        <TextBlock Text="修改内容" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 选择不同按钮时，工具提示会展示在其上方或下方" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 鼠标悬停时，工具提示会显示在光标旁边" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 聚焦按钮的工具提示（按tab键聚焦）会比悬停位置的按钮优先展示工具提示" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 优化了一些结构查找异常缓慢的情况" />
-        </StackPanel>
-        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 无法用火焰弹引爆苦力怕" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 蜜蜂会在非完整方块里卡住" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 部分身高较矮的生物可以攻击骑着骆驼的玩家" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre2" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1399007-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-1" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本文来源：苦力怕533，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
     <Grid Margin="10,10,10,30" Height="40" Width="300">
       <Grid.Triggers>
         <EventTrigger RoutedEvent="Loaded">
@@ -1379,4 +1397,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/1/25 14:25:07 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/2/2 0:27:53 -->
