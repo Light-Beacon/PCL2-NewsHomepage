@@ -948,85 +948,6 @@
         <TextBlock Text="本文内容部分来源Don_Trueno（MCBBS），漏洞翻译来源SPXX" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="23w06a" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w06a.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w06a.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W06A" />
-        </Border>
-        <TextBlock Text="更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 唱片机现在播放音乐唱片时会在其上方发出音符粒子" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 在“按键绑定”界面中添加了一个Tooltip，指定哪些按键的绑定发生冲突" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 新增了一个界面，可以轻松启用/禁用实验性功能" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 其它略，详见完整日志" />
-        </StackPanel>
-        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
-        <TextBlock Text="展示实体" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了“展示”实体，可灵活显示物品、方块和文本" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了可对实体造成伤害的 damage 命令" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 可以用参数设定伤害数、伤害类型、和造成伤害的实体以及造成伤害的伤害原因或伤害发生的位置" />
-          </StackPanel>
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了伤害类型注册表，可以通过数据包进行扩展伤害类型决定游戏如何处理伤害" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 包括伤害具有哪些属性，以及实体因此类伤害死亡时使用的死亡信息" />
-          </StackPanel>
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了 execute summon ，允许在实体生成时使用@s自定义新生成的实体" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了 doVinesSpread 游戏规则，确定藤蔓是否会蔓延到附近的方块" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 其它略，详见完整日志" />
-        </StackPanel>
-        <TextBlock Text="主要修复的漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 用打开漏斗矿车会激怒猪灵，即使打开漏斗不会激怒他们" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 幽匿感测体无法检测到一系列交互" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 伤害后视角倾斜效果不好" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" Shift+鼠标点击物品时，无法移动到铁砧的第二个栏位中" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 部分UI错位" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 更多详见完整日志" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w06a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1426293-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w06a" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="本文译文来源 killWE（MCBBS），漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
     <Grid Margin="10,10,10,30" Height="40" Width="300">
       <Grid.Triggers>
         <EventTrigger RoutedEvent="Loaded">
@@ -1137,4 +1058,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/2 16:05:51 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/3/8 16:44:35 -->
