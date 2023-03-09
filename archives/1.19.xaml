@@ -272,9 +272,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-3-release-candidate-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1401299-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-release-candidate-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc2" />
           </Grid>
         </GroupBox>
         <TextBlock Text="漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -316,9 +316,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-3-release-candidate-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1401299-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-release-candidate-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc1" />
           </Grid>
         </GroupBox>
         <TextBlock Text="漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -360,9 +360,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre3" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1400691-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-3" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre3" />
           </Grid>
         </GroupBox>
         <TextBlock Text="漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -379,7 +379,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE2" />
         </Border>
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Margin="20,5,0,5" />
         <TextBlock Text="修改内容" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -410,9 +410,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1399007-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre2" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文来源：苦力怕533，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -429,7 +429,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE1" />
         </Border>
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Margin="20,5,0,5" />
         <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -478,9 +478,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1398770-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-pre-release-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre1" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文来源：苦力怕533，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -668,9 +668,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w46a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w46a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1397102-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w46a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/22w46a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文翻译由苦力怕553（MCBBS）提供，略有更改，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -785,9 +785,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w45a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w45a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1395379-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w45a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/22w45a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="部分译文来自cutemiku，漏洞翻译由SPXX提供" Style="{StaticResource footnote}" />
@@ -924,9 +924,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w44a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w44a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1393549-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w44a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/22w44a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文来源：苦力怕553（MCBBS）、漏洞翻译由 SPXX 提供" Style="{StaticResource footnote}" />
@@ -1025,9 +1025,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w43a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w43a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1391775-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w43a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/22w43a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文翻译取自sky_tianle（MCBBS），漏洞翻译由 SPXX 志愿者提供" Style="{StaticResource footnote}" />
@@ -1044,8 +1044,8 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W42A" />
         </Border>
-        <TextBlock Text="注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Style="{StaticResource PGTextBlock}" />
-        <TextBlock Text="你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Margin="20,5,0,5" />
+        <TextBlock Text="你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Margin="20,5,0,5" />
         <TextBlock Text="新特性" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -1228,9 +1228,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w42a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w42a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1390920-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-22w42a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/22w42a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="可能不是最终译名" Style="{StaticResource footnote}" />
@@ -1264,9 +1264,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-2" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文来源 ff98sha（MCBBS）" Style="{StaticResource footnote}" />
@@ -1298,9 +1298,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370643-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc2" />
           </Grid>
         </GroupBox>
         <TextBlock Text="MJ又在水版本号了" Style="{StaticResource footnote}" />
@@ -1332,9 +1332,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370332-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-2-release-candidate-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" />
           </Grid>
         </GroupBox>
         <TextBlock Text="您好是的，纯粹是水版本..." Style="{StaticResource footnote}" />
@@ -1523,9 +1523,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc3" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1366950-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-3" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc3" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本次共修复了10个bug，本文来源于 苦力怕553 （MCBBS） 上的译文" Style="{StaticResource footnote}" />
@@ -1714,9 +1714,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1367391-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-java-edition-1-19-1" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本次共修复了 41 个bug，本文来源于 AzureZeng（MCBBS） 上的译文" Style="{StaticResource footnote}" />
@@ -1781,9 +1781,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-5" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1362948-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-5" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文使用了由卡狗于MCBBS上发布的译文" Style="{StaticResource footnote}" />
@@ -1826,9 +1826,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre6" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-1-pre-release-6" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1364665-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-1-pre-release-6" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre6" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本次共修复了11个bug，本文来源于 苦力怕553 在MCBBS上的译文" Style="{StaticResource footnote}" />
@@ -1868,9 +1868,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1365048-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-release-candidate-2" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc2" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本次共修复了 2 个漏洞，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
@@ -3920,4 +3920,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/2 16:05:51 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/3/9 11:30:30 -->
