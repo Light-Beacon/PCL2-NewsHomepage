@@ -369,6 +369,84 @@
             <TextBlock Style="{StaticResource ListItem}" Text=" 添加饰纹陶罐，可以用陶罐碎片或红砖合成" />
           </StackPanel>
         </StackPanel>
+        <TextBlock Text="生物" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/嗅探兽">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="嗅探兽" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a4/Sniffer_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <TextBlock Text="方块" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/饰纹陶罐">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="饰纹陶罐" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f1/Decorated_Pot_JE2.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/可疑的沙子">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="可疑的沙子" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8e/Suspicious_Sand_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 樱花系列方块" />
+        </StackPanel>
+        <TextBlock Text="物品" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/锻造模版">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="锻造模版" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/08/Dune_Armor_Trim_Smithing_Template_JE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/刷子">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="刷子" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/99/Brush_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
@@ -398,7 +476,6 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-RC3" />
         </Border>
-        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="1.19.4预计明天（3/14）发布" />
         <TextBlock Text="修复的漏洞" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -5121,4 +5198,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/15 15:56:50 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/3/15 16:02:48 -->
