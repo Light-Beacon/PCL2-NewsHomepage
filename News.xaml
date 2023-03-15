@@ -255,7 +255,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4" />
         </Border>
-        <local:MyHint Margin="0,8,0,2" IsWarn="False" Text="原文过长，这里仅提取部分展示，更多更改请见完整日志" />
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="原文过长，这里仅提取部分展示，更多更改请见完整日志" />
         <TextBlock Text="更改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -338,7 +338,7 @@
           <TextBlock Style="{StaticResource ListItem}" Text=" 添加交互实体，该实体不可见，可记录玩家攻击与交互" />
         </StackPanel>
         <TextBlock Text="实验性特性（1.20内容）" Style="{StaticResource h2}" />
-        <local:MyHint Margin="0,8,0,2" IsWarn="False" Text="该部分的特性仅在世界加载实验性数据包后启用" />
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="该部分的特性仅在世界加载实验性数据包后启用" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 添加锻造模板，可将不同材料装饰在盔甲上（仅有装饰作用）" />
@@ -559,7 +559,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-RC3" />
         </Border>
-        <local:MyHint Margin="0,8,0,2" IsWarn="False" Text="1.19.4预计明天（3/14）发布" />
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="1.19.4预计明天（3/14）发布" />
         <TextBlock Text="修复的漏洞" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -808,4 +808,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/15 15:54:19 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/3/15 15:56:50 -->
