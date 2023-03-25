@@ -241,10 +241,384 @@
         </ColumnDefinition>
       </Grid.ColumnDefinitions>
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+      <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+    </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w12a" CanSwap="True" IsSwaped="False">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w12a.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w12a.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W12A" />
+        </Border>
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="本快照为 1.20 版本快照" />
+        <TextBlock Text="新特性" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" &quot;1.20更新&quot;的实验性数据包中的特性和更改现在已经全部实装到游戏中" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 将共振功能添加到了紫水晶方块中" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了校频幽匿感测体（暂译）" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了可疑的沙砾，更多的考古地点和新的纹样陶片" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了5种新盔甲纹饰" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 为告示牌优化了自定义选项" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了嗅探兽蛋" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了瓶子草（暂译）" />
+        </StackPanel>
+        <TextBlock Text="共振" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 如果幽匿感测体感受到了振动，放置于幽匿感测体旁的紫水晶方块将在当前位置再次发出同等频率的振动" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 这一行为被称为共振，这允许玩家将同等频率的振动进行长距离传输，避免了此前必须重新创造自然的振动才能传导的情况" />
+        </StackPanel>
+        <TextBlock Text="校频幽匿感测体" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 这是幽匿感测体的变种，可以让你单独监听某个频率的振动" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 它无法被自然生成，且只能通过1个幽匿感测体+3个紫水晶碎片的形式在工作台合成" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 输入的红石信号强度即是这个方块单独监听的频率" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="考古" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了可疑的沙砾" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 它和可疑的沙子性质相同" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 将可疑的沙砾添加到了冷水海洋废墟" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 将可疑的沙子添加到了暖水海洋废墟" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 你可以在那里发现嗅探兽蛋" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了踪迹废墟（暂译），一个来自失落文化的、被掩埋的结构" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 其中四种盔甲纹饰可以在这里找到" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了16种纹样陶片 （所以现在我们一共有20种纹样陶片了）" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 他们已经被分散到5种考古据点：沙漠井口、沙漠神殿、冷水海洋废墟、暖水海洋废墟以及足迹废墟" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="盔甲纹饰" Style="{StaticResource h3}" />
+        <TextBlock Text="添加了如下盔甲纹饰：" Margin="20,5,0,5" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 足迹废墟" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 向导盔甲纹饰" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 牧民盔甲纹饰" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 塑造盔甲纹饰" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 雇主盔甲纹饰" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 远古城市" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 幽静盔甲纹饰" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="告示牌" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在被放置的告示牌可被编辑" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 这可以通过与告示牌交互来完成" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 告示牌的两面现在都可以包含不同的文字和颜色，这会让更多的自定义选项成为可能" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 默认情况下，告示牌会在放下时要求你输入其正面的文字" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 要为背面添加文字，你必须来到告示牌的背面并与它的表面进行交互才可编辑它" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 告示牌现在可以通过蜜脾涂蜡，这会让上面的文字不能再被编辑" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 当告示牌被涂蜡后，其上面的点击命令才可被执行" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 当告示牌未被涂蜡时，对其的交互操作将不会执行命令，而是会像往常一样打开编辑页面" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="嗅探兽蛋" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 可以在暖水海洋废墟的可疑的沙子中找到它" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当嗅探兽两两繁殖时，嗅探兽幼崽不会再直接出现；而是会掉落嗅探兽蛋" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 孵化" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 当被放置在苔藓上时，蛋会在大约10分钟后孵化" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 在其他方块上时，则是会在大约20分钟后孵化" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="瓶子草（暂译）" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 嗅探兽现在会时不时嗅探出瓶子草种荚" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 瓶子草种荚被种植于耕地时会成长为瓶子草作物，它有五个生长阶段" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 当成熟时，瓶子草作物可被收获，掉落两格高的瓶子草" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 游戏内许多动作的振动频率现在已被调整" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 凋零效果粒子颜色的区分度更高了" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 缓降效果粒子颜色的区分度更高了" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 对于可以在上面行走和穿越的方块的脚步音效进行了合并" />
+        </StackPanel>
+        <TextBlock Text="振动频率" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 详见完整日志或 Wiki" />
+        </StackPanel>
+        <TextBlock Text="盔甲纹饰" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 对样式进行了调整，详见完整日志" />
+        </StackPanel>
+        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 因为告示牌数据格式的更改，数据包版本现在变为 13" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了新的结构处理器规则 capped，用于限制一个结构分块能替换的最大方块数量" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在 rule 处理器规则配置的方块实体字段现在使用了 block_entity_modifier 的引用，而不是之前固定的 output_nbt 配置" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 游戏事件因振动频率的更改而被修改，部分事件已被移除" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 调整了展示实体插值的计算" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 移除了 update_1_20 的特性标志以及内置的数据包——特性已经不再是实验性的了" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 具体详见完整日志" />
+        </StackPanel>
+        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 蜂蜜块和黏液块内部的小立方体不会显示在物品栏中" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 3D模型的药水在GUI中展示不正确" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 狼的项圈颜色可由主人以外的玩家改变" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 实体骑乘实体会导致位置与坐标不同步" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 重新加载世界会重置棕色哞菇吃下的花" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 创造模式物品栏的饰纹陶罐和没有NBT的空白全新饰纹陶罐会匹配最近一次玩家制作的饰纹陶罐的纹理" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当使用调试棒旋转饰纹陶罐时，它会生成一个饰纹陶罐物品" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 紧挨在一起生长的樱花树的树叶会凋谢" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 处于发情状态的嗅探兽有时不会接近发情的另一只来完成繁殖" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+              <ColumnDefinition Width="10*">
+              </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w12a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1434770-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/23w12a" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本文来源 a1294790523 （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="Mojang 宣布 1.20 更新主题为：TRAILS &amp; TALES" CanSwap="True" IsSwaped="False">
+      <StackPanel Margin="30,40,30,20">
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/1.20update.jpg" Margin="10,0,10,0" MaxHeight="200" />
+        <TextBlock Text="本次更新的LOGO" Style="{StaticResource imgTitle}" />
+        <TextBlock Text="本次更新内容" Style="{StaticResource h2}" />
+        <TextBlock Text="生物群系" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 樱花树林" />
+        </StackPanel>
+        <TextBlock Text="生物" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/嗅探兽">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="嗅探兽" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a4/Sniffer_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/骆驼">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="骆驼" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/09/Camel.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <TextBlock Text="方块" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/悬挂式告示牌">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="悬挂式告示牌" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/be/Oak_Hanging_Sign_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/雕纹书架">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="雕纹书架" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/48/Chiseled_Bookshelf_%28stage_1%29_%28S%29_JE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/饰纹陶罐">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="饰纹陶罐" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f1/Decorated_Pot_JE2.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/可疑的沙子">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="可疑的沙子" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8e/Suspicious_Sand_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 竹子系列方块" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 樱花系列方块" />
+        </StackPanel>
+        <TextBlock Text="物品" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/锻造模版">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="锻造模版" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/08/Dune_Armor_Trim_Smithing_Template_JE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/刷子">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="刷子" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/99/Brush_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <TextBlock Text="其他机制" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 旁边有生物头颅的音符盒可以播放声音" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲纹饰机制" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 考古机制" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 沙漠神殿、水井结构更新" />
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </local:MyCard>
+    <Grid Margin="0,0,0,15">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="100">
+        </ColumnDefinition>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
       <TextBlock Text="最  新  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新正式版 - 1.19.4" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="1.19.4" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
@@ -463,154 +837,6 @@
           </Grid>
         </GroupBox>
         <TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <Grid Margin="0,0,0,15">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-      </Grid.ColumnDefinitions>
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-    </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="Mojang 宣布 1.20 更新主题为：TRAILS &amp; TALES" CanSwap="True" IsSwaped="False">
-      <StackPanel Margin="30,40,30,20">
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/1.20update.jpg" Margin="10,0,10,0" MaxHeight="200" />
-        <TextBlock Text="本次更新的LOGO" Style="{StaticResource imgTitle}" />
-        <TextBlock Text="本次更新内容" Style="{StaticResource h2}" />
-        <TextBlock Text="生物群系" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 樱花树林" />
-        </StackPanel>
-        <TextBlock Text="生物" Style="{StaticResource h3}" />
-        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-          <WrapPanel.Resources>
-            <Style TargetType="local:MyButton">
-              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
-            </Style>
-          </WrapPanel.Resources>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/嗅探兽">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="嗅探兽" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a4/Sniffer_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/骆驼">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="骆驼" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/09/Camel.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-        </WrapPanel>
-        <TextBlock Text="方块" Style="{StaticResource h3}" />
-        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-          <WrapPanel.Resources>
-            <Style TargetType="local:MyButton">
-              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
-            </Style>
-          </WrapPanel.Resources>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/悬挂式告示牌">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="悬挂式告示牌" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/b/be/Oak_Hanging_Sign_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/雕纹书架">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="雕纹书架" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/4/48/Chiseled_Bookshelf_%28stage_1%29_%28S%29_JE1.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/饰纹陶罐">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="饰纹陶罐" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f1/Decorated_Pot_JE2.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/可疑的沙子">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="可疑的沙子" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8e/Suspicious_Sand_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-        </WrapPanel>
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 竹子系列方块" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 樱花系列方块" />
-        </StackPanel>
-        <TextBlock Text="物品" Style="{StaticResource h3}" />
-        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-          <WrapPanel.Resources>
-            <Style TargetType="local:MyButton">
-              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
-            </Style>
-          </WrapPanel.Resources>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/锻造模版">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="锻造模版" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/08/Dune_Armor_Trim_Smithing_Template_JE1.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/刷子">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="刷子" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/99/Brush_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-        </WrapPanel>
-        <TextBlock Text="其他机制" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 旁边有生物头颅的音符盒可以播放声音" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲纹饰机制" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 考古机制" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 沙漠神殿、水井结构更新" />
-          </StackPanel>
-        </StackPanel>
       </StackPanel>
     </local:MyCard>
     <Grid Margin="0,0,0,15">
@@ -885,4 +1111,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/15 16:02:48 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/3/25 9:57:29 -->
