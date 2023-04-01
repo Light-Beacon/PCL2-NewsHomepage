@@ -289,9 +289,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w13a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w13a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1436107-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/23w13a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w13a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
@@ -658,9 +658,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-java-edition-1-19-4" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433267-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-java-edition-1-19-4" />
           </Grid>
         </GroupBox>
         <TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" />
@@ -897,9 +897,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w12a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w12a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1434770-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/23w12a" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w12a" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文来源 a1294790523 （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" />
@@ -931,9 +931,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-3" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-rc3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433030-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-rc3" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-3" />
           </Grid>
         </GroupBox>
       </StackPanel>
@@ -991,9 +991,9 @@
               <ColumnDefinition Width="10*">
               </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-rc2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1432301-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-rc2" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-1" />
           </Grid>
         </GroupBox>
         <TextBlock Text="本文来源inuEbisu（MCBBS）" Style="{StaticResource footnote}" />
@@ -1109,4 +1109,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/31 19:48:24 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/1 10:08:40 -->
