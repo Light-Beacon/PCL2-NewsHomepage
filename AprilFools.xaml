@@ -143,7 +143,7 @@
         <Setter Property="TextAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-        <Setter Property="Width" Value="160" />
+        <Setter Property="Width" Value="180" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="FontSize" Value="24" />
       </Style>
@@ -294,15 +294,25 @@
         <TextBlock Text="漏洞" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 加了点新Bug（除非你投票决定它们是特性）：是的我们之前已改变了一切，为什么你不想点新的更好的方法呢" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 加了点新Bug（除非你投票决定它们是特性）" />
         </StackPanel>
+        <TextBlock Text="（*：是的我们之前已改变了一切，为什么你不想点新的更好的方法呢）" Margin="20,5,0,5" />
         <TextBlock Text="FAQ" Style="{StaticResource h2}" />
         <TextBlock Text="当我下载这个快照后会发生什么" Style="{StaticResource h4}" />
-        <TextBlock Text="在你下载之后，没有反悔的余地。如果你删除文件，故事就就此结束了；你从床上醒来并信你爱信啥信啥吧。你要是启动它，你呆在主世界，我们会给你看看爱丽丝仙境的兔子洞有多深" Margin="20,5,0,5" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在你下载之后，没有反悔的余地。如果你删除文件，故事就就此结束了；你从床上醒来并信你爱信啥信啥吧。你要是启动它，你呆在主世界，我们会给你看看爱丽丝仙境的兔子洞有多深" />
+        </StackPanel>
         <TextBlock Text="在游戏玩法上我能期待些什么" Style="{StaticResource h4}" />
-        <TextBlock Text="就像一盒巧克力一样，你永远不会知道你会尝到什么滋味" Margin="20,5,0,5" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 就像一盒巧克力一样，你永远不会知道你会尝到什么滋味" />
+        </StackPanel>
         <TextBlock Text="但是我不想投那堆乱七八糟的，我就是想放松一下" Style="{StaticResource h4}" />
-        <TextBlock Text="最艰难的抉择，需要最坚强的意志！" Margin="20,5,0,5" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 最艰难的抉择，需要最坚强的意志！" />
+        </StackPanel>
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
@@ -447,4 +457,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/1 20:30:22 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/1 20:58:21 -->
