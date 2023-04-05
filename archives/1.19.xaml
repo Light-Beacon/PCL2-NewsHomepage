@@ -2373,6 +2373,23 @@
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 它们也可以损耗耐力向前冲去" />
         </StackPanel>
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/骆驼">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="骆驼" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a/Camel.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
         <TextBlock Text="竹子类" Style="{StaticResource h4}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -5181,4 +5198,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/1 20:58:21 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/5 23:18:03 -->

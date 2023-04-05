@@ -244,7 +244,7 @@
       <TextBlock Text="加  急  特  快" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w13a_or_b" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="23w13a_or_b" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
@@ -257,7 +257,7 @@
         </Border>
         <TextBlock Text="以下译自官方博文" Margin="20,5,0,5" />
         <TextBlock Text="我们人类每天都要做35000个选择——它们大多是关于吃什么、穿什么、说什么，还有是否你应该在流媒体平台上观看新现实戏剧（它太太太太好康了，只是你必须得等至少47集才能真正开始）。有这么多的选择需要做，使人烦躁。更直接的说，使人厌恶。而且这些选择有些你可能会在 Minecraft 中做出！Mojang Studios 现在着手于修正这个问题。解决方案是：更多的选择！" Margin="20,5,0,5" />
-        <TextBlock Text="几年以来，我们推出了一系列改变生活、赢得大奖、使人疯狂、更不用说令人极为震撼的内容：Minecraft 3D、20w14∞快照、一次一个方块更新。但是它们和本次“投票更新”一点边都沾不上——一个自从2017年九开始制作的快照。" Margin="20,5,0,5" />
+        <TextBlock Text="几年以来，我们推出了一系列改变生活、赢得大奖、使人疯狂、更不用说令人极为震撼的内容：Minecraft 3D、20w14∞快照、一次一个方块更新。但是它们和本次“投票更新”一点边都沾不上——一个自从2017年就开始制作的快照。" Margin="20,5,0,5" />
         <TextBlock Text="当你启动游戏的那一刻，你会发现你自己正身处于拥有无尽的投票的世界中，在那里投票的结果将会从根本上更改 Minecraft 的运行法则。我们创造了好一系列的可供投票的特性，它们包含了方方面面：气球蜂、法国模式、僵尸模式、兔子幻形、爆破药水、诡异世界 —— 还有更多、更多......" Margin="20,5,0,5" />
         <TextBlock Text="“研究表明游戏玩家喜爱做出选择——越多越好，”来自渝仁大学的司越·仪教授说道。“Mojang Studios希望将选择权交到玩家的手上的事实体现了他们是多么地关心他们的玩家社区。至少我是这么想的。我从1857年开始就不混社区了而且我其实也不玩游戏。”" Margin="20,5,0,5" />
         <TextBlock Text="所以这个什么时候才能推出？事实是它已经到来了！由于我们希望投票更新尽快发放到玩家们的手里，我们现在非常乐意宣布你现在立刻就可以下载它！可以等会再感谢我们。" Margin="20,5,0,5" />
@@ -457,4 +457,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/1 20:58:21 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/5 23:18:03 -->
