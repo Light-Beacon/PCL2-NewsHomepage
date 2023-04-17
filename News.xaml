@@ -244,6 +244,14 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="疑似 Minecraft 官网国区购买入口关闭" CanSwap="True" IsSwaped="False">
+      <StackPanel Margin="30,40,30,20">
+        <TextBlock Text="Minecraft 官网疑似关闭国区购买入口，在原来的中文购买界面购买时显示”此产品目前无法在该地区购买，通过’选择地区‘菜单更改你的地区“。" Margin="20,5,0,5" />
+        <TextBlock Text="将页面调至英文，在选择地区列表中也没有”China“。" Margin="20,5,0,5" />
+        <TextBlock Text="目前官网在中文界面下点击“获取Minecraft”会显示前往应用商店查看价格，购买按钮似乎无效。" Margin="20,5,0,5" />
+        <TextBlock Text="微软商店暂未受到此次影响。" Margin="20,5,0,5" />
+      </StackPanel>
+    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w14a" CanSwap="True" IsSwaped="False">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
@@ -343,9 +351,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1437694-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w14a" />
           </Grid>
-        </GroupBox>
-        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
-      </StackPanel>
+        </GroupBox>继续
+<TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" /></StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="Mojang 宣布 1.20 更新主题为：TRAILS &amp; TALES" CanSwap="True" IsSwaped="False">
       <StackPanel Margin="30,40,30,20">
@@ -712,9 +719,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433267-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-java-edition-1-19-4" />
           </Grid>
-        </GroupBox>
-        <TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" />
-      </StackPanel>
+        </GroupBox>继续
+<TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" /></StackPanel>
     </local:MyCard>
     <Grid Margin="0,0,0,15">
       <Grid.ColumnDefinitions>
@@ -778,9 +784,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1436107-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w13a" />
           </Grid>
-        </GroupBox>
-        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
-      </StackPanel>
+        </GroupBox>继续
+<TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" /></StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="23w12a" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -1004,9 +1009,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1434770-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w12a" />
           </Grid>
-        </GroupBox>
-        <TextBlock Text="本文来源 a1294790523 （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" />
-      </StackPanel>
+        </GroupBox>继续
+<TextBlock Text="本文来源 a1294790523 （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" /></StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="1.19.4-rc3" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -1038,8 +1042,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433030-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-3" />
           </Grid>
-        </GroupBox>
-      </StackPanel>
+        </GroupBox>继续
+
+</StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="1.19.4-rc2" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -1098,9 +1103,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1432301-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-1" />
           </Grid>
-        </GroupBox>
-        <TextBlock Text="本文来源inuEbisu（MCBBS）" Style="{StaticResource footnote}" />
-      </StackPanel>
+        </GroupBox>继续
+<TextBlock Text="本文来源inuEbisu（MCBBS）" Style="{StaticResource footnote}" /></StackPanel>
     </local:MyCard>
     <Grid Margin="10,10,10,30" Height="40" Width="300">
       <Grid.Triggers>
@@ -1195,7 +1199,7 @@
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 为了美好未来的物品！" />
         </StackPanel>
-        <TextBlock Text="技术性缸盖" Style="{StaticResource h3}" />
+        <TextBlock Text="技术性更改" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 超兴奋！" />
@@ -1236,9 +1240,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1436760-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/vote-update" />
           </Grid>
-        </GroupBox>
-        <TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" />
-      </StackPanel>
+        </GroupBox>继续
+<TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" /></StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,10">
@@ -1299,4 +1302,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/5 23:18:03 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/17 23:05:16 -->
