@@ -327,8 +327,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1436760-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/vote-update" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="最热快讯！" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -456,4 +457,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/17 23:05:16 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/17 23:11:07 -->

@@ -351,8 +351,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1437694-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w14a" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="Mojang 宣布 1.20 更新主题为：TRAILS &amp; TALES" CanSwap="True" IsSwaped="False">
       <StackPanel Margin="30,40,30,20">
@@ -719,8 +720,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433267-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-java-edition-1-19-4" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <Grid Margin="0,0,0,15">
       <Grid.ColumnDefinitions>
@@ -784,8 +786,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1436107-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w13a" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="23w12a" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -1009,8 +1012,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1434770-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w12a" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="本文来源 a1294790523 （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="本文来源 a1294790523 （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="1.19.4-rc3" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -1042,9 +1046,8 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433030-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-3" />
           </Grid>
-        </GroupBox>继续
-
-</StackPanel>
+        </GroupBox>
+      </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="1.19.4-rc2" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
@@ -1103,8 +1106,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1432301-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-1" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="本文来源inuEbisu（MCBBS）" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="本文来源inuEbisu（MCBBS）" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <Grid Margin="10,10,10,30" Height="40" Width="300">
       <Grid.Triggers>
@@ -1240,8 +1244,9 @@
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1436760-1-1.html" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/vote-update" />
           </Grid>
-        </GroupBox>继续
-<TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" /></StackPanel>
+        </GroupBox>
+        <TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" />
+      </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,10">
@@ -1302,4 +1307,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/17 23:05:16 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/17 23:11:07 -->
