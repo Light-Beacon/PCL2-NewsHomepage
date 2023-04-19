@@ -270,7 +270,7 @@
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 可覆盖的方块不再会阻挡附魔台和书架连接" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 在沙漠神殿中，新房间屋顶倒塌的更多并且最高层总是可见一个可疑的沙子" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在沙漠神殿中，新房间屋顶倒塌得更多并且在最高层总是能见到一个可疑的沙子" />
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 更新了 Minecraft: Java Edition Logo" />
           <Ellipse />
@@ -279,9 +279,9 @@
         <TextBlock Text="幽匿尖啸体" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 使他们含水现在可以静音它们的尖啸声" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 使其浸水现在可以阻止其发出尖啸" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 放进了创造物品栏的红石方块栏" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 将其加入到创造物品栏的红石方块栏" />
         </StackPanel>
         <TextBlock Text="幽匿感测体" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
@@ -291,26 +291,26 @@
             <Ellipse />
             <TextBlock Style="{StaticResource ListItem}" Text=" 默认红石输出已在距离计算上调整得更加可靠" />
             <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 对它下面的方块强充能" />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 对其下面的方块强充能" />
           </StackPanel>
         </StackPanel>
         <TextBlock Text="校频幽匿感测体" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 激活冷却从2秒钟调成了1秒钟" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 激活冷却从2秒调成了1秒" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 震动检测范围从8格方块调成了16格方块" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 震动检测范围从 8 格方块调成了 16 格方块" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 红石信号输入端的行为现在和其他红石元件更一致了" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 红石信号输入端的行为现在和其他红石元件更一致" />
           <StackPanel Style="{StaticResource ListStyle}">
             <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 举个例子，信号可以透过方块接收" />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 例如，信号可以透过方块接收" />
           </StackPanel>
         </StackPanel>
         <TextBlock Text="技术性更改" Style="{StaticResource h3}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 拥有 click command 的告示牌即使它没有被涂蜡现在也可以被交互了。" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 拥有 click command 的告示牌即使其没有被涂蜡现在也可以被交互" />
           <StackPanel Style="{StaticResource ListStyle}">
             <Ellipse />
             <TextBlock Style="{StaticResource ListItem}" Text=" 带有非文本（text）聊天组件的告示牌无法再被编辑" />
@@ -1307,4 +1307,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/17 23:11:07 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/19 21:11:58 -->
