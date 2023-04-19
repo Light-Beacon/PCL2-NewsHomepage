@@ -246,7 +246,7 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legend 现已发售" CanSwap="True">
+    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legends 现已发售" CanSwap="True">
       <StackPanel Margin="0,38,0,20">
         <StackPanel Width="1000" HorizontalAlignment="Center">
           <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
@@ -268,12 +268,12 @@
                 <GradientStop Color="#FF576574" Offset="1"/>
               </LinearGradientBrush>
             </Border.Background>
-            <TextBlock Margin="20,10" Text="Steam 上的 Minecraft Legend" Foreground="White" VerticalAlignment="Center" FontSize="16"/>
+            <TextBlock Margin="20,10" Text="Steam 上的 Minecraft Legends" Foreground="White" VerticalAlignment="Center" FontSize="16"/>
           </Border>
           <Border Margin="0,-25,20,0" Background="Black" HorizontalAlignment="Right" Height="40" CornerRadius="2">
           <WrapPanel>
             <TextBlock Margin="20,10" Text="¥ 119.00" Foreground="#C6D4Df" VerticalAlignment="Center"/>
-            <Border Margin="2" CornerRadius="2" VerticalAlignment="Center" Height="34" Cursor="Hand">
+            <Border Margin="2,2,2,1" CornerRadius="2" VerticalAlignment="Center" Height="34" Cursor="Hand">
               <Border.Background>
                 <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,1" >
                   <GradientStop Color="#8ED629"/>
