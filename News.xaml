@@ -357,7 +357,7 @@
         <TextBlock Text="本文来源 麦陈Bingkler （MCBBS）略有更改，漏洞翻译来源 SPXX" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legend 现已发售" CanSwap="True">
+    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legends 现已发售" CanSwap="True">
       <StackPanel Margin="0,38,0,20">
         <StackPanel Width="1000" HorizontalAlignment="Center">
           <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill" />
@@ -368,7 +368,7 @@
           <TextBlock Style="{StaticResource verTxtBlk}" Text="团结主世界!" />
         </Border>
         <StackPanel Margin="40,10">
-          <TextBlock Text="Minecraft Legends 是 Mojang 与 Blackbird Interactive 联合研发的一款 Minecraft IP 下的全新动作策略游戏。" />
+          <TextBlock Text="Minecraft Legends 是 Mojang Studios 与 Blackbird Interactive 联合研发的一款 Minecraft IP 下的全新动作策略游戏。" />
           <TextBlock Text="在这里，你将扮演一位名叫“英雄”的神秘角色，在主世界里联合各式各样的原住民，和它们一同击败残酷的猪灵侵略者们。下界传送门在主世界各处拔地而起，带来了成群的猪灵和扩散着的下界岩，现在只有你能够带领伙伴们摧毁这些传送门和猪灵，阻止四处扩散的腐化！" />
           <TextBlock Text="在这里，即使是原本在 Minecraft 世界里敌对的生物们，也都成为你的朋友，能在战斗中出一份力。Minecraft Legends 设定是是 Minecraft 主世界内居民们代代相传的故事，所以谁能肯定，这个是事实或者是传说呢？没有人能够有十足的把握，所以你完全可以谱写属于自己的篇章！" />
           <StackPanel Margin="0,10">
@@ -379,12 +379,12 @@
                   <GradientStop Color="#FF576574" Offset="1" />
                 </LinearGradientBrush>
               </Border.Background>
-              <TextBlock Margin="20,10" Text="Steam 上的 Minecraft Legend" Foreground="White" VerticalAlignment="Center" FontSize="16" />
+              <TextBlock Margin="20,10" Text="Steam 上的 Minecraft Legends" Foreground="White" VerticalAlignment="Center" FontSize="16" />
             </Border>
             <Border Margin="0,-25,20,0" Background="Black" HorizontalAlignment="Right" Height="40" CornerRadius="2">
               <WrapPanel>
                 <TextBlock Margin="20,10" Text="¥ 119.00" Foreground="#C6D4Df" VerticalAlignment="Center" />
-                <Border Margin="2" CornerRadius="2" VerticalAlignment="Center" Height="34" Cursor="Hand">
+                <Border Margin="2,2,2,1" CornerRadius="2" VerticalAlignment="Center" Height="34" Cursor="Hand">
                   <Border.Background>
                     <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,1">
                       <GradientStop Color="#8ED629" />
