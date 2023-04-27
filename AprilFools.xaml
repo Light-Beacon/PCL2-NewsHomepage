@@ -235,15 +235,12 @@
     </Border>
     <Grid Margin="0,0,0,15">
       <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="100" />
+        <ColumnDefinition Width="1*" />
       </Grid.ColumnDefinitions>
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="加  急  特  快" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+      <TextBlock Text="{$content}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
     <local:MyCard Margin="0,0,0,15" Title="23w13a_or_b" CanSwap="True" IsSwaped="True">
@@ -375,15 +372,12 @@
     </local:MyCard>
     <Grid Margin="0,0,0,15">
       <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="100" />
+        <ColumnDefinition Width="1*" />
       </Grid.ColumnDefinitions>
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+      <TextBlock Text="{$content}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
     <local:MyCard Margin="0,0,0,15" Title="新闻主页正在测试！" CanSwap="True" IsSwaped="False">
@@ -456,4 +450,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/22 9:57:40 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/27 22:16:34 -->
