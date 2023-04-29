@@ -414,7 +414,7 @@
         <TextBlock Text="本文来源：干就完了（MCBBS），漏洞翻译来源SPXX" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legends 现已发售" CanSwap="True">
+    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legends 现已发售" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="0,38,0,20">
         <StackPanel Width="1000" HorizontalAlignment="Center">
           <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill" />
@@ -1105,19 +1105,18 @@
         <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Title="跳转到..." Margin="0,0,0,20">
+    <local:MyCard Title="更多页面..." Margin="0,0,0,20">
       <StackPanel Margin="25,40,23,15">
         <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="100" />
           </Grid.ColumnDefinitions>
-          <local:MyComboBox x:Name="jumpbox" Height="30">
+          <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
             <local:MyComboBoxItem Content="主页面" />
             <local:MyComboBoxItem Content="1.19存档" />
-            <local:MyComboBoxItem Content="四月是你的谎言" />
           </local:MyComboBox>
-          <local:MyButton HorizontalAlignment="Center" Width="80" Grid.Column="1" Text="跳转→" EventType="打开帮助" EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://test.bugjump.net/news/{0}.json}" />
+          <local:MyButton HorizontalAlignment="Center" Width="80" Grid.Column="1" Text="打开→" EventType="打开帮助" EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://test.bugjump.net/news/{0}.json}" />
         </Grid>
       </StackPanel>
     </local:MyCard>
@@ -1236,4 +1235,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/4/27 22:16:34 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/4/29 19:57:05 -->
