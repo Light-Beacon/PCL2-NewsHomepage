@@ -244,58 +244,61 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w18a" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.20-pre1" CanSwap="True" IsSwaped="False">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w18a.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.20-pre1.png" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w18a.jpg" Opacity="0" />
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.20-pre1.png" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W18A" />
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE1" />
         </Border>
-        <TextBlock Text="新特性" Style="{StaticResource h2}" />
-        <TextBlock Text="冒险进度" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" The Power of Books（知识的力量）：使用比较器接收雕纹书架的强度信号" />
-        </StackPanel>
         <TextBlock Text="更改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 方便起见，锻造台不再要求锻造模板和锻造物品放置的先后顺序" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 唱片机加入了创造模式物品栏的「红石」一栏" />
-        </StackPanel>
-        <TextBlock Text="脚步声" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 现在在方块上行走始终会播放脚步声" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 之前，如果你在靠近液体或空气的方块边缘行走则不会播放脚步声" />
-          </StackPanel>
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 在海床上行走会播放你所走过的方块对应的脚步声，但音高和音量会更低" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 已染色的羊毛、地毯和床现在可以被染成其它颜色" />
         </StackPanel>
         <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 数据包版本现在是 15，引入了签名数据格式、物品展示方向和进度相关的更改" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 新增两种伤害类型：outside_border 和 generic_kill" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 超出世界边界玩家现在受到的伤害类型为 outside_border ，而不是 in_wall" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 强制移除某个实体，例如使用 /kill 命令时现在会使用伤害类型 generic_kill 而不是 out_of_world" />
+          </StackPanel>
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 进度触发器、战利品表谓词、遥测功能略" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 战利品表的随机序列现在是确定的" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 战利品表中使用的随机序列 ID 由一个全新的字段 random_sequence 决定。每一个随机序列都会基于世界种子和序列 ID 而产生一个独特的序列，这意味着在同一世界中使用单一参数运行战利品表将会产生完全相同的结果" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 文件 server.properties 编码格式的更改" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 文件现在默认以 UTF-8 格式读取，之前的编码格式 (ISO 8859-1/Latin 1) 作为备用" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 命令 data 中使用的 string 数据源现在接受负数边界，它会被解析为从字符串末尾开始计数的索引" />
         </StackPanel>
-        <TextBlock Text="主要修复的漏洞" Style="{StaticResource h2}" />
+        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 玩家是否受方块的特殊性质影响取决于该玩家中心下方的方块" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当到达下界传送门另一侧时，动画会一直播放，直到脱离传送门时才结束" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 史莱姆/岩浆怪不会被跳跃提升的药水效果影响" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" server.properties 编码错误" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 幽匿感测体会感测到玩家在羊毛和地毯之间行走" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 多人游戏和 Realms 服务器中多个字符串不可翻译" />
           <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 嗅探兽趴下时碰撞箱不会随之调整" />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 破坏方块的动画有一帧延迟" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 进入末地时放置末地水晶会阻止末影龙生成" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 玩家站在地面上进入旁观模式时会向下移动0.19051个方块" />
         </StackPanel>
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -304,69 +307,12 @@
               <ColumnDefinition Width="12*" />
               <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w18a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1442418-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w18a" />
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.20-pre1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1443288-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-20-pre-release-1" />
           </Grid>
         </GroupBox>
-        <TextBlock Text="本文翻译来源：希铁石z，漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legends 现已发售" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="0,38,0,20">
-        <StackPanel Width="1000" HorizontalAlignment="Center">
-          <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill" />
-          <Image MaxHeight="170" MinWidth="800" Stretch="UniformToFill" Source="https://attachment.mcbbs.net/data/myattachment/forum/202206/14/173407j668q1hvhp3iyqnn.jpg" />
-          <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill" />
-        </StackPanel>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="团结主世界!" />
-        </Border>
-        <StackPanel Margin="40,10">
-          <TextBlock Text="    Minecraft Legends 是 Mojang Studios 与 Blackbird Interactive 联合研发的一款 Minecraft IP 下的全新动作策略游戏。" />
-          <TextBlock Text="    在这里，你将扮演一位名叫“英雄”的神秘角色，在主世界里联合各式各样的原住民，和它们一同击败残酷的猪灵侵略者们。下界传送门在主世界各处拔地而起，带来了成群的猪灵和扩散着的下界岩，现在只有你能够带领伙伴们摧毁这些传送门和猪灵，阻止四处扩散的腐化！" />
-          <TextBlock Text="    在这里，即使是原本在 Minecraft 世界里敌对的生物们，也都成为你的朋友，能在战斗中出一份力。Minecraft Legends 设定是是 Minecraft 主世界内居民们代代相传的故事，所以谁能肯定，这个是事实或者是传说呢？没有人能够有十足的把握，所以你完全可以谱写属于自己的篇章！" />
-          <StackPanel Margin="0,10">
-            <Border Margin="4" Height="70" CornerRadius="6">
-              <Border.Background>
-                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,1">
-                  <GradientStop Color="#FF2D3D4A" />
-                  <GradientStop Color="#FF576574" Offset="1" />
-                </LinearGradientBrush>
-              </Border.Background>
-              <TextBlock Margin="20,10" Text="Steam 上的 Minecraft Legends" Foreground="White" VerticalAlignment="Center" FontSize="16" />
-            </Border>
-            <Border Margin="0,-25,20,0" Background="Black" HorizontalAlignment="Right" Height="40" CornerRadius="2">
-              <WrapPanel>
-                <TextBlock Margin="20,10" Text="¥ 119.00" Foreground="#C6D4Df" VerticalAlignment="Center" />
-                <Border Margin="2,2,2,1" CornerRadius="2" VerticalAlignment="Center" Height="34" Cursor="Hand">
-                  <Border.Background>
-                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,1">
-                      <GradientStop Color="#8ED629" />
-                      <GradientStop Color="#6aa621" Offset="1" />
-                    </LinearGradientBrush>
-                  </Border.Background>
-                  <local:MyButton EventType="打开网页" EventData="https://store.steampowered.com/app/1928870/Minecraft_Legends/" Margin="6,2" VerticalAlignment="Center">
-                    <TextBlock Text="访问商店页面" Foreground="White" Margin="6,2" />
-                  </local:MyButton>
-                </Border>
-              </WrapPanel>
-            </Border>
-          </StackPanel>
-          <GroupBox Header="阅读完整博文" BorderBrush="{DynamicResource ColorBrush3}">
-            <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20*" />
-                <ColumnDefinition Width="12*" />
-                <ColumnDefinition Width="12*" />
-              </Grid.ColumnDefinitions>
-              <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Minecraft_Legends" ColorType="Highlight" />
-              <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1440249-1-1.html" />
-              <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-legends-here" />
-            </Grid>
-          </GroupBox>
-          <TextBlock Text="本文使用了 Don_Trueno 在 MCBBS 上发表的译文" Style="{StaticResource footnote}" />
-        </StackPanel>
+        <TextBlock Text="本文来源 Don_Trueno，漏洞翻译由 SPXX 提供" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="Mojang 宣布 1.20 更新主题为：TRAILS &amp; TALES" CanSwap="True" IsSwaped="True">
@@ -742,6 +688,74 @@
       <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
+    <local:MyCard Margin="0,0,0,15" Title="23w18a" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w18a.jpg" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w18a.jpg" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W18A" />
+        </Border>
+        <TextBlock Text="新特性" Style="{StaticResource h2}" />
+        <TextBlock Text="冒险进度" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" The Power of Books（知识的力量）：使用比较器接收雕纹书架的强度信号" />
+        </StackPanel>
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 方便起见，锻造台不再要求锻造模板和锻造物品放置的先后顺序" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 唱片机加入了创造模式物品栏的「红石」一栏" />
+        </StackPanel>
+        <TextBlock Text="脚步声" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在在方块上行走始终会播放脚步声" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 之前，如果你在靠近液体或空气的方块边缘行走则不会播放脚步声" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在海床上行走会播放你所走过的方块对应的脚步声，但音高和音量会更低" />
+        </StackPanel>
+        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 数据包版本现在是 15，引入了签名数据格式、物品展示方向和进度相关的更改" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 进度触发器、战利品表谓词、遥测功能略" />
+        </StackPanel>
+        <TextBlock Text="主要修复的漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 玩家是否受方块的特殊性质影响取决于该玩家中心下方的方块" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 史莱姆/岩浆怪不会被跳跃提升的药水效果影响" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 幽匿感测体会感测到玩家在羊毛和地毯之间行走" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 嗅探兽趴下时碰撞箱不会随之调整" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w18a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1442418-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w18a" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本文翻译来源：希铁石z，漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="23w17a" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
@@ -1024,106 +1038,6 @@
         <TextBlock Text="本文来源 a1294790523 （MCBBS），漏洞翻译来源 SPXX" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="23w14a" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <Border Style="{StaticResource verImgBdr}">
-          <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w14a.png" Stretch="Uniform" />
-          </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w14a.png" Opacity="0" />
-        </Border>
-        <Border Style="{StaticResource verTxtBdr}">
-          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W14A" />
-        </Border>
-        <TextBlock Text="更改" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 对幽匿系列方块更改" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 可覆盖的方块不再会阻挡附魔台和书架连接" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 在沙漠神殿中，新房间屋顶倒塌得更多并且在最高层总是能见到一个可疑的沙子" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 更新了 Minecraft: Java Edition Logo" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 主菜单背景已经换成了“足迹与故事”更新全景图" />
-        </StackPanel>
-        <TextBlock Text="幽匿尖啸体" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 使其浸水现在可以阻止其发出尖啸" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 将其加入到创造物品栏的红石方块栏" />
-        </StackPanel>
-        <TextBlock Text="幽匿感测体" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 对普通和校频幽匿感测体都进行了以下更改：" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 默认红石输出已在距离计算上调整得更加可靠" />
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 对其下面的方块强充能" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="校频幽匿感测体" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 激活冷却从 2 秒调成了 1 秒" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 震动检测范围从 8 格方块调成了 16 格方块" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 红石信号输入端的行为现在和其他红石元件更一致" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 例如，信号可以透过方块接收" />
-          </StackPanel>
-        </StackPanel>
-        <TextBlock Text="技术性更改" Style="{StaticResource h3}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 拥有 click command 的告示牌即使其没有被涂蜡现在也可以被交互" />
-          <StackPanel Style="{StaticResource ListStyle}">
-            <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text=" 带有非文本（text）聊天组件的告示牌无法再被编辑" />
-          </StackPanel>
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了新的战利品表函数：reference" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 添加了“快速游戏”启动器参数支持，设置后在启动游戏后可以直接进入世界" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 移除了“server”和“port”启动参数因为它们的功能被“快速游戏”所取代" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 标签更改" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 资源包版本更新为 14" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 战利品表、快速游戏、资源包、标签的更改详见完整日志" />
-        </StackPanel>
-        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
-        <StackPanel Style="{StaticResource ListStyle}">
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 放在书架和附魔台之间的透明方块会阻碍书架提高附魔等级" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 各种 Z-fighting 与贴图错误" />
-          <Ellipse />
-          <TextBlock Style="{StaticResource ListItem}" Text=" 执行缺少参数的 /execute 命令不会引发语法错误" />
-        </StackPanel>
-        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
-          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*" />
-              <ColumnDefinition Width="12*" />
-              <ColumnDefinition Width="12*" />
-            </Grid.ColumnDefinitions>
-            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w14a" ColorType="Highlight" />
-            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1437694-1-1.html" />
-            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w14a" />
-          </Grid>
-        </GroupBox>
-        <TextBlock Text="漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
-      </StackPanel>
-    </local:MyCard>
     <local:MyCard Title="更多页面..." Margin="0,0,0,20">
       <StackPanel Margin="25,40,23,15">
         <Grid>
@@ -1187,12 +1101,61 @@
       <TextBlock Text="周  边  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="疑似 Minecraft 官网国区购买入口关闭" CanSwap="True" IsSwaped="True">
-      <StackPanel Margin="30,40,30,20">
-        <TextBlock Text="Minecraft 官网疑似关闭国区购买入口，在原来的中文购买界面购买时显示”此产品目前无法在该地区购买，通过’选择地区‘菜单更改你的地区“。" Margin="20,5,0,5" />
-        <TextBlock Text="将页面调至英文，在选择地区列表中也没有”China“。" Margin="20,5,0,5" />
-        <TextBlock Text="目前官网在中文界面下点击“获取Minecraft”会显示前往应用商店查看价格，购买按钮似乎无效。" Margin="20,5,0,5" />
-        <TextBlock Text="微软商店暂未受到此次影响。" Margin="20,5,0,5" />
+    <local:MyCard Margin="0,0,0,15" Title="Minecraft Legends 现已发售" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="0,38,0,20">
+        <StackPanel Width="1000" HorizontalAlignment="Center">
+          <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill" />
+          <Image MaxHeight="170" MinWidth="800" Stretch="UniformToFill" Source="https://attachment.mcbbs.net/data/myattachment/forum/202206/14/173407j668q1hvhp3iyqnn.jpg" />
+          <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill" />
+        </StackPanel>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="团结主世界!" />
+        </Border>
+        <StackPanel Margin="40,10">
+          <TextBlock Text="    Minecraft Legends 是 Mojang Studios 与 Blackbird Interactive 联合研发的一款 Minecraft IP 下的全新动作策略游戏。" />
+          <TextBlock Text="    在这里，你将扮演一位名叫“英雄”的神秘角色，在主世界里联合各式各样的原住民，和它们一同击败残酷的猪灵侵略者们。下界传送门在主世界各处拔地而起，带来了成群的猪灵和扩散着的下界岩，现在只有你能够带领伙伴们摧毁这些传送门和猪灵，阻止四处扩散的腐化！" />
+          <TextBlock Text="    在这里，即使是原本在 Minecraft 世界里敌对的生物们，也都成为你的朋友，能在战斗中出一份力。Minecraft Legends 设定是是 Minecraft 主世界内居民们代代相传的故事，所以谁能肯定，这个是事实或者是传说呢？没有人能够有十足的把握，所以你完全可以谱写属于自己的篇章！" />
+          <StackPanel Margin="0,10">
+            <Border Margin="4" Height="70" CornerRadius="6">
+              <Border.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,1">
+                  <GradientStop Color="#FF2D3D4A" />
+                  <GradientStop Color="#FF576574" Offset="1" />
+                </LinearGradientBrush>
+              </Border.Background>
+              <TextBlock Margin="20,10" Text="Steam 上的 Minecraft Legends" Foreground="White" VerticalAlignment="Center" FontSize="16" />
+            </Border>
+            <Border Margin="0,-25,20,0" Background="Black" HorizontalAlignment="Right" Height="40" CornerRadius="2">
+              <WrapPanel>
+                <TextBlock Margin="20,10" Text="¥ 119.00" Foreground="#C6D4Df" VerticalAlignment="Center" />
+                <Border Margin="2,2,2,1" CornerRadius="2" VerticalAlignment="Center" Height="34" Cursor="Hand">
+                  <Border.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,1">
+                      <GradientStop Color="#8ED629" />
+                      <GradientStop Color="#6aa621" Offset="1" />
+                    </LinearGradientBrush>
+                  </Border.Background>
+                  <local:MyButton EventType="打开网页" EventData="https://store.steampowered.com/app/1928870/Minecraft_Legends/" Margin="6,2" VerticalAlignment="Center">
+                    <TextBlock Text="访问商店页面" Foreground="White" Margin="6,2" />
+                  </local:MyButton>
+                </Border>
+              </WrapPanel>
+            </Border>
+          </StackPanel>
+          <GroupBox Header="阅读完整博文" BorderBrush="{DynamicResource ColorBrush3}">
+            <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="12*" />
+                <ColumnDefinition Width="12*" />
+              </Grid.ColumnDefinitions>
+              <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Minecraft_Legends" ColorType="Highlight" />
+              <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1440249-1-1.html" />
+              <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-legends-here" />
+            </Grid>
+          </GroupBox>
+          <TextBlock Text="本文使用了 Don_Trueno 在 MCBBS 上发表的译文" Style="{StaticResource footnote}" />
+        </StackPanel>
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在Github上交Issue而不是跑去PCL2反馈" CanSwap="True" IsSwaped="True">
@@ -1254,4 +1217,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/5/5 23:45:22 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/5/11 12:19:17 -->
