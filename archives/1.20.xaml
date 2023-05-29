@@ -255,6 +255,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE6" />
         </Border>
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="1.20正式版预计6月7日发布" />
         <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -3212,4 +3213,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/5/25 22:41:37 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/5/29 23:10:03 -->
