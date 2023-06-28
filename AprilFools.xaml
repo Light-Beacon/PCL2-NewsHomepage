@@ -227,10 +227,10 @@
     <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
       <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
     </TextBlock>
       </Grid>
     </Border>
@@ -244,7 +244,7 @@
       <TextBlock Text="加  急  特  快" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新快照 - 23w13a_or_b" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="23w13a_or_b" CanSwap="True" IsSwaped="False">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
@@ -328,7 +328,7 @@
         <TextBlock Text="在 Minecraft 中作出更多选择" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" Title="最热快讯！" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="最热快讯！" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <TextBlock Text="Mojang Studios 近日在B站创建了官方账号，并发布了入驻视频。" Margin="20,5,0,5" />
         <TextBlock Text="视频表达了对中国 Minecraft 社区的关心，以及透露了一些关于 Minecraft 接下来更新的秘密。" Margin="20,5,0,5" />
@@ -381,7 +381,7 @@
       <TextBlock Text="最  新  新  闻" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
       <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
     </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="新闻主页正在测试！" CanSwap="True" IsSwaped="False">
+    <local:MyCard Margin="0,0,0,15" Title="新闻主页正在测试！" CanSwap="True">
       <StackPanel Margin="30,40,30,20">
         <TextBlock Text="新闻主页正在尝试以新的方式呈现（尽管可能看不出来），若遇到新闻主页某些位置无法打开或内容有误，请先别急！我知道你很急，但是你先别急！" Margin="20,5,0,5" />
         <TextBlock Text="下方的卡片可以帮你查看原来版本的新闻主页，如有需要，可以拿来先凑凑数" Margin="20,5,0,5" />
@@ -395,7 +395,6 @@
             <ColumnDefinition Width="100" />
           </Grid.ColumnDefinitions>
           <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
-            <local:MyComboBoxItem Content="主页面" />
             <local:MyComboBoxItem Content="1.17存档" />
             <local:MyComboBoxItem Content="1.18存档" />
             <local:MyComboBoxItem Content="1.19存档" />
@@ -413,7 +412,7 @@
       <StackPanel Margin="40,15,0,10">
         <TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
         <TextBlock Text="By：最亮的信标（Light Beacon）" />
-        <TextBlock Text="维护：最亮的信标（Light Beacon）、空辰KC" />
+        <TextBlock Text="维护：最亮的信标（Light Beacon）" />
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
           <TextBlock Text="订阅地址:  " />
           <local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
@@ -453,4 +452,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/6/27 19:56:18 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/6/28 12:02:10 -->

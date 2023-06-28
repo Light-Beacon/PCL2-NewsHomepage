@@ -39,10 +39,10 @@
     <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
       <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
     </TextBlock>
       </Grid>
     </Border>
@@ -58,4 +58,4 @@
     </StackPanel>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/6/27 19:56:18 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/6/28 12:02:10 -->
