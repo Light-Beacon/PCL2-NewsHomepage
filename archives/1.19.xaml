@@ -1,3 +1,4 @@
+
 <!--
 	 	              ___       ___                                                  
      		         /\_ \    /'___`\                                                
@@ -66,10 +67,10 @@
         <Setter Property="FontSize" Value="16" />
       </Style>
       <Style x:Key="ListItem" TargetType="TextBlock">
-        <Setter Property="Margin" Value="15,-15,5,15" />
+        <Setter Property="Margin" Value="10,-13.5,5,15" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="HorizontalAlignment" Value="Left" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Foreground" Value="Black" />
       </Style>
       <Style x:Key="ListItemLink" TargetType="local:MyTextButton">
@@ -143,9 +144,9 @@
         <Setter Property="TextAlignment" Value="Center" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-        <Setter Property="Width" Value="160" />
+        <Setter Property="Width" Value="180" />
         <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontSize" Value="20" />
       </Style>
       <Style x:Key="imgTitle" TargetType="TextBlock">
         <Setter Property="FontSize" Value="14" />
@@ -154,15 +155,17 @@
         <Setter Property="Margin" Value="0,0,0,15" />
       </Style>
       <Style x:Key="verTxtBdr" TargetType="Border">
-        <Setter Property="Margin" Value="0,-22,-1,10" />
+        <Setter Property="Margin" Value="0,-20,-1,10" />
         <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
         <Setter Property="Width" Value="190" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Height" Value="36" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="BorderThickness" Value="0,0,0,3" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
       </Style>
       <!--h2-->
       <Style x:Key="h2" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="28" />
+        <Setter Property="FontSize" Value="24" />
         <Setter Property="Padding" Value="15,5" />
         <Setter Property="Margin" Value="5,15,5,10" />
         <Setter Property="FontWeight" Value="Bold" />
@@ -170,7 +173,7 @@
       </Style>
       <!--h3-->
       <Style x:Key="h3" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontSize" Value="20" />
         <Setter Property="Padding" Value="30,0" />
         <Setter Property="Margin" Value="-10,0,10,17" />
         <Setter Property="FontWeight" Value="Bold" />
@@ -220,6 +223,19 @@
         <Setter Property="FontSize" Value="12px" />
         <Setter Property="Margin" Value="8px,2px" />
       </Style>
+      <!-- TEMPLATES -->
+      <ControlTemplate x:Key="Separator" TargetType="ContentControl">
+        <Grid Margin="0,0,0,15">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="1*" />
+          </Grid.ColumnDefinitions>
+          <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+          <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+          <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+        </Grid>
+      </ControlTemplate>
     </StackPanel.Resources>
     <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
       <Grid Margin="10,0,0,0">
@@ -227,24 +243,370 @@
                 📰 此页是新闻主页中历史 MC 版本的存档。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
-                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护，空辰KC帮助维护。
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
     </TextBlock>
       </Grid>
     </Border>
-    <Grid Margin="0,0,0,15">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-        <ColumnDefinition Width="100">
-        </ColumnDefinition>
-        <ColumnDefinition Width="1*">
-        </ColumnDefinition>
-      </Grid.ColumnDefinitions>
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-      <TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
-      <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-    </Grid>
-    <local:MyCard Margin="0,0,0,15" Title="最新预发布版 - 1.19.4-pre3" CanSwap="True" IsSwaped="False">
+    <ContentControl Content="历  史  版  本" Template="{StaticResource Separator}" />
+    <local:MyCard Margin="0,0,0,15" Title="1.19.4" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.4.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_19/1.19.4.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4" />
+        </Border>
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="原文过长，这里仅提取部分展示，更多更改请见完整日志" />
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 创建世界界面更改" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 马、驴、羊驼的个体特性可以遗传，使其可以育种" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 唱片机同步基岩版调整" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 投掷器和漏斗可以与之交互" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 播放唱片时输出15的红石信号" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 身着盔甲或鞘翅时使用盔甲或鞘翅可以快速替换掉原来的" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 自动跳跃功能现在默认关闭" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 玩家受伤时，视角倾斜方向源于其收到伤害来源的方向" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 调整药水颜色以提高辨识度" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 取消药水附魔光效" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 物品附魔光效更浅了" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 盔甲架在放置和破坏时自定义的名字会保留" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 调整配方解锁顺序" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在创造模式物品栏中画可以选择指定的画" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更多辅助功能更新" />
+        </StackPanel>
+        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+        <TextBlock Text="命令" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加 damage 命令，用于对实体造成伤害" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加 ride 命令，用于骑乘与取消骑乘实体" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" clone 支持复制到不同维度" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 在 data modify 添加 string 数据源" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加 execute 子命令" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" if|unless loaded 检查位置是否完全加载" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" if|unless dimension 检查命令执行位置是否在某一维度内" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" on 基于关系选择实体" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" positioned over 以高度图顶端位置执行" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" summon 用于初始化实体" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="包版本更新" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 数据包版本为 12" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 资源包版本为 13" />
+        </StackPanel>
+        <TextBlock Text="技术性实体" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加三个用于向玩家展示物品（ITEM_DISPLAY）、方块（BLOCK_DISPLAY）、文本（TEXT_DISPLAY）的实体" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 可进行缩放、旋转变换" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加交互实体，该实体不可见，可记录玩家攻击与交互" />
+        </StackPanel>
+        <TextBlock Text="实验性特性（1.20内容）" Style="{StaticResource h2}" />
+        <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="该部分的特性仅在世界加载实验性数据包后启用" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加锻造模板，可将不同材料装饰在盔甲上（仅有装饰作用）" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 可以在锻造模版对应的结构的奖励箱中找到，或复制锻造模板得到" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 制作下界合金装备需要下界合金升级锻造模板，可在堡垒遗迹奖励箱中发现" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加 MCL 投票获胜者嗅探兽，目前只能通过刷怪蛋与命令生成" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加火把花，其需要在耕地种植嗅探兽找到的种子得到" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 可以用于制作染料或繁殖嗅探兽" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加樱花树林群系与樱花木方块系列" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 添加考古系统" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 添加刷子与可疑的沙子，用刷子刷可疑的沙子会获得各种物品，可疑的沙子可以在沙漠神殿和沙漠水井中发现" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 添加陶罐碎片，可以从可疑的沙子中获得" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 添加饰纹陶罐，可以用陶罐碎片或红砖合成" />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="生物" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/嗅探兽">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="嗅探兽" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/a/a4/Sniffer_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <TextBlock Text="方块" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/饰纹陶罐">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="饰纹陶罐" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/f/f1/Decorated_Pot_JE2.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/可疑的沙子">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="可疑的沙子" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/8/8e/Suspicious_Sand_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 樱花系列方块" />
+        </StackPanel>
+        <TextBlock Text="物品" Style="{StaticResource h3}" />
+        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+          <WrapPanel.Resources>
+            <Style TargetType="local:MyButton">
+              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+            </Style>
+          </WrapPanel.Resources>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/锻造模版">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="锻造模版" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/0/08/Dune_Armor_Trim_Smithing_Template_JE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/刷子">
+            <Border Style="{StaticResource ImgBtnBdr}">
+              <StackPanel>
+                <Border Style="{StaticResource NameBdr}">
+                  <TextBlock Text="刷子" Style="{StaticResource ImgBtnTxt}" />
+                </Border>
+                <Image Source="https://static.wikia.nocookie.net/minecraft_zh_gamepedia/images/9/99/Brush_JE1_BE1.png" Style="{StaticResource ImgBtnImg}" />
+              </StackPanel>
+            </Border>
+          </local:MyButton>
+        </WrapPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433267-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-java-edition-1-19-4" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="考古系统终于被 Mojang 考古出来了.jpg" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.4-rc3" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.4-rc3.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.4-rc3.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-RC3" />
+        </Border>
+        <TextBlock Text="修复的漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 守卫者在尖刺收回时仍能造成荆棘伤害" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-rc3" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1433030-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-3" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.4-rc2" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.4-rc2.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.4-rc2.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-RC2" />
+        </Border>
+        <TextBlock Text="RC1技术性更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更改了展示实体的插值" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 插值总是会在客户端游戏刻刚开始时开始" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 字段 start_interpolation 描述为当接收到用以启动插值的更新后，就从下个客户端游戏刻刚开始时计算的游戏刻数量" />
+            <StackPanel Style="{StaticResource ListStyle}">
+              <Ellipse />
+              <TextBlock Style="{StaticResource ListItem}" Text=" 例如：值为0意味着当接收到更新后，插值就将会在下个客户端游戏刻刚开始时开始" />
+            </StackPanel>
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" start_interpolation 不存储在实体数据中" />
+            <StackPanel Style="{StaticResource ListStyle}">
+              <Ellipse />
+              <TextBlock Style="{StaticResource ListItem}" Text=" 使用 /data 命令时，如果插值被更新了，但是 start_interpolation 没有出现在修改过的实体标签中时，插值会在之前更新的时刻上接着执行，但此时使用新的值" />
+            </StackPanel>
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="RC1与RC2修复的漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 进度图标处理半透明纹理时会出错" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 守卫者被弹射物击中时会对攻击者造成荆棘伤害" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 透明的3D模型不能在用户界面(GUI)或快捷栏中正确渲染" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 使用初始变换数据召唤的展示实体会在下一次变换的对默认变换数据的插值过程中出现错误" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-rc2" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1432301-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-release-candidate-1" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本文来源inuEbisu（MCBBS）" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.4-pre4" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.4-pre4.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/1.19.4-pre4.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-PRE4" />
+        </Border>
+        <TextBlock Text="修改内容" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 向选项菜单中添加了“鸣谢与著作权说明“按钮" />
+        </StackPanel>
+        <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当一个新的插值动画开始时，其将会从当前状态而非最终状态开始" />
+        </StackPanel>
+        <TextBlock Text="实验性特性更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更新了樱花树叶和樱花木告示牌的纹理" />
+        </StackPanel>
+        <TextBlock Text="修复的主要漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 摧毁潜影弹时不会触发幽匿感测体" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 敌对生物不会用更好的盔甲换掉自己身上的盔甲" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 自然生成的蜘蛛药水效果持续时间仍为最大值，而不是无限" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 实体寻路时不会将饰纹陶罐视为障碍物" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-pre4" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1432097-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-4-pre-release-4" />
+          </Grid>
+        </GroupBox>
+        <TextBlock Text="本文来源：苦力怕553（MCBBS），漏洞翻译来源：SPXX" Style="{StaticResource footnote}" />
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.19.4-pre3" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
@@ -290,12 +652,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-pre3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1430743-1-1.html" />
@@ -360,12 +719,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-pre2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1430448-1-1.html" />
@@ -386,7 +742,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-PRE1" />
         </Border>
-        <TextBlock Text="在上一个快照版本 (23w07a) 创建的实验性 1.20 世界无法在这个版本被打开" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="在上一个快照版本 (23w07a) 创建的实验性 1.20 世界无法在这个版本被打开" Margin="20,5,0,5" />
         <TextBlock Text="更改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -463,12 +819,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.4-pre1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1429481-1-1.html" />
@@ -579,12 +932,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w07a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1428108-1-1.html" />
@@ -658,12 +1008,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w06a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1426293-1-1.html" />
@@ -770,12 +1117,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w05a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1424054-1-1.html" />
@@ -868,12 +1212,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w04a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1421388-1-1.html" />
@@ -894,7 +1235,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W03A" />
         </Border>
-        <TextBlock Text="由于 Mojang 将资源下载强制替换为https，PCL2近期可能无法下载该版本" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="由于 Mojang 将资源下载强制替换为https，PCL2近期可能无法下载该版本" Margin="20,5,0,5" />
         <TextBlock Text="更改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -1100,12 +1441,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w03a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1419376-1-1.html" />
@@ -1138,19 +1476,15 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="未发布" />
             <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-19-3-release-candidate-3" />
           </Grid>
         </GroupBox>
-        <TextBlock Text="" Style="{StaticResource footnote}" />
       </StackPanel>
     </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="1.19.3-rc2" CanSwap="True" IsSwaped="True">
@@ -1174,12 +1508,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1401299-1-1.html" />
@@ -1218,12 +1549,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-rc1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1401299-1-1.html" />
@@ -1262,12 +1590,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1400691-1-1.html" />
@@ -1288,7 +1613,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE2" />
         </Border>
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Margin="20,5,0,5" />
         <TextBlock Text="修改内容" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -1312,12 +1637,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1399007-1-1.html" />
@@ -1338,7 +1660,7 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE1" />
         </Border>
-        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="Mojang 计划将于 12月6日 发布1.19.3" Margin="20,5,0,5" />
         <TextBlock Text="技术性修改" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -1380,12 +1702,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.3-pre1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1398770-1-1.html" />
@@ -1570,12 +1889,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w46a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1397102-1-1.html" />
@@ -1687,12 +2003,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w45a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1395379-1-1.html" />
@@ -1826,12 +2139,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w44a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1393549-1-1.html" />
@@ -1927,12 +2237,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w43a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1391775-1-1.html" />
@@ -1953,8 +2260,8 @@
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W42A" />
         </Border>
-        <TextBlock Text="注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Style="{StaticResource PGTextBlock}" />
-        <TextBlock Text="你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Style="{StaticResource PGTextBlock}" />
+        <TextBlock Text="注：22w42a 是 1.19.3 的快照 但是该版本引入了特性切换，你可以在新建世界时导入自带的 1.20 数据包以体验 1.20 的特性" Margin="20,5,0,5" />
+        <TextBlock Text="你的旧存档在22w42a中打开几乎不受影响，但不会有 1.20 的特性" Margin="20,5,0,5" />
         <TextBlock Text="新特性" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -2004,24 +2311,6 @@
           <Ellipse />
           <TextBlock Style="{StaticResource ListItem}" Text=" 它们也可以损耗耐力向前冲去" />
         </StackPanel>
-        <TextBlock Text="生物" Style="{StaticResource h4}" />
-        <WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
-          <WrapPanel.Resources>
-            <Style TargetType="local:MyButton">
-              <Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
-            </Style>
-          </WrapPanel.Resources>
-          <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/骆驼">
-            <Border Style="{StaticResource ImgBtnBdr}">
-              <StackPanel>
-                <Border Style="{StaticResource NameBdr}">
-                  <TextBlock Text="骆驼" Style="{StaticResource ImgBtnTxt}" />
-                </Border>
-                <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/22w42a/Camel.png" Style="{StaticResource ImgBtnImg}" />
-              </StackPanel>
-            </Border>
-          </local:MyButton>
-        </WrapPanel>
         <TextBlock Text="竹子类" Style="{StaticResource h4}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -2131,12 +2420,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w42a" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1390920-1-1.html" />
@@ -2167,12 +2453,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370782-1-1.html" />
@@ -2201,12 +2484,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370643-1-1.html" />
@@ -2235,12 +2515,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.2-rc1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1370332-1-1.html" />
@@ -2426,12 +2703,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc3" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1366950-1-1.html" />
@@ -2617,12 +2891,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1367391-1-1.html" />
@@ -2684,12 +2955,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre5" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1362948-1-1.html" />
@@ -2729,12 +2997,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre6" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1364665-1-1.html" />
@@ -2771,12 +3036,9 @@
         <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
           <Grid UseLayoutRounding="True" Margin="10,10,10,10">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
-              <ColumnDefinition Width="10*">
-              </ColumnDefinition>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
             </Grid.ColumnDefinitions>
             <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-rc2" ColorType="Highlight" />
             <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1365048-1-1.html" />
@@ -4830,4 +5092,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/3/8 16:44:35 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/8/3 22:48:14 -->
