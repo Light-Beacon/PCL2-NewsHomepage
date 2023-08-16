@@ -357,7 +357,7 @@
             <TextBlock Style="{StaticResource ListItem}" Text=" 他可以使用Mobbo方块来装饰你的房子" />
           </StackPanel>
         </StackPanel>
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/Mobbo.png" Margin="10,0,10,0" MaxHeight="200" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/Mobbo.png" Margin="10,0,10,0" MaxHeight="500" />
         <TextBlock Text="Mobbo" Style="{StaticResource imgTitle}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -371,7 +371,7 @@
         </StackPanel>
         <TextBlock Text="关注官方账号" Style="{StaticResource h2}" />
         <TextBlock Text="扫描下方二维码获取Mojang的最新消息" Margin="20,5,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/qrc.png" Margin="10,0,10,0" MaxHeight="200" />
+        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/qrc.png" Margin="10,0,10,0" MaxHeight="500" />
         <TextBlock Text="官方账号" Style="{StaticResource imgTitle}" />
       </StackPanel>
     </local:MyCard>
@@ -447,4 +447,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/8/14 19:29:15 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/8/16 14:43:36 -->

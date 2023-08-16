@@ -251,9 +251,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w32a.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bf0661c6c8e546a9a83.png" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w32a.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bf0661c6c8e546a9a83.png" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W32A" />
@@ -278,9 +278,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w31a.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fab1.png" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/1_20/23w31a.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fab1.png" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W31A" />
@@ -292,7 +292,7 @@
         <TextBlock Text="在这次更改之前，玩家可以从任意图书管理员处获得任意附魔书。新手级别的图书管理员就可以出售游戏中最好的附魔书了！对于一些玩家来说，这个特性过于随机，同时在让村民交易与附魔台附魔和结构中搜索相比过于方便。" Margin="20,5,0,5" />
         <TextBlock Text="在全新的规则下，不同生物群系的图书管理员将出售不同的附魔书，而且每个群系都会有一个独特的附魔书，且只会被该群系村庄里的大师级图书管理员出售。" Margin="20,5,0,5" />
         <TextBlock Text="玩家现在必须先，而不是碰运气。我们希望这使图书管理员交易变得更加有趣，同时不同村庄出售的魔咒一定程度上也能提供当地历史文化的线索。" Margin="20,5,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/附魔书交易表格.png" Margin="10,0,10,0" MaxHeight="200" />
+        <Image Source="/附魔书交易表格.png" Margin="10,0,10,0" MaxHeight="500" />
         <TextBlock Text="附魔书交易表格" Style="{StaticResource imgTitle}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -312,7 +312,7 @@
         </StackPanel>
         <TextBlock Text="流浪商人交易调整" Style="{StaticResource h4}" />
         <TextBlock Text="一些玩家觉得流浪商人要价太高，卖的东西也没什么用。因此我们降低了交易所需的绿宝石，同时加入了更多交易，并且提升了物品单次可交易的最大次数。流浪商人现在也会从玩家那里收购自己需要的物品。因此即使你不想买东西，也可以向他们提供物品，来帮助他们完成旅程。" Margin="20,5,0,5" />
-        <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/流浪商人交易表格.png" Margin="10,0,10,0" MaxHeight="200" />
+        <Image Source="https://pic.imgdb.cn/item/64dc5e02661c6c8e547237d6.png" Margin="10,0,10,0" MaxHeight="500" />
         <TextBlock Text="流浪商人交易表格" Style="{StaticResource imgTitle}" />
         <StackPanel Style="{StaticResource ListStyle}">
           <Ellipse />
@@ -576,9 +576,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Normal/1_20_sniffer1.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg" Stretch="Uniform" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Normal/1_20_sniffer1.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg" Opacity="0" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20.1" />
@@ -693,4 +693,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/8/14 19:29:15 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/8/16 14:43:36 -->
