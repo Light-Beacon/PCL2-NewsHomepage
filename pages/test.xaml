@@ -138,6 +138,7 @@
         <Setter Property="VerticalAlignment" Value="Top" />
         <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
         <Setter Property="CornerRadius" Value="7" />
+        <Setter Property="MaxHeight" Value="250" />
       </Style>
       <Style x:Key="verTxtBlk" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center" />
@@ -239,4 +240,4 @@
     </StackPanel.Resources>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/8/16 14:43:36 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/9/30 14:11:28 -->

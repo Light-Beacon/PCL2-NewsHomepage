@@ -138,6 +138,7 @@
         <Setter Property="VerticalAlignment" Value="Top" />
         <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
         <Setter Property="CornerRadius" Value="7" />
+        <Setter Property="MaxHeight" Value="250" />
       </Style>
       <Style x:Key="verTxtBlk" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center" />
@@ -248,13 +249,292 @@
       </Grid>
     </Border>
     <ContentControl Content="历  史  版  本" Template="{StaticResource Separator}" />
+    <local:MyCard Margin="0,0,0,15" Title="1.20.2-pre4" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://z1.ax1x.com/2023/09/15/pPWd0h9.jpg" Stretch="UniformToFill" />
+          </Border.Background>
+          <Image Source="https://z1.ax1x.com/2023/09/15/pPWd0h9.jpg" Opacity="0" Stretch="Fill" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20.2-PRE4" />
+        </Border>
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 加入了伤害类型标签 always_kills_armor_stands 该标签的伤害能完全杀死盔甲架" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 修了点 bug" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.20.2-pre4" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1469247-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-20-2-pre-release-4" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.20.2-pre3" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://s1.ax1x.com/2023/09/12/pP21igH.jpg" Stretch="UniformToFill" />
+          </Border.Background>
+          <Image Source="https://s1.ax1x.com/2023/09/12/pP21igH.jpg" Opacity="0" Stretch="Fill" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20.2-PRE3" />
+        </Border>
+        <TextBlock Text="修了点小bug" Margin="20,5,0,5" />
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.20.2-pre3" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1469247-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-20-2-pre-release-3" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="1.20.2-pre1" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://s1.ax1x.com/2023/09/05/pPsQ2gP.jpg" Stretch="UniformToFill" />
+          </Border.Background>
+          <Image Source="https://s1.ax1x.com/2023/09/05/pPsQ2gP.jpg" Opacity="0" Stretch="Fill" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20.2-PRE1" />
+        </Border>
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更新配方书搜索算法" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更新制图师出售的地图上的结构图标" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 村民解锁新交易时选项顺序随机" />
+        </StackPanel>
+        <TextBlock Text="实验性特性" Style="{StaticResource h2}" />
+        <TextBlock Text="制图师村民" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在来自不同群系的制图师村民会售卖不同的生物群系和村庄地图" />
+        </StackPanel>
+        <Image Source="制图师交易表格.png “制图师交易表格（图源：斯乌）”" Margin="10,0,10,0" MaxHeight="500" />
+        <TextBlock Text="盔甲匠村民" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在在盔甲匠购买钻石盔甲需要提供钻石" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 大多数大师级的盔甲匠会提供高价收购铁块" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 锁链盔甲现在能由丛林和沼泽的盔甲匠出售" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 热带草原的盔甲匠会低价出售有诅咒附魔的钻石盔甲" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 针叶林的盔甲匠能够交换你的钻石盔甲到其他种类的钻石盔甲" />
+        </StackPanel>
+        <Image Source="盔甲匠交易表格.png “盔甲匠交易表格（图源：邹陈云飞）”" Margin="10,0,10,0" MaxHeight="500" />
+        <TextBlock Text="结构战利品" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 一些附魔书会在以下结构的箱子里有更高的概率出现" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 远古城市：经验修补" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 废弃矿井：效率（I到V）" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 掠夺者前哨站：快速装填（I到III）" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 沙漠神殿：耐久（I到III）" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" 丛林神庙：耐久（I到III）  " />
+          </StackPanel>
+        </StackPanel>
+        <TextBlock Text="技术型更改" Style="{StaticResource h2}" />
+        <TextBlock Text="数据包" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 版本更新到18" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 因为命令缺陷，移除以下命令（防止在正式版存在有缺陷的命令，这些命令在下个快照系列会重新加入）" />
+          <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" execute if ｜ unless function" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text=" return run" />
+          </StackPanel>
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 作为宏参数的数字现在只会不带后缀插入，无视数字类型" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 加入游戏规则 enderPearlsVanishOnDeath 以控制当玩家死亡后其抛出的末影珍珠是否消失" />
+        </StackPanel>
+        <TextBlock Text="资源包（pre2）" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text="   由于添加了图标，版本更新到18" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.20.2-pre1" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1468347-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/article/minecraft-1-20-2-pre-release-1" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="23w35a" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://s1.ax1x.com/2023/08/30/pPwmdoT.jpg" Stretch="UniformToFill" />
+          </Border.Background>
+          <Image Source="https://s1.ax1x.com/2023/08/30/pPwmdoT.jpg" Opacity="0" Stretch="Fill" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W35A" />
+        </Border>
+        <TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更新了 LWJGL 库至 3.3.2" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 更新了默认 Java 版本至 Microsoft OpenJDK 17.0.8 " />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w35a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1467381-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w35a" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="23w33a" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64de3b2f661c6c8e54e32af5.jpg" Stretch="UniformToFill" />
+          </Border.Background>
+          <Image Source="https://pic.imgdb.cn/item/64de3b2f661c6c8e54e32af5.jpg" Opacity="0" Stretch="Fill" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W33A" />
+        </Border>
+        <TextBlock Text="新特性" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 加入了举报玩家名和皮肤的功能（详见完整日志）" />
+        </StackPanel>
+        <TextBlock Text="更改" Style="{StaticResource h2}" />
+        <TextBlock Text="生物攻击范围更改" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当生物完全在你之下或在你之上，它无法触及你" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当你骑乘在一个中等体型的生物上，比如一匹马上，你会受到小型生物伤害的保护，例如小僵尸" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 当你骑乘在一个体型高的生物上时，比如在骆驼上，你会受到基础型生物伤害的保护，例如僵尸" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 同时，劫掠兽不再会透过几个方块厚的墙攻击到你" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 然而，你要逃离末影人的话需要至少离地面三格高，不再是之前的1.5格" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 如果你的头在范围内的话，生物能够在其碰撞箱底部攻击你 (译者注：就是你要修脚怪物可能会踢到你)" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 建造敌对生物陷阱可能需要有所调整以确保其安全" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 这些更改不会影响玩家的攻击范围，生物仍需要看见目标才能攻击" />
+        </StackPanel>
+        <TextBlock Text="调试屏幕" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 现在可以使用F3+1（扇图）、F3+2（FPS 和 TPS）和 F3+3（带宽和 ping）进行切换" />
+        </StackPanel>
+        <TextBlock Text="其它更改" Style="{StaticResource h3}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 详见完整日志" />
+        </StackPanel>
+        <TextBlock Text="主要修复的漏洞" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 攻击范围计算错误导致可以透过方块和角落对实体造成伤害" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 吃紫颂果不会重置摔落距离" />
+          <Ellipse />
+          <TextBlock Style="{StaticResource ListItem}" Text=" 其它详见完整日志" />
+        </StackPanel>
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w33a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1464805-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-23w33a" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
+    <local:MyCard Margin="0,0,0,15" Title="23w32a" CanSwap="True" IsSwaped="True">
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bf0661c6c8e546a9a83.png" Stretch="UniformToFill" />
+          </Border.Background>
+          <Image Source="https://pic.imgdb.cn/item/64dc5bf0661c6c8e546a9a83.png" Opacity="0" Stretch="Fill" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="23W32A" />
+        </Border>
+        <TextBlock Text="技术性更新，升级了资源包和数据包版本到17，没啥好看的......" Margin="20,5,0,5" />
+        <GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+          <Grid UseLayoutRounding="True" Margin="10,10,10,10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="12*" />
+              <ColumnDefinition Width="12*" />
+            </Grid.ColumnDefinitions>
+            <local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/23w32a" ColorType="Highlight" />
+            <local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1462843-1-1.html" />
+            <local:MyButton Style="{StaticResource Read2}" EventData="https://minecraft.net/zh-hans/article/minecraft-snapshot-23w32a" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </local:MyCard>
     <local:MyCard Margin="0,0,0,15" Title="23w31a" CanSwap="True" IsSwaped="True">
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fab1.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fab1.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fab1.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fab1.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W31A" />
@@ -550,9 +830,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20.1" />
@@ -594,9 +874,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebcbb.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebcbb.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebcbb.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebcbb.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20" />
@@ -1181,9 +1461,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e546731d8.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e546731d8.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e546731d8.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e546731d8.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-RC1" />
@@ -1214,9 +1494,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e5467301c.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e5467301c.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e5467301c.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e5467301c.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE7" />
@@ -1255,9 +1535,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE6" />
@@ -1303,9 +1583,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b08661c6c8e54672f76.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE5" />
@@ -1345,9 +1625,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE4" />
@@ -1375,9 +1655,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE3" />
@@ -1412,9 +1692,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e546635aa.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE2" />
@@ -1462,9 +1742,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e54663459.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac2661c6c8e54663459.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e54663459.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5ac2661c6c8e54663459.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.20-PRE1" />
@@ -1533,9 +1813,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fef3.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fef3.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fef3.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fef3.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W18A" />
@@ -1601,9 +1881,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fdd3.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fdd3.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fdd3.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bc0661c6c8e5469fdd3.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W17A" />
@@ -1772,9 +2052,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fc44.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fc44.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fc44.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fc44.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W16A" />
@@ -1883,9 +2163,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fbc8.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fbc8.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fbc8.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5bbf661c6c8e5469fbc8.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W14A" />
@@ -1983,9 +2263,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b87661c6c8e546923f9.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b87661c6c8e546923f9.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b87661c6c8e546923f9.jpg" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b87661c6c8e546923f9.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W13A" />
@@ -2033,9 +2313,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b89661c6c8e54692b6d.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b89661c6c8e54692b6d.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b89661c6c8e54692b6d.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b89661c6c8e54692b6d.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W12A" />
@@ -2256,9 +2536,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac1661c6c8e54663268.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5ac1661c6c8e54663268.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5ac1661c6c8e54663268.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5ac1661c6c8e54663268.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-RC3" />
@@ -2286,9 +2566,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b3ad.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b3ad.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b3ad.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b3ad.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-RC2" />
@@ -2344,9 +2624,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b1f8.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b1f8.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b1f8.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5a18661c6c8e5463b1f8.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-PRE4" />
@@ -2396,9 +2676,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-PRE3" />
@@ -2454,9 +2734,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463aedd.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-PRE2" />
@@ -2521,9 +2801,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463ad01.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463ad01.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463ad01.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5a17661c6c8e5463ad01.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.4-PRE1" />
@@ -2621,9 +2901,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b89661c6c8e546929cc.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b89661c6c8e546929cc.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b89661c6c8e546929cc.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b89661c6c8e546929cc.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W07A" />
@@ -2734,9 +3014,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b88661c6c8e54692758.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b88661c6c8e54692758.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b88661c6c8e54692758.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b88661c6c8e54692758.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W06A" />
@@ -2810,9 +3090,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b88661c6c8e546925c4.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b88661c6c8e546925c4.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b88661c6c8e546925c4.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b88661c6c8e546925c4.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W05A" />
@@ -2919,9 +3199,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546871b0.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546871b0.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546871b0.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546871b0.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W04A" />
@@ -3014,9 +3294,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546870a0.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546870a0.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546870a0.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b5a661c6c8e546870a0.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W03A" />
@@ -3243,9 +3523,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7349661c6c8e547724a8.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7349661c6c8e547724a8.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64db7349661c6c8e547724a8.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64db7349661c6c8e547724a8.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-RC3" />
@@ -3277,9 +3557,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-RC2" />
@@ -3310,9 +3590,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64db7348661c6c8e54772255.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-RC1" />
@@ -3351,9 +3631,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7348661c6c8e54772171.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7348661c6c8e54772171.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64db7348661c6c8e54772171.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64db7348661c6c8e54772171.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE3" />
@@ -3392,9 +3672,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE2" />
@@ -3439,9 +3719,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64db7346661c6c8e54771e8f.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.3-PRE1" />
@@ -3504,9 +3784,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5c661c6c8e5468770a.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5c661c6c8e5468770a.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b5c661c6c8e5468770a.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b5c661c6c8e5468770a.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W46A" />
@@ -3691,9 +3971,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5b661c6c8e546874d3.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5b661c6c8e546874d3.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b5b661c6c8e546874d3.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b5b661c6c8e546874d3.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W45A" />
@@ -3805,9 +4085,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5b661c6c8e54687365.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b5b661c6c8e54687365.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b5b661c6c8e54687365.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b5b661c6c8e54687365.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W44A" />
@@ -3941,9 +4221,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b07661c6c8e54672d4c.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b07661c6c8e54672d4c.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b07661c6c8e54672d4c.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b07661c6c8e54672d4c.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W43A" />
@@ -4039,9 +4319,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b09661c6c8e546733f2.png" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc5b09661c6c8e546733f2.png" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://pic.imgdb.cn/item/64dc5b09661c6c8e546733f2.png" Opacity="0" />
+          <Image Source="https://pic.imgdb.cn/item/64dc5b09661c6c8e546733f2.png" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="22W42A" />
@@ -4220,4 +4500,4 @@
     </local:MyCard>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/8/16 14:43:36 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/9/30 14:11:28 -->

@@ -138,6 +138,7 @@
         <Setter Property="VerticalAlignment" Value="Top" />
         <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
         <Setter Property="CornerRadius" Value="7" />
+        <Setter Property="MaxHeight" Value="250" />
       </Style>
       <Style x:Key="verTxtBlk" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center" />
@@ -252,9 +253,9 @@
       <StackPanel Margin="30,40,30,20">
         <Border Style="{StaticResource verImgBdr}">
           <Border.Background>
-            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Others/23w13a_or_b.jpg" Stretch="Uniform" />
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Others/23w13a_or_b.jpg" Stretch="UniformToFill" />
           </Border.Background>
-          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Others/23w13a_or_b.jpg" Opacity="0" />
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Others/23w13a_or_b.jpg" Opacity="0" Stretch="Fill" />
         </Border>
         <Border Style="{StaticResource verTxtBdr}">
           <TextBlock Style="{StaticResource verTxtBlk}" Text="23W13A_OR_B" />
@@ -409,16 +410,16 @@
         <TextBlock Text="By：最亮的信标（Light Beacon）" />
         <TextBlock Text="维护：最亮的信标（Light Beacon）" />
         <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-          <TextBlock Text="订阅地址:  " />
-          <local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
+          <TextBlock Text="订阅地址: " />
+          <local:MyTextButton Margin="2" Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-          <TextBlock Text="官方网站:  " />
-          <local:MyTextButton Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
+          <TextBlock Text="官方网站: " />
+          <local:MyTextButton Margin="2" Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-          <TextBlock Text="Github:  " />
-          <local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
+          <TextBlock Text="Github: " />
+          <local:MyTextButton Margin="2" Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
         </StackPanel>
         <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
           <TextBlock Text="无特殊声明本主页采用 " />
@@ -447,4 +448,4 @@
     </Border>
   </StackPanel>
 </StackPanel>
-<!-- 由 新闻主页构建器 生成，生成时间：2023/8/16 14:43:36 -->
+<!-- 由 新闻主页构建器 生成，生成时间：2023/9/30 14:11:28 -->
