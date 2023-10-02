@@ -1,0 +1,18 @@
+<local:MyCard Margin="0,0,0,15" Title="新闻主页两周年" CanSwap="True">
+      <!--Header-->
+      <StackPanel Margin="30,40,30,20">
+        <Border Style="{StaticResource verImgBdr}">
+          <Border.Background>
+            <ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.png" Stretch="Uniform" />
+          </Border.Background>
+          <Image Source="https://www.lightbeacon.top/pnh/newsimgs/Special/2any.png" Opacity="0" />
+        </Border>
+        <Border Style="{StaticResource verTxtBdr}">
+          <TextBlock Style="{StaticResource verTxtBlk}" Text="两周年" />
+        </Border>
+        <!--Details-->
+        <StackPanel Style="{StaticResource ListStyle}">
+          <TextBlock Text="不知不觉新闻主页已经两岁了，感谢大家的支持！" />
+        </StackPanel>
+      </StackPanel>
+</local:MyCard>

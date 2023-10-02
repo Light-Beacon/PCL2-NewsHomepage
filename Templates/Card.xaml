@@ -1,0 +1,5 @@
+<local:MyCard Margin="0,0,0,15" Title="{$title}" CanSwap="{$canswap}" {$extra}>
+<StackPanel Margin="30,40,30,20">
+{$body}
+</StackPanel>
+</local:MyCard>

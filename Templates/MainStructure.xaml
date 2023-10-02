@@ -1,0 +1,16 @@
+<StackPanel xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PCL2" >
+    <StackPanel Margin="0,-10,0,0">
+	    <!--Animations Starts-->
+	    <StackPanel.Triggers>
+            {$animations}
+        </StackPanel.Triggers>
+	    <!--Animations Ends-->
+	    <StackPanel.Resources>
+		<!--Template Starts-->
+		<!--Template Ends-->
+		<!--Styles Starts-->
+            {$styles}
+        </StackPanel.Resources>
+            {$content}
+    </StackPanel>
+</StackPanel>

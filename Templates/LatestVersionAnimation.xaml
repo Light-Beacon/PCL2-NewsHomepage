@@ -1,0 +1,11 @@
+<StackPanel.Triggers>
+<EventTrigger RoutedEvent="StackPanel.Loaded">
+    <BeginStoryboard>
+      <Storyboard>
+        <DoubleAnimation Storyboard.TargetName="latest_{$randomname}" Storyboard.TargetProperty="Width" From="0" To="0" Duration="0:0:0.1" />
+        <DoubleAnimation BeginTime="0:0:0.1" Storyboard.TargetName="latest_{$randomname}" Storyboard.TargetProperty="Width" From="0" To="220" Duration="0:0:0.15" />
+        <DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="latest_{$randomname}" Storyboard.TargetProperty="Width" From="220" To="190" Duration="0:0:0.1" />
+      </Storyboard>
+    </BeginStoryboard>
+  </EventTrigger>
+</StackPanel.Triggers>

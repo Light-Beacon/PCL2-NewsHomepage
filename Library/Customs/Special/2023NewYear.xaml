@@ -1,0 +1,96 @@
+<local:MyCard Margin="0,0,0,15" Title="新闻主页祝您新年快乐（已摆烂）" CanSwap="True">
+    <StackPanel Margin="30,120,30,40" MaxWidth="500" Height="150" x:Name="SP">
+      <StackPanel.Resources>
+        <Style TargetType="TextBlock">
+          <Setter Property="HorizontalAlignment" Value="Center" />
+          <Setter Property="VerticalAlignment" Value="Center" />
+          <Setter Property="FontSize" Value="56" />
+          <Setter Property="Foreground" Value="#EF321B" />
+          <Setter Property="FontWeight" Value="Bold"/> 
+        </Style>
+      </StackPanel.Resources>
+      <StackPanel.Triggers>
+        <EventTrigger RoutedEvent="StackPanel.Loaded">
+          <BeginStoryboard>
+            <Storyboard RepeatBehavior="2x" FillBehavior="Stop">
+              <DoubleAnimation Storyboard.TargetName="T1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
+              <DoubleAnimation Storyboard.TargetName="T2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
+              <DoubleAnimation Storyboard.TargetName="T3" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" BeginTime="0:0:0.5"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" BeginTime="0:0:1.3"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" BeginTime="0:0:2.1"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:2.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:2.8"/>
+              <DoubleAnimation Storyboard.TargetName="Fu1S" Storyboard.TargetProperty="ScaleX" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="FuS" Storyboard.TargetProperty="ScaleX" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="Fu2S" Storyboard.TargetProperty="ScaleX" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="Fu1S" Storyboard.TargetProperty="ScaleY" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="FuS" Storyboard.TargetProperty="ScaleY" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="Fu2S" Storyboard.TargetProperty="ScaleY" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:3.4"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:3.4"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:3.4"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:3.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:3.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:3.8"/>             
+              <DoubleAnimation Storyboard.TargetName="FuAngle" Storyboard.TargetProperty="Angle" From="45" To="225" Duration="0:0:0.001" BeginTime="0:0:4.2"/>
+              <DoubleAnimation Storyboard.TargetName="FuAngle" Storyboard.TargetProperty="Angle" From="45" To="8400" Duration="0:0:6" BeginTime="0:0:4.8"/>
+              <DoubleAnimation Storyboard.TargetName="Fu1Angle" Storyboard.TargetProperty="Angle" From="45" To="8400" Duration="0:0:6" BeginTime="0:0:4.8"/>
+              <DoubleAnimation Storyboard.TargetName="Fu2Angle" Storyboard.TargetProperty="Angle" From="45" To="8800" Duration="0:0:6" BeginTime="0:0:4.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:7.6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:7.6"/>
+              <DoubleAnimation Storyboard.TargetName="T1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:7.6"/>
+              <DoubleAnimation Storyboard.TargetName="T2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:8"/>
+              <DoubleAnimation Storyboard.TargetName="T3" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:8.4"/>
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="StackPanel.Loaded">
+            <DoubleAnimation Storyboard.TargetName="SP" Storyboard.TargetProperty="Height" From="150" To="0" Duration="0:0:0.05" BeginTime="0:0:20"/>
+        </EventTrigger>
+      </StackPanel.Triggers>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image Source="https://www.lightbeacon.top/fu.png" MaxHeight="80" RenderTransformOrigin="0.5,0.5" Grid.Column="0" x:Name="FuImg1" Opacity="0" HorizontalAlignment="Right">
+          <Image.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="Fu1S"/>
+                <SkewTransform/>
+                <RotateTransform Angle="45" x:Name="Fu1Angle"/>
+                <TranslateTransform/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="过" Grid.Column="0" x:Name="T1"/>
+        <Image Source="https://www.lightbeacon.top/fu.png" MaxHeight="80" RenderTransformOrigin="0.5,0.5" Grid.Column="1" x:Name="FuImg" Opacity="0">
+          <Image.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="FuS"/>
+                <SkewTransform/>
+                <RotateTransform Angle="45" x:Name="FuAngle"/>
+                <TranslateTransform x:Name="FuPos"/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="年" Grid.Column="1" x:Name="T2"/>
+        <Image Source="https://www.lightbeacon.top/fu.png" MaxHeight="80" RenderTransformOrigin="0.5,0.5" Grid.Column="2" x:Name="FuImg2" Opacity="0" HorizontalAlignment="Left">
+          <Image.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="Fu2S"/>
+                <SkewTransform/>
+                <RotateTransform Angle="45" x:Name="Fu2Angle"/>
+                <TranslateTransform/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="啦" Grid.Column="2" x:Name="T3"/>
+      </Grid>
+    </StackPanel>
+  </local:MyCard>

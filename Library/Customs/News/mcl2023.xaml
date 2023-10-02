@@ -1,0 +1,18 @@
+<local:MyCard Margin="0,0,0,15" Title="Minecraft Live 定档!" CanSwap="True" IsSwaped="True">
+  <StackPanel Margin="0,38,0,20">
+<StackPanel Width="1000" HorizontalAlignment="Center">
+  <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+  <Image Height="230" MinWidth="1000" Stretch="UniformToFill" Source="https://z1.ax1x.com/2023/09/17/pPhN9FH.jpg"/>
+  <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+</StackPanel>
+<Border Style="{StaticResource verTxtBdr}">
+  <TextBlock Style="{StaticResource verTxtBlk}" Text="MINECRAFT LIVE" />
+</Border>
+<StackPanel Margin="30,5">
+  <TextBlock FontSize="16" HorizontalAlignment="Center" Text="今年的 Minecraft Live 定档于"/>
+  <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="[北京时间 10月16日(星期一) 凌晨1时]"/>
+  <TextBlock HorizontalAlignment="Center" Text="生物投票仍为三选一，将在 10月14日凌晨1时 开始投票。"/>
+  <local:MyLoading Margin="0,40,0,20" Text="更多消息将持续更新..."/>
+  </StackPanel>
+</StackPanel>
+</local:MyCard>

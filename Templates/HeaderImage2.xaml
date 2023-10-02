@@ -1,0 +1,8 @@
+<StackPanel Width="1000" HorizontalAlignment="Center">
+  <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+  <Image MaxHeight="170" MinWidth="800" Stretch="UniformToFill" Source="{$source}"/>
+  <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+</StackPanel>
+<Border Style="{StaticResource verTxtBdr}" {$deco}>
+  <TextBlock Style="{StaticResource verTxtBlk}" Text="{$title}" />
+</Border>

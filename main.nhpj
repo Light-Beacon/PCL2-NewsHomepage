@@ -1,0 +1,28 @@
+$project_version=5
+#libs
+~\Library\Versions\2022\2022.json
+~\Library\Versions\2023\2023.json
+~\Library\Customs\Homepage\PageElements.json
+~\Library\Customs\News\CustomNews.json
+~\Library\Customs\Special\SpecialCard.json
+~\Library\Normals\Normals.json
+~\Library\April\AprilLib.json
+
+#output
+~\PCL2-NewsHomepage
+
+#base
+mark = ~\Components\Mark.xaml
+anim = ~\Components\Animation.xaml
+styl = ~\Components\Style.xaml
+imagemap = ~\ImageMap.imdata
+
+#pages
+~\Pages\News.json
+~\Pages\Archives\1.17存档.xaml
+~\Pages\Archives\1.18存档.xaml
+~\Pages\Archives\1.19.json
+~\Pages\Archives\1.20.json
+~\Pages\April\2023.json
+~\Pages\Errors\404.json
+~\Pages\TestPage.json

@@ -1,0 +1,10 @@
+<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/{$title}">
+<Border Style="{StaticResource ImgBtnBdr}">
+<StackPanel>
+<Border Style="{StaticResource NameBdr}">
+<TextBlock Text="{$title}" Style="{StaticResource ImgBtnTxt}"/>
+</Border>
+<Image Source="{$imgUrl}" Style="{StaticResource ImgBtnImg}"/>
+</StackPanel>
+</Border>
+</local:MyButton>

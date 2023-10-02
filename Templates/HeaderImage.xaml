@@ -1,0 +1,9 @@
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="{$source}" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="{$source}" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource verTxtBdr}" {$deco}>
+<TextBlock Style="{StaticResource verTxtBlk}" Text="{$title}" />
+</Border>

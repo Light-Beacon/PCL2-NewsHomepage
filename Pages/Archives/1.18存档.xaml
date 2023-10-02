@@ -1,0 +1,3578 @@
+<!-- 
+	**PCL2新闻主页存档（1.18）**
+	By： Light Beacon（最亮的信标）、空辰KC
+	订阅地址：https://news.bugjump.net
+	仓库：https://github.com/Light-Beacon/PCL2-NewsHomepage
+	License (协议)：CC BY-NC-SA 4.0
+-->
+
+<StackPanel Margin="0,-10,0,0" Opacity="{Binding Path=Value,ElementName=OpacitySlider}">
+
+	<!--Animations Starts-->
+	<!--Animations Ends-->
+
+	<StackPanel.Resources>
+		<!--Template Starts-->
+
+		<!--Template Ends-->
+
+		<!--Styles Starts-->
+		<!--即将弃用-->
+		<Style TargetType="Ellipse">
+			<Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Height" Value="8" />
+			<Setter Property="Width" Value="8" />
+			<Setter Property="Margin" Value="0,0,10,0" />
+		</Style>
+		<Style TargetType="TextBlock">
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Foreground" Value="Black" />
+		</Style>
+		<Style x:Key="ListItem" TargetType="TextBlock">
+			<Setter Property="Margin" Value="15,-15,5,15" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Foreground" Value="Black" />
+		</Style>
+		<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+			<Setter Property="Margin" Value="15,-15,5,15" />
+			<Setter Property="TextElement.FontSize" Value="20" />
+		</Style>
+		<Style x:Key="ListStyle" TargetType="StackPanel">
+			<Setter Property="Margin" Value="22,0,14,5" />
+		</Style>
+		<Style x:Key="Read" TargetType="local:MyButton">
+			<Setter Property="Margin" Value="0,0,5,5" />
+			<Setter Property="Height" Value="35" />
+			<Setter Property="Padding" Value="13,0,13,0" />
+			<Setter Property="EventType" Value="打开网页" />
+		</Style>
+		<Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+			<Setter Property="Grid.Column" Value="0" />
+			<Setter Property="Text" Value="Minecraft Wiki" />
+			<!--<Setter Property="ColorType" Value="Highlight"/>-->
+		</Style>
+		<Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
+			<Setter Property="Grid.Row" Value="0"/>
+			<Setter Property="Grid.ColumnSpan" Value="3"/>
+		</Style>
+		<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+			<Setter Property="Grid.Column" Value="1" />
+			<Setter Property="Text" Value="MCBBS" />
+		</Style>
+		<Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
+			<Setter Property="Grid.Column" Value="0" />
+			<Setter Property="Grid.Row" Value="1" />
+		</Style>
+		<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+			<Setter Property="Grid.Column" Value="2"/>
+			<Setter Property="Text" Value="官网" />
+		</Style>
+		<Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
+			<Setter Property="Grid.Column" Value="1" />
+			<Setter Property="Grid.Row" Value="1" />
+		</Style>
+		<Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
+			<Setter Property="Grid.Column" Value="3" />
+			<Setter Property="Text" Value="Reddit" />
+		</Style>
+		<Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
+			<Setter Property="Grid.Column" Value="2"/>
+			<Setter Property="Grid.Row" Value="1" />
+		</Style>
+
+		<Style x:Key="Code" TargetType="Border">
+			<Setter Property="Background" Value="#e0e0e0" />
+			<Setter Property="BorderBrush" Value="#444" />
+			<Setter Property="CornerRadius" Value="1" />
+			<Setter Property="Margin" Value="5,0,5,0" />
+			<Setter Property="BorderThickness" Value="1" />
+		</Style>
+		<Style TargetType="TextBox">
+			<Setter Property="Background" Value="{x:Null}" />
+			<Setter Property="Padding" Value="3,0,3,0" />
+			<Setter Property="IsReadOnly" Value="True" />
+			<Setter Property="BorderBrush" Value="{x:Null}" />
+		</Style>
+		<Style x:Key="verImgBdr" TargetType="Border">
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="BorderThickness" Value="4" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="CornerRadius" Value="7" />
+		</Style>
+		<Style x:Key="verTxtBlk" TargetType="TextBlock">
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="TextAlignment" Value="Center" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+			<Setter Property="Width" Value="160" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="FontSize" Value="28" />
+		</Style>
+		<Style x:Key="verTxtBdr" TargetType="Border">
+			<Setter Property="Margin" Value="0,-22,-1,0" />
+			<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="Width" Value="180" />
+			<Setter Property="Height" Value="40" />
+			<Setter Property="CornerRadius" Value="5" />
+		</Style>
+
+		<!--h2-->
+		<Style x:Key="h2" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="28" />
+			<Setter Property="Padding" Value="15,5" />
+			<Setter Property="Margin" Value="5,15,5,10" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+		</Style>
+
+		<!--h3-->
+		<Style x:Key="h3" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="20" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="-10,0,10,12" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+		</Style>
+
+		<!--h4-->
+		<Style x:Key="h4" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="16" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="5,0,10,10" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+		</Style>
+
+		<!--footnote-->
+		<Style x:Key="footnote" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="14" />
+			<Setter Property="Padding" Value="30,0" />
+			<Setter Property="Margin" Value="0,20,0,15" />
+			<Setter Property="Foreground" Value="#FF777777" />
+		</Style>
+		
+		<!--ButtonNameBorder-->
+		<Style x:Key="NameBdr" TargetType="Border">
+			<Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+			<Setter Property="BorderThickness" Value="0" />
+			<Setter Property="CornerRadius" Value="5,5,0,0" />
+			<Setter Property="Margin" Value="-2,-2,-2,2" />
+		</Style>
+
+	</StackPanel.Resources>
+	<!--Styles Ends-->
+	<!--Hints Starts-->
+	<!--Hints Ends-->
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用“https://news.bugjump.net”。" />
+
+	<Grid Margin="0,0,0,15">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="1*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+		<TextBlock Text="历  史  版  本" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush5}" Grid.Column="1" VerticalAlignment="Center" />
+		<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+	</Grid>
+
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df7661c6c8e54d71fe0.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df7661c6c8e54d71fe0.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="新内容 ＆ 更改" Style="{StaticResource h2}" />
+				<TextBlock Text="方块" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="末影箱现在不会在圣诞节期间使用圣诞礼物纹理。" />
+					</StackPanel>
+				<TextBlock Text="生物" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="海豚会更准确地选择离其最近的结构，而无论结构的类型如何。" />
+					</StackPanel>
+				<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="堡垒遗迹稍微提高了结构边界箱的准确度，现在会更贴近结构本身的形状。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="worldgen结构中以前只能使用元素ID列表的一些字段现在可以使用标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="一些标签字段现在要求在ID前面加上 # ，但是它们暂不接受元素列表。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="噪声设置中的结构字段不再将要塞与非要塞结构相独立，每种结构在JSON中的级别现在都是平等的，用其中的type指定结构的类型。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数字0的种子不再按照特殊情况处理。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="输入的种子前后的任何空格现在都会被去掉。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="将超平坦世界“红石俱备”预设的顶层方块高度由Y=-9提升至Y=55，以防止史莱姆生成。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="更改了超平坦世界“水世界”预设，将原先的沙子替换成沙砾，并在基岩层上方增加了64层深板岩，以解决此预设世界中海底神殿的生成问题。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="自定义世界生成在已配置结构文件中加入了biomes字段，值是一个标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="自定义世界生成加入了样条密度函数：一种通用的放置方块的方法，可使用户通过其表达几乎所有的使用三次样条的函数。" />
+					</StackPanel>
+				<TextBlock Text="命令格式" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="加入了 /placefeature，更改了 /locate 和 /locatebiome。" />
+					</StackPanel>
+				<TextBlock Text="常规" Style="{StaticResource h3}" />
+					<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="合规性要求：根据韩国游戏相关法律要求，为韩国玩家加入了计时器，用于提醒其适时休息。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：在“Chunk”一行中加入了玩家当前所处的区块在区域文件中的位置和此区域文件的文件名。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将“Chunk”一行中的玩家于区块内部的位置移至“Block”一行的尾部的方括号中。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将“Terrain”行合并进“Multinoise”行，并更名为“NoiseRouter”。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="语言：加入了弗留利语。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="资源包：加入了与新合规性要求有关的regional_compliancies.json，位于assets/[命名空间]下。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：加入了#fall_damage_resetting方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：现在可以为所有在注册表（Registry）中出现的类型定义标签。在此之前，只有方块、物品、液体、实体类型、游戏事件以及函数可以定义标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：在原版数据包中加入了生物群系标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：加入了用于指定结构可以在哪些生物群系中生成的生物群系标签，存储于tags/worldgen/biome/has_structure下。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：加入了结构地物标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：移除了细雪的#goat_spawnable_on方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：雪块和细雪现在拥有#azalea_root_replaceable方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：移除了泥土的#dripstone_replaceable_blocks方块标签。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="标签：从#azalea_root_replaceable标签中移除了#lush_ground_replaceable，并加入了#base_stone_overworld、#dirt、clay、gravel和sand。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数据包：将数据包版本由8提高到9。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数据包：现在可在实验性数据包中添加自定义结构，即游戏现在可生成并存储由数据驱动的配置的结构。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="数据包：现在可通过数据包对一些洞穴生成机制进行配置。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="日志：Log4j升级到2.17.0。" />
+						<Ellipse />
+						<TextBlock Style="{StaticResource ListItem}" Text="常规：由于对32位运行环境的操作系统即将结束支持，在主菜单上向使用该环境启动游戏的用户加入了警告信息。" />
+					</StackPanel>
+
+
+			<TextBlock Text="该版本修复了 93 个bug，本文来源于 Minecraft Wiki " Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2#.E6.96.B9.E5.9D.97" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1309730-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-18-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-rc1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5ed97.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5ed97.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-rc1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了 2 个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1308811-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-pre3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55ac2.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55ac2.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre3" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了 7 个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1308327-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-pre2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55ac2.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55ac2.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18.2-pre2 的新内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了样条密度函数：一种通用的放置方块的方法，可使用户通过其表达几乎所有的使用三次样条的函数。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 5 个bug，本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1307746-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.2-pre1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55950.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55950.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.2-pre1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18.2-pre1 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在32位环境中运行Minecraft的用户将在主菜单中收到32位环境即将结束支持的警告。" />
+			</StackPanel>
+			<TextBlock Text="1.18.2-pre1 的技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="数据包的版本现在为9。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在可以在实验性数据包中添加自定义结构了。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="locate 和 locatebiome 命令现在支持标签 (以#为前缀，以区别于正常的ID)。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="locate 命令的参数现在是一个配置的结构，而不是一个结构类型。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在很多的洞穴生成可以通过数据包进行配置" />
+			</StackPanel>
+			<TextBlock Text="可配置的山洞生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为密度功能增加了一个新的注册表（洞穴是由这些功能组合而成的）。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声设置有了一个新的字段noise_router（并移除了几个标志）。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声路由器将洞穴生成的数据驱动部分与代码的其他部分连接起来。" />
+			</StackPanel>
+			<TextBlock Text="配置好的结构和结构组合" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="实验性数据包可以增加新的结构组合。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="位置谓词中的feature字段现在引用了配置的地物。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="exploration_map 战利品表函数的destination字段现在是一个配置的地物标签ID。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="exploration_map战利品表函数不再自动设置地图的显示名称。" />
+			</StackPanel>
+			<TextBlock Text="副作用" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="海豚现在会更准确地选择最近的结构，而不考虑其类型。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="堡垒遗迹的边界现在与结构的形状更为精确了一点。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 7 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.2-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1306738-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-2-pre-release-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="22w07a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df7661c6c8e54d71fe0.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df7661c6c8e54d71fe0.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w07a" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="22w07a 的技术性更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“生物群系标签”现在被用于确定结构可以在哪些生物群系中生成。" />
+			</StackPanel>
+			<TextBlock Text="该版本修复了 9 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w07a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1306053-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w07a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="22w06a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df7661c6c8e54d71ee2.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df7661c6c8e54d71ee2.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w06a" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="22w06a 的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="如果你在韩国游玩，我们添加了符合法规的防沉迷系统，以帮助提醒玩家在游戏中偶尔休息。" />
+			</StackPanel>
+			<TextBlock Text="22w06a 的技术性更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="任何能被注册的类型 (方块，物品，生物群系，等等) 现在都可以拥有标签。" />
+			</StackPanel>
+			<TextBlock Text="该版本修复了 4 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w06a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1303354-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w06a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="22w05a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71df7.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71df7.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w05a" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="22w05a 的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="22w03a中关于恶地群系地貌的改动已经撤回，来防止地形生成和区块边界的各种问题。这项改动等我们修完还会发出来的。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 18 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w05a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1300603-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w05a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="22w03a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d675b7.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d675b7.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="22w03a" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="22w03a 的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="种子“0”不再被当作特殊情况处理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在会自动去除在输入的种子之前/之后的多余空格" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="末影箱在圣诞节期间不会再呈现礼品盒纹理" />
+			</StackPanel>
+
+			<TextBlock Text="22w03a 的技术性更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="locate 命令现在可以使用命名空间 ID 参数" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增命令：placefeature" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 43 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/22w03a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1295048-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-22w03a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55c5c.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d73661c6c8e54d55c5c.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}" x:Name="verBorder">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1" />
+			</Border>
+
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<local:MyButton Height="35" Margin="80,10" Text="点击下载 JDK 17" EventType="下载文件" EventData="https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip" ToolTip="下载 JDK 17" />
+            <StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+
+				</StackPanel.Resources>
+			</StackPanel>
+				<!--Details-->
+				<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="修复了玩家在低带宽状态下连接服务器会导致超时的错误" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="世界的雾现在会在玩家距离更远的地方出现来提高远处地形的可见性" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="雾现在渲染为圆柱形体积，而不是球形体积" />
+				</StackPanel>
+
+			<TextBlock Text="该版本修复了 6 个Bug，部分文案来源于MCBBS。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1283289-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-18-1" />
+				</Grid>
+			</GroupBox>
+
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1-rc3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d55822.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d55822.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-rc3" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了一个严重的安全问题" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-rc3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1283167-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+	
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1-rc2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d55822.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d55822.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-rc2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-rc2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1282804-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1-rc1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d55822.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d55822.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-rc1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+			<TextBlock Text="该版本修复了3个bug，本文来源于Minecraft WIKI" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1282594-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18.1-pre1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d557a0.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7d72661c6c8e54d557a0.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18.1-pre1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18.1-pre1的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了小带宽网络玩家连接至服务器时超时的问题" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="世界雾气现在在玩家更远处出现，这样就可以更清楚地看见远处的地形" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="雾气现在是圆柱体，而不是球面了" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了3个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18.1-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1281323-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-1-pre-release-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1‌.18" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7fcd661c6c8e54dd47eb.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7fcd661c6c8e54dd47eb.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18" />
+			</Border>
+
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<local:MyButton Height="35" Margin="80,10" Text="点击下载 JDK 17" EventType="下载文件" EventData="https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip" ToolTip="下载 JDK 17" />
+            <StackPanel>
+				<StackPanel.Resources>
+					<Style TargetType="Image">
+						<Setter Property="MaxWidth" Value="70px" />
+						<Setter Property="MaxHeight" Value="70px" />
+						<Setter Property="Margin" Value="3" />
+					</Style>
+					<Style TargetType="Border">
+						<Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+						<Setter Property="BorderThickness" Value="2px" />
+						<Setter Property="CornerRadius" Value="5" />
+						<Setter Property="Margin" Value="2px" />
+					</Style>
+					<Style TargetType="TextBlock">
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="Grid.Row" Value="0" />
+						<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+						<Setter Property="FontSize" Value="12px" />
+						<Setter Property="Margin" Value="8px,2px" />
+					</Style>
+
+				</StackPanel.Resources>
+				<!--Details-->
+				<TextBlock Text="新内容" Style="{StaticResource h2}" />
+				<TextBlock Text="物品" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该物品" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E9%9F%B3%E4%B9%90%E5%94%B1%E7%89%87">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="音乐唱片（otherside）" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8012661c6c8e54de3312.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+				</WrapPanel>
+
+				<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+				<WrapPanel Margin="50px,5px" HorizontalAlignment="Center">
+					<WrapPanel.Resources>
+						<Style TargetType="local:MyButton">
+							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该结构" />
+						</Style>
+					</WrapPanel.Resources>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E5%99%AA%E5%A3%B0%E6%B4%9E%E7%A9%B4">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="噪声矿洞" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8012661c6c8e54de32a1.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E5%90%AB%E6%B0%B4%E5%B1%82">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="含水层" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc7fcd661c6c8e54dd4964.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E8%8D%89%E7%94%B8">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="草甸" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8011661c6c8e54de307b.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E9%9B%AA%E6%9E%97">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="雪林" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8011661c6c8e54de307b.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E7%A7%AF%E9%9B%AA%E7%9A%84%E5%B1%B1%E5%9D%A1">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="积雪的山坡" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8011661c6c8e54de2d87.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E5%B0%96%E5%B3%AD%E5%B1%B1%E5%B3%B0">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="尖峭山峰" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc7fcc661c6c8e54dd46c5.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E5%86%B0%E5%B0%81%E5%B1%B1%E5%B3%B0">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="冰封山峰" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc7fcc661c6c8e54dd453b.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E8%A3%B8%E5%B2%A9%E5%B1%B1%E5%B3%B0">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="裸岩山峰" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8011661c6c8e54de2f0f.png" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+
+                    <local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/%E7%9F%BF%E8%84%89">
+						<Border>
+							<StackPanel>
+								<Border Style="{StaticResource NameBdr}">
+									<TextBlock Text="矿脉" />
+								</Border>
+								<Image Source="https://pic.imgdb.cn/item/64dc8058661c6c8e54df0c92.jpg" />
+							</StackPanel>
+						</Border>
+					</local:MyButton>
+				</WrapPanel>
+
+                <TextBlock Text="旧世界升级" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在旧区块周围生成新区块时，地形会根据旧区块进行调整，更好地贴合旧区块。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="现在旧区块中Y=0到Y=4处的基岩层会由深板岩替代。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="若旧区块Y=0高度的任意位置上有基岩，则新地形会在Y=0高度的所有非空气方块的下方生成。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新的基岩层位于Y=-64处。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="雕刻器洞穴可以在新生成的部分生成。" />
+				</StackPanel>
+
+				<TextBlock Text="游戏内容" Style="{StaticResource h3}" />
+				<TextBlock Text="进度" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了4个进度" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="新增了2个进度触发器" />
+				</StackPanel>
+				
+				<TextBlock Text="常规" Style="{StaticResource h3}" />
+				<TextBlock Text="方块实体格式" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="为刷怪笼加入了1个新的标签" />
+				</StackPanel>
+
+				<TextBlock Text="调试界面" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“Multinoise”行、“Biome builder”行和“Terrain”行，仅在玩家位于使用多噪声生物群系源类型的维度（默认为主世界和下界）时出现。" />
+				</StackPanel>
+
+                <TextBlock Text="字体" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了一种名为“illageralt”的新字体（取自Minecraft Dungeons的符文）。" />
+				</StackPanel>
+
+                <TextBlock Text="JFR分析" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了 --jfrProfile 新启动选项和 /jfr 命令，能使用Java FlightRecorder分析数据和一些自定义事件。" />
+				</StackPanel>
+
+				<TextBlock Text="语言" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了伦巴第语。" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了道本语（一种人工语言）。" />
+				</StackPanel>
+
+                <TextBlock Text="战利品表" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了set_potion战利品表函数，用于赋予任意物品potion标签。" />
+				</StackPanel>
+
+                <TextBlock Text="音乐" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了8首新的音乐" />
+				</StackPanel>
+
+                <TextBlock Text="选项" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在辅助功能设置中加入了“隐藏闪电的闪烁效果”选项。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在音乐和声音设置中加入了“设备”选项。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在按键控制设置中加入了“潜行”和“疾跑”选项。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="按键绑定设置被独立到一个单独的页面，此页面可以通过按键控制页面进入。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了“区块构建器”选项。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了“模拟距离”选项（滑块形式）。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了适用于单人游戏的“自动保存指示器”选项，以打开或关闭指示器显示。" />
+                    <Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的“在线选项”选项界面，位于原先主菜单上的“Realms的通知”选项以及多人游戏暂停菜单上的“难度”位置上。" />
+				</StackPanel>
+
+                <TextBlock Text="粒子" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了block_marker粒子，取代了light和barrier。" />
+				</StackPanel>
+
+                <TextBlock Text="server.properties" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了新设置项simulation-distance和hide-online-players。" />
+				</StackPanel>
+
+                <TextBlock Text="标签" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了14个方块标签，2个物品标签。" />
+				</StackPanel>
+
+                <TextBlock Text="匿名信息反馈" Style="{StaticResource h4}" />
+				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="重新加入（即18w21a前存在于游戏中的Snooper），但目前仅在世界加载阶段有效。" />
+				</StackPanel>
+			</StackPanel>
+
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+
+			<TextBlock Text="方块" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁砧略微更改了GUI上锤子的纹理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="大型垂滴叶现在只能放置在黏土块、砂土、泥土、耕地、草方块、苔藓块、菌丝、灰化土和缠根泥土上" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="胡萝卜更改了其stage3的纹理，去除了一个多余的像素点" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="制图台更改了纹理，以匹配纹理更新后的木板纹理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="洞穴藤蔓现在对其尖端使用剪刀可以使其停止生长，略微更改了纹理，去除了一个灰色像素点" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="可可果更改了其stage0和stage1的纹理，去除了多余的像素" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="潮涌核心现在使用镐能加快挖掘" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿石正常开采掉落粗铜的最大数量由3改为5" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="土径更改了侧面纹理，以匹配其顶面纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了门的模型，以修复云杉木门顶部及底部的纹理问题" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了橡木门和铁门的纹理，去除了其中部的多余横线" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="附魔台现在发出亮度为7的光。更改了其UI中青金石槽的纹理，以匹配纹理更新后的青金石纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在对海带、缠怨藤和垂泪藤的尖端使用剪刀可以使其停止生长" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="讲台更改了底座的纹理，以匹配纹理更新后的木板纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了绯红菌柄和诡异菌柄的顶部纹理，以匹配基岩版" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了深色橡木原木的顶部纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了去皮深色橡木原木的侧面纹理，以匹配其顶面颜色" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了蓝色染色玻璃和红色染色玻璃的纹理，现在其透明度与其他染色玻璃一致" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="切石机现在可将1个铜块（含变种）加工成对应变种的4个切制铜块、4个切制铜楼梯或8个切制铜台阶" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红石比较器更改了激活状态的基部纹理" />
+			</StackPanel>
+
+			<TextBlock Text="物品" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="甜菜种子和西瓜种子将纹理整体下调了1个像素" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了两种营火的物品形式纹理，将火焰部分整体调低了1格像素" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了金合欢木门、白桦木门、深色橡木门、铁门、丛林木门、橡木门和云杉木门的物品形式纹理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了两种物品展示框的物品形式纹理，以匹配其实体形式的边框木材纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="水肺药水现在能在埋藏的宝藏的箱子中找到，以同步基岩版" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了各种告示牌的物品形式纹理，以匹配其方块形式的柄部纹理" />
+			</StackPanel>
+
+			<TextBlock Text="实体" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在美西螈仅生成于繁茂洞穴里黏土块上方的水中，有独立的生物生成上限，更改了棕色变种的纹理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="鳕鱼、海豚、河豚、鲑鱼、鱿鱼、热带鱼现在仅生成于Y=50至64高度之间的水中，另外，热带鱼现在也生成于任意高度的繁茂洞穴中" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="驴、马和骡现在会跟随手持金胡萝卜、金苹果或附魔金苹果的玩家" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溺尸现在可以生成于溶洞的含水层中" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="唤魔者和卫道士不再攻击幼年村民，以同步基岩版" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了唤魔者和卫道士的纹理，移除了多余的兜帽纹理" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="发光鱿鱼现在仅生成于Y=30高度以下的水中" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山羊现在仅生成于积雪的山坡、尖峭山峰和冰封山峰生物群系" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了幻术师的纹理，移除了几个多余的像素点" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="羊驼现在会跟随手持干草块的玩家" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="鹦鹉更改了所有变种的模型，现在其翅膀贴图不再颠倒" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="掠夺者和劫掠兽不再攻击幼年村民，以同步基岩版" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="女巫更改了纹理，移除了多余的兜帽纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="凋灵更改了凋灵之首的纹理，以匹配纹理更新后的凋灵头部纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了盔甲匠和武器匠僵尸村民的纹理，去除了从对应普通村民纹理上提取的多余像素点" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在按照普通机制生成的敌对生物都只会在方块光照等级为0时自然生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优化了美西螈、山羊、疣猪兽、僵尸疣猪兽、猪灵、猪灵蛮兵和村民的AI" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="盔甲架更新了平滑石头底座的边框纹理" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿车移除了底部多余的棕色纹理" />
+			</StackPanel>
+
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="紫晶洞现在仅生成于Y=30以下" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="安山岩、闪长岩和花岗岩现在会以球形团簇的形式生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在沙滩及其变种有几率不生成于开放水域的岸边" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="洞穴现在最低可生成于Y=-59处" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在雕刻器洞穴可以覆盖红沙、方解石以及海床上的沙子、沙砾生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="深板岩现在作为Y=8以下的主要岩石生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙漠神殿现在会在地表以部分被掩埋的方式生成，而不是始终在固定高度生成,不再在水上生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞和繁茂洞穴现在会在主世界的地下和山中自然生成，杜鹃树会生成在繁茂洞穴上方" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="滴水石簇现在只在溶洞里生成，不再生成于常规洞穴中" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在当化石生成于深板岩层时，部分骨块会被替换为深层钻石矿石而非煤矿石" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙砾现在能生成于Y=0以下，并提高了其团簇的生成量" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="丛林神庙不再在水上生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了水湖，其功能由含水层取代" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="熔岩现在从Y=-54处开始生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="提高了恶地废弃矿井的生成高度" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="大幅更改了主世界矿石的生成机制" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="稀疏的丛林减少了其中西瓜的生成量" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="涌泉现在可以在更多种类的方块中生成（例如泥土和雪块）" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加了小山泉和瀑布的生成几率" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="熔岩涌泉现在能在方解石、泥土、雪块、细雪和浮冰之中生成，故可以生成在山地和积雪的生物群系中" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="水泉不再在Y=192高度以上生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在沼泽橡树能生成在更深的水中" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="凝灰岩现在会在Y=0以下以团簇的形式生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="村庄现在外形略加分散" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在基岩层会根据种子来生成" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在世界生成使用新的随机数生成器" />
+			</StackPanel>
+
+			<TextBlock Text="游戏内容" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将进度“轻功雪上飘”的上游进度从“冒险”改为“甜蜜的梦”" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="随着生物群系的调整，完成进度探索的时光所需的42个生物群系变为50个" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="对nether_travel进度触发器进行了微调" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="睡觉现在只会在降雨或雷暴时重置天气变化过程" />
+			</StackPanel>
+
+			<TextBlock Text="常规" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将不再使用的生物群系变种从代码中移除，与相应的默认变种合并。" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重命名了一些生物群系" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修改了刷怪笼的方块实体格式" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了区块中的Level，并将其内部的内容移出" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了yPos ，以记录区块内子区块Y轴位置的最小值" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了below_zero_retrogen，以支持Y=0以下的地形生成" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了blending_data，包含了支持新区块与旧区块间地形生成混合算法的数据" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将云的高度从Y=128提高到了Y=192" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在使用--report参数会生成完整的世界生成参考文件，而不是仅仅包含生物群系的内容" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将数据包版本提高到8" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="inventory.png现在包含一个新的图标，应用于物品栏中状态效果的紧凑式显示" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为set_contents和set_loot_table战利品表函数加入了type必选字段"/>
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="背景更改为1.18新地形生成机制下的主世界地表" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将亮度选项的默认值调整为50" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="一些后台任务（包括矿石生成）现在被放置在一个线程池中进行" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重新设计了世界出生点算法" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重制了客户端所收到的区块更新封包，以支持额外的光照更新数据" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将资源包版本提高到8，服务器资源包的大小限制由100MB提高到250MB" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="取消了记分板、分数持有者以及队伍名称的长度限制" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在提供的服务端文件是一个纯粹的打包文件，目的是为了解决Java模块的一些问题" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在服务端的类文件都会被签名" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="闪烁标语“[this splash text has been delayed until part 2]”被改为“[this splash text is now available]”" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="闪烁标语“Now Java 16!”被改为“Java 16 + 1 = 17!”" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在玩家在侧面以较小的角度与方块相碰时不会停止疾跑" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重新设计了状态效果在物品栏界面的显示方式" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将lava_pool_stone_replaceables标签重命名为lava_pool_stone_cannot_replace" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了方块计划刻和液体计划刻的内部细节，以使存档保存得更快" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从“世界类型”选项中移除了“洞穴”和“浮岛”世界类型" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将主世界的可建筑高度范围扩大到了Y=-64至319" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修改了放大化和巨型生物群系，使它们适应新地形" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="视距所决定的区块加载范围的形状由原先的方形改为圆形" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="刷怪笼现在可以不遵守生物生成的光照检查过程" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优化了实体碰撞" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在启动游戏要求的最低Java版本为17" FontWeight="Bold" />
+                <Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在只要有任何空闲时间都会保存区块，以避免自动保存导致的突然卡顿" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 239 个Bug" Style="{StaticResource footnote}" />
+			<TextBlock Text="该新闻是摘录，如果需要更全面、详细的信息请浏览 Minecraft Wiki。" Margin="30,0,0,10" />
+			<TextBlock Text="该新闻部分图片与内容来源于 Minecraft Wiki。" Margin="30,0,0,10" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java%E7%89%881.18" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1279926-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/caves---cliffs--part-ii-out-today-java" />
+				</Grid>
+			</GroupBox>
+
+			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
+
+		</StackPanel>
+	</local:MyCard>
+
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-rc4" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 RC4" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+
+			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-rc4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1280466-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+	<local:MyCard Margin="0,0,0,15" Title="1.18-rc3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 RC3" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+
+			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-rc3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1279530-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-rc2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 RC2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+
+
+			<TextBlock Text="该版本修复了1个bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-rc2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1279530-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-rc1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5bbd.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 RC1" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-rc1的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="服务器资源包的大小限制由100MB提高到250MB。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了1个bug，本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1279379-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-release-candidate-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre6\7\8" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5b43.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5b43.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}" >
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE8" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-pre6的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞和繁茂洞穴的地物会生成得略微稀疏。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了稀疏的丛林中西瓜的生成量。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在被空置或部分空置的旧区块下方生成的新地形会更好的与已有部分相贴合。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在只要有任何空闲时间都会保存区块，以避免自动保存导致的突然卡顿。" />
+			</StackPanel>
+
+			<TextBlock Text="1.18-pre7的更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="略微更改了土径和原木的纹理。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞和繁茂洞穴的地物数量再次有所增加。" />
+			</StackPanel>
+
+			<TextBlock Text="pre6修复了 17 个Bug, pre7修复了 6 个Bug, pre8修复了6个bug（包含一些导致游戏崩溃的bug），本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志（pre6）" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre6" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1278846-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-6" />
+				</Grid>
+			</GroupBox>	
+			<GroupBox Header="阅读完整日志（pre7）" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre7" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1279007-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-6" />
+				</Grid>
+			</GroupBox>
+			<GroupBox Header="阅读完整日志（pre8）" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre8" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1279175-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-6" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre3\4\5" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5d45.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5d45.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE5" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：此版本 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-pre3 的技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在启动服务端server.jar时指定了空的bundlerMainClass属性时，服务端会只校验并解压文件，然后退出。" />
+			</StackPanel>
+
+			<TextBlock Text="1.18-pre5 的修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="一些纹理的细微调整。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在，若一个旧区块Y=0高度的任意位置上有基岩，则新地形会在Y=0高度的所有非空气方块的下方生成。" />
+			</StackPanel>
+
+			<TextBlock Text="pre3修复了 18 个Bug, pre4修复了 4 个Bug, pre5修复了56个bug 本文来源于Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志 pre3" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277361-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
+				</Grid>
+			</GroupBox>
+			<GroupBox Header="阅读完整日志 pre4" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277361-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
+				</Grid>
+			</GroupBox>
+			<GroupBox Header="阅读完整日志 pre5" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre5" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277873-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5d45.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5d45.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE2" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="⚠务必注意：从此版本开始 Minecraft 需求 Java 17（现在大多数玩家安装的是Java 8或16）。否则启动游戏会崩溃。" FontSize="18" Foreground="#FFFF4444" Padding="20,0,0,0" Margin="0,10,0,10" />
+			<TextBlock Text="1.18-pre2 的技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最低需求Java版本由16升至17。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 43 个Bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1277170-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-2" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18-pre1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5c8f.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7f34661c6c8e54db5c8f.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}" >
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 PRE1" />
+			</Border>
+			<!--Detail-->
+
+			<TextBlock Text="1.18-pre1 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="放大化世界和巨型生物群系世界适应了新的地形，现在它们重新回到了创建世界菜单中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从世界创建菜单中删除了世界类型“洞穴”和“浮岛”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新旧地形间的过渡不再那么“突兀”了" />
+				<StackPanel Style="{StaticResource ListStyle}">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="地表高度过渡？有！" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="生物群系过渡？当然！" />
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="洞穴系统过渡？这个要视情况而定..." />
+				</StackPanel>
+
+			</StackPanel>
+
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="--report 数据生成器中的选项现在创建完整的worldgen参考文件，而不仅仅是生物群系" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 45 个Bug ，本文来源于 Aurora_Feather 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1275943-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-18-pre-release-1" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w44a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d67770.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d67770.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W44A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w44a 的新增内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧世界高度的区块升级到新世界高度时，其Y=0以下会按新世界生成机制生成。" />
+			</StackPanel>
+
+			<TextBlock Text="选项" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的 “在线选项” 选项界面，位于原先主菜单上的 “Realms的通知” 选项以及多人游戏暂停菜单上的 “难度” 位置上。" />
+				<StackPanel Style="{StaticResource ListStyle}">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="“Realms的通知” 被移入此界面。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“允许列入服务器玩家列表”选项，用于设置是否允许服务器将自己的ID公开展示在在线玩家列表中。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了“服务器难度”，用于显示当前的服务器难度。" />
+				</StackPanel>
+			</StackPanel>
+
+			<TextBlock Text="server.properties" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了hide-online-players，用于服务端收到客户端的状态请求时是否发送在线玩家列表。" />
+			</StackPanel>
+
+
+			<TextBlock Text="21w44a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将主世界的所有50种生物群系都列入了进度探索的时光的达成要求中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="睡觉现在只会在下雨时重置天气变化过程" />
+			</StackPanel>
+
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在当JFR分析从外部来源启动时，网络封包有关的JFR事件会被合并在一起，而不是一个封包对应一个事件" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在方块和液体也会受到模拟距离的控制" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将模拟距离选项的最小值从2个区块上调到5个区块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优化了实体碰撞。" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 24 个Bug ，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w44a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1274137-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w44a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w43a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d676d6.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d676d6.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W43A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w43a 的新增内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当你升级一个世界存档时，新旧世界的边缘过渡部分将被调整" />
+			</StackPanel>
+
+			<TextBlock Text="旧世界升级" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当生成的地形靠近旧区块时，新地形会被调整来适配旧世界的原有地形" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在旧世界区块中，如果y=0处是基岩，那么下方将会被填满深板岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在此快照中升级的世界将永久保留这个深板岩层，因此如果你想让旧区块高度小于0的地方能有洞穴生成的话，请在升级前做好备份。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧区块中y=0到y=4之间的基岩将会被替换为深板岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="y=-64的地方会生成新的基岩层" />
+			</StackPanel>
+
+
+			<TextBlock Text="21w43a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优先更新视频设置已重命名为 Chunk Builder" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了河流沿岸和海洋海岸线附近被淹没的洞穴数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层水位变化减少，因此会有更大的区域处于相同水位下。 这意味着地下瀑布会变少，使得在地下行船会轻松一些" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="岩浆含水层常见度降低" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="限制大垂滴叶只能放置在粘土、草方块、泥土、耕地、苔藓、含根泥土、灰化土和菌丝上" />
+			</StackPanel>
+
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="方块和流体滴落的一些内部细节已经修改来加快保存时间。虽然外表上好像没什么变化，但是你可以试着用你的红石装置测试一下（当然，记得在世界的副本或备份上做实验)" />
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="区块格式已被更新" />
+			</StackPanel>
+
+			<TextBlock Text="世界数据：区块格式" Style="{StaticResource h3}" />	
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="详见原文" />		
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 8 个Bug ，翻译由 xiang_xge 于MCBBS上提供" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w43a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1272347-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w43a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w42a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d676a3.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d676a3.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W42A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w42a 的新增内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="游戏中加入了新的音乐" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在单人游戏中加入了世界自动保存指示器" />
+			</StackPanel>
+
+			<TextBlock Text="音乐" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="给主世界（生存模式下）和主菜单新增了一些音乐，作曲： Lena Raine 与 Kumi Tanioka。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增了一个唱片，《Otherside（对面）》，由Lena Raine创作。 能够在要塞走廊箱子罕见地找到，也能在地牢的箱子里极为罕见地找到。" />
+			</StackPanel>
+
+
+			<TextBlock Text="21w42a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="世界出生点算法已被修改，现在通过气候因素来生成玩家" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="世界生成调整" />
+
+			</StackPanel>
+
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="熔岩泉现在可在山地中和积雪地形中生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="水泉不再在 y 大于 192 处生成，并且轻微地降低了其生成率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地（粘土山）的金矿生成位置更高了" />
+				
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用 “block_marker” 替代了 “light” 和 “barrier” 粒子效果。" />
+			</StackPanel>
+
+			<TextBlock Text="粒子" Style="{StaticResource h3}" />
+			<TextBlock Text="BLOCK_MARKER" Style="{StaticResource h4}" />		
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用声明好位置的粒子来渲染模型以配置方块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调用方法与方块粒子相同（比如 block_marker wheat [age=2]）" />
+				
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 7 个Bug ，粒子内容翻译由 xiang_xge 于MCBBS上提供" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w42a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1270584-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w42a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w41a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d67657.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7dc9661c6c8e54d67657.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W41A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w41a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="主菜单的背景现在展示洞穴与山崖第二部分的场景" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地矿井现在生成在更高的地方" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="紫晶洞现在只在Y=30及以下的高度生成，稀有度与1.17类似" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增大了对着障碍物冲刺并且不会停下冲刺的角度" />
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修改了区块渲染管线的优先级" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在较大渲染距离下高速飞行时，应该不会出现有一块未渲染的“洞”了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="服务器类已被签名" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的用于生成主世界的随机数生成器" />
+
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 19 个Bug ，本文部分内容翻译由 我真的按了 于MCBBS上发布" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w41a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1269031-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w41a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+
+	<local:MyCard Margin="0,0,0,15" Title="21w40a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5ed67.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5ed67.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W40A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="21w40a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="世界生成调整" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物生成更改" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿石现在掉落2-5（原来是2-3）个粗铜矿物品" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在切石机中，一个铜块能被切成四个切制铜块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="因为地形的构建已经独立出来了，一堆有着相同特性却不同地形的生物群系变种现在已经被合并到一个生物群系中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重命名了一些生物群系" />
+			</StackPanel>
+			
+
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更新了矿石分布，使深层挖掘收获更多" />
+
+				<StackPanel Style="{StaticResource ListStyle}">
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="举个例子，添加了更多的非暴露的钻石矿" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="铁矿石也能生成在y=80以上了，且挖的地方更高铁矿更多" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="更多金矿生成于y=-48以下" />
+				</StackPanel>
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="非洞穴生物不再根据高度而改变 —— 例如不再出现浮空的热带草原生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了一些生物群系的相对大小来配合1.17的生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增大了大多数生物群系的平均生成大小（以及生物群系不再像以前那样位于相同的位置）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了一些关于含水层的问题（副作用是，跟上一个快照相比，含水层线坠位于不同的位置）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="稍微增加了地下岩浆的生成频率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加了地牢的数量，特别是高度大于y=0的地方" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙砾现在会生成高度小于y=0的地方" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="村庄现在会稍微更加分散" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了水湖地物，含水层会提供相对应的水位" />
+			</StackPanel>
+			
+			<TextBlock Text="生物生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在只生成在水中，以及生成在繁茂东西的黏土块上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="发光鱿鱼现在只会生成在高度低于y=30的水中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="鳕鱼、鲑鱼、河豚、热带鱼、鱿鱼和海豚现在只会生成在高度位于y=50到64的水中" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="热带鱼现在也可以生成在繁茂洞穴的任意高度里" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸（以及溺尸）再一次会生成在溶洞里" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山羊不再生成在石峰（Stony Peaks 未定译名）里" />
+			
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="优化了美西螈、山羊、疣猪兽、僵尸疣猪兽、猪灵、猪灵蛮兵和村民的AI" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="基岩层现在会取决于世界的种子而生成" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 12 个Bug ，本文部分内容翻译由 斯乌 于MCBBS上发布" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w40a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1267680-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w40a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w39a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5efae.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5efae.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W39A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="新增特性" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了洞穴与山崖第二部分的进度。" />
+			</StackPanel>
+			<TextBlock Text="进度" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“上天入地”：从主世界的顶部掉落到底部" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“温暖如家”：在主世界中骑乘炽足兽在岩浆中走过50个方块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“星际商人”：和一个在建筑高度极限的村民进行交易" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="“音乐之声”：在草甸生物群系播放音乐" />
+
+			</StackPanel>
+
+			<TextBlock Text="21w39a 的修改内容" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了山峰，让小的山丘看起来更像锯齿状的山峰，而非平平的土丘" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="草甸的独树现在总会有一个蜂巢了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溺尸现在会在滴水石洞穴的含水层中生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸不再会生成在滴水石洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="埋藏的宝藏箱子里会有水下呼吸药水了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将默认亮度调整为50" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="重新设计了物品栏界面里面的效果示意图，使得打开配方书时也能看到效果" />	
+			</StackPanel>
+			
+
+			<TextBlock Text="状态效果" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="你的状态效果列表现在放在物品栏界面的右边展示，而不再是左边了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当物品栏界面的状态效果可见时，就不再显示于游戏视角，以减少屏幕卡顿" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在有两种状态效果列表的呈现模式：紧凑/经典" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="游戏会根据当前可用的屏幕尺寸，自动在两种呈现方式中切换（包括在打开配方书的时候）" />
+			</StackPanel>
+			
+			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="详见Minecraft Wiki或更新日志原文" />
+			</StackPanel>
+
+			<TextBlock Text="该版本修复了 10 个Bug ， 本文翻译由 Kanonymous（卡狗）于MCBBS上发布" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w39a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1264912-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w39a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w38a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5eee8.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5eee8.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W38A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="当你胳膊擦到墙壁的时候，疾跑状态不会再变成行走状态了。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了矿石分布。" />
+			</StackPanel>
+			<TextBlock Text="矿石分布" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿石最高上限到了y=95（和最开始设计的一样）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加了铜矿石的数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="和其它矿石相同，青金石不再以点状分布，而是以块状矿簇分布。" />
+
+			</StackPanel>
+
+			<TextBlock Text="疾跑" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在之前任何与方块之间的碰撞都会停止疾跑，如果玩家行进方向与接触面角度很小，那么玩家将会保持疾跑，如果较大，那么疾跑任会停止。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
+			</StackPanel>
+			
+
+			<TextBlock Text="技术性更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增了设置“Simulation distance（模拟距离）”（实体不会在模拟距离以外进行更新）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最大后台线程数增加（7 -> 255）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="增加在加载世界时对玩家信息的反馈（对玩家地图部分数据上传以帮助 Mojang 改进地形生成）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="以上详情请见原文或MCWiki" />
+			</StackPanel>
+		
+			<TextBlock Text="该版本修复了 15 个Bug" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w38a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1263529-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w38a" />
+				</Grid>
+			</GroupBox>	
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="21w37a" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5ee22.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7da0661c6c8e54d5ee22.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="21W37A" />
+			</Border>
+			<!--Detail-->
+			<TextBlock Text="新特性" Style="{StaticResource h2}" />
+			<TextBlock Text="生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了噪声洞穴和含水层" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了滴水石洞地下生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Grove（林海雪原）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Lofty peaks（巍峨山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了繁茂洞穴地下生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Meadow （草甸）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowcapped （覆雪山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Snowy slopes （覆雪山坡）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 Stony peaks （石顶山峰）生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的矿物分布和大矿脉" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="主世界建筑和生成上限已被拓展" />
+			</StackPanel>
+
+			<TextBlock Text="方块" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="附魔台现在会发光，但亮度不是很高" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="对洞穴藤蔓、缠怨藤、垂泪藤和海带使用剪刀会使其停止生长" />
+			</StackPanel>
+
+			<TextBlock Text="滴水石洞生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有很多滴水石，顶上有，地上也有，还有小水洼" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在一些地方有大块的石笋和石钟乳，还有由滴水石构成的立柱" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有额外的铜矿" />
+			</StackPanel>
+
+			<TextBlock Text="GROVE （林海雪原）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="多雪的地形，有高耸的云杉树和细雪陷阱。穿好皮革靴子！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在山峰下或丘陵顶部的高海拔地区生成。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="这儿有狼、兔子和狐狸。" />
+			</StackPanel>
+
+
+			<TextBlock Text="LOFTY PEAKS （巍峨山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="壮观而嶙峋的山峰，有石头和雪打顶" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有山羊出没" />
+			</StackPanel>
+
+			<TextBlock Text="SNOWCAPPED PEAKS （覆雪山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="比较平坦的山顶，冰雪覆盖" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊。" />
+			</StackPanel>
+
+			<TextBlock Text="SNOWY SLOPES （覆雪山坡）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="白雪皑皑的地形，有一些细雪陷阱。你最好带个皮革靴子来！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="倾向于在高海拔的山峰底下或丘陵顶部生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生成兔子和山羊" />
+			</StackPanel>
+
+			<TextBlock Text="STONY PEAKS （石顶山峰）" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="可能嶙峋，也可能平坦，不过都是石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="会生成山羊" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有时有方解石条带生成" />
+			</StackPanel>
+
+			<TextBlock Text="繁茂洞穴生物群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="苔藓从顶上覆盖到脚下" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="孢子花从洞穴顶长出来，掉下粒子效果" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有粘土池，垂滴叶从其中长出" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有杜鹃花丛，有的还在开花" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="杜鹃花树喜欢把根扎进繁茂洞穴里，所以如果你发现了杜鹃花树，无论是在地表还是在地下，那都意味着你找到了一个繁茂洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="藤蔓和发光浆果从洞穴顶长出来，照亮洞穴" />
+			</StackPanel>
+
+			<TextBlock Text="MEADOW BIOME （草甸）群系" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="草木繁茂，鲜花绽放。倾向于在平原或大山旁的高处生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有时有一棵高大的橡树或白桦树，常常有蜜蜂巢。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="想想《音乐之声》！（P.S. 此处原文是对《音乐之声》的致敬）。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="驴、兔子和绵羊遍野。" />
+			</StackPanel>
+
+			<TextBlock Text="大型矿脉" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿脉是那种大而稀有、外观如蛇的地下矿物聚集形态" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿脉可以在 y 0 到 y 50 之间生成，混有花岗岩" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿脉可以在 y -60 和 y -8 之间生成，混有凝灰岩" />
+			</StackPanel>
+
+			<TextBlock Text="噪声洞穴和含水层" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴是一种新的生成洞穴的方式，提供了更自然的变种。生成得可能相当大！" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="噪声洞穴有大致三类：" />
+
+				<StackPanel Style="{StaticResource ListStyle}">
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="奶酪洞穴。像奶酪上的孔。经常生成各种尺寸的洞穴。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="意大利面洞穴。曲里拐弯，扭七扭八。" />
+
+					<Ellipse />
+					<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴。更细更扭，容易引起幽闭恐惧。" />
+
+				</StackPanel>
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="一点都不响！跟实际的“噪声”没啥关系，噪声是描述其生成方式的术语" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="旧式洞穴仍会生成，新旧系统合二为一，生成有趣的洞穴系统" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层是有本地水平面的一块区域，和海平面独立。
+				含水层用于在世界生成阶段生成噪声洞穴内的水体。
+				有时会生成相当大的地底湖！也可能在山体内部和地表生成。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="y0 以下的含水层有时会被熔岩替代" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="岩浆块有时会在地下水体的底部生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="之前用于生成地下水体的工具都被移除了" />
+			</StackPanel>
+
+			<TextBlock Text="生物生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物现在只会在来自方块的亮度为 0 的地方生成（天光仍和以前一样地阻止怪物生成）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了一个 bug：多人游戏中的玩家可能会遭遇到比预计的多或极少的怪物，特别是当其他玩家在飞行时" />
+
+			</StackPanel>
+
+			<TextBlock Text="新的矿物分布" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="矿物分布现在适应新的世界高度，并加入了新的挖矿策略" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在没有哪个 y 值是挖所有矿的最好选择了，你必须做出取舍" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿在 y 72 之下生成，在 y=16 最多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铁矿也在 112 之上生成，越高越多。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在 y 0 和 y 96 之间生成，在 y=48 最多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="铜矿在滴水石洞中生成得更多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="青金石在 y 64 之下生成，在 y=0 最多。然而，在 y -32 之下或 y 32 之上生成的青金石不会暴露在空气中，要么是被埋起来，要么是在水里" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="煤在 y 0 之上生成，y=96 及以上达到峰值" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="金在 y 32 之下生成，在 y=-16 最多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地（非标准译名：粘土山）仍可以发现更多的金" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红石在 y 16 之下生成。到 y -32 之下，生成逐渐增多" />
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="钻石在 y 16 之下生成，越往下越多" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="钻石更不容易在空气中暴露，所以你可能更多会发现埋起来的钻石或在水下的钻石而不是直接暴露于空气中的（野生矿洞钻石收益变低了）" />
+			</StackPanel>
+
+			<TextBlock Text="选项" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了辅助功能选项用于禁用雷暴时的天空闪烁" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了用于指定播放设备的选项" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在控制选项中添加了“切换疾跑”和“切换潜行”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="把一些应当在其他地方的按键绑定从控制选项中挪走了" />
+
+			</StackPanel>
+
+			<TextBlock Text="世界生成" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生成范围和建筑范围上下各拓展了 64 方块，总计 384 方块" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地下特性、结构和洞穴生成一路走低到 y-64" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="例外：花岗岩、闪长岩和安山岩还有泥土不会在 y0 以下生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了上述三种岩石的生成位置和尺寸" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="滴水石群不再能在普通洞穴中找到，只能在滴水石洞生物群系中找到" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="从 y0 到以下深板岩逐渐取代所有石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="深板岩团块不再在 y0 以上生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形形状和高程和生物群系无关了。例如，森林和沙漠可以在小山坡上生成，不再需要特定的生物群系" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="那三种岩石在 y 60 之上的生成减少了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙砾带可以在石质海岸生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽的树可以在水中扎根两格深了（之前是一格）" />
+
+			</StackPanel>
+
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="灾厄村民不再攻击小村民" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在只在繁茂洞穴生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="美西螈现在有自己独立的生物上限" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="云的高度从 128 升到 192" />
+
+			</StackPanel>
+
+			<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="用包含光照更新数据的客户端区块更新网络数据包取代了之前的。单独的光照更新数据包依然存在，只当光照更新而区块无更新时发送。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="视距现在会圆柱状加载，而不是正方形" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="关于世界生成噪声的信息现在会在调试界面显示" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了 illageralt，符文般的字体，来自Minecraft Dungeons（《我的世界：地下城》），现在只能通过指令使用" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="添加了启动选项 --jfrProfile 以及指令 jfr 使用 Java FlightRecorder 采集信息，以及一些自定义事件。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="战利品表函数 set_contents 和 set_loot_table 现在需要 type 字段，其应是一个有效的方块实体类型。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在 1.2(“pre-anvil”) 之前存储的世界现在不能再直接打开了。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="数据包格式版本升至 8" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的视频选项 “更新优先级”" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了记分板、记分器和队伍名的长度限制" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="刷怪笼现在无视亮度限制" />
+
+			</StackPanel>
+
+			<TextBlock Text="JFR 数据采集" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Margin="10,10" Text="详见原文或之前新闻，在此不做赘述。" />
+			</StackPanel>
+
+			<TextBlock Text="战利品表" Style="{StaticResource h3}" />
+			<TextBlock Text="修改的参数 SET_CONTENTS, SET_LOOT_TABLE" Style="{StaticResource h4}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的必填字段 type。会写入 BlockEntityTag.id，以确保在版本间迁移正确" />
+			</StackPanel>
+
+			<TextBlock Text="旧世界转换" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="Minecraft 1.2 (“pre-anvil”) 之前的世界现在需要在本快照之前的版本里先转一次，才能正常打开" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="1.6.4 及之前的版本转换得最好——之后的世界会有不正确的生物群系信息" />
+			</StackPanel>
+
+			<TextBlock Text="更新优先级设置" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="该设置决定了单帧有哪些区块会同步更新。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="最保守的选项“邻近”对应着和之前一样的更新方式。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的选项“由玩家”和“无”大大缩减了放置和移除方块（特别是会发光的）时的卡顿，但可能偶尔导致世界更新时视觉上的延迟。" />
+			</StackPanel>
+
+			<TextBlock Text="刷怪笼数据修改" Style="{StaticResource h3}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<TextBlock Style="{StaticResource ListItem}" Text="详见原文，在此不做赘述。" Margin="10,0" />
+			</StackPanel>
+
+			<TextBlock />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w37a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1261439-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w37a" />
+				</Grid>
+			</GroupBox>
+
+			<TextBlock Text="该版本修复了 44 个Bug。该新闻原译者：山雀雀（MCBBS），稍作修改。" Style="{StaticResource footnote}" />
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 7" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP7"/>
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP6的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="面条洞穴能在任意高度生成了，不再限制于y&lt;130。这意味着你有时可能会在从山岭中发现小小的开放洞穴和裂缝。注意脚下。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形的某些部位非常略微平滑了一些（译者注：原文如此）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="鞘翅在滑翔时不再消耗耐久度，只有在使用烟花火箭的时候才会消耗。因此你没什么必要去给它敲个经验修补或者耐久，况且现在有了更高的悬崖高山来供你起飞。" />
+
+				<StackPanel Style="{StaticResource ListStyle}">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="烟花鞘翅太快了，导致其它交通方式都变得很多余。我们想稍微平衡一下。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="即便在之前版本的MC中，玩家用烟花鞘翅到处乱飞导致大多数服务器都会变卡，因为他们飞行速度超过了区块能加载的速度。新的世界高度下这种情况会变得更糟。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在有了更多的地形可以享受，不会想还要再快速掠过它们呢，对吧？:)" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="注意滑翔的速度并未改变，这次改变只对烟花鞘翅产生的加速生效。"/>
+				</StackPanel>
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="就是这些了。我告诉过你，这是一次小小的快照。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="啥？你问沼泽？不，我们这次没动沼泽，它们目前正喜乐参半。" />
+
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/ab4ecebb133f56dd4c4c4c3257f030a947ddea84/1_18_experimental-snapshot-7.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-7” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp7" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1259375-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pkalqg/minecraft_118_experimental_snapshot_7_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 6" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="其它启动器请手动按照下文的提示安装。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP6" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP5的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了新山地群系的位置，使它更符合山地的地形与温度。树林与雪坡在山地上生成得更加稀少了。在寒冷的气候中，树林与雪坡的生成位置更低；而在炎热的气候中，树林与雪坡的生成位置更高" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了生物群系布局以减少生成微型寒冷生物群系的概率，比如森林中生成的一小片积雪的冻原（鸟屎微型生物群系）。这仍有可能发生，但不会那么常见了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了上一个快照一次意外的改变使繁茂洞穴更小且更支离破碎。现在应该和实验性快照4一样正常了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="巨型针叶林与巨型云杉针叶林从生物群系布局角度来说不再被算作寒冷生物群系了。所以这些生物群系更少的与积雪生物群系混在一起。这会使其它生物群系产生一个小改组以维持整体的平衡" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="稍微削减了水泉的数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="稍微增加了水底的岩浆块数量，使在含水层潜水时拥有更多找到空气的机会" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更洞穴的海底！海洋/河流底下的含水层更容易与地下连接。这代表着你会更容易从海床上找到通往某个洞穴的入口，而不是被海床生生切断。这样做的一个结果就是：在海洋下面 y0-y40 的洞穴都有可能被海水淹没。如果你在某个地下湖泊中潜水，最后可能从某个海底离开了洞穴" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="水下峡谷它回来了。现在负责雕刻洞穴的雕刻器可以雕刻海底的沙子和沙砾了，所以，水下峡谷和水下洞穴不再会被隐藏在一层沙子或者沙砾下面。相比于MC 1.17，水下峡谷不再使用一套特殊的雕刻器，而是和雕刻噪声洞穴雕刻器一致，只是把它移到了水下而已。所以，这个版本的水下峡谷会和1.17的水下峡谷长得不太一样，但是更自然了。岩浆块依旧有可能在其内生成，就像其他的含水洞穴一样" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="马、骡和驴现在会跟随手持金胡萝卜、金苹果、附魔金苹果的玩家。这样你的马就可以更容易的趟过一条深深的河！与之类似的还有羊驼会跟随手持干草块的玩家" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="上边就是全部了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="等等，还有一件事。差点忘了沼泽。沼泽现在可以在干燥地区生成。这不在最后一个快照中做改动是有一些道理的，因为有时候会有一个小小的区域比周围都更加干燥，这会导致微生物群系的问题发生，比如沼泽中有一块小小的沙漠。现在沼泽不会再碎片化了，并且它们觉得很赞" />
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/4697c84c6a347d0b8766759d5b00bc5a00b1b858/1_18_experimental-snapshot-6.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-6” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文部分借鉴了 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp6" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1257121-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pfui87/minecraft_118_experimental_snapshot_6_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 5" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP5" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP4的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山峰更高耸了！像颇受好评的基岩版 beta 的山峰一样，现在某些山峰会有锯齿状突起了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山地和山峰群系现在总体来说面积更大了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="提升了平均山地高度，修复了实验性快照 4 中不小心让山峰更矮更平滑的问题。然后我们又要调低山地的高度，来让山峰更高，所以可能就抵消了。我们故意避免让山地和山峰超过 y=260 左右的高度，这样玩家才能在山峰上建点什么东西。如果某些不听话的山地试图再窜高，就会被无情地削成高原" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="有钻石的化石不再在高于深板岩层生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="给沼泽稍微搬家到了内陆，因为它们会把脏兮兮的泥水漏进海洋。海洋很开心，沼泽有些小怨气。以及，沼泽中的树现在会稍微扎根深一点了，所以沼泽湖泊会更有生机一些" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="雕刻器洞穴现在可以雕刻红沙和方解石了，这样这些方块就不会悬空了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了河流的深度和河岸的陡峭程度。河流现在不太可能在超级深，以至于在平地显得不合群了。河流和沼泽融合得更好了，它们现在会吞噬沼泽或和沼泽合并，而不是钻条洞过去。沼泽很喜欢这个，不那么违和了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="小湖泊地物现在不会在干燥炎热的群系（沙漠、热带草原和恶地）中放置了。减少了湖泊地物在其他群系中放置的概率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="小山坡和悬空山（技术上的说法就是三维噪声）在平地中生成更频繁了。这个特性在实验性快照 4 中不小心被移除了，因此平地就会显得过于平坦乏味" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了破碎的地形和破碎的热带草原群系，并将其以更加平坦的沙滩代替" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="涌泉会在更多的方块中生成，例如泥土和雪块，增加了山间小泉和瀑布生成的几率。另外繁茂洞穴现在会生成涌泉了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了代码里让人极其难受的一个小缩进错误。其实没有什么问题，我也不知道为什么更新日志会有这个" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="让恶地稍微变小了一点。就一点，它们还是会很大的，别担心" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了（好吧，重新加入了）丛林边缘群系。如果我们保留这个群系的话我们大概会给它重新起个名字，因为它已经不是边缘群系了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="调整了蘑菇岛群系，这样蘑菇岛就更加像个岛的样子了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞群系会在超出洞穴入口范围时放置石头，而不是草。这样应该就可以让溶洞的入口不那么草了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了实验性快照 3 做出的高度怪物生成调整。我们对社区对此的讨论表示感谢。我们决定暂时先撤销这个改动，等有时间的时候我们会再细调" />
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/d9cb7f6fb4e440862adfb40a385d83e3f8d154db/1_18_experimental-snapshot-5.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-5” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文来源于 电量量 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" >
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<local:MyButton Style="{StaticResource Read0+}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp5" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1+}" EventData="https://www.mcbbs.net/thread-1253372-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2+}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR+}" EventData="https://www.reddit.com/r/Minecraft/comments/pbd2pr/minecraft_118_experimental_snapshot_5_is_out/" />
+					</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 4" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP4" />
+			</Border>
+
+			<!--Detail-->
+			<TextBlock Text="相比于EXP3的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="神殿类建筑改动: 现在沙漠神殿将有部分埋在地下，并且丛林神庙和沙漠神殿不再生成在水上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="恶地和沙漠将会更大，再像以前那样出现微小的生物群系的几率更小。陶瓦山将会更高。繁茂恶地中的草和树将在更高的位置生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的生成更加顺滑，噪声会更少 (又来了)。这样就会生成更少的微生物群系 (没错，又来了)。总体调整了生物群系生成的位置，以减少生物群系之间相互交错的现象" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了热带生物群系地表会结冰的现象，并且提高了雪层的生成高度。这样应该就不会出现类似丛林树木上有雪这样的怪事情" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="雪层不会再土土的了。这次是真的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="使峭壁的地形不再特别“峭”。并且调整了破碎地形和峭壁的位置，使其看起来更加吻合" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="降低了河流被切断和山地地形变为干河峡谷的几率。河流在生成时会更倾向于在山区地形中开辟一条峡湾，或者让地势变高，在山区之间生成一个马鞍谷。这样无论你是走路还是划船，都会变得更加舒适，并且河流也会比以前更宽" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="降低了安山岩团簇、闪长岩团簇和花岗岩团簇生成在地表的几率。这样应该会减少石头地形上类似喷漆时到处都是漆点的表面" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="石岸有时候就生成沙砾层（条），闪长岩层（条），花岗岩层（条），安山岩层（条）。石峰有时候也会生成沙砾层（条），方解石层（条），花岗岩层（条），安山岩层（条）。终于不用为了搞到方解石而去找紫晶洞了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="更多铁！虽然你还是得通过下矿或者爬山来找铁。但是还是更多铁" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽变得更像沼泽了。我们调整了沼泽的位置，这仅仅是为了它们高兴。现在沼泽不太可能沿着海岸线拓展到很远的地方了，且沼泽中的河流往往更浅" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="溶洞中的铜团簇将会更多。快去溶洞生物群系多找点铜吧！或者找一个更大的铜矿脉" />
+			</StackPanel>
+			
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/b92a360cbae2eb896a62964ad8c06c3493b6c390/1_18_experimental-snapshot-4.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-4” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文来源于 我真的按了 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1247924-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p67u6p/minecraft_118_experimental_snapshot_4_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>	
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 3" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP3" />
+			</Border>
+			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开EXP1的世界时会出现错误，请重新创建世界。" />
+			<!--Detail-->
+			<TextBlock Text="相比于EXP2的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为避免温度错乱（比如雪地生物群系在沙漠中间）而调整了生物群系的位置。温度错乱还是有的，但是变少了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="再次调整了生物群系位置，以允许更多的噪声和多样性地形。其实就是把上个快照的一些调整还原了。这说明微群系更有可能再次生成了，但是通常会在对应的温度下生成（比如平原中的小森林群系）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红沙回来了！我们调整了恶地，这样他们有的时候就会和高原一起生成在平坦的地方，红沙也就会在更高的地方的地方生成了（为了适应高度平均更高了的地形）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="山峰和繁华山地群系会更少出现在平坦的、低纬度的地区" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="覆雪山脉和冰雪山峰现在不会在雪块下方生成泥土了。现在山地不再土土的了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了新的山地群系：石头山峰。这只是覆雪山峰和冰雪山峰的一个变种，它使用了石头和沙砾，而不是雪和冰。这被用来防止温度错乱，比如一个冰雪山峰生成在丛林附近" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="给新的山地群系加入了结构。掠夺者前哨站现在会在所有山地群系中生成。村庄现在会在繁华山地中生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="微调了沙滩，这样他们就会在平坦的海岸线上生成，而不是高耸一些的地方。另外也减少了石滩的数量" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="海岸线和河岸现在不太可能会被洞穴的含水层搞乱了。也就是说，本地水平面通常会在不涉及河流或海洋的时候被使用，而与海洋或河流接触的洞穴入口和峡谷会使用海平面" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="陆地中的低海拔地区将不太可能会含水洞穴填满了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层的位置可以更低，并且更有可能与深层的洞穴系统连接了。这意味着如果你从地表潜入一个深湖（或者在山地中），你有时候会发现空气洞，并于洞穴系统相连接" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了更有可能生成的含水层变种，以减少被水填满的洞穴生成在各种地方。地下湖泊和被水淹的地区将更可能分散出去，而不是聚集在一起" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽现在不太可能覆盖干燥或寒冷的群系了，并且它们不再会防止悬在空中的水。沼泽现在甚至更开心了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙漠神殿会在地表生成了，而不是固定的 y 轴数值上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="被风蚀的恶地现在不会在水面上生成悬空的柱子了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="草不再会在水下生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了错误的地表放置几率，比如草生成在沙漠里" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了河流在干燥的山地峡谷中生成的几率。我们不支持在海平面上方生成河流，所以如果山地峡谷在海平面上方生成，它就是干燥的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物生成不会在低地形中加速或在高地形减速了。新的生成速度差不多是 1.17 的 y=64 的速度。这一更改使得生物生成在新的主世界中更加一致" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="修复了联机时玩家会面对更多或者更少的怪物的问题，特别是其他玩家在飞行的时候。每一个玩家的怪物分配现在均衡了" />
+			</StackPanel>
+
+			<TextBlock Text="已知问题" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="打开EXP1的世界会出现错误。所以你需要重开新世界" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="性能低下（性能优化会在接下来的正常快照中进行）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="下界地形炸开了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="末地柱（黑曜石柱子）不生成了（但是他们还是会在重生末影龙的时候重新生成）" />
+				
+			</StackPanel>
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/846648ff9fe60310d584061261de43010e5c722b/1_18_experimental-snapshot-3.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-3” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 电量量 和 xiang_xge 的译文 (MCBBS)。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1242805-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/p1pc9d/minecraft_118_experimental_snapshot_3_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 2" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="最新版本的PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP2" />
+			</Border>
+			<local:MyHint Margin="0,10,0,0" IsWarn="True" Text="该版本打开实验快照1的世界时会出现错误，请重新创建世界。" />
+			<!--Detail-->
+			<TextBlock Text="相比于EXP1的更新" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="生物群系的放置变得更加平滑，减少了地形中的微型生物群系，生物群系现在规模会稍微大一些，并不再那么碎片化" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将云层高度从128提升到192" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="将山脉（即原来的山脉生物群系）改名为峭壁， 将沙砾山地改名为沙砾丘陵" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沙滩现在变得更宽阔了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="羊会在 meadow（繁花山丘） 生物群系生成了。增加了兔子的生成，减少了驴的生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="兰花不再于 meadow 生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="沼泽现在会正确地生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了缺失的生物群系：冰刺之地和风蚀恶地" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了地下生物群系与地面生物群系干涉的几率。" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="绿宝石和虫蚀石头现在会在新的山脉群系生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物会在新的山脉群系生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="在 meadow 现在会生成一棵孤独的树，而且时常会附有一个蜂巢" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了地形生成时出现的浮空沙子和沙砾，解决的方法是将底部替换为砂岩或者石头" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="僵尸，骷髅，蜘蛛和洞穴蜘蛛的刷怪笼现在会在亮度等级11以内生成怪物" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="减少了芝士洞穴的平均大小（不过依然有可能生成大洞穴！），并减少了芝士洞穴干涉到地面的几率" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="为大型洞穴的入口加入了一些缓冲，使得它们不再会直接深入到深板岩的高度层" />
+			</StackPanel>
+
+			<TextBlock Text="已知问题" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="打开实验快照1的世界会出现错误。所以你需要重开新世界" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="性能优化不妙（我们会在之后正常发布的快照中改进性能表现）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="下界地形是坏的" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="末地柱现在不会生成（但是当你复活末影龙的时候就会生成了……）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="红沙现在会比较难以收集，因为恶地通常会生成在高原上" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="含水层有时会以丑陋的方式破坏海岸线" />
+				
+			</StackPanel>
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/0adfe4f321aa45248fc88ac888bed5556633e7fb/1_18_experimental-snapshot-2.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-2” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 Kascade 的译文 (MCBBS)。加括号为未定译名。" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1228756-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+					<local:MyButton Style="{StaticResource ReadR}" EventData="https://www.reddit.com/r/Minecraft/comments/oo3pvy/minecraft_118_experimental_snapshot_2_is_out/" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+	
+	<local:MyCard Margin="0,0,0,15" Title="1.18 Experimental Snapshot 1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="PCL II已支持自动安装该版本，其它启动器请手动按照下文的提示安装。正式快照将于9月发布。" />
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://pic.imgdb.cn/item/64dc7df6661c6c8e54d71ce9.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.18 EXP1" />
+			</Border>
+			<TextBlock Margin="30,3,10,3" Text="洞穴与山崖预览数据包已被移入该版本。" />
+			<!--Detail-->
+			<TextBlock Text="与 1.17(洞穴与山崖第一部分) 对比 " Style="{StaticResource h2}" />
+
+			<StackPanel Style="{StaticResource ListStyle}">
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="扩展了世界高度与深度（Y -64~319）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[新增] 新的山地生物群系（高耸的山峰、覆雪山峰、林地、草甸和雪坡）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴种类(奶酪洞穴，意面洞穴，以及面条洞穴)" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了地下的水位（独立于海平面）和岩浆位" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="[已有] 新的洞穴生物群系将会在地下和山体中自然生成（繁茂洞穴，溶洞）" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的矿石分布" />
+
+				<Image MaxHeight="500" Source="https://attachment.mcbbs.net/data/myattachment/forum/202107/14/010016xee9cb7eb7nw67rc.png" Margin="10,0,10,0" />
+				<TextBlock Text="矿石分布对比图(由 SPGoding 翻译)" FontSize="14" Foreground="#FF777777" HorizontalAlignment="Center" Margin="0,0,0,15" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="大型矿脉" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="统一山脉、洞穴和洞口" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="怪物只在完全黑暗时生成" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地势和海拔高度可以独立于生物群系而变化，生物群系会适应地势的变化，群系交界处现在会更平滑地过渡" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="地形现在会更平滑，高差也更大" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="暖水深海能够自然生成了" />
+
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="移除了放大化世界和巨型生物群系" />
+
+
+			</StackPanel>
+
+			<TextBlock Text="手动安装方法" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}">
+				<local:MyHint Margin="0,0,40,7" IsWarn="False" Text="这里以PCL II为例，其它启动器大同小异。" />
+				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
+				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
+				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件" />
+				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
+			</StackPanel>
+
+			<TextBlock Text="本文参考了 xiang_xge 的译文与 Minecraft Wiki 上的有关条目" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.18-exp1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1223884-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/new-world-generation-java-available-testing" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
+
+	<Border Background="#CCFFFFFF" Height="140" Margin="-25,30,-25,-10" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+		<StackPanel Margin="40,15,0,10">
+			<TextBlock Text="PCL2新闻主页（1.18版本存档）" FontSize="16" Margin="0,5,5,5" />
+			<TextBlock Text="By：最亮的信标（Light Beacon）" />
+
+			<StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+				<TextBlock Text="订阅地址:  " />
+				<local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+				<TextBlock Text="Github:  " />
+				<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
+			</StackPanel>
+
+			<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+				<TextBlock Text="无特殊声明本主页采用 " />
+				<local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
+				<TextBlock Text=" 授权。" />
+			</StackPanel>
+		</StackPanel>
+	</Border>
+
+</StackPanel>
