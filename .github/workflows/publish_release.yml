@@ -36,4 +36,4 @@ jobs:
           cd builder
           
       - name: 构建页面
-        run: dotnet run -c release "${{$GITHUB_WORKSPACE}}/main.nhpj" "${{$GITHUB_WORKSPACE}}/output/"
+        run: dotnet run -c release "${{GITHUB_WORKSPACE}}/main.nhpj" "${{GITHUB_WORKSPACE}}/output/"
