@@ -31,9 +31,9 @@ jobs:
 
       - name: 配置构造环境文件夹
         run: |
+          git config --global user.name 'Light-Beacon'
           git clone https://github.com/Light-Beacon/Homepage-Builder-Runner.git builder
           cd builder
-        
-      - name: 构建 Build Runner
-        run: dotnet build
-
+          
+      - name: 构建页面
+        run: dotnet run -c release "${{$GITHUB_WORKSPACE}}/main.nhpj" "${{$GITHUB_WORKSPACE}}/output/"
