@@ -50,16 +50,16 @@
 					</Border>
 					</local:MyButton>
 				</Border>
-				<Border Background="#395157" Grid.Column="2" Margin="2" Padding="0,0,0,5" CornerRadius="5">
+				<Border Background="#3D3D3F" Grid.Column="2" Margin="2" Padding="0,0,0,5" CornerRadius="5">
 					<local:MyButton EventData="https://www.bilibili.com/video/BV1zj411b7ed" EventType="打开网页" ToolTip="点击打开B站观看视频">
-					<Border Background="#9ddfef" CornerRadius="5" Padding="5">
+					<Border Background="#666668" CornerRadius="5" Padding="5">
 						<StackPanel Margin="0,5">
 							<Image Source="https://z1.ax1x.com/2023/10/06/pPXXYQJ.jpg" Margin="1,1,1,6" Height="70" Stretch="UniformToFill"/>
-							<TextBlock Text="企鹅" Foreground="#395157" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+							<TextBlock Text="企鹅" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 							<StackPanel Margin="5">
-							<TextBlock Text="  生成在石岸生物群系" Foreground="#395157" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  群居生物，水陆两栖" Foreground="#395157" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-							<TextBlock Text="  能使你的船划得更快" Foreground="#395157" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  生成在石岸生物群系" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  群居生物，水陆两栖" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+							<TextBlock Text="  能使你的船划得更快" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
 							</StackPanel>
 						</StackPanel>
 					</Border>
