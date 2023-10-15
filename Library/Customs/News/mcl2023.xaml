@@ -1,4 +1,4 @@
-<local:MyCard Margin="0,0,0,15" Title="Minecraft Live 消息" CanSwap="True">
+<local:MyCard Margin="0,0,0,15" Title="Minecraft Live 2023" CanSwap="True">
   <StackPanel Margin="0,38,0,20">
 <StackPanel Width="1000" HorizontalAlignment="Center">
   <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
@@ -9,9 +9,9 @@
   <TextBlock Style="{StaticResource verTxtBlk}" Text="MINECRAFT LIVE" />
 </Border>
 <StackPanel Margin="30,5">
-  <TextBlock FontSize="16" HorizontalAlignment="Center" Text="今年的 Minecraft Live 即将开始于"/>
-  <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="[北京时间 凌晨1时]"/>
-  <TextBlock HorizontalAlignment="Center" Text="生物投票仍为三选一，现在正在投票中。"/>
+  <TextBlock FontSize="16" HorizontalAlignment="Center" Text="今年的 Minecraft Live/>
+  <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="已结束，更多消息将在之后更新"/>
+  <TextBlock HorizontalAlignment="Center" Text="生物投票结果 已公布"/>
   <StackPanel>
 			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
 			<Grid UseLayoutRounding="True">
