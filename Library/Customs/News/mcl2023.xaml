@@ -11,7 +11,7 @@
 <StackPanel Margin="30,5">
   <TextBlock FontSize="16" HorizontalAlignment="Center" Text="今年的 Minecraft Live 即将开始于"/>
   <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="[北京时间 凌晨1时]"/>
-  <TextBlock HorizontalAlignment="Center" Text="生物投票仍为三选一，现在正在投票中。"/>
+  <TextBlock HorizontalAlignment="Center" Text="生物投票结果 已公布"/>
   <StackPanel>
 			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
 			<Grid UseLayoutRounding="True">
@@ -34,17 +34,17 @@
 					</Border>
 					</local:MyButton>
 				</Border>
-				<Border Background="#4b3317" Grid.Column="1" Margin="2" Padding="0,0,0,5" CornerRadius="5">
+				<Border Background="#3D3D3F" Grid.Column="1" Margin="2" Padding="0,0,0,5" CornerRadius="5">
 					<local:MyButton EventData="https://www.bilibili.com/video/BV1qC4y1L7CE" EventType="打开网页" ToolTip="点击打开B站观看视频">
-					<Border Background="#ffaf52 " CornerRadius="5" Padding="5">
+					<Border Background="#666668" CornerRadius="5" Padding="5">
 						<StackPanel Margin="0,5">
 							<Image Source="https://z1.ax1x.com/2023/10/06/pPXXddx.jpg" Margin="1,1,1,6" Height="70" Stretch="UniformToFill"/>
-							<TextBlock Text="犰狳" Foreground="#4b3317" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+							<TextBlock Text="犰狳" Foreground="#3D3D3F" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
 							<StackPanel Margin="5">
-								<TextBlock Text="  生成在热带草原生物群系" Foreground="#4b3317" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-								<TextBlock Text="  在受惊吓时会缩成一个球" Foreground="#4b3317" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-								<TextBlock Text="  其掉落物可以用于制作狼铠保护你的狼（狗）" Foreground="#4b3317" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
-								<TextBlock Text="（科普：其名字发音为 qiú yú）" Foreground="#4b3317" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  生成在热带草原生物群系" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  在受惊吓时会缩成一个球" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="  其掉落物可以用于制作狼铠保护你的狼（狗）" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
+								<TextBlock Text="（科普：其名字发音为 qiú yú）" Foreground="#3D3D3F" FontFamily="KaiTi" FontSize="14" Margin="0,2"/>
 							</StackPanel>
 						</StackPanel>
 					</Border>
