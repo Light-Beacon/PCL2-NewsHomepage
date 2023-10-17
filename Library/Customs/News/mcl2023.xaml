@@ -10,7 +10,7 @@
 </Border>
 <StackPanel Margin="30,5">
   <TextBlock FontSize="16" HorizontalAlignment="Center" Text="今年的 Minecraft Live"/>
-  <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="已结束，更多消息将在之后更新"/>
+  <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="已结束"/>
   <TextBlock HorizontalAlignment="Center" Text="生物投票结果 已公布"/>
   <StackPanel>
 			<Border Margin="10" Background="#DDDDDD" CornerRadius="5" Padding="5">
@@ -80,7 +80,7 @@
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text=" 其结构包括一些新的装饰方块，如铜门、铜灯等，它们会随着时间氧化" />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text=" 在其中会刷新出新敌对生物 Breeze，会使用风爆攻击玩家，其攻击产生的爆炸会使爆炸中的一些方块的开关状态改变（如开关活板门）" />
+				<TextBlock Style="{StaticResource ListItem}" Text=" 在其中会刷新出新敌对生物 Breeze，会使用风爆攻击玩家，其攻击产生的爆炸会使爆炸范围内的一些方块的开关状态改变（如开关活板门、拉杆）" />
 		  </StackPanel>
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text=" 新方块：合成器，通过漏斗输入后能自动合成物品" />
