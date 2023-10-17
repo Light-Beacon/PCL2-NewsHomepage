@@ -69,25 +69,25 @@
 			</Border>
 		</StackPanel>
     <TextBlock Text="1.21 更新内容" Style="{StaticResource h2}" />
-		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+		  <StackPanel Style="{StaticResource ListStyle}">
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="新结构 Trail Camber" />
 				<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在其中有试炼刷怪笼，根据玩家的数量生成对应数量等级的怪物，打过一波敌人后有战利品。刷怪笼在刷出下一波敌人前会进入冷却并冒出烟雾效果" />
+				<TextBlock Style="{StaticResource ListItem}" Text=" 在其中有试炼刷怪笼，根据玩家的数量生成对应数量等级的怪物，打过一波敌人后有战利品。刷怪笼在刷出下一波敌人前会进入冷却并冒出烟雾效果" />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="其中有奖励箱" />
+				<TextBlock Style="{StaticResource ListItem}" Text=" 其中有奖励箱" />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="其结构包括一些新的装饰方块，如铜门、铜灯等，它们会随着时间氧化" />
+				<TextBlock Style="{StaticResource ListItem}" Text=" 其结构包括一些新的装饰方块，如铜门、铜灯等，它们会随着时间氧化" />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在其中会刷新出新敌对生物 Breeze，会使用风爆攻击玩家，其攻击产生的爆炸会使爆炸中的一些方块的开关状态改变（如开关活板门）" />
+				<TextBlock Style="{StaticResource ListItem}" Text=" 在其中会刷新出新敌对生物 Breeze，会使用风爆攻击玩家，其攻击产生的爆炸会使爆炸中的一些方块的开关状态改变（如开关活板门）" />
 		  </StackPanel>
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="新方块：合成器，通过漏斗输入后能自动合成物品" />
+			<TextBlock Style="{StaticResource ListItem}" Text=" 新方块：合成器，通过漏斗输入后能自动合成物品" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="新方块：铜灯，随着逐渐被氧化会降低亮度" />
+			<TextBlock Style="{StaticResource ListItem}" Text=" 新方块：铜灯，随着逐渐被氧化会降低亮度" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="新生物：犰狳，投票获胜生物" />
+			<TextBlock Style="{StaticResource ListItem}" Text=" 新生物：犰狳，投票获胜生物" />
 		</StackPanel>
   </StackPanel>
 </StackPanel>
