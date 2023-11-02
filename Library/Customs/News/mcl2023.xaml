@@ -21,7 +21,7 @@
 					<ColumnDefinition Width="*"></ColumnDefinition>
 				</Grid.ColumnDefinitions>
 				<Border Background="#3D3D3F" Grid.Column="0" Margin="2" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://www.bilibili.com/video/BV1Mh4y167u2" EventType="打开网页" ToolTip="点击打开 B 站观看视频">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV1Mh4y167u2" EventType="打开网页" ToolTip="点击打开 B站 观看视频">
 					<Border Background="#666668" CornerRadius="5" Padding="5">
 					<StackPanel Margin="0,5">
 						<Image Source="https://z1.ax1x.com/2023/10/06/pPXXrWD.jpg" Margin="1,1,1,6" Height="70" Stretch="UniformToFill"/>
@@ -35,7 +35,7 @@
 					</local:MyButton>
 				</Border>
 				<Border Background="#4b3317" Grid.Column="1" Margin="2" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://www.bilibili.com/video/BV1qC4y1L7CE" EventType="打开网页" ToolTip="点击打开 B 站观看视频">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV1qC4y1L7CE" EventType="打开网页" ToolTip="点击打开 B站 观看视频">
 					<Border Background="#ffaf52 " CornerRadius="5" Padding="5">
 						<StackPanel Margin="0,5">
 							<Image Source="https://z1.ax1x.com/2023/10/06/pPXXddx.jpg" Margin="1,1,1,6" Height="70" Stretch="UniformToFill"/>
@@ -51,7 +51,7 @@
 					</local:MyButton>
 				</Border>
 				<Border Background="#3D3D3F" Grid.Column="2" Margin="2" Padding="0,0,0,5" CornerRadius="5">
-					<local:MyButton EventData="https://www.bilibili.com/video/BV1zj411b7ed" EventType="打开网页" ToolTip="点击打开 B 站观看视频">
+					<local:MyButton EventData="https://www.bilibili.com/video/BV1zj411b7ed" EventType="打开网页" ToolTip="点击打开 B站 观看视频">
 					<Border Background="#666668" CornerRadius="5" Padding="5">
 						<StackPanel Margin="0,5">
 							<Image Source="https://z1.ax1x.com/2023/10/06/pPXXYQJ.jpg" Margin="1,1,1,6" Height="70" Stretch="UniformToFill"/>

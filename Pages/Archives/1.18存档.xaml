@@ -169,7 +169,7 @@
 	<!--Styles Ends-->
 	<!--Hints Starts-->
 	<!--Hints Ends-->
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用&quot;https://news.bugjump.net&quot;。" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用 &quot;https://news.bugjump.net&quot;。" />
 
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
@@ -222,7 +222,7 @@
 						<Ellipse />
 						<TextBlock Style="{StaticResource ListItem}" Text="输入的种子前后的任何空格现在都会被去掉。" />
 						<Ellipse />
-						<TextBlock Style="{StaticResource ListItem}" Text="将超平坦世界&quot;红石俱备&quot;预设的顶层方块高度由Y=-9提升至Y=55，以防止史莱姆生成。" />
+						<TextBlock Style="{StaticResource ListItem}" Text="将超平坦世界&quot;红石俱备&quot;预设的顶层方块高度由 Y=-9 提升至 Y=55，以防止史莱姆生成。" />
 						<Ellipse />
 						<TextBlock Style="{StaticResource ListItem}" Text="更改了超平坦世界&quot;水世界&quot;预设，将原先的沙子替换成沙砾，并在基岩层上方增加了64层深板岩，以解决此预设世界中海底神殿的生成问题。" />
 						<Ellipse />
