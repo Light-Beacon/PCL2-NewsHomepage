@@ -139,7 +139,7 @@
 	<!--Styles Ends-->
 	<!--Hints Starts-->
 	<!--Hints Ends-->
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.17 历史版本的存档，使用新闻主页请用“https://news.bugjump.net”。存档页面年久失修，大部分图由于来源于 Minecraft 官网，现在 Mojang 给 Minecraft 官网升级了一波防护导致图片获取失败...已知问题" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.17 历史版本的存档，使用新闻主页请用&quot;https://news.bugjump.net&quot;。存档页面年久失修，大部分图由于来源于 Minecraft 官网，现在 Mojang 给 Minecraft 官网升级了一波防护导致图片获取失败...已知问题" />
 
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
@@ -1284,9 +1284,9 @@
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="服务器移除了max-build-height服务器设置" />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="更改了无法连接到认证服务器的错误消息，现在的描述是“无法访问”而不是“维护停机”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="更改了无法连接到认证服务器的错误消息，现在的描述是&quot;无法访问&quot;而不是&quot;维护停机&quot;" />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="创造模式物品栏“红石”标签页现在按照方块使用频率重新排序，并将黏液块和蜂蜜块移到了“红石”标签页" />
+				<TextBlock Style="{StaticResource ListItem}" Text="创造模式物品栏&quot;红石&quot;标签页现在按照方块使用频率重新排序，并将黏液块和蜂蜜块移到了&quot;红石&quot;标签页" />
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="游戏现在基于OpenGL 3.2 core profile运行" />
 				<Ellipse />
@@ -1300,9 +1300,9 @@
 			<TextBlock Text="技术性" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“游玩时间”统计项的本地化键名被重命名为 play_time " />
+				<TextBlock Style="{StaticResource ListItem}" Text="&quot;游玩时间&quot;统计项的本地化键名被重命名为 play_time " />
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="即使游戏暂停，“世界打开时间”统计项  (total_world_time)  也会计算时间。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="即使游戏暂停，&quot;世界打开时间&quot;统计项  (total_world_time)  也会计算时间。" />
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="若玩家曾永久性拒绝使用服务器资源包，如果此资源包需要强制使用，则现在依然会展示资源包提示信息（而非直接让用户断开连接）" />
 			</StackPanel>
@@ -1877,37 +1877,37 @@
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Whatever Floats Your Goat!（只要山羊飞起来（[习语]只要你能够开心）！）” ：使一个承载着山羊的船漂浮。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Whatever Floats Your Goat!（只要山羊飞起来（[习语]只要你能够开心）！）&quot; ：使一个承载着山羊的船漂浮。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Wax on（涂蜡）” ：给铜块打蜡。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Wax on（涂蜡）&quot; ：给铜块打蜡。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Wax off（刮蜡）” ：给铜块除蜡。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Wax off（刮蜡）&quot; ：给铜块除蜡。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “The Cutest Predator（最可爱的捕食者）” ：用桶抓一只美西螈。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;The Cutest Predator（最可爱的捕食者）&quot; ：用桶抓一只美西螈。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “The Healing Power of Friendship!（友谊的治愈力量！）” ：与一只美西螈组团一起赢得战斗（玩家击杀掉与美西螈战斗的溺尸、守卫者或远古守卫者）。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;The Healing Power of Friendship!（友谊的治愈力量！）&quot; ：与一只美西螈组团一起赢得战斗（玩家击杀掉与美西螈战斗的溺尸、守卫者或远古守卫者）。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Glow and Behold（看看这荧光）” ：（使用荧光墨囊）提高告示牌文本的亮度。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Glow and Behold（看看这荧光）&quot; ：（使用荧光墨囊）提高告示牌文本的亮度。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Light as a Rabbit（轻捷如兔）” ：穿着皮革靴子在细雪上行走。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Light as a Rabbit（轻捷如兔）&quot; ：穿着皮革靴子在细雪上行走。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Surge Protector!（电涌保护器！）” ：雷电不使周围区域着火并击中村民旁的避雷针。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Surge Protector!（电涌保护器！）&quot; ：雷电不使周围区域着火并击中村民旁的避雷针。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Is it a Bird?（一只鸟?）” ：透过望远镜看到一只鹦鹉。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Is it a Bird?（一只鸟?）&quot; ：透过望远镜看到一只鹦鹉。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Is it a Balloon?（一个气球?）” ：透过望远镜看到一只恶魂。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Is it a Balloon?（一个气球?）&quot; ：透过望远镜看到一只恶魂。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入 “Is it a Plane?（一架飞机?）” ：透过望远镜看到一只末影龙。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入 &quot;Is it a Plane?（一架飞机?）&quot; ：透过望远镜看到一只末影龙。" />
 
 			</StackPanel>
 
@@ -2653,7 +2653,7 @@
 			</Border>
 			<!--Detail-->
 			<TextBlock Margin="30,3,10,3" Text="注意：由于世界范围更改，该版本不能加载旧版本的世界。" />
-			<TextBlock Margin="30,3,10,3" Text="从此版本开始将只摘录部分重要更改，需要完整更新日志请见“阅读完整日志”。" />
+			<TextBlock Margin="30,3,10,3" Text="从此版本开始将只摘录部分重要更改，需要完整更新日志请见&quot;阅读完整日志&quot;。" />
 
 			<TextBlock Text="新内容" FontSize="18" Padding="30,0,0,0" Margin="0,10,0,15" />
 
@@ -3613,7 +3613,7 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="按住 Shift 键点击修改值的按钮会将其设置回之前的值" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="调试”世界类型被改为按住 Alt 键调出（之前是 Shift）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="调试&quot;世界类型被改为按住 Alt 键调出（之前是 Shift）" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="修改了一些上个快照中引入的物品和方块的贴图" />

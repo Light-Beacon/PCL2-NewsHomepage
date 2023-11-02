@@ -169,7 +169,7 @@
 	<!--Styles Ends-->
 	<!--Hints Starts-->
 	<!--Hints Ends-->
-	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用“https://news.bugjump.net”。" />
+	<local:MyHint Margin="0,0,0,7" IsWarn="False" Text="这是新闻主页中 1.18 历史版本的存档，使用新闻主页请用&quot;https://news.bugjump.net&quot;。" />
 
 	<Grid Margin="0,0,0,15">
 		<Grid.ColumnDefinitions>
@@ -222,9 +222,9 @@
 						<Ellipse />
 						<TextBlock Style="{StaticResource ListItem}" Text="输入的种子前后的任何空格现在都会被去掉。" />
 						<Ellipse />
-						<TextBlock Style="{StaticResource ListItem}" Text="将超平坦世界“红石俱备”预设的顶层方块高度由Y=-9提升至Y=55，以防止史莱姆生成。" />
+						<TextBlock Style="{StaticResource ListItem}" Text="将超平坦世界&quot;红石俱备&quot;预设的顶层方块高度由Y=-9提升至Y=55，以防止史莱姆生成。" />
 						<Ellipse />
-						<TextBlock Style="{StaticResource ListItem}" Text="更改了超平坦世界“水世界”预设，将原先的沙子替换成沙砾，并在基岩层上方增加了64层深板岩，以解决此预设世界中海底神殿的生成问题。" />
+						<TextBlock Style="{StaticResource ListItem}" Text="更改了超平坦世界&quot;水世界&quot;预设，将原先的沙子替换成沙砾，并在基岩层上方增加了64层深板岩，以解决此预设世界中海底神殿的生成问题。" />
 						<Ellipse />
 						<TextBlock Style="{StaticResource ListItem}" Text="自定义世界生成在已配置结构文件中加入了biomes字段，值是一个标签。" />
 						<Ellipse />
@@ -240,11 +240,11 @@
 						<Ellipse />
 						<TextBlock Style="{StaticResource ListItem}" Text="合规性要求：根据韩国游戏相关法律要求，为韩国玩家加入了计时器，用于提醒其适时休息。" />
 						<Ellipse />
-						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：在“Chunk”一行中加入了玩家当前所处的区块在区域文件中的位置和此区域文件的文件名。" />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：在&quot;Chunk&quot;一行中加入了玩家当前所处的区块在区域文件中的位置和此区域文件的文件名。" />
 						<Ellipse />
-						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将“Chunk”一行中的玩家于区块内部的位置移至“Block”一行的尾部的方括号中。" />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将&quot;Chunk&quot;一行中的玩家于区块内部的位置移至&quot;Block&quot;一行的尾部的方括号中。" />
 						<Ellipse />
-						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将“Terrain”行合并进“Multinoise”行，并更名为“NoiseRouter”。" />
+						<TextBlock Style="{StaticResource ListItem}" Text="调试界面：将&quot;Terrain&quot;行合并进&quot;Multinoise&quot;行，并更名为&quot;NoiseRouter&quot;。" />
 						<Ellipse />
 						<TextBlock Style="{StaticResource ListItem}" Text="语言：加入了弗留利语。" />
 						<Ellipse />
@@ -483,7 +483,7 @@
 			<TextBlock Text="22w07a 的技术性更新" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“生物群系标签”现在被用于确定结构可以在哪些生物群系中生成。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="&quot;生物群系标签&quot;现在被用于确定结构可以在哪些生物群系中生成。" />
 			</StackPanel>
 			<TextBlock Text="该版本修复了 9 个bug，本文来源于MCBBS" Style="{StaticResource footnote}" />
 			<!--Logs-->
@@ -597,7 +597,7 @@
 			<TextBlock Text="22w03a 的更改" Style="{StaticResource h2}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="种子“0”不再被当作特殊情况处理" />
+				<TextBlock Style="{StaticResource ListItem}" Text="种子&quot;0&quot;不再被当作特殊情况处理" />
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="现在会自动去除在输入的种子之前/之后的多余空格" />
 				<Ellipse />
@@ -1037,13 +1037,13 @@
 				<TextBlock Text="调试界面" Style="{StaticResource h4}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了“Multinoise”行、“Biome builder”行和“Terrain”行，仅在玩家位于使用多噪声生物群系源类型的维度（默认为主世界和下界）时出现。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了&quot;Multinoise&quot;行、&quot;Biome builder&quot;行和&quot;Terrain&quot;行，仅在玩家位于使用多噪声生物群系源类型的维度（默认为主世界和下界）时出现。" />
 				</StackPanel>
 
                 <TextBlock Text="字体" Style="{StaticResource h4}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了一种名为“illageralt”的新字体（取自Minecraft Dungeons的符文）。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了一种名为&quot;illageralt&quot;的新字体（取自Minecraft Dungeons的符文）。" />
 				</StackPanel>
 
                 <TextBlock Text="JFR分析" Style="{StaticResource h4}" />
@@ -1075,21 +1075,21 @@
                 <TextBlock Text="选项" Style="{StaticResource h4}" />
 				<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="在辅助功能设置中加入了“隐藏闪电的闪烁效果”选项。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="在辅助功能设置中加入了&quot;隐藏闪电的闪烁效果&quot;选项。" />
                     <Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="在音乐和声音设置中加入了“设备”选项。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="在音乐和声音设置中加入了&quot;设备&quot;选项。" />
                     <Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="在按键控制设置中加入了“潜行”和“疾跑”选项。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="在按键控制设置中加入了&quot;潜行&quot;和&quot;疾跑&quot;选项。" />
                     <Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="按键绑定设置被独立到一个单独的页面，此页面可以通过按键控制页面进入。" />
                     <Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了“区块构建器”选项。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了&quot;区块构建器&quot;选项。" />
                     <Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了“模拟距离”选项（滑块形式）。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了&quot;模拟距离&quot;选项（滑块形式）。" />
                     <Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了适用于单人游戏的“自动保存指示器”选项，以打开或关闭指示器显示。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="在视频设置中加入了适用于单人游戏的&quot;自动保存指示器&quot;选项，以打开或关闭指示器显示。" />
                     <Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的“在线选项”选项界面，位于原先主菜单上的“Realms的通知”选项以及多人游戏暂停菜单上的“难度”位置上。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的&quot;在线选项&quot;选项界面，位于原先主菜单上的&quot;Realms的通知&quot;选项以及多人游戏暂停菜单上的&quot;难度&quot;位置上。" />
 				</StackPanel>
 
                 <TextBlock Text="粒子" Style="{StaticResource h4}" />
@@ -1282,7 +1282,7 @@
 			<TextBlock Text="游戏内容" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="将进度“轻功雪上飘”的上游进度从“冒险”改为“甜蜜的梦”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="将进度&quot;轻功雪上飘&quot;的上游进度从&quot;冒险&quot;改为&quot;甜蜜的梦&quot;" />
                 <Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="随着生物群系的调整，完成进度探索的时光所需的42个生物群系变为50个" />
                 <Ellipse />
@@ -1336,9 +1336,9 @@
                 <Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="现在服务端的类文件都会被签名" />
                 <Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="闪烁标语“[this splash text has been delayed until part 2]”被改为“[this splash text is now available]”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="闪烁标语&quot;[this splash text has been delayed until part 2]&quot;被改为&quot;[this splash text is now available]&quot;" />
                 <Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="闪烁标语“Now Java 16!”被改为“Java 16 + 1 = 17!”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="闪烁标语&quot;Now Java 16!&quot;被改为&quot;Java 16 + 1 = 17!&quot;" />
                 <Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="现在玩家在侧面以较小的角度与方块相碰时不会停止疾跑" />
                 <Ellipse />
@@ -1348,7 +1348,7 @@
                 <Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="更改了方块计划刻和液体计划刻的内部细节，以使存档保存得更快" />
                 <Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="从“世界类型”选项中移除了“洞穴”和“浮岛”世界类型" />
+				<TextBlock Style="{StaticResource ListItem}" Text="从&quot;世界类型&quot;选项中移除了&quot;洞穴&quot;和&quot;浮岛&quot;世界类型" />
                 <Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="将主世界的可建筑高度范围扩大到了Y=-64至319" />
                 <Ellipse />
@@ -1728,10 +1728,10 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="放大化世界和巨型生物群系世界适应了新的地形，现在它们重新回到了创建世界菜单中" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="从世界创建菜单中删除了世界类型“洞穴”和“浮岛”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="从世界创建菜单中删除了世界类型&quot;洞穴&quot;和&quot;浮岛&quot;" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新旧地形间的过渡不再那么“突兀”了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="新旧地形间的过渡不再那么&quot;突兀&quot;了" />
 				<StackPanel Style="{StaticResource ListStyle}">
 					<Ellipse />
 					<TextBlock Style="{StaticResource ListItem}" Text="地表高度过渡？有！" />
@@ -1789,16 +1789,16 @@
 			<TextBlock Text="选项" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的 “在线选项” 选项界面，位于原先主菜单上的 “Realms的通知” 选项以及多人游戏暂停菜单上的 “难度” 位置上。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="加入了单独的 &quot;在线选项&quot; 选项界面，位于原先主菜单上的 &quot;Realms的通知&quot; 选项以及多人游戏暂停菜单上的 &quot;难度&quot; 位置上。" />
 				<StackPanel Style="{StaticResource ListStyle}">
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="“Realms的通知” 被移入此界面。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="&quot;Realms的通知&quot; 被移入此界面。" />
 
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了“允许列入服务器玩家列表”选项，用于设置是否允许服务器将自己的ID公开展示在在线玩家列表中。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了&quot;允许列入服务器玩家列表&quot;选项，用于设置是否允许服务器将自己的ID公开展示在在线玩家列表中。" />
 
 					<Ellipse />
-					<TextBlock Style="{StaticResource ListItem}" Text="加入了“服务器难度”，用于显示当前的服务器难度。" />
+					<TextBlock Style="{StaticResource ListItem}" Text="加入了&quot;服务器难度&quot;，用于显示当前的服务器难度。" />
 				</StackPanel>
 			</StackPanel>
 
@@ -1998,7 +1998,7 @@
 			<TextBlock Text="技术性修改" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="用 “block_marker” 替代了 “light” 和 “barrier” 粒子效果。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="用 &quot;block_marker&quot; 替代了 &quot;light&quot; 和 &quot;barrier&quot; 粒子效果。" />
 			</StackPanel>
 
 			<TextBlock Text="粒子" Style="{StaticResource h3}" />
@@ -2063,7 +2063,7 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="修改了区块渲染管线的优先级" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="现在在较大渲染距离下高速飞行时，应该不会出现有一块未渲染的“洞”了" />
+				<TextBlock Style="{StaticResource ListItem}" Text="现在在较大渲染距离下高速飞行时，应该不会出现有一块未渲染的&quot;洞&quot;了" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="服务器类已被签名" />
@@ -2241,16 +2241,16 @@
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“上天入地”：从主世界的顶部掉落到底部" />
+				<TextBlock Style="{StaticResource ListItem}" Text="&quot;上天入地&quot;：从主世界的顶部掉落到底部" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“温暖如家”：在主世界中骑乘炽足兽在岩浆中走过50个方块" />
+				<TextBlock Style="{StaticResource ListItem}" Text="&quot;温暖如家&quot;：在主世界中骑乘炽足兽在岩浆中走过50个方块" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“星际商人”：和一个在建筑高度极限的村民进行交易" />
+				<TextBlock Style="{StaticResource ListItem}" Text="&quot;星际商人&quot;：和一个在建筑高度极限的村民进行交易" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="“音乐之声”：在草甸生物群系播放音乐" />
+				<TextBlock Style="{StaticResource ListItem}" Text="&quot;音乐之声&quot;：在草甸生物群系播放音乐" />
 
 			</StackPanel>
 
@@ -2367,7 +2367,7 @@
 			<StackPanel Style="{StaticResource ListStyle}">
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新增了设置“Simulation distance（模拟距离）”（实体不会在模拟距离以外进行更新）" />
+				<TextBlock Style="{StaticResource ListItem}" Text="新增了设置&quot;Simulation distance（模拟距离）&quot;（实体不会在模拟距离以外进行更新）" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="最大后台线程数增加（7 -> 255）" />
@@ -2603,7 +2603,7 @@
 				</StackPanel>
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="一点都不响！跟实际的“噪声”没啥关系，噪声是描述其生成方式的术语" />
+				<TextBlock Style="{StaticResource ListItem}" Text="一点都不响！跟实际的&quot;噪声&quot;没啥关系，噪声是描述其生成方式的术语" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="旧式洞穴仍会生成，新旧系统合二为一，生成有趣的洞穴系统" />
@@ -2687,7 +2687,7 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="添加了用于指定播放设备的选项" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在控制选项中添加了“切换疾跑”和“切换潜行”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="在控制选项中添加了&quot;切换疾跑&quot;和&quot;切换潜行&quot;" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="把一些应当在其他地方的按键绑定从控制选项中挪走了" />
@@ -2771,13 +2771,13 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="战利品表函数 set_contents 和 set_loot_table 现在需要 type 字段，其应是一个有效的方块实体类型。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="在 1.2(“pre-anvil”) 之前存储的世界现在不能再直接打开了。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="在 1.2(&quot;pre-anvil&quot;) 之前存储的世界现在不能再直接打开了。" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="数据包格式版本升至 8" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的视频选项 “更新优先级”" />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的视频选项 &quot;更新优先级&quot;" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="移除了记分板、记分器和队伍名的长度限制" />
@@ -2802,7 +2802,7 @@
 			<TextBlock Text="旧世界转换" Style="{StaticResource h3}" />
 			<StackPanel Style="{StaticResource ListStyle}">
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="Minecraft 1.2 (“pre-anvil”) 之前的世界现在需要在本快照之前的版本里先转一次，才能正常打开" />
+				<TextBlock Style="{StaticResource ListItem}" Text="Minecraft 1.2 (&quot;pre-anvil&quot;) 之前的世界现在需要在本快照之前的版本里先转一次，才能正常打开" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="1.6.4 及之前的版本转换得最好——之后的世界会有不正确的生物群系信息" />
@@ -2814,10 +2814,10 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="该设置决定了单帧有哪些区块会同步更新。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="最保守的选项“邻近”对应着和之前一样的更新方式。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="最保守的选项&quot;邻近&quot;对应着和之前一样的更新方式。" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="新的选项“由玩家”和“无”大大缩减了放置和移除方块（特别是会发光的）时的卡顿，但可能偶尔导致世界更新时视觉上的延迟。" />
+				<TextBlock Style="{StaticResource ListItem}" Text="新的选项&quot;由玩家&quot;和&quot;无&quot;大大缩减了放置和移除方块（特别是会发光的）时的卡顿，但可能偶尔导致世界更新时视觉上的延迟。" />
 			</StackPanel>
 
 			<TextBlock Text="刷怪笼数据修改" Style="{StaticResource h3}" />
@@ -2899,9 +2899,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/ab4ecebb133f56dd4c4c4c3257f030a947ddea84/1_18_experimental-snapshot-7.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-7” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-7&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
@@ -2985,9 +2985,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/4697c84c6a347d0b8766759d5b00bc5a00b1b858/1_18_experimental-snapshot-6.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-6” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-6&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
@@ -3091,9 +3091,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/d9cb7f6fb4e440862adfb40a385d83e3f8d154db/1_18_experimental-snapshot-5.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-5” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-5&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
@@ -3155,7 +3155,7 @@
 				<TextBlock Style="{StaticResource ListItem}" Text="雪层不会再土土的了。这次是真的" />
 
 				<Ellipse />
-				<TextBlock Style="{StaticResource ListItem}" Text="使峭壁的地形不再特别“峭”。并且调整了破碎地形和峭壁的位置，使其看起来更加吻合" />
+				<TextBlock Style="{StaticResource ListItem}" Text="使峭壁的地形不再特别&quot;峭&quot;。并且调整了破碎地形和峭壁的位置，使其看起来更加吻合" />
 
 				<Ellipse />
 				<TextBlock Style="{StaticResource ListItem}" Text="降低了河流被切断和山地地形变为干河峡谷的几率。河流在生成时会更倾向于在山区地形中开辟一条峡湾，或者让地势变高，在山区之间生成一个马鞍谷。这样无论你是走路还是划船，都会变得更加舒适，并且河流也会比以前更宽" />
@@ -3182,9 +3182,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/b92a360cbae2eb896a62964ad8c06c3493b6c390/1_18_experimental-snapshot-4.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-4” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-4&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
@@ -3311,9 +3311,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/846648ff9fe60310d584061261de43010e5c722b/1_18_experimental-snapshot-3.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-3” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-3&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 				<TextBlock Text="此外 Mojang 自己搞了个图片教程（纯英文，官启，如需要的话可以点击下方按钮获取）" Margin="0,30,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="查看图片教程" EventType="打开网页" EventData="https://images.ctfassets.net/8y6ykjruobr4/5npJyh6JAV5ShVPjnZ74wM/a10d21227d399e94c904526ce8c313db/how-to-install-experimental-snapshots.jpg" ToolTip="下载版本文件" />
@@ -3434,9 +3434,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/0adfe4f321aa45248fc88ac888bed5556633e7fb/1_18_experimental-snapshot-2.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-2” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-2&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 			</StackPanel>
 
@@ -3529,9 +3529,9 @@
 				<TextBlock Text="1. 点击下方按钮，下载压缩的版本文件" Margin="0,5,0,0" />
 				<TextBlock Text=" (建议下载到某个versions文件夹，方便解压，如果不知道那是什么请随便下载到某个地方)" Margin="10,5,0,0" />
 				<local:MyButton Height="35" Margin="80,10" Text="点击下载" EventType="下载文件" EventData="https://launcher.mojang.com/v1/objects/231bba2a21e18b8c60976e1f6110c053b7b93226/1_18_experimental-snapshot-1.zip" ToolTip="下载版本文件" />
-				<TextBlock Text="2. 在PCL II “启动”中，点击左下角版本选择，选择一个目标安装文件夹，右键点“打开”" Margin="0,10,0,0" />
-				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 “versions” 文件夹" Margin="0,10,0,0" />
-				<TextBlock Text="4. 点击常规版本下的 “1_18_experimental-snapshot-1” (如果没有请右键刷新)" Margin="0,10,0,0" />
+				<TextBlock Text="2. 在PCL II &quot;启动&quot;中，点击左下角版本选择，选择一个目标安装文件夹，右键点&quot;打开&quot;" Margin="0,10,0,0" />
+				<TextBlock Text="3. 将压缩的版本文件解压到该文件夹下的 &quot;versions&quot; 文件夹" Margin="0,10,0,0" />
+				<TextBlock Text="4. 点击常规版本下的 &quot;1_18_experimental-snapshot-1&quot; (如果没有请右键刷新)" Margin="0,10,0,0" />
 				<TextBlock Text="5. 返回，点击启动" Margin="0,10,0,0" />
 			</StackPanel>
 
