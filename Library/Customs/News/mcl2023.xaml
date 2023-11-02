@@ -1,5 +1,5 @@
-<local:MyCard Margin="0,0,0,15" Title="Minecraft Live 2023" CanSwap="True">
-  <StackPanel Margin="0,38,0,20">
+<local:MyCard Margin="0,0,0,15" Title="Minecraft Live 2023" CanSwap="True" IsSwaped="True">
+<StackPanel Margin="0,38,0,20">
 <StackPanel Width="1000" HorizontalAlignment="Center">
   <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
   <Image Height="230" MinWidth="1000" Stretch="UniformToFill" Source="https://z1.ax1x.com/2023/09/17/pPhN9FH.jpg"/>
