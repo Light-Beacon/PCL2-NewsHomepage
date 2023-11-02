@@ -38,7 +38,7 @@
 		  <TextBlock Text="候选版本" Style="{StaticResource h2}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="MOJANG现在发布了（并且希望是唯一的）荒野更新的候选版本。如果这个版本没有重大问题，在发布正式版前将不会有更多的改变。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="MOJANG 现在发布了（并且希望是唯一的）荒野更新的候选版本。如果这个版本没有重大问题，在发布正式版前将不会有更多的改变。" />
 		  </StackPanel>
 		</StackPanel>
 		<TextBlock Text="该版本修复了 1 个bug，本文来源于 MCBBS " Style="{StaticResource footnote}" />
@@ -100,10 +100,10 @@
 		  <TextBlock Text="修改内容" Style="{StaticResource h2}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="MOJANG发了 pre-5 来修几个 bug。(是谁又在水版本)" />
+			<TextBlock Style="{StaticResource ListItem}" Text="MOJANG 发布了 pre-5 来修几个 bug。(是谁又在水版本)" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="该版本修复了 11 个bug " Style="{StaticResource footnote}" />
+		<TextBlock Text="该版本修复了 11 个 bug " Style="{StaticResource footnote}" />
 		<!--Logs-->
 		<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -165,7 +165,7 @@
 			<TextBlock Style="{StaticResource ListItem}" Text="加入了马来语（爪夷文）。" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="该版本修复了 6 个bug，本文来源于 Minecraft Wiki " Style="{StaticResource footnote}" />
+		<TextBlock Text="该版本修复了 6 个 bug，本文来源于 Minecraft Wiki " Style="{StaticResource footnote}" />
 		<!--Logs-->
 		<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -244,8 +244,8 @@
 			<TextBlock Style="{StaticResource ListItem}" Text="添加游戏事件传送，带有5的振动频率" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="pre2 修复了 55 个bug，该部分来源于 满床迷离(MCBBS)" Style="{StaticResource footnote}" />
-		<TextBlock Text="pre3 修复了 18 个bug，该部分来源于 卡狗(MCBBS)" Style="{StaticResource footnote}" />
+		<TextBlock Text="pre2 修复了 55 个 bug，该部分来源于 满床迷离(MCBBS)" Style="{StaticResource footnote}" />
+		<TextBlock Text="pre3 修复了 18 个 bug，该部分来源于 卡狗(MCBBS)" Style="{StaticResource footnote}" />
 		<!--Logs-->
 		<GroupBox Header="阅读完整日志(PRE2)" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -323,7 +323,7 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="末影人，骷髅，凋灵骷髅和猪灵现在会在下界中更广的光照强度范围中生成（从光照强度等级0到11）" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="在开始或结束“使用”一个物品时，与物品交互会产生振动（例如弓、十字弩、山羊角、盾和食物）" />
+			<TextBlock Style="{StaticResource ListItem}" Text="在开始或结束&quot;使用&quot;一个物品时，与物品交互会产生振动（例如弓、十字弩、山羊角、盾和食物）" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="现在潜行时与物品交互不会产生振动" />
 			<Ellipse />
@@ -343,14 +343,14 @@
 		  <TextBlock Text="添加的游戏事件" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="note_block_play 带有振动频率6" />
+			<TextBlock Style="{StaticResource ListItem}" Text="note_block_play 带有振动频率 6" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="当它启动后，聊天框上将出现一个受服务器控制的预览界面，显示消息发送时的样子。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="instrument_play 带有振动频率15" />
+			<TextBlock Style="{StaticResource ListItem}" Text="instrument_play 带有振动频率 15" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="该版本修复了 44 个bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
+		<TextBlock Text="该版本修复了 44 个 bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
 		<!--Logs-->
 		<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -435,11 +435,11 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="这允许服务器使用动态消息样式，同时仍允许对聊天进行安全签名" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="当你使用聊天预览进入服务器的时候，客户端上将显示一个警告窗口，但你可以在“聊天设置”中完全禁用这个窗口" />
+			<TextBlock Style="{StaticResource ListItem}" Text="当你使用聊天预览进入服务器的时候，客户端上将显示一个警告窗口，但你可以在&quot;聊天设置&quot;中完全禁用这个窗口" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="动态聊天的的样式可以有服务器决定，这只在启用聊天预览启动后才会生效" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="玩家可以在“聊天设置”中启用“仅显示已签名的聊天”来始终显示原始签名的消息" />
+			<TextBlock Style="{StaticResource ListItem}" Text="玩家可以在&quot;聊天设置&quot;中启用&quot;仅显示已签名的聊天&quot;来始终显示原始签名的消息" />
 		  </StackPanel>
 		  <TextBlock Text="命令" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
@@ -541,14 +541,14 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="现在悦灵仅会在玩家64格外才不再跟随玩家。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="更改了“潜行100级”进度的描述。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="更改了&quot;潜行100级&quot;进度的描述。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="/placefeature 合并到 /place 命令中" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="服务器现在可以为客户端定义不同的聊天样式格式。" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="该版本修复了 31 个bug，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
+		<TextBlock Text="该版本修复了 31 个 bug，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
 		<!--Logs-->
 		<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -620,7 +620,7 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="山羊角有着不同声音，取决于来源的山羊。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="山羊角共有8种，其中4种为尖叫山羊独有。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="山羊角共有 8 种，其中 4 种为尖叫山羊独有。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="山羊角有时候也会出现在掠夺者前哨站。" />
 		  </StackPanel>
@@ -658,18 +658,18 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="玩家之间的聊天信息现在是加密签名的了。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="在开始的时候，玩家会得到Mojang提供的密钥组。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="在开始的时候，玩家会得到 Mojang 提供的密钥组。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="服务器可以通过设置server.properties中的 enforce-secure-profile=true 来强制玩家提供Mojang签名过的公钥。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="服务器可以通过设置 server.properties 中的 enforce-secure-profile=true 来强制玩家提供Mojang签名过的公钥。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="开启之后，没有Mojang签名公钥的玩家将无法连接到服务器。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="开启之后，没有 Mojang 签名公钥的玩家将无法连接到服务器。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="默认值为 false, 使得没有Mojang签名公钥的玩家也能连接。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="默认值为 false, 使得没有 Mojang 签名公钥的玩家也能连接。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="聊天样式现在由服务器资源包处理，翻译键为 chat.type.text。" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="该版本修复了 40 个bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
+		<TextBlock Text="该版本修复了 40 个 bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
 		<!--Logs-->
 		<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
@@ -728,9 +728,9 @@
 		  <TextBlock Text="22w16a 的新增特性" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了新的音乐" />
+			<TextBlock Style="{StaticResource ListItem}" Text="加入了新的音乐。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了唱片碎片5和音乐唱片5" />
+			<TextBlock Style="{StaticResource ListItem}" Text="加入了唱片碎片 5 和音乐唱片 5。" />
 		  </StackPanel>
 		  <TextBlock Text="关于新音乐" Style="{StaticResource h4}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
@@ -739,12 +739,12 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="它们会在特定群系和主菜单中播放。" />
 		  </StackPanel>
-		  <TextBlock Text="音乐唱片5" Style="{StaticResource h4}" />
+		  <TextBlock Text="音乐唱片 5" Style="{StaticResource h4}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="游戏中加入了一个新的音乐唱片。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="与其他唱片不同，这张唱片只能通过合成9块唱片碎片的方式获取。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="与其他唱片不同，这张唱片只能通过合成 9 块唱片碎片的方式获取。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="这些唱片碎片偶尔可以在古代城市中找到。" />
 		  </StackPanel>
@@ -762,11 +762,11 @@
 		  <TextBlock Text="悦灵的调整" Style="{StaticResource h4}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="悦灵的生命值由10升到了20。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="悦灵的生命值由 10 升到了 20。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="扔出物品后的延迟由5秒变为3秒。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="扔出物品后的延迟由 5 秒变为 3 秒。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="物品搜寻范围由9变为32。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="物品搜寻范围由 9 变为 32。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="移动速度修改。" />
 			<Ellipse />
@@ -798,7 +798,7 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="LWJGL 库已更新到版本 3.3.1。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="在F3调试屏幕中加入了内存堆分配指标。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="在 F3 调试屏幕中加入了内存堆分配指标。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="加入了 doWardenSpawning （控制监守者生成）游戏规则。" />
 			<Ellipse />
@@ -819,9 +819,9 @@
 			<TextBlock Style="{StaticResource ListItem}" Text="点击单人游戏后，游戏崩溃。" />
 		  </StackPanel>
 		</StackPanel>
-		<TextBlock Text="这两个版本攻修复了 35 个bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
+		<TextBlock Text="这两个版本攻修复了 35 个 bug，本文来源于 MCBBS" Style="{StaticResource footnote}" />
 		<!--Logs-->
-		<GroupBox Header="阅读22w16a的完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<GroupBox Header="阅读 22w16a 的完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
 			<Grid.ColumnDefinitions>
 			  <ColumnDefinition Width="20*">
@@ -836,7 +836,7 @@
 			<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-22w16a" />
 		  </Grid>
 		</GroupBox>
-		<GroupBox Header="阅读22w16b的完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+		<GroupBox Header="阅读 22w16b 的完整日志" BorderBrush="{DynamicResource ColorBrush3}">
 		  <Grid UseLayoutRounding="True" Margin="10,10,10,10">
 			<Grid.ColumnDefinitions>
 			  <ColumnDefinition Width="20*">
@@ -893,9 +893,9 @@
 		  <TextBlock Text="新增特性" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="添加进度 “When the Squad Hops into Town” 当你使用拴绳牵引每种青蛙的变种时获得" />
+			<TextBlock Style="{StaticResource ListItem}" Text="添加进度 &quot;When the Squad Hops into Town&quot; 当你使用拴绳牵引每种青蛙的变种时获得" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="添加进度 “Sneak 100” 当你在一个幽匿传感体或者监守者附近潜行以防它感知到你时获得" />
+			<TextBlock Style="{StaticResource ListItem}" Text="添加进度 &quot;Sneak 100&quot; 当你在一个幽匿传感体或者监守者附近潜行以防它感知到你时获得" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="为监守者添加了一种新的远程攻击" />
 		  </StackPanel>
@@ -909,7 +909,7 @@
 		  <TextBlock Text="修改内容" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="将黑暗效果添加至“为什么会变成这样呢？”进度的要求中。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="将黑暗效果添加至&quot;为什么会变成这样呢？&quot;进度的要求中。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="悦灵现在拥有自然的生命恢复效果，每秒恢复2点血量。" />
 			<Ellipse />
@@ -1229,7 +1229,7 @@
 		  <TextBlock Text="进度" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="“成双成对”进度现在还需要繁殖青蛙。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="&quot;成双成对&quot;进度现在还需要繁殖青蛙。" />
 		  </StackPanel>
 		</StackPanel>
 		<TextBlock Text="该版本修复了 16 个bug，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
@@ -1805,22 +1805,22 @@
 		  <TextBlock Text="游戏内容" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="进度“探索的时光”现在还需要玩家到访Deep Dark生物群系。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="进度&quot;探索的时光&quot;现在还需要玩家到访Deep Dark生物群系。" />
 		  </StackPanel>
 		  <TextBlock Text="常规" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="移除了 “blending_data.old_noise”， 现在只要区块数据有 “blending_data” 即被认定是旧区块。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="移除了 &quot;blending_data.old_noise&quot;， 现在只要区块数据有 &quot;blending_data&quot; 即被认定是旧区块。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="将数据包版本号变更为10，资源包版本号变更为9。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="服务器配置文件中 “level-type” 现在可支持世界预设。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="服务器配置文件中 &quot;level-type&quot; 现在可支持世界预设。" />
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="标签进行了更改。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="现在在“创建新世界”界面的完整内容出现前，会先显示一小段世界的“正在准备生成世界…”的提示。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="现在在&quot;创建新世界&quot;界面的完整内容出现前，会先显示一小段世界的&quot;正在准备生成世界…&quot;的提示。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="“内存溢出！”的消息现在可以被翻译了。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="&quot;内存溢出！&quot;的消息现在可以被翻译了。" />
 		  </StackPanel>
 		</StackPanel>
 		<TextBlock Text="该版本修复了 23 个bug，本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
@@ -2018,7 +2018,7 @@
 		  <TextBlock Text="选项" Style="{StaticResource h4}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="加入了新的辅助功能选项“Darkness Effect”（暂未确认译名）" />
+			<TextBlock Style="{StaticResource ListItem}" Text="加入了新的辅助功能选项&quot;Darkness Effect&quot;（暂未确认译名）" />
 		  </StackPanel>
 		</StackPanel>
 		<TextBlock Text="本文来源于 Minecraft Wiki" Style="{StaticResource footnote}" />
