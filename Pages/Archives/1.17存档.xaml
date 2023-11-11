@@ -208,7 +208,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17.1" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1219658-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-java-edition-1-17-1" />
 				</Grid>
@@ -283,7 +283,7 @@
 							<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
 						</Style>
 					</WrapPanel.Resources>
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫晶芽">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/紫晶芽">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -294,7 +294,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶簇">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/紫水晶簇">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -305,7 +305,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶母岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/紫水晶母岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -316,7 +316,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/紫水晶块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -327,7 +327,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/方解石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/方解石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -338,7 +338,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/平滑玄武岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/平滑玄武岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -349,7 +349,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/凝灰岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/凝灰岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -360,7 +360,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/遮光玻璃">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/遮光玻璃">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -371,7 +371,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/铜矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/铜矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -382,7 +382,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/铜块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/铜块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -393,7 +393,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/切制铜块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/切制铜块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -404,7 +404,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/切制铜台阶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/切制铜台阶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -415,7 +415,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/切制铜楼梯">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/切制铜楼梯">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -426,7 +426,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/避雷针">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/避雷针">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -437,7 +437,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/滴水石锥">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/滴水石锥">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -448,7 +448,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/滴水石块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/滴水石块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -459,7 +459,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光地衣">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/发光地衣">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -470,7 +470,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/杜鹃花丛">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/杜鹃花丛">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -481,7 +481,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/盛开的杜鹃花丛">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/盛开的杜鹃花丛">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -492,7 +492,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/杜鹃树叶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/杜鹃树叶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -503,7 +503,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/盛开的杜鹃树叶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/盛开的杜鹃树叶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -514,7 +514,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/苔藓块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/苔藓块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -525,7 +525,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/苔藓地毯">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/苔藓地毯">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -536,7 +536,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/洞穴藤蔓">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/洞穴藤蔓">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -547,7 +547,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/小型垂滴叶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/小型垂滴叶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -558,7 +558,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/大型垂滴叶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/大型垂滴叶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -569,7 +569,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/缠根泥土">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/缠根泥土">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -580,7 +580,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/垂根">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/垂根">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -591,7 +591,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/孢子花">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/孢子花">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -602,7 +602,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深板岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -613,7 +613,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/錾制深板岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/錾制深板岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -624,7 +624,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/磨制深板岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/磨制深板岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -635,7 +635,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩砖">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深板岩砖">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -646,7 +646,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩瓦">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深板岩瓦">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -657,7 +657,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/裂纹深板岩砖">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/裂纹深板岩砖">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -668,7 +668,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/裂纹深板岩瓦">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/裂纹深板岩瓦">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -679,7 +679,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深板岩圆石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深板岩圆石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -690,7 +690,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层煤矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层煤矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -701,7 +701,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层铁矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层铁矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -712,7 +712,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层铜矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层铜矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -723,7 +723,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层青金石矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层青金石矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -734,7 +734,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层金矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层金矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -745,7 +745,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层红石矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层红石矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -756,7 +756,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层钻石矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层钻石矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -767,7 +767,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/深层绿宝石矿石">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深层绿宝石矿石">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -778,7 +778,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/被虫蚀的深板岩">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/被虫蚀的深板岩">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -789,7 +789,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/蜡烛">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/蜡烛">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -800,7 +800,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/细雪">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/细雪">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -811,7 +811,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铁块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/粗铁块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -822,7 +822,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铜块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/粗铜块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -833,7 +833,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗金块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/粗金块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -844,7 +844,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/Sculk Sensor">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk Sensor">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -855,7 +855,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/光源方块">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/光源方块">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -876,7 +876,7 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫水晶碎片">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/紫水晶碎片">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -887,7 +887,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/铜锭">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/铜锭">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -898,7 +898,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/望远镜">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/望远镜">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -909,7 +909,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/细雪桶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/细雪桶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -920,7 +920,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/美西螈桶">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/美西螈桶">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -931,7 +931,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/美西螈刷怪蛋">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/美西螈刷怪蛋">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -942,7 +942,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光鱿鱼刷怪蛋">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/发光鱿鱼刷怪蛋">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -953,7 +953,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/山羊刷怪蛋">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/山羊刷怪蛋">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -964,7 +964,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/荧光墨囊">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/荧光墨囊">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -975,7 +975,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光浆果">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/发光浆果">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -986,7 +986,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铁">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/粗铁">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -997,7 +997,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗铜">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/粗铜">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1008,7 +1008,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/粗金">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/粗金">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1019,7 +1019,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/收纳袋">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/收纳袋">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1040,7 +1040,7 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/美西螈">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/美西螈">
 						<Border Width="80px">
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1051,7 +1051,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/发光鱿鱼">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/发光鱿鱼">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1062,7 +1062,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/山羊">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/山羊">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1073,7 +1073,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/荧光物品展示框">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/荧光物品展示框">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1084,7 +1084,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/标记">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/标记">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1105,7 +1105,7 @@
 						</Style>
 					</WrapPanel.Resources>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/杜鹃树">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/杜鹃树">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1116,7 +1116,7 @@
 						</Border>
 					</local:MyButton>
 
-					<local:MyButton EventType="打开网页" EventData="https://minecraft.fandom.com/zh/wiki/紫晶洞">
+					<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/紫晶洞">
 						<Border>
 							<StackPanel>
 								<Border Style="{StaticResource NameBdr}">
@@ -1353,7 +1353,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-rc2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17.1-rc2" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1217192-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-release-candidate-1" />
 				</Grid>
@@ -1394,7 +1394,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17.1-rc1" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1217192-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-release-candidate-1" />
 				</Grid>
@@ -1436,7 +1436,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-pre3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17.1-pre3" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1216721-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-pre-release-2" />
 				</Grid>
@@ -1496,7 +1496,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17.1-pre2" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1216239-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-pre-release-2" />
 				</Grid>
@@ -1563,7 +1563,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17.1-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17.1-pre1" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1211734-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-1-pre-release-1" />
 				</Grid>
@@ -1605,7 +1605,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-rc2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-rc2" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1207786-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-release-candidate-1" />
 				</Grid>
@@ -1648,7 +1648,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-rc1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-rc1" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206671-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-17-release-candidate-1" />
 				</Grid>
@@ -1691,7 +1691,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-pre5" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-pre5" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206669-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-17-pre-release-2" />
 				</Grid>
@@ -1743,7 +1743,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-pre4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-pre4" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206553-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-17-pre-release-2" />
 				</Grid>
@@ -1802,7 +1802,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-pre3" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-pre3" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206299-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-17-pre-release-2" />
 				</Grid>
@@ -1846,7 +1846,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-pre2" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-pre2" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1206064-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-17-pre-release-2" />
 				</Grid>
@@ -1995,7 +1995,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.17-pre1" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/Java版1.17-pre1" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1204601-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-17-pre-release-1" />
 				</Grid>
@@ -2073,7 +2073,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w20a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/21w20a" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1202169-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w20a" />
 				</Grid>
@@ -2169,7 +2169,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w19a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/21w19a" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1200064-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w19a" />
 				</Grid>
@@ -2269,7 +2269,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w18a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/21w18a" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1198443-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w18a" />
 				</Grid>
@@ -2356,7 +2356,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w17a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/21w17a" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1195788-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-snapshot-21w17a" />
 				</Grid>
@@ -2454,7 +2454,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w16a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/21w16a" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1193689-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-21w16a" />
 				</Grid>
@@ -2571,7 +2571,7 @@
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 						<ColumnDefinition Width="10*"></ColumnDefinition>
 					</Grid.ColumnDefinitions>
-					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/21w15a" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://zh.minecraft.wiki/w/21w15a" ColorType="Highlight" />
 					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1191583-1-1.html" />
 					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-snapshot-21w15a" />
 				</Grid>
