@@ -1,0 +1,83 @@
+<local:MyCard Margin="0,0,0,15" Title="中文 Minecraft Wiki 已迁移" CanSwap="True" IsSwaped="True">
+<StackPanel Margin="0,38,0,20">
+    <StackPanel Width="1000" HorizontalAlignment="Center">
+        <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+        <Image Height="230" MinWidth="1000" Stretch="UniformToFill" Source="https://zh.minecraft.wiki/images/Forking_from_Fandom_poster.png"/>
+        <Line X1="0" X2="1" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+    </StackPanel>
+    <Border Style="{StaticResource verTxtBdr}">
+        <TextBlock Style="{StaticResource verTxtBlk}" Text="MINECRAFT Wiki" />
+    </Border>
+    <StackPanel Margin="30,5">
+        <TextBlock FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Text="中文Minecraft Wiki现已迁移"/>
+        <local:MyButton Margin="0,4,0,10" Width="250" Height="35" ColorType="Highlight"
+                    Text="进入全新的中文 Minecraft Wiki" EventType="打开网页" EventData="https://zh.minecraft.wiki/" />
+        <TextBlock Text="全新的改动" Style="{StaticResource h2}" />
+        <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="新皮肤！" />
+                <StackPanel Style="{StaticResource ListStyle}">
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 你是否也被Fandom那丑陋的黄色侧边栏而困扰？这次，运维人员为wiki设计了一套既熟悉又陌生的外观。除此之外，新的wiki还有暗色模式（在网页的右上角启用）和固定宽度（目前只有登录用户可以开启，位于参数设置的“小工具”中）的选项。Wiki还更新了Logo！" />
+                </StackPanel>
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="更快的加载速度！" />
+                <StackPanel Style="{StaticResource ListStyle}">
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 对于中国大陆用户，新站的加载速度有明显改善。这是因为新wiki的界面更加简洁，无需加载与无关资源，也不会加载乱七八糟的追踪脚本。" />
+                </StackPanel>
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="更少的广告！" />
+                <StackPanel Style="{StaticResource ListStyle}">
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 新网站不会再有弹窗、问卷、无关文章或视频广告。每个页面最多只会展示1条广告。" />
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 当前，由于运维人员还在完善广告基建，页面上暂时不会显示广告。开始显示广告后，wiki管理员会再次发布通知，并在广告的位置与选择上做到公开透明。" />
+                </StackPanel>
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="更好的搜索！" />
+                <StackPanel Style="{StaticResource ListStyle}">
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 你也许曾注意到，Fandom的搜索结果常常与你的需求不符。现在，新站的搜索引擎更强大、更准确。比如，你可以试试搜索“盔甲纹饰 快照”来找到盔甲纹饰是在Java版的哪一个快照中加入的。在Fandom wiki上，你大概率无法用搜索找到这个信息。" />
+                </StackPanel>
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="没有年龄弹窗了！" />
+                <StackPanel Style="{StaticResource ListStyle}">
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 与Fandom不同，新Wiki不会强制你告诉他们你是否已经成年。" />
+                </StackPanel>
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="匿名编辑回归！" />
+                <StackPanel Style="{StaticResource ListStyle}">
+                <Ellipse />
+                <TextBlock Style="{StaticResource ListItem}" Text=" 你不再需要创建账号就能编辑wiki了。" />
+                </StackPanel>
+        </StackPanel>
+        <TextBlock Text="新Wiki需要你的帮助！" Style="{StaticResource h2}" />
+        <TextBlock Text="Fandom并不会关闭已经迁移的wiki，所以旧的Fandom wiki仍然会留在原地，并在搜索结果里占坑。旧域名“minecraft.gamepedia.com”以及“minecraftwiki.net”也仍然会跳转至Fandom wiki。" Margin="0,0,0,4"/>
+        <TextBlock Text="因此，为了新wiki能够顺利运作起来，新Wiki需要你的帮助！下面是几种帮忙的方式：" Margin="0,0,0,4"/>
+        <StackPanel Style="{StaticResource ListStyle}">
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="分享转发！请告诉你的朋友，Wiki已经迁到新地方了！" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="不再点击Fandom链接。在搜索结果中，每次都请选择zh.minecraft.wiki的链接，不要点击Fandom的链接。这样，搜索引擎就会了解哪个网站在用户眼里更优秀。" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="不再使用旧域名。把所有的“zh.minecraftwiki.net”“minecraft-zh.gamepedia.com”“minecraft.fandom.com/zh”链接修改为zh.minecraft.wiki——这会提高新Wiki的知名度，让搜索结果中的排名更靠前。" />
+            <Ellipse />
+            <TextBlock Style="{StaticResource ListItem}" Text="协助改进wiki！在新wiki中，你甚至不需要创建账号就可以进行编辑了！在编辑时需要帮助？来加入Wiki的QQ群或Discord来提问，或者看看帮助页面。" />
+        </StackPanel>
+        <TextBlock Text="你也可以尝试使用Indie Wiki Buddy浏览器扩展，这个扩展会将你自动重定向到新Wiki，并在搜索引擎中隐藏Fandom wiki。" Margin="0,0,0,4"/>
+        <local:MyTextButton Margin="0,8,0,10" HorizontalAlignment="Center"
+                    Text="了解 Indie Wiki Buddy 扩展" EventType="打开网页" EventData="https://getindie.wiki/"/>
+        <TextBlock Text="镜像站" Style="{StaticResource h2}" />
+        <TextBlock Text="2020年，中文Minecraft Wiki在BWIKI和网易设立了镜像站点。设立镜像站点是管理员为解决Fandom的加载速度不甚理想这一问题而采取的权宜之策。然而，在迁移后，访问速度有了大幅提升，达到了可以接受的程度。此外直接访问源站可以获取最新信息，且所有人均可以编辑更新。因此，两个镜像站将会关闭。" Margin="0,0,0,4"/>
+        <TextBlock Text="是谁在托管新wiki？" Style="{StaticResource h2}" />
+        <TextBlock Text="新的Minecraft Wiki将由Weird Gloop进行托管，这个公司也托管着RuneScape Wiki。" Margin="0,0,0,4"/>
+        <TextBlock Text="简而言之，wiki的新服务提供商广告数量少、技术基建强、透明度也高，在与Fandom在有关页面排名的搜索引擎优化竞争中，还取得了优良成绩。Weird Gloop给予了wiki管理员极高的自主权利，几乎相当于自行托管wiki，他们还有所需的经验来建设与维护wiki，这一点是wiki管理员所没有的。" Margin="0,0,0,4"/>
+        <local:MyHint Text="对于旧的Fandom Wiki，请不要点击其链接，也不要进行任何编辑和破坏。对其页面编辑会使得搜索引擎认为它还在更新。" />
+        <TextBlock Text="文言wiki怎么办？" Style="{StaticResource h2}" />
+        <TextBlock Text="如果你还没有听说的话，Minecraft Wiki有一个文言文版本。" Margin="0,0,0,4"/>
+        <TextBlock Text="目前，文言wiki的迁移准备工作还在进行之中。wiki管理员会尽快完成准备，争取在年底前迁移文言wiki。" Margin="0,0,0,4"/>
+    </StackPanel>
+</StackPanel>
+</local:MyCard>
