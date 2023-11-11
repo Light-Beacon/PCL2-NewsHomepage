@@ -53,21 +53,21 @@
                 <TextBlock Style="{StaticResource ListItem}" Text=" 你不再需要创建账号就能编辑wiki了。" />
                 </StackPanel>
         </StackPanel>
-        <TextBlock Text="新Wiki需要你的帮助！" Style="{StaticResource h2}" />
+        <TextBlock Text="新 Wiki 需要你的帮助！" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
-            <TextBlock Text="Fandom并不会关闭已经迁移的wiki，所以旧的Fandom wiki仍然会留在原地，并在搜索结果里占坑。旧域名 “minecraft.gamepedia.com” 以及 “minecraftwiki.net” 也仍然会跳转至 Fandom Wiki。" Margin="0,0,0,4"/>
+            <TextBlock Text="Fandom 并不会关闭已经迁移的 Wiki，所以旧的 Fandom Wiki 仍然会留在原地，并在搜索结果里占坑。旧域名 “minecraft.gamepedia.com” 以及 “minecraftwiki.net” 也仍然会跳转至 Fandom Wiki。" Margin="0,0,0,4"/>
             <TextBlock Text="因此，为了新 Wiki 能够顺利运作起来，新 Wiki 需要你的帮助！下面是几种帮忙的方式：" Margin="0,0,0,4"/>
             <Ellipse />
             <TextBlock Style="{StaticResource ListItem}" Text="分享转发！请告诉你的朋友，Wiki 已经迁到新地方了！" />
             <Ellipse />
             <TextBlock Style="{StaticResource ListItem}" Text="不再点击 Fandom 链接。在搜索结果中，每次都请选择 zh.minecraft.wiki 的链接，不要点击 Fandom 的链接。这样，搜索引擎就会了解哪个网站在用户眼里更优秀。" />
             <Ellipse />
-            <TextBlock Style="{StaticResource ListItem}" Text="不再使用旧域名。把所有的 “zh.minecraftwiki.net” “minecraft-zh.gamepedia.com ”“minecraft.fandom.com/zh” 链接修改为 zh.minecraft.wiki ——这会提高新 Wiki 的知名度，让搜索结果中的排名更靠前。" />
+            <TextBlock Style="{StaticResource ListItem}" Text="不再使用旧域名。把所有的 “zh.minecraftwiki.net”、“minecraft-zh.gamepedia.com”、“minecraft.fandom.com/zh” 链接修改为 zh.minecraft.wiki ——这会提高新 Wiki 的知名度，让搜索结果中的排名更靠前。" />
             <Ellipse />
             <TextBlock Style="{StaticResource ListItem}" Text="协助改进 Wiki！在新 Wiki 中，你甚至不需要创建账号就可以进行编辑了！在编辑时需要帮助？来加入 Wiki 的 QQ 群或 Discord 来提问，或者看看帮助页面。" />
         <TextBlock Text="你也可以尝试使用 Indie Wiki Buddy 浏览器扩展，这个扩展会将你自动重定向到新Wiki，并在搜索引擎中隐藏 Fandom Wiki。" Margin="0,0,0,4"/>
         </StackPanel>
-        <local:MyButton Margin="0,8,0,10" HorizontalAlignment="Center"
+        <local:MyButton Margin="0,8,0,10" HorizontalAlignment="Center" Padding="3"
                     Text="了解 Indie Wiki Buddy 扩展" EventType="打开网页" EventData="https://getindie.wiki/"/>
         <TextBlock Text="镜像站" Style="{StaticResource h2}" />
         <StackPanel Style="{StaticResource ListStyle}">
