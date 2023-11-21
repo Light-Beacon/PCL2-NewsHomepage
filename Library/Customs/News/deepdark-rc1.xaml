@@ -1358,9 +1358,9 @@
 			<Ellipse />
 			<TextBlock Style="{StaticResource ListItem}" Text="树叶现在可以含水，红树树叶现在可用于堆肥。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="Sculk Catalyst 不再生成 Sculk Shrieker 。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="幽匿催发体不再生成幽匿尖啸体。" />
 			<Ellipse />
-			<TextBlock Style="{StaticResource ListItem}" Text="Sculk Shrieker 自 Deep Dark Experimental Snapshot 1 加入了功能。" />
+			<TextBlock Style="{StaticResource ListItem}" Text="幽匿尖啸体自 Deep Dark Experimental Snapshot 1 加入了功能。" />
 		  </StackPanel>
 		  <TextBlock Text="物品" Style="{StaticResource h3}" />
 		  <StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
@@ -1662,41 +1662,41 @@
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿块">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk（暂未确认译名）" />
+					<TextBlock Text="幽匿块" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_BE1.gif" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk_Catalyst">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿催发体">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk Catalyst（暂未确认译名）" />
+					<TextBlock Text="幽匿催发体" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_Catalyst_Bloom_BE1.gif" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk_Sherieker">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿尖啸体">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk Shrieker（暂未确认译名）" />
+					<TextBlock Text="幽匿尖啸体" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_Shrieker_BE1.gif" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk_Vein">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿脉络">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk Vein（暂未确认译名）" />
+					<TextBlock Text="幽匿脉络" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_Vein_BE1.gif" />
 				</StackPanel>
@@ -1964,11 +1964,11 @@
 				<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该生物" />
 			  </Style>
 			</WrapPanel.Resources>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Warden">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/监守者">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Warden（暂未确认译名）" />
+					<TextBlock Text="监守者" />
 				  </Border>
 				  <Image Source="MapedImage:Warden.gif" />
 				</StackPanel>
@@ -1982,21 +1982,21 @@
 				<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该结构" />
 			  </Style>
 			</WrapPanel.Resources>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Ancient_City">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/远古城市">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Ancient City（暂未确认译名）" />
+					<TextBlock Text="远古城市（暂未确认译名）" />
 				  </Border>
 				  <Image Source="MapedImage:Ancient_City.png" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Deep_Dark">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/深暗之域">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Deep Dark（暂未确认译名）" />
+					<TextBlock Text="深暗之域" />
 				  </Border>
 				  <Image Source="MapedImage:Deep_Dark.png" />
 				</StackPanel>
