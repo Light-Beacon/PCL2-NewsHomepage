@@ -1888,51 +1888,51 @@
 				<Setter Property="ToolTip" Value="点击前往 Minecraft Wiki 上查看该方块" />
 			  </Style>
 			</WrapPanel.Resources>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Reinforced_Deepslate">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/强化深板岩">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Reinforced Deepslate（暂未确认译名）" />
+					<TextBlock Text="强化深板岩" />
 				  </Border>
 				  <Image Source="MapedImage:Reinforced_Deepslate_JE1.png" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿块">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk（暂未确认译名）" />
+					<TextBlock Text="幽匿块" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_BE1.gif" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk_Catalyst">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿催发体">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk Catalyst（暂未确认译名）" />
+					<TextBlock Text="幽匿催发体" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_Catalyst_Bloom_BE1.gif" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk_Sherieker">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿尖啸体">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk Shrieker（暂未确认译名）" />
+					<TextBlock Text="幽匿尖啸体" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_Shrieker_BE1.gif" />
 				</StackPanel>
 			  </Border>
 			</local:MyButton>
-			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Sculk_Vein">
+			<local:MyButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/幽匿脉络">
 			  <Border>
 				<StackPanel>
 				  <Border Style="{StaticResource NameBdr}">
-					<TextBlock Text="Sculk Vein（暂未确认译名）" />
+					<TextBlock Text="幽匿脉络" />
 				  </Border>
 				  <Image Source="MapedImage:Sculk_Vein_BE1.gif" />
 				</StackPanel>
