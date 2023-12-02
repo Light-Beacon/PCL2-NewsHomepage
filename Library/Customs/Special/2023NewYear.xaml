@@ -12,7 +12,7 @@
       <StackPanel.Triggers>
         <EventTrigger RoutedEvent="StackPanel.Loaded">
           <BeginStoryboard>
-            <Storyboard RepeatBehavior="2x" FillBehavior="Stop">
+            <Storyboard RepeatBehavior="Forever" FillBehavior="Stop">
               <DoubleAnimation Storyboard.TargetName="T1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
               <DoubleAnimation Storyboard.TargetName="T2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
               <DoubleAnimation Storyboard.TargetName="T3" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
@@ -47,9 +47,6 @@
               <DoubleAnimation Storyboard.TargetName="T3" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:8.4"/>
             </Storyboard>
           </BeginStoryboard>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="StackPanel.Loaded">
-            <DoubleAnimation Storyboard.TargetName="SP" Storyboard.TargetProperty="Height" From="150" To="0" Duration="0:0:0.05" BeginTime="0:0:20"/>
         </EventTrigger>
       </StackPanel.Triggers>
       <Grid>
