@@ -1,8 +1,8 @@
-<Border Style="{StaticResource verImgBdr}" Height="80" VerticalAlignment="Center">
-<Border.Background>
+<Border Style="{StaticResource verImgBdr}" Height="80" Width="300">
+<!--<Border.Background>
 <ImageBrush ImageSource="{$source}" Stretch="UniformToFill" />
-</Border.Background>
-<TextBlock Text="图床炸了，暂时没图" Margin="10" VerticalAlignment="Center" />
+</Border.Background>-->
+<TextBlock Text="图床炸了，暂时没图" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 <!--<Image Source="{$source}" Opacity="0" Stretch="Fill"/>-->
 </Border>
 <Border Style="{StaticResource verTxtBdr}" {$deco}>
