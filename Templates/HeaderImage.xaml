@@ -2,9 +2,9 @@
 <Border.Background>
 <ImageBrush ImageSource="{$source}" Stretch="UniformToFill" />
 </Border.Background>
-<TextBlock Text="图床炸了，暂时没图"/>
+<TextBlock Text="图床炸了，暂时没图" Margin="10" VerticalAlignment="Center" />
 <!--<Image Source="{$source}" Opacity="0" Stretch="Fill"/>-->
 </Border>
-<Border Style="{StaticResource verTxtBdr}" Margin="20" {$deco}>
+<Border Style="{StaticResource verTxtBdr}" {$deco}>
 <TextBlock Style="{StaticResource verTxtBlk}" Text="{$title}" />
 </Border>
