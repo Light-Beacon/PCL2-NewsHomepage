@@ -1,0 +1,9 @@
+components:
+ - VersionHeaderImage
+ - $MarkdownPresenter
+ - VersionLinksBox
+base: CardBase
+filter:
+  file_exten:
+    - md
+    - markdown

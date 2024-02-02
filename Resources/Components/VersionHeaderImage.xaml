@@ -1,0 +1,9 @@
+<Border Style="{StaticResource verImgBdr}">
+<Border.Background>
+<ImageBrush ImageSource="${$GetVersionImage}" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="${$GetVersionImage}" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource verTxtBdr}" ${$IsEnableAnimation}>
+<TextBlock Style="{StaticResource verTxtBlk}" Text="${name}" />
+</Border>

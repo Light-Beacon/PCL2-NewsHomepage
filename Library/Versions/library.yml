@@ -1,0 +1,6 @@
+name: versions
+fill:
+  mcbbs-link: '${$GetMCBBSLink}'
+  official-link: '${$GetOfficialLink}'
+  templates:
+    - VersionCard
