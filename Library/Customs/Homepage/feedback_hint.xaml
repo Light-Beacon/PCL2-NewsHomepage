@@ -1,8 +1,8 @@
-<local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在 Github 上交 Issue 而不是跑去 PCL2 反馈" CanSwap="True" IsSwaped="True">
+<local:MyCard Margin="0,0,0,15" Title="📢 新闻主页问题请在 GitHub 上交 Issue 而不是跑去 PCL2 反馈" CanSwap="True" IsSwaped="True">
 		<StackPanel Margin="30,40,30,10">
 			<TextBlock Text="  很抱歉由于工作疏漏导致新闻主页出现 Bug。" Padding="15,0,0,0" Margin="0,0,0,5" />
 			<TextBlock Text="  但有人往 PCL2 反馈提交新闻主页 Bug......你交错地了！" Padding="15,0,0,0" Margin="0,0,0,5" FontSize="16" />
-			<TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的 Github 仓库交 Issue 而不是在 PCL2 反馈交反馈（PCL2 不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
+			<TextBlock Text="  如果是由于加载新闻主页出现的问题，请在我的 GitHub 仓库交 Issue 而不是在 PCL2 反馈交反馈（PCL2 不背锅）。" Padding="15,0,0,0" Margin="0,0,0,5" />
 			<TextBlock Text="  反馈地址（如果新闻主页可以打开也可以在最下边找到反馈入口）：" Padding="15,0,0,0" Margin="0,0,0,5" />
 			<Border Margin="35,5,0,20" BorderBrush="{DynamicResource ColorBrush1}" BorderThickness="1" Background="{DynamicResource ColorBrush6}" CornerRadius="2">
 				<TextBox Text="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" FontSize="16" Height="25" />
