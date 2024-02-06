@@ -3,7 +3,18 @@
         <TextBlock Text="PCL2新闻主页" FontSize="16" Margin="0,5,5,5" />
         <TextBlock Text="By：最亮的信标（Light Beacon）" />
         <TextBlock Text="维护：最亮的信标（Light Beacon）" />
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">          <TextBlock Text="订阅地址: " />          <local:MyTextButton Margin="2" Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />        </StackPanel>        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">          <TextBlock Text="官方网站: " />          <local:MyTextButton Margin="2" Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />        </StackPanel>        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">          <TextBlock Text="Github: " />          <local:MyTextButton Margin="2" Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+          <TextBlock Text="订阅地址: " />
+          <local:MyTextButton Margin="2" Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+          <TextBlock Text="官方网站: " />
+          <local:MyTextButton Margin="2" Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+          <TextBlock Text="GitHub: " />
+          <local:MyTextButton Margin="2" Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开GitHub" />
+        </StackPanel>
         <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
           <TextBlock Text="无特殊声明本主页采用 " />
           <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ " />
