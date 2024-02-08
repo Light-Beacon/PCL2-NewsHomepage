@@ -1,37 +1,37 @@
-    <Border Background="#A0FFFFFF" Height="20720" Margin="-25,10,-25,-20500" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
-      <StackPanel Margin="40,15,0,10">
-        <TextBlock Text="PCL2 新闻主页" FontSize="16" Margin="0,5,5,5" />
-        <TextBlock Text="By：最亮的信标（Light Beacon）" />
-        <TextBlock Text="维护：最亮的信标（Light Beacon）" />
-        <TextBlock>
-        订阅地址: <local:MyTextButton Text="https://news.bugjump.net" EventType="复制文本" EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板" />
-        </TextBlock>
-        <TextBlock>
-        官方网站: <local:MyTextButton Text="https://news.bugjump.net" EventType="打开网页" EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网" />
-        </TextBlock>
-        <TextBlock>
-        GitHub: <local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开GitHub" />
-        </TextBlock>
-        <TextBlock>
-        无特殊声明本主页采用 <local:MyTextButton Text="CC BY-NC-SA 4.0" EventType="打开网页" EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ "/> 授权。
-        </TextBlock >
-        <Border Height="20500" Background="{DynamicResource ColorBrush7}" Opacity="0.3" Margin="-40,10,0,0">
-          <StackPanel>
-            <Grid Margin="0,7,0,15">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*">
-                </ColumnDefinition>
-                <ColumnDefinition Width="100">
-                </ColumnDefinition>
-                <ColumnDefinition Width="1*">
-                </ColumnDefinition>
-              </Grid.ColumnDefinitions>
-              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-              <TextBlock Text="到  底  啦" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-              <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-            </Grid>
-            <TextBlock Margin="105,2,0,0" Text="（PCL2提示）" />
-          </StackPanel>
-        </Border>
+<Border Background="#A0FFFFFF" Height="20720" Margin="-25,10,-25,-20500" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+  <StackPanel Margin="40,15,0,10">
+    <TextBlock Text="PCL2 新闻主页" FontSize="16" Margin="0,5,5,5" />
+    <TextBlock> 
+    By：最亮的信标（Light Beacon）<LineBreak/>
+    维护：最亮的信标（Light Beacon）<LineBreak/>
+    <LineBreak/>
+    订阅地址: <local:MyTextButton Margin="0,0,0,-3" EventType="复制文本" Text="https://news.bugjump.net"
+    EventData="https://news.bugjump.net" ToolTip="点击复制到剪贴板"/> <LineBreak/>
+    官方网站: <local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" Text="https://news.bugjump.net" 
+    EventData="https://news.bugjump.net" ToolTip="点击打开新闻主页官网"/> <LineBreak/>
+    GitHub: <local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" Text="https://github.com/Light-Beacon/PCL2-NewsHomepage"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开GitHub" /><LineBreak/>
+    <LineBreak/>
+    无特殊声明本主页采用 <local:MyTextButton Margin="0,0,0,-2" Text="CC BY-NC-SA 4.0" EventType="打开网页" 
+    EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ "/> 授权。
+    <LineBreak/>
+    </TextBlock>
+    <Border Height="20500" Background="{DynamicResource ColorBrush7}" Opacity="0.3" Margin="-40,10,0,0">
+      <StackPanel>
+        <Grid Margin="0,7,0,15">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="100">
+            </ColumnDefinition>
+            <ColumnDefinition Width="1*">
+            </ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+          <TextBlock Text="到  底  啦" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+          <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+        </Grid>
       </StackPanel>
     </Border>
+  </StackPanel>
+</Border>
