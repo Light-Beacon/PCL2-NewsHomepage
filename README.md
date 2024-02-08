@@ -1,6 +1,6 @@
 # PCL2新闻主页
 
-<div align="center"><img src="https://news.bugjump.net/new_banner.jpg" alt="新闻主页 Header"/></div>
+<div align="center"><img src="https://news.bugjump.net/new_banner_fixed.jpg" alt="新闻主页 Header"/></div>
 
 在PCL2中提供MC相关新闻的主页
 
