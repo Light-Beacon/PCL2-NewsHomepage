@@ -2,14 +2,14 @@ name: news
 alias:
  - 主界面
 cards:
- - animated_noticebar
+# - animated_noticebar
  - 24w05b
  - 24w05a
- - Separator | content = 历史版本
+ - T:Separator | content = 历史版本
  - 24w04a
  - 1.20.4
- - jumpCard
- - Separator | content = 周边新闻
- - feedback_hint
- - RefreshBar
- - Footer
+# - jumpCard
+ - T:Separator | content = 周边新闻
+# - feedback_hint
+# - RefreshBar
+# - Footer
