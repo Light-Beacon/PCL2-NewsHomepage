@@ -55,7 +55,7 @@
   <Setter Property="Grid.Row" Value="1" />
 </Style>
 <Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-  <Setter Property="Grid.Column" Value="2" />
+  <Setter Property="Grid.Column" Value="1" />
   <Setter Property="Text" Value="官网" />
 </Style>
 <Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
