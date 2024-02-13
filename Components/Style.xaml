@@ -89,7 +89,7 @@
   <Setter Property="VerticalAlignment" Value="Top" />
   <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
   <Setter Property="CornerRadius" Value="7" />
-  <Setter Property="MaxHeight" Value="100" />
+  <Setter Property="MaxHeight" Value="140" />
 </Style>
 <Style x:Key="verTxtBlk" TargetType="TextBlock">
   <Setter Property="HorizontalAlignment" Value="Center" />
@@ -98,7 +98,6 @@
   <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
   <Setter Property="Width" Value="180" />
   <Setter Property="TextWrapping" Value="Wrap" />
-  <Setter Property="FontWeight" Value="Bold" />
   <Setter Property="FontSize" Value="18" />
 </Style>
 <Style x:Key="imgTitle" TargetType="TextBlock">
