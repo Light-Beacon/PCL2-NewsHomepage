@@ -5,5 +5,5 @@
 <Image Source="${version-image-link}" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource verTxtBdr}" ${$IsEnableAnimation}>
-<TextBlock Style="{StaticResource verTxtBlk}" Text="${name}" />
+<TextBlock Style="{StaticResource verTxtBlk}" Text="${version-id}" />
 </Border>
