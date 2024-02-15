@@ -4,5 +4,7 @@ fill:
   official-link: ${$GetLink|Official}
   version-image-link: ${$GetLink|Image}
   version-id: ${file_name}
+  title: ${file_name}
   templates:
     - VersionCard
+    - Raw

@@ -1,3 +1,4 @@
+# 写入 Hosts 文件改善网络环境
 近期 mojangapi 连接不稳定，你可以尝试一下下面的方法：
 点击下边的按钮，它会尝试将 mojangapi 正确的解析地址放入系统 hosts 文件中
 ? 按钮 "写入 hosts 文件" 打开文件 "cmd.exe| /k echo 开始下载脚本 && curl -o writehosts.bat  https://www.lightbeacon.top/hostsfix/write.bat && echo 下载完成...正在运行 && writehosts.bat" "写入 hosts 脚本"
