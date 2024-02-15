@@ -3,10 +3,8 @@
 <Grid.ColumnDefinitions>
 <ColumnDefinition Width="20*"/>
 <ColumnDefinition Width="12*"/>
-<ColumnDefinition Width="12*"/>
 </Grid.ColumnDefinitions>
 <local:MyButton Style="{StaticResource Read0}" EventData="{$wikilink}" ColorType="Highlight" {$EnableWikiSuffix} />
-<local:MyButton Style="{StaticResource Read1}" EventData="{$mcbbslink}" IsEnabled="false"/>
 <local:MyButton Style="{StaticResource Read2}" EventData="{$officallink}" {$EnableOFLSuffix} />
 </Grid>
 </GroupBox>

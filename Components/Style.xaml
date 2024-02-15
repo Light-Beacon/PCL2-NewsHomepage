@@ -55,7 +55,7 @@
   <Setter Property="Grid.Row" Value="1" />
 </Style>
 <Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-  <Setter Property="Grid.Column" Value="2" />
+  <Setter Property="Grid.Column" Value="1" />
   <Setter Property="Text" Value="官网" />
 </Style>
 <Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
@@ -89,7 +89,7 @@
   <Setter Property="VerticalAlignment" Value="Top" />
   <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
   <Setter Property="CornerRadius" Value="7" />
-  <Setter Property="MaxHeight" Value="200" />
+  <Setter Property="MaxHeight" Value="140" />
 </Style>
 <Style x:Key="verTxtBlk" TargetType="TextBlock">
   <Setter Property="HorizontalAlignment" Value="Center" />
@@ -98,7 +98,7 @@
   <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
   <Setter Property="Width" Value="180" />
   <Setter Property="TextWrapping" Value="Wrap" />
-  <Setter Property="FontSize" Value="20" />
+  <Setter Property="FontSize" Value="18" />
 </Style>
 <Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
@@ -107,12 +107,12 @@
   <Setter Property="Margin" Value="0,0,0,15" />
 </Style>
 <Style x:Key="verTxtBdr" TargetType="Border">
-  <Setter Property="Margin" Value="0,-20,-1,10" />
+  <Setter Property="Margin" Value="0,-18,-1,10" />
   <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
   <Setter Property="Width" Value="190" />
-  <Setter Property="Height" Value="36" />
-  <Setter Property="CornerRadius" Value="2" />
-  <Setter Property="BorderThickness" Value="0,0,0,3" />
+  <Setter Property="Height" Value="32" />
+  <Setter Property="CornerRadius" Value="6" />
+  <Setter Property="BorderThickness" Value="0,0,0,1" />
   <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
 </Style>
 <!--h2-->
