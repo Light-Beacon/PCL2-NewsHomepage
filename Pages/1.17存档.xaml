@@ -1324,7 +1324,7 @@
 				</Grid>
 			</GroupBox>
 
-			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 Github 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
+			<TextBlock Text="呈现新特性的方式正在测试，如果有任何意见或建议可以到 GitHub 提交 Issue 或者私聊我。" Margin="10,10,0,10" Foreground="#666666" />
 
 		</StackPanel>
 	</local:MyCard>
@@ -3648,8 +3648,8 @@
 			</StackPanel>
 
 			<StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-				<TextBlock Text="Github:  " />
-				<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开Github" />
+				<TextBlock Text="GitHub:  " />
+				<local:MyTextButton Text="https://github.com/Light-Beacon/PCL2-NewsHomepage" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开GitHub" />
 			</StackPanel>
 
 			<StackPanel Margin="0,10,0,0" Orientation="Horizontal">
