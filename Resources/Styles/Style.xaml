@@ -12,45 +12,6 @@
 <Style x:Key="ListStyle" TargetType="StackPanel">
   <Setter Property="Margin" Value="22,0,14,5" />
 </Style>
-<Style x:Key="Read" TargetType="local:MyButton">
-  <Setter Property="Margin" Value="0,0,5,5" />
-  <Setter Property="Height" Value="35" />
-  <Setter Property="Padding" Value="13,0,13,0" />
-  <Setter Property="EventType" Value="打开网页" />
-</Style>
-<Style x:Key="Read0" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-  <Setter Property="Grid.Column" Value="0" />
-  <Setter Property="Text" Value="Minecraft Wiki" />
-  <!--<Setter Property="ColorType" Value="Highlight"/>-->
-</Style>
-<Style x:Key="Read0+" TargetType="local:MyButton" BasedOn="{StaticResource Read0}">
-  <Setter Property="Grid.Row" Value="0" />
-  <Setter Property="Grid.ColumnSpan" Value="3" />
-</Style>
-<Style x:Key="Read1" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-  <Setter Property="Grid.Column" Value="1" />
-  <Setter Property="Text" Value="MCBBS" />
-</Style>
-<Style x:Key="Read1+" TargetType="local:MyButton" BasedOn="{StaticResource Read1}">
-  <Setter Property="Grid.Column" Value="0" />
-  <Setter Property="Grid.Row" Value="1" />
-</Style>
-<Style x:Key="Read2" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-  <Setter Property="Grid.Column" Value="2" />
-  <Setter Property="Text" Value="官网" />
-</Style>
-<Style x:Key="Read2+" TargetType="local:MyButton" BasedOn="{StaticResource Read2}">
-  <Setter Property="Grid.Column" Value="1" />
-  <Setter Property="Grid.Row" Value="1" />
-</Style>
-<Style x:Key="ReadR" TargetType="local:MyButton" BasedOn="{StaticResource Read}">
-  <Setter Property="Grid.Column" Value="3" />
-  <Setter Property="Text" Value="Reddit" />
-</Style>
-<Style x:Key="ReadR+" TargetType="local:MyButton" BasedOn="{StaticResource ReadR}">
-  <Setter Property="Grid.Column" Value="2" />
-  <Setter Property="Grid.Row" Value="1" />
-</Style>
 <Style x:Key="Code" TargetType="Border">
   <Setter Property="Background" Value="#e0e0e0" />
   <Setter Property="BorderBrush" Value="#444" />
@@ -64,37 +25,11 @@
   <Setter Property="IsReadOnly" Value="True" />
   <Setter Property="BorderBrush" Value="{x:Null}" />
 </Style>
-<Style x:Key="verImgBdr" TargetType="Border">
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="BorderThickness" Value="4" />
-  <Setter Property="VerticalAlignment" Value="Top" />
-  <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
-  <Setter Property="CornerRadius" Value="7" />
-  <Setter Property="MaxHeight" Value="200" />
-</Style>
-<Style x:Key="verTxtBlk" TargetType="TextBlock">
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="TextAlignment" Value="Center" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-  <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-  <Setter Property="Width" Value="180" />
-  <Setter Property="TextWrapping" Value="Wrap" />
-  <Setter Property="FontSize" Value="20" />
-</Style>
 <Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
   <Setter Property="Foreground" Value="#FF777777" />
   <Setter Property="HorizontalAlignment" Value="Center" />
   <Setter Property="Margin" Value="0,0,0,15" />
-</Style>
-<Style x:Key="verTxtBdr" TargetType="Border">
-  <Setter Property="Margin" Value="0,-20,-1,10" />
-  <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-  <Setter Property="Width" Value="190" />
-  <Setter Property="Height" Value="36" />
-  <Setter Property="CornerRadius" Value="2" />
-  <Setter Property="BorderThickness" Value="0,0,0,3" />
-  <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
 </Style>
 <!--footnote-->
 <Style x:Key="footnote" TargetType="TextBlock">

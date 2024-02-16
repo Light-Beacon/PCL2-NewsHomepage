@@ -1,0 +1,10 @@
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,20,0,0">
+<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+<Grid.ColumnDefinitions>
+<ColumnDefinition Width="20*"/>
+<ColumnDefinition Width="12*"/>
+</Grid.ColumnDefinitions>
+<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="${wiki-link}" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="${official-link}"/>
+</Grid>
+</GroupBox>

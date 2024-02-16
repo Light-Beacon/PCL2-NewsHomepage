@@ -1,0 +1,35 @@
+Values:
+  - &CornerRadius 7
+
+Styles:
+ - Key: VersionImageBorder
+   Target: Border
+   Setters:
+      HorizontalAlignment: Center
+      BorderThickness: 4
+      VerticalAlignment: Top
+      BorderBrush: "{DynamicResource ColorBrush3}"
+      CornerRadius: *CornerRadius
+      MaxHeight: 150
+
+ - Key: VersionTitleBorder
+   Target: Border
+   Setters:
+      Margin: 0,-20,-1,10
+      Background: "{DynamicResource ColorBrush3}"
+      Width: 190
+      Height: 36
+      CornerRadius: *CornerRadius
+      BorderThickness: 0,0,0,2 # Shadow
+      BorderBrush: "{DynamicResource ColorBrush2}"
+
+ - Key: VersionTitleBlock
+   Target: TextBlock
+   Setters:
+      HorizontalAlignment: Center
+      TextAlignment: Center
+      VerticalAlignment: Center
+      Foreground: "{DynamicResource ColorBrush7}"
+      Width: 180
+      TextWrapping: Wrap
+      FontSize: 20
