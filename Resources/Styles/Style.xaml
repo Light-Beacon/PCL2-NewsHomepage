@@ -1,22 +1,3 @@
-<!--即将弃用-->
-<Style TargetType="Ellipse">
-  <Setter Property="Fill" Value="{DynamicResource ColorBrush3}" />
-  <Setter Property="HorizontalAlignment" Value="Left" />
-  <Setter Property="Height" Value="8" />
-  <Setter Property="Width" Value="8" />
-  <Setter Property="Margin" Value="0,0,10,0" />
-</Style>
-<Style TargetType="TextBlock">
-  <Setter Property="TextWrapping" Value="Wrap" />
-  <Setter Property="HorizontalAlignment" Value="Left" />
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="Black" />
-</Style>
-<Style x:Key="PGTextBlock" TargetType="TextBlock">
-  <Setter Property="TextWrapping" Value="Wrap" />
-  <Setter Property="Margin" Value="25,5,0,5" />
-  <Setter Property="FontSize" Value="16" />
-</Style>
 <Style x:Key="ListItem" TargetType="TextBlock">
   <Setter Property="Margin" Value="10,-13.5,5,15" />
   <Setter Property="TextWrapping" Value="Wrap" />
@@ -115,30 +96,6 @@
   <Setter Property="BorderThickness" Value="0,0,0,3" />
   <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
 </Style>
-<!--h2-->
-<Style x:Key="h2" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="24" />
-  <Setter Property="Padding" Value="15,5" />
-  <Setter Property="Margin" Value="5,15,5,10" />
-  <Setter Property="FontWeight" Value="Bold" />
-  <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
-</Style>
-<!--h3-->
-<Style x:Key="h3" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="20" />
-  <Setter Property="Padding" Value="30,0" />
-  <Setter Property="Margin" Value="-10,0,10,17" />
-  <Setter Property="FontWeight" Value="Bold" />
-  <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-</Style>
-<!--h4-->
-<Style x:Key="h4" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="16" />
-  <Setter Property="Padding" Value="30,0" />
-  <Setter Property="Margin" Value="5,0,10,10" />
-  <Setter Property="FontWeight" Value="Bold" />
-  <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-</Style>
 <!--footnote-->
 <Style x:Key="footnote" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
@@ -175,16 +132,3 @@
   <Setter Property="FontSize" Value="12px" />
   <Setter Property="Margin" Value="8px,2px" />
 </Style>
-<!-- TEMPLATES -->
-<ControlTemplate x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,0,0,15">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
