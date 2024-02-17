@@ -1,8 +1,6 @@
 components:
- - VersionHeaderImage
  - $MarkdownPresenter
- - VersionWebsites
-base: CardBase
+base: VersionBase
 filter:
   file_exten:
     - md
