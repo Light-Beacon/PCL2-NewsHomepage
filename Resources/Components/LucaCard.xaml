@@ -1,0 +1,10 @@
+<StackPanel Margin="0,40,0,0">
+<StackPanel HorizontalAlignment="Center">
+    <Line Margin="-1,0" X1="0" X2="1" Stroke="${line-color}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+    <Image Stretch="UniformToFill" Source="${header-image-link}"/>
+    <Line Margin="-1,0" X1="0" X2="1" Stroke="${line-color}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+</StackPanel>
+<StackPanel Margin="20,10,20,30">
+    ${$ChildrenPresenter}
+</StackPanel>
+</StackPanel>
