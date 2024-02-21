@@ -1,0 +1,69 @@
+<Style x:Key="ListItem" TargetType="TextBlock">
+  <Setter Property="Margin" Value="10,-13.5,5,15" />
+  <Setter Property="TextWrapping" Value="Wrap" />
+  <Setter Property="HorizontalAlignment" Value="Left" />
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="Black" />
+</Style>
+<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+  <Setter Property="Margin" Value="15,-15,5,15" />
+  <Setter Property="TextElement.FontSize" Value="20" />
+</Style>
+<Style x:Key="ListStyle" TargetType="StackPanel">
+  <Setter Property="Margin" Value="22,0,14,5" />
+</Style>
+<Style x:Key="Code" TargetType="Border">
+  <Setter Property="Background" Value="#e0e0e0" />
+  <Setter Property="BorderBrush" Value="#444" />
+  <Setter Property="CornerRadius" Value="1" />
+  <Setter Property="Margin" Value="5,0,5,0" />
+  <Setter Property="BorderThickness" Value="1" />
+</Style>
+<Style TargetType="TextBox">
+  <Setter Property="Background" Value="{x:Null}" />
+  <Setter Property="Padding" Value="3,0,3,0" />
+  <Setter Property="IsReadOnly" Value="True" />
+  <Setter Property="BorderBrush" Value="{x:Null}" />
+</Style>
+<Style x:Key="imgTitle" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="Margin" Value="0,0,0,15" />
+</Style>
+<!--footnote-->
+<Style x:Key="footnote" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Padding" Value="30,0" />
+  <Setter Property="Margin" Value="0,20,0,15" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="TextWrapping" Value="Wrap" />
+</Style>
+<!--ButtonNameBorder-->
+<!--ImageButtonStyle-->
+<Style x:Key="ImgBtnImg" TargetType="Image">
+  <Setter Property="MaxWidth" Value="70px" />
+  <Setter Property="MaxHeight" Value="70px" />
+  <Setter Property="Margin" Value="3" />
+</Style>
+<Style x:Key="ImgBtnBdr" TargetType="Border">
+  <Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+  <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+  <Setter Property="BorderThickness" Value="2px" />
+  <Setter Property="CornerRadius" Value="5" />
+  <Setter Property="Margin" Value="2px" />
+</Style>
+<Style x:Key="NameBdr" TargetType="Border">
+  <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+  <Setter Property="BorderThickness" Value="0" />
+  <Setter Property="CornerRadius" Value="5,5,0,0" />
+  <Setter Property="Margin" Value="-2,-2,-2,2" />
+</Style>
+<Style x:Key="ImgBtnTxt" TargetType="TextBlock">
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+  <Setter Property="Grid.Row" Value="0" />
+  <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+  <Setter Property="FontSize" Value="12px" />
+  <Setter Property="Margin" Value="8px,2px" />
+</Style>

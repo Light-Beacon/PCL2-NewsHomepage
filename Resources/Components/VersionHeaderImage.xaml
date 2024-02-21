@@ -1,0 +1,9 @@
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="${version-image-link}" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="${version-image-link}" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}" ${$IsEnableAnimation}>
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="${version-id}" />
+</Border>

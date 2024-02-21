@@ -1,0 +1,6 @@
+name: news_cards
+fill:
+  title: ${$GetMdH1}
+  templates:
+    - MarkdownCard
+    - Raw
