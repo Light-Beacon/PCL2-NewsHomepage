@@ -12,13 +12,6 @@
 <Style x:Key="ListStyle" TargetType="StackPanel">
   <Setter Property="Margin" Value="22,0,14,5" />
 </Style>
-<Style x:Key="Code" TargetType="Border">
-  <Setter Property="Background" Value="#e0e0e0" />
-  <Setter Property="BorderBrush" Value="#444" />
-  <Setter Property="CornerRadius" Value="1" />
-  <Setter Property="Margin" Value="5,0,5,0" />
-  <Setter Property="BorderThickness" Value="1" />
-</Style>
 <Style TargetType="TextBox">
   <Setter Property="Background" Value="{x:Null}" />
   <Setter Property="Padding" Value="3,0,3,0" />
