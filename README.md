@@ -2,7 +2,7 @@
 
 <div align="center"><img src="https://news.bugjump.net/new_banner_fixed.jpg" alt="新闻主页 Header"/></div>
 
-在PCL2中提供MC相关新闻的主页
+在PCL2中提供MC相关新闻的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
 
 订阅地址： **`https://news.bugjump.net`**
 
