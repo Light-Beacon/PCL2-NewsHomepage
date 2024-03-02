@@ -5,3 +5,5 @@ containers: base -> FlowDocumentViewer -> this
 fill:
   title: ${@GetMdH1}
   line-color: {DynamicResource ColorBrush3}
+filter:
+  header-image-link: $HASVALUE

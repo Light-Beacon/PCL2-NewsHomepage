@@ -1,4 +1,4 @@
-from .Debug import LogWarning, LogInfo
+from Core.Debug import LogWarning, LogInfo
 def script(card,arg,res):
     name:str = card['version-id']
     data = res.data[f'{arg[1]}Link']
