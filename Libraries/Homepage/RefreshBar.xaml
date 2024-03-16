@@ -2,12 +2,12 @@
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="3*">
         </ColumnDefinition>
-        <ColumnDefinition Width="1*">
+        <ColumnDefinition Width="2*">
         </ColumnDefinition>
         <ColumnDefinition Width="1*">
         </ColumnDefinition>
 	</Grid.ColumnDefinitions>
 	<local:MyButton Grid.Column="0" Padding="10,0" Text="刷新" EventType="刷新主页" Margin="3,0" ToolTip="点击刷新新闻主页" />
-	<local:MyButton Grid.Column="1" Padding="10,0" Text="反馈" EventType="打开网页" Margin="3,0" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 GitHub 提交反馈" />
-	<local:MyButton Grid.Column="2" Padding="10,0" Text="❤️ 赞助" EventType="打开网页" Margin="3,0" EventData="https://afdian.net/a/Nattiden" ToolTip="点击前往 新闻主页爱发电" ColorType="Red" />
+	<local:MyButton Grid.Column="2" Padding="10,0" Text="反馈" EventType="打开网页" Margin="3,0" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 GitHub 提交反馈" />
+	<local:MyButton Grid.Column="1" Padding="10,0" Text="❤️ 赞助主页" EventType="打开网页" Margin="3,0" EventData="https://afdian.net/a/Nattiden" ToolTip="点击前往 新闻主页爱发电" ColorType="Red" />
 </Grid>
