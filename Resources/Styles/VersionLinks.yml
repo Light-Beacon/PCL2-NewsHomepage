@@ -14,13 +14,6 @@ Styles:
       Grid.Column: 0
       Text: "Minecraft Wiki"
 
- - Key: MCBBSLinkButton
-   Target: *Button
-   BasedOn: *Base
-   Setters:
-      Grid.Column: 1
-      Text: "MCBBS"
-
  - Key: OfficalLinkButton
    Target: *Button
    BasedOn: *Base
