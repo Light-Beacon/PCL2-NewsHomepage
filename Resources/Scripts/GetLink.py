@@ -11,12 +11,12 @@ def gen_official_link(vid:str):
         return f'https://minecraft.net/article/minecraft-snapshot-{vid.lower()}'
     if re.match(PRE_RELEASE_PATTERN,vid):
         version,sub=vid.split('-pre')
-        return f'https://minecraft.net/article/minecraft-{version.replace('.','-')}-pre-release-{sub}'
+        return f'https://minecraft.net/article/minecraft-{version.replace(".","-")}-pre-release-{sub}'
     if re.match(RELEASE_CANDIDATE_PATTERN,vid):
         version,sub=vid.split('-rc')
-        return f'https://minecraft.net/article/minecraft-{version.replace('.','-')}-release-candidate-{sub}'
+        return f'https://minecraft.net/article/minecraft-{version.replace(".","-")}-release-candidate-{sub}'
     if re.match(RELEASE_PATTERN,vid):
-        return f'https://minecraft.net/article/minecraft-java-edition-{vid.replace('.','-')}'
+        return f'https://minecraft.net/article/minecraft-java-edition-{vid.replace(".","-")}'
     return ''
 
 def script(card,arg,res):
