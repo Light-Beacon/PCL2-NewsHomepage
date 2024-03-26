@@ -1,3 +1,7 @@
+---
+line-color: #bb8009
+header-image-link: https://image.stapxs.cn/i/2024/02/23/news_homepag_100stars.png
+---
 # 发生什么事了？？？
 ## 新闻主页 Github 项目已经达到了 100 星力
 感谢各位三年多以来对新闻主页的的支持！这对我个人来说是不小的一个鼓励，新闻主页如果没有各位的鼓励与参与无法成就现在。
