@@ -1,6 +1,5 @@
 name: versions
 fill:
-  mcbbs-link: ${$GetLink|Mcbbs}
   official-link: ${$GetLink|Official}
   version-image-link: ${$GetLink|ImageSta}
   version-id: ${file_name}
