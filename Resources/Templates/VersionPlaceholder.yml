@@ -1,0 +1,10 @@
+components:
+ - Loading
+base: Card
+fill:
+   loading_content: 新版本内容待翻译
+filter:
+   file_exten:
+    - md
+   not_finished:
+    - true

@@ -19,14 +19,15 @@ def gen_official_link(vid:str):
         return f'https://minecraft.net/article/minecraft-java-edition-{vid.replace(".","-")}'
     return ''
 
-def script(card,arg,res):
+def script(card,args,res):
     name:str = card['version-id']
-    data = res.data[f'{arg[1]}Link']
+    if card.get('not_finished') == 'true':
+        return ''
+    data = res.data[f'{args[1]}Link']
+    if len(args) >= 3:
+        return data[args[2]]
     if '${' in name:
         raise KeyError()
-    if arg[1] == 'Mcbbs' and name not in data:
-        LogInfo(f'尝试获取MCBBS链接 {name}，但未找到，由于 MCBBS 关站，返回空值以抑制 Warning')
-        return ''
-    if arg[1] == 'Official' and name not in data:
+    if args[1] == 'Official' and name not in data:
         return gen_official_link(name)
     return data[name]
