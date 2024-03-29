@@ -1,4 +1,3 @@
-# https://piston-meta.mojang.com/mc/game/version_manifest.json
 import json
 import requests
 import re
@@ -10,6 +9,8 @@ SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
 PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
+
+INIT_MARKDOWN = '---\nversion-image-link: https://exapmle.com\nnot_finished: true\n---\n'
 
 def get_version_type(vid:str):
     if re.match(SNAPSHOT_PATTERN,vid):
@@ -23,8 +24,12 @@ def get_version_type(vid:str):
     return ''
 
 def update_library(version_libloc:str,ver_type:str,ver_id:str):
-    if os.path.exists(f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'):
+    filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'
+    if os.path.exists(filepath):
         print(f'- {ver_id:} 已存在于版本库，无需更改') 
+    else:
+        with open(filepath, "w") as file:
+            file.write(INIT_MARKDOWN)
 
 try:
     response = requests.get(LAUNCHER_MANIFSET_URL)
