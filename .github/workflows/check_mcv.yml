@@ -4,7 +4,6 @@ on:
     - cron:  '0/20 * * * *'
 jobs:
    check_mcv:
-   strategy:
       runs-on: ubuntu-latest
       steps:
        - name: 签出储存库
