@@ -6,5 +6,6 @@ fill:
   title: ${file_name}
   templates:
     - VersionPlaceholder
+    - VersionLatestCard
     - VersionMarkdownCard
     - Raw
