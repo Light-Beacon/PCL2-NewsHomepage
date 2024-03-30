@@ -1,7 +1,6 @@
 from Core.Debug import LogWarning
 import requests
 import json
-import re
 
 LAUNCHER_MANIFSET_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest.json'
 
