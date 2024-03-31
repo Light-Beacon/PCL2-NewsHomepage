@@ -6,6 +6,7 @@
         <ColumnDefinition Width="100"/> 
       </Grid.ColumnDefinitions>
       <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
+        <local:MyComboBoxItem Content="主界面"/>
         <local:MyComboBoxItem Content="1.17存档"/>
         <local:MyComboBoxItem Content="1.18存档"/>
         <local:MyComboBoxItem Content="1.19存档"/>
