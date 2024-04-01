@@ -21,7 +21,7 @@ def get_version_type(vid:str):
         return 'Release-Candidate'
     if re.match(RELEASE_PATTERN,vid):
         return 'Release'
-    return ''
+    return 'Others'
 
 def update_library(version_libloc:str,ver_type:str,ver_id:str):
     filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'
