@@ -1,0 +1,11 @@
+name: "内容有误"
+description: "新闻主页内容有误，如内容过期，用词不当，错字漏字"
+labels: ["a:Bug", "h:Content"]
+body:
+ - type: textarea
+   id: "disc"
+   attributes:
+      label: 描述
+      description: "发生位置及详细内容。"
+   validations:
+      required: true

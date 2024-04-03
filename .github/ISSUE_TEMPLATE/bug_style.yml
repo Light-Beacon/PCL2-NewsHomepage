@@ -1,0 +1,11 @@
+name: "格式有误"
+description: "新闻主页格式有误，如排版错位"
+labels: ["a:Bug", "h:Style"]
+body:
+ - type: textarea
+   id: "disc"
+   attributes:
+      label: 描述
+      description: "发生位置及详细内容。"
+   validations:
+      required: true

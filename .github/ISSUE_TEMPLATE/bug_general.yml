@@ -1,0 +1,11 @@
+name: "其它问题"
+description: "不方便分类的其它问题"
+labels: ["a:Bug", "h:Content"]
+body:
+ - type: textarea
+   id: "disc"
+   attributes:
+      label: 描述
+      description: "详细内容。"
+   validations:
+      required: true
