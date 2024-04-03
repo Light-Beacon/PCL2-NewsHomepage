@@ -1,4 +1,5 @@
 name: Check Minecraft Version
+runs-on: self-hosted
 on:
    schedule:
     - cron:  '0/30 * * * *'
