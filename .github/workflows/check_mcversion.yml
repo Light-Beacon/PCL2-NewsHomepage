@@ -1,12 +1,12 @@
 name: Check Minecraft Version
 on:
    schedule:
-    - cron:  '0/30 * * * *'
+    - cron:  '0/5 * * * *'
    workflow_dispatch:
       
 jobs:
    check_mcv:
-      runs-on: ubuntu-latest
+      runs-on: self-hosted
       steps:
        - name: 签出储存库
          uses: actions/checkout@v4
