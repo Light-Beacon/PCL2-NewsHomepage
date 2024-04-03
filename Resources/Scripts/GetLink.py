@@ -21,7 +21,7 @@ def gen_official_link(vid:str):
 
 def script(card,args,res):
     name:str = card['version-id']
-    if card.get('not_finished') == 'true':
+    if card.get('not_finished') == 'true' and args[1] != 'Official':
         return ''
     data = res.data[f'{args[1]}Link']
     if len(args) >= 3:
