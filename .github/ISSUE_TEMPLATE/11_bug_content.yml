@@ -1,6 +1,6 @@
-name: "格式有误"
-description: "新闻主页格式有误，如排版错位"
-labels: ["a:Bug", "h:Style"]
+name: "内容有误"
+description: "新闻主页内容有误，如内容过期，用词不当，错字漏字"
+labels: ["a:Bug", "h:Content"]
 body:
  - type: textarea
    id: "disc"
@@ -11,6 +11,7 @@ body:
       required: true
  - type: textarea
    id: "files"
-   label: "[可选]附件"
-   description: "上传附件"
+   attributes:
+      label: "[可选]附件"
+      description: "上传附件"
    placeholder: "将文件直接拖至这里上传。"

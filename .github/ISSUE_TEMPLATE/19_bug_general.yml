@@ -1,6 +1,6 @@
-name: "建议"
-description: "提出新的建议"
-labels: ["a:Suggestion"]
+name: "其它问题"
+description: "不方便分类的其它问题"
+labels: ["a:Bug"]
 body:
  - type: textarea
    id: "disc"
@@ -11,6 +11,7 @@ body:
       required: true
  - type: textarea
    id: "files"
-   label: "[可选]附件"
-   description: "上传附件"
+   attributes:
+      label: "[可选]附件"
+      description: "上传附件"
    placeholder: "将文件直接拖至这里上传。"
