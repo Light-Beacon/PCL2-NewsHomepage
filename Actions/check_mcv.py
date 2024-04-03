@@ -10,7 +10,7 @@ PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
-INIT_MARKDOWN = '---\nversion-image-link: https://exapmle.com\nnot_finished: true\n---\n'
+INIT_MARKDOWN = '---\nversion-image-link: https://example.com\nnot_finished: true\n---\n'
 
 def get_version_type(vid:str):
     if re.match(SNAPSHOT_PATTERN,vid):
