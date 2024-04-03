@@ -9,3 +9,8 @@ body:
       description: "发生位置及详细内容。"
    validations:
       required: true
+ - type: textarea
+   id: "files"
+   label: "[可选]附件"
+   description: "上传附件"
+   placeholder: "将文件直接拖至这里上传。"

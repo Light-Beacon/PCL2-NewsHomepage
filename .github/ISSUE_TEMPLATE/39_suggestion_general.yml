@@ -1,0 +1,16 @@
+name: "建议"
+description: "提出新的建议"
+labels: ["a:Suggestion"]
+body:
+ - type: textarea
+   id: "disc"
+   attributes:
+      label: 描述
+      description: "详细内容。"
+   validations:
+      required: true
+ - type: textarea
+   id: "files"
+   label: "[可选]附件"
+   description: "上传附件"
+   placeholder: "将文件直接拖至这里上传。"
