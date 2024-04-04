@@ -20,11 +20,11 @@ jobs:
             pip install requests
        - name: 运行更新脚本
          id: run_script
-         run: python Actions/check_mcv.py >> "$GITHUB_ENV"
+         run: python Actions/check_mcv.py >> "$GITHUB_ENV"  
        - name: 显示版本信息
          run: |
-            printf '● 最新 %s 版:%s %s\n' "$latest_release_type" "$latest_release_id" "latest_release_act"
-            printf '● 最新 %s 版:%s %s\n' "$latest_snapshot_type" "$latest_snapshot_id" "latest_snapshot_act"
+            printf '● 最新 %s 版: %s %s\n' "$latest_release_type" "$latest_release_id" "$latest_release_act"
+            printf '● 最新 %s 版: %s %s\n' "$latest_snapshot_type" "$latest_snapshot_id" "$latest_snapshot_act"
        - name: 配置 Git 信息
          if: ${{ env.require_update == true }}
          run: |
