@@ -12,6 +12,8 @@ RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
 INIT_MARKDOWN = '---\nversion-image-link: https://example.com\nnot_finished: true\n---\n'
 
+require_update = False
+
 def get_version_type(vid:str):
     if re.match(SNAPSHOT_PATTERN,vid):
         return 'Snapshot'
@@ -26,16 +28,18 @@ def get_version_type(vid:str):
 def update_library(version_libloc:str,ver_type:str,ver_id:str):
     filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'
     if os.path.exists(filepath):
-        print(f'- {ver_id:} 已存在于版本库，无需更改') 
+        return False,'存在于版本库，无需更改'
     else:
         with open(filepath, "w") as file:
             file.write(INIT_MARKDOWN)
+        require_update = True
+        return True,'版本库内未找到，已添加'
 
 try:
     response = requests.get(LAUNCHER_MANIFSET_URL)
     version_mainfest = json.loads(response.content)
 except Exception as e:
-    print(f'获取版本列表失败：{e.with_traceback()}')
+    print(f'error_log={e.with_traceback()}')
     exit(1)
 
 latest_snapshot_id = version_mainfest['latest']['snapshot']
@@ -44,11 +48,21 @@ latest_release_id = version_mainfest['latest']['release']
 latest_snapshot_type = get_version_type(latest_snapshot_id)
 latest_release_type = get_version_type(latest_release_id)
 
-print(f'● 最新 {latest_release_type} 版: {latest_release_id}') 
-print(f'● 最新 {latest_snapshot_type} 版: {latest_snapshot_id}') 
+#print(f'● 最新 {latest_release_type} 版: {latest_release_id}') 
+#print(f'● 最新 {latest_snapshot_type} 版: {latest_snapshot_id}') 
 
 dir_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 version_lib_location = f'{dir_location}{os.sep}Libraries{os.sep}Versions{os.sep}'
 
+release_require_update,latest_release_act = \
 update_library(version_lib_location,latest_release_type,latest_release_id)
+snapshot_require_update,latest_snapshot_act = \
 update_library(version_lib_location,latest_snapshot_type,latest_snapshot_id)
+
+print(f'latest_release_type={latest_release_type}')
+print(f'latest_snapshot_type={latest_snapshot_type}')
+print(f'latest_release_id={latest_release_id}')
+print(f'latest_snapshot_id={latest_snapshot_id}')
+print(f'latest_release_act={latest_release_act}')
+print(f'latest_snapshot_act={latest_snapshot_act}')
+print(f'require_update={release_require_update or snapshot_require_update}')

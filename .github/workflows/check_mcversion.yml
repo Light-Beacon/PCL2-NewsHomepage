@@ -10,16 +10,6 @@ jobs:
       steps:
        - name: 签出储存库
          uses: actions/checkout@v4
-       - name: 配置 Git 信息
-         run: |
-            git config --local user.email "bot@bugjump.net"
-            git config --local user.name "Hilda Bot"
-       - name: 配置 GPG 信息
-         uses: crazy-max/ghaction-import-gpg@v6
-         with:
-            gpg_private_key: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
-            git_user_signingkey: true
-            git_commit_gpgsign: true
        - name: 配置 Python 环境
          uses: actions/setup-python@v4
          with:
@@ -29,10 +19,29 @@ jobs:
             python -m pip install --upgrade pip
             pip install requests
        - name: 运行更新脚本
-         run: python Actions/check_mcv.py
-       - name: 提交更改
+         id: run_script
+         run: |
+            python Actions/check_mcv.py >> "$GITHUB_ENV"
+            printf '● 最新 %s 版:%s %s\n' "$latest_release_type" "$latest_release_id" "latest_release_act"
+            printf '● 最新 %s 版:%s %s\n' "$latest_snapshot_type" "$latest_snapshot_id" "latest_snapshot_act"
+       - name: 配置 Git 信息
+         if: ${{ env.require_update == true }}
+         run: |
+            git config --local user.email "bot@bugjump.net"
+            git config --local user.name "Hilda Bot"
+       - name: 配置 GPG 信息
+         if: ${{ env.require_update == true }}
+         uses: crazy-max/ghaction-import-gpg@v6
+         with:
+            gpg_private_key: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
+            git_user_signingkey: true
+            git_commit_gpgsign: true
+       - name: 提交与推送更改
+         if: ${{ env.require_update == true }}
          run: |
             git add *
-            git diff-index --quiet HEAD || git commit -S -m "preloaded new version"
-       - name: 推送更改
-         run: git push
+            git diff-index --quiet HEAD || git commit -S -m "preloaded new version" && git push
+       - name: 显示报错信息
+         if: ${{ failure() && steps.run_script.conclusion == 'failure' }}
+         run: |
+            printf '获取版本列表失败: %s' "$error_log" 
