@@ -26,19 +26,19 @@ jobs:
             printf '● 最新 %s 版: %s %s\n' "$latest_release_type" "$latest_release_id" "$latest_release_act"
             printf '● 最新 %s 版: %s %s\n' "$latest_snapshot_type" "$latest_snapshot_id" "$latest_snapshot_act"
        - name: 配置 Git 信息
-         if: ${{ env.require_update == true }}
+         if: ${{ env.require_update }}
          run: |
             git config --local user.email "bot@bugjump.net"
             git config --local user.name "Hilda Bot"
        - name: 配置 GPG 信息
-         if: ${{ env.require_update == true }}
+         if: ${{ env.require_update }}
          uses: crazy-max/ghaction-import-gpg@v6
          with:
             gpg_private_key: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
             git_user_signingkey: true
             git_commit_gpgsign: true
        - name: 提交与推送更改
-         if: ${{ env.require_update == true }}
+         if: ${{ env.require_update }}
          run: |
             git add *
             git diff-index --quiet HEAD || git commit -S -m "preloaded new version" && git push

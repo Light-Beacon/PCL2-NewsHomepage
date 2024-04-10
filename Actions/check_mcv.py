@@ -32,7 +32,6 @@ def update_library(version_libloc:str,ver_type:str,ver_id:str):
     else:
         with open(filepath, "w") as file:
             file.write(INIT_MARKDOWN)
-        require_update = True
         return True,'版本库内未找到，已添加'
 
 try:
