@@ -1,4 +1,4 @@
-from Core.Debug import LogWarning
+from Core.Debug import LogWarning, LogInfo
 import requests
 import json
 
@@ -16,6 +16,7 @@ MANIFSET = fetch_mainfest()
 LATEST_VERSIONS = {'snapshot':'','release':''}
 LATEST_VERSIONS.update(MANIFSET['latest'])
 FULL_VERSIONS = MANIFSET.get('versions')
+LogInfo(f'[VersionScript] 最新快照版:{LATEST_VERSIONS["snapshot"]}; 最新正式版:{LATEST_VERSIONS["release"]}')
 
 def script(card,arg,res):
     if len(arg) <= 2 or (count := int(arg[2])) <= 1:

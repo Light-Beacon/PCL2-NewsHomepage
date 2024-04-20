@@ -1,5 +1,8 @@
 components:
- - VersionHeaderImage
- - FlowDocumentViewer
- - VersionWebsites
+ - ${@IF|!not_finished|${@IF|version-image-link|VersionHeaderImage}}
+ - ${@IF|!not_finished|FlowDocumentViewer|Loading}
+ - ${@IF|!disable-websites|VersionWebsites}
+ - ${@IF|translator|Translator}
 base: Card
+fill:
+   loading_content: 新版本内容翻译施工中，过一阵子再来吧
