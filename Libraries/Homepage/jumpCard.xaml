@@ -6,11 +6,11 @@
         <ColumnDefinition Width="100"/> 
       </Grid.ColumnDefinitions>
       <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
-        <local:MyComboBoxItem Content="1.17存档"/>
-        <local:MyComboBoxItem Content="1.18存档"/>
-        <local:MyComboBoxItem Content="1.19存档"/>
-        <local:MyComboBoxItem Content="1.20存档"/>
         <local:MyComboBoxItem Content="1.21存档"/>
+        <local:MyComboBoxItem Content="1.20存档"/>
+        <local:MyComboBoxItem Content="1.19存档"/>
+        <local:MyComboBoxItem Content="1.18存档"/>
+        <local:MyComboBoxItem Content="1.17存档"/>
       </local:MyComboBox>
         <local:MyButton HorizontalAlignment="Center" Width="80"
             Grid.Column="1" Text="打开→" EventType="打开帮助" 
