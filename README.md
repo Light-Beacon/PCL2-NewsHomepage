@@ -36,3 +36,11 @@ PCL启动器作者 龙腾猫跃
 曾帮助维护新闻主页的 空辰KC
 
 支持新闻主页的 你们
+
+### 版权声明与授权许可
+
+[中文MinecraftWiki](https:/zh.minecraft.wiki) CC BY-NC-SA 3.0
+
+[我的世界中文论坛（MCBBS）幻翼块讯板（已关站）](https:/www.mcbbs.net) CC BY-NC-SA 3.0
+
+[iconfont](https://www.iconfont.cn) ©ALIMAMA MUX
