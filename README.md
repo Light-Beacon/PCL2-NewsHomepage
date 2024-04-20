@@ -39,8 +39,8 @@ PCL启动器作者 龙腾猫跃
 
 ### 版权声明与授权许可
 
-[中文MinecraftWiki](https:/zh.minecraft.wiki) - CC BY-NC-SA 3.0
+[中文MinecraftWiki](https://zh.minecraft.wiki) - CC BY-NC-SA 3.0
 
-[我的世界中文论坛（MCBBS）幻翼块讯板](https:/www.mcbbs.net)（已关站）- CC BY-NC-SA 3.0
+[我的世界中文论坛（MCBBS）幻翼块讯板](https://www.mcbbs.net)（已关站） - CC BY-NC-SA 3.0
 
-[iconfont](https://www.iconfont.cn) ©ALIMAMA MUX
+[iconfont](https://www.iconfont.cn) - ©ALIMAMA MUX
