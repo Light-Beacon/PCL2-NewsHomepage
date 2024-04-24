@@ -1,5 +1,5 @@
 components:
- - ${@IF|!not_finished|${@IF|version-image-link|VersionHeaderImage}}
+ - ${@IF|version-image-link|VersionHeaderImage}
  - ${@IF|!not_finished|FlowDocumentViewer|Loading}
  - ${@IF|!disable-websites|VersionWebsites}
  - ${@IF|!disable-toolbar|VersionToolBar}
