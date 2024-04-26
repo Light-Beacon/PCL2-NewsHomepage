@@ -19,15 +19,17 @@ def gen_official_link(vid:str):
         return f'https://minecraft.net/article/minecraft-java-edition-{vid.replace(".","-")}'
     return ''
 
-def script(card,args,res):
+def script(link_type,link_key=None,**kwargs):
+    card = kwargs['card']
+    res = kwargs['res']
     name:str = card['version-id']
-    if card.get('not_finished') == 'true' and args[1] != 'Official':
+    if card.get('not_finished') == 'true' and link_type != 'Official':
         return ''
-    data = res.data[f'{args[1]}Link']
-    if len(args) >= 3:
-        return data[args[2]]
+    data = res.data[f'{link_type}Link']
+    if link_key:
+        return data[link_key]
     if '${' in name:
         raise KeyError()
-    if args[1] == 'Official' and name not in data:
+    if link_type == 'Official' and name not in data:
         return gen_official_link(name)
     return data[name]

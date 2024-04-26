@@ -1,8 +1,8 @@
 components:
- - ${@IF|version-image-link|VersionHeaderImage}
- - ${@IF|!not_finished|FlowDocumentViewer|Loading}
- - ${@IF|!disable-websites|VersionWebsites}
- - ${@IF|!disable-toolbar|VersionToolBar}
+ - ${@IF|$version-image-link|VersionHeaderImage}
+ - ${@IF|!$not_finished|FlowDocumentViewer|Loading}
+ - ${@IF|!$disable-websites|VersionWebsites}
+ - ${@IF|!$disable-toolbar|VersionToolBar}
 base: Card
 fill:
    loading_content: 新版本内容翻译施工中，过一阵子再来吧

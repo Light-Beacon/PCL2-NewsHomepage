@@ -12,7 +12,7 @@ ${@IF|translator|
     EventData="${version-id}" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
-${@IF|server-jar|
+${@IF|$server-jar|
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
     LogoScale="1.05" EventData="${server-jar}" Logo="{StaticResource CloudIcon}" />
 }
