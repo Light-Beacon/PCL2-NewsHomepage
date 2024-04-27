@@ -1,32 +1,7 @@
-name: 1.21_archive
+name: 1.21存档
 alias:
- - 1.21存档
+ - 1.21_archive
 cards:
  - archive_noticebar
  - T:Separator | content = 历史版本
- - 1.20.5-rc2
- - 1.20.5-rc1
- - 1.20.5-pre4
- - 1.20.5-pre3
- - 1.20.5-pre2
- - 1.20.5-pre1
- - 24w14a
- - 24w13a
- - 24w12a
- - 24w11a
- - 24w10a
- - 24w09a
- - 24w07a
- - 24w06a
- - 24w05b
- - 24w05a
- - 24w04a
- - 24w03b
- - 24w03a
- - 23w51b
- - 23w51a
- - 23w46a
- - 23w45a
- - 23w44a
- - 23w43b
- - 23w43a
+ - ${@VersionCategory|1.21}
