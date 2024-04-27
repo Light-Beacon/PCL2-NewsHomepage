@@ -4,9 +4,9 @@
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="5,0" Text="${@Global|git.commit.id}" ToolTip="当前 Commit 版本" EventType="打开网页"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="${@Global|git.commit.id}" ToolTip="当前 Commit 版本" EventType="打开网页"
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/${@Global|git.commit.hash}"
-    LogoScale="1" Logo="M725.333333 512a213.333333 213.333333 0 0 1-170.666666 209.066667V896h-85.333334v-174.933333a213.333333 213.333333 0 0 1 0-418.133334V128h85.333334v174.933333a213.333333 213.333333 0 0 1 170.666666 209.066667m-213.333333-128a128 128 0 0 0-128 128 128 128 0 0 0 128 128 128 128 0 0 0 128-128 128 128 0 0 0-128-128z" />
+    LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <TextBlock> By：最亮的信标（Light Beacon）</TextBlock>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,12,0,10">
