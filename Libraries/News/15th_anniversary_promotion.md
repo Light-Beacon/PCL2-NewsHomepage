@@ -3,4 +3,4 @@ MC 国际版 15周年庆，罕见的打折（上一次还是十周年）Java版 
 
 [详情链接](https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc)
 
-其它平台均未打折
+移动端（App Store, Google Play Store) 同时打折
