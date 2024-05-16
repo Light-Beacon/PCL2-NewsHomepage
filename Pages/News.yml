@@ -5,7 +5,7 @@ alias:
  - 主界面
 cards:
  - animated_noticebar
- - 15th_anniversary ｜ s = false
+ - 15th_anniversary | s = false
  - ${@LatestVersion|snapshot|1} | s = false 
  - T:Separator | content = 历史版本
  - ${@LatestVersion|snapshot|2}
