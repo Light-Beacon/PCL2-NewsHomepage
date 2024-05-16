@@ -12,6 +12,8 @@ MC 国际版 15周年庆，罕见的打折（上一次还是十周年）Java版 
 
 现在玩家可以通过在 [Twitch](https://www.twitch.tv) 上登录（或注册）并观看任意 MC 直播 15 分钟后会收到 Twitch 紫色心形披风兑换码
 
-兑换码可以在 MC 官网[兑换](https://www.minecraft.net/en-us/redeem) 。兑换后会加入你的账户
+兑换码可以在 MC 官网[兑换](https://www.minecraft.net/en-us/redeem) ，兑换后会加入你的账户
 
 目前该披风仅可以在基岩版使用，在未来拥有基岩版 Twitch 披风的用户在 Java 版也会被授予该披风
+
+*上述服务在可能在某些地区不可用
