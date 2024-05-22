@@ -29,6 +29,10 @@
 
 请尽量使用最新版PCL（正式版 *Release*、测试版 *Snapshot* 通用），旧版本可能会有意想不到的问题
 
+## 联系
+
+你可以通过加入 [QQ群828081791](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RFlMzB9ABLL47erT5xJKWOkjManpGg2F&authKey=QTw6uKUM2sd1wzyUHpR80RE3kFqmzbePCtfuCDjPhUvVXyj9glpHKEsxVd1zXBva&noverify=0&group_code=828081791)交流
+
 ## 鸣谢
 
 PCL启动器作者 龙腾猫跃
