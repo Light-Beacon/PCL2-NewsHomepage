@@ -20,10 +20,10 @@
 *上述服务在可能在某些地区不可用
 
 ## MC 官网开始 15 周年促销活动
-MC 国际版 15周年庆，罕见的打折（上一次还是十周年）Java版 + Win10 基岩版 半价 RMB 44.50
+MC 国际版 15 周年庆，罕见的打折（上一次还是十周年）Java版 + Win10 基岩版 半价 RMB 44.50
 
 [详情链接](https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc)
 
-移动端（App Store, Google Play Store) 同时打折
+移动端（App Store、Google Play Store） 同时打折
 
 其它 MC 衍生游戏（MCD、MCLG）也有折扣
