@@ -22,8 +22,10 @@
 6. 返回启动页，完成！
 
 ### 高阶使用
+#### 按钮跳转新闻主页
+如果您需要通过 PCL 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`。
 
-如果您需要通过 PCL 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`
+如果你需要访问新闻主页内的某一个页面你可以通过 `https://news.bugjump.net/[页面名或页面别称].json` 来跳转。
 
 ## 注意事项
 
@@ -31,7 +33,7 @@
 
 ## 联系
 
-你可以通过加入 [QQ群828081791](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RFlMzB9ABLL47erT5xJKWOkjManpGg2F&authKey=QTw6uKUM2sd1wzyUHpR80RE3kFqmzbePCtfuCDjPhUvVXyj9glpHKEsxVd1zXBva&noverify=0&group_code=828081791)交流
+你可以通过加入 [群828081791](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RFlMzB9ABLL47erT5xJKWOkjManpGg2F&authKey=QTw6uKUM2sd1wzyUHpR80RE3kFqmzbePCtfuCDjPhUvVXyj9glpHKEsxVd1zXBva&noverify=0&group_code=828081791) 交流
 
 ## 鸣谢
 
