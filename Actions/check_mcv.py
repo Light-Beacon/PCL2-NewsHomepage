@@ -10,7 +10,7 @@ PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
-INIT_MARKDOWN = '---\nversion-image-link: null\nnot_finished: true\nserver-jar: null\ntranslator: null\n---\n'
+INIT_MARKDOWN = '---\nversion-image-link: null\nnot_finished: true\nofficial-link: null\nserver-jar: null\ntranslator: null\n---\n'
 
 require_update = False
 
