@@ -10,8 +10,6 @@ PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
-INIT_MARKDOWN = '---\nversion-image-link: null\nnot_finished: true\nserver-jar: null\ntranslator: null\n---\n'
-
 require_update = False
 
 def get_version_type(vid:str):
@@ -25,14 +23,30 @@ def get_version_type(vid:str):
         return 'Release'
     return 'Others'
 
-def update_library(version_libloc:str,ver_type:str,ver_id:str):
+def update_library(version_mainfest,version_libloc:str,ver_type:str,ver_id:str):
+    #gen content
+    content = '---\n'
+    content += 'version-image-link: null\n'
+    content += 'not_finished: null\n'
+    content += f'server-jar: {get_server_jar(version_mainfest,ver_id)}\n'
+    content += 'translator: null\n'
+    content += '---\n'
+    #write file
     filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'
     if os.path.exists(filepath):
         return False,'存在于版本库，无需更改'
     else:
         with open(filepath, "w") as file:
-            file.write(INIT_MARKDOWN)
+            file.write(content)
         return True,'版本库内未找到，已添加'
+
+def get_server_jar(version_mainfest,version_id):
+    versions = version_mainfest.get('versions')
+    for version in versions:
+        if version['id'] == version_id:
+            response = requests.get(version['url'])
+            return json.loads(response.content)['downloads']['server']['url']
+    return None  
 
 try:
     response = requests.get(LAUNCHER_MANIFSET_URL)
@@ -54,9 +68,11 @@ dir_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 version_lib_location = f'{dir_location}{os.sep}Libraries{os.sep}Versions{os.sep}'
 
 release_require_update,latest_release_act = \
-update_library(version_lib_location,latest_release_type,latest_release_id)
+update_library(version_mainfest,version_lib_location,
+               latest_release_type,latest_release_id)
 snapshot_require_update,latest_snapshot_act = \
-update_library(version_lib_location,latest_snapshot_type,latest_snapshot_id)
+update_library(version_mainfest,version_lib_location,
+               latest_snapshot_type,latest_snapshot_id)
 
 print(f'latest_release_type={latest_release_type}')
 print(f'latest_snapshot_type={latest_snapshot_type}')

@@ -5,6 +5,7 @@ import re
 
 LAUNCHER_MANIFSET_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest.json'
 MANIFSET = None
+VERSIONS_DICT = None
 FULL_VERSIONS = None
 LATEST_VERSIONS = None
 
@@ -23,11 +24,14 @@ def get_manifset():
     return MANIFSET
 
 def init_version_dict():
-    global LATEST_VERSIONS,FULL_VERSIONS
+    global LATEST_VERSIONS,FULL_VERSIONS,VERSIONS_DICT
+    VERSIONS_DICT = {}
     LATEST_VERSIONS = {'snapshot':None,'release':None}
     manifset = get_manifset()
     LATEST_VERSIONS.update(manifset['latest'])
     FULL_VERSIONS = manifset.get('versions')
+    for version in FULL_VERSIONS:
+        VERSIONS_DICT[version['id']] = version
     LogInfo(f'[VersionScript] 最新快照版:{LATEST_VERSIONS["snapshot"]}; 最新正式版:{LATEST_VERSIONS["release"]}')
     
 def get_latest(version_type = 'snapshot',version_rank = 1):
@@ -45,6 +49,13 @@ def get_latest(version_type = 'snapshot',version_rank = 1):
                 return version['id']
     return ''
 
+def get_server_jar(version_id):
+    global VERSIONS_DICT
+    if not (ver_info := VERSIONS_DICT.get(version_id)):
+        return None
+    response = requests.get(ver_info['url'])
+    return json.loads(response.content)['downloads']['server']['url']
+    
 SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
 PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
