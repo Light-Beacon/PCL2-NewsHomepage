@@ -5,11 +5,10 @@ alias:
  - 主界面
 cards:
  - animated_noticebar
+ - ${@MainPageVersions|new}
  - 15th_anniversary | s = false
- - ${@LatestVersion|snapshot|1} | s = false 
  - T:Separator | content = 历史版本
- - ${@LatestVersion|snapshot|2}
- - ${@LatestVersion|release}
+ - ${@MainPageVersions|history}
  - jumpCard
  - T:Separator | content = 周边新闻
  - feedback_hint

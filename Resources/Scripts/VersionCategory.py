@@ -4,8 +4,8 @@ from Core.ModuleManager import invokeModule, untilLoaded
 import requests
 import json
 
-untilLoaded('FetchMainfest')
-MANIFSET = invokeModule('FetchMainfest','fetch')()
+untilLoaded('MinecraftVersions') # 需求前置 MinecraftVersions
+MANIFSET = invokeModule('MinecraftVersions','get_manifset')()
 FULL_VERSIONS = MANIFSET.get('versions')
 ID_LIST = [version.get('id') for version in FULL_VERSIONS]
 
