@@ -1,3 +1,3 @@
-def script(card,**kwargs):
+def script(card,**_):
     content = card['content']
     return '  '.join(list(content))

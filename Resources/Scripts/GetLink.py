@@ -1,4 +1,3 @@
-from Core.Debug import LogWarning, LogInfo
 import re
 
 SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
@@ -7,6 +6,7 @@ RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
 def gen_official_link(vid:str):
+    '''生成官网链接'''
     if re.match(SNAPSHOT_PATTERN,vid):
         return f'https://minecraft.net/article/minecraft-snapshot-{vid.lower()}'
     if re.match(PRE_RELEASE_PATTERN,vid):

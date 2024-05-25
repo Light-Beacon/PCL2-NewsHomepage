@@ -1,4 +1,4 @@
-from Core.Debug import LogWarning, LogInfo
+from Core.debug import log_warning, log_info
 import requests
 import json
 import re
@@ -11,12 +11,12 @@ LATEST_VERSIONS = None
 
 def fetch_manifset():
     try:
-        response = requests.get(LAUNCHER_MANIFSET_URL)
+        response = requests.get(LAUNCHER_MANIFSET_URL,timeout=10000)
         return json.loads(response.content)
     except Exception as e:
-        LogWarning(f'获取版本列表失败：{e.with_traceback()}')
+        log_warning(f'获取版本列表失败：{e.with_traceback()}')
         return {}
-    
+
 def get_manifset():
     global MANIFSET
     if not MANIFSET:
@@ -32,7 +32,7 @@ def init_version_dict():
     FULL_VERSIONS = manifset.get('versions')
     for version in FULL_VERSIONS:
         VERSIONS_DICT[version['id']] = version
-    LogInfo(f'[VersionScript] 最新快照版:{LATEST_VERSIONS["snapshot"]}; 最新正式版:{LATEST_VERSIONS["release"]}')
+    log_info(f'[VersionScript] 最新快照版:{LATEST_VERSIONS["snapshot"]}; 最新正式版:{LATEST_VERSIONS["release"]}')
     
 def get_latest(version_type = 'snapshot',version_rank = 1):
     global LATEST_VERSIONS
@@ -53,7 +53,7 @@ def get_server_jar(version_id):
     global VERSIONS_DICT
     if not (ver_info := VERSIONS_DICT.get(version_id)):
         return None
-    response = requests.get(ver_info['url'])
+    response = requests.get(ver_info['url'],timeout=10000)
     return json.loads(response.content)['downloads']['server']['url']
     
 SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
