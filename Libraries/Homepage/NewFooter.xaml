@@ -27,7 +27,7 @@
     </StackPanel>
     <StackPanel HorizontalAlignment="Right" >
     <local:MyIconTextButton HorizontalAlignment="Left" Text="反馈" ToolTip="反馈新闻主页问题" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new/choose"
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>
     <local:MyIconTextButton HorizontalAlignment="Left" Text="刷新" ToolTip="刷新新闻主页" EventType="刷新主页"
     LogoScale="0.9" Logo="M960 416V192l-73.056 73.056a447.712 447.712 0 0 0-373.6-201.088C265.92 63.968 65.312 264.544 65.312 512S265.92 960.032 513.344 960.032a448.064 448.064 0 0 0 415.232-279.488 38.368 38.368 0 1 0-71.136-28.896 371.36 371.36 0 0 1-344.096 231.584C308.32 883.232 142.112 717.024 142.112 512S308.32 140.768 513.344 140.768c132.448 0 251.936 70.08 318.016 179.84L736 416h224z"/>
