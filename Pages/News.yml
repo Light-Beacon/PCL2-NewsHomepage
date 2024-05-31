@@ -4,7 +4,7 @@ alias:
  - news
  - 主界面
 cards:
- - animated_noticebar
+ - animated_noticebar | s = false
  - TrickyTrailsIsComing
  - ${@MainPageVersions|new}
  - 15th_anniversary | s = false
