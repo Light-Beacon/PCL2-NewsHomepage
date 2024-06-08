@@ -6,7 +6,7 @@ on:
       
 jobs:
    check_mcv:
-      runs-on: Plasma
+      runs-on: Linux
       steps:
        - name: 签出储存库
          uses: actions/checkout@v4
