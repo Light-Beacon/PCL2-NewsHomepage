@@ -1,5 +1,3 @@
-
-
 name: Generate Pages
 on: 
    workflow_dispatch:
@@ -8,8 +6,8 @@ on:
          - main
 
 jobs:
-   test:
-      runs-on: ubuntu-latest
+   generate:
+      runs-on: self-hosted
       steps:
        - name: 签出工程储存库
          uses: actions/checkout@v4
@@ -29,6 +27,8 @@ jobs:
             cd builder
             pip install -r requirements.txt
             cd ..
+            cd project
+            pip install -r requirements.txt
        - name: 签出生成文件储存库
          uses: actions/checkout@v4
          with: 
