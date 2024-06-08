@@ -6,7 +6,7 @@ on:
       
 jobs:
    check_mcv:
-      runs-on: self-hosted
+      runs-on: Plasma
       steps:
        - name: 签出储存库
          uses: actions/checkout@v4
