@@ -1,0 +1,401 @@
+<!-- <StackPanel xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:PCL2" > -->
+<StackPanel Margin="0,-10,0,0" xmlns:sys ="clr-namespace:System;assembly=mscorlib">
+<!--Animations Starts-->
+<StackPanel.Triggers>
+
+</StackPanel.Triggers>
+<StackPanel.Resources>
+<!--Styles Starts-->
+<Style TargetType="FlowDocumentScrollViewer" >
+<Setter Property="IsSelectionEnabled" Value="False"/>
+<Setter Property="VerticalScrollBarVisibility" Value="Hidden"/>
+<Setter Property="Margin" Value="0"/>
+</Style><Style TargetType="FlowDocument" >
+<Setter Property="FontFamily" Value="Microsoft YaHei UI"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="TextAlignment" Value="Left"/>
+</Style><Style TargetType="StackPanel" x:Key="ContentStack" >
+<Setter Property="Margin" Value="20,40,20,20"/>
+</Style><Style TargetType="local:MyCard" x:Key="Card" >
+<Setter Property="Margin" Value="0,5"/>
+</Style><Style TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas"/>
+    <Setter Property="Height" Value="18"/>
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9"
+                    BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0"
+                    CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
+                        HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style><Style TargetType="TextBlock" >
+<Setter Property="TextWrapping" Value="Wrap"/>
+<Setter Property="HorizontalAlignment" Value="Left"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="Foreground" Value="Black"/>
+</Style><Style TargetType="List" >
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+<Setter Property="Margin" Value="20,0,0,0"/>
+<Setter Property="MarkerStyle" Value="1"/>
+<Setter Property="Padding" Value="0"/>
+</Style><Style TargetType="ListItem" >
+<Setter Property="Foreground" Value="Black"/>
+<Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Paragraph" x:Key="H2" >
+<Setter Property="FontSize" Value="22"/>
+<Setter Property="Margin" Value="0,10,0,5"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
+</Style><Style TargetType="Paragraph" x:Key="H3" >
+<Setter Property="FontSize" Value="18"/>
+<Setter Property="Margin" Value="0,5,0,5"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
+</Style><Style TargetType="Paragraph" x:Key="H4" >
+<Setter Property="FontSize" Value="16"/>
+<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
+</Style><Style TargetType="Border" x:Key="Quote" >
+<Setter Property="BorderThickness" Value="5,0,0,0"/>
+<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
+<Setter Property="Padding" Value="10,5"/>
+<Setter Property="Margin" Value="0,5"/>
+</Style><sys:String x:Key="DownloadIcon">
+M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
+0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
+0-10 4.5-10 10v170c0 33.1 26.9 60 60 60h600c33.1
+0 60-26.9 60-60V664c0-5.5-4.5-10-10-10h-50c-5.5
+0-10 4.5-10 10z M547 163v449.5l173.6-173.6c13.7-13.7
+35.8-13.7 49.5 0 13.7 13.7 13.7 35.8 0 49.5L536.8
+721.7c-0.4 0.4-0.8 0.8-1.3 1.2-0.2 0.2-0.4 0.4-0.6
+0.5-0.2 0.2-0.4 0.4-0.7 0.6-0.3 0.2-0.5 0.4-0.8 0.6-0.2
+0.1-0.4 0.3-0.5 0.4l-0.9 0.6c-0.2 0.1-0.3 0.2-0.5 0.3-0.3
+0.2-0.6 0.4-1 0.6-0.2 0.1-0.3 0.2-0.5 0.3-0.3 0.2-0.6
+0.4-1 0.5-0.2 0.1-0.4 0.2-0.5 0.3-0.3 0.2-0.6 0.3-0.9
+0.5l-0.6 0.3c-0.3 0.1-0.6 0.3-0.8 0.4-0.2 0.1-0.5 0.2-0.7
+0.3-0.3 0.1-0.5 0.2-0.8 0.3l-0.9 0.3c-0.2 0.1-0.4 0.2-0.7
+0.2-0.3 0.1-0.6 0.2-1 0.3-0.2 0.1-0.4 0.1-0.6 0.2-0.4 0.1-0.7
+0.2-1.1 0.3-0.2 0-0.4 0.1-0.6 0.1-0.4 0.1-0.7 0.2-1.1 0.2-0.2
+0-0.4 0.1-0.6 0.1-0.4 0.1-0.7 0.1-1.1 0.2-0.2 0-0.4 0.1-0.7
+0.1-0.3 0-0.7 0.1-1 0.1-0.3 0-0.6 0-0.9 0.1-0.3 0-0.5 0-0.8
+0.1-1.2 0.1-2.3 0.1-3.5 0-0.3 0-0.5 0-0.8-0.1-0.3 0-0.6
+0-0.9-0.1-0.3 0-0.7-0.1-1-0.1-0.2 0-0.4-0.1-0.7-0.1-0.4-0.1-0.7-0.1-1.1-0.2-0.2
+0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
+0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
+35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
+<sys:String x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<sys:String x:Key="CloudIcon">
+M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
+20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
+97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
+42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
+0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
+38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
+69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
+220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
+113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
+0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
+211.6 582.7 160 480 160z</sys:String><Style x:Key="ListItem" TargetType="TextBlock">
+  <Setter Property="Margin" Value="10,-13.5,5,15" />
+  <Setter Property="TextWrapping" Value="Wrap" />
+  <Setter Property="HorizontalAlignment" Value="Left" />
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="Black" />
+</Style>
+<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
+  <Setter Property="Margin" Value="15,-15,5,15" />
+  <Setter Property="TextElement.FontSize" Value="20" />
+</Style>
+<Style x:Key="ListStyle" TargetType="StackPanel">
+  <Setter Property="Margin" Value="22,0,14,5" />
+</Style>
+<Style TargetType="TextBox">
+  <Setter Property="Background" Value="{x:Null}" />
+  <Setter Property="Padding" Value="3,0,3,0" />
+  <Setter Property="IsReadOnly" Value="True" />
+  <Setter Property="BorderBrush" Value="{x:Null}" />
+</Style>
+<Style x:Key="imgTitle" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="Margin" Value="0,0,0,15" />
+</Style>
+<!--footnote-->
+<Style x:Key="footnote" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Padding" Value="30,0" />
+  <Setter Property="Margin" Value="0,20,0,15" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="TextWrapping" Value="Wrap" />
+</Style>
+<!--ButtonNameBorder-->
+<!--ImageButtonStyle-->
+<Style x:Key="ImgBtnImg" TargetType="Image">
+  <Setter Property="MaxWidth" Value="70px" />
+  <Setter Property="MaxHeight" Value="70px" />
+  <Setter Property="Margin" Value="3" />
+</Style>
+<Style x:Key="ImgBtnBdr" TargetType="Border">
+  <Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
+  <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+  <Setter Property="BorderThickness" Value="2px" />
+  <Setter Property="CornerRadius" Value="5" />
+  <Setter Property="Margin" Value="2px" />
+</Style>
+<Style x:Key="NameBdr" TargetType="Border">
+  <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+  <Setter Property="BorderThickness" Value="0" />
+  <Setter Property="CornerRadius" Value="5,5,0,0" />
+  <Setter Property="Margin" Value="-2,-2,-2,2" />
+</Style>
+<Style x:Key="ImgBtnTxt" TargetType="TextBlock">
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+  <Setter Property="Grid.Row" Value="0" />
+  <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+  <Setter Property="FontSize" Value="12px" />
+  <Setter Property="Margin" Value="8px,2px" />
+</Style>
+<ControlTemplate x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate><Style TargetType="local:MyIconTextButton" x:Key="DownloadVersionButton" >
+<Setter Property="Text" Value="下载"/>
+<Setter Property="ToolTip" Value="转到下载页面"/>
+<Setter Property="EventType" Value="切换页面"/>
+<Setter Property="EventData" Value="1|1"/>
+</Style><Style TargetType="local:MyIconTextButton" x:Key="ServerJarDownloadButton" >
+<Setter Property="Text" Value="服务端"/>
+<Setter Property="ToolTip" Value="下载服务端"/>
+<Setter Property="EventType" Value="下载文件"/>
+</Style><Style TargetType="local:MyButton" x:Key="LinkButtonBase" >
+<Setter Property="Margin" Value="0,0,5,5"/>
+<Setter Property="Height" Value="35"/>
+<Setter Property="Padding" Value="13,0"/>
+<Setter Property="EventType" Value="打开网页"/>
+</Style><Style TargetType="local:MyButton" x:Key="WikiLinkButton" BasedOn="{StaticResource LinkButtonBase}">
+<Setter Property="Grid.Column" Value="0"/>
+<Setter Property="Text" Value="Minecraft Wiki"/>
+</Style><Style TargetType="local:MyButton" x:Key="OfficalLinkButton" BasedOn="{StaticResource LinkButtonBase}">
+<Setter Property="Grid.Column" Value="2"/>
+<Setter Property="Text" Value="官网"/>
+</Style><Style TargetType="Border" x:Key="VersionImageBorder" >
+<Setter Property="HorizontalAlignment" Value="Center"/>
+<Setter Property="BorderThickness" Value="4"/>
+<Setter Property="VerticalAlignment" Value="Top"/>
+<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/>
+<Setter Property="CornerRadius" Value="7"/>
+<Setter Property="MaxHeight" Value="150"/>
+</Style><Style TargetType="Border" x:Key="VersionTitleBorder" >
+<Setter Property="Margin" Value="0,-20,-1,10"/>
+<Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
+<Setter Property="Width" Value="190"/>
+<Setter Property="Height" Value="36"/>
+<Setter Property="CornerRadius" Value="7"/>
+<Setter Property="BorderThickness" Value="0,0,0,2"/>
+<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/>
+</Style><Style TargetType="TextBlock" x:Key="VersionTitleBlock" >
+<Setter Property="HorizontalAlignment" Value="Center"/>
+<Setter Property="TextAlignment" Value="Center"/>
+<Setter Property="VerticalAlignment" Value="Center"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/>
+<Setter Property="Width" Value="180"/>
+<Setter Property="TextWrapping" Value="Wrap"/>
+<Setter Property="FontSize" Value="20"/>
+</Style>
+</StackPanel.Resources>
+<Border Margin="0,0,0,5" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+    <Grid Margin="10,0,0,0">
+        <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
+                📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
+    </TextBlock>
+        <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
+                📰 MCBBS 寄了，新闻主页将永久停用 MCBBS 链接
+    </TextBlock>
+    </Grid>
+</Border><ContentControl Content="整  的  花  活" Template="{StaticResource Separator}"/><local:MyCard Margin="0,0,0,15" Title="去年的烂活 - 新闻主页祝您新年快乐（已摆烂）" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="30,120,30,40" MaxWidth="500" Height="150" x:Name="SP">
+      <StackPanel.Resources>
+        <Style TargetType="TextBlock">
+          <Setter Property="HorizontalAlignment" Value="Center" />
+          <Setter Property="VerticalAlignment" Value="Center" />
+          <Setter Property="FontSize" Value="56" />
+          <Setter Property="Foreground" Value="#EF321B" />
+          <Setter Property="FontWeight" Value="Bold"/> 
+        </Style>
+      </StackPanel.Resources>
+      <StackPanel.Triggers>
+        <EventTrigger RoutedEvent="StackPanel.Loaded">
+          <BeginStoryboard>
+            <Storyboard RepeatBehavior="Forever" FillBehavior="Stop">
+              <DoubleAnimation Storyboard.TargetName="T1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
+              <DoubleAnimation Storyboard.TargetName="T2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
+              <DoubleAnimation Storyboard.TargetName="T3" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.0001"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" BeginTime="0:0:0.5"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" BeginTime="0:0:1.3"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.1" BeginTime="0:0:2.1"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:2.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:2.8"/>
+              <DoubleAnimation Storyboard.TargetName="Fu1S" Storyboard.TargetProperty="ScaleX" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="FuS" Storyboard.TargetProperty="ScaleX" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="Fu2S" Storyboard.TargetProperty="ScaleX" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="Fu1S" Storyboard.TargetProperty="ScaleY" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="FuS" Storyboard.TargetProperty="ScaleY" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="Fu2S" Storyboard.TargetProperty="ScaleY" From="1" To="2.2" Duration="0:0:0.05" BeginTime="0:0:3"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:3.4"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:3.4"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:3.4"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:3.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:3.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:3.8"/>             
+              <DoubleAnimation Storyboard.TargetName="FuAngle" Storyboard.TargetProperty="Angle" From="45" To="225" Duration="0:0:0.001" BeginTime="0:0:4.2"/>
+              <DoubleAnimation Storyboard.TargetName="FuAngle" Storyboard.TargetProperty="Angle" From="45" To="8400" Duration="0:0:6" BeginTime="0:0:4.8"/>
+              <DoubleAnimation Storyboard.TargetName="Fu1Angle" Storyboard.TargetProperty="Angle" From="45" To="8400" Duration="0:0:6" BeginTime="0:0:4.8"/>
+              <DoubleAnimation Storyboard.TargetName="Fu2Angle" Storyboard.TargetProperty="Angle" From="45" To="8800" Duration="0:0:6" BeginTime="0:0:4.8"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.05" BeginTime="0:0:6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg1" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:7.6"/>
+              <DoubleAnimation Storyboard.TargetName="FuImg2" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.05" BeginTime="0:0:7.6"/>
+              <DoubleAnimation Storyboard.TargetName="T1" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:7.6"/>
+              <DoubleAnimation Storyboard.TargetName="T2" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:8"/>
+              <DoubleAnimation Storyboard.TargetName="T3" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.001" BeginTime="0:0:8.4"/>
+            </Storyboard>
+          </BeginStoryboard>
+        </EventTrigger>
+      </StackPanel.Triggers>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image Source="https://image.stapxs.cn/i/2024/02/09/fu.png" MaxHeight="80" RenderTransformOrigin="0.5,0.5" Grid.Column="0" x:Name="FuImg1" Opacity="0" HorizontalAlignment="Right">
+          <Image.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="Fu1S"/>
+                <SkewTransform/>
+                <RotateTransform Angle="45" x:Name="Fu1Angle"/>
+                <TranslateTransform/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="过" Grid.Column="0" x:Name="T1"/>
+        <Image Source="https://image.stapxs.cn/i/2024/02/09/fu.png" MaxHeight="80" RenderTransformOrigin="0.5,0.5" Grid.Column="1" x:Name="FuImg" Opacity="0">
+          <Image.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="FuS"/>
+                <SkewTransform/>
+                <RotateTransform Angle="45" x:Name="FuAngle"/>
+                <TranslateTransform x:Name="FuPos"/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="年" Grid.Column="1" x:Name="T2"/>
+        <Image Source="https://image.stapxs.cn/i/2024/02/09/fu.png" MaxHeight="80" RenderTransformOrigin="0.5,0.5" Grid.Column="2" x:Name="FuImg2" Opacity="0" HorizontalAlignment="Left">
+          <Image.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform x:Name="Fu2S"/>
+                <SkewTransform/>
+                <RotateTransform Angle="45" x:Name="Fu2Angle"/>
+                <TranslateTransform/>
+            </TransformGroup>
+          </Image.RenderTransform>
+        </Image>
+        <TextBlock Text="啦" Grid.Column="2" x:Name="T3"/>
+      </Grid>
+    </StackPanel>
+  </local:MyCard><local:MyCard Title="更多页面..." Margin="0,5">
+    <StackPanel Margin="25,40,23,15">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="100"/> 
+      </Grid.ColumnDefinitions>
+      <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0" IsEditable="True" >
+        <local:MyComboBoxItem Content="1.21存档"/>
+        <local:MyComboBoxItem Content="1.20存档"/>
+        <local:MyComboBoxItem Content="1.19存档"/>
+        <local:MyComboBoxItem Content="1.18存档"/>
+        <local:MyComboBoxItem Content="1.17存档"/>
+      </local:MyComboBox>
+        <local:MyButton HorizontalAlignment="Center" Width="80"
+            Grid.Column="1" Text="打开→" EventType="打开帮助" 
+            EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://news.bugjump.net/{0}.json}"/>
+    </Grid>
+    </StackPanel>
+</local:MyCard><Grid Margin="20,10" Height="35">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="2*">
+        </ColumnDefinition>
+        <ColumnDefinition Width="1*">
+        </ColumnDefinition>
+	</Grid.ColumnDefinitions>
+	<local:MyButton Grid.Column="0" Padding="10,0" Text="刷新" EventType="刷新主页" Margin="3,0" ToolTip="点击刷新新闻主页" />
+	<local:MyButton Grid.Column="2" Padding="10,0" Text="反馈" EventType="打开网页" Margin="3,0" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new" ToolTip="点击前往 GitHub 提交反馈" />
+	<local:MyButton Grid.Column="1" Padding="10,0" Text="❤️ 赞助主页" EventType="打开网页" Margin="3,0" EventData="https://afdian.net/a/Nattiden" ToolTip="点击前往 新闻主页爱发电" ColorType="Red" />
+</Grid><Border Background="#A0FFFFFF" Height="20720" Margin="-25,10,-25,-20500" BorderThickness="0,2,0,0" BorderBrush="#AAAAAAAA">
+  <StackPanel Margin="40,15,0,10">
+    <TextBlock Text="PCL2 新闻主页" FontSize="16" Margin="0,5,5,5" />
+    <TextBlock> 
+    By：最亮的信标（Light Beacon）<LineBreak/>
+    主要维护：最亮的信标（Light Beacon）<LineBreak/>
+    <LineBreak/>
+    订阅地址: 请通过 设置 - 主页 - 预设 - 新闻主页 订阅<LineBreak/>
+    爱发电赞助: <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" Text="https://afdian.net/a/Nattiden"
+    EventData="https://afdian.net/a/Nattiden" ToolTip="点击打开爱发电" /></Underline> <LineBreak/>
+    GitHub: <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" Text="https://github.com/Light-Beacon/PCL2-NewsHomepage"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage" ToolTip="点击打开GitHub" /></Underline> <LineBreak/>
+    <LineBreak/>
+    无特殊声明本主页采用 <Underline><local:MyTextButton Margin="0,0,0,-2" Text="CC BY-NC-SA 4.0" EventType="打开网页" 
+    EventData="https://creativecommons.org/licenses/by-nc-sa/4.0/ "/></Underline> 授权。
+    <LineBreak/>
+    </TextBlock>
+    <Border Height="20500" Background="{DynamicResource ColorBrush7}" Opacity="0.3" Margin="-40,10,0,0">
+      <StackPanel>
+        <Grid Margin="0,7,0,15">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="100">
+            </ColumnDefinition>
+            <ColumnDefinition Width="1*">
+            </ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+          <TextBlock Text="到  底  啦" HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+          <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+        </Grid>
+      </StackPanel>
+    </Border>
+  </StackPanel>
+</Border>
+</StackPanel>
