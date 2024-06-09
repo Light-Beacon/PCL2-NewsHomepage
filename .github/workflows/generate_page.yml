@@ -40,7 +40,7 @@ jobs:
             git rm -r *
             git clean -f
        - name: 构建页面
-         run: python builder/main.py build ${GITHUB_WORKSPACE}/project/Project.yml ${GITHUB_WORKSPACE}/generated/output.xaml
+         run: python builder/main.py build ${GITHUB_WORKSPACE}/project/Project.yml ${GITHUB_WORKSPACE}/generated/ -a
        - name: 配置 GPG 信息
          uses: crazy-max/ghaction-import-gpg@v6
          with:
