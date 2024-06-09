@@ -2,6 +2,8 @@
 version-image-link: https://image.stapxs.cn/i/2024/04/01/image.png
 official-link: https://www.minecraft.net/en-us/article/poisonous-potato-update
 title: 毒马铃薯更新！--你所期待的粉糊糊状更新！
+translator: 最亮的信标
+cats: ['april_fools']
 ---
 想象一下成为一只马铃薯。现在想象一下你是马铃薯家族中不太受欢迎的兄弟姐妹，没有继承家族其他人拥有的美味块茎。更糟糕的是——你正面临着不可能作出的决定——该如何处理所有这些淀粉？既然薯条和沙发土豆都不适合你，那么我们只剩下了一个选择。恭喜你，朋友，你成为了*毒*马铃薯。
 

@@ -1,3 +1,9 @@
+---
+version-image-link: https://image.stapxs.cn/i/2024/06/09/image.png
+official-link: https://www.minecraft.net/en-us/article/vote-update
+translator: 最亮的信标
+cats: ['april_fools']
+---
 以下译自官方博文
 我们人类每天都要做 35000 个选择——它们大多是关于吃什么、穿什么、说什么，还有是否你应该在流媒体平台上观看新现实戏剧（它太太太太好康了，只是你必须得等至少 47 集才能真正开始）。有这么多的选择需要做，使人烦躁。更直接的说，使人厌恶。而且这些选择有些你可能会在 Minecraft 中做出！Mojang Studios 现在着手于修正这个问题。解决方案是：更多的选择！
 几年以来，我们推出了一系列改变生活、赢得大奖、使人疯狂、更不用说令人极为震撼的内容：Minecraft 3D、20w14∞ 快照、一次一个方块更新。但是它们和本次 “投票更新” 一点边都沾不上——一个自从 2017 年就开始制作的快照。

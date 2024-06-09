@@ -4,6 +4,6 @@
 </Border.Background>
 <Image Source="${version-image-link}" Opacity="0" Stretch="Fill"/>
 </Border>
-<Border Style="{StaticResource VersionTitleBorder}" ${$IsEnableAnimation}>
+<Border Style="{StaticResource VersionTitleBorder}">
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="${version-id}" />
 </Border>
