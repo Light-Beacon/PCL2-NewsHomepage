@@ -27,6 +27,9 @@
 
 如果你需要访问新闻主页内的某一个页面你可以通过 `https://news.bugjump.net/[页面名或页面别称].json` 来跳转。
 
+#### 获取构建后的代码
+仓库配置了 GitHub Actions 用于在提交后生成构建后 PCL 可以直接使用的代码，若需要可以在 [generated](https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/generated) 分支上获取。
+
 ## 注意事项
 
 请尽量使用最新版PCL（正式版 *Release*、测试版 *Snapshot* 通用），旧版本可能会有意想不到的问题
