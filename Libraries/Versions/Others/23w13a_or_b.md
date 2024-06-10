@@ -1,7 +1,10 @@
 ---
 version-image-link: https://image.stapxs.cn/i/2024/06/09/image.png
 official-link: https://www.minecraft.net/en-us/article/vote-update
+title: 重磅来袭：投票更新
+intro: 2023 - 在 Minecraft 的世界中作出更多选择！
 translator: 最亮的信标
+version-type: 愚人节版
 cats: ['april_fools']
 ---
 以下译自官方博文

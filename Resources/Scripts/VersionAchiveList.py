@@ -11,7 +11,7 @@ def script(cat_name,proj:Project,card,**_):
     cat_name = format_code(code = cat_name,card=card,project=proj)
     cards = list(filter(lambda card:isinstance(card.get('cats'),list)
            and cat_name in card.get('cats'), proj.get_all_card()))
-    code = '<StackPanel Margin="8,2,8,20">'
+    code = '<StackPanel Margin="8,2,8,15">'
     res = proj.resources
     cards.sort(key=lambda card:ID_LIST.index(format_code(card['version-id'],
                                                          card=card,project=proj)))

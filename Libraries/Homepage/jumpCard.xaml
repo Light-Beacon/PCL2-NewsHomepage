@@ -11,6 +11,7 @@
         <local:MyComboBoxItem Content="1.19存档"/>
         <local:MyComboBoxItem Content="1.18存档"/>
         <local:MyComboBoxItem Content="1.17存档"/>
+        <local:MyComboBoxItem Content="愚人节版本存档"/>
       </local:MyComboBox>
         <local:MyButton HorizontalAlignment="Center" Width="80"
             Grid.Column="1" Text="打开→" EventType="打开帮助" 
