@@ -273,9 +273,9 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>这些效果仍然可以通过穿着多件装备堆叠（自 1.20.6 以来的更改）</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-272888">MC-272888</local:MyTextButton></Underline> - 使用激流飞升时若主手持有附有风爆的重锤，仍能使风爆生效</Paragraph></ListItem>
-<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-273007">MC-273007</local:MyTextButton></Underline> - 当玩家以一定速度进入载具时，在载具上发射的弹射物有着不正确的运动</Paragraph></ListItem>
-<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-273158">MC-273158</local:MyTextButton></Underline> - 动物在上船时仍然保持漂浮</Paragraph></ListItem>
+<ListItem><Paragraph>MC-272888 - 使用激流飞升时若主手持有附有风爆的重锤，仍能使风爆生效</Paragraph></ListItem>
+<ListItem><Paragraph>MC-273007 - 当玩家以一定速度进入载具时，在载具上发射的弹射物有着不正确的运动</Paragraph></ListItem>
+<ListItem><Paragraph>MC-273158 - 动物在上船时仍然保持漂浮</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
