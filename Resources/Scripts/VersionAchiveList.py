@@ -18,7 +18,7 @@ def script(cat_name,proj:Project,card,**_):
     if len(cards) > 0 and cards[0]['version-type-id'] not in ['Release','April-Fools']:
         code += res.components['VersionLinks/Future-Release']
     for vercard in cards:
-        code += format_code(code = res.components[f'VersionLinks/{vercard['version-type-id']}'],
+        code += format_code(code = res.components[f'VersionLinks/{vercard["version-type-id"]}'],
                             card=vercard,project=proj)
     code += '</StackPanel>'
     return code
