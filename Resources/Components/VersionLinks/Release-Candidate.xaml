@@ -1,0 +1,3 @@
+<local:MyListItem Margin="40,1,10,1"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="${version-id}" Info="${version-type}" 
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=${version-id}" Type="Clickable" />

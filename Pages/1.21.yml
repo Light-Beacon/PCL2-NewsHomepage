@@ -4,5 +4,5 @@ alias:
 display_name: 1.21存档
 cards:
  - archive_noticebar
- - T:Separator | content = 历史版本
- - ${@VersionCategory|1.21}
+ - T:VersionAchiveList | cat = 1.21
+ - NewFooter
