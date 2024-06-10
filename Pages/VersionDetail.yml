@@ -1,0 +1,3 @@
+name: 版本详情
+cards:
+  - ${@IF|$ver|${ver}}
