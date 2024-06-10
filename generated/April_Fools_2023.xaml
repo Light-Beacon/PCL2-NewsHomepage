@@ -239,7 +239,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
                 📰 MCBBS 寄了，新闻主页将永久停用 MCBBS 链接
     </TextBlock>
     </Grid>
-</Border><ContentControl Content="加  急  特  快" Template="{StaticResource Separator}"/><local:MyCard Title="23w13a_or_b" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+</Border><ContentControl Content="加  急  特  快" Template="{StaticResource Separator}"/><local:MyCard Title="重磅来袭：投票更新" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
@@ -354,6 +354,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
         <local:MyComboBoxItem Content="1.19存档"/>
         <local:MyComboBoxItem Content="1.18存档"/>
         <local:MyComboBoxItem Content="1.17存档"/>
+        <local:MyComboBoxItem Content="愚人节版本存档"/>
       </local:MyComboBox>
         <local:MyButton HorizontalAlignment="Center" Width="80"
             Grid.Column="1" Text="打开→" EventType="打开帮助" 
