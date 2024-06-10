@@ -256,11 +256,29 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 </StackPanel>
 </local:MyCard><local:MyCard Title="最新发布候选版 - 1.21-rc1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/06/10/image_1.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://image.stapxs.cn/i/2024/06/10/image_1.png" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21-rc1" />
+</Border><FlowDocumentScrollViewer >
 <FlowDocument>
-
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph>撤销原 Pre4 做出的火焰保护的燃烧时间减免效果和爆炸保护的击退抗性效果更改</Paragraph><List>
+<ListItem><Paragraph>我们听见了你们的反馈，并且我们期望在未来重新调整这两个魔咒以寻求适合它们的平衡性</Paragraph></ListItem>
+<ListItem><Paragraph>现在其数值与 1.20.6 相同</Paragraph></ListItem>
+<ListItem><Paragraph>这些效果仍然可以通过穿着多件装备堆叠（自 1.20.6 以来的更改）</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
+<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-272888">MC-272888</local:MyTextButton></Underline> - 使用激流飞升时若主手持有附有风爆的重锤，仍能使风爆生效</Paragraph></ListItem>
+<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-273007">MC-273007</local:MyTextButton></Underline> - 当玩家以一定速度进入载具时，在载具上发射的弹射物有着不正确的运动</Paragraph></ListItem>
+<ListItem><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-273158">MC-273158</local:MyTextButton></Underline> - 动物在上船时仍然保持漂浮</Paragraph></ListItem>
+</List>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
+</FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
 <Grid UseLayoutRounding="True" Margin="10,10,10,10">
 <Grid.ColumnDefinitions>
 <ColumnDefinition Width="20*"/>
@@ -270,6 +288,13 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-1-21-release-candidate-1"/>
 </Grid>
 </GroupBox><Grid Margin="0,10,6,0">
+
+<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<Path Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush5}"
+                    Stretch="Uniform"
+                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
+<TextBlock Text="By 最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush5}"/>
+</StackPanel>
 
 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21-rc1" EventType="启动游戏"
