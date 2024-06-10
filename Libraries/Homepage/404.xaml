@@ -1,8 +1,8 @@
- <local:MyCard Title="">
+<local:MyCard Title="">
     <StackPanel Margin="25,30,25,30">
-        <TextBlock Margin="0,0,0,4"
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush2}"
                    Text="404" FontSize="70" TextAlignment = "Center" FontWeight="Bold"/>
-        <TextBlock Margin="0,0,0,4" Foreground="#992222" FontSize="16"
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush3}" FontSize="16"
                    Text="你到达了世界边界" TextAlignment = "Center"/>
     </StackPanel>
 </local:MyCard>
