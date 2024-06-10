@@ -240,7 +240,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
     </TextBlock>
     </Grid>
 </Border>
-<local:MyCard Title="版本列表" CanSwap="False" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="版本列表" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,2,8,20"><local:MyListItem Margin="10,1,10,1"
 	Logo="pack://application:,,,/images/Blocks/Cobblestone.png" Title="尚未发布的版本" Info="未来的正式版" 
