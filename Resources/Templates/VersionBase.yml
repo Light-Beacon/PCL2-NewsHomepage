@@ -1,9 +1,9 @@
 components:
  - ${@IF|$version-image-link|VersionHeaderImage}
  - FlowDocumentViewer
- - ${@IF|$not_finished|Loading}
- - ${@IF|!$disable-websites|VersionWebsites}
- - ${@IF|!$disable-toolbar|VersionToolBar}
+ - ${@IF|${not_finished}|Loading}
+ - ${@IF|!${disable-websites}|VersionWebsites}
+ - ${@IF|!${disable-toolbar}|VersionToolBar}
 base: Card
 fill:
    loading_content: 翻译施工中
