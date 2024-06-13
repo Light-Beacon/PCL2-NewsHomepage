@@ -38,6 +38,9 @@
             </ControlTemplate>
         </Setter.Value>
     </Setter>
+</Style><Style TargetType="Image" x:Key="InnerImage" >
+<Setter Property="MaxHeight" Value="500"/>
+<Setter Property="HorizontalAlignment" Value="Center"/>
 </Style><Style TargetType="TextBlock" >
 <Setter Property="TextWrapping" Value="Wrap"/>
 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -112,69 +115,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
 113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
 0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
-211.6 582.7 160 480 160z</sys:String><Style x:Key="ListItem" TargetType="TextBlock">
-  <Setter Property="Margin" Value="10,-13.5,5,15" />
-  <Setter Property="TextWrapping" Value="Wrap" />
-  <Setter Property="HorizontalAlignment" Value="Left" />
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="Black" />
-</Style>
-<Style x:Key="ListItemLink" TargetType="local:MyTextButton">
-  <Setter Property="Margin" Value="15,-15,5,15" />
-  <Setter Property="TextElement.FontSize" Value="20" />
-</Style>
-<Style x:Key="ListStyle" TargetType="StackPanel">
-  <Setter Property="Margin" Value="22,0,14,5" />
-</Style>
-<Style TargetType="TextBox">
-  <Setter Property="Background" Value="{x:Null}" />
-  <Setter Property="Padding" Value="3,0,3,0" />
-  <Setter Property="IsReadOnly" Value="True" />
-  <Setter Property="BorderBrush" Value="{x:Null}" />
-</Style>
-<Style x:Key="imgTitle" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="Margin" Value="0,0,0,15" />
-</Style>
-<!--footnote-->
-<Style x:Key="footnote" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Padding" Value="30,0" />
-  <Setter Property="Margin" Value="0,20,0,15" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="TextWrapping" Value="Wrap" />
-</Style>
-<!--ButtonNameBorder-->
-<!--ImageButtonStyle-->
-<Style x:Key="ImgBtnImg" TargetType="Image">
-  <Setter Property="MaxWidth" Value="70px" />
-  <Setter Property="MaxHeight" Value="70px" />
-  <Setter Property="Margin" Value="3" />
-</Style>
-<Style x:Key="ImgBtnBdr" TargetType="Border">
-  <Setter Property="Background" Value="{DynamicResource ColorBrush7}" />
-  <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
-  <Setter Property="BorderThickness" Value="2px" />
-  <Setter Property="CornerRadius" Value="5" />
-  <Setter Property="Margin" Value="2px" />
-</Style>
-<Style x:Key="NameBdr" TargetType="Border">
-  <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-  <Setter Property="BorderThickness" Value="0" />
-  <Setter Property="CornerRadius" Value="5,5,0,0" />
-  <Setter Property="Margin" Value="-2,-2,-2,2" />
-</Style>
-<Style x:Key="ImgBtnTxt" TargetType="TextBlock">
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-  <Setter Property="Grid.Row" Value="0" />
-  <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-  <Setter Property="FontSize" Value="12px" />
-  <Setter Property="Margin" Value="8px,2px" />
-</Style>
-<ControlTemplate x:Key="Separator" TargetType="ContentControl">
+211.6 582.7 160 480 160z</sys:String><ControlTemplate x:Key="Separator" TargetType="ContentControl">
   <Grid Margin="0,10">
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="1*" />
@@ -239,43 +180,20 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
                 📰 MCBBS 寄了，新闻主页将永久停用 MCBBS 链接
     </TextBlock>
     </Grid>
-</Border><local:MyCard Title="1.21 棘巧试炼更新定档" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Margin="0,40,0,0">
-<StackPanel HorizontalAlignment="Center">
-    <Line Margin="-1,0" X1="0" X2="1" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
-    <Image Stretch="UniformToFill" Source="https://image.stapxs.cn/i/2024/05/31/tricky_trials_is_coming.png"/>
-    <Line Margin="-1,0" X1="0" X2="1" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
-</StackPanel>
-<StackPanel Margin="20,10,20,30">
-    <FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph>    棘巧试炼试炼定档六月十三日，详见<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1yx4y1n7du">视频</local:MyTextButton></Underline>。</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新发布候选版 - 1.21-rc1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</Border><local:MyCard Title="最新正式版 - 1.21" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/06/10/image_1.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/06/13/image.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/06/10/image_1.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://image.stapxs.cn/i/2024/06/13/image.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21-rc1" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>撤销原 Pre4 做出的火焰保护的燃烧时间减免效果和爆炸保护的击退抗性效果更改</Paragraph><List>
-<ListItem><Paragraph>我们听见了你们的反馈，并且我们期望在未来重新调整这两个魔咒以寻求适合它们的平衡性</Paragraph></ListItem>
-<ListItem><Paragraph>现在其数值与 1.20.6 相同</Paragraph></ListItem>
-<ListItem><Paragraph>这些效果仍然可以通过穿着多件装备堆叠（自 1.20.6 以来的更改）</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph>MC-272888 - 使用激流飞升时若主手持有附有风爆的重锤，仍能使风爆生效</Paragraph></ListItem>
-<ListItem><Paragraph>MC-273007 - 当玩家以一定速度进入载具时，在载具上发射的弹射物有着不正确的运动</Paragraph></ListItem>
-<ListItem><Paragraph>MC-273158 - 动物在上船时仍然保持漂浮</Paragraph></ListItem>
+<List>
+<ListItem><Paragraph>正式版本文章内容过长，将会在之后翻译，若需要可先见 Minecraft Wiki 或 新闻主页 1.21 更新日志存档</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
@@ -284,85 +202,24 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ColumnDefinition Width="20*"/>
 <ColumnDefinition Width="12*"/>
 </Grid.ColumnDefinitions>
-<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="https://zh.minecraft.wiki/w/Java版1.21-rc1" ColorType="Highlight" />
-<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-1-21-release-candidate-1"/>
+<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="https://zh.minecraft.wiki/w/Java版1.21" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-java-edition-1-21"/>
 </Grid>
 </GroupBox><Grid Margin="0,10,6,0">
 
-<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<Path Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush5}"
-                    Stretch="Uniform"
-                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
-<TextBlock Text="By 最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush5}"/>
-</StackPanel>
-
 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 1.21-rc1" EventType="启动游戏"
-    EventData="1.21-rc1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 1.21" EventType="启动游戏"
+    EventData="1.21" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/902101d2fb0f968b9c0ddb8b8cff9afef23f72c7/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/450698d1863ab5180c25d7c804ef0fe6369dd1ba/server.jar" Logo="{StaticResource CloudIcon}" />
 
 </StackPanel>
 </Grid>
 </StackPanel>
-</local:MyCard><local:MyCard Title="15 周年庆活动总结" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">15 周年纪念披风</Paragraph><Paragraph>    点击该<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/zh-hans/login?view=msa&amp;return_url=/15th-anniversary?mcRef=redeemCape">链接</local:MyTextButton></Underline>登录后点击兑换按钮即可兑换，兑换后的披风会同时加入你的 Java 版和基岩版角色创建器中</Paragraph><Paragraph Style="{StaticResource H2}">直播平台披风</Paragraph><Paragraph Style="{StaticResource H3}">Twitch 披风</Paragraph><Paragraph>    现在玩家可以通过在 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.twitch.tv">Twitch</local:MyTextButton></Underline> 上登录（或注册）并观看任意 MC 直播 15 分钟后会收到 Twitch 紫色心形披风兑换码</Paragraph><Paragraph Style="{StaticResource H3}">TikTok 披风</Paragraph><Paragraph>    在 TikTok （仅限移动端）上观看某些 MC 直播左上角可能会有任务（如观看 3 分钟、评论等），完成该任务会获得兑换码</Paragraph><Paragraph Style="{StaticResource H3}">兑换</Paragraph><Paragraph>    兑换码可以在 MC 官网<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/redeem">兑换</local:MyTextButton></Underline> ，兑换后会加入你的账户</Paragraph><Paragraph>    目前该披风仅可以在基岩版使用，在未来拥有基岩版 Twitch 披风的用户在 Java 版也会被授予该披风</Paragraph><Paragraph>    *上述服务在可能在某些地区不可用</Paragraph><Paragraph Style="{StaticResource H2}">MC 官网开始 15 周年促销活动</Paragraph><Paragraph>    MC 国际版 15 周年庆，罕见的打折（上一次还是十周年）Java版 + Win10 基岩版 半价 RMB 44.50</Paragraph><Paragraph>    <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition-pc">详情链接</local:MyTextButton></Underline></Paragraph><Paragraph>    移动端（App Store、Google Play Store） 同时打折</Paragraph><Paragraph>    其它 MC 衍生游戏（MCD、MCLG）也有折扣</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="最新正式版 - 1.20.6" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/04/30/image.png" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/04/30/image.png" Opacity="0" Stretch="Fill"/>
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.20.6" />
-</Border><FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph>行商羊驼被转移的物品栏其中部分在升级中丢失</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
-<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-<Grid.ColumnDefinitions>
-<ColumnDefinition Width="20*"/>
-<ColumnDefinition Width="12*"/>
-</Grid.ColumnDefinitions>
-<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="https://zh.minecraft.wiki/w/Java版1.20.6" ColorType="Highlight" />
-<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-java-edition-1-20-6"/>
-</Grid>
-</GroupBox><Grid Margin="0,10,6,0">
-
-<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<Path Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush5}"
-                    Stretch="Uniform"
-                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
-<TextBlock Text="By wuyuncheng-26" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush5}"/>
-</StackPanel>
-
-<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 1.20.6" EventType="启动游戏"
-    EventData="1.20.6" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
-<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
-    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
-
-<local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/145ff0858209bcfc164859ba735d4199aafa1eea/server.jar" Logo="{StaticResource CloudIcon}" />
-
-</StackPanel>
-</Grid>
-</StackPanel>
-</local:MyCard><local:MyCard Title="更多页面..." Margin="0,5">
+</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="更多页面..." Margin="0,5">
     <StackPanel Margin="25,40,23,15">
     <Grid>
       <Grid.ColumnDefinitions>
