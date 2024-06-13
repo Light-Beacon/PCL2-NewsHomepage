@@ -74,6 +74,11 @@
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
 <Setter Property="Padding" Value="10,5"/>
 <Setter Property="Margin" Value="0,5"/>
+</Style><Style x:Key="imgTitle" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="Margin" Value="0,0,0,15" />
 </Style><sys:String x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
