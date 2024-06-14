@@ -197,65 +197,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>    今天是绝妙的一天，因为今天是正式版星期四！并且这天和以往正式版发布日不同，本次发布更加特别，因为我们带来了Minecraft: Java 版 1.21，也被称作 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/棘巧试炼">棘巧试炼</local:MyTextButton></Underline> 更新！</Paragraph><Paragraph>    独自或和朋友一起步入危险的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/试炼密室">试炼密室</local:MyTextButton></Underline> ，与新生物 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风人">旋风人</local:MyTextButton></Underline> 较量，制造全新的强大武器—— <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/重锤">重锤</local:MyTextButton></Underline>！将 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/合成器">合成器</local:MyTextButton></Underline> 和 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/风弹">风弹</local:MyTextButton></Underline> 装入您巧妙的红石设计中，发现更多铜和凝灰岩制成的装饰方块，享受新的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/画">画</local:MyTextButton></Underline>、<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/音乐唱片">音乐唱片</local:MyTextButton></Underline> 以及更多内容！</Paragraph><Paragraph>    这还不是本次更新的全部内容，在技术性方面，棘巧试炼宣告了数据包的新纪元——数据驱动的魔咒、画和音乐唱片。通过本次更新，我们也同样对 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/24w19a">24w19a</local:MyTextButton></Underline> 引入的区块加载进行了性能提升，相比之前系统减少了内存占用和 CPU 开销。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph>添加了新地下结构——试炼密室</Paragraph></ListItem>
-<ListItem><Paragraph>添加了两种新生物</Paragraph></ListItem>
-<ListItem><Paragraph>沼骸</Paragraph></ListItem>
-<ListItem><Paragraph>旋风人</Paragraph></ListItem>
-<ListItem><Paragraph>添加了新武器——重锤</Paragraph></ListItem>
-<ListItem><Paragraph>添加了三种重锤独有的魔咒</Paragraph></ListItem>
-<ListItem><Paragraph>致密魔咒</Paragraph></ListItem>
-<ListItem><Paragraph>破甲魔咒</Paragraph></ListItem>
-<ListItem><Paragraph>风爆魔咒</Paragraph></ListItem>
-<ListItem><Paragraph>添加了下列方块</Paragraph></ListItem>
-<ListItem><Paragraph>合成器</Paragraph></ListItem>
-<ListItem><Paragraph>试炼刷怪笼</Paragraph></ListItem>
-<ListItem><Paragraph>不祥试炼刷怪笼</Paragraph></ListItem>
-<ListItem><Paragraph>宝库</Paragraph></ListItem>
-<ListItem><Paragraph>不祥宝库</Paragraph></ListItem>
-<ListItem><Paragraph>凝灰岩新变种</Paragraph></ListItem>
-<ListItem><Paragraph>铜质新变种</Paragraph></ListItem>
-<ListItem><Paragraph>沉重核心</Paragraph></ListItem>
-<ListItem><Paragraph>添加了下列物品</Paragraph></ListItem>
-<ListItem><Paragraph>试炼探险家地图</Paragraph></ListItem>
-<ListItem><Paragraph>不祥之瓶</Paragraph></ListItem>
-<ListItem><Paragraph>风弹</Paragraph></ListItem>
-<ListItem><Paragraph>试炼钥匙</Paragraph></ListItem>
-<ListItem><Paragraph>不祥试炼钥匙</Paragraph></ListItem>
-<ListItem><Paragraph>旋风棒</Paragraph></ListItem>
-<ListItem><Paragraph>三种新陶片</Paragraph></ListItem>
-<ListItem><Paragraph>两种新旗帜图案</Paragraph></ListItem>
-<ListItem><Paragraph>两种锻造模板</Paragraph></ListItem>
-<ListItem><Paragraph>四种新药水及其对应的喷溅药水和滞留药水</Paragraph><List>
-<ListItem><Paragraph>虫蚀药水</Paragraph></ListItem>
-<ListItem><Paragraph>渗浆药水</Paragraph></ListItem>
-<ListItem><Paragraph>盘丝药水</Paragraph></ListItem>
-<ListItem><Paragraph>蓄风药水</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>四种新药箭</Paragraph><List>
-<ListItem><Paragraph>虫蚀药箭</Paragraph></ListItem>
-<ListItem><Paragraph>渗浆药箭</Paragraph></ListItem>
-<ListItem><Paragraph>盘丝药箭</Paragraph></ListItem>
-<ListItem><Paragraph>蓄风药箭</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>添加了三张由 Aaron Cherof 和 Lena Raine 创作的新音乐唱片</Paragraph></ListItem>
-<ListItem><Paragraph>添加了二十幅新画</Paragraph></ListItem>
-<ListItem><Paragraph>五幅由 Sarah Boeving 创作</Paragraph></ListItem>
-<ListItem><Paragraph>十五幅由 Kristoffer Zetterstrand 创作</Paragraph></ListItem>
-<ListItem><Paragraph>重新设计了不祥之兆以触发不祥事件</Paragraph></ListItem>
-<ListItem><Paragraph>添加了六种新状态效果</Paragraph></ListItem>
-<ListItem><Paragraph>寄生效果</Paragraph></ListItem>
-<ListItem><Paragraph>渗浆效果</Paragraph></ListItem>
-<ListItem><Paragraph>盘丝效果</Paragraph></ListItem>
-<ListItem><Paragraph>蓄风效果</Paragraph></ListItem>
-<ListItem><Paragraph>袭击之兆效果</Paragraph></ListItem>
-<ListItem><Paragraph>试炼之兆效果</Paragraph></ListItem>
-<ListItem><Paragraph>添加了九首由 Aaron Cherof，Kumi Tanioka 和 谷冈久美 创作的音乐曲目</Paragraph></ListItem>
-<ListItem><Paragraph>添加了八个新进度</Paragraph></ListItem>
-<ListItem><Paragraph>添加了四种洞穴环境音效</Paragraph></ListItem>
-<ListItem><Paragraph><Paragraph>    船现在可以被拴绳拴住</Paragraph></Paragraph></ListItem>
-<ListItem><Paragraph><Paragraph>    正式版本文章内容过长，其余部分将会在之后翻译，若需要可先见 Minecraft Wiki 或 新闻主页 1.21 更新日志存档</Paragraph></Paragraph></ListItem>
-</List>
+<Paragraph>    今天是绝妙的一天，因为今天是正式版星期四！并且这天和以往正式版发布日不同，本次发布更加特别，因为我们带来了Minecraft: Java 版 1.21，也被称作 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/棘巧试炼">棘巧试炼</local:MyTextButton></Underline> 更新！</Paragraph><Paragraph>    独自或和朋友一起步入危险的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/试炼密室">试炼密室</local:MyTextButton></Underline> ，与新生物 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风人">旋风人</local:MyTextButton></Underline> 较量，制造全新的强大武器—— <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/重锤">重锤</local:MyTextButton></Underline>！将 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/合成器">合成器</local:MyTextButton></Underline> 和 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/风弹">风弹</local:MyTextButton></Underline> 装入您巧妙的红石设计中，发现更多铜和凝灰岩制成的装饰方块，享受新的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/画">画</local:MyTextButton></Underline>、<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/音乐唱片">音乐唱片</local:MyTextButton></Underline> 以及更多内容！</Paragraph><Paragraph>    这还不是本次更新的全部内容，在技术性方面，棘巧试炼宣告了数据包的新纪元——数据驱动的魔咒、画和音乐唱片。通过本次更新，我们也同样对 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/24w19a">24w19a</local:MyTextButton></Underline> 引入的区块加载进行了性能提升，相比之前系统减少了内存占用和 CPU 开销。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
 <Grid UseLayoutRounding="True" Margin="10,10,10,10">
