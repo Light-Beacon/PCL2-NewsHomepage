@@ -1,6 +1,6 @@
 name: "内容有误"
 description: "新闻主页内容有误，如内容过期，用词不当，错字漏字"
-labels: ["a:Bug", "h:Content"]
+labels: ["a:Bug｜漏洞", "h:Content｜内容"]
 body:
  - type: textarea
    id: "disc"
