@@ -254,6 +254,24 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>添加了八个新进度</Paragraph></ListItem>
 <ListItem><Paragraph>添加了四种洞穴环境音效</Paragraph></ListItem>
 <ListItem><Paragraph>船现在可以被拴绳拴住</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">结构</Paragraph><Paragraph Style="{StaticResource H3}">试炼密室</Paragraph><List>
+<ListItem><Paragraph>试炼密室是一个在主世界生成的新的结构，玩家可以在此探索，应对作战的挑战。</Paragraph></ListItem>
+<ListItem><Paragraph>由一些铜块和圆石组成，有多种大小。</Paragraph></ListItem>
+<ListItem><Paragraph>相对地，在地下深板岩层生成较多。</Paragraph></ListItem>
+<ListItem><Paragraph>类似于远古城市，正常生物不在其中自然生成。</Paragraph></ListItem>
+<ListItem><Paragraph>永远不会在深渊生物群系生成，但有可能覆盖深渊生物群系。</Paragraph></ListItem>
+<ListItem><Paragraph>每个试炼密室的布局都是程序性的，可能会包括陷阱、奖励箱和各种作战区域。</Paragraph></ListItem>
+<ListItem><Paragraph>走廊上排布了饰纹陶罐，里面装着隐藏的宝藏。</Paragraph></ListItem>
+<ListItem><Paragraph>供应桶可以在房间之间找到，为您提供方块和物品，帮助您进行试炼。</Paragraph></ListItem>
+<ListItem><Paragraph>需要经过挑战才能开启宝库。宝库中有许多高级附魔书和装备，也是获得三叉戟的难得机会。</Paragraph></ListItem>
+<ListItem><Paragraph>不祥宝库生成在一些更难接触的地方，提供更好的战利品，还有一些不详宝库特有的战利品。</Paragraph></ListItem>
+<ListItem><Paragraph>每个试炼密室包含试炼刷怪笼，生成近战生物、小型近战生物和远程攻击生物：</Paragraph></ListItem>
+<ListItem><Paragraph>近战生物：僵尸、尸壳、蜘蛛。</Paragraph></ListItem>
+<ListItem><Paragraph>小型近战生物：史莱姆、洞穴蜘蛛、小僵尸、蠹虫。</Paragraph></ListItem>
+<ListItem><Paragraph>远程攻击生物：骷髅、流浪者、沼骸</Paragraph></ListItem>
+<ListItem><Paragraph>每个试炼刷怪笼只生成每类生物中的一种，这些生物对于 同一个试炼密室中的 每个试炼刷怪笼是随机的。</Paragraph></ListItem>
+<ListItem><Paragraph>比如，一个试炼密室可能只生成僵尸、史莱姆和骷髅，而另一个试炼密室可能只生成蜘蛛、蠹虫和骷髅。</Paragraph></ListItem>
+<ListItem><Paragraph>例外是：在一些特定房间中的试炼刷怪笼，可能只生成旋风人。</Paragraph></ListItem>
 <ListItem><Paragraph>正式版本文章内容过长，其余部分将会在之后翻译，若需要可先见 Minecraft Wiki 或 新闻主页 1.21 更新日志存档</Paragraph></ListItem>
 </List>
 </FlowDocument>
@@ -272,7 +290,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <Path Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush5}"
                     Stretch="Uniform"
                     Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
-<TextBlock Text="By 最亮的信标、WorldHim" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush5}"/>
+<TextBlock Text="By 最亮的信标、WorldHim、柚子柚子" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush5}"/>
 </StackPanel>
 
 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
