@@ -244,6 +244,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <TextBlock Text="By 最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush5}"/>
 </StackPanel>
 
+
 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 23w13a_or_b" EventType="启动游戏"
     EventData="23w13a_or_b" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -252,6 +253,8 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 
 </StackPanel>
 </Grid>
+
+
 </StackPanel>
 </local:MyCard><local:MyCard Title="" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
