@@ -23,12 +23,12 @@
 
 ### 高阶使用
 #### 按钮跳转新闻主页
-如果您需要通过 PCL 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`。
+如果您需要通过 PCL2 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`。
 
 如果你需要访问新闻主页内的某一个页面你可以通过 `https://news.bugjump.net/[页面名或页面别称].json` 来跳转。
 
 #### 获取构建后的代码
-仓库配置了 GitHub Actions 用于在提交后生成构建后 PCL 可以直接使用的代码，若需要可以在 [generated](https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/generated) 分支上获取。
+仓库配置了 GitHub Actions 用于在提交后生成构建后 PCL2 可以直接使用的代码，若需要可以在 [generated](https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/generated) 分支上获取。
 
 注：生成后的页面仍遵循 CC BY-NC-SA 4.0 分发，若需使用请遵守协议。
 
