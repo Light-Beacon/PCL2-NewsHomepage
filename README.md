@@ -1,4 +1,4 @@
-# PCL2新闻主页
+# PCL2 新闻主页
 
 <div align="center"><img src="https://news.bugjump.net/new_banner_fixed.jpg" alt="新闻主页 Header"/></div>
 
@@ -34,15 +34,15 @@
 
 ## 注意事项
 
-请尽量使用最新版PCL（正式版 *Release*、测试版 *Snapshot* 通用），旧版本可能会有意想不到的问题
+请尽量使用最新版 PCL（正式版 *Release*、测试版 *Snapshot* 通用），旧版本可能会有意想不到的问题
 
 ## 联系
 
-你可以通过加入 [群828081791](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RFlMzB9ABLL47erT5xJKWOkjManpGg2F&authKey=QTw6uKUM2sd1wzyUHpR80RE3kFqmzbePCtfuCDjPhUvVXyj9glpHKEsxVd1zXBva&noverify=0&group_code=828081791) 交流
+你可以通过加入 [群 828081791](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RFlMzB9ABLL47erT5xJKWOkjManpGg2F&authKey=QTw6uKUM2sd1wzyUHpR80RE3kFqmzbePCtfuCDjPhUvVXyj9glpHKEsxVd1zXBva&noverify=0&group_code=828081791) 交流
 
 ## 鸣谢
 
-PCL启动器作者 龙腾猫跃
+PCL 启动器作者 龙腾猫跃
 
 曾帮助维护新闻主页的 空辰KC
 
@@ -50,7 +50,7 @@ PCL启动器作者 龙腾猫跃
 
 ### 版权声明与授权许可
 
-[中文MinecraftWiki](https://zh.minecraft.wiki) - CC BY-NC-SA 3.0
+[中文 Minecraft Wiki](https://zh.minecraft.wiki) - CC BY-NC-SA 3.0
 
 [我的世界中文论坛（MCBBS）幻翼块讯版](https://www.mcbbs.net)（已关站） - CC BY-NC-SA 3.0
 
