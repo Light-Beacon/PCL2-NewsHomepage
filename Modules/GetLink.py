@@ -1,4 +1,5 @@
 import re
+from Interfaces import script
 
 SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
 PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
@@ -19,7 +20,8 @@ def gen_official_link(vid:str):
         return f'https://minecraft.net/article/minecraft-java-edition-{vid.replace(".","-")}'
     return ''
 
-def script(link_type,link_key=None,**kwargs):
+@script('GetLink')
+def get_link(link_type,link_key=None,**kwargs):
     card = kwargs['card']
     res = kwargs['res']
     name:str = card['version-id']

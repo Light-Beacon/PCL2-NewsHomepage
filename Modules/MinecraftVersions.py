@@ -1,4 +1,4 @@
-from Core.logger import Logger
+from Interfaces import Logger
 import requests
 import json
 import re
