@@ -199,7 +199,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>    今天是绝妙的一天，因为今天是正式版星期四！并且这天和以往正式版发布日不同，本次发布更加特别，因为我们带来了Minecraft: Java 版 1.21，也被称作 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/棘巧试炼">棘巧试炼</local:MyTextButton></Underline> 更新！</Paragraph><Paragraph>    独自或和朋友一起步入危险的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/试炼密室">试炼密室</local:MyTextButton></Underline> ，与新生物 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风人">旋风人</local:MyTextButton></Underline> 较量，制造全新的强大武器—— <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/重锤">重锤</local:MyTextButton></Underline>！将 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/合成器">合成器</local:MyTextButton></Underline> 和 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/风弹">风弹</local:MyTextButton></Underline> 装入您巧妙的红石设计中，发现更多铜和凝灰岩制成的装饰方块，享受新的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/画">画</local:MyTextButton></Underline>、<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/音乐唱片">音乐唱片</local:MyTextButton></Underline> 以及更多内容！</Paragraph><Paragraph>    这还不是本次更新的全部内容，在技术性方面，棘巧试炼宣告了数据包的新纪元——数据驱动的魔咒、画和音乐唱片。通过本次更新，我们也同样对 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/24w19a">24w19a</local:MyTextButton></Underline> 引入的区块加载进行了性能提升，相比之前系统减少了内存占用和 CPU 开销。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<Paragraph>    今天是绝妙的一天，因为今天是正式版星期四！并且这天和以往正式版发布日不同，本次发布更加特别，因为我们带来了 Minecraft: Java 版 1.21，也被称作 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/棘巧试炼">棘巧试炼</local:MyTextButton></Underline> 更新！</Paragraph><Paragraph>    独自或和朋友一起步入危险的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/试炼密室">试炼密室</local:MyTextButton></Underline> ，与新生物 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风人">旋风人</local:MyTextButton></Underline> 较量，制造全新的强大武器—— <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/重锤">重锤</local:MyTextButton></Underline>！将 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/合成器">合成器</local:MyTextButton></Underline> 和 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/风弹">风弹</local:MyTextButton></Underline> 装入您巧妙的红石设计中，发现更多铜和凝灰岩制成的装饰方块，享受新的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/画">画</local:MyTextButton></Underline>、<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/音乐唱片">音乐唱片</local:MyTextButton></Underline> 以及更多内容！</Paragraph><Paragraph>    这还不是本次更新的全部内容，在技术性方面，棘巧试炼宣告了数据包的新纪元——数据驱动的魔咒、画和音乐唱片。通过本次更新，我们也同样对 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/24w19a">24w19a</local:MyTextButton></Underline> 引入的区块加载进行了性能提升，相比之前系统减少了内存占用和 CPU 开销。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
 <ListItem><Paragraph>添加了新地下结构——试炼密室</Paragraph></ListItem>
 <ListItem><Paragraph>添加了两种新生物</Paragraph><List>
 <ListItem><Paragraph>沼骸</Paragraph></ListItem>
@@ -277,7 +277,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 </List></ListItem>
 <ListItem><Paragraph>每个试炼密室包含试炼刷怪笼，生成近战生物、小型近战生物和远程攻击生物：</Paragraph><List>
 <ListItem><Paragraph>近战生物：僵尸、尸壳、蜘蛛。</Paragraph></ListItem>
-<ListItem><Paragraph>小型近战生物：史莱姆、洞穴蜘蛛、小僵尸、蠹虫。</Paragraph></ListItem>
+<ListItem><Paragraph>小型近战生物：史莱姆、洞穴蜘蛛、幼年僵尸、蠹虫。</Paragraph></ListItem>
 <ListItem><Paragraph>远程攻击生物：骷髅、流浪者、沼骸</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>每个试炼刷怪笼只生成每类生物中的一种，这些生物对于 同一个试炼密室中的 每个试炼刷怪笼是随机的。</Paragraph><List>
@@ -286,13 +286,13 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">生物</Paragraph><List>
 <ListItem><Paragraph>旋风人</Paragraph><List>
-<ListItem><Paragraph>一种狡猾的敌对生物，由一些试炼刷怪箱在试炼密室中生成。</Paragraph><List>
+<ListItem><Paragraph>一种狡猾的敌对生物，由试炼密室中的试炼刷怪笼生成。</Paragraph><List>
 <ListItem><Paragraph>在被玩家击杀时掉落 1-2 根旋风棒。</Paragraph></ListItem>
 <ListItem><Paragraph>旋风棒掉落数量受抢夺附魔影响。</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>主要通过绕着目标跳跃来移动。</Paragraph></ListItem>
-<ListItem><Paragraph>几乎可以偏转所有弹射物，使其对远程战斗免疫。</Paragraph><List>
-<ListItem><Paragraph>有一种明显的例外：旋风人不能偏转风弹。</Paragraph></ListItem>
+<ListItem><Paragraph>几乎可以偏转所有弹射物，使其对远程攻击免疫。</Paragraph><List>
+<ListItem><Paragraph>值得注意的是，有一种例外：旋风人不能偏转风弹。</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>作为一个有进攻性的对手，它以风弹的形式向目标发射挥发性风能。</Paragraph><List>
 <ListItem><Paragraph>在与实体或方块碰撞后，风弹会产生风爆，它能对周围的实体造成击退作用。</Paragraph></ListItem>
@@ -308,7 +308,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>点亮的蜡烛（会熄灭）</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>风爆对铁门、铁活板门或任何被红石信号固定在其位置的方块没有任何影响</Paragraph></ListItem>
-<ListItem><Paragraph>不会报复来自以下生物的攻击：骷髅、流浪者、沼泽、僵尸、尸壳、蜘蛛、洞穴蜘蛛和史莱姆</Paragraph></ListItem>
+<ListItem><Paragraph>不会报复来自以下生物的攻击：骷髅、流浪者、沼骸、僵尸、尸壳、蜘蛛、洞穴蜘蛛和史莱姆</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>沼骸 </Paragraph><List>
 <ListItem><Paragraph>骷髅的新变种，可以射出毒箭。</Paragraph><List>
@@ -316,8 +316,8 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>它们以更慢的 3.5 秒而不是 2 秒的间隔进行攻击。</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>被玩家击杀时有几率掉落毒箭。</Paragraph></ListItem>
-<ListItem><Paragraph>这些长满苔藓和蘑菇的骷髅在沼泽和红树林沼泽中自然生成。</Paragraph><List>
-<ListItem><Paragraph>也可以在一些试炼室的试炼刷怪器中生成</Paragraph></ListItem>
+<ListItem><Paragraph>这些长满苔藓和蘑菇的骷髅在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沼泽">沼泽</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/红树林沼泽">红树林沼泽</local:MyTextButton></Underline>中自然生成。</Paragraph><List>
+<ListItem><Paragraph>也可以在某些试炼室的试炼刷怪笼中生成</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>被击杀时掉落 2 个蘑菇（红色、棕色或各一个）</Paragraph></ListItem>
 </List></ListItem>
@@ -325,7 +325,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>重锤</Paragraph><List>
 <ListItem><Paragraph>一种新的重型武器，可以粉碎你的敌人！</Paragraph><List>
 <ListItem><Paragraph>拥有 5 点的基础伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>能被 旋风棒 和 沉重核心 合成。</Paragraph></ListItem>
+<ListItem><Paragraph>能被<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风棒">旋风棒</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沉重核心">沉重核心</local:MyTextButton></Underline>合成。</Paragraph></ListItem>
 <ListItem><Paragraph>使用它会减少耐久，就像其他武器一样；能被旋风棒在铁砧里修复。</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>拥有一种独特的攻击方式：猛击。当玩家手持重锤从高于 1.5 个方块的高度落下攻击实体，就会引发拥有如下效果的 “猛击”：</Paragraph><List>
