@@ -16,7 +16,8 @@ def fetch_manifset():
         response = requests.get(LAUNCHER_MANIFSET_URL,timeout=10000)
         return json.loads(response.content)
     except Exception as e:
-        logger.warning(f'获取版本列表失败：{e.with_traceback()}')
+        logger.warning("加载 MC 版本列表失败")
+        logger.exception(e)
         return {}
 
 def get_manifset():
