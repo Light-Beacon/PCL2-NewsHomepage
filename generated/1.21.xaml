@@ -176,7 +176,8 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <Setter Property="FontSize" Value="20"/>
 </Style>
 </StackPanel.Resources>
-<Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+<local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
+<Border Margin="0,0,0,0" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
     <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
                 📰 此页是新闻主页中历史 MC 版本的存档。
@@ -186,7 +187,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
     </TextBlock>
     </Grid>
 </Border>
-<local:MyCard Title="版本列表" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="版本列表" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 
 </StackPanel>
