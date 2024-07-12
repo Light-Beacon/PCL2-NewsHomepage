@@ -34,4 +34,5 @@ def get_link(link_type,link_key=None,**kwargs):
         raise KeyError()
     if link_type == 'Official' and name not in data:
         return gen_official_link(name)
-    return data[name]
+    result = data.get(name)
+    return result if result else ""
