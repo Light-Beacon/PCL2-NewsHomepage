@@ -1,0 +1,51 @@
+<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre4 " CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre3.png" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre3.png" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1-PRE4" />
+			</Border>
+			<!--Details-->
+<TextBlock Text="技术性修改" Style="{StaticResource h2}" />
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="自定义服务器可以通过新的网络数据包来隐藏玩家聊天消息"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="但这并不能从聊天日志中删除玩家的聊天消息"/>
+</StackPanel>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="在服务器中记录的不安全聊天消息将以 [Not Secure]  标签为前缀"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="聊天消息的顺序现在经过密码学的验证"/>
+</StackPanel>
+<StackPanel Style="{StaticResource ListStyle}">
+<StackPanel Style="{StaticResource ListStyle}">
+<Ellipse />
+<TextBlock Style="{StaticResource ListItem}" Text="这用于验证玩家聊天消息的上下文"/>
+</StackPanel>
+</StackPanel>
+<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/Java版1.19.1-pre4" ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1360295-1-1.html"/>
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/en-us/article/minecraft-1-19-1-pre-release-3" />
+				</Grid>
+			</GroupBox><TextBlock Text="本次更新共修复了2个bug 本文来源 sky_tianle 在MCBBS上发布的译文" Style="{StaticResource footnote}" /></StackPanel>	
+	</local:MyCard>

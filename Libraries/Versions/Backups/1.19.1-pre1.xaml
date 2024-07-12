@@ -1,0 +1,39 @@
+<local:MyCard Margin="0,0,0,15" Title="1.19.1-pre1" CanSwap="True" IsSwaped="True">
+		<!--Header-->
+		<StackPanel Margin="30,40,30,20">
+			<Border Style="{StaticResource verImgBdr}">
+				<Border.Background>
+					<ImageBrush ImageSource="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre1.jpg" Stretch="Uniform" />
+				</Border.Background>
+				<Image Source="https://www.lightbeacon.top/pnh/newimgs/1_19/1.19.1-pre1.jpg" Opacity="0" />
+			</Border>
+			<Border Style="{StaticResource verTxtBdr}">
+				<TextBlock Style="{StaticResource verTxtBlk}" Text="1.19.1 PRE1" />
+			</Border>
+
+			<TextBlock Text="更改" Style="{StaticResource h2}" />
+			<StackPanel Style="{StaticResource ListStyle}" Margin="60,10,0,10">
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="悦灵的复制现在有5分钟的冷却时间。" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="随着聊天举报功能的加入，经审查员审核后，被举报的玩家可被禁止加入多人游戏或 Realms。" />
+				<Ellipse />
+				<TextBlock Style="{StaticResource ListItem}" Text="若你已被禁止加入在线游戏，游戏将在开始界面展示一段通知，通知将展示你被封禁的原因和封禁时长。" />
+			</StackPanel>
+
+			<TextBlock Text="本文来源于 苦力怕553 发布于MCBBS上的译文" Style="{StaticResource footnote}" />
+			<!--Logs-->
+			<GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}">
+				<Grid UseLayoutRounding="True" Margin="10,10,10,10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+						<ColumnDefinition Width="10*"></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+					<local:MyButton Style="{StaticResource Read0}" EventData="https://minecraft.fandom.com/zh/wiki/1.19.1-pre1 " ColorType="Highlight" />
+					<local:MyButton Style="{StaticResource Read1}" EventData="https://www.mcbbs.net/thread-1354071-1-1.html" />
+					<local:MyButton Style="{StaticResource Read2}" EventData="https://www.minecraft.net/zh-hans/article/minecraft-1-19-1-pre-release-1" />
+				</Grid>
+			</GroupBox>
+		</StackPanel>
+	</local:MyCard>
