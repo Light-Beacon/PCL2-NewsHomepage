@@ -54,6 +54,11 @@
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
 <Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Paragraph" x:Key="H1" >
+<Setter Property="FontSize" Value="24"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H2" >
 <Setter Property="FontSize" Value="22"/>
 <Setter Property="Margin" Value="0,10,0,5"/>
@@ -295,7 +300,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>    新闻主页正在尝试以新的方式呈现（尽管可能看不出来），若遇到新闻主页某些位置无法打开或内容有误，请先别急！我知道你很急，但是你先别急！
+<Paragraph Style="{StaticResource H1}">新闻主页正在测试！</Paragraph><Paragraph>    新闻主页正在尝试以新的方式呈现（尽管可能看不出来），若遇到新闻主页某些位置无法打开或内容有误，请先别急！我知道你很急，但是你先别急！
 下方的卡片可以帮你查看原来版本的新闻主页，如有需要，可以拿来先凑凑数</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>

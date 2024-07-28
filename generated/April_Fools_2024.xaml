@@ -54,6 +54,11 @@
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
 <Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Paragraph" x:Key="H1" >
+<Setter Property="FontSize" Value="24"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H2" >
 <Setter Property="FontSize" Value="22"/>
 <Setter Property="Margin" Value="0,10,0,5"/>
@@ -274,7 +279,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <StackPanel Margin="20,10,20,30">
     <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新闻主页倒闭了</Paragraph><Paragraph>    由于常年入不敷出（嗯？有入吗），新闻主页即可起宣布倒闭！</Paragraph><Paragraph>    如给您带来不便实在不是因为明天会给您带来更多的不便！感谢您仍支持新闻主页！ </Paragraph><Paragraph>    哎！在这弥留之际让新闻主页给您送上最后一些新闻吧！（还拉了些广告，毕竟多亏一天钱还是多亏一天钱也就是多亏一天钱但是它多亏一天钱）</Paragraph>
+<Paragraph Style="{StaticResource H1}">新闻主页倒闭了！</Paragraph><Paragraph Style="{StaticResource H2}">新闻主页倒闭了</Paragraph><Paragraph>    由于常年入不敷出（嗯？有入吗），新闻主页即可起宣布倒闭！</Paragraph><Paragraph>    如给您带来不便实在不是因为明天会给您带来更多的不便！感谢您仍支持新闻主页！ </Paragraph><Paragraph>    哎！在这弥留之际让新闻主页给您送上最后一些新闻吧！（还拉了些广告，毕竟多亏一天钱还是多亏一天钱也就是多亏一天钱但是它多亏一天钱）</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -283,7 +288,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>    <Bold>大家盼望许久的 MCBBS 今天 正式官宣！复活！</Bold></Paragraph><Paragraph>    据自称论坛管理员的秩序先生说：</Paragraph><Paragraph>    很抱歉 MCBBS 已经停了这么长时间，我们的技术人员正在加班加点修复基树问题，昨天我们的技术人员发来消息，MCBBS的内部功能已经重建完毕，复活成功！</Paragraph><Paragraph>    现在你可以点开 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mcbbs.info">链接</local:MyTextButton></Underline> 欣赏 全新复活的 MCBBS</Paragraph><Paragraph>    嗯？ 等下，好像贴错地址了，不管了，这不重要！</Paragraph><Paragraph>    哦，他在结束采访的时候还说了一句：如果官网进不去的情况可能是因为昨天才是复活节，今天不是。<Italic>（鬼知道他在说什么！）</Italic></Paragraph>
+<Paragraph Style="{StaticResource H1}">MCBBS 复活！</Paragraph><Paragraph>    <Bold>大家盼望许久的 MCBBS 今天 正式官宣！复活！</Bold></Paragraph><Paragraph>    据自称论坛管理员的秩序先生说：</Paragraph><Paragraph>    很抱歉 MCBBS 已经停了这么长时间，我们的技术人员正在加班加点修复基树问题，昨天我们的技术人员发来消息，MCBBS的内部功能已经重建完毕，复活成功！</Paragraph><Paragraph>    现在你可以点开 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mcbbs.info">链接</local:MyTextButton></Underline> 欣赏 全新复活的 MCBBS</Paragraph><Paragraph>    嗯？ 等下，好像贴错地址了，不管了，这不重要！</Paragraph><Paragraph>    哦，他在结束采访的时候还说了一句：如果官网进不去的情况可能是因为昨天才是复活节，今天不是。<Italic>（鬼知道他在说什么！）</Italic></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -291,7 +296,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">乐！快捷人鱼</Paragraph><Paragraph>    你还在苦恼加班加点工作太无聊？还在苦恼老师拖堂上课会犯困？今天开始，烦恼不再！</Paragraph><Paragraph>    <Bold>乐！快捷人鱼</Bold>，是一款由蜜麒麟开发的无尽世界冒险游戏！在这里，你将邂逅一个被人们称为 “快捷人鱼” 的神奇物种</Paragraph><Paragraph>    等下？人鱼和快捷有什么关系？是游得快的人鱼吗？不！一旦你陷入烦恼，你可以随时随地打开“乐！快捷人鱼”，并感叹：“乐！”。这就是我们的产品快捷之处！别人的游戏：50M 30s秒进入，我们的游戏：0 M，5s 进入！这就是快捷人鱼的力量！</Paragraph><Paragraph>    现在不用下载！点击即玩！即刻试玩《乐！快捷人鱼》：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1GJ411x7h7">《乐！快捷人鱼》- LCP小程序</local:MyTextButton></Underline></Paragraph>
+<Paragraph Style="{StaticResource H1}">【广告】</Paragraph><Paragraph Style="{StaticResource H2}">乐！快捷人鱼</Paragraph><Paragraph>    你还在苦恼加班加点工作太无聊？还在苦恼老师拖堂上课会犯困？今天开始，烦恼不再！</Paragraph><Paragraph>    <Bold>乐！快捷人鱼</Bold>，是一款由蜜麒麟开发的无尽世界冒险游戏！在这里，你将邂逅一个被人们称为 “快捷人鱼” 的神奇物种</Paragraph><Paragraph>    等下？人鱼和快捷有什么关系？是游得快的人鱼吗？不！一旦你陷入烦恼，你可以随时随地打开“乐！快捷人鱼”，并感叹：“乐！”。这就是我们的产品快捷之处！别人的游戏：50M 30s秒进入，我们的游戏：0 M，5s 进入！这就是快捷人鱼的力量！</Paragraph><Paragraph>    现在不用下载！点击即玩！即刻试玩《乐！快捷人鱼》：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1GJ411x7h7">《乐！快捷人鱼》- LCP小程序</local:MyTextButton></Underline></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>

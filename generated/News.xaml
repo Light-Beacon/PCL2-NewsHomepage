@@ -54,6 +54,11 @@
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
 <Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Paragraph" x:Key="H1" >
+<Setter Property="FontSize" Value="24"/>
+<Setter Property="Margin" Value="0,10,0,10"/>
+<Setter Property="FontWeight" Value="Bold"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H2" >
 <Setter Property="FontSize" Value="22"/>
 <Setter Property="Margin" Value="0,10,0,5"/>
@@ -316,7 +321,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>它们以更慢的 3.5 秒而不是 2 秒的间隔进行攻击。</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>被玩家击杀时有几率掉落毒箭。</Paragraph></ListItem>
-<ListItem><Paragraph>这些长满苔藓和蘑菇的骷髅在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沼泽">沼泽</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/红树林沼泽">红树林沼泽</local:MyTextButton></Underline>中自然生成。</Paragraph><List>
+<ListItem><Paragraph>这些长满苔藓和蘑菇的骷髅在<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沼泽">沼泽</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/红树林沼泽">红树林沼泽</local:MyTextButton></Underline>中自然生成。</Paragraph><List>
 <ListItem><Paragraph>也可以在某些试炼室的试炼刷怪笼中生成</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>被击杀时掉落 2 个蘑菇（红色、棕色或各一个）</Paragraph></ListItem>
@@ -325,7 +330,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ListItem><Paragraph>重锤</Paragraph><List>
 <ListItem><Paragraph>一种新的重型武器，可以粉碎你的敌人！</Paragraph><List>
 <ListItem><Paragraph>拥有 5 点的基础伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>能被<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风棒">旋风棒</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沉重核心">沉重核心</local:MyTextButton></Underline>合成。</Paragraph></ListItem>
+<ListItem><Paragraph>能被<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风棒">旋风棒</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沉重核心">沉重核心</local:MyTextButton></Underline>合成。</Paragraph></ListItem>
 <ListItem><Paragraph>使用它会减少耐久，就像其他武器一样；能被旋风棒在铁砧里修复。</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>拥有一种独特的攻击方式：猛击。当玩家手持重锤从高于 1.5 个方块的高度落下攻击实体，就会引发拥有如下效果的 “猛击”：</Paragraph><List>
@@ -413,7 +418,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>    很抱歉由于工作疏漏可能会导致新闻主页出现一些问题。
+<Paragraph Style="{StaticResource H1}">📢 关于反馈新闻主页相关问题的提示</Paragraph><Paragraph>    很抱歉由于工作疏漏可能会导致新闻主页出现一些问题。
 但有人往 PCL2 反馈提交新闻主页 Bug ...... 你交错地了！</Paragraph><Paragraph>    如果是 <Bold>由于加载新闻主页出现的问题</Bold>，请在 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage">我的 GitHub 仓库</local:MyTextButton></Underline> 交 Issue <Bold>而不是</Bold>在 PCL2 反馈交反馈（PCL2 不背锅）。
 你可以点击新闻主页最下方反馈按钮提交反馈</Paragraph>
 </FlowDocument>
