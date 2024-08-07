@@ -262,6 +262,12 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 </Grid>
 
 
+
+
+<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-08-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel>
+
 </StackPanel>
 </local:MyCard><local:MyCard Title="" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
@@ -295,6 +301,12 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 </BlockUIContainer><Paragraph></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
+
+
+<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-08-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel>
+
 </StackPanel>
 </local:MyCard><ContentControl Content="最  新  新  闻" Template="{StaticResource Separator}"/><local:MyCard Title="新闻主页正在测试！" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
@@ -304,6 +316,12 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 下方的卡片可以帮你查看原来版本的新闻主页，如有需要，可以拿来先凑凑数</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
+
+
+<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-08-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel>
+
 </StackPanel>
 </local:MyCard><local:MyCard Title="更多页面..." Margin="0,5">
     <StackPanel Margin="25,40,23,15">
