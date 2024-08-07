@@ -16,9 +16,13 @@ def version_achive_list(cat_name,proj:Project,card,**_):
     cards.sort(key=lambda card:ID_LIST.index(format_code(card['version-id'],
                                                          card=card,project=proj)))
     if len(cards) > 0 and cards[0]['version-type-id'] not in ['Release','April-Fools']:
-        code += res.components['VersionLinks/Future-Release']
+        code += res.components['VersionLinks/Future']
     for vercard in cards:
-        code += format_code(code = res.components[f'VersionLinks/{vercard["version-type-id"]}'],
+        if vercard.get('lack'):
+            code += format_code(code = res.components['VersionLinks/Lack'],
+                            card=vercard,project=proj)
+        else:
+            code += format_code(code = res.components['VersionLinks/Common'],
                             card=vercard,project=proj)
     code += '</StackPanel>'
     return code
