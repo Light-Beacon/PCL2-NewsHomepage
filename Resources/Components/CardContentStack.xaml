@@ -2,8 +2,8 @@
 ${$ChildrenPresenter}
 
 ${@IF|${last_update}|
-<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
 <TextBlock Text="最后更新: ${last_update}" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel>
+</StackPanel> -->
 }
 </StackPanel>

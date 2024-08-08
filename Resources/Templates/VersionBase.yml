@@ -2,7 +2,7 @@ components:
  - ${@IF|${version-image-link}|VersionHeaderImage}
  - FlowDocumentViewer
  - ${@IF|${not_finished}|Loading}
- - ${@IF|!${disable-websites}|VersionWebsites}
+ - ${@IF|!${disable-translator}|TranslatorBar}
  - ${@IF|!${disable-toolbar}|VersionToolBar}
 base: Card
 fill:
