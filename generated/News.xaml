@@ -192,20 +192,21 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="最新发布候选版 - 1.21.1-rc1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/08/07/1.21.1-rc1_header-1.jpg" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/08/08/1.21.1_1170x500-1.jpg" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/08/07/1.21.1-rc1_header-1.jpg" Opacity="0" Stretch="Fill"/>
+<Image Source="https://image.stapxs.cn/i/2024/08/08/1.21.1_1170x500-1.jpg" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21.1-rc1" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21.1" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
 <ListItem><Paragraph>增加了索西语与白俄罗斯语（拉丁）的支持</Paragraph></ListItem>
+<ListItem><Paragraph>修复可能会被用于使服务器崩溃的关键漏洞</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
@@ -214,8 +215,8 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 <ColumnDefinition Width="20*"/>
 <ColumnDefinition Width="12*"/>
 </Grid.ColumnDefinitions>
-<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="https://zh.minecraft.wiki/w/Java版1.21.1-rc1" ColorType="Highlight" />
-<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-1-21-1-release-candidate-1"/>
+<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="https://zh.minecraft.wiki/w/Java版1.21.1" ColorType="Highlight" />
+<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-java-edition-1-21-1"/>
 </Grid>
 </GroupBox><Grid Margin="0,10,6,0">
 
@@ -228,13 +229,13 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 
 
 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1-rc1" EventType="启动游戏"
-    EventData="1.21.1-rc1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1" EventType="启动游戏"
+    EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/e56720aba46f7f07238c4c054a160fc942da9f78/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar" Logo="{StaticResource CloudIcon}" />
 
 </StackPanel>
 </Grid>
@@ -247,214 +248,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 </StackPanel>
 
 </StackPanel>
-</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="最新正式版 - 1.21" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/06/13/image.png" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/06/13/image.png" Opacity="0" Stretch="Fill"/>
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21" />
-</Border><FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph>    今天是绝妙的一天，因为今天是正式版星期四！并且这天和以往正式版发布日不同，本次发布更加特别，因为我们带来了 Minecraft: Java 版 1.21，也被称作 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/棘巧试炼">棘巧试炼</local:MyTextButton></Underline> 更新！</Paragraph><Paragraph>    独自或和朋友一起步入危险的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/试炼密室">试炼密室</local:MyTextButton></Underline> ，与新生物 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风人">旋风人</local:MyTextButton></Underline> 较量，制造全新的强大武器—— <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/重锤">重锤</local:MyTextButton></Underline>！将 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/合成器">合成器</local:MyTextButton></Underline> 和 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/风弹">风弹</local:MyTextButton></Underline> 装入您巧妙的红石设计中，发现更多铜和凝灰岩制成的装饰方块，享受新的 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/画">画</local:MyTextButton></Underline>、<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/音乐唱片">音乐唱片</local:MyTextButton></Underline> 以及更多内容！</Paragraph><Paragraph>    这还不是本次更新的全部内容，在技术性方面，棘巧试炼宣告了数据包的新纪元——数据驱动的魔咒、画和音乐唱片。通过本次更新，我们也同样对 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/24w19a">24w19a</local:MyTextButton></Underline> 引入的区块加载进行了性能提升，相比之前系统减少了内存占用和 CPU 开销。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph>添加了新地下结构——试炼密室</Paragraph></ListItem>
-<ListItem><Paragraph>添加了两种新生物</Paragraph><List>
-<ListItem><Paragraph>沼骸</Paragraph></ListItem>
-<ListItem><Paragraph>旋风人</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>添加了新武器——重锤</Paragraph></ListItem>
-<ListItem><Paragraph>添加了三种重锤独有的魔咒</Paragraph><List>
-<ListItem><Paragraph>致密魔咒</Paragraph></ListItem>
-<ListItem><Paragraph>破甲魔咒</Paragraph></ListItem>
-<ListItem><Paragraph>风爆魔咒</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>添加了下列方块</Paragraph><List>
-<ListItem><Paragraph>合成器</Paragraph></ListItem>
-<ListItem><Paragraph>试炼刷怪笼</Paragraph></ListItem>
-<ListItem><Paragraph>不祥试炼刷怪笼</Paragraph></ListItem>
-<ListItem><Paragraph>宝库</Paragraph></ListItem>
-<ListItem><Paragraph>不祥宝库</Paragraph></ListItem>
-<ListItem><Paragraph>凝灰岩新变种</Paragraph></ListItem>
-<ListItem><Paragraph>铜质新变种</Paragraph></ListItem>
-<ListItem><Paragraph>沉重核心</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>添加了下列物品</Paragraph><List>
-<ListItem><Paragraph>试炼探险家地图</Paragraph></ListItem>
-<ListItem><Paragraph>不祥之瓶</Paragraph></ListItem>
-<ListItem><Paragraph>风弹</Paragraph></ListItem>
-<ListItem><Paragraph>试炼钥匙</Paragraph></ListItem>
-<ListItem><Paragraph>不祥试炼钥匙</Paragraph></ListItem>
-<ListItem><Paragraph>旋风棒</Paragraph></ListItem>
-<ListItem><Paragraph>三种新陶片</Paragraph></ListItem>
-<ListItem><Paragraph>两种新旗帜图案</Paragraph></ListItem>
-<ListItem><Paragraph>两种锻造模板</Paragraph></ListItem>
-<ListItem><Paragraph>四种新药水及其对应的喷溅药水和滞留药水</Paragraph><List>
-<ListItem><Paragraph>虫蚀药水</Paragraph></ListItem>
-<ListItem><Paragraph>渗浆药水</Paragraph></ListItem>
-<ListItem><Paragraph>盘丝药水</Paragraph></ListItem>
-<ListItem><Paragraph>蓄风药水</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>四种新药箭</Paragraph><List>
-<ListItem><Paragraph>虫蚀药箭</Paragraph></ListItem>
-<ListItem><Paragraph>渗浆药箭</Paragraph></ListItem>
-<ListItem><Paragraph>盘丝药箭</Paragraph></ListItem>
-<ListItem><Paragraph>蓄风药箭</Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>添加了三张由 Aaron Cherof 和 Lena Raine 创作的新音乐唱片</Paragraph></ListItem>
-<ListItem><Paragraph>添加了二十幅新画</Paragraph><List>
-<ListItem><Paragraph>五幅由 Sarah Boeving 创作</Paragraph></ListItem>
-<ListItem><Paragraph>十五幅由 Kristoffer Zetterstrand 创作</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>重新设计了不祥之兆以触发不祥事件</Paragraph></ListItem>
-<ListItem><Paragraph>添加了六种新状态效果</Paragraph><List>
-<ListItem><Paragraph>寄生效果</Paragraph></ListItem>
-<ListItem><Paragraph>渗浆效果</Paragraph></ListItem>
-<ListItem><Paragraph>盘丝效果</Paragraph></ListItem>
-<ListItem><Paragraph>蓄风效果</Paragraph></ListItem>
-<ListItem><Paragraph>袭击之兆效果</Paragraph></ListItem>
-<ListItem><Paragraph>试炼之兆效果</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>添加了九首由 Aaron Cherof，Kumi Tanioka 和 谷冈久美 创作的音乐曲目</Paragraph></ListItem>
-<ListItem><Paragraph>添加了八个新进度</Paragraph></ListItem>
-<ListItem><Paragraph>添加了四种洞穴环境音效</Paragraph></ListItem>
-<ListItem><Paragraph>船现在可以被拴绳拴住</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">结构</Paragraph><Paragraph Style="{StaticResource H4}">试炼密室</Paragraph><List>
-<ListItem><Paragraph>试炼密室是一个在主世界生成的新的结构，玩家可以在此探索，应对作战的挑战。</Paragraph><List>
-<ListItem><Paragraph>由一些铜块和圆石组成，有多种大小。</Paragraph></ListItem>
-<ListItem><Paragraph>相对地，在地下深板岩层生成较多。</Paragraph></ListItem>
-<ListItem><Paragraph>类似于远古城市，正常生物不在其中自然生成。</Paragraph></ListItem>
-<ListItem><Paragraph>永远不会在深渊生物群系生成，但有可能覆盖深渊生物群系。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>每个试炼密室的布局都是程序性的，可能会包括陷阱、奖励箱和各种作战区域。</Paragraph><List>
-<ListItem><Paragraph>走廊上排布了饰纹陶罐，里面装着隐藏的宝藏。</Paragraph></ListItem>
-<ListItem><Paragraph>供应桶可以在房间之间找到，为您提供方块和物品，帮助您进行试炼。</Paragraph></ListItem>
-<ListItem><Paragraph>需要经过挑战才能开启宝库。宝库中有许多高级附魔书和装备，也是获得三叉戟的难得机会。</Paragraph></ListItem>
-<ListItem><Paragraph>不祥宝库生成在一些更难接触的地方，提供更好的战利品，还有一些不详宝库特有的战利品。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>每个试炼密室包含试炼刷怪笼，生成近战生物、小型近战生物和远程攻击生物：</Paragraph><List>
-<ListItem><Paragraph>近战生物：僵尸、尸壳、蜘蛛。</Paragraph></ListItem>
-<ListItem><Paragraph>小型近战生物：史莱姆、洞穴蜘蛛、幼年僵尸、蠹虫。</Paragraph></ListItem>
-<ListItem><Paragraph>远程攻击生物：骷髅、流浪者、沼骸</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>每个试炼刷怪笼只生成每类生物中的一种，这些生物对于 同一个试炼密室中的 每个试炼刷怪笼是随机的。</Paragraph><List>
-<ListItem><Paragraph>比如，一个试炼密室可能只生成僵尸、史莱姆和骷髅，而另一个试炼密室可能只生成蜘蛛、蠹虫和骷髅。</Paragraph></ListItem>
-<ListItem><Paragraph>例外是：在一些特定房间中的试炼刷怪笼，可能只生成旋风人。</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">生物</Paragraph><List>
-<ListItem><Paragraph>旋风人</Paragraph><List>
-<ListItem><Paragraph>一种狡猾的敌对生物，由试炼密室中的试炼刷怪笼生成。</Paragraph><List>
-<ListItem><Paragraph>在被玩家击杀时掉落 1-2 根旋风棒。</Paragraph></ListItem>
-<ListItem><Paragraph>旋风棒掉落数量受抢夺附魔影响。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>主要通过绕着目标跳跃来移动。</Paragraph></ListItem>
-<ListItem><Paragraph>几乎可以偏转所有弹射物，使其对远程攻击免疫。</Paragraph><List>
-<ListItem><Paragraph>值得注意的是，有一种例外：旋风人不能偏转风弹。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>作为一个有进攻性的对手，它以风弹的形式向目标发射挥发性风能。</Paragraph><List>
-<ListItem><Paragraph>在与实体或方块碰撞后，风弹会产生风爆，它能对周围的实体造成击退作用。</Paragraph></ListItem>
-<ListItem><Paragraph>风弹直接与实体相撞时，会对它造成较少的伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>风弹在碰撞时会破坏装饰的花盆和花簇。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>风爆能“激活”下列特指的方块：</Paragraph><List>
-<ListItem><Paragraph>非铁质的门和陷阱门（会被开启或关闭）</Paragraph></ListItem>
-<ListItem><Paragraph>栅栏门（会被开启或关闭）</Paragraph></ListItem>
-<ListItem><Paragraph>按钮（会被按动）</Paragraph></ListItem>
-<ListItem><Paragraph>拉杆（会被拉动）</Paragraph></ListItem>
-<ListItem><Paragraph>钟（会鸣响并摆动）</Paragraph></ListItem>
-<ListItem><Paragraph>点亮的蜡烛（会熄灭）</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>风爆对铁门、铁活板门或任何被红石信号固定在其位置的方块没有任何影响</Paragraph></ListItem>
-<ListItem><Paragraph>不会报复来自以下生物的攻击：骷髅、流浪者、沼骸、僵尸、尸壳、蜘蛛、洞穴蜘蛛和史莱姆</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>沼骸 </Paragraph><List>
-<ListItem><Paragraph>骷髅的新变种，可以射出毒箭。</Paragraph><List>
-<ListItem><Paragraph>它们拥有 16 点生命值（而不是 20 点生命值），因此更容易被击倒。</Paragraph></ListItem>
-<ListItem><Paragraph>它们以更慢的 3.5 秒而不是 2 秒的间隔进行攻击。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>被玩家击杀时有几率掉落毒箭。</Paragraph></ListItem>
-<ListItem><Paragraph>这些长满苔藓和蘑菇的骷髅在<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沼泽">沼泽</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/红树林沼泽">红树林沼泽</local:MyTextButton></Underline>中自然生成。</Paragraph><List>
-<ListItem><Paragraph>也可以在某些试炼室的试炼刷怪笼中生成</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>被击杀时掉落 2 个蘑菇（红色、棕色或各一个）</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">武器</Paragraph><List>
-<ListItem><Paragraph>重锤</Paragraph><List>
-<ListItem><Paragraph>一种新的重型武器，可以粉碎你的敌人！</Paragraph><List>
-<ListItem><Paragraph>拥有 5 点的基础伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>能被<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/旋风棒">旋风棒</local:MyTextButton></Underline>和<Underline><local:MyTextButton Margin="0,0,0,-9" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/沉重核心">沉重核心</local:MyTextButton></Underline>合成。</Paragraph></ListItem>
-<ListItem><Paragraph>使用它会减少耐久，就像其他武器一样；能被旋风棒在铁砧里修复。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>拥有一种独特的攻击方式：猛击。当玩家手持重锤从高于 1.5 个方块的高度落下攻击实体，就会引发拥有如下效果的 “猛击”：</Paragraph><List>
-<ListItem><Paragraph>安全着陆：重置所有垂直动能，并抵消任何跌落导致的摔落伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>额外伤害：当玩家掉落的距离越远，它造成的伤害越高：</Paragraph><List>
-<ListItem><Paragraph>对于前 3 格下落高度，每格增加 4 点伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>对于第 4-8 格下落高度，每格增加 2 点伤害。</Paragraph></ListItem>
-<ListItem><Paragraph>对于之后的下落高度，每格增加 1 点伤害。</Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>强力击退：其他在被击中实体附近的敌人实体将会被重锤产生的无穷力量击退。</Paragraph></ListItem>
-<ListItem><Paragraph>可以与风弹结合使用来让玩家升高，进行毁灭性的“猛击”。</Paragraph></ListItem>
-<ListItem><Paragraph>以下附魔能被应用于重锤：</Paragraph><List>
-<ListItem><Paragraph>经验修补</Paragraph></ListItem>
-<ListItem><Paragraph>耐久</Paragraph></ListItem>
-<ListItem><Paragraph>亡灵杀手</Paragraph></ListItem>
-<ListItem><Paragraph>节肢杀手</Paragraph></ListItem>
-<ListItem><Paragraph>火焰附加</Paragraph></ListItem>
-<ListItem><Paragraph>消失诅咒</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>重锤拥有如下的独有附魔：</Paragraph><List>
-<ListItem><Paragraph>致密</Paragraph></ListItem>
-<ListItem><Paragraph>破甲</Paragraph></ListItem>
-<ListItem><Paragraph>风爆</Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>正式版本文章内容过长，其余部分将会在之后翻译，若需要可先见 Minecraft Wiki 或 新闻主页 1.21 更新日志存档</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer><GroupBox Header="阅读完整日志" BorderBrush="{DynamicResource ColorBrush3}" Margin="0,10,0,0">
-<Grid UseLayoutRounding="True" Margin="10,10,10,10">
-<Grid.ColumnDefinitions>
-<ColumnDefinition Width="20*"/>
-<ColumnDefinition Width="12*"/>
-</Grid.ColumnDefinitions>
-<local:MyButton Style="{StaticResource WikiLinkButton}" EventData="https://zh.minecraft.wiki/w/Java版1.21" ColorType="Highlight" />
-<local:MyButton Style="{StaticResource OfficalLinkButton}" EventData="https://minecraft.net/article/minecraft-java-edition-1-21"/>
-</Grid>
-</GroupBox><Grid Margin="0,10,6,0">
-
-
-<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 1.21" EventType="启动游戏"
-    EventData="1.21" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
-<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
-    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
-
-<local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/450698d1863ab5180c25d7c804ef0fe6369dd1ba/server.jar" Logo="{StaticResource CloudIcon}" />
-
-</StackPanel>
-</Grid>
-
-
-<StackPanel Margin="0,10,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<Path Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush4}"
-                    Stretch="Uniform"
-                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
-<TextBlock Text="By 最亮的信标、WorldHim、柚子柚子" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel>
-
-
-
-<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-08-08" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel>
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="更多页面..." Margin="0,5">
+</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="更多页面..." Margin="0,5">
     <StackPanel Margin="25,40,23,15">
     <Grid>
       <Grid.ColumnDefinitions>
@@ -498,8 +292,8 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="018dc46" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/018dc46461d19082e7b175f7356eaf23ecfdac39"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="f4dfe57" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/f4dfe575a963ac6609e358cf47906f139e3be8c7"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
