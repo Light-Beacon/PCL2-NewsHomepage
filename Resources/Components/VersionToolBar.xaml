@@ -1,4 +1,4 @@
-<WrapPanel Margin="0,10,6,0" Orientation="Horizontal" VerticalAlignment="Center">
+<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 ${version-id}" EventType="启动游戏"
     EventData="${version-id}" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"

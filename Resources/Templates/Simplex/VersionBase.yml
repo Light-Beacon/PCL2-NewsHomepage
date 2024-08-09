@@ -1,0 +1,10 @@
+components:
+ - ${@IF|${version-image-link}|VersionHeaderImage}
+ - FlowDocumentViewer
+ - ${@IF|${not_finished}|Loading}
+ - ${@IF|!${disable-translator}|TranslatorBar}
+ - ${@IF|${last_update}|LastUpdateBox}
+ - ${@IF|!${disable-toolbar}|VersionToolBar}
+base: Card
+fill:
+   loading_content: 翻译施工中

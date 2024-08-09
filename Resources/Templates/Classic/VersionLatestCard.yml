@@ -1,0 +1,11 @@
+components:
+ - $MarkdownPresenter
+base: Classic/VersionMarkdownCard
+filter:
+  file_exten:
+    - md
+    - markdown
+  skin: classic
+  latest: true
+cover:
+  title: 最新${version-type} - ${version-id}
