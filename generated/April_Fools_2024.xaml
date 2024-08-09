@@ -198,6 +198,84 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </TextBlock>
     </Grid>
 </Border>
+</local:MyCard><local:MyCard Title="毒马铃薯更新！--你所期待的粉糊糊状更新！" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/04/01/image.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://image.stapxs.cn/i/2024/04/01/image.png" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w14potato" />
+</Border><FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph>    想象一下成为一只马铃薯。现在想象一下你是马铃薯家族中不太受欢迎的兄弟姐妹，没有继承家族其他人拥有的美味块茎。更糟糕的是——你正面临着不可能作出的决定——该如何处理所有这些淀粉？既然薯条和沙发土豆都不适合你，那么我们只剩下了一个选择。恭喜你，朋友，你成为了<Italic>毒</Italic>马铃薯。</Paragraph><Paragraph>    历年来，Minecraft 的毒块茎一直被低估和忽视，既无目的也无用途。几年来，你——社区——尝试凸显它，不知疲倦地让它引起我们的注意，并渴求我们为它带来更多功能。就在今天，你们的担忧已成为过去。</Paragraph><Paragraph>    Mojang Studios 自豪的发布我们最熟透的更新，会向毒马铃薯加入超多用途，即使是马铃薯厌都能成为忠实的土豆芽。<Bold>毒马铃薯更新</Bold> ——碳水和特性浓度都超高！你们要，我们给。或者你甚至没有要，但是我们还是给了上来？无论如何，它就在这里！</Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_01.png"/>
+</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_02.png"/>
+</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_03_1.png"/>
+</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_04.png"/>
+</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_05_1.png"/>
+</BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H2}">获取<Span TextDecorations="Strikethrough"> 快照 </Span>更新</Paragraph><Paragraph>    Minecraft：Java 版的快照可供下载。下载该快照你只需要打开 Minecraft 启动器（译者：或者你现在用的这个也行），在 “安装”栏 中启用快照。你甚至可以在自己的 Java Realms 和你的朋友一起玩！</Paragraph><Paragraph>    记住，快照会腐化你的世界，请在于主存档不同的文件夹下备份世界和/或运行快照。</Paragraph><Paragraph>    <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://piston-data.mojang.com/v1/objects/846d3fe65b6dab3f8bf929a601e1f83d801d919c/server.jar">-&gt; 下载跨平台服务端</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H2}">毒马铃薯 ADD-ON</Paragraph><Paragraph>    毒马铃薯的根茎深植于 Minecraft 甚至超出了 Java 版。因此，块茎轰动撒播其影响到基岩版也不足为奇。使用 Jigarbov 的 毒马铃薯 add-on，你能够体验毒马铃薯的乐趣——通过方块与家具乃至武器与护甲。</Paragraph><Paragraph>    <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/marketplace/pdp?id=790be090-9bce-4870-85e7-cd868402c3e5">-&gt; 获取 ADD-ON</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H2}">游戏性与功能</Paragraph><Paragraph Style="{StaticResource H3}">常规</Paragraph><List>
+<ListItem><Paragraph>毒马铃薯 —— <Bold>超多</Bold>毒马铃薯！</Paragraph></ListItem>
+<ListItem><Paragraph>也有一些普通马铃薯！</Paragraph></ListItem>
+<ListItem><Paragraph>增加了毒马铃薯维度</Paragraph><List>
+<ListItem><Paragraph>所有马铃薯类的家乡</Paragraph></ListItem>
+<ListItem><Paragraph>五个薯极了的生物群系：田地、荒地、植物园、腐烂之地和不毛之地</Paragraph></ListItem>
+<ListItem><Paragraph>体验马铃薯的生活 —— 从在地里刨的生土豆开始，到煎好的薯饼，再到最终的腐烂</Paragraph></ListItem>
+<ListItem><Paragraph>有着碾碎效果的本地天气</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了角斗场，马铃薯王的故乡......</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块</Paragraph><List>
+<ListItem><Paragraph>一整袋剥皮方块</Paragraph></ListItem>
+<ListItem><Paragraph>丰富的维他命 C，维B6，以及烟酸！</Paragraph></ListItem>
+<ListItem><Paragraph>没有新的矿物方块。不需要！方块自身就包含微量元素：钾、镁和铁！</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品</Paragraph><List>
+<ListItem><Paragraph>增加了煎炸桌——每个人都求我们加，所以我们加了。它烹炸各种马铃薯。真是个不错的模型！</Paragraph></ListItem>
+<ListItem><Paragraph>为制箭台增加了功能。现在你可以给毒树脂装上羽毛变成更精炼版本的树脂</Paragraph></ListItem>
+<ListItem><Paragraph>由于纯度过高所以添加了杂质</Paragraph></ListItem>
+<ListItem><Paragraph>增加了一大堆新的小工具，将你的毒马铃薯游戏调升至十一</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物</Paragraph><List>
+<ListItem><Paragraph>你现在懂了。他们全是毒马铃薯...</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>通量电容器集成现在与量子体素化协同工作，实现了 360 noscope 增强实时 RTX 地形渲染夜影多盒频谱加速，同时优化了跨维实体同步，实现了无缝的维特罗特-金-爱德华兹-拉塞尔-伯班克体验！</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">常见问题</Paragraph><Paragraph Style="{StaticResource H3}">下载本次更新会发生什么</Paragraph><Paragraph>    然后你会自豪地成为更新文件的所有者。</Paragraph><Paragraph Style="{StaticResource H3}">在游戏内容方面我能期待什么？</Paragraph><Paragraph>    毒马铃薯。我希望这篇文章已经说的很清楚了。</Paragraph><Paragraph Style="{StaticResource H3}">我不敢想象我要了这次更新，如果我实话说的话</Paragraph><Paragraph>    你可能没有——但你的<Italic>脑子</Italic>（或者也许是肚子）要了！</Paragraph><Paragraph Style="{StaticResource H3}">目前还有没有仍在进行的基于碳水化合物的更新</Paragraph><Paragraph>    很好的问题！敬请期待在非常遥远的未来的核辐射大米更新以及剧毒芋头更新！</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+<Grid VerticalAlignment="Center" Margin="6,10,0,0" HorizontalAlignment="Right">
+<Grid.ColumnDefinitions >
+<ColumnDefinition Width="45"/>
+<ColumnDefinition />
+</Grid.ColumnDefinitions>
+<Path Grid.Column="0" Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush4}"
+                    Stretch="Uniform"
+                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
+<TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</Grid>
+
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-08-09" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<local:MyIconTextButton Text="启动" ToolTip="启动 24w14potato" EventType="启动游戏"
+    EventData="24w14potato" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
+    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
+
+<local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
+    EventData="https://zh.minecraft.wiki/w/24w14potato" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+<local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
+    EventData="https://www.minecraft.net/en-us/article/poisonous-potato-update" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+</WrapPanel>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-08-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
 </local:MyCard><local:MyCard Title="新闻主页倒闭了！" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Margin="0,40,0,0">
 <StackPanel HorizontalAlignment="Center">
