@@ -1,5 +1,5 @@
 components:
- - ${@IF|!${disable-versionimage}}|${@IF|${version-image-link}|VersionHeaderImage}}
+ - ${@IF|!${disable-versionimage}|${@IF|${version-image-link}|VersionHeaderImage}}
  - FlowDocumentViewer
  - ${@IF|${not_finished}|Loading}
  - ${@IF|!${disable-translator}|TranslatorBar}
