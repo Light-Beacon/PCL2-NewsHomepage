@@ -3,7 +3,7 @@ components:
  - FlowDocumentViewer
  - ${@IF|${not_finished}|Loading}
  - ${@IF|!${disable-translator}|TranslatorBar}
- - ${@IF|${last_update}|LastUpdateBox}
+ - ${@IF|!${disable-lastupdate}|LastUpdateBox}
  - ${@IF|!${disable-toolbar}|VersionToolBar}
 base: Card
 fill:
