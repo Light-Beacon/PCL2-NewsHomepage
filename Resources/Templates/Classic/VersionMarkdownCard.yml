@@ -1,7 +1,8 @@
 components:
  - $MarkdownPresenter
-base: VersionBase
+base: Classic/VersionBase
 filter:
   file_exten:
     - md
     - markdown
+  skin: classic

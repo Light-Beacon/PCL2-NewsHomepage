@@ -1,0 +1,7 @@
+components:
+ - $MarkdownPresenter
+base: Simplex/VersionBase
+filter:
+  file_exten:
+    - md
+    - markdown
