@@ -1,0 +1,14 @@
+name: 新闻主页最简主界面
+alias:
+ - MinimalHomepage
+ - Mini
+ - mini
+cards:
+ - ${@MainPageVersions|new}
+ - ${@MainPageVersions|history}
+ - MinimalFooter
+fill:
+   disable-versionimage: true
+   disable-toolbar: true
+   disable-translator: true
+   disable-lastupdate: true
