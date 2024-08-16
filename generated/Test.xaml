@@ -74,6 +74,10 @@
 <Setter Property="Margin" Value="0,3,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
+</Style><Style TargetType="Paragraph" x:Key="H5" >
+<Setter Property="FontSize" Value="15"/>
+<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Border" x:Key="Quote" >
 <Setter Property="BorderThickness" Value="5,0,0,0"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
@@ -400,7 +404,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>悬挂式告示牌比普通的告示牌更昂贵</Paragraph><List>
 <ListItem><Paragraph>需要2个锁链和6个指定木头种类的去皮原木可合成6个悬挂式告示牌</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">告示牌</Paragraph><Paragraph>    以下更改同时应用于普通的和悬挂式告示牌
+</List><Paragraph Style="{StaticResource H3}">告示牌</Paragraph>    <Paragraph>以下更改同时应用于普通的和悬挂式告示牌
 * 放置后，告示牌上的文字现在可以编辑了
     * 与告示牌交互即可编辑
     * 含有非纯文字文本（译注：如右键可执行命令的、含有本地化字符串等）的告示牌无法编辑

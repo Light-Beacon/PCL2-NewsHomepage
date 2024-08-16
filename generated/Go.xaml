@@ -74,6 +74,10 @@
 <Setter Property="Margin" Value="0,3,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
+</Style><Style TargetType="Paragraph" x:Key="H5" >
+<Setter Property="FontSize" Value="15"/>
+<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Border" x:Key="Quote" >
 <Setter Property="BorderThickness" Value="5,0,0,0"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>

@@ -74,6 +74,10 @@
 <Setter Property="Margin" Value="0,3,0,5"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
+</Style><Style TargetType="Paragraph" x:Key="H5" >
+<Setter Property="FontSize" Value="15"/>
+<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Border" x:Key="Quote" >
 <Setter Property="BorderThickness" Value="5,0,0,0"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
@@ -210,17 +214,17 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w14potato" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>    想象一下成为一只马铃薯。现在想象一下你是马铃薯家族中不太受欢迎的兄弟姐妹，没有继承家族其他人拥有的美味块茎。更糟糕的是——你正面临着不可能作出的决定——该如何处理所有这些淀粉？既然薯条和沙发土豆都不适合你，那么我们只剩下了一个选择。恭喜你，朋友，你成为了<Italic>毒</Italic>马铃薯。</Paragraph><Paragraph>    历年来，Minecraft 的毒块茎一直被低估和忽视，既无目的也无用途。几年来，你——社区——尝试凸显它，不知疲倦地让它引起我们的注意，并渴求我们为它带来更多功能。就在今天，你们的担忧已成为过去。</Paragraph><Paragraph>    Mojang Studios 自豪的发布我们最熟透的更新，会向毒马铃薯加入超多用途，即使是马铃薯厌都能成为忠实的土豆芽。<Bold>毒马铃薯更新</Bold> ——碳水和特性浓度都超高！你们要，我们给。或者你甚至没有要，但是我们还是给了上来？无论如何，它就在这里！</Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+    <Paragraph>想象一下成为一只马铃薯。现在想象一下你是马铃薯家族中不太受欢迎的兄弟姐妹，没有继承家族其他人拥有的美味块茎。更糟糕的是——你正面临着不可能作出的决定——该如何处理所有这些淀粉？既然薯条和沙发土豆都不适合你，那么我们只剩下了一个选择。恭喜你，朋友，你成为了<Italic>毒</Italic>马铃薯。</Paragraph>    <Paragraph>历年来，Minecraft 的毒块茎一直被低估和忽视，既无目的也无用途。几年来，你——社区——尝试凸显它，不知疲倦地让它引起我们的注意，并渴求我们为它带来更多功能。就在今天，你们的担忧已成为过去。</Paragraph>    <Paragraph>Mojang Studios 自豪的发布我们最熟透的更新，会向毒马铃薯加入超多用途，即使是马铃薯厌都能成为忠实的土豆芽。<Bold>毒马铃薯更新</Bold> ——碳水和特性浓度都超高！你们要，我们给。或者你甚至没有要，但是我们还是给了上来？无论如何，它就在这里！</Paragraph>    <BlockUIContainer>
 <Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_01.png"/>
-</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+</BlockUIContainer>    <BlockUIContainer>
 <Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_02.png"/>
-</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+</BlockUIContainer>    <BlockUIContainer>
 <Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_03_1.png"/>
-</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+</BlockUIContainer>    <BlockUIContainer>
 <Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_04.png"/>
-</BlockUIContainer><Paragraph></Paragraph><Paragraph>    </Paragraph><BlockUIContainer>
+</BlockUIContainer>    <BlockUIContainer>
 <Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/04/01/april-fools_poisonous-potato_graphic_05_1.png"/>
-</BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H2}">获取<Span TextDecorations="Strikethrough"> 快照 </Span>更新</Paragraph><Paragraph>    Minecraft：Java 版的快照可供下载。下载该快照你只需要打开 Minecraft 启动器（译者：或者你现在用的这个也行），在 “安装”栏 中启用快照。你甚至可以在自己的 Java Realms 和你的朋友一起玩！</Paragraph><Paragraph>    记住，快照会腐化你的世界，请在于主存档不同的文件夹下备份世界和/或运行快照。</Paragraph><Paragraph>    <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://piston-data.mojang.com/v1/objects/846d3fe65b6dab3f8bf929a601e1f83d801d919c/server.jar">-&gt; 下载跨平台服务端</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H2}">毒马铃薯 ADD-ON</Paragraph><Paragraph>    毒马铃薯的根茎深植于 Minecraft 甚至超出了 Java 版。因此，块茎轰动撒播其影响到基岩版也不足为奇。使用 Jigarbov 的 毒马铃薯 add-on，你能够体验毒马铃薯的乐趣——通过方块与家具乃至武器与护甲。</Paragraph><Paragraph>    <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/marketplace/pdp?id=790be090-9bce-4870-85e7-cd868402c3e5">-&gt; 获取 ADD-ON</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H2}">游戏性与功能</Paragraph><Paragraph Style="{StaticResource H3}">常规</Paragraph><List>
+</BlockUIContainer><Paragraph Style="{StaticResource H2}">获取<Span TextDecorations="Strikethrough"> 快照 </Span>更新</Paragraph>    <Paragraph>Minecraft：Java 版的快照可供下载。下载该快照你只需要打开 Minecraft 启动器（译者：或者你现在用的这个也行），在 “安装”栏 中启用快照。你甚至可以在自己的 Java Realms 和你的朋友一起玩！</Paragraph>    <Paragraph>记住，快照会腐化你的世界，请在于主存档不同的文件夹下备份世界和/或运行快照。</Paragraph>    <Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://piston-data.mojang.com/v1/objects/846d3fe65b6dab3f8bf929a601e1f83d801d919c/server.jar">-&gt; 下载跨平台服务端</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H2}">毒马铃薯 ADD-ON</Paragraph>    <Paragraph>毒马铃薯的根茎深植于 Minecraft 甚至超出了 Java 版。因此，块茎轰动撒播其影响到基岩版也不足为奇。使用 Jigarbov 的 毒马铃薯 add-on，你能够体验毒马铃薯的乐趣——通过方块与家具乃至武器与护甲。</Paragraph>    <Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/marketplace/pdp?id=790be090-9bce-4870-85e7-cd868402c3e5">-&gt; 获取 ADD-ON</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H2}">游戏性与功能</Paragraph><Paragraph Style="{StaticResource H3}">常规</Paragraph><List>
 <ListItem><Paragraph>毒马铃薯 —— <Bold>超多</Bold>毒马铃薯！</Paragraph></ListItem>
 <ListItem><Paragraph>也有一些普通马铃薯！</Paragraph></ListItem>
 <ListItem><Paragraph>增加了毒马铃薯维度</Paragraph><List>
@@ -243,7 +247,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>你现在懂了。他们全是毒马铃薯...</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
 <ListItem><Paragraph>通量电容器集成现在与量子体素化协同工作，实现了 360 noscope 增强实时 RTX 地形渲染夜影多盒频谱加速，同时优化了跨维实体同步，实现了无缝的维特罗特-金-爱德华兹-拉塞尔-伯班克体验！</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">常见问题</Paragraph><Paragraph Style="{StaticResource H3}">下载本次更新会发生什么</Paragraph><Paragraph>    然后你会自豪地成为更新文件的所有者。</Paragraph><Paragraph Style="{StaticResource H3}">在游戏内容方面我能期待什么？</Paragraph><Paragraph>    毒马铃薯。我希望这篇文章已经说的很清楚了。</Paragraph><Paragraph Style="{StaticResource H3}">我不敢想象我要了这次更新，如果我实话说的话</Paragraph><Paragraph>    你可能没有——但你的<Italic>脑子</Italic>（或者也许是肚子）要了！</Paragraph><Paragraph Style="{StaticResource H3}">目前还有没有仍在进行的基于碳水化合物的更新</Paragraph><Paragraph>    很好的问题！敬请期待在非常遥远的未来的核辐射大米更新以及剧毒芋头更新！</Paragraph>
+</List><Paragraph Style="{StaticResource H2}">常见问题</Paragraph><Paragraph Style="{StaticResource H3}">下载本次更新会发生什么</Paragraph>    <Paragraph>然后你会自豪地成为更新文件的所有者。</Paragraph><Paragraph Style="{StaticResource H3}">在游戏内容方面我能期待什么？</Paragraph>    <Paragraph>毒马铃薯。我希望这篇文章已经说的很清楚了。</Paragraph><Paragraph Style="{StaticResource H3}">我不敢想象我要了这次更新，如果我实话说的话</Paragraph>    <Paragraph>你可能没有——但你的<Italic>脑子</Italic>（或者也许是肚子）要了！</Paragraph><Paragraph Style="{StaticResource H3}">目前还有没有仍在进行的基于碳水化合物的更新</Paragraph>    <Paragraph>很好的问题！敬请期待在非常遥远的未来的核辐射大米更新以及剧毒芋头更新！</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 <Grid VerticalAlignment="Center" Margin="6,10,0,0" HorizontalAlignment="Right">
@@ -286,7 +290,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Margin="20,10,20,30">
     <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">新闻主页倒闭了！</Paragraph><Paragraph Style="{StaticResource H2}">新闻主页倒闭了</Paragraph><Paragraph>    由于常年入不敷出（嗯？有入吗），新闻主页即可起宣布倒闭！</Paragraph><Paragraph>    如给您带来不便实在不是因为明天会给您带来更多的不便！感谢您仍支持新闻主页！ </Paragraph><Paragraph>    哎！在这弥留之际让新闻主页给您送上最后一些新闻吧！（还拉了些广告，毕竟多亏一天钱还是多亏一天钱也就是多亏一天钱但是它多亏一天钱）</Paragraph>
+<Paragraph Style="{StaticResource H1}">新闻主页倒闭了！</Paragraph><Paragraph Style="{StaticResource H2}">新闻主页倒闭了</Paragraph>    <Paragraph>由于常年入不敷出（嗯？有入吗），新闻主页即可起宣布倒闭！</Paragraph>    <Paragraph>如给您带来不便实在不是因为明天会给您带来更多的不便！感谢您仍支持新闻主页！ </Paragraph>    <Paragraph>哎！在这弥留之际让新闻主页给您送上最后一些新闻吧！（还拉了些广告，毕竟多亏一天钱还是多亏一天钱也就是多亏一天钱但是它多亏一天钱）</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
@@ -295,7 +299,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">MCBBS 复活！</Paragraph><Paragraph>    <Bold>大家盼望许久的 MCBBS 今天 正式官宣！复活！</Bold></Paragraph><Paragraph>    据自称论坛管理员的秩序先生说：</Paragraph><Paragraph>    很抱歉 MCBBS 已经停了这么长时间，我们的技术人员正在加班加点修复基树问题，昨天我们的技术人员发来消息，MCBBS的内部功能已经重建完毕，复活成功！</Paragraph><Paragraph>    现在你可以点开 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mcbbs.info">链接</local:MyTextButton></Underline> 欣赏 全新复活的 MCBBS</Paragraph><Paragraph>    嗯？ 等下，好像贴错地址了，不管了，这不重要！</Paragraph><Paragraph>    哦，他在结束采访的时候还说了一句：如果官网进不去的情况可能是因为昨天才是复活节，今天不是。<Italic>（鬼知道他在说什么！）</Italic></Paragraph>
+<Paragraph Style="{StaticResource H1}">MCBBS 复活！</Paragraph>    <Paragraph><Bold>大家盼望许久的 MCBBS 今天 正式官宣！复活！</Bold></Paragraph>    <Paragraph>据自称论坛管理员的秩序先生说：</Paragraph>    <Paragraph>很抱歉 MCBBS 已经停了这么长时间，我们的技术人员正在加班加点修复基树问题，昨天我们的技术人员发来消息，MCBBS的内部功能已经重建完毕，复活成功！</Paragraph>    <Paragraph>现在你可以点开 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://mcbbs.info">链接</local:MyTextButton></Underline> 欣赏 全新复活的 MCBBS</Paragraph>    <Paragraph>嗯？ 等下，好像贴错地址了，不管了，这不重要！</Paragraph>    <Paragraph>哦，他在结束采访的时候还说了一句：如果官网进不去的情况可能是因为昨天才是复活节，今天不是。<Italic>（鬼知道他在说什么！）</Italic></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
@@ -309,7 +313,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">【广告】</Paragraph><Paragraph Style="{StaticResource H2}">乐！快捷人鱼</Paragraph><Paragraph>    你还在苦恼加班加点工作太无聊？还在苦恼老师拖堂上课会犯困？今天开始，烦恼不再！</Paragraph><Paragraph>    <Bold>乐！快捷人鱼</Bold>，是一款由蜜麒麟开发的无尽世界冒险游戏！在这里，你将邂逅一个被人们称为 “快捷人鱼” 的神奇物种</Paragraph><Paragraph>    等下？人鱼和快捷有什么关系？是游得快的人鱼吗？不！一旦你陷入烦恼，你可以随时随地打开“乐！快捷人鱼”，并感叹：“乐！”。这就是我们的产品快捷之处！别人的游戏：50M 30s秒进入，我们的游戏：0 M，5s 进入！这就是快捷人鱼的力量！</Paragraph><Paragraph>    现在不用下载！点击即玩！即刻试玩《乐！快捷人鱼》：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1GJ411x7h7">《乐！快捷人鱼》- LCP小程序</local:MyTextButton></Underline></Paragraph>
+<Paragraph Style="{StaticResource H1}">【广告】</Paragraph><Paragraph Style="{StaticResource H2}">乐！快捷人鱼</Paragraph>    <Paragraph>你还在苦恼加班加点工作太无聊？还在苦恼老师拖堂上课会犯困？今天开始，烦恼不再！</Paragraph>    <Paragraph><Bold>乐！快捷人鱼</Bold>，是一款由蜜麒麟开发的无尽世界冒险游戏！在这里，你将邂逅一个被人们称为 “快捷人鱼” 的神奇物种</Paragraph>    <Paragraph>等下？人鱼和快捷有什么关系？是游得快的人鱼吗？不！一旦你陷入烦恼，你可以随时随地打开“乐！快捷人鱼”，并感叹：“乐！”。这就是我们的产品快捷之处！别人的游戏：50M 30s秒进入，我们的游戏：0 M，5s 进入！这就是快捷人鱼的力量！</Paragraph>    <Paragraph>现在不用下载！点击即玩！即刻试玩《乐！快捷人鱼》：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1GJ411x7h7">《乐！快捷人鱼》- LCP小程序</local:MyTextButton></Underline></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
