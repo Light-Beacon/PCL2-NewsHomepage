@@ -236,13 +236,29 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>矿车不再在斜坡上下行时穿过方块，而是会碰撞</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">红石实验性</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想发：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbredstone">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><BlockUIContainer>
   <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者贴士：移除过多的红石线邻居更新会影响基于半连接性(QC(<Italic>BUD</Italic>))装置的行为。我们计划在之后解决这一问题。</TextBlock>
+    <TextBlock>开发者贴士：移除过多的红石线邻居更新会影响基于半连接性 (QC( <Italic>BUD</Italic> )) 装置的行为。我们计划在之后解决这一问题。</TextBlock>
   </Border>
 </BlockUIContainer><List>
-<ListItem><Paragraph>红石线更近现在拥有左支优先偏好</Paragraph><List>
+<ListItem><Paragraph>红石线更近现在拥有左路优先偏好</Paragraph><List>
 <ListItem><Paragraph>这意味着一个红石线分支在相同距离时，左边会先更新</Paragraph></ListItem>
 <ListItem><Paragraph>这移除了大多数随机行为</Paragraph></ListItem>
 <ListItem><Paragraph>其余红石线从上方或下方供能且没有足够的上下文这样的边缘情况仍保持随机</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph>    <Paragraph>下列的更改无论实验性开关与否都对游戏应用</Paragraph><List>
+<ListItem><Paragraph>弹射物如箭、三叉戟和浮漂现在会被世界边界弹回</Paragraph></ListItem>
+<ListItem><Paragraph>使用较高渲染距离的帧率改进</Paragraph><List>
+<ListItem><Paragraph>极大地减少了旋转摄影机（转头）的性能影响</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>当“选中”键（空格或回车键）被按下时配方书现在重复最后一个选中的配方</Paragraph></ListItem>
+<ListItem><Paragraph>在创造模式下消耗物品不再会转成另一个物品</Paragraph><List>
+<ListItem><Paragraph>比如物品栏中的蜂蜜瓶不再在创造模式消耗后转成玻璃瓶</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本现在为 50</Paragraph><List>
+<ListItem><Paragraph>物品组件更改，涉及食物、物品减少后替换、冷却、消耗，详见完整日志</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>资源包版本现在为 36</Paragraph><List>
+<ListItem><Paragraph>着色器与后处理效果更改，详见完整日志</Paragraph></ListItem>
 </List></ListItem>
 </List>
 </FlowDocument>
@@ -375,8 +391,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="3e8d5a6" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/3e8d5a6c02180b646684f657d2f7405f5b2e5061"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="97348b8" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/97348b8a6726b759fae0da2caa43d1c091ebbf25"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
