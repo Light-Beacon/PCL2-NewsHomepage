@@ -202,111 +202,48 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="最新快照版 - 24w33a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 24w34a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/08/16/24w33a_1170x500-1.jpg" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/08/21/24w34a-1170x500-1.jpg" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/08/16/24w33a_1170x500-1.jpg" Opacity="0" Stretch="Fill"/>
+<Image Source="https://image.stapxs.cn/i/2024/08/21/24w34a-1170x500-1.jpg" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w33a" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w34a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph>    <Paragraph>下列更改仅在其实验性开关打开时生效，可以通过激活相应的数据包或者在创建世界时在实验性界面打开。</Paragraph>    <Paragraph>这些实验性特性除非被启用否则没有任何效果。你可以通过<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition">这里</local:MyTextButton></Underline>了解更多信息。</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph>    <Paragraph>收纳袋回来了！收纳袋曾在 2020 年作为实验性特性被加入 Java 版。现在我们再次在收纳袋上大展手脚！要测试收纳袋，你必须在创建新世界时打开收纳袋实验性开关。（当创建新世界时点击“更多”，然后点击“实验性内容”，然后点击挨着“收纳袋”这个词右侧的按钮）。收纳袋是一个可以让你在同一个物品栏槽中叠放不同的方块和物品的物品。一个收纳袋可以使你一起打包这些物品并且不浪费空间。
-</Paragraph><BlockUIContainer>
-<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/08/16/bundle_before_after_image-1.jpg"/>
-</BlockUIContainer><Paragraph>
-收纳袋拥有一个能够显示其内容物品的工具提示。如果收纳袋拥有最多八种物品类型，你能够见到所有物品并能够立即拽出任意物品。如果收纳袋拥有超过八种物品类型，一些物品行会被隐藏。这样你可能会想要制作一个新的收纳袋来轻松取出任意物品。一个收纳袋由一根线和一个皮革制成。敬请尝试这个全新版本的收纳袋并让我们听见你的想法。</Paragraph><List>
-<ListItem><Paragraph>收纳袋只占一组空间（通常为 64 个物品）但却能容下许多不同种类的物品</Paragraph></ListItem>
-<ListItem><Paragraph>你可以直接从物品栏中将物品放入收纳袋中</Paragraph></ListItem>
-<ListItem><Paragraph>收纳袋拥有一个展示其内容物品的工具提示</Paragraph><List>
-<ListItem><Paragraph>如果收纳袋中拥有不多于八个物品类型，工具提示会将它们全部展示</Paragraph></ListItem>
-<ListItem><Paragraph>否则工具提示只会展示最上面的两行物品并且其它物品将会在下方隐藏</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>你可以选择任何可见的物品将其拽出收纳袋</Paragraph><List>
-<ListItem><Paragraph>右键单击来取出第一个物品</Paragraph></ListItem>
-<ListItem><Paragraph>使用数字键或鼠标滚轮来选择不同的物品，然后右键单击取出</Paragraph></ListItem>
-</List></ListItem>
+<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
+<ListItem><Paragraph>现在收纳袋工具提示现在最多显示 3 行并至少可以显示 8 种物品类型</Paragraph></ListItem>
 </List><BlockUIContainer>
   <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者提示：在原本的收纳袋实验性中你只能选取最顶上的物品。我们得到了许多反馈说玩家想要更加灵活地取出物品。因此我们我们在收纳袋中放入了子菜单，这在之前的 Minecraft 中从来没有做过！</TextBlock>
+    <TextBlock>开发者贴士：一行能装满四个物品，并且一行装满后再装会被上面一行向下推，这意味着最顶上一行可能有空位置。
+在之前的 2020 收纳袋实验性中，物品在顶行不会留有任何空位置。我们改变了此行为，因为其意味着如果有新物品添加进收纳袋，会使得所有物品会从左到右移动。这使得玩家很难去跟踪物品顺序，并且甚至有一些反馈说这些物品会以随机的方式进行移动！
+在工具提示仅有两行时，将一个满行推下会使得收纳袋中一半的可见物品被移除，这太多了。我们增加了第三行以改善设计工作并且在收纳袋装很多物品的时候允许玩家看见更多物品。</TextBlock>
+  </Border>
+</BlockUIContainer><Paragraph Style="{StaticResource H3}">矿车改进</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想发：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbcarts">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><List>
+<ListItem><Paragraph>矿车在落到铁轨时不再强行卡在方块中心</Paragraph><List>
+<ListItem><Paragraph>矿车在沿着对角线卡在角上，并在被活塞推动后卡上去</Paragraph></ListItem>
+<ListItem><Paragraph>这是为了允许制造 Piston bolts 和类似的机器</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>发射器再次被允许堆叠矿车</Paragraph></ListItem>
+<ListItem><Paragraph>矿车现在在向下的斜坡上更容易停下</Paragraph></ListItem>
+<ListItem><Paragraph>矿车不再在短的下落时倾斜，或在直着下落时倾斜</Paragraph></ListItem>
+<ListItem><Paragraph>将矿车放（或发射）在铁轨时现在会以正确的朝向放置</Paragraph><List>
+<ListItem><Paragraph>在斜坡上也是如此</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>矿车不再在斜坡上下行时穿过方块，而是会碰撞</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">红石实验性</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想发：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbredstone">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><BlockUIContainer>
+  <Border Style="{StaticResource Quote}">
+    <TextBlock>开发者贴士：移除过多的红石线邻居更新会影响基于半连接性(QC(<Italic>BUD</Italic>))装置的行为。我们计划在之后解决这一问题。</TextBlock>
   </Border>
 </BlockUIContainer><List>
-<ListItem><Paragraph>当在选择要被取出的物品时，收纳袋图标会展示物品在收纳袋中取出</Paragraph></ListItem>
-<ListItem><Paragraph>当手持收纳袋时，你可以通过右键将其中的物品全部抖出来</Paragraph></ListItem>
-<ListItem><Paragraph>在皮革上放一根线能够合成收纳袋</Paragraph></ListItem>
-</List><BlockUIContainer>
-  <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者提示：收纳袋的原型曾造价更高并使用兔子皮这种仅在几个群系能够获取到的物品，所以玩家不得不探索来获得他们的第一个收纳袋。在这个版本中，我们使其造价更低并且使其成为在近乎任何群系你都可以制造的物品。我们想要你在新世界更加简单地获取收纳袋，并用在你的前期探险中。</TextBlock>
-  </Border>
-</BlockUIContainer><List>
-<ListItem><Paragraph>控制已从原型更改：</Paragraph><List>
-<ListItem><Paragraph>左键单击将物品放入收纳袋</Paragraph></ListItem>
-<ListItem><Paragraph>右键将最顶部物品移出收纳袋</Paragraph></ListItem>
-<ListItem><Paragraph>当收纳袋工具提示可见时，使用数字键或鼠标滚轮来选择不同的物品然后使用右键来移除</Paragraph></ListItem>
+<ListItem><Paragraph>红石线更近现在拥有左支优先偏好</Paragraph><List>
+<ListItem><Paragraph>这意味着一个红石线分支在相同距离时，左边会先更新</Paragraph></ListItem>
+<ListItem><Paragraph>这移除了大多数随机行为</Paragraph></ListItem>
+<ListItem><Paragraph>其余红石线从上方或下方供能且没有足够的上下文这样的边缘情况仍保持随机</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">红石实验性</Paragraph>    <Paragraph>增加了新的实验性特性包括多种红石相关的更改。可以在创建世界时通过选择 “Redstone Experiments” 在实验性菜单中启用这些更改。</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph><Paragraph Style="{StaticResource H4}">红石线</Paragraph><List>
-<ListItem><Paragraph>红石线（互相连接的红石粉方块）的性能得到了改进</Paragraph></ListItem>
-<ListItem><Paragraph>红石线现在仅探测来源于红石线上的可能会使其收到能量的方块更新</Paragraph></ListItem>
-<ListItem><Paragraph>在红石线导致方块更新之前，与其相连的所有红石线会被设置为新的信号强度</Paragraph></ListItem>
-<ListItem><Paragraph>红石线导致的更新顺序已被改变</Paragraph><List>
-<ListItem><Paragraph>目的是保证红石线工作一致性，与位置与方向无关</Paragraph></ListItem>
-<ListItem><Paragraph>基于导致更新的上下文，当可能时顺序是确定的</Paragraph></ListItem>
-<ListItem><Paragraph>当没有足够的上下文来决定顺序时，采用随机</Paragraph></ListItem>
-</List></ListItem>
-</List><BlockUIContainer>
-  <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者提示：我们知道在红石中通常随机性是不想要的。在此使用它是因为只要它合理我们就会让它确定，但是有时它就是那么不合理 —— 并且我们不想要那些暗中的规定（就像基于位置的哈希！）来决定顺序并且使得机器在不同位置或不同朝向时工作不一致。
-下面的截图展示了“随机”与“非随机”红石线的一个例子 —— 我们认为它挺合乎逻辑的并且其在玩家控制下可以建造出行为确定的机器。
-但我们仍想要倾听你们的想法并将其付诸实践！</TextBlock>
-  </Border>
-</BlockUIContainer>    <BlockUIContainer>
-<StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/08/16/redstone-1.jpg"/>
-<TextBlock Text="左 随机 右" Style="{StaticResource imgTitle}" />
-</StackPanel>
-</BlockUIContainer><Paragraph Style="{StaticResource H5}">红石线更改的顺序</Paragraph><List>
-<ListItem><Paragraph>当一条线上的红石粉激活时，更靠近信号源的的方块会最先更新</Paragraph></ListItem>
-<ListItem><Paragraph>当一条线上的红石粉反激活时，曾更靠近信号源的的方块会最先更新</Paragraph></ListItem>
-<ListItem><Paragraph>当两条红石线对信号源拥有同样的距离，谁会最先导致方块更新为随机</Paragraph><List>
-<ListItem><Paragraph>随机选择会在整条线上的红石粉上做一次，以限制可能导致的结果数量</Paragraph></ListItem>
-<ListItem><Paragraph>其意味着，当从旁边激活一条红石线，它会随机选择两个可能激活的顺序的其中一个</Paragraph></ListItem>
-<ListItem><Paragraph>优点是拥有少的可能的更新顺序并且使得结果更加能够预测</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H5}">红石线周侧方块更新</Paragraph><List>
-<ListItem><Paragraph>在红石线周围的方块更新的顺序基于红石线从哪个方向接受更新</Paragraph></ListItem>
-<ListItem><Paragraph>当前，顺序为：背面，正面，左侧，右侧，底面，顶面</Paragraph><List>
-<ListItem><Paragraph>左侧和右侧可能颠倒，基于红石线的随机选择</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>当更新传值实体方块时也和此更新顺序一致</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">已知问题</Paragraph>    <Paragraph>因为此项实验性仅更改了红石线，与其它组件的可能不会一直像预期一样交互，尤其是更新顺序。</Paragraph><Paragraph Style="{StaticResource H3}">矿车改进</Paragraph>    <Paragraph>增加了新的实验性特性包含了许多对矿车的运动更改。可以在创建世界时通过在实验性菜单中选择 &quot;Minecart Improvements&quot; 来启用这些更改。</Paragraph>    <Paragraph>我们的长期目标是车辆旅行，比如矿车，和其它目前主导的多数的游戏后期选项相比成为一个玩家可行的选择。为了达到这个目标我们意图使得乘坐矿车成为一种丝滑的体验，拥有一致和可预测的运动和旋转。通过此项特性开关我们正在给未来打下基础。我们意识到这些更改会毁坏现有的机器，这就是为什么我们想要和社区合作来塑造本次升级和未来乘坐矿车的体验。</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想发：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbcarts">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><Paragraph Style="{StaticResource H4}">运动更改</Paragraph><List>
-<ListItem><Paragraph>一直在铁轨上高速行驶时，矿车会更好地表现自己的运动</Paragraph><List>
-<ListItem><Paragraph>矿车现在会沿轨道平滑转弯并且减少了骤停和脱轨的可能性</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>矿车现在拥有更好的跳跃</Paragraph><List>
-<ListItem><Paragraph>当铁轨以斜坡结束时矿车会保持垂直动量</Paragraph></ListItem>
-<ListItem><Paragraph>矿车在空中会有视觉上的倾斜表达</Paragraph></ListItem>
-<ListItem><Paragraph>矿车在空中飞行时不会播放铁轨摩擦声</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>增加了新的无障碍选项可以使玩家跟随其乘坐的矿车一同旋转</Paragraph><List>
-<ListItem><Paragraph>默认关闭</Paragraph></ListItem>
-<ListItem><Paragraph>仅在实验性特性启用的世界有效果</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>增加了新的游戏规则 <TextBox Style="{StaticResource InlineCode}">minecartMaxSpeed</TextBox> 用于更改矿车的最高速度</Paragraph><List>
-<ListItem><Paragraph>默认设为 8，最高可设为 1000 方块每秒</Paragraph></ListItem>
-<ListItem><Paragraph>将其设为特定值不能保证矿车会达到特定的最高速度 —— 通过斜坡和动力铁轨增加的速度需要克服空气阻力以及类似效果</Paragraph></ListItem>
-<ListItem><Paragraph>此游戏规则仅存在于启用了本实验性特性的世界</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">矿车更改</Paragraph><List>
-<ListItem><Paragraph>矿车现在不再能被玩家或发射器放进另一个矿车内了</Paragraph></ListItem>
-<ListItem><Paragraph>矿车现在可以沿着轨道一直紧邻着放置</Paragraph></ListItem>
-<ListItem><Paragraph>在铁轨上运动时矿车更一致地使生物骑乘</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">已知影响</Paragraph><List>
-<ListItem><Paragraph>我们意识到这些更改会导致某些机器比如 “piston bolts” 完全不工作，或其行为被更改</Paragraph></ListItem>
-<ListItem><Paragraph>由于是速度，移动距离，摩擦等等的微小变化，一些非常精确的轨道网络的时间会有变化</Paragraph></ListItem>
-<ListItem><Paragraph>依赖矿车卡在轨道上的机器不再工作或行为发生改变</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
@@ -321,25 +258,25 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-08-19" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-08-22" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 24w33a" EventType="启动游戏"
-    EventData="24w33a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 24w34a" EventType="启动游戏"
+    EventData="24w34a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/90f9c80aeef3966343e661a1487b7918c90ae61d/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/ff16e26392a5ced7cfe52ffdc5461cd646b9b65d/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/24w33a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/24w34a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-24w33a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-snapshot-24w34a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-08-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-08-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -372,7 +309,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-08-19" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-08-22" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1" EventType="启动游戏"
     EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -390,7 +327,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-08-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-08-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -427,7 +364,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-08-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-08-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -438,8 +375,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="efa54b8" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/efa54b8217c54cc93fabeb090d6d4d032b2179e9"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="3e8d5a6" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/3e8d5a6c02180b646684f657d2f7405f5b2e5061"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
