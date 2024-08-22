@@ -18,6 +18,9 @@ class StatusPage(PageBase):
     
     def generate(self, *args, **kwargs):
         return 'ok'
+    
+    def get_content_type(self, setter):
+        return 'text/plain'
 
 mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
 latest_version = mcv.get_latest()
@@ -69,3 +72,6 @@ class LatestVersionAPI(PageBase):
         if not self.respond:
             self.pregen_respond()
         return json.dumps(self.respond,ensure_ascii=ensure_ascii)
+    
+    def get_content_type(self, setter):
+        return 'application/json'
