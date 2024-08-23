@@ -205,7 +205,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 在之前的 2020 收纳袋实验性中，物品在顶行不会留有任何空位置。我们改变了此行为，因为其意味着如果有新物品添加进收纳袋，会使得所有物品会从左到右移动。这使得玩家很难去跟踪物品顺序，并且甚至有一些反馈说这些物品会以随机的方式进行移动！
 在工具提示仅有两行时，将一个满行推下会使得收纳袋中一半的可见物品被移除，这太多了。我们增加了第三行以改善设计工作并且在收纳袋装很多物品的时候允许玩家看见更多物品。</TextBlock>
   </Border>
-</BlockUIContainer><Paragraph Style="{StaticResource H3}">矿车改进</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想发：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbcarts">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><List>
+</BlockUIContainer><Paragraph Style="{StaticResource H3}">矿车改进</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想法：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbcarts">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><List>
 <ListItem><Paragraph>矿车在落到铁轨时不再强行卡在方块中心</Paragraph><List>
 <ListItem><Paragraph>矿车在沿着对角线卡在角上，并在被活塞推动后卡上去</Paragraph></ListItem>
 <ListItem><Paragraph>这是为了允许制造 Piston bolts 和类似的机器</Paragraph></ListItem>
@@ -217,7 +217,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph>在斜坡上也是如此</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph>矿车不再在斜坡上下行时穿过方块，而是会碰撞</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">红石实验性</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想发：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbredstone">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><BlockUIContainer>
+</List><Paragraph Style="{StaticResource H3}">红石实验性</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想法：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbredstone">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><BlockUIContainer>
   <Border Style="{StaticResource Quote}">
     <TextBlock>开发者贴士：移除过多的红石线邻居更新会影响基于半连接性 (QC( <Italic>BUD</Italic> )) 装置的行为。我们计划在之后解决这一问题。</TextBlock>
   </Border>
@@ -249,7 +249,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-08-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-08-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -266,7 +266,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-08-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-08-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
