@@ -10,15 +10,15 @@ Styles:
       VerticalAlignment: Top
       BorderBrush: "{DynamicResource ColorBrush3}"
       CornerRadius: *CornerRadius
-      MaxHeight: 150
+      MaxHeight: 140
 
  - Key: VersionTitleBorder
    Target: Border
    Setters:
       Margin: 0,-20,-1,10
       Background: "{DynamicResource ColorBrush3}"
-      Width: 190
-      Height: 36
+      Width: 170
+      Height: 30
       CornerRadius: *CornerRadius
       BorderThickness: 0,0,0,2 # Shadow
       BorderBrush: "{DynamicResource ColorBrush2}"
@@ -32,4 +32,4 @@ Styles:
       Foreground: "{DynamicResource ColorBrush7}"
       Width: 180
       TextWrapping: Wrap
-      FontSize: 20
+      FontSize: 18
