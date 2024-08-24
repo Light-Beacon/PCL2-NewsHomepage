@@ -174,12 +174,12 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="VerticalAlignment" Value="Top"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/>
 <Setter Property="CornerRadius" Value="7"/>
-<Setter Property="MaxHeight" Value="150"/>
+<Setter Property="MaxHeight" Value="140"/>
 </Style><Style TargetType="Border" x:Key="VersionTitleBorder" >
 <Setter Property="Margin" Value="0,-20,-1,10"/>
 <Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Width" Value="190"/>
-<Setter Property="Height" Value="36"/>
+<Setter Property="Width" Value="170"/>
+<Setter Property="Height" Value="30"/>
 <Setter Property="CornerRadius" Value="7"/>
 <Setter Property="BorderThickness" Value="0,0,0,2"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/>
@@ -190,7 +190,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/>
 <Setter Property="Width" Value="180"/>
 <Setter Property="TextWrapping" Value="Wrap"/>
-<Setter Property="FontSize" Value="20"/>
+<Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -331,8 +331,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="d4a9560" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/d4a9560004f3c1fdcb423577d17d3b8091cc2e39"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="6ef9edc" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/6ef9edc3a18575c42d46039511358c0a18c53276"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">

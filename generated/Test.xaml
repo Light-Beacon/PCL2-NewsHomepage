@@ -174,12 +174,12 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="VerticalAlignment" Value="Top"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/>
 <Setter Property="CornerRadius" Value="7"/>
-<Setter Property="MaxHeight" Value="150"/>
+<Setter Property="MaxHeight" Value="140"/>
 </Style><Style TargetType="Border" x:Key="VersionTitleBorder" >
 <Setter Property="Margin" Value="0,-20,-1,10"/>
 <Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Width" Value="190"/>
-<Setter Property="Height" Value="36"/>
+<Setter Property="Width" Value="170"/>
+<Setter Property="Height" Value="30"/>
 <Setter Property="CornerRadius" Value="7"/>
 <Setter Property="BorderThickness" Value="0,0,0,2"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/>
@@ -190,7 +190,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/>
 <Setter Property="Width" Value="180"/>
 <Setter Property="TextWrapping" Value="Wrap"/>
-<Setter Property="FontSize" Value="20"/>
+<Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
 <local:MyCard Title="1.20" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
