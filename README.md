@@ -32,6 +32,9 @@
 
 注：生成后的页面仍遵循 CC BY-NC-SA 4.0 分发，若需使用请遵守协议。
 
+#### 在自己的主页中插入新闻主页
+你可以参见 [新闻主页API](https://github.com/Light-Beacon/PCL2-NewsHomepage/wiki/%E6%96%B0%E9%97%BB%E4%B8%BB%E9%A1%B5-API) 文档
+
 ## 注意事项
 
 请尽量使用最新版 PCL（正式版 *Release*、测试版 *Snapshot* 通用），旧版本可能会有意想不到的问题
