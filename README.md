@@ -22,6 +22,10 @@
 6. 返回启动页，完成！
 
 ### 高阶使用
+
+>[!IMPORTANT]
+>无论以何种方式获取的新闻主页内容仍遵循 CC BY-NC-SA 4.0 分发，若使用请遵守协议。
+
 #### 按钮跳转新闻主页
 如果您需要通过 PCL2 内置的 “打开帮助” 按钮来跳转到新闻主页的话，请将该按钮的 `EventData` 设为 `https://news.bugjump.net/News.json`。
 
@@ -30,10 +34,8 @@
 #### 获取构建后的代码
 仓库配置了 GitHub Actions 用于在提交后生成构建后 PCL2 可以直接使用的代码，若需要可以在 [generated](https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/generated) 分支上获取。
 
-注：生成后的页面仍遵循 CC BY-NC-SA 4.0 分发，若需使用请遵守协议。
-
 #### 在自己的主页中插入新闻主页
-你可以参见 [新闻主页API](https://github.com/Light-Beacon/PCL2-NewsHomepage/wiki/%E6%96%B0%E9%97%BB%E4%B8%BB%E9%A1%B5-API) 文档
+参见 [新闻主页API](https://github.com/Light-Beacon/PCL2-NewsHomepage/wiki/%E6%96%B0%E9%97%BB%E4%B8%BB%E9%A1%B5-API) 文档,
 
 ## 注意事项
 
