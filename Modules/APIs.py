@@ -83,6 +83,3 @@ class LatestVersionCardAPI(PageBase):
         card = self.project.base_library.get_card('VersionLatestListCard', False)
         card = setter.decorate(card)
         return self.project.template_manager.build(card)
-
-    def get_content_type(self, setter):
-        return 'text/plain'
