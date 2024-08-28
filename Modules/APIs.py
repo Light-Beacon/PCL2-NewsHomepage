@@ -31,8 +31,8 @@ class LatestVersionAPI(PageBase):
     def __init__(self, project):
         super().__init__(project)
         self.latest_release = self.project.base_library.get_card(mcv.get_latest('release'),False)
-        if mcv.get_version_type(latest_version) == 'snapshot':
-            self.latest_snapshot = self.project.base_library.get_card(mcv.get_latest(),False)
+        if latest_snap_shot_id := mcv.get_latest('snapshot'):
+            self.latest_snapshot = self.project.base_library.get_card(latest_snap_shot_id,False)
         else:
             self.latest_snapshot = None
         self.respond = None
@@ -75,3 +75,14 @@ class LatestVersionAPI(PageBase):
     
     def get_content_type(self, setter):
         return 'application/json'
+    
+@page_class_handles('apis/versions/latest-card')
+class LatestVersionCardAPI(PageBase):
+    def generate(self, *args, **kwargs):
+        setter = kwargs.get('setter')
+        card = self.project.base_library.get_card('VersionLatestListCard', False)
+        card = setter.decorate(card)
+        return self.project.template_manager.build(card)
+
+    def get_content_type(self, setter):
+        return 'text/plain'

@@ -6,7 +6,7 @@ MANIFSET = mcv.get_manifset()
 FULL_VERSIONS = MANIFSET.get('versions')
 ID_LIST = [version.get('id') for version in FULL_VERSIONS]
 
-@script('VersionAchiveList')
+@script('VersionArchiveList')
 def version_achive_list(cat_name,proj:Project,card,**_):
     cat_name = format_code(code = cat_name,card=card,project=proj)
     cards = list(filter(lambda card:isinstance(card.get('cats'),list)
@@ -25,4 +25,15 @@ def version_achive_list(cat_name,proj:Project,card,**_):
             code += format_code(code = res.components['VersionLinks/Common'],
                             card=vercard,project=proj)
     code += '</StackPanel>'
+    return code
+
+@script('VersionLatestList')
+def version_latest_list(proj:Project,card,**_):
+    res = proj.resources
+    code = ''
+    for version_type in ['release','snapshot']:
+        if latest_version := mcv.get_latest(version_type):
+            vercard = proj.base_library.get_card(latest_version,False)
+            code += format_code(code = res.components['VersionLinks/Latest'],
+                            card=vercard,project=proj)
     return code

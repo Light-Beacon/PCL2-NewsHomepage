@@ -1,0 +1,5 @@
+<local:MyCard Title="最新版本" CanSwap="${card-can-swap|False}" IsSwaped="${card-is-swaped|False}" ${@IF|${enable-card-style}|Style="{StaticResource Card}"}>
+<StackPanel Margin="${content-margin|8,35,8,15}">
+${@VersionLatestList}
+</StackPanel>
+</local:MyCard>

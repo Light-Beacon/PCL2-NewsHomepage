@@ -35,15 +35,22 @@ def init_version_dict():
     FULL_VERSIONS = manifset.get('versions')
     for version in FULL_VERSIONS:
         VERSIONS_DICT[version['id']] = version
+    if get_version_type(LATEST_VERSIONS["snapshot"]) == 'release':
+        LATEST_VERSIONS["snapshot"] = None
     logger.info(f'最新快照版:{LATEST_VERSIONS["snapshot"]}; 最新正式版:{LATEST_VERSIONS["release"]}')
 
-def get_latest(version_type = 'snapshot',version_rank = 1):
+def get_latest(version_type = 'all',version_rank = -1):
     global LATEST_VERSIONS
     if not LATEST_VERSIONS:
         init_version_dict()
     version_rank = int(version_rank)
-    if version_rank <= 1:
-        return LATEST_VERSIONS[version_type]
+    if version_rank <= 0:
+        if(version_type == 'all'):
+            if latest_snapshot := LATEST_VERSIONS['snapshot']:
+                return latest_snapshot
+            else:
+                return LATEST_VERSIONS['relese']
+        return LATEST_VERSIONS.get(version_type)
     count = version_rank
     for version in FULL_VERSIONS:
         if version['type'] == version_type:
