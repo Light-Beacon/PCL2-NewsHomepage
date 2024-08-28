@@ -193,56 +193,36 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 24w34a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w35a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph>现在收纳袋工具提示现在最多显示 3 行并至少可以显示 8 种物品类型</Paragraph></ListItem>
+<ListItem><Paragraph>现在选取物品只能通过鼠标滚轮完成</Paragraph></ListItem>
 </List><BlockUIContainer>
   <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者贴士：一行能装满四个物品，并且一行装满后再装会被上面一行向下推，这意味着最顶上一行可能有空位置。
-在之前的 2020 收纳袋实验性中，物品在顶行不会留有任何空位置。我们改变了此行为，因为其意味着如果有新物品添加进收纳袋，会使得所有物品会从左到右移动。这使得玩家很难去跟踪物品顺序，并且甚至有一些反馈说这些物品会以随机的方式进行移动！
-在工具提示仅有两行时，将一个满行推下会使得收纳袋中一半的可见物品被移除，这太多了。我们增加了第三行以改善设计工作并且在收纳袋装很多物品的时候允许玩家看见更多物品。</TextBlock>
+    <TextBlock>开发者注释：在之前的快照中你可以通过数字键选区物品。我们之所以移除了该特性，是因为它会导致高级玩家热键冲突，并且当收纳袋拥有超过十个可见物品时显得不是那么有用。</TextBlock>
   </Border>
-</BlockUIContainer><Paragraph Style="{StaticResource H3}">矿车改进</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想法：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbcarts">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><List>
-<ListItem><Paragraph>矿车在落到铁轨时不再强行卡在方块中心</Paragraph><List>
-<ListItem><Paragraph>矿车在沿着对角线卡在角上，并在被活塞推动后卡上去</Paragraph></ListItem>
-<ListItem><Paragraph>这是为了允许制造 Piston bolts 和类似的机器</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>发射器再次被允许堆叠矿车</Paragraph></ListItem>
-<ListItem><Paragraph>矿车现在在向下的斜坡上更容易停下</Paragraph></ListItem>
-<ListItem><Paragraph>矿车不再在短的下落时倾斜，或在直着下落时倾斜</Paragraph></ListItem>
-<ListItem><Paragraph>将矿车放（或发射）在铁轨时现在会以正确的朝向放置</Paragraph><List>
-<ListItem><Paragraph>在斜坡上也是如此</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>矿车不再在斜坡上下行时穿过方块，而是会碰撞</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">红石实验性</Paragraph>    <Paragraph>请注意这项实验性特性开关背后在此时并不针对于未来的任何版本。实际上其是一个让我们尝试新更改并收集反馈的地方。</Paragraph>    <Paragraph>我们很高兴能够听到你们对这些更改的想法：请在本<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/fbredstone">反馈页面</local:MyTextButton></Underline>分享你的反馈。</Paragraph><BlockUIContainer>
-  <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者贴士：移除过多的红石线邻居更新会影响基于半连接性 (QC( <Italic>BUD</Italic> )) 装置的行为。我们计划在之后解决这一问题。</TextBlock>
-  </Border>
-</BlockUIContainer><List>
-<ListItem><Paragraph>红石线更近现在拥有左路优先偏好</Paragraph><List>
-<ListItem><Paragraph>这意味着一个红石线分支在相同距离时，左边会先更新</Paragraph></ListItem>
-<ListItem><Paragraph>这移除了大多数随机行为</Paragraph></ListItem>
-<ListItem><Paragraph>其余红石线从上方或下方供能且没有足够的上下文这样的边缘情况仍保持随机</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph>    <Paragraph>下列的更改无论实验性开关与否都对游戏应用</Paragraph><List>
-<ListItem><Paragraph>弹射物如箭、三叉戟和浮漂现在会被世界边界弹回</Paragraph></ListItem>
-<ListItem><Paragraph>使用较高渲染距离的帧率改进</Paragraph><List>
-<ListItem><Paragraph>极大地减少了旋转摄影机（转头）的性能影响</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>当“选中”键（空格或回车键）被按下时配方书现在重复最后一个选中的配方</Paragraph></ListItem>
-<ListItem><Paragraph>在创造模式下消耗物品不再会转成另一个物品</Paragraph><List>
-<ListItem><Paragraph>比如物品栏中的蜂蜜瓶不再在创造模式消耗后转成玻璃瓶</Paragraph></ListItem>
-</List></ListItem>
+</BlockUIContainer><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph>袭击者必须寻找一个距村庄中心上下垂直距离不超过 96 格的位置生成，否则袭击不会发生</Paragraph></ListItem>
+<ListItem><Paragraph>现在大幅减少了袭击者在袭击时找不到有效位置生成的可能</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>数据包版本现在为 50</Paragraph><List>
-<ListItem><Paragraph>物品组件更改，涉及食物、物品减少后替换、冷却、消耗，详见完整日志</Paragraph></ListItem>
+<ListItem><Paragraph>现在数据包版本为 51</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 51</Paragraph><List>
+<ListItem><Paragraph>试炼刷怪笼的 <TextBox Style="{StaticResource InlineCode}">normal_config</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">ominous_config</TextBox> 字段的配置现在在 <TextBox Style="{StaticResource InlineCode}">trial_spawner</TextBox> 注册表中定义</Paragraph><List>
+<ListItem><Paragraph>这允许在数据包中更简单地自定义试炼刷怪笼的配置</Paragraph></ListItem>
+<ListItem><Paragraph>行内配置数据仍然被支持</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph>资源包版本现在为 36</Paragraph><List>
-<ListItem><Paragraph>着色器与后处理效果更改，详见完整日志</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">战利品表</Paragraph><List>
+<ListItem><Paragraph>特殊战利品表 <TextBox Style="{StaticResource InlineCode}">empty</TextBox> 被移除并在原版数据包中不再被定义</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">绵羊战利品表</Paragraph><List>
+<ListItem><Paragraph>绵羊现在始终使用单一战利品表 <TextBox Style="{StaticResource InlineCode}">entities/sheep</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph>羊毛掉落仍在 <TextBox Style="{StaticResource InlineCode}">entities/sheep/&lt;color&gt;</TextBox> 的子表中定义，不过现在它们仅从主表中调用</Paragraph><List>
+<ListItem><Paragraph>注释：羊肉掉落现在由主表控制，因为子表仅应控制羊毛掉落</Paragraph></ListItem>
 </List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">新条件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SHEEP</TextBox> 实体子谓词</Paragraph>    <Paragraph>新的实体子谓词用于匹配羊毛字段：</Paragraph><List>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">sheared</TextBox> - 可选的布尔值</Paragraph></ListItem>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">color</TextBox> - 可选的羊毛染料颜色</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
