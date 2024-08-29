@@ -7,8 +7,8 @@
 网站地址： [https://news.bugjump.net](https://news.bugjump.net)
 
 授权协议：
-- 内容部分： [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-- 代码部分： MIT License
+- 内容部分（任何非 python 文件）： [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- 代码部分（.py python 文件）： MIT License
 
 ## 使用方法
 1. 下载 PCL2（下载地址：[点我跳转](https://afdian.net/p/0164034c016c11ebafcb52540025c377)）
