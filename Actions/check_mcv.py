@@ -30,6 +30,7 @@ def update_library(version_mainfest,version_libloc:str,ver_type:str,ver_id:str):
     content += 'not_finished: true\n'
     content += f'server-jar: {get_server_jar(version_mainfest,ver_id)}\n'
     content += 'translator: null\n'
+    content += "cats: ['1.21','1.21.2']\n"
     content += '---\n'
     #write file
     filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'
