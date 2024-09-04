@@ -204,6 +204,21 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </TextBlock>
     </Grid>
 </Border>
+</local:MyCard><local:MyCard Title="Minecraft 大电影发布首支预告片" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Margin="0,40,0,0">
+<StackPanel HorizontalAlignment="Center">
+    <Line Margin="-1,0" X1="0" X2="1" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+    <Image Stretch="UniformToFill" Source="https://image.stapxs.cn/i/2024/09/04/image.jpeg" MaxHeight="140"/>
+    <Line Margin="-1,0" X1="0" X2="1" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
+</StackPanel>
+<StackPanel Margin="20,10,20,30">
+    <FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">Minecraft 大电影发布首支预告片</Paragraph>    <Paragraph>详见<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1yx4y1n7du">视频</local:MyTextButton></Underline>。2025年北美上映。</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</StackPanel>
 </local:MyCard><local:MyCard Title="最新快照版 - 24w35a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
@@ -256,7 +271,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-01" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-04" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 24w35a" EventType="启动游戏"
     EventData="24w35a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -274,7 +289,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -307,7 +322,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-01" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-04" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1" EventType="启动游戏"
     EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -325,7 +340,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -362,7 +377,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -373,8 +388,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="5b38ae1" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/5b38ae1dbaff5bb1f9f8b2b87b74b94461e3e13c"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="47261ab" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/47261ab7784d129bf7f7566844090564bbc4ff79"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
