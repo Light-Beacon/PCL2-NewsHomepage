@@ -219,44 +219,31 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </FlowDocumentScrollViewer>
 </StackPanel>
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新快照版 - 24w35a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 24w36a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/08/28/24w35a_1170x500-1.jpg" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/09/04/image.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/08/28/24w35a_1170x500-1.jpg" Opacity="0" Stretch="Fill"/>
+<Image Source="https://image.stapxs.cn/i/2024/09/04/image.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w35a" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w36a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph>现在选取物品只能通过鼠标滚轮完成</Paragraph></ListItem>
-</List><BlockUIContainer>
-  <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者注释：在之前的快照中你可以通过数字键选区物品。我们之所以移除了该特性，是因为它会导致高级玩家热键冲突，并且当收纳袋拥有超过十个可见物品时显得不是那么有用。</TextBlock>
-  </Border>
-</BlockUIContainer><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>袭击者必须寻找一个距村庄中心上下垂直距离不超过 96 格的位置生成，否则袭击不会发生</Paragraph></ListItem>
-<ListItem><Paragraph>现在大幅减少了袭击者在袭击时找不到有效位置生成的可能</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>现在数据包版本为 51</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 51</Paragraph><List>
-<ListItem><Paragraph>试炼刷怪笼的 <TextBox Style="{StaticResource InlineCode}">normal_config</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">ominous_config</TextBox> 字段的配置现在在 <TextBox Style="{StaticResource InlineCode}">trial_spawner</TextBox> 注册表中定义</Paragraph><List>
-<ListItem><Paragraph>这允许在数据包中更简单地自定义试炼刷怪笼的配置</Paragraph></ListItem>
-<ListItem><Paragraph>行内配置数据仍然被支持</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">已知问题</Paragraph><List>
+<ListItem><Paragraph>末影珍珠不会传送你到正确的位置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
+<ListItem><Paragraph>当在热键栏中使用收纳袋时，现在一次只会丢出一类物品，不同之前使用时会将全部物品丢出</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">更改</Paragraph><List>
+<ListItem><Paragraph>鱿鱼刷怪蛋现在仅能生成成年😔</Paragraph><List>
+<ListItem><Paragraph>自然生成的一群鱿鱼中有 5% 的概率生成幼年鱿鱼</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">战利品表</Paragraph><List>
-<ListItem><Paragraph>特殊战利品表 <TextBox Style="{StaticResource InlineCode}">empty</TextBox> 被移除并在原版数据包中不再被定义</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">绵羊战利品表</Paragraph><List>
-<ListItem><Paragraph>绵羊现在始终使用单一战利品表 <TextBox Style="{StaticResource InlineCode}">entities/sheep</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph>羊毛掉落仍在 <TextBox Style="{StaticResource InlineCode}">entities/sheep/&lt;color&gt;</TextBox> 的子表中定义，不过现在它们仅从主表中调用</Paragraph><List>
-<ListItem><Paragraph>注释：羊肉掉落现在由主表控制，因为子表仅应控制羊毛掉落</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">新条件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SHEEP</TextBox> 实体子谓词</Paragraph>    <Paragraph>新的实体子谓词用于匹配羊毛字段：</Paragraph><List>
-<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">sheared</TextBox> - 可选的布尔值</Paragraph></ListItem>
-<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">color</TextBox> - 可选的羊毛染料颜色</Paragraph></ListItem>
+<ListItem><Paragraph>当生物从一种类型变成另一种时（例如：猪灵变为僵尸猪灵），转变生物的生命值百分比不变</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本现在为 52</Paragraph></ListItem>
+<ListItem><Paragraph>资源包版本现在为 37</Paragraph></ListItem>
+<ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -273,18 +260,18 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 <TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-04" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 24w35a" EventType="启动游戏"
-    EventData="24w35a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 24w36a" EventType="启动游戏"
+    EventData="24w36a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/93d259fdba93aa7d3c1763cfb0136295087e0de3/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/30663a50aaf407751ae9e704758364ed9433206d/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/24w35a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/24w36a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-24w35a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-snapshot-24w36a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
@@ -388,8 +375,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="47261ab" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/47261ab7784d129bf7f7566844090564bbc4ff79"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="a68ff84" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/a68ff841a376f317c2e04aea2f9075a768d8f399"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">

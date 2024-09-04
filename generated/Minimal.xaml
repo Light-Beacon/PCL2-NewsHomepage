@@ -193,36 +193,23 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 24w35a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w36a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph>现在选取物品只能通过鼠标滚轮完成</Paragraph></ListItem>
-</List><BlockUIContainer>
-  <Border Style="{StaticResource Quote}">
-    <TextBlock>开发者注释：在之前的快照中你可以通过数字键选区物品。我们之所以移除了该特性，是因为它会导致高级玩家热键冲突，并且当收纳袋拥有超过十个可见物品时显得不是那么有用。</TextBlock>
-  </Border>
-</BlockUIContainer><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>袭击者必须寻找一个距村庄中心上下垂直距离不超过 96 格的位置生成，否则袭击不会发生</Paragraph></ListItem>
-<ListItem><Paragraph>现在大幅减少了袭击者在袭击时找不到有效位置生成的可能</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>现在数据包版本为 51</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 51</Paragraph><List>
-<ListItem><Paragraph>试炼刷怪笼的 <TextBox Style="{StaticResource InlineCode}">normal_config</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">ominous_config</TextBox> 字段的配置现在在 <TextBox Style="{StaticResource InlineCode}">trial_spawner</TextBox> 注册表中定义</Paragraph><List>
-<ListItem><Paragraph>这允许在数据包中更简单地自定义试炼刷怪笼的配置</Paragraph></ListItem>
-<ListItem><Paragraph>行内配置数据仍然被支持</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">已知问题</Paragraph><List>
+<ListItem><Paragraph>末影珍珠不会传送你到正确的位置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
+<ListItem><Paragraph>当在热键栏中使用收纳袋时，现在一次只会丢出一类物品，不同之前使用时会将全部物品丢出</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">更改</Paragraph><List>
+<ListItem><Paragraph>鱿鱼刷怪蛋现在仅能生成成年😔</Paragraph><List>
+<ListItem><Paragraph>自然生成的一群鱿鱼中有 5% 的概率生成幼年鱿鱼</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">战利品表</Paragraph><List>
-<ListItem><Paragraph>特殊战利品表 <TextBox Style="{StaticResource InlineCode}">empty</TextBox> 被移除并在原版数据包中不再被定义</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">绵羊战利品表</Paragraph><List>
-<ListItem><Paragraph>绵羊现在始终使用单一战利品表 <TextBox Style="{StaticResource InlineCode}">entities/sheep</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph>羊毛掉落仍在 <TextBox Style="{StaticResource InlineCode}">entities/sheep/&lt;color&gt;</TextBox> 的子表中定义，不过现在它们仅从主表中调用</Paragraph><List>
-<ListItem><Paragraph>注释：羊肉掉落现在由主表控制，因为子表仅应控制羊毛掉落</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">新条件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SHEEP</TextBox> 实体子谓词</Paragraph>    <Paragraph>新的实体子谓词用于匹配羊毛字段：</Paragraph><List>
-<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">sheared</TextBox> - 可选的布尔值</Paragraph></ListItem>
-<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">color</TextBox> - 可选的羊毛染料颜色</Paragraph></ListItem>
+<ListItem><Paragraph>当生物从一种类型变成另一种时（例如：猪灵变为僵尸猪灵），转变生物的生命值百分比不变</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本现在为 52</Paragraph></ListItem>
+<ListItem><Paragraph>资源包版本现在为 37</Paragraph></ListItem>
+<ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
