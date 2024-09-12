@@ -193,22 +193,25 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 24w36a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w37a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">已知问题</Paragraph><List>
-<ListItem><Paragraph>末影珍珠不会传送你到正确的位置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph>当在热键栏中使用收纳袋时，现在一次只会丢出一类物品，不同之前使用时会将全部物品丢出</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">更改</Paragraph><List>
-<ListItem><Paragraph>鱿鱼刷怪蛋现在仅能生成成年鱿鱼</Paragraph><List>
-<ListItem><Paragraph>自然生成的一群鱿鱼中有 5% 的概率生成幼年鱿鱼</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph>投掷出的末影珍珠现在可以加载区块</Paragraph></ListItem>
+<ListItem><Paragraph>增加了对高挪威语的支持</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">末影珍珠区块加载</Paragraph><List>
+<ListItem><Paragraph>末影珍珠能确保其所在或要进入的区块能一直加载</Paragraph></ListItem>
+<ListItem><Paragraph>它也可以跨维度加载区块，所以它可以一直继续飞行</Paragraph></ListItem>
+<ListItem><Paragraph>这确保了末影珍珠总是会着陆，使得跨维度的末影珍珠旅行更加可预测</Paragraph></ListItem>
+<ListItem><Paragraph>末影珍珠在玩家登出时会反加载，在玩家登录的时候再重新加载，类似之前载具的行为</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物转化信息</Paragraph>    <Paragraph>在上周的快照中，我们修复了一个与生物从一种类型向另一种转化（例如：僵尸转为溺尸）而导致的数据转移相关的漏洞。在本周，我们撤销了一些更改（生命值，属性，战利品表不再转移）。</Paragraph>    <Paragraph>具体转移列表详见完整日志。</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本 53</Paragraph><List>
+<ListItem><Paragraph>战利品表、标签、物品组件、谓词、进度触发器的更改</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph>当生物从一种类型变成另一种时（例如：猪灵变为僵尸猪灵），转变生物的生命值百分比不变</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>数据包版本现在为 52</Paragraph></ListItem>
-<ListItem><Paragraph>资源包版本现在为 37</Paragraph></ListItem>
+<ListItem><Paragraph>资源包版本 38</Paragraph><List>
+<ListItem><Paragraph>GUI 精灵图的更改</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
@@ -216,7 +219,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -233,7 +236,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>

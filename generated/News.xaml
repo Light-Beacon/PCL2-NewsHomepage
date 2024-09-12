@@ -219,30 +219,33 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </FlowDocumentScrollViewer>
 </StackPanel>
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新快照版 - 24w36a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 24w37a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/09/04/image.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://imgse.com/i/pAntQyR" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/09/04/image.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://imgse.com/i/pAntQyR" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w36a" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w37a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">已知问题</Paragraph><List>
-<ListItem><Paragraph>末影珍珠不会传送你到正确的位置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph>当在热键栏中使用收纳袋时，现在一次只会丢出一类物品，不同之前使用时会将全部物品丢出</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">更改</Paragraph><List>
-<ListItem><Paragraph>鱿鱼刷怪蛋现在仅能生成成年鱿鱼</Paragraph><List>
-<ListItem><Paragraph>自然生成的一群鱿鱼中有 5% 的概率生成幼年鱿鱼</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph>投掷出的末影珍珠现在可以加载区块</Paragraph></ListItem>
+<ListItem><Paragraph>增加了对高挪威语的支持</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">末影珍珠区块加载</Paragraph><List>
+<ListItem><Paragraph>末影珍珠能确保其所在或要进入的区块能一直加载</Paragraph></ListItem>
+<ListItem><Paragraph>它也可以跨维度加载区块，所以它可以一直继续飞行</Paragraph></ListItem>
+<ListItem><Paragraph>这确保了末影珍珠总是会着陆，使得跨维度的末影珍珠旅行更加可预测</Paragraph></ListItem>
+<ListItem><Paragraph>末影珍珠在玩家登出时会反加载，在玩家登录的时候再重新加载，类似之前载具的行为</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物转化信息</Paragraph>    <Paragraph>在上周的快照中，我们修复了一个与生物从一种类型向另一种转化（例如：僵尸转为溺尸）而导致的数据转移相关的漏洞。在本周，我们撤销了一些更改（生命值，属性，战利品表不再转移）。</Paragraph>    <Paragraph>具体转移列表详见完整日志。</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本 53</Paragraph><List>
+<ListItem><Paragraph>战利品表、标签、物品组件、谓词、进度触发器的更改</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph>当生物从一种类型变成另一种时（例如：猪灵变为僵尸猪灵），转变生物的生命值百分比不变</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>数据包版本现在为 52</Paragraph></ListItem>
-<ListItem><Paragraph>资源包版本现在为 37</Paragraph></ListItem>
+<ListItem><Paragraph>资源包版本 38</Paragraph><List>
+<ListItem><Paragraph>GUI 精灵图的更改</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
@@ -258,25 +261,25 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-05" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-12" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 24w36a" EventType="启动游戏"
-    EventData="24w36a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 24w37a" EventType="启动游戏"
+    EventData="24w37a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/30663a50aaf407751ae9e704758364ed9433206d/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/4ba5f8917ac400474751b6e0f20d311d3b726fe7/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/24w36a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/24w37a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-24w36a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-snapshot-24w37a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -309,7 +312,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-05" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-12" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1" EventType="启动游戏"
     EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -327,7 +330,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -364,7 +367,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -375,8 +378,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="1bba08d" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/1bba08d6bf249d268eeb82cd6141f159dbe5e57d"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="ab31089" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/ab310896bf1ad1b8077c4738b25d50d5bf1d9077"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
