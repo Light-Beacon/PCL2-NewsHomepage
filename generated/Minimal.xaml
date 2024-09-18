@@ -193,25 +193,26 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 24w37a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w38a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>投掷出的末影珍珠现在可以加载区块</Paragraph></ListItem>
-<ListItem><Paragraph>增加了对高挪威语的支持</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">末影珍珠区块加载</Paragraph><List>
-<ListItem><Paragraph>末影珍珠能确保其所在或要进入的区块能一直加载</Paragraph></ListItem>
-<ListItem><Paragraph>它也可以跨维度加载区块，所以它可以一直继续飞行</Paragraph></ListItem>
-<ListItem><Paragraph>这确保了末影珍珠总是会着陆，使得跨维度的末影珍珠旅行更加可预测</Paragraph></ListItem>
-<ListItem><Paragraph>末影珍珠在玩家登出时会反加载，在玩家登录的时候再重新加载，类似之前载具的行为</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">生物转化信息</Paragraph>    <Paragraph>在上周的快照中，我们修复了一个与生物从一种类型向另一种转化（例如：僵尸转为溺尸）而导致的数据转移相关的漏洞。在本周，我们撤销了一些更改（生命值，属性，战利品表不再转移）。</Paragraph>    <Paragraph>具体转移列表详见完整日志。</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>数据包版本 53</Paragraph><List>
-<ListItem><Paragraph>战利品表、标签、物品组件、谓词、进度触发器的更改</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
+<ListItem><Paragraph>收纳袋现在可以使用染料染成 16 种不同的颜色</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph>潜影盒染色配方现在在配方书中显示</Paragraph></ListItem>
+<ListItem><Paragraph>更新了 Realms 的创建世界界面</Paragraph></ListItem>
+<ListItem><Paragraph>Realms 启用了极限模式选项</Paragraph></ListItem>
+<ListItem><Paragraph>限制在创造模式下快速将物品丢出物品栏</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Realms</Paragraph><List>
+<ListItem><Paragraph>现在使用了正常的，拥有完整特性的世界创建界面</Paragraph><List>
+<ListItem><Paragraph>游戏规则可以自定义</Paragraph></ListItem>
+<ListItem><Paragraph>数据包可以自定义</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph>资源包版本 38</Paragraph><List>
-<ListItem><Paragraph>GUI 精灵图的更改</Paragraph></ListItem>
-</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">极限模式</Paragraph>    <Paragraph>极限模式在 Realms 中可在创建新世界或重新创建的时候开启</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本现在为 53</Paragraph></ListItem>
+<ListItem><Paragraph>资源包版本现在为 39</Paragraph></ListItem>
+<ListItem><Paragraph>忽略客户端侧连接错误的临时选项（strictErrorHandling）已被移除</Paragraph></ListItem>
 <ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
@@ -219,7 +220,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -236,7 +237,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
