@@ -85,6 +85,21 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
 <Setter Property="Padding" Value="10,5"/>
 <Setter Property="Margin" Value="0,5"/>
+</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#CC4455"/>
+<Setter Property="Background" Value="#33CC4455"/>
+</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#4455AA"/>
+<Setter Property="Background" Value="#334455AA"/>
+</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#44AA55"/>
+<Setter Property="Background" Value="#3344AA55"/>
+</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#AA55BB"/>
+<Setter Property="Background" Value="#33AA55BB"/>
+</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#DDBB44"/>
+<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
   <Setter Property="Foreground" Value="#FF777777" />
@@ -219,35 +234,30 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </FlowDocumentScrollViewer>
 </StackPanel>
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新快照版 - 24w38a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 24w39a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/09/19/image.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/09/25/image.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://image.stapxs.cn/i/2024/09/19/image.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://image.stapxs.cn/i/2024/09/25/image.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w38a" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w39a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph>收纳袋现在可以使用染料染成 16 种不同的颜色</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph>收纳袋不再为实验性</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>潜影盒染色配方现在在配方书中显示</Paragraph></ListItem>
-<ListItem><Paragraph>更新了 Realms 的创建世界界面</Paragraph></ListItem>
-<ListItem><Paragraph>Realms 启用了极限模式选项</Paragraph></ListItem>
-<ListItem><Paragraph>限制在创造模式下快速将物品丢出物品栏</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Realms</Paragraph><List>
-<ListItem><Paragraph>现在使用了正常的，拥有完整特性的世界创建界面</Paragraph><List>
-<ListItem><Paragraph>游戏规则可以自定义</Paragraph></ListItem>
-<ListItem><Paragraph>数据包可以自定义</Paragraph></ListItem>
+<ListItem><Paragraph>更新了 UI 中槽位高亮使得物品纹理拥有更好的可见性</Paragraph><List>
+<ListItem><Paragraph>原先的纹理已被移入 Programmer Art 资源包</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">极限模式</Paragraph>    <Paragraph>极限模式在 Realms 中可在创建新世界或重新创建的时候开启</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>数据包版本现在为 53</Paragraph></ListItem>
-<ListItem><Paragraph>资源包版本现在为 39</Paragraph></ListItem>
-<ListItem><Paragraph>忽略客户端侧连接错误的临时选项（strictErrorHandling）已被移除</Paragraph></ListItem>
+<ListItem><Paragraph>头戴雕刻南瓜现在会使得该玩家在其他玩家的地图中的玩家标记隐藏</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph>数据包版本现在为 55</Paragraph><List>
 <ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>在内建数据包中移除了 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox> 特性标签</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -262,25 +272,25 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-19" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-25" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 24w38a" EventType="启动游戏"
-    EventData="24w38a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 24w39a" EventType="启动游戏"
+    EventData="24w39a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/b87bfc3763d88a1364b8ac30fe6f2ac3550948f8/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/31bc8a4f3c73e3873f4a0d42e7c65a7ae43cc44a/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/24w38a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/24w39a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-24w38a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-snapshot-24w39a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -313,7 +323,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-19" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-25" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1" EventType="启动游戏"
     EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -331,7 +341,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -368,7 +378,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-19" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -379,8 +389,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="e188bb7" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/e188bb749ad4038d64b614640f8cd70fc3014d02"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="121b55e" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/121b55e71ac9525b59d4c98941dd4a10ca4f8aff"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
