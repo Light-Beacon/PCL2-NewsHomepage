@@ -219,21 +219,24 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="Minecraft 大电影发布首支预告片" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Margin="0,40,0,0">
-<StackPanel HorizontalAlignment="Center">
-    <Line Margin="-1,0" X1="0" X2="1" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
-    <Image Stretch="UniformToFill" Source="https://image.stapxs.cn/i/2024/09/04/image.jpeg" MaxHeight="140"/>
-    <Line Margin="-1,0" X1="0" X2="1" Stroke="{DynamicResource ColorBrush3}" StrokeThickness="3" HorizontalAlignment="Center" Stretch="Fill"/>
-</StackPanel>
-<StackPanel Margin="20,10,20,30">
-    <FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H1}">Minecraft 大电影发布首支预告片</Paragraph>    <Paragraph>详见<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://b23.tv/IjVSCKj">视频</local:MyTextButton></Underline>。2025年北美上映。</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</StackPanel>
+</local:MyCard><local:MyCard Margin="0,0,0,5" Title="       Minecraft Live 正在直播">
+    <Border Background="#22EE1111" CornerRadius="5">
+    <StackPanel>
+    <TextBlock Text="●" Foreground="#DDEE1111" FontSize="28" Margin="20,0"/>
+    <Grid Margin="16,0,16,20">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="4*" />
+      <ColumnDefinition Width="5*" />
+    </Grid.ColumnDefinitions>
+    <local:MyButton Margin="6,2"
+            Grid.Column="0" Text="观看油管直播" EventType="打开网页" Height="50"
+            EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"/>
+    <local:MyButton Margin="6,2"
+            Grid.Column="1" Text="观看B站转播（WuGuangYao）" EventType="打开网页" Height="50"
+            EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"/>
+    </Grid>
+    </StackPanel>
+    </Border>
 </local:MyCard><local:MyCard Title="最新快照版 - 24w39a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
@@ -272,7 +275,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-25" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-29" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 24w39a" EventType="启动游戏"
     EventData="24w39a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -290,7 +293,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -323,7 +326,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-25" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-29" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.1" EventType="启动游戏"
     EventData="1.21.1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -341,7 +344,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -378,7 +381,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -389,8 +392,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="121b55e" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/121b55e71ac9525b59d4c98941dd4a10ca4f8aff"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="09631d9" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/09631d9303f3cbe9f127d9a4de2603c8728026c9"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
