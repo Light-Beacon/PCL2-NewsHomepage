@@ -68,14 +68,21 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="HorizontalAlignment" Value="Left"/>
 <Setter Property="FontSize" Value="14"/>
 <Setter Property="Foreground" Value="Black"/>
+</Style><Style TargetType="Paragraph" >
+<Setter Property="LineHeight" Value="12"/>
+<Setter Property="TextIndent" Value="16"/>
+<Setter Property="Margin" Value="0,8"/>
+</Style><Style TargetType="Paragraph" x:Key="Lp" >
+<Setter Property="LineHeight" Value="16"/>
+<Setter Property="TextIndent" Value="0"/>
 </Style><Style TargetType="List" >
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Margin" Value="20,0,0,0"/>
+<Setter Property="Margin" Value="20,6,0,6"/>
 <Setter Property="MarkerStyle" Value="1"/>
 <Setter Property="Padding" Value="0"/>
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
-<Setter Property="LineHeight" Value="22"/>
+<Setter Property="Margin" Value="0,4"/>
 </Style><Style TargetType="Section" x:Key="Hr" >
 <Setter Property="Margin" Value="0,4,0,0"/>
 <Setter Property="BorderThickness" Value="0,1.5,0,0"/>
@@ -93,17 +100,17 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
-<Setter Property="Margin" Value="0,5,0,5"/>
+<Setter Property="Margin" Value="0,10,0,3"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H4" >
 <Setter Property="FontSize" Value="16"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Margin" Value="0,10,0,1"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H5" >
-<Setter Property="FontSize" Value="15"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="Margin" Value="0,8,0,1"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
@@ -217,61 +224,106 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph>    <Paragraph>此项 Pale Garden 生物群系实验性特性可被 &quot;Winter Drop&quot; 实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition">此处</local:MyTextButton></Underline>找到更多关于实验性开关的信息。</Paragraph>    <Paragraph>我们喜爱听见你们关于新的 Pale Garden 群系和新敌对生物 Creaking 的反馈。</Paragraph>    <Paragraph>Creaking 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</local:MyTextButton></Underline></Paragraph>    <Paragraph>Pale garden 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">Winter Drop</Paragraph><List>
-<ListItem><Paragraph>增加了 Pale Garden 生物群系，Pale Oak 树，Pale Moss 方块，Pale Moss 地毯，Pale Hanging Moss 以及 Pale Oak 木系列。</Paragraph></ListItem>
-<ListItem><Paragraph>增加了 Creaking 生物，Creaking 刷怪蛋和 Creaking Heart 方块</Paragraph></ListItem>
+<BlockUIContainer>
+  <Border Style="{StaticResource noteQuote}">
+    <StackPanel>
+      <TextBlock Text="注释" FontWeight="Bold">
+        <TextBlock.Foreground>
+        <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Border}" />
+        </TextBlock.Foreground>
+      </TextBlock>
+      <TextBlock> 很多译名尚未确认，在此保留原文</TextBlock>
+    </StackPanel>
+  </Border>
+</BlockUIContainer><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph>    <Paragraph>此项 Pale Garden 生物群系实验性特性可被 &quot;Winter Drop&quot; 实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition">此处</local:MyTextButton></Underline>找到更多关于实验性开关的信息。</Paragraph>    <Paragraph>我们喜欢听见你们对新的 Pale Garden 群系和新敌对生物 Creaking 的反馈。</Paragraph>    <Paragraph>Creaking 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</local:MyTextButton></Underline></Paragraph>    <Paragraph>Pale garden 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">Winter Drop</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Pale Garden 生物群系，Pale Oak 树，Pale Moss 方块，Pale Moss 地毯，Pale Hanging Moss 以及 Pale Oak 木系列。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Creaking 生物，Creaking 刷怪蛋和 Creaking Heart 方块</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Pale Garden</Paragraph>    <Paragraph>Pale Garden 是一个黑森林的生物群系变种，拥有以下独特特性：</Paragraph><List>
-<ListItem><Paragraph>Pale Oak 树木在此生成</Paragraph></ListItem>
-<ListItem><Paragraph>Pale Moss 方块/地毯在此处地面生成</Paragraph></ListItem>
-<ListItem><Paragraph>Hanging Pale Moss 在 Pale Oak 树叶悬挂生成</Paragraph></ListItem>
-<ListItem><Paragraph>动物不会在 Pale Garden 生物群系自然生成</Paragraph></ListItem>
-<ListItem><Paragraph>新的生物群系拥有独特的环境音效</Paragraph></ListItem>
-<ListItem><Paragraph>Creaking Heart 方块在 Pale Oak 树木中生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Pale Oak 树木在此生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Pale Moss 方块/地毯在此处地面生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Hanging Pale Moss 在 Pale Oak 树叶悬挂生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">动物不会在 Pale Garden 生物群系自然生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的生物群系拥有独特的环境音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Creaking Heart 方块在 Pale Oak 树木中生成</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Pale Oak 树</Paragraph><List>
-<ListItem><Paragraph>Pale Oak 树叶掉落 Pale Oak 树苗，可以 2x2 种植长成 Pale Oak 树</Paragraph></ListItem>
-<ListItem><Paragraph>Pale Oak 原木可以被制成 Pale Oak 木系列：</Paragraph><List>
-<ListItem><Paragraph>门</Paragraph></ListItem>
-<ListItem><Paragraph>栅栏</Paragraph></ListItem>
-<ListItem><Paragraph>栅栏门</Paragraph></ListItem>
-<ListItem><Paragraph>木板</Paragraph></ListItem>
-<ListItem><Paragraph>告示牌</Paragraph></ListItem>
-<ListItem><Paragraph>悬挂告示牌</Paragraph></ListItem>
-<ListItem><Paragraph>台阶</Paragraph></ListItem>
-<ListItem><Paragraph>楼梯</Paragraph></ListItem>
-<ListItem><Paragraph>活板门</Paragraph></ListItem>
-<ListItem><Paragraph>木头</Paragraph></ListItem>
-<ListItem><Paragraph>去皮原木</Paragraph></ListItem>
-<ListItem><Paragraph>去皮木头</Paragraph></ListItem>
-<ListItem><Paragraph>按钮</Paragraph></ListItem>
-<ListItem><Paragraph>压力板</Paragraph></ListItem>
-<ListItem><Paragraph>船</Paragraph></ListItem>
-<ListItem><Paragraph>运输船</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Pale Oak 树叶掉落 Pale Oak 树苗，可以 2x2 种植长成 Pale Oak 树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Pale Oak 原木可以被制成 Pale Oak 木系列：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">门</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">栅栏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">栅栏门</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">木板</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">告示牌</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">悬挂告示牌</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">台阶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">楼梯</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">活板门</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">木头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">去皮原木</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">去皮木头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按钮</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">压力板</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">船</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">运输船</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Pale Moss 方块</Paragraph>    <Paragraph>Pale Moss 方块在 Pale Garden 生物群系自然生成</Paragraph><Paragraph Style="{StaticResource H4}">Pale Moss 地毯</Paragraph>    <Paragraph>Pale Moss 地毯在 Pale Garden 生物群系自然生成，独特特性：</Paragraph><List>
-<ListItem><Paragraph>当放置时，Pale Moss 地毯沿着紧挨着的任何方块的实心面生长两个方块</Paragraph></ListItem>
-<ListItem><Paragraph>Pale Moss 地毯撒上骨粉可以在紧挨着的任何方块的所有实心面上长满</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当放置时，Pale Moss 地毯沿着紧挨着的任何方块的实心面生长两个方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Pale Moss 地毯撒上骨粉可以在紧挨着的任何方块的所有实心面上长满</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Pale Hanging Moss</Paragraph>    <Paragraph>Pale Hanging Moss 在 Pale Garden 生物群系的 Pale Oak 树叶下悬挂生成</Paragraph><List>
-<ListItem><Paragraph>Pale Hanging Moss 不会接受随机刻生长，但可以撒骨粉向下生长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Pale Hanging Moss 不会接受随机刻生长，但可以撒骨粉向下生长</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Creaking 生物</Paragraph>    <Paragraph>如果 Creaking Heart 方块在 Pale Oak 树中生成，Creaking 生物会在夜晚的 Pale Garden 生物群系生成。游戏中特性：</Paragraph><List>
-<ListItem><Paragraph>当玩家盯着它时它不会移动</Paragraph></ListItem>
-<ListItem><Paragraph>Creaking 免疫伤害</Paragraph></ListItem>
-<ListItem><Paragraph>当击中该生物时，会显示一串粒子踪迹连接该生物和与生物连接的 Creaking Heart</Paragraph></ListItem>
-<ListItem><Paragraph>当 Creaking 连接的 Creaking Heart 被破坏时，Creaking 会消失</Paragraph></ListItem>
-<ListItem><Paragraph>其生成不会被光照等级所影响，而是基于昼夜循环，白天消失晚上出现</Paragraph></ListItem>
-<ListItem><Paragraph>Creaking 不能乘船</Paragraph></ListItem>
-<ListItem><Paragraph>由 Creaking Heart 生成的 Creaking 不能通过传送门传送</Paragraph></ListItem>
-<ListItem><Paragraph>Creaking 刷怪蛋会生成一只不连接 Creaking Heart 的 Creaking。Creaking 将会在昼夜、保存和加载时一直存在，并且会受到攻击带来的或其它来源的伤害。它拥有一点（半颗心）的生命值</Paragraph></ListItem>
-<ListItem><Paragraph>被 Creaking Heart 生成的 Creaking 不能使用刷怪蛋生成，也不能被指令生成。它只能像 Creaking Heart 方块的一部分那样存在。</Paragraph></ListItem>
-<ListItem><Paragraph>戴有雕刻南瓜的玩家盯着 Creaking 不会阻止其移动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家盯着它时它不会移动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Creaking 免疫伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当击中该生物时，会显示一串粒子踪迹连接该生物和与生物连接的 Creaking Heart</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 Creaking 连接的 Creaking Heart 被破坏时，Creaking 会消失</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其生成不会被光照等级所影响，而是基于昼夜循环，白天消失晚上出现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Creaking 不能乘船</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由 Creaking Heart 生成的 Creaking 不能通过传送门传送</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Creaking 刷怪蛋会生成一只不连接 Creaking Heart 的 Creaking。Creaking 将会在昼夜、保存和加载时一直存在，并且会受到攻击带来的或其它来源的伤害。它拥有一点（半颗心）的生命值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被 Creaking Heart 生成的 Creaking 不能使用刷怪蛋生成，也不能被指令生成。它只能像 Creaking Heart 方块的一部分那样存在。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">戴有雕刻南瓜的玩家盯着 Creaking 不会阻止其移动</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Creaking Heart</Paragraph>    <Paragraph>Creaking Heart 是一个“活着”的方块，在 Pale Oak 树木中生成，所有的面都被 Pale Oak 原木所遮盖。当夜幕降临时，它可以生成一只 Creaking，它被放置于正好对齐的两个 Pale Oak 原木方块中间。</Paragraph><List>
-<ListItem><Paragraph>在夜晚激活，在白天失活</Paragraph></ListItem>
-<ListItem><Paragraph>当 Creaking 被玩家击中时会发送一串粒子链接其与 Creaking</Paragraph></ListItem>
-<ListItem><Paragraph>当 Creaking Heart 被破坏时，与其连接的 Creaking 也会消失</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在夜晚激活，在白天失活</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 Creaking 被玩家击中时会发送一串粒子链接其与 Creaking</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 Creaking Heart 被破坏时，与其连接的 Creaking 也会消失</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">用于 Pale Garden 环境音效的新系统</Paragraph>    <Paragraph>在 Pale Garden 中环境音效并不源自生物群系设置而是产生于在生物群系中的方块
 * 当 Pale Hanging Moss 接触到 Pale Oak 原木以及 Pale Oak 树叶时散发微小的环境音效
-* 当夜晚时并且六面全被原木遮盖，Creaking Heart 方块会散发一系列的怪异恐怖的音效</Paragraph>
+* 当夜晚时并且六面全被原木遮盖，Creaking Heart 方块会散发一系列的怪异恐怖的音效</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">收纳袋染色配方现在由染料解锁而非未染色的收纳袋物品解锁</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">潜影盒与收纳袋配方在试图对其染相同颜色时不再生效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了一个无障碍选项使指向的方块边线更加可见</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Realms</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">若适用，Realms 主界面会显示 Realm 中最新活动的世界的游戏模式</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 56</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 39</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 56</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的粒子效果：<TextBox Style="{StaticResource InlineCode}">block_crumble</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">trail</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">你再也无法通过 <TextBox Style="{StaticResource InlineCode}">ride</TextBox> 命令乘坐拴绳结、闪电以及浮漂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">rotate</TextBox> 命令</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">rotate</TextBox> 命令</Paragraph>    <Paragraph>用于旋转实体的新命令</Paragraph>    <Paragraph>语法：</Paragraph>    <Paragraph><TextBox Style="{StaticResource InlineCode}">rotate &lt;目标&gt; &lt;角度&gt;</TextBox></Paragraph>    <Paragraph><TextBox Style="{StaticResource InlineCode}">rotate &lt;目标&gt; facing &lt;朝向位置&gt;</TextBox></Paragraph>    <Paragraph><TextBox Style="{StaticResource InlineCode}">rotate &lt;目标&gt; facing entity &lt;朝向目标&gt; [&lt;朝向锚点&gt;]</TextBox></Paragraph>    <Paragraph>参数：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">目标：待旋转的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">角度：两个旋转角度值表示垂直旋转和水平旋转角度</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可使用相对（<TextBox Style="{StaticResource InlineCode}">~</TextBox>）坐标符号以指定当前上下文的旋转角度</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">朝向位置：实体需要朝向的世界位置的坐标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">朝向目标：实体需要朝向的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">朝向锚点：决定实体朝向目标实体的那哪个锚点 - <TextBox Style="{StaticResource InlineCode}">feet</TextBox>（脚） 或 <TextBox Style="{StaticResource InlineCode}">eyes</TextBox>（眼）（默认为<TextBox Style="{StaticResource InlineCode}">feet</TextBox>）</Paragraph></ListItem>
+</List>    <Paragraph>提示：参数拥有相同与<TextBox Style="{StaticResource InlineCode}">teleport</TextBox>命令相同的含义</Paragraph><Paragraph Style="{StaticResource H3}">附魔效果</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">将效果类型 <TextBox Style="{StaticResource InlineCode}">damage_item</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">change_item_damage</TextBox>，现在同时支持负值</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">gaze_disguise_equipment</TextBox>：可以用与遮掩玩家，避免与其它生物进行视线交流的物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">粒子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">block_crumble</TextBox> 粒子，拥有以下选项：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block_state</TextBox> - 粉碎的方块的方块状态</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">trail</TextBox> 粒子，拥有以下选项：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">color</TextBox> - 轨迹的颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox> - 轨迹要到达的目标位置</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 39</Paragraph>    <Paragraph>增加了对新实验性特性更改的支持</Paragraph>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
@@ -284,8 +336,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>增加了索西语与白俄罗斯语（拉丁）的支持</Paragraph></ListItem>
-<ListItem><Paragraph>修复可能会被用于使服务器崩溃的关键漏洞</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了索西语与白俄罗斯语（拉丁）的支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修复可能会被用于使服务器崩溃的关键漏洞</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>

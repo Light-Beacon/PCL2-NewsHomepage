@@ -68,14 +68,21 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="HorizontalAlignment" Value="Left"/>
 <Setter Property="FontSize" Value="14"/>
 <Setter Property="Foreground" Value="Black"/>
+</Style><Style TargetType="Paragraph" >
+<Setter Property="LineHeight" Value="12"/>
+<Setter Property="TextIndent" Value="16"/>
+<Setter Property="Margin" Value="0,8"/>
+</Style><Style TargetType="Paragraph" x:Key="Lp" >
+<Setter Property="LineHeight" Value="16"/>
+<Setter Property="TextIndent" Value="0"/>
 </Style><Style TargetType="List" >
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Margin" Value="20,0,0,0"/>
+<Setter Property="Margin" Value="20,6,0,6"/>
 <Setter Property="MarkerStyle" Value="1"/>
 <Setter Property="Padding" Value="0"/>
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
-<Setter Property="LineHeight" Value="22"/>
+<Setter Property="Margin" Value="0,4"/>
 </Style><Style TargetType="Section" x:Key="Hr" >
 <Setter Property="Margin" Value="0,4,0,0"/>
 <Setter Property="BorderThickness" Value="0,1.5,0,0"/>
@@ -93,17 +100,17 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
-<Setter Property="Margin" Value="0,5,0,5"/>
+<Setter Property="Margin" Value="0,10,0,3"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H4" >
 <Setter Property="FontSize" Value="16"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Margin" Value="0,10,0,1"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H5" >
-<Setter Property="FontSize" Value="15"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="Margin" Value="0,8,0,1"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
@@ -421,8 +428,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="51a044c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/51a044caa23fda974b6213f83fcbf83848ce7c20"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="7bd2a90" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/7bd2a90404fb1ba063c03e0a928b9f54bada6d39"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">

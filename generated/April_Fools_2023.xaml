@@ -68,14 +68,21 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="HorizontalAlignment" Value="Left"/>
 <Setter Property="FontSize" Value="14"/>
 <Setter Property="Foreground" Value="Black"/>
+</Style><Style TargetType="Paragraph" >
+<Setter Property="LineHeight" Value="12"/>
+<Setter Property="TextIndent" Value="16"/>
+<Setter Property="Margin" Value="0,8"/>
+</Style><Style TargetType="Paragraph" x:Key="Lp" >
+<Setter Property="LineHeight" Value="16"/>
+<Setter Property="TextIndent" Value="0"/>
 </Style><Style TargetType="List" >
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
-<Setter Property="Margin" Value="20,0,0,0"/>
+<Setter Property="Margin" Value="20,6,0,6"/>
 <Setter Property="MarkerStyle" Value="1"/>
 <Setter Property="Padding" Value="0"/>
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
-<Setter Property="LineHeight" Value="22"/>
+<Setter Property="Margin" Value="0,4"/>
 </Style><Style TargetType="Section" x:Key="Hr" >
 <Setter Property="Margin" Value="0,4,0,0"/>
 <Setter Property="BorderThickness" Value="0,1.5,0,0"/>
@@ -93,17 +100,17 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/>
 </Style><Style TargetType="Paragraph" x:Key="H3" >
 <Setter Property="FontSize" Value="18"/>
-<Setter Property="Margin" Value="0,5,0,5"/>
+<Setter Property="Margin" Value="0,10,0,3"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H4" >
 <Setter Property="FontSize" Value="16"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="Margin" Value="0,10,0,1"/>
 <Setter Property="FontWeight" Value="Bold"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style TargetType="Paragraph" x:Key="H5" >
-<Setter Property="FontSize" Value="15"/>
-<Setter Property="Margin" Value="0,3,0,5"/>
+<Setter Property="FontSize" Value="14"/>
+<Setter Property="Margin" Value="0,8,0,1"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
@@ -242,27 +249,27 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 当你启动游戏的那一刻，你会发现你自己正身处于拥有无尽的投票的世界中，在那里投票的结果将会从根本上更改 Minecraft 的运行法则。我们创造了好一系列的可供投票的特性，它们包含了方方面面：气球蜂、法国模式、僵尸模式、兔子幻形、爆破药水、诡异世界 —— 还有更多、更多......
 “研究表明游戏玩家喜爱做出选择——越多越好，”来自渝仁大学的司越·仪教授说道。“Mojang Studios 希望将选择权交到玩家的手上的事实体现了他们是多么地关心他们的玩家社区。至少我是这么想的。我从 1857 年开始就不混社区了而且我其实也不玩游戏。”
 所以这个什么时候才能推出？事实是它已经到来了！由于我们希望投票更新尽快发放到玩家们的手里，我们现在非常乐意宣布你现在立刻就可以下载它！可以等会再感谢我们。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph>引入投票系统：可以改变一切的方法*</Paragraph></ListItem>
-<ListItem><Paragraph>真实的投票体验 —— 不需要再等到下一次 Minecraft Live 为其他人的选择而生气！</Paragraph></ListItem>
-<ListItem><Paragraph>元宇宙革命性的元投票技术！</Paragraph></ListItem>
-<ListItem><Paragraph>包括很多新特性，它们太好了而不能放进主流版本中 —— 至少现在是这样！</Paragraph></ListItem>
-<ListItem><Paragraph>极小的概率投票结果会摧毁你的世界！</Paragraph></ListItem>
-<ListItem><Paragraph>兴奋的倒计时！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">引入投票系统：可以改变一切的方法*</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">真实的投票体验 —— 不需要再等到下一次 Minecraft Live 为其他人的选择而生气！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">元宇宙革命性的元投票技术！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">包括很多新特性，它们太好了而不能放进主流版本中 —— 至少现在是这样！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">极小的概率投票结果会摧毁你的世界！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">兴奋的倒计时！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">方块</Paragraph><List>
-<ListItem><Paragraph>是的！方块！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">是的！方块！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">物品</Paragraph><List>
-<ListItem><Paragraph>为了美好未来的物品！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为了美好未来的物品！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>超兴奋！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">超兴奋！</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">漏洞</Paragraph><List>
-<ListItem><Paragraph>加了点新 Bug（除非你投票决定它们是特性）
+<ListItem><Paragraph Style="{StaticResource Lp}">加了点新 Bug（除非你投票决定它们是特性）
 （*：是的我们之前已改变了一切，为什么你不想点新的更好的方法呢）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">FAQ</Paragraph><Paragraph Style="{StaticResource H4}">当我下载这个快照后会发生什么</Paragraph><List>
-<ListItem><Paragraph>在你下载之后，没有反悔的余地。如果你删除文件，故事就就此结束了；你从床上醒来并信你爱信啥信啥吧。你要是启动它，你呆在主世界，我们会给你看看爱丽丝仙境的兔子洞有多深</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在你下载之后，没有反悔的余地。如果你删除文件，故事就就此结束了；你从床上醒来并信你爱信啥信啥吧。你要是启动它，你呆在主世界，我们会给你看看爱丽丝仙境的兔子洞有多深</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">在游戏玩法上我能期待些什么</Paragraph><List>
-<ListItem><Paragraph>就像一盒巧克力一样，你永远不会知道你会尝到什么滋味</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">就像一盒巧克力一样，你永远不会知道你会尝到什么滋味</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">但是我不想投那堆乱七八糟的，我就是想放松一下</Paragraph><List>
-<ListItem><Paragraph>最艰难的抉择，需要最坚强的意志！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">最艰难的抉择，需要最坚强的意志！</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -302,10 +309,10 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <FlowDocument>
     <Paragraph>Mojang Studios 近日在 B站 创建了官方账号，并发布了入驻视频。
 视频表达了对中国 Minecraft 社区的关心，以及透露了一些关于 Minecraft 接下来更新的秘密。</Paragraph><Paragraph Style="{StaticResource H2}">1.20 更新即将到来的扩增内容</Paragraph><List>
-<ListItem><Paragraph>末影人现在会使用 “末地传送腿”，当其头部被阻挡而不能照计划移动或被困在船、矿车等载具上时，会使用末地传送腿，将最近的玩家踢进末路之地的虚空中，若玩家不在末地维度则将其传送至末地并使其掉入虚空，以表示对卑鄙的两格人的愤怒。</Paragraph></ListItem>
-<ListItem><Paragraph>闪电苦力怕增加格斗技能，被称为“闪电苦力怕拳”，该拳伤害极高（同监守者），并同时赋予 2.5 秒的电击效果，其会使玩家画面剧烈抖动，无法控制。
+<ListItem><Paragraph Style="{StaticResource Lp}">末影人现在会使用 “末地传送腿”，当其头部被阻挡而不能照计划移动或被困在船、矿车等载具上时，会使用末地传送腿，将最近的玩家踢进末路之地的虚空中，若玩家不在末地维度则将其传送至末地并使其掉入虚空，以表示对卑鄙的两格人的愤怒。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">闪电苦力怕增加格斗技能，被称为“闪电苦力怕拳”，该拳伤害极高（同监守者），并同时赋予 2.5 秒的电击效果，其会使玩家画面剧烈抖动，无法控制。
 ** 由于 Mojang 调了半天并未出现自己想要的结果，如果闪电苦力怕因为自身原因无法发动技能可能是特性</Paragraph></ListItem>
-<ListItem><Paragraph>添加 MOBBO，一种生物
+<ListItem><Paragraph Style="{StaticResource Lp}">添加 MOBBO，一种生物
 ** 他非常爱你
 ** 他可以帮你一键合成物品
 ** 他可以使用 Mobbo 方块来装饰你的房子
@@ -315,10 +322,10 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock Text="Mobbo" Style="{StaticResource imgTitle}" />
 </StackPanel>
 </BlockUIContainer></ListItem>
-<ListItem><Paragraph>疣猪兽现在会在创死一名玩家后跳舞</Paragraph></ListItem>
-<ListItem><Paragraph>荧石有了新用途，不过并未详细透露，好像和水有关</Paragraph></ListItem>
-<ListItem><Paragraph>现在猪灵觉得黄金太土了，不如使用泥土来交易，因为它们觉得其相当珍贵</Paragraph></ListItem>
-<ListItem><Paragraph>手撸原木太疼了，玩家需要先手撸牛合成手套，使用手套来手撸原木</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">疣猪兽现在会在创死一名玩家后跳舞</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">荧石有了新用途，不过并未详细透露，好像和水有关</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在猪灵觉得黄金太土了，不如使用泥土来交易，因为它们觉得其相当珍贵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">手撸原木太疼了，玩家需要先手撸牛合成手套，使用手套来手撸原木</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">关注官方账号</Paragraph>    <Paragraph>扫描下方二维码获取 Mojang 的最新消息
 </Paragraph><BlockUIContainer>
 <StackPanel>
