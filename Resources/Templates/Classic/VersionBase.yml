@@ -1,4 +1,6 @@
 components:
+ - ${@IF|${warn}|Head/Warn}
+ - ${@IF|${hint}|Head/Hint}
  - ${@IF|${version-image-link}|VersionHeaderImage}
  - FlowDocumentViewer
  - ${@IF|${not_finished}|Loading}
