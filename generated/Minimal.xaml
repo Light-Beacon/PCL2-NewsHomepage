@@ -40,6 +40,26 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             </ControlTemplate>
         </Setter.Value>
     </Setter>
+</Style><Style TargetType="Border" x:Key="Quote" >
+<Setter Property="BorderThickness" Value="5,0,0,0"/>
+<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
+<Setter Property="Padding" Value="10,5"/>
+<Setter Property="Margin" Value="0,5"/>
+</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#CC4455"/>
+<Setter Property="Background" Value="#33CC4455"/>
+</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#4455AA"/>
+<Setter Property="Background" Value="#334455AA"/>
+</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#44AA55"/>
+<Setter Property="Background" Value="#3344AA55"/>
+</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#AA55BB"/>
+<Setter Property="Background" Value="#33AA55BB"/>
+</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#DDBB44"/>
+<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style TargetType="Image" x:Key="InnerImage" >
 <Setter Property="MaxHeight" Value="500"/>
 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -56,6 +76,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
 <Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Section" x:Key="Hr" >
+<Setter Property="Margin" Value="0,4,0,0"/>
+<Setter Property="BorderThickness" Value="0,1.5,0,0"/>
+<Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/>
+<Setter Property="FontSize" Value="4"/>
 </Style><Style TargetType="Paragraph" x:Key="H1" >
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
@@ -80,26 +105,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontSize" Value="15"/>
 <Setter Property="Margin" Value="0,3,0,5"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
-</Style><Style TargetType="Border" x:Key="Quote" >
-<Setter Property="BorderThickness" Value="5,0,0,0"/>
-<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
-<Setter Property="Padding" Value="10,5"/>
-<Setter Property="Margin" Value="0,5"/>
-</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#CC4455"/>
-<Setter Property="Background" Value="#33CC4455"/>
-</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#4455AA"/>
-<Setter Property="Background" Value="#334455AA"/>
-</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#44AA55"/>
-<Setter Property="Background" Value="#3344AA55"/>
-</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#AA55BB"/>
-<Setter Property="Background" Value="#33AA55BB"/>
-</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#DDBB44"/>
-<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
   <Setter Property="Foreground" Value="#FF777777" />
@@ -208,29 +213,69 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 24w39a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w40a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph>收纳袋不再为实验性</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph>更新了 UI 中槽位高亮使得物品纹理拥有更好的可见性</Paragraph><List>
-<ListItem><Paragraph>原先的纹理已被移入 Programmer Art 资源包</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph>    <Paragraph>此项 Pale Garden 生物群系实验性特性可被 &quot;Winter Drop&quot; 实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition">此处</local:MyTextButton></Underline>找到更多关于实验性开关的信息。</Paragraph>    <Paragraph>我们喜爱听见你们关于新的 Pale Garden 群系和新敌对生物 Creaking 的反馈。</Paragraph>    <Paragraph>Creaking 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</local:MyTextButton></Underline></Paragraph>    <Paragraph>Pale garden 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">Winter Drop</Paragraph><List>
+<ListItem><Paragraph>增加了 Pale Garden 生物群系，Pale Oak 树，Pale Moss 方块，Pale Moss 地毯，Pale Hanging Moss 以及 Pale Oak 木系列。</Paragraph></ListItem>
+<ListItem><Paragraph>增加了 Creaking 生物，Creaking 刷怪蛋和 Creaking Heart 方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Pale Garden</Paragraph>    <Paragraph>Pale Garden 是一个黑森林的生物群系变种，拥有以下独特特性：</Paragraph><List>
+<ListItem><Paragraph>Pale Oak 树木在此生成</Paragraph></ListItem>
+<ListItem><Paragraph>Pale Moss 方块/地毯在此处地面生成</Paragraph></ListItem>
+<ListItem><Paragraph>Hanging Pale Moss 在 Pale Oak 树叶悬挂生成</Paragraph></ListItem>
+<ListItem><Paragraph>动物不会在 Pale Garden 生物群系自然生成</Paragraph></ListItem>
+<ListItem><Paragraph>新的生物群系拥有独特的环境音效</Paragraph></ListItem>
+<ListItem><Paragraph>Creaking Heart 方块在 Pale Oak 树木中生成</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Pale Oak 树</Paragraph><List>
+<ListItem><Paragraph>Pale Oak 树叶掉落 Pale Oak 树苗，可以 2x2 种植长成 Pale Oak 树</Paragraph></ListItem>
+<ListItem><Paragraph>Pale Oak 原木可以被制成 Pale Oak 木系列：</Paragraph><List>
+<ListItem><Paragraph>门</Paragraph></ListItem>
+<ListItem><Paragraph>栅栏</Paragraph></ListItem>
+<ListItem><Paragraph>栅栏门</Paragraph></ListItem>
+<ListItem><Paragraph>木板</Paragraph></ListItem>
+<ListItem><Paragraph>告示牌</Paragraph></ListItem>
+<ListItem><Paragraph>悬挂告示牌</Paragraph></ListItem>
+<ListItem><Paragraph>台阶</Paragraph></ListItem>
+<ListItem><Paragraph>楼梯</Paragraph></ListItem>
+<ListItem><Paragraph>活板门</Paragraph></ListItem>
+<ListItem><Paragraph>木头</Paragraph></ListItem>
+<ListItem><Paragraph>去皮原木</Paragraph></ListItem>
+<ListItem><Paragraph>去皮木头</Paragraph></ListItem>
+<ListItem><Paragraph>按钮</Paragraph></ListItem>
+<ListItem><Paragraph>压力板</Paragraph></ListItem>
+<ListItem><Paragraph>船</Paragraph></ListItem>
+<ListItem><Paragraph>运输船</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph>头戴雕刻南瓜现在会使得该玩家在其他玩家的地图中的玩家标记隐藏</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph>数据包版本现在为 55</Paragraph><List>
-<ListItem><Paragraph>详见完整日志</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>在内建数据包中移除了 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox> 特性标签</Paragraph></ListItem>
-</List>
+</List><Paragraph Style="{StaticResource H4}">Pale Moss 方块</Paragraph>    <Paragraph>Pale Moss 方块在 Pale Garden 生物群系自然生成</Paragraph><Paragraph Style="{StaticResource H4}">Pale Moss 地毯</Paragraph>    <Paragraph>Pale Moss 地毯在 Pale Garden 生物群系自然生成，独特特性：</Paragraph><List>
+<ListItem><Paragraph>当放置时，Pale Moss 地毯沿着紧挨着的任何方块的实心面生长两个方块</Paragraph></ListItem>
+<ListItem><Paragraph>Pale Moss 地毯撒上骨粉可以在紧挨着的任何方块的所有实心面上长满</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Pale Hanging Moss</Paragraph>    <Paragraph>Pale Hanging Moss 在 Pale Garden 生物群系的 Pale Oak 树叶下悬挂生成</Paragraph><List>
+<ListItem><Paragraph>Pale Hanging Moss 不会接受随机刻生长，但可以撒骨粉向下生长</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Creaking 生物</Paragraph>    <Paragraph>如果 Creaking Heart 方块在 Pale Oak 树中生成，Creaking 生物会在夜晚的 Pale Garden 生物群系生成。游戏中特性：</Paragraph><List>
+<ListItem><Paragraph>当玩家盯着它时它不会移动</Paragraph></ListItem>
+<ListItem><Paragraph>Creaking 免疫伤害</Paragraph></ListItem>
+<ListItem><Paragraph>当击中该生物时，会显示一串粒子踪迹连接该生物和与生物连接的 Creaking Heart</Paragraph></ListItem>
+<ListItem><Paragraph>当 Creaking 连接的 Creaking Heart 被破坏时，Creaking 会消失</Paragraph></ListItem>
+<ListItem><Paragraph>其生成不会被光照等级所影响，而是基于昼夜循环，白天消失晚上出现</Paragraph></ListItem>
+<ListItem><Paragraph>Creaking 不能乘船</Paragraph></ListItem>
+<ListItem><Paragraph>由 Creaking Heart 生成的 Creaking 不能通过传送门传送</Paragraph></ListItem>
+<ListItem><Paragraph>Creaking 刷怪蛋会生成一只不连接 Creaking Heart 的 Creaking。Creaking 将会在昼夜、保存和加载时一直存在，并且会受到攻击带来的或其它来源的伤害。它拥有一点（半颗心）的生命值</Paragraph></ListItem>
+<ListItem><Paragraph>被 Creaking Heart 生成的 Creaking 不能使用刷怪蛋生成，也不能被指令生成。它只能像 Creaking Heart 方块的一部分那样存在。</Paragraph></ListItem>
+<ListItem><Paragraph>戴有雕刻南瓜的玩家盯着 Creaking 不会阻止其移动</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Creaking Heart</Paragraph>    <Paragraph>Creaking Heart 是一个“活着”的方块，在 Pale Oak 树木中生成，所有的面都被 Pale Oak 原木所遮盖。当夜幕降临时，它可以生成一只 Creaking，它被放置于正好对齐的两个 Pale Oak 原木方块中间。</Paragraph><List>
+<ListItem><Paragraph>在夜晚激活，在白天失活</Paragraph></ListItem>
+<ListItem><Paragraph>当 Creaking 被玩家击中时会发送一串粒子链接其与 Creaking</Paragraph></ListItem>
+<ListItem><Paragraph>当 Creaking Heart 被破坏时，与其连接的 Creaking 也会消失</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">用于 Pale Garden 环境音效的新系统</Paragraph>    <Paragraph>在 Pale Garden 中环境音效并不源自生物群系设置而是产生于在生物群系中的方块
+* 当 Pale Hanging Moss 接触到 Pale Oak 原木以及 Pale Oak 树叶时散发微小的环境音效
+* 当夜晚时并且六面全被原木遮盖，Creaking Heart 方块会散发一系列的怪异恐怖的音效</Paragraph>
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -247,7 +292,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>

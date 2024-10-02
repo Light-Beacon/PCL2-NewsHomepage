@@ -40,6 +40,26 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             </ControlTemplate>
         </Setter.Value>
     </Setter>
+</Style><Style TargetType="Border" x:Key="Quote" >
+<Setter Property="BorderThickness" Value="5,0,0,0"/>
+<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
+<Setter Property="Padding" Value="10,5"/>
+<Setter Property="Margin" Value="0,5"/>
+</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#CC4455"/>
+<Setter Property="Background" Value="#33CC4455"/>
+</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#4455AA"/>
+<Setter Property="Background" Value="#334455AA"/>
+</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#44AA55"/>
+<Setter Property="Background" Value="#3344AA55"/>
+</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#AA55BB"/>
+<Setter Property="Background" Value="#33AA55BB"/>
+</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#DDBB44"/>
+<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style TargetType="Image" x:Key="InnerImage" >
 <Setter Property="MaxHeight" Value="500"/>
 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -56,6 +76,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
 <Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Section" x:Key="Hr" >
+<Setter Property="Margin" Value="0,4,0,0"/>
+<Setter Property="BorderThickness" Value="0,1.5,0,0"/>
+<Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/>
+<Setter Property="FontSize" Value="4"/>
 </Style><Style TargetType="Paragraph" x:Key="H1" >
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
@@ -80,26 +105,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontSize" Value="15"/>
 <Setter Property="Margin" Value="0,3,0,5"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
-</Style><Style TargetType="Border" x:Key="Quote" >
-<Setter Property="BorderThickness" Value="5,0,0,0"/>
-<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
-<Setter Property="Padding" Value="10,5"/>
-<Setter Property="Margin" Value="0,5"/>
-</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#CC4455"/>
-<Setter Property="Background" Value="#33CC4455"/>
-</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#4455AA"/>
-<Setter Property="Background" Value="#334455AA"/>
-</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#44AA55"/>
-<Setter Property="Background" Value="#3344AA55"/>
-</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#AA55BB"/>
-<Setter Property="Background" Value="#33AA55BB"/>
-</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#DDBB44"/>
-<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
   <Setter Property="Foreground" Value="#FF777777" />
@@ -416,8 +421,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="5ae1b5c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/5ae1b5c26c6a37ca0e3dd30f13fcbe38c2753a88"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="51a044c" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/51a044caa23fda974b6213f83fcbf83848ce7c20"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">

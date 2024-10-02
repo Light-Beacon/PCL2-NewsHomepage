@@ -40,6 +40,26 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             </ControlTemplate>
         </Setter.Value>
     </Setter>
+</Style><Style TargetType="Border" x:Key="Quote" >
+<Setter Property="BorderThickness" Value="5,0,0,0"/>
+<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
+<Setter Property="Padding" Value="10,5"/>
+<Setter Property="Margin" Value="0,5"/>
+</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#CC4455"/>
+<Setter Property="Background" Value="#33CC4455"/>
+</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#4455AA"/>
+<Setter Property="Background" Value="#334455AA"/>
+</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#44AA55"/>
+<Setter Property="Background" Value="#3344AA55"/>
+</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#AA55BB"/>
+<Setter Property="Background" Value="#33AA55BB"/>
+</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+<Setter Property="BorderBrush" Value="#DDBB44"/>
+<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style TargetType="Image" x:Key="InnerImage" >
 <Setter Property="MaxHeight" Value="500"/>
 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -56,6 +76,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </Style><Style TargetType="ListItem" >
 <Setter Property="Foreground" Value="Black"/>
 <Setter Property="LineHeight" Value="22"/>
+</Style><Style TargetType="Section" x:Key="Hr" >
+<Setter Property="Margin" Value="0,4,0,0"/>
+<Setter Property="BorderThickness" Value="0,1.5,0,0"/>
+<Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/>
+<Setter Property="FontSize" Value="4"/>
 </Style><Style TargetType="Paragraph" x:Key="H1" >
 <Setter Property="FontSize" Value="24"/>
 <Setter Property="Margin" Value="0,10,0,10"/>
@@ -80,26 +105,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="FontSize" Value="15"/>
 <Setter Property="Margin" Value="0,3,0,5"/>
 <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/>
-</Style><Style TargetType="Border" x:Key="Quote" >
-<Setter Property="BorderThickness" Value="5,0,0,0"/>
-<Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
-<Setter Property="Padding" Value="10,5"/>
-<Setter Property="Margin" Value="0,5"/>
-</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#CC4455"/>
-<Setter Property="Background" Value="#33CC4455"/>
-</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#4455AA"/>
-<Setter Property="Background" Value="#334455AA"/>
-</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#44AA55"/>
-<Setter Property="Background" Value="#3344AA55"/>
-</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#AA55BB"/>
-<Setter Property="Background" Value="#33AA55BB"/>
-</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
-<Setter Property="BorderBrush" Value="#DDBB44"/>
-<Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
   <Setter Property="Foreground" Value="#FF777777" />
@@ -272,7 +277,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-09-29" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-10-03" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 23w13a_or_b" EventType="启动游戏"
     EventData="23w13a_or_b" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -287,7 +292,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -326,7 +331,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -341,7 +346,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
