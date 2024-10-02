@@ -70,7 +70,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Foreground" Value="Black"/>
 </Style><Style TargetType="Paragraph" >
 <Setter Property="LineHeight" Value="12"/>
-<Setter Property="TextIndent" Value="16"/>
+<Setter Property="TextIndent" Value="0"/>
 <Setter Property="Margin" Value="0,8"/>
 </Style><Style TargetType="Paragraph" x:Key="Lp" >
 <Setter Property="LineHeight" Value="16"/>
@@ -203,7 +203,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="CornerRadius" Value="7"/>
 <Setter Property="MaxHeight" Value="140"/>
 </Style><Style TargetType="Border" x:Key="VersionTitleBorder" >
-<Setter Property="Margin" Value="0,-20,-1,10"/>
+<Setter Property="Margin" Value="0,-20,-1,-2"/>
 <Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
 <Setter Property="Width" Value="170"/>
 <Setter Property="Height" Value="30"/>
@@ -222,20 +222,9 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 24w40a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
+<local:MyHint Margin="0,4,0,8" IsWarn="False" Text="很多译名尚未确认，在此保留原文" /><FlowDocumentScrollViewer >
 <FlowDocument>
-<BlockUIContainer>
-  <Border Style="{StaticResource noteQuote}">
-    <StackPanel>
-      <TextBlock Text="注释" FontWeight="Bold">
-        <TextBlock.Foreground>
-        <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Border}" />
-        </TextBlock.Foreground>
-      </TextBlock>
-      <TextBlock> 很多译名尚未确认，在此保留原文</TextBlock>
-    </StackPanel>
-  </Border>
-</BlockUIContainer><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph>    <Paragraph>此项 Pale Garden 生物群系实验性特性可被 &quot;Winter Drop&quot; 实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition">此处</local:MyTextButton></Underline>找到更多关于实验性开关的信息。</Paragraph>    <Paragraph>我们喜欢听见你们对新的 Pale Garden 群系和新敌对生物 Creaking 的反馈。</Paragraph>    <Paragraph>Creaking 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</local:MyTextButton></Underline></Paragraph>    <Paragraph>Pale garden 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">Winter Drop</Paragraph><List>
+<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph>    <Paragraph>此项 Pale Garden 生物群系实验性特性可被 &quot;Winter Drop&quot; 实验性特性开关启用。你可以在创建世界的实验性特性界面打开此开关。这些实验性特性除非被启用否则没有任何效果。你可以在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/en-us/article/testing-new-minecraft-features/feature-toggles-java-edition">此处</local:MyTextButton></Underline>找到更多关于实验性开关的信息。</Paragraph>    <Paragraph>我们喜欢听见你们对新的 Pale Garden 群系和新敌对生物 Creaking 的反馈。</Paragraph>    <Paragraph>Creaking 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mccreakingfeedback">https://aka.ms/mccreakingfeedback</local:MyTextButton></Underline></Paragraph>    <Paragraph>Pale garden 反馈链接：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mcpalegardenfeedback">https://aka.ms/mcpalegardenfeedback</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">Winter Drop</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 Pale Garden 生物群系，Pale Oak 树，Pale Moss 方块，Pale Moss 地毯，Pale Hanging Moss 以及 Pale Oak 木系列。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 Creaking 生物，Creaking 刷怪蛋和 Creaking Heart 方块</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">Pale Garden</Paragraph>    <Paragraph>Pale Garden 是一个黑森林的生物群系变种，拥有以下独特特性：</Paragraph><List>

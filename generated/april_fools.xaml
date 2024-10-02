@@ -70,7 +70,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Setter Property="Foreground" Value="Black"/>
 </Style><Style TargetType="Paragraph" >
 <Setter Property="LineHeight" Value="12"/>
-<Setter Property="TextIndent" Value="16"/>
+<Setter Property="TextIndent" Value="0"/>
 <Setter Property="Margin" Value="0,8"/>
 </Style><Style TargetType="Paragraph" x:Key="Lp" >
 <Setter Property="LineHeight" Value="16"/>
@@ -203,7 +203,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="CornerRadius" Value="7"/>
 <Setter Property="MaxHeight" Value="140"/>
 </Style><Style TargetType="Border" x:Key="VersionTitleBorder" >
-<Setter Property="Margin" Value="0,-20,-1,10"/>
+<Setter Property="Margin" Value="0,-20,-1,-2"/>
 <Setter Property="Background" Value="{DynamicResource ColorBrush3}"/>
 <Setter Property="Width" Value="170"/>
 <Setter Property="Height" Value="30"/>
@@ -248,8 +248,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="7bd2a90" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/7bd2a90404fb1ba063c03e0a928b9f54bada6d39"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="0968824" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/0968824d90cb3db62295108310b35d7c31f56d50"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
