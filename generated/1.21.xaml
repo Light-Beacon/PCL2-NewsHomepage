@@ -40,24 +40,24 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             </ControlTemplate>
         </Setter.Value>
     </Setter>
-</Style><Style TargetType="Border" x:Key="Quote" >
+</Style><Style TargetType="Section" x:Key="Quote" >
 <Setter Property="BorderThickness" Value="5,0,0,0"/>
 <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/>
 <Setter Property="Padding" Value="10,5"/>
 <Setter Property="Margin" Value="0,5"/>
-</Style><Style TargetType="Border" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="cautionQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#CC4455"/>
 <Setter Property="Background" Value="#33CC4455"/>
-</Style><Style TargetType="Border" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="noteQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#4455AA"/>
 <Setter Property="Background" Value="#334455AA"/>
-</Style><Style TargetType="Border" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="tipQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#44AA55"/>
 <Setter Property="Background" Value="#3344AA55"/>
-</Style><Style TargetType="Border" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="importantQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#AA55BB"/>
 <Setter Property="Background" Value="#33AA55BB"/>
-</Style><Style TargetType="Border" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
+</Style><Style TargetType="Section" x:Key="warningQuote" BasedOn="{StaticResource Quote}">
 <Setter Property="BorderBrush" Value="#DDBB44"/>
 <Setter Property="Background" Value="#33DDBB44"/>
 </Style><Style TargetType="Image" x:Key="InnerImage" >
@@ -235,7 +235,9 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,2,8,15"><local:MyListItem Margin="10,1,10,1" ToolTip="版本尚未发布"
 	Logo="pack://application:,,,/images/Blocks/Cobblestone.png" Title="尚未发布的版本" Info="未来的正式版" 
-	EventType="弹出窗口" EventData="未来的正式版|该版本尚未发布" Type="Clickable"/><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	EventType="弹出窗口" EventData="未来的正式版|该版本尚未发布" Type="Clickable"/><local:MyListItem Margin="40,1,10,1" ToolTip="预发布版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="1.21.2-pre1" Info="气泡UI微调 数据包版本41"
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.2-pre1" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="24w40a" Info="Pale Garden、Creaking 数据包版本56 Rotate命令"
 	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=24w40a" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="24w39a" Info="收纳袋移除实验性 数据包版本55"
@@ -392,8 +394,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="0535100" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/0535100be9fa18a52efec5e6a627851df03e5f76"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="99ca67f" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/99ca67f106045a2794538588a5eaf86e88e50efb"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
