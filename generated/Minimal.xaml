@@ -220,28 +220,21 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新预发布版 - 1.21.2-pre1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 1.21.2-pre2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">冬季小更新</Paragraph><Paragraph Style="{StaticResource H4}">Creaking</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Creaking 不会在创造模式玩家附近激活或僵直</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由 Creaking Heart 生成的 Creaking 不能使用命名牌命名</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">Creaking Heart</Paragraph>    <Paragraph>连接 Creaking Heart 比较器会基于与 Creaking Heart 所连接的 Creaking 输出相应的信号强度</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了气泡UI</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了在玩家溺水后空气泡摇晃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当 UI 气泡破掉后增加破掉的音效</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 57</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 41</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">详见完整日志</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><Paragraph Style="{StaticResource H3}">冬季小更新</Paragraph><Paragraph Style="{StaticResource H4}">苍白苔藓</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">苍白垂藤现在仅在使用剪刀或被拥有精准采集魔咒的工具破坏时掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在使用剑能够更加高效地破坏苍白覆地苔藓</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在苍白覆地苔藓上行走时现在会播放正确的音效</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-11" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -258,7 +251,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-11" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
