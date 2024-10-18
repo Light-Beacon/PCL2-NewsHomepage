@@ -117,7 +117,25 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
   <Setter Property="Foreground" Value="#FF777777" />
   <Setter Property="HorizontalAlignment" Value="Center" />
   <Setter Property="Margin" Value="0,0,0,15" />
-</Style><sys:String x:Key="DownloadIcon">
+</Style><Style TargetType="Image" x:Key="VersionImage" >
+  <Setter Property="Stretch" Value="UniformToFill"/>
+  <Setter Property="VerticalAlignment" Value="Center"/>
+</Style>
+
+<ControlTemplate TargetType="ContentControl" x:Key="InnerShadow">
+  <Grid Opacity="0.95" Margin="4">
+    <Border x:Name="InnerShadowMask" CornerRadius="8" Background="White"/>
+    <ContentPresenter/>
+    <Border Margin="-8.1" CornerRadius="8" BorderThickness="8" BorderBrush="black">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="Black"/>
+        </Border.Effect>
+    </Border>
+    <Grid.OpacityMask>
+        <VisualBrush Stretch="None" Visual="{Binding ElementName=InnerShadowMask}"/>
+    </Grid.OpacityMask>
+  </Grid>
+</ControlTemplate><sys:String x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
 0-10 4.5-10 10v170c0 33.1 26.9 60 60 60h600c33.1
@@ -404,8 +422,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="e05e10d" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/e05e10d8cb08a35d816af5e14ed1756434aaf28f"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="4978573" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/4978573358bb6f74731fbc8d8e3d7b9d98ca704e"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
