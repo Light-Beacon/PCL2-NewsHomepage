@@ -1,0 +1,11 @@
+components:
+ - $MarkdownPresenter
+base: Simplex/VersionMarkdownCard
+filter:
+  file_exten:
+    - md
+    - markdown
+  skin: newra
+  latest: true
+cover:
+  title: 最新${version-type} - ${version-id}

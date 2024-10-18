@@ -1,7 +1,7 @@
 components:
  - ${@IF|${warn}|Head/Warn}
  - ${@IF|${hint}|Head/Hint}
- - ${@IF|${version-image-link}|VersionHeaderImage}
+ - ${@IF|${version-image-link}|Classic/VersionHeaderImage}
  - FlowDocumentViewer
  - ${@IF|${not_finished}|Loading}
  - ${@IF|!${disable-websites}|Classic/VersionWebsites}

@@ -1,0 +1,19 @@
+<Style TargetType="Image" x:Key="VersionImage" >
+  <Setter Property="Stretch" Value="UniformToFill"/>
+  <Setter Property="VerticalAlignment" Value="Center"/>
+</Style>
+
+<ControlTemplate TargetType="ContentControl" x:Key="InnerShadow">
+  <Grid Opacity="0.95" Margin="4">
+    <Border x:Name="InnerShadowMask" CornerRadius="8" Background="White"/>
+    <ContentPresenter/>
+    <Border Margin="-8.1" CornerRadius="8" BorderThickness="8" BorderBrush="black">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="Black"/>
+        </Border.Effect>
+    </Border>
+    <Grid.OpacityMask>
+        <VisualBrush Stretch="None" Visual="{Binding ElementName=InnerShadowMask}"/>
+    </Grid.OpacityMask>
+  </Grid>
+</ControlTemplate>

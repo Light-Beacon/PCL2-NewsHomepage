@@ -1,0 +1,6 @@
+<ContentControl Template="{StaticResource InnerShadow}" Height="140">
+    <Image Source="${version-image-link}" Style="{StaticResource VersionImage}"/>
+</ContentControl>
+<Border Style="{StaticResource VersionTitleBorder}">
+    <TextBlock Style="{StaticResource VersionTitleBlock}" Text="${version-id}" />
+</Border>
