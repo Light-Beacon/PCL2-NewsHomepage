@@ -66,7 +66,7 @@ latest_release_type = get_version_type(latest_release_id)
 #print(f'● 最新 {latest_snapshot_type} 版: {latest_snapshot_id}') 
 
 dir_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-version_lib_location = f'{dir_location}{os.sep}Libraries{os.sep}Versions{os.sep}'
+version_lib_location = f'{dir_location}{os.sep}Project{os.sep}Libraries{os.sep}Versions{os.sep}'
 
 release_require_update,latest_release_act = \
 update_library(version_mainfest,version_lib_location,
