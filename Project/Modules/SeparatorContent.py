@@ -1,4 +1,4 @@
-from Interfaces import script
+from Builder.Interfaces import script
 
 @script('SeparatorContent')
 def script(card,**_):

@@ -1,5 +1,5 @@
-from Core.project import Project
-from Interfaces import require,script,format_code
+from Builder.Core.project import Project
+from Builder.Interfaces import require,script,format_code
 
 mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
 MANIFSET = mcv.get_manifset()
@@ -7,7 +7,7 @@ FULL_VERSIONS = MANIFSET.get('versions')
 ID_LIST = [version.get('id') for version in FULL_VERSIONS]
 
 @script('VersionArchiveList')
-def version_achive_list(cat_name,proj:Project,card,**_):
+def version_achive_list(cat_name,env,card,**_):
     cat_name = format_code(code = cat_name,card=card,project=proj)
     cards = list(filter(lambda card:isinstance(card.get('cats'),list)
            and cat_name in card.get('cats'), proj.get_all_card()))

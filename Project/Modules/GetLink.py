@@ -1,5 +1,5 @@
 import re
-from Interfaces import script
+from Builder.Interfaces import script
 
 SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
 PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')

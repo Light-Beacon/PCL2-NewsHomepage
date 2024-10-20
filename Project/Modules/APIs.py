@@ -1,4 +1,4 @@
-from Interfaces import page_class_handles, PageBase, require, format_code
+from Builder.Interfaces import page_class_handles, PageBase, require, format_code
 import json
 
 def get_args(kwargs):
