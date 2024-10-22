@@ -37,7 +37,7 @@ def init_version_dict():
         VERSIONS_DICT[version['id']] = version
     if get_version_type(LATEST_VERSIONS["snapshot"]) == 'release':
         LATEST_VERSIONS["snapshot"] = None
-    logger.info(f'最新快照版:{LATEST_VERSIONS["snapshot"]}; 最新正式版:{LATEST_VERSIONS["release"]}')
+    logger.info(f'最新快照版:{LATEST_VERSIONS.get("snapshot")}; 最新正式版:{LATEST_VERSIONS["release"]}')
 
 def get_latest(version_type = 'all',version_rank = -1):
     global LATEST_VERSIONS
@@ -46,10 +46,10 @@ def get_latest(version_type = 'all',version_rank = -1):
     version_rank = int(version_rank)
     if version_rank <= 0:
         if(version_type == 'all'):
-            if latest_snapshot := LATEST_VERSIONS['snapshot']:
+            if latest_snapshot := LATEST_VERSIONS.get('snapshot'):
                 return latest_snapshot
             else:
-                return LATEST_VERSIONS['relese']
+                return LATEST_VERSIONS['release']
         return LATEST_VERSIONS.get(version_type)
     count = version_rank
     for version in FULL_VERSIONS:
