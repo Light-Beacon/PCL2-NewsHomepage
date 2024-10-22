@@ -238,38 +238,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新发布候选版 - 1.21.2-rc2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-    <Paragraph>修复了一些已知漏洞</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 1.21.1" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了索西语与白俄罗斯语（拉丁）的支持</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">修复可能会被用于使服务器崩溃的关键漏洞</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Margin="0,10,0,14">
+<local:MyCard Margin="0,10,0,14">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,4">
 <StackPanel>
   <Grid Margin="26,20,20,2">
