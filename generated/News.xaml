@@ -282,6 +282,43 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </StackPanel> -->
 
 </StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/10/22/image_1.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://image.stapxs.cn/i/2024/10/22/image_1.png" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21.2" />
+</Border><FlowDocumentScrollViewer >
+<FlowDocument>
+
+</FlowDocument>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-10-22" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<local:MyIconTextButton Text="启动" ToolTip="启动 1.21.2" EventType="启动游戏"
+    EventData="1.21.2" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
+    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
+
+<local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/7bf95409b0d9b5388bfea3704ec92012d273c14c/server.jar" Logo="{StaticResource CloudIcon}" />
+
+<local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
+    EventData="https://zh.minecraft.wiki/w/Java版1.21.2" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+<local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
+    EventData="https://minecraft.net/article/minecraft-java-edition-1-21-2" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+</WrapPanel>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-10-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
 </local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="更多页面..." Margin="0,5">
     <StackPanel Margin="25,40,23,15">
     <Grid>
@@ -326,8 +363,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="0cfedf8" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/0cfedf821c8f2f3fe0621b3ee15a9ee176e0b775"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="0124241" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/0124241a2a38a2ddc9fe6b00253d5e0a04f586c1"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
