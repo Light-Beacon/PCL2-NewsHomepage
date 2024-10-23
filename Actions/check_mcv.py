@@ -30,7 +30,7 @@ def update_library(version_mainfest,version_libloc:str,ver_type:str,ver_id:str):
     content += 'not_finished: true\n'
     content += f'server-jar: {get_server_jar(version_mainfest,ver_id)}\n'
     content += 'translator: null\n'
-    content += "cats: ['1.21','1.21.2']\n"
+    content += "cats: ['1.21','1.21.4']\n"
     content += '---\n'
     #write file
     filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'
@@ -56,29 +56,33 @@ except Exception as e:
     print(f'error_log={e.with_traceback()}')
     exit(1)
 
-latest_snapshot_id = version_mainfest['latest']['snapshot']
-latest_release_id = version_mainfest['latest']['release']
+def main():
+    latest_snapshot_id = version_mainfest['latest']['snapshot']
+    latest_release_id = version_mainfest['latest']['release']
 
-latest_snapshot_type = get_version_type(latest_snapshot_id)
-latest_release_type = get_version_type(latest_release_id)
+    latest_snapshot_type = get_version_type(latest_snapshot_id)
+    latest_release_type = get_version_type(latest_release_id)
 
-#print(f'● 最新 {latest_release_type} 版: {latest_release_id}') 
-#print(f'● 最新 {latest_snapshot_type} 版: {latest_snapshot_id}') 
+    #print(f'● 最新 {latest_release_type} 版: {latest_release_id}') 
+    #print(f'● 最新 {latest_snapshot_type} 版: {latest_snapshot_id}') 
 
-dir_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-version_lib_location = f'{dir_location}{os.sep}Libraries{os.sep}Versions{os.sep}'
+    dir_location = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    version_lib_location = f'{dir_location}{os.sep}Libraries{os.sep}Versions{os.sep}'
 
-release_require_update,latest_release_act = \
-update_library(version_mainfest,version_lib_location,
-               latest_release_type,latest_release_id)
-snapshot_require_update,latest_snapshot_act = \
-update_library(version_mainfest,version_lib_location,
-               latest_snapshot_type,latest_snapshot_id)
+    release_require_update,latest_release_act = \
+    update_library(version_mainfest,version_lib_location,
+                latest_release_type,latest_release_id)
+    snapshot_require_update,latest_snapshot_act = \
+    update_library(version_mainfest,version_lib_location,
+                latest_snapshot_type,latest_snapshot_id)
 
-print(f'latest_release_type={latest_release_type}')
-print(f'latest_snapshot_type={latest_snapshot_type}')
-print(f'latest_release_id={latest_release_id}')
-print(f'latest_snapshot_id={latest_snapshot_id}')
-print(f'latest_release_act={latest_release_act}')
-print(f'latest_snapshot_act={latest_snapshot_act}')
-print(f'require_update={release_require_update or snapshot_require_update}')
+    print(f'latest_release_type={latest_release_type}')
+    print(f'latest_snapshot_type={latest_snapshot_type}')
+    print(f'latest_release_id={latest_release_id}')
+    print(f'latest_snapshot_id={latest_snapshot_id}')
+    print(f'latest_release_act={latest_release_act}')
+    print(f'latest_snapshot_act={latest_snapshot_act}')
+    print(f'require_update={release_require_update or snapshot_require_update}')
+
+if __name__ == '__main__':
+    main()
