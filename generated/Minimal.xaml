@@ -238,45 +238,14 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新正式版 - 1.21.2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新正式版 - 1.21.3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了收纳袋</Paragraph></ListItem>
-</List>    <BlockUIContainer>
-<StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/10/23/image.png"/>
-<TextBlock Text="各种各样的染色收纳袋散落在林中草地上" Style="{StaticResource imgTitle}" />
-</StackPanel>
-</BlockUIContainer><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">收纳袋是一个能够在一个物品栏槽中收纳不同物品的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">收纳袋仅占用一组空间（通常为 64 个物品），但它能够混合许多不同的物品类型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">你可以在物品栏中直接将物品放入收纳袋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">收纳袋拥有一个工具提示来展示其内容物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果收纳袋内拥有少于 12 种物品类型，工具提示会全部显示它们</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果不是，工具提示会显示最顶上三行物品（至少 8 种物品类型）并且其它物品会在下方隐藏</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">你可以选择任何可见的物品将其取出收纳袋</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">右键来取出最顶上的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用鼠标滚轮来选择不同的物品，然后通过右键来取出</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当选中将要被移除的物品时，收纳袋图标会显示物品从收纳袋中伸出</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当手持收纳袋时，你可以通过向地面右键或长摁右键来取出物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">收纳袋由一根线上放一个皮革制成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列原型按键已被更改：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用左键来将物品弹出</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用右键来移除收纳袋最顶上的一个物品类型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当收纳袋工具提示可见时，使用鼠标滚轮来选择不同的物品类型，然后通过右键来移除它</Paragraph></ListItem>
-</List></ListItem>
-</List>    <BlockUIContainer>
-<StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://image.stapxs.cn/i/2024/10/23/image_1.png"/>
-<TextBlock Text="Alex 正站在一所圆石房屋的门廊上，伸出拿着粉色收纳袋的胳膊，将收纳袋给予站在房屋外对面土路上的 Ari。" Style="{StaticResource imgTitle}" />
-</StackPanel>
-</BlockUIContainer>
+    <Paragraph>修复了当资源包被启用时影响 Realms 的严重问题。
+此版本还修复了鲑鱼变小的问题。此版本会将之前版本的小鲑鱼升级为中型鲑鱼。</Paragraph>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
