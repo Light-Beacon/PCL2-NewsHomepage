@@ -295,9 +295,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了收纳袋
-！<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://image.stapxs.cn/i/2024/10/23/image.png"></local:MyTextButton></Underline></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了收纳袋</Paragraph></ListItem>
+</List>    <Paragraph>！<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://image.stapxs.cn/i/2024/10/23/image.png"></local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">收纳袋</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">收纳袋是一个能够在一个物品栏槽中收纳不同物品的物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">收纳袋仅占用一组空间（通常为 64 个物品），但它能够混合许多不同的物品类型</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">你可以在物品栏中直接将物品放入收纳袋</Paragraph></ListItem>
@@ -402,8 +401,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="bef7782" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/bef778246922e168f7de77a61b96790ee5910845"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="cbbcf3e" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/cbbcf3ed309f5b7593283311fe23d7148270e969"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
