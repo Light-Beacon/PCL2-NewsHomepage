@@ -1,4 +1,5 @@
-from Interfaces import page_class_handles, PageBase, require, format_code
+from homepagebuilder.interfaces import page_class_handles, require
+from homepagebuilder.core.page import CodeBasedPage
 import json
 
 def get_args(kwargs):
@@ -10,7 +11,7 @@ def is_true(string:str):
     return string and isinstance(string,str) and string.lower() != 'false'
     
 @page_class_handles('apis/status')
-class StatusPage(PageBase):
+class StatusPage(CodeBasedPage):
 
     @property
     def display_name(self):
@@ -26,7 +27,7 @@ mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
 latest_version = mcv.get_latest()
 
 @page_class_handles('apis/versions/latest')
-class LatestVersionAPI(PageBase):
+class LatestVersionAPI(CodeBasedPage):
 
     def __init__(self, project):
         super().__init__(project)
@@ -77,7 +78,7 @@ class LatestVersionAPI(PageBase):
         return 'application/json'
     
 @page_class_handles('apis/versions/latest-card')
-class LatestVersionCardAPI(PageBase):
+class LatestVersionCardAPI(CodeBasedPage):
     def generate(self, *args, **kwargs):
         setter = kwargs.get('setter')
         card = self.project.base_library.get_card('VersionLatestListCard', False)

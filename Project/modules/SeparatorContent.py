@@ -1,4 +1,4 @@
-from Interfaces import script
+from homepagebuilder.interfaces import script
 
 @script('SeparatorContent')
 def script(card,**_):
