@@ -278,11 +278,99 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-31" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 1.21.3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 24w44a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<Border Style="{StaticResource VersionImageBorder}">
+<Border.Background>
+<ImageBrush ImageSource="https://image.stapxs.cn/i/2024/10/31/image.png" Stretch="UniformToFill" />
+</Border.Background>
+<Image Source="https://image.stapxs.cn/i/2024/10/31/image.png" Opacity="0" Stretch="Fill"/>
+</Border>
+<Border Style="{StaticResource VersionTitleBorder}">
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="24w44a" />
+</Border><FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox>（冬季小更新）不再为实验性</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Eyeblossom</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园的一种花。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成此方块。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有开、闭两种变种，会随昼夜更替而转换。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在白天会转换为 Open Eyeblossom，在夜晚会转换为 Closed Eyeblossom。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在没有昼夜更替的维度会保持原样。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在转换时会发出粒子效果。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">周围的 Eyeblossom 会传递信息，以协助各自的转换。</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂从中采蜜时会获得中毒效果。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂会被手持 Eyeblossom 的玩家吸引，但使用时会对蜜蜂造成中毒效果，而非繁殖或加速生长。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售 Open Eyeblossom。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">根据变种不同可以合成具有失明或反胃效果的谜之炖菜，以及灰色或橙色的染料。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Open Eyeblossom 可以合成橙色染料，Closed Eyeblossom 可以合成灰色染料</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Resin Clump</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">临时嘎枝被攻击时，在嘎枝之心附近且与其相连的苍白橡木原木会生成2 – 3个Resin Clump。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下一次生成Resin Clump前有5秒（100游戏刻）冷却。
+能被瞬间破坏。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Resin Clump 物品具有独特纹理，也能作为盔甲纹饰的材料。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">烧制 Resin Clump 物品会得到 Resin Brick。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售 Resin Clump。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到 Resin Clump。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Block of Resin</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">由9个Resin Clump合成，用于存储Resin Clump。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Resin Bricks、Resin Brick Slab、Resin Brick Stairs和Resin </Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Brick Wall</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一类新的建筑方块，由Resin Brick合成。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Chiseled Resin Bricks</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一种新的建筑方块，由2个Resin Brick Slab合成。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">全景图已更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">剑不再是破环苔藓地毯的有效工具，其适合破坏工具仍为锄</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在与手持凋零玫瑰的玩家与蜜蜂交互时会使蜜蜂凋零，而不会繁殖或加速生长</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">掉落需求工具</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列需要支撑的方块现在用任何工具破坏时永远都会掉落：钟、灯笼、灵魂灯笼、所有铜门、铁门、重质压力板、轻质压力板、磨制黑石压力板以及石制压力板。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">酿造台现在用任何工具破坏都能掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末影箱现在使用任何工具掉落黑曜石，而不再不掉落任何物品</Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="更多翻译工作仍在进行中"/>
+<Grid VerticalAlignment="Center" Margin="6,10,0,0" HorizontalAlignment="Right">
+<Grid.ColumnDefinitions >
+<ColumnDefinition Width="45"/>
+<ColumnDefinition />
+</Grid.ColumnDefinitions>
+<Path Grid.Column="0" Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush4}"
+                    Stretch="Uniform"
+                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
+<TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="中文 Minecraft Wiki、最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</Grid>
+
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-10-31" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
+<local:MyIconTextButton Text="启动" ToolTip="启动 24w44a" EventType="启动游戏"
+    EventData="24w44a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
+    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
+
+<local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/5d233307681e1b46dfd4fba4f022c1cac2b58e60/server.jar" Logo="{StaticResource CloudIcon}" />
+
+<local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
+    EventData="https://zh.minecraft.wiki/w/24w44a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+<local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
+    EventData="https://minecraft.net/article/minecraft-snapshot-24w44a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+</WrapPanel>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-10-31" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
+</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="最新正式版 - 1.21.3" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
@@ -297,7 +385,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <Paragraph>修复了当资源包被启用时影响 Realms 的严重问题。</Paragraph>    <Paragraph>此版本还修复了鲑鱼变小的问题，会将之前版本的变小的鲑鱼升级为中型鲑鱼。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-10-26" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-10-31" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.3" EventType="启动游戏"
     EventData="1.21.3" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -315,11 +403,11 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-31" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
-</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="更多页面..." Margin="0,5">
+</local:MyCard><local:MyCard Title="更多页面..." Margin="0,5">
     <StackPanel Margin="25,40,23,15">
     <Grid>
       <Grid.ColumnDefinitions>
@@ -352,7 +440,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-31" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -363,8 +451,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="5e0a4b8" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/5e0a4b84eba4dfc670270748097fb1359245f5ca"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="64a069e" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/64a069e9f48643d9284da800280b324c8b20fb45"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">

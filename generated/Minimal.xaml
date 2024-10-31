@@ -238,7 +238,61 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新正式版 - 1.21.3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w44a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox>（冬季小更新）不再为实验性</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Eyeblossom</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园的一种花。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成此方块。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有开、闭两种变种，会随昼夜更替而转换。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在白天会转换为 Open Eyeblossom，在夜晚会转换为 Closed Eyeblossom。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在没有昼夜更替的维度会保持原样。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在转换时会发出粒子效果。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">周围的 Eyeblossom 会传递信息，以协助各自的转换。</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂从中采蜜时会获得中毒效果。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂会被手持 Eyeblossom 的玩家吸引，但使用时会对蜜蜂造成中毒效果，而非繁殖或加速生长。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售 Open Eyeblossom。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">根据变种不同可以合成具有失明或反胃效果的谜之炖菜，以及灰色或橙色的染料。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Open Eyeblossom 可以合成橙色染料，Closed Eyeblossom 可以合成灰色染料</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Resin Clump</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">临时嘎枝被攻击时，在嘎枝之心附近且与其相连的苍白橡木原木会生成2 – 3个Resin Clump。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下一次生成Resin Clump前有5秒（100游戏刻）冷却。
+能被瞬间破坏。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Resin Clump 物品具有独特纹理，也能作为盔甲纹饰的材料。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">烧制 Resin Clump 物品会得到 Resin Brick。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售 Resin Clump。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到 Resin Clump。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Block of Resin</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">由9个Resin Clump合成，用于存储Resin Clump。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Resin Bricks、Resin Brick Slab、Resin Brick Stairs和Resin </Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Brick Wall</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一类新的建筑方块，由Resin Brick合成。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Chiseled Resin Bricks</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一种新的建筑方块，由2个Resin Brick Slab合成。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">全景图已更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">剑不再是破环苔藓地毯的有效工具，其适合破坏工具仍为锄</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在与手持凋零玫瑰的玩家与蜜蜂交互时会使蜜蜂凋零，而不会繁殖或加速生长</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">掉落需求工具</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列需要支撑的方块现在用任何工具破坏时永远都会掉落：钟、灯笼、灵魂灯笼、所有铜门、铁门、重质压力板、轻质压力板、磨制黑石压力板以及石制压力板。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">酿造台现在用任何工具破坏都能掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末影箱现在使用任何工具掉落黑曜石，而不再不掉落任何物品</Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="更多翻译工作仍在进行中"/>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2024-10-31" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.3" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -248,7 +302,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-10-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-10-31" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
