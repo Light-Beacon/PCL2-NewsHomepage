@@ -1,4 +1,4 @@
-from interfaces import script,require,Logger
+from homepagebuilder.interfaces import script,require,Logger
 
 mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
 latest_version = mcv.get_latest()
