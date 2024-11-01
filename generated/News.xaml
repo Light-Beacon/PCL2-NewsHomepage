@@ -298,7 +298,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox>（冬季小更新）不再为实验性</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">眼眸花</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园的一种花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成此方块。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成眼眸花。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">有开、闭两种变种，会随昼夜更替而转换。</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">在白天会转换为张开的眼眸花，在夜晚会转换为闭合的眼眸花。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在没有昼夜更替的维度会保持原样。</Paragraph></ListItem>
@@ -311,11 +311,11 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph Style="{StaticResource Lp}">根据变种不同可以合成具有失明或反胃效果的谜之炖菜，以及灰色或橙色的染料。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">张开的眼眸花可以合成橙色染料，闭合的眼眸花可以合成灰色染料</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">树脂团</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">临时嘎枝被攻击时，在嘎枝之心附近且与其相连的苍白橡木原木会生成2 – 3个树脂团。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下一次生成树脂团前有5秒（100游戏刻）冷却。
-能被瞬间破坏。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">树脂团物品具有独特纹理，也能作为盔甲纹饰的材料。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">烧制树脂团物品会得到树脂砖。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当嘎枝被攻击时，在嘎枝之心附近且与其相连的苍白橡木原木、苍白橡木、去皮苍白橡木原木、去皮苍白橡木会生成2 – 3个树脂团。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下一次生成树脂团前有5秒（100游戏刻）冷却。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">树脂团可以作为盔甲纹饰的材料。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">烧制树脂团会得到树脂砖。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售树脂团。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到树脂团。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">树脂块</Paragraph><List>
@@ -325,9 +325,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </List><Paragraph Style="{StaticResource H3}">树脂砖块</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">可使用4个树脂砖合成。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可用于合成对应的楼梯、墙和台阶。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">镐是这类方块的合适破坏工具。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">雕纹树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的建筑方块，由2个树脂砖台阶合成，也可在切石机中用树脂砖块制成。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由2个树脂砖台阶合成，也可在切石机中用树脂砖块制成。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">全景图已更改</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">剑不再是破环苔藓地毯的有效工具，其适合破坏工具仍为锄</Paragraph></ListItem>
@@ -335,7 +334,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 </List><Paragraph Style="{StaticResource H3}">掉落需求工具</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">下列需要支撑的方块现在用任何工具破坏时永远都会掉落：钟、灯笼、灵魂灯笼、所有铜门、铁门、重质压力板、轻质压力板、磨制黑石压力板以及石制压力板。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">酿造台现在用任何工具破坏都能掉落</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末影箱现在使用任何工具掉落黑曜石，而不再不掉落任何物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末影箱现在使用任何工具破坏时都会掉落黑曜石，而不是不掉落任何物品</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -453,8 +452,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="ff5cdbd" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/ff5cdbd3d4afa2cb03b552fab5ad1e94255ad54b"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="6f548e0" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/6f548e0230cdc862ecff1af07699cdb70f7a461e"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
