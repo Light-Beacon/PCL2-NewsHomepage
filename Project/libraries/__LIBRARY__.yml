@@ -3,3 +3,4 @@ fill:
   canswap: true
   s: true
   isswaped: ${s}
+  domain: ${@public_conf|domain|news.bugjump.net}

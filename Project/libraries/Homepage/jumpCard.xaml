@@ -16,7 +16,7 @@
       </local:MyComboBox>
         <local:MyButton HorizontalAlignment="Center" Width="80"
             Grid.Column="1" Text="打开→" EventType="打开帮助" 
-            EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://news.bugjump.net/{0}.json}"/>
+            EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://${domain}/{0}.json}"/>
     </Grid>
     </StackPanel>
 </local:MyCard>
