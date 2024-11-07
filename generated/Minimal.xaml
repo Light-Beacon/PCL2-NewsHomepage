@@ -238,58 +238,66 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Setter Property="FontSize" Value="18"/>
 </Style>
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 24w44a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 24w45a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox>（冬季小更新）不再为实验性</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">眼眸花</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园的一种花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">有开、闭两种变种，会随昼夜更替而转换。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在白天会转换为张开的眼眸花，在夜晚会转换为闭合的眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在没有昼夜更替的维度会保持原样。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在转换时会发出粒子效果。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">周围的眼眸花会传递信息，以协助各自的转换。</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">猫以及狼幼崽如果可能现在会获得有着其父母的项圈颜色的混合色的项圈</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列谜之炖菜的效果与基岩版调整一致：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">饱和：0.35秒（未更改）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">夜视：5秒（未更改）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">抗火：3秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">失明：11秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">虚弱：7秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">生命恢复：7秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">跳跃提升：5秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">凋零：7秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">中毒：11秒</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂从中采蜜时会获得中毒效果。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂会被手持眼眸花的玩家吸引，但使用时会对蜜蜂造成中毒效果，而非繁殖或加速生长。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售张开的眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">根据变种不同可以合成具有失明或反胃效果的谜之炖菜，以及灰色或橙色的染料。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">张开的眼眸花可以合成橙色染料，闭合的眼眸花可以合成灰色染料</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">树脂团</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当嘎枝被攻击时，在嘎枝之心附近且与其相连的苍白橡木原木、苍白橡木、去皮苍白橡木原木、去皮苍白橡木会生成2 – 3个树脂团。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下一次生成树脂团前有5秒（100游戏刻）冷却。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">树脂团可以作为盔甲纹饰的材料。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">烧制树脂团会得到树脂砖。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售树脂团。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到树脂团。</Paragraph></ListItem>
+</List><Section Style="{StaticResource Quote}">
+  
+    <Paragraph>开发者注释：好耶！现在他们全是质数了（bushi）</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H3}">生物物品拾取</Paragraph>    <Paragraph>对生物如何决定是否将地上的物品替换掉自己装备的物品做出了一些更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果物品属于某个盔甲槽，替换物品需要满足下列任一条件：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有更高的基础护甲值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有更高的基础盔甲韧性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有更多魔咒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品耐久度更高</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有自定义名称而旧的物品没有</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果物品属于主手槽，替换物品需要满足下列任一条件：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品为偏好武器而旧的不是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有更高的基础伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有更多魔咒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品耐久度更高</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的物品拥有自定义名称而旧的物品没有</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">偏好武器</Paragraph>    <Paragraph>下列生物拥有偏好武器拾取类型：
+* 骷髅及其变体全部偏好弓
+* 猪灵和掠夺者偏好弩
+* 溺尸偏好三叉戟</Paragraph><Paragraph Style="{StaticResource H3}">眼眸花</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂不与闭合的眼眸花交互</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂在接触闭合眼眸花时不再中毒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂不再会被闭合的眼眸花所吸引</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">嘎枝</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个激活的嘎吱如果有生存模式或冒险模式玩家盯着它时不会移动</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在这种状态下嘎吱有完全的击退抗性</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">树脂块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由9个树脂团合成，用于存储树脂团。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可与苍白橡木原木合成嘎枝之心。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">可使用4个树脂砖合成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可用于合成对应的楼梯、墙和台阶。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">雕纹树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由2个树脂砖台阶合成，也可在切石机中用树脂砖块制成。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">全景图已更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">剑不再是破环苔藓地毯的有效工具，其适合破坏工具仍为锄</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在与手持凋零玫瑰的玩家与蜜蜂交互时会使蜜蜂凋零，而不会繁殖或加速生长</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">掉落需求工具</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列需要支撑的方块现在用任何工具破坏时永远都会掉落：钟、灯笼、灵魂灯笼、所有铜门、铁门、重质压力板、轻质压力板、磨制黑石压力板以及石制压力板。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">酿造台现在用任何工具破坏都能掉落</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末影箱现在使用任何工具破坏时都会掉落黑曜石，而不是不掉落任何物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">树脂块取代树脂团用于纹饰盔甲</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本 59</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本 44</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-11-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-11-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -303,7 +311,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-11-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2024-11-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
