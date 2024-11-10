@@ -16,14 +16,12 @@ def version_achive_list(cat_name,env,card,**_):
     cards.sort(key=lambda card:ID_LIST.index(format_code(card['version-id'],
                                                          data=card,env=env)))
     if len(cards) > 0 and cards[0]['version-type-id'] not in ['Release','April-Fools']:
-        code += components['VersionLinks/Future']
+        code += components['VersionLinks/Future'].toxaml(card={},env=env)
     for vercard in cards:
         if vercard.get('lack'):
-            code += format_code(code = components['VersionLinks/Lack'],
-                            data=vercard,env=env)
+            code += components['VersionLinks/Lack'].toxaml(card=vercard,env=env)
         else:
-            code += format_code(code = components['VersionLinks/Common'],
-                            data=vercard,env=env)
+            code += components['VersionLinks/Common'].toxaml(card=vercard,env=env)
     code += '</StackPanel>'
     return code
 
@@ -35,6 +33,5 @@ def version_latest_list(env,**_):
     for version_type in ['release','snapshot']:
         if latest_version := mcv.get_latest(version_type):
             vercard = proj.base_library.get_card(latest_version,False)
-            code += format_code(code = components['VersionLinks/Latest'],
-                            data=vercard,env=env)
+            code += components['VersionLinks/Latest'].toxaml(card=vercard,env=env)
     return code
