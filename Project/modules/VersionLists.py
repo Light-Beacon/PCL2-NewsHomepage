@@ -8,21 +8,21 @@ ID_LIST = [version.get('id') for version in FULL_VERSIONS]
 
 @script('VersionArchiveList')
 def version_achive_list(cat_name,env,card,**_):
+    components = env.get('components')
     cat_name = format_code(code = cat_name,data=card,env=env)
     cards = list(filter(lambda card:isinstance(card.get('cats'),list)
            and cat_name in card.get('cats'), env.get('project').get_all_card()))
     code = '<StackPanel Margin="8,2,8,15">'
-    res = env.get('project').resources
     cards.sort(key=lambda card:ID_LIST.index(format_code(card['version-id'],
                                                          data=card,env=env)))
     if len(cards) > 0 and cards[0]['version-type-id'] not in ['Release','April-Fools']:
-        code += res.components['VersionLinks/Future']
+        code += components['VersionLinks/Future']
     for vercard in cards:
         if vercard.get('lack'):
-            code += format_code(code = res.components['VersionLinks/Lack'],
+            code += format_code(code = components['VersionLinks/Lack'],
                             data=vercard,env=env)
         else:
-            code += format_code(code = res.components['VersionLinks/Common'],
+            code += format_code(code = components['VersionLinks/Common'],
                             data=vercard,env=env)
     code += '</StackPanel>'
     return code
