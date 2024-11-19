@@ -24,14 +24,14 @@ def gen_official_link(vid:str):
 @script('GetLink')
 def get_link(link_type,link_key=None,**kwargs):
     card = kwargs['card']
-    env = kwargs['env']
+    context = kwargs['context']
     name:str = card['version-id']
     if card.get('not_finished') == 'true' and link_type != 'Official':
         return ''
-    data = env['data'][f'{link_type}Link']
+    data = context.data[f'{link_type}Link']
     if link_key:
         return data[link_key]
-    name = format_code(name,card,env)
+    name = format_code(name,card,context)
     if link_type == 'Official' and name not in data:
         return gen_official_link(name)
     result = data.get(name)
