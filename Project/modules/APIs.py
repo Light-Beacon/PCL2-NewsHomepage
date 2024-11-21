@@ -16,10 +16,10 @@ class StatusPage(CodeBasedPage):
     @property
     def display_name(self):
         return 'api/status'
-    
+
     def generate(self, *args, **kwargs):
         return 'ok'
-    
+
     def get_content_type(self, setter):
         return 'text/plain'
 
