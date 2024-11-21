@@ -41,7 +41,7 @@ jobs:
             git rm -r generated/* --ignore-unmatch
             git clean -f
        - name: 构建页面
-         run: builder build --output ${GITHUB_WORKSPACE}/generated/generated -a
+         run: builder build --project ${GITHUB_WORKSPACE}/project/project/Project.yml --output ${GITHUB_WORKSPACE}/generated/generated -a
        - name: 配置 GPG 信息
          uses: crazy-max/ghaction-import-gpg@v6
          with:
