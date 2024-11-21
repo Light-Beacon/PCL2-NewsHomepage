@@ -26,6 +26,7 @@ jobs:
          run: |
             cd builder
             pip install -r requirements.txt
+            pip install .
             cd ..
             cd project
             pip install -r requirements.txt
@@ -40,7 +41,7 @@ jobs:
             git rm -r generated/* --ignore-unmatch
             git clean -f
        - name: 构建页面
-         run: python builder/main.py build ${GITHUB_WORKSPACE}/project/Project.yml ${GITHUB_WORKSPACE}/generated/generated -a
+         run: builder build --output ${GITHUB_WORKSPACE}/generated/generated -a
        - name: 配置 GPG 信息
          uses: crazy-max/ghaction-import-gpg@v6
          with:
