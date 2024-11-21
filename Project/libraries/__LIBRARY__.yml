@@ -1,0 +1,6 @@
+name: rootlibrary
+fill:
+  canswap: true
+  s: true
+  isswaped: ${s}
+  domain: ${@PublicConf|domain|news.bugjump.net}

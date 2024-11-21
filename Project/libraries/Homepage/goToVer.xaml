@@ -1,14 +1,14 @@
-<local:MyCard Title="转到页面" Margin="0,5">
+<local:MyCard Title="打开版本详情页" Margin="0,5">
     <StackPanel Margin="25,40,23,15">
     <Grid>
       <Grid.ColumnDefinitions>
         <ColumnDefinition Width="1*"/>
         <ColumnDefinition Width="100"/> 
       </Grid.ColumnDefinitions>
-      <local:MyTextBox x:Name="jumpbox" Height="30" />
+      <local:MyTextBox x:Name="toverbox" Height="30" />
         <local:MyButton HorizontalAlignment="Center" Width="80"
             Grid.Column="1" Text="打开→" EventType="打开帮助" 
-            EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=https://news.bugjump.net/{0}.json}"/>
+            EventData="{Binding Path=Text,ElementName=toverbox,StringFormat=https://${domain}/VersionDetail.json?ver={0}}"/>
     </Grid>
     </StackPanel>
 </local:MyCard>

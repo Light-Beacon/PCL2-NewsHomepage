@@ -1,4 +1,4 @@
-from Interfaces import Logger
+from homepagebuilder.interfaces import Logger
 import requests
 import json
 import re
