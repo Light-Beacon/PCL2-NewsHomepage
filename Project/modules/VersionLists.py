@@ -10,7 +10,7 @@ def version_achive_list(cat_name,context,card,**_):
     components = context.components
     cat_name = format_code(code = cat_name,data=card,context=context)
     cards = list(filter(lambda card:isinstance(card.get('cats'),list)
-           and cat_name in card.get('cats'), context.get('project').get_all_card()))
+           and cat_name in card.get('cats'), context.project.get_all_card()))
     code = '<StackPanel Margin="8,2,8,15">'
     cards.sort(key=lambda card:ID_LIST.index(format_code(card['version-id'],
                                                          data=card,context=context)))
@@ -26,8 +26,8 @@ def version_achive_list(cat_name,context,card,**_):
 
 @script('VersionLatestList')
 def version_latest_list(context,**_):
-    proj = context.get('project')
-    components = context.get('components')
+    proj = context.project
+    components = context.components
     code = ''
     for version_type in ['release','snapshot']:
         if latest_version := mcv.get_latest(version_type):
