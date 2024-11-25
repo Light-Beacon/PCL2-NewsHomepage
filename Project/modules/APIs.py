@@ -1,6 +1,10 @@
+import json
+from typing import TYPE_CHECKING
 from homepagebuilder.interfaces import page_class_handles, require
 from homepagebuilder.core.page import CodeBasedPage
-import json
+if TYPE_CHECKING:
+    from homepagebuilder.core.types import Context
+
 
 def get_args(context):
     if setter := context.setter:
@@ -79,8 +83,8 @@ class LatestVersionAPI(CodeBasedPage):
     
 @page_class_handles('apis/versions/latest-card')
 class LatestVersionCardAPI(CodeBasedPage):
-    def generate(self, context):
+    def generate(self, context:'Context'):
         setter = context.setter
         card = self.project.base_library.get_card('VersionLatestListCard', False)
         card = setter.decorate(card)
-        return self.project.template_manager.build(card)
+        return context.builder.template_manager.build(card)
