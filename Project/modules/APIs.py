@@ -2,8 +2,8 @@ from homepagebuilder.interfaces import page_class_handles, require
 from homepagebuilder.core.page import CodeBasedPage
 import json
 
-def get_args(kwargs):
-    if setter := kwargs.get('setter'):
+def get_args(context):
+    if setter := context.setter:
         return setter.override
     return {}
 
@@ -67,8 +67,8 @@ class LatestVersionAPI(CodeBasedPage):
     def copyinfo(self,respond,card,key):
         respond[key] = card.get(key)
 
-    def generate(self, *args, **kwargs):
-        args = get_args(kwargs)
+    def generate(self, context):
+        args = get_args(context)
         ensure_ascii = is_true(args.get('ascii',False))
         if not self.respond:
             self.pregen_respond()
@@ -79,8 +79,8 @@ class LatestVersionAPI(CodeBasedPage):
     
 @page_class_handles('apis/versions/latest-card')
 class LatestVersionCardAPI(CodeBasedPage):
-    def generate(self, *args, **kwargs):
-        setter = kwargs.get('setter')
+    def generate(self, context):
+        setter = context.setter
         card = self.project.base_library.get_card('VersionLatestListCard', False)
         card = setter.decorate(card)
         return self.project.template_manager.build(card)
