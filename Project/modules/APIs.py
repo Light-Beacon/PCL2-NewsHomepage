@@ -87,4 +87,7 @@ class LatestVersionCardAPI(CodeBasedPage):
         setter = context.setter
         card = self.project.base_library.get_card('VersionLatestListCard', False)
         card = setter.decorate(card)
-        return context.builder.template_manager.build(card)
+        return context.builder.template_manager.build(card, context=context)
+
+    def get_content_type(self, setter):
+        return 'application/xml'
