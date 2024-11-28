@@ -37,7 +37,7 @@
 仓库配置了 GitHub Actions 用于在提交后生成构建后 PCL2 可以直接使用的代码，若需要可以在 [generated](https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/generated) 分支上获取。
 
 #### 在自己的主页中插入新闻主页
-参见 [新闻主页API](https://github.com/Light-Beacon/PCL2-NewsHomepage/wiki/%E6%96%B0%E9%97%BB%E4%B8%BB%E9%A1%B5-API) 文档,
+参见 [新闻主页API](https://news.docs.bugjump.net) 文档,
 
 ## 注意事项
 
