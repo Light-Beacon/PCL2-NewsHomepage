@@ -46,16 +46,16 @@ class LatestVersionAPI(CodeBasedPage):
     def display_name(self):
         return 'api/versions/latest'
     
-    def pregen_respond(self):
+    def pregen_respond(self, context):
         respond = {}
         if self.latest_snapshot:
-            respond['snapshot'] = self.extract_version_info(self.latest_snapshot)
-        respond['release'] = self.extract_version_info(self.latest_release) 
+            respond['snapshot'] = self.extract_version_info(self.latest_snapshot,context)
+        respond['release'] = self.extract_version_info(self.latest_release,context)
         self.respond = respond
     
-    def extract_version_info(self,card):
+    def extract_version_info(self,card,context):
         respond = {}
-        expendedcard = self.project.template_manager.expend_card_placeholders(card,'')
+        expendedcard = context.builder.template_manager.expend_card_placeholders(card,'', context=context)
         self.copyinfo(respond,expendedcard,'version-type')
         self.copyinfo(respond,expendedcard,'intro')
         self.copyinfo(respond,expendedcard,'version-image-link')
@@ -75,7 +75,7 @@ class LatestVersionAPI(CodeBasedPage):
         args = get_args(context)
         ensure_ascii = is_true(args.get('ascii',False))
         if not self.respond:
-            self.pregen_respond()
+            self.pregen_respond(context)
         return json.dumps(self.respond,ensure_ascii=ensure_ascii)
     
     def get_content_type(self, setter):
