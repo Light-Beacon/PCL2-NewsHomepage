@@ -5,12 +5,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -29,12 +29,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新正式版 - 1.21.4" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -127,7 +127,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了嘎枝刷怪蛋。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">物品使用动画</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画<TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这也是consumable物品堆叠组件中字符串animation的有效值之一。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这也是<TextBox Style="{StaticResource InlineCode}">consumable</TextBox>物品堆叠组件中字符串<TextBox Style="{StaticResource InlineCode}">animation</TextBox>的有效值之一。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画<TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">嘎枝</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">一种被玩家注视前不会主动攻击，且在被未戴着雕刻南瓜的玩家注视时无法行动（包括移动、被击退、骑乘实体）的敌对生物。</Paragraph></ListItem>
@@ -151,7 +151,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H4}">苍白橡木运输船</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">由苍白橡木木板合成的运输船变种。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">TNT矿车</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选字段单精度浮点数explosion_speed_factor以控制随TNT矿车速度增加的爆炸威力。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选字段单精度浮点数<TextBox Style="{StaticResource InlineCode}">explosion_speed_factor</TextBox>以控制随TNT矿车速度增加的爆炸威力。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值为1.0。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">苍白之园</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">黑森林的新变种，但林地府邸不会在此生成。</Paragraph></ListItem>
@@ -168,20 +168,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute &lt;target&gt; &lt;attribute&gt; base reset</TextBox></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource Lp}">语法：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">参数：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">target：受到属性更新的实体。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">attribute：属性的命名空间ID。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox>：受到属性更新的实体。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox>：属性的命名空间ID。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource Lp}">参数：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果目标实体没有对应属性，则命令失败。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了新的命令建议：已指定目标实体和属性ID时，现在还会显示实体当前属性已有的属性修饰符ID。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">常规</Paragraph><Paragraph Style="{StaticResource H4}">文本组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选的整型NBT列表/JSON数组shadow_color样式字段，用于覆写文本的阴影属性。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选的整型NBT列表/JSON数组<TextBox Style="{StaticResource InlineCode}">shadow_color</TextBox>样式字段，用于覆写文本的阴影属性。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以为整型ARGB值，也可以为NBT列表/JSON数组RGBA数组。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">为0时，阴影被隐藏；反之，阴影总以此颜色显示。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">方块</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">钟、灯笼、灵魂灯笼、铜门、铁门、重质测重压力板、轻质测重压力板、磨制黑石压力板和石头压力板</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">这类需要下方方块支撑的方块现在被任意工具破坏时都会掉落。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">饰纹陶罐</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在默认具有container组件，因此现在饰纹陶罐可以正常地由选取方块键选取了。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在默认具有<TextBox Style="{StaticResource InlineCode}">container</TextBox>组件，因此现在饰纹陶罐可以正常地由选取方块键选取了。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">末影箱</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在被不合适的工具破坏时也会产生掉落物。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">下界砖块、红色下界砖块、裂纹下界砖块和雕纹下界砖块</Paragraph></ListItem>
@@ -191,7 +191,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H4}">酿造台</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在被任意工具破坏时都会掉落。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">光源方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在其物品默认具有block_state物品堆叠组件。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在其物品默认具有<TextBox Style="{StaticResource InlineCode}">block_state</TextBox>物品堆叠组件。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">物品</Paragraph><Paragraph Style="{StaticResource H4}">谜之炖菜</Paragraph><Paragraph>修改了部分谜之炖菜状态效果的持续时间：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">抗火：3秒（60游戏刻）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">失明：11秒（220游戏刻）</Paragraph></ListItem>
@@ -201,7 +201,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">凋零：7秒（140游戏刻）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">中毒：11秒（220游戏刻）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">刷怪蛋</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">若刷怪蛋拥有物品堆叠组件entity_data且其中实体类型为下落的方块、命令方块矿车或刷怪笼矿车时，权限等级为2及以上的玩家会在其物品提示框中看到警告信息。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若刷怪蛋拥有物品堆叠组件<TextBox Style="{StaticResource InlineCode}">entity_data</TextBox>且其中实体类型为下落的方块、命令方块矿车或刷怪笼矿车时，权限等级为2及以上的玩家会在其物品提示框中看到警告信息。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">蜜蜂</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在玩家用凋灵玫瑰与之交互时，蜜蜂会获得凋零效果，而非繁殖或加速生长。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">幼年狼和幼年猫</Paragraph><List>
@@ -219,28 +219,28 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了UV映射。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">拾取物品</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在能装备于盔甲槽的物品会按以下顺序相比较：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">具有prevent_armor_change魔咒效果组件（即绑定诅咒魔咒）的旧物品不会被替换。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">具有<TextBox Style="{StaticResource InlineCode}">prevent_armor_change</TextBox>魔咒效果组件（即绑定诅咒魔咒）的旧物品不会被替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础护甲值时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础盔甲韧性时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅enchantments组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅<TextBox Style="{StaticResource InlineCode}">enchantments</TextBox>组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有更多耐久度时，旧物品会被替换；更少时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有自定义名称，且当前所装备的物品没有时，旧物品会被替换。否则，不会发生替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在属于主手槽位的物品会按以下顺序相比较：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品符合生物的意愿，且当前所持的物品不符合时，物品会被替换；反之，新物品不符合生物的意愿，且当前所持的物品符合时，物品不会被替换；其他情况则比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础攻击伤害时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅enchantments组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅<TextBox Style="{StaticResource InlineCode}">enchantments</TextBox>组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有更多耐久度时，旧物品会被替换；更少时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有自定义名称，且当前所持物品没有时，旧物品会被替换。否则，不会发生替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">非生物实体</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">TNT矿车</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据字段TNTFuse字段现被重命名为fuse。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据字段TNTFuse字段现被重命名为<TextBox Style="{StaticResource InlineCode}">fuse</TextBox>。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">苍白橡树</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">将嘎枝苍白橡树的自然生成概率由20%降低到10%，以匹配基岩版。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">普通苍白橡树和嘎枝苍白橡树不再有概率在树干上生成苍白覆地苔藓。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">树木</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在可以在生成时替换小型花。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">随机斑块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">pale_moss_vegetation斑块生成苍白覆地苔藓、矮草丛和高草丛的概率分别由约29%、59%和12%调整为约42%、42%和17%。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pale_moss_vegetation</TextBox>斑块生成苍白覆地苔藓、矮草丛和高草丛的概率分别由约29%、59%和12%调整为约42%、42%和17%。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">游戏内容</Paragraph><Paragraph Style="{StaticResource H4}">魔咒</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">力量魔咒的基础伤害增值还原至1.21前。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">冰霜行者魔咒不再在目标实体骑乘其他实体时生效。</Paragraph></ListItem>
@@ -250,15 +250,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H4}">选取方块</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">物品栏中已有数据相同的非默认物品时，Ctrl+选取方块键不再给玩家新物品。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">命令格式</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">/time</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在会在add或set子命令执行后强制同步时间。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在会在<TextBox Style="{StaticResource InlineCode}">add</TextBox>或<TextBox Style="{StaticResource InlineCode}">set</TextBox>子命令执行后强制同步时间。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">数据包</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">将数据包版本号更改为61。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了“冬季小更新”内置数据包和winter_drop功能开关。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了“冬季小更新”内置数据包和<TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox>功能开关。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">资源包</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">将资源包版本号更改为46。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了GUI精灵图。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">equipment文件夹现在上移一级，即models/equipment/现在移动到equipment/。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">broken_elytra模型和纹理现在重命名为elytra_broken。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">equipment</TextBox> 文件夹现在上移一级，即 <TextBox Style="{StaticResource InlineCode}">models/equipment/</TextBox> 现在移动到 <TextBox Style="{StaticResource InlineCode}">equipment/</TextBox>。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">broken_elytra</TextBox>模型和纹理现在重命名为<TextBox Style="{StaticResource InlineCode}">elytra_broken</TextBox>。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">之前仅渲染方块实体模型的方块（旗帜、头颅、床、箱子、潮涌核心、饰纹陶罐、潜影盒和告示牌）现在也会在此之上渲染普通方块模型。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">Unifont已更新到16.0.01。</Paragraph></ListItem>
 </List><BlockUIContainer> 
