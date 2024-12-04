@@ -5,20 +5,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="">
-    <StackPanel Margin="25,30,25,30">
-        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush2}"
-                   Text="404" FontSize="70" TextAlignment = "Center" FontWeight="Bold"/>
-        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush3}" FontSize="16"
-                   Text="你到达了世界边界" TextAlignment = "Center"/>
-    </StackPanel>
-</local:MyCard>
+
 </StackPanel>
