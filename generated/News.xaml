@@ -5,17 +5,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -39,8 +32,44 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <sys:String   x:Key="CloudIcon">
 M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
@@ -53,20 +82,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
 0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
 211.6 582.7 160 480 160z</sys:String>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -85,22 +101,6 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
         </Setter.Value>
     </Setter>
 </Style>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -143,7 +143,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-12-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -162,20 +162,20 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <Paragraph Style="{StaticResource H2}">新内容</Paragraph><Paragraph Style="{StaticResource H3}">方块</Paragraph><Paragraph Style="{StaticResource H4}">嘎枝之心</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园中的苍白橡树的树干内，四周均被苍白橡木原木覆盖。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以用树脂块与苍白橡木原木合成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">放置在朝向正确的苍白橡木原木或苍白橡木及其去皮变种之间时，它会在夜晚或雷暴时激活，并在水平16格、竖直8格范围内会生成嘎枝。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所生成的嘎枝被玩家攻击时会发出指向该方块的粒子效果，同时此方块尝试在周围曼哈顿距离2格内与其相连的苍白橡木原木、苍白橡木、去皮苍白橡木原木和去皮苍白橡木上生成总计2 – 3个树脂团方块。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">放置在朝向正确的苍白橡木原木或苍白橡木及其去皮变种之间时，它会在夜晚或雷暴时激活，并在水平 16 格、竖直 8 格范围内会生成嘎枝。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">所生成的嘎枝被玩家攻击时会发出指向该方块的粒子效果，同时此方块尝试在周围曼哈顿距离 2 格内与其相连的苍白橡木原木、苍白橡木、去皮苍白橡木原木和去皮苍白橡木上生成总计 2–3 个树脂团方块。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">被破坏时，所生成的嘎枝会一并被移除。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">与之相连的红石比较器会按其与绑定嘎枝的距离输出红石信号。</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">距离越近，信号强度越强。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource Lp}">与之相连的红石比较器会按其与绑定嘎枝的距离输出红石信号。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">斧是破坏此方块的合适工具。附有精准采集的工具能通过破坏使其掉落对应的方块物品，其他情况下则掉落1 – 3个树脂团物品。掉落树脂团的数量受时运影响。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成的该方块如直接或间接被玩家破坏，还会掉落20–24 经验值。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">斧是破坏此方块的合适工具。附有精准采集的工具能通过破坏使其掉落对应的方块物品，其他情况下则掉落 1–3 个树脂团物品。掉落树脂团的数量受时运影响。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">自然生成的该方块如直接或间接被玩家破坏，还会掉落 20–24 经验值。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">眼眸花</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园的花。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">有闭合的眼眸花和张开的眼眸花两种变种。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">根据变种不同可以合成具有失明或反胃效果的谜之炖菜，以及灰色或橙色的染料。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成闭合的眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果在夜间生成，闭合的眼眸花会接收到1计划刻，以瞬间转换为张开的眼眸花。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果在夜间生成，闭合的眼眸花会接收到 1 计划刻，以瞬间转换为张开的眼眸花。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">会随昼夜更替而转换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在白天会转换为闭合的眼眸花，在夜晚会转换为张开的眼眸花。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在没有昼夜更替的维度会保持原样。</Paragraph></ListItem>
@@ -187,7 +187,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售张开的眼眸花。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">苍白橡树树苗</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">一种新的树苗，由苍白橡树树叶掉落，也可由与流浪商人交易获得。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与深色橡树树苗一样，单个无法生长，在2×2空间摆放的4个苍白橡树树苗才可生长为苍白橡树。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与深色橡树树苗一样，单个无法生长，在 2×2 空间摆放的 4 个苍白橡树树苗才可生长为苍白橡树。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">与自然生成的苍白橡树不同，树苗长成的苍白橡树不会长出嘎枝之心、苍白垂须、苍白覆地苔藓和苍白苔藓块。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">苍白橡树树叶</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">随苍白橡树生成的自然方块。</Paragraph></ListItem>
@@ -197,7 +197,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <ListItem><Paragraph Style="{StaticResource Lp}">有对应的去皮变种。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">去皮苍白橡木原木可用于合成对应的悬挂式告示牌。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">苍白橡木</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由4个苍白橡木原木合成。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由 4 个苍白橡木原木合成。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">有对应的去皮变种。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">苍白橡木木板</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">一种新的木板。</Paragraph></ListItem>
@@ -225,17 +225,17 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <ListItem><Paragraph Style="{StaticResource Lp}">能被方块直接替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">树脂团物品具有独特纹理。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">烧制树脂团物品会得到树脂砖。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到2 – 4个树脂团。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到 2–4 个树脂团。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">树脂块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于存储树脂团，由9个树脂团合成，也可分解为9个树脂团。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用于存储树脂团，由 9 个树脂团合成，也可分解为 9 个树脂团。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可与苍白橡木原木合成出嘎枝之心。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">可使用4个树脂砖合成。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可使用 4 个树脂砖合成。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可用于合成对应的楼梯、墙和台阶。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">镐是这类方块的合适破坏工具。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">雕纹树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的建筑方块，由2个树脂砖台阶合成，也可在切石机中用树脂砖块制成。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一种新的建筑方块，由 2 个树脂砖台阶合成，也可在切石机中用树脂砖块制成。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">镐是这种方块的合适破坏工具。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">物品</Paragraph><Paragraph Style="{StaticResource H4}">树脂砖</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">一种新的砖，可通过烧制树脂团获取。</Paragraph></ListItem>
@@ -244,24 +244,24 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 </List><Paragraph Style="{StaticResource H4}">刷怪蛋</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了嘎枝刷怪蛋。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">物品使用动画</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画<TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这也是<TextBox Style="{StaticResource InlineCode}">consumable</TextBox>物品堆叠组件中字符串<TextBox Style="{StaticResource InlineCode}">animation</TextBox>的有效值之一。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画<TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这也是 <TextBox Style="{StaticResource InlineCode}">consumable</TextBox> 物品堆叠组件中字符串 <TextBox Style="{StaticResource InlineCode}">animation</TextBox> 的有效值之一。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">嘎枝</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">一种被玩家注视前不会主动攻击，且在被未戴着雕刻南瓜的玩家注视时无法行动（包括移动、被击退、骑乘实体）的敌对生物。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生命值为1。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">攻击伤害为3。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">生命值为 1。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">攻击伤害为 3。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">灾厄村民会主动远离嘎枝。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">能在水中漂浮。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">由嘎枝之心生成的嘎枝与其绑定，这种嘎枝还具有以下特性：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">生成和消失完全由嘎枝之心决定，不受亮度影响。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果处在白天且天气非雷暴，则会消失。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">边界箱持续覆盖最近的生存模式或冒险模式玩家的视平线5秒后消失。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">离所绑定的嘎枝之心的欧几里得距离超过34格时消失。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">边界箱持续覆盖最近的生存模式或冒险模式玩家的视平线 5 秒后消失。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">离所绑定的嘎枝之心的欧几里得距离超过 34 格时消失。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果所绑定的嘎枝之心未激活或已被破坏，则生命值归零，同时消失。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">免疫无懈可击所能免疫的一切伤害。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">无视仙人掌、甜浆果丛、细雪和熔岩这类危险环境，且能从中穿过。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">受到来自玩家的直接或间接攻击时，会在原地摇摆。同时，如果前100游戏刻（5秒）内未触发过嘎枝之心，则会生成一条指向嘎枝之心的粒子，并使嘎枝之心尝试生成树脂团。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">受到来自玩家的直接或间接攻击时，会在原地摇摆。同时，如果前 100 游戏刻（5 秒）内未触发过嘎枝之心，则会生成一条指向嘎枝之心的粒子，并使嘎枝之心尝试生成树脂团。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">不能穿越传送门。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">不能被命名牌命名。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">非生物实体</Paragraph><Paragraph Style="{StaticResource H4}">苍白橡木船</Paragraph><List>
@@ -269,8 +269,8 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 </List><Paragraph Style="{StaticResource H4}">苍白橡木运输船</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">由苍白橡木木板合成的运输船变种。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">TNT矿车</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选字段单精度浮点数<TextBox Style="{StaticResource InlineCode}">explosion_speed_factor</TextBox>以控制随TNT矿车速度增加的爆炸威力。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值为1.0。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选字段单精度浮点数 <TextBox Style="{StaticResource InlineCode}">explosion_speed_factor</TextBox> 以控制随TNT矿车速度增加的爆炸威力。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值为 1.0。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">苍白之园</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">黑森林的新变种，但林地府邸不会在此生成。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">会自然生成悬有苍白垂须的苍白橡树，地表覆盖着苍白苔藓块或苍白覆地苔藓。</Paragraph></ListItem>
@@ -287,19 +287,19 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 </List><Paragraph Style="{StaticResource Lp}">语法：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">参数：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox>：受到属性更新的实体。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox>：属性的命名空间ID。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox>：属性的命名空间 ID。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource Lp}">参数：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果目标实体没有对应属性，则命令失败。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了新的命令建议：已指定目标实体和属性ID时，现在还会显示实体当前属性已有的属性修饰符ID。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了新的命令建议：已指定目标实体和属性 ID 时，现在还会显示实体当前属性已有的属性修饰符 ID。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">常规</Paragraph><Paragraph Style="{StaticResource H4}">文本组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选的整型NBT列表/JSON数组<TextBox Style="{StaticResource InlineCode}">shadow_color</TextBox>样式字段，用于覆写文本的阴影属性。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以为整型ARGB值，也可以为NBT列表/JSON数组RGBA数组。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为0时，阴影被隐藏；反之，阴影总以此颜色显示。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选的整型 NBT 列表/JSON 数组 <TextBox Style="{StaticResource InlineCode}">shadow_color</TextBox> 样式字段，用于覆写文本的阴影属性。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以为整型 ARGB 值，也可以为 NBT 列表/JSON 数组。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为 0 时，阴影被隐藏；反之，阴影总以此颜色显示。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">方块</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">钟、灯笼、灵魂灯笼、铜门、铁门、重质测重压力板、轻质测重压力板、磨制黑石压力板和石头压力板</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">这类需要下方方块支撑的方块现在被任意工具破坏时都会掉落。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">饰纹陶罐</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在默认具有<TextBox Style="{StaticResource InlineCode}">container</TextBox>组件，因此现在饰纹陶罐可以正常地由选取方块键选取了。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在默认具有 <TextBox Style="{StaticResource InlineCode}">container</TextBox> 组件，因此现在饰纹陶罐可以正常地由选取方块键选取了。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">末影箱</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在被不合适的工具破坏时也会产生掉落物。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">下界砖块、红色下界砖块、裂纹下界砖块和雕纹下界砖块</Paragraph></ListItem>
@@ -309,17 +309,17 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 </List><Paragraph Style="{StaticResource H4}">酿造台</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在被任意工具破坏时都会掉落。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">光源方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在其物品默认具有<TextBox Style="{StaticResource InlineCode}">block_state</TextBox>物品堆叠组件。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在其物品默认具有 <TextBox Style="{StaticResource InlineCode}">block_state</TextBox> 物品堆叠组件。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">物品</Paragraph><Paragraph Style="{StaticResource H4}">谜之炖菜</Paragraph><Paragraph>修改了部分谜之炖菜状态效果的持续时间：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">抗火：3秒（60游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">失明：11秒（220游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">虚弱：7秒（140游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生命恢复：7秒（140游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">跳跃提升：5秒（100游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">凋零：7秒（140游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">中毒：11秒（220游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">抗火：3 秒（60 游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">失明：11 秒（220 游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">虚弱：7 秒（140 游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">生命恢复：7 秒（140 游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">跳跃提升：5 秒（100 游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">凋零：7 秒（140 游戏刻）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">中毒：11 秒（220 游戏刻）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">刷怪蛋</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">若刷怪蛋拥有物品堆叠组件<TextBox Style="{StaticResource InlineCode}">entity_data</TextBox>且其中实体类型为下落的方块、命令方块矿车或刷怪笼矿车时，权限等级为2及以上的玩家会在其物品提示框中看到警告信息。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若刷怪蛋拥有物品堆叠组件 <TextBox Style="{StaticResource InlineCode}">entity_data</TextBox> 且其中实体类型为下落的方块、命令方块矿车或刷怪笼矿车时，权限等级为 2 及以上的玩家会在其物品提示框中看到警告信息。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">蜜蜂</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在玩家用凋灵玫瑰与之交互时，蜜蜂会获得凋零效果，而非繁殖或加速生长。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">幼年狼和幼年猫</Paragraph><List>
@@ -328,57 +328,57 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <ListItem><Paragraph Style="{StaticResource Lp}">现在更愿意拾取三叉戟。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">玩家</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">客户端加载完成后，玩家的无懈可击会立即停止。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">加载期间，玩家仍然无懈可击，直到加载时长超过60游戏刻（3秒）。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加载期间，玩家仍然无懈可击，直到加载时长超过 60 游戏刻（3 秒）。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">成年猪灵和掠夺者</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在更愿意拾取弩。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">骷髅、流浪者和沼骸</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在更愿意拾取弓。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">岩浆怪</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了UV映射。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 UV 映射。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">拾取物品</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在能装备于盔甲槽的物品会按以下顺序相比较：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">具有<TextBox Style="{StaticResource InlineCode}">prevent_armor_change</TextBox>魔咒效果组件（即绑定诅咒魔咒）的旧物品不会被替换。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">具有 <TextBox Style="{StaticResource InlineCode}">prevent_armor_change</TextBox> 魔咒效果组件（即绑定诅咒魔咒）的旧物品不会被替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础护甲值时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础盔甲韧性时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅<TextBox Style="{StaticResource InlineCode}">enchantments</TextBox>组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅 <TextBox Style="{StaticResource InlineCode}">enchantments</TextBox> 组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有更多耐久度时，旧物品会被替换；更少时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有自定义名称，且当前所装备的物品没有时，旧物品会被替换。否则，不会发生替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在属于主手槽位的物品会按以下顺序相比较：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品符合生物的意愿，且当前所持的物品不符合时，物品会被替换；反之，新物品不符合生物的意愿，且当前所持的物品符合时，物品不会被替换；其他情况则比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础攻击伤害时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅<TextBox Style="{StaticResource InlineCode}">enchantments</TextBox>组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅 <TextBox Style="{StaticResource InlineCode}">enchantments</TextBox> 组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有更多耐久度时，旧物品会被替换；更少时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有自定义名称，且当前所持物品没有时，旧物品会被替换。否则，不会发生替换。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">非生物实体</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">TNT矿车</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据字段TNTFuse字段现被重命名为<TextBox Style="{StaticResource InlineCode}">fuse</TextBox>。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据字段 <TextBox Style="{StaticResource InlineCode}">TNTFuse</TextBox> 字段现被重命名为 <TextBox Style="{StaticResource InlineCode}">fuse</TextBox>。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">苍白橡树</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将嘎枝苍白橡树的自然生成概率由20%降低到10%，以匹配基岩版。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将嘎枝苍白橡树的自然生成概率由 20% 降低到 10%，以匹配基岩版。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">普通苍白橡树和嘎枝苍白橡树不再有概率在树干上生成苍白覆地苔藓。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">树木</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在可以在生成时替换小型花。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">随机斑块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pale_moss_vegetation</TextBox>斑块生成苍白覆地苔藓、矮草丛和高草丛的概率分别由约29%、59%和12%调整为约42%、42%和17%。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pale_moss_vegetation</TextBox> 斑块生成苍白覆地苔藓、矮草丛和高草丛的概率分别由约 29%、59% 和 12% 调整为约 42%、42% 和 17%。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">游戏内容</Paragraph><Paragraph Style="{StaticResource H4}">魔咒</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">力量魔咒的基础伤害增值还原至1.21前。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">力量魔咒的基础伤害增值还原至 1.21 前。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">冰霜行者魔咒不再在目标实体骑乘其他实体时生效。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">进度</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">“怪物猎人”现在可以由击杀嘎枝来获取。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">“资深怪物猎人”现在还需要击杀嘎枝。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">选取方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">物品栏中已有数据相同的非默认物品时，Ctrl+选取方块键不再给玩家新物品。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">物品栏中已有数据相同的非默认物品时，Ctrl + 选取方块键不再给玩家新物品。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">命令格式</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">/time</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在会在<TextBox Style="{StaticResource InlineCode}">add</TextBox>或<TextBox Style="{StaticResource InlineCode}">set</TextBox>子命令执行后强制同步时间。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在会在 <TextBox Style="{StaticResource InlineCode}">add</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">set</TextBox> 子命令执行后强制同步时间。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">数据包</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将数据包版本号更改为61。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了“冬季小更新”内置数据包和<TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox>功能开关。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将数据包版本号更改为 61。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了“冬季小更新”内置数据包和 <TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox> 功能开关。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">资源包</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将资源包版本号更改为46。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了GUI精灵图。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将资源包版本号更改为 46。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 GUI 精灵图。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">equipment</TextBox> 文件夹现在上移一级，即 <TextBox Style="{StaticResource InlineCode}">models/equipment/</TextBox> 现在移动到 <TextBox Style="{StaticResource InlineCode}">equipment/</TextBox>。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">broken_elytra</TextBox>模型和纹理现在重命名为<TextBox Style="{StaticResource InlineCode}">elytra_broken</TextBox>。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">broken_elytra</TextBox> 模型和纹理现在重命名为 <TextBox Style="{StaticResource InlineCode}">elytra_broken</TextBox>。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">之前仅渲染方块实体模型的方块（旗帜、头颅、床、箱子、潮涌核心、饰纹陶罐、潜影盒和告示牌）现在也会在此之上渲染普通方块模型。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Unifont已更新到16.0.01。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Unifont 已更新到 16.0.01。</Paragraph></ListItem>
 </List><BlockUIContainer> 
     <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="
 
@@ -398,7 +398,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="中文 Minecraft Wiki" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2024-12-04" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-01-05" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.4" EventType="启动游戏"
     EventData="1.21.4" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -416,7 +416,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-12-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -453,7 +453,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2024-12-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -464,8 +464,8 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="6a64f1c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/6a64f1c1cd119fdf931dda078e6d3cad008994d3"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="bd442f1" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/bd442f14739a69e9a3df84651eb6ec2a93e63df6"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="56">
