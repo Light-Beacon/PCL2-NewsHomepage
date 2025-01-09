@@ -10,6 +10,9 @@ PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
+CURRENT_MAJOR_DEVELOPING_VERSION = "1.21"
+CURRENT_MINOR_DEVELOPING_VERSION = "1.21.5"
+
 require_update = False
 
 def get_version_type(vid:str):
@@ -30,7 +33,7 @@ def update_library(version_mainfest,version_libloc:str,ver_type:str,ver_id:str):
     content += 'not_finished: true\n'
     content += f'server-jar: {get_server_jar(version_mainfest,ver_id)}\n'
     content += 'translator: null\n'
-    content += "cats: ['1.21','1.21.4']\n"
+    content += f"cats: ['{CURRENT_MAJOR_DEVELOPING_VERSION}','{CURRENT_MINOR_DEVELOPING_VERSION}']\n"
     content += '---\n'
     #write file
     filepath = f'{version_libloc}{ver_type}{os.sep}{ver_id}.md'

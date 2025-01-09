@@ -41,11 +41,11 @@ class LatestVersionAPI(CodeBasedPage):
         else:
             self.latest_snapshot = None
         self.respond = None
-    
+
     @property
     def display_name(self):
         return 'api/versions/latest'
-    
+
     def pregen_respond(self, context):
         respond = {}
         if self.latest_snapshot:
