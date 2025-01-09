@@ -5,13 +5,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,14 +28,88 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新正式版 - 1.21.4" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w02a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为没有粒子的树叶方块增加了落叶粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了寒冷和温暖变种的<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/猪">猪</local:MyTextButton></Underline></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <Italic>Wildflowers</Italic> 方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <Italic>Leaf Litter</Italic> 方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">树叶方块粒子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有树叶方块现在有一定几率生成落叶粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">受本次更改影响的有下列方块：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红树树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">杜鹃树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">盛开的杜鹃树叶</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">受本次更改影响的有下列方块：</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">猪变种</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了新的猪变种，变种类型取决于其生成位置所处生物群系</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Temperate Pig</Italic> - 我们都熟悉的猪</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在 <Italic>Cold Pig</Italic> 和 <Italic>Warm Pig</Italic> 都不生成的地方默认生成该变种</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}"><Italic>Temperate Pig</Italic> - 我们都熟悉的猪</Paragraph></ListItem>
+<ListItem><Paragraph><Italic>Cold Pig</Italic> - 在下列群系中生成：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原始松木针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原始云杉针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">积雪针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭森林</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph><Italic>Warm Pig</Italic> - 在下列群系中生成：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">热带草原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">热带高原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭热带草原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">稀疏丛林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风蚀恶地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">疏林恶地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">恶地</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当由玩家繁殖时，幼年猪的变体类型不会由当前生物群系确定，而是从其父母随机选取一方的类型。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Wildflowers</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Wildflowers 是在桦木森林、原始桦木森林和草甸中生长的一种新的花种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格中可以容纳最多 4 个 Wildflowers（类似于海泡菜）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用骨粉可以产生更多 Wildflower</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">可以在一格中可以容纳最多 4 个 Wildflowers（类似于海泡菜）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Wildflowers 有四种方向可供放置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Wildflower 可以合成黄色染料</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Leaf Litter</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 是一种可在森林、黑森林和疏林恶地找到的装饰方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格中可以容纳最多 4 个 Leaf Litter</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 有四种方向可供放置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 可由烧炼树叶获得</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 可以作为烧炼燃料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 有独特的方块音效</Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2025-01-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.4" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -272,7 +344,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
