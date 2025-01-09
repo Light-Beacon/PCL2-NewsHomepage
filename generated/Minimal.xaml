@@ -5,15 +5,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -32,9 +23,18 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w02a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -99,6 +99,61 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 可由烧炼树叶获得</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 可以作为烧炼燃料</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 有独特的方块音效</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">磁石现在使用新的合成配方，并且可以在废弃的传送门内找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为铁块、铁块、铁栏杆、铁活板门、铁门和重质测重压力板增加了破坏、放置、在上方移动、摔落和打击音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸猪灵现在需要被玩家杀死才能掉落玩家独有战利品</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为了保持与游戏内其它生物的一致性</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">僵尸猪灵现在需要被玩家杀死才能掉落玩家独有战利品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由传送门加载的区块现在在重新打开世界时会重新加载</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">农场动物现在会在恶地生成了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在草甸的矮草丛现在生成地略微稀疏了一些</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">复述功能的音量现在受“音乐和声音选项”分类下“声音/语音”选项的影响</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">向 Realms 上传世界现在会默认启用命令方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以向 Realms 上传极限模式单人游戏世界</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当气泡柱有未受气泡柱影响的实体在其中时，其更产生的粒子和音效更少</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如有游戏检测到最后一次启动并未正常完成，全屏选项现在会被重置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">苍园觉醒更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/苍白之园">苍白之园</local:MyTextButton></Underline>生物群系现在占据更多的先前黑森林所占有的空间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/林地府邸">林地府邸</local:MyTextButton></Underline>现在能在苍白之园中生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了苍白橡树与苍白橡树树苗的地图基色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/嘎枝">嘎枝</local:MyTextButton></Underline>现在能被命名牌命名</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">被命名过的嘎吱现在不会因白天而消失</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">然而，如果它被玩家实现困住或它距离其绑定的<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/嘎吱之心">嘎吱之心</local:MyTextButton></Underline>太远仍然会消失</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">被命名过的嘎吱现在不会因白天而消失</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被命名过的嘎吱仍然免疫所有伤害，并仍可通过粒子与其嘎吱之心交流</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/嘎枝">嘎枝</local:MyTextButton></Underline>现在能被命名牌命名</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在白天原木方块间摆放的嘎吱之心拥有了新的休眠纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">休眠的嘎吱之心不能生成新的嘎吱和<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/树脂">树脂</local:MyTextButton></Underline></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">在白天原木方块间摆放的嘎吱之心拥有了新的休眠纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">嘎吱之心在休眠与激活态之间的转变与眼眸花的转变现在基于固定时间</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有上述行为不再由天气和纬度亮度所影响</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource Lp}">嘎吱之心在休眠与激活态之间的转变与眼眸花的转变现在基于固定时间</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">磁石更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">磁石现在可以由 1 个铁锭周围环绕一圈 8 个雕纹石砖块合成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">磁石现在可以在主世界或下界的废弃的传送门中的战利品箱中找到</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 62</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 47</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 62</Paragraph><BlockUIContainer> 
+    <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="
+
+以下是重点摘要，所有更改请见完整日志
+" />
+</BlockUIContainer> <List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在命令中的文本组件如（<TextBox Style="{StaticResource InlineCode}">/tellraw</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">/title</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">/scoreboard</TextBox> 中指定 <TextBox Style="{StaticResource InlineCode}">styled</TextBox> 数字格式时的文本格式）现在需为 SNBT 格式而不再为 JSON 格式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">/setblock</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">/fill</TextBox> 的语法与对方块实体的处理做了更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">文本组件悬停事件与点击事件的大型改动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增一系列标签</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">实体掉落几率数据结构更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">区域效果云新字段 <TextBox Style="{StaticResource InlineCode}">potion_duration_scale</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对猪变体的数据驱动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方类型 <TextBox Style="{StaticResource InlineCode}">CRAFTING_TRANSMUTE</TextBox> 的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">WEAPON</TextBox> 和<TextBox Style="{StaticResource InlineCode}">POTION_DURATION_SCALE</TextBox> 物品组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">TOOL</TextBox> 物品组件增加可选字段 <TextBox Style="{StaticResource InlineCode}">can_destroy_blocks_in_creative</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 47</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为新特性加入了一些新的纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了 <TextBox Style="{StaticResource InlineCode}">pig</TextBox> 纹理尺寸</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
