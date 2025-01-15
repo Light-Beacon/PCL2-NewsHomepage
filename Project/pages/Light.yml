@@ -2,6 +2,6 @@ name: 新闻主页轻量版
 alias:
  - light
 cards:
- - VersionLatestListCard
- - jumpCard
- - NewFooter
+ - LightHeader
+ - VersionLatestListCard | title=更新日志 | enable-card-style=True
+ - LightFooter
