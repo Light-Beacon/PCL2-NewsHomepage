@@ -6,7 +6,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Triggers>
 <StackPanel.Resources>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -25,142 +26,47 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w02a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w04a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为没有粒子的树叶方块增加了落叶粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了寒冷和温暖变种的<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/猪">猪</local:MyTextButton></Underline></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <Italic>Wildflowers</Italic> 方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <Italic>Leaf Litter</Italic> 方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">树叶方块粒子</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有树叶方块现在有一定几率生成落叶粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">受本次更改影响的有下列方块：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">橡树树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云杉树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">红树树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">白桦树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">杜鹃树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">盛开的杜鹃树叶</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">受本次更改影响的有下列方块：</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">猪变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了新的猪变种，变种类型取决于其生成位置所处生物群系</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Temperate Pig</Italic> - 我们都熟悉的猪</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在 <Italic>Cold Pig</Italic> 和 <Italic>Warm Pig</Italic> 都不生成的地方默认生成该变种</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}"><Italic>Temperate Pig</Italic> - 我们都熟悉的猪</Paragraph></ListItem>
-<ListItem><Paragraph><Italic>Cold Pig</Italic> - 在下列群系中生成：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">原始松木针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原始云杉针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">积雪针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭森林</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph><Italic>Warm Pig</Italic> - 在下列群系中生成：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">热带草原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">热带高原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭热带草原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">稀疏丛林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">竹林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风蚀恶地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">疏林恶地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">恶地</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当由玩家繁殖时，幼年猪的变体类型不会由当前生物群系确定，而是从其父母随机选取一方的类型</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Wildflowers</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Wildflowers 是在桦木森林、原始桦木森林和草甸中生长的一种新的花种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格中可以容纳最多 4 个 Wildflowers（类似于海泡菜）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用骨粉可以产生更多 Wildflower</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">可以在一格中可以容纳最多 4 个 Wildflowers（类似于海泡菜）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Wildflowers 有四种方向可供放置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Wildflower 可以合成黄色染料</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Leaf Litter</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 是一种可在森林、黑森林和疏林恶地找到的装饰方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格中可以容纳最多 4 个 Leaf Litter</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 有四种方向可供放置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 可由烧炼树叶获得</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 可以作为烧炼燃料</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Leaf Litter 有独特的方块音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加入了吉尔吉斯语的支持</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">磁石现在使用新的合成配方，并且可以在废弃的传送门内找到</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为铁块、铁块、铁栏杆、铁活板门、铁门和重质测重压力板增加了破坏、放置、在上方移动、摔落和打击音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">僵尸猪灵现在需要被玩家杀死才能掉落玩家独有战利品</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为了保持与游戏内其它生物的一致性</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">僵尸猪灵现在需要被玩家杀死才能掉落玩家独有战利品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由传送门加载的区块现在在重新打开世界时会重新加载</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">农场动物现在会在恶地生成了</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在草甸的矮草丛现在生成地略微稀疏了一些</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">复述功能的音量现在受“音乐和声音选项”分类下“声音/语音”选项的影响</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">向 Realms 上传世界现在会默认启用命令方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在可以向 Realms 上传极限模式单人游戏世界</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当气泡柱有未受气泡柱影响的实体在其中时，其更产生的粒子和音效更少</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如有游戏检测到最后一次启动并未正常完成，全屏选项现在会被重置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">苍园觉醒更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/苍白之园">苍白之园</local:MyTextButton></Underline>生物群系现在占据更多的先前黑森林所占有的空间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/林地府邸">林地府邸</local:MyTextButton></Underline>现在能在苍白之园中生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了苍白橡树与苍白橡树树苗的地图基色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/嘎枝">嘎枝</local:MyTextButton></Underline>现在能被命名牌命名</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">被命名过的嘎吱现在不会因白天而消失</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">然而，如果它被玩家实现困住或它距离其绑定的<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/嘎吱之心">嘎吱之心</local:MyTextButton></Underline>太远仍然会消失</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">被命名过的嘎吱现在不会因白天而消失</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">被命名过的嘎吱仍然免疫所有伤害，并仍可通过粒子与其嘎吱之心交流</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/嘎枝">嘎枝</local:MyTextButton></Underline>现在能被命名牌命名</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在白天原木方块间摆放的嘎吱之心拥有了新的休眠纹理</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">休眠的嘎吱之心不能生成新的嘎吱和<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://zh.minecraft.wiki/w/树脂">树脂</local:MyTextButton></Underline></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">在白天原木方块间摆放的嘎吱之心拥有了新的休眠纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">嘎吱之心在休眠与激活态之间的转变与眼眸花的转变现在基于固定时间</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有上述行为不再由天气和纬度亮度所影响</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">嘎吱之心在休眠与激活态之间的转变与眼眸花的转变现在基于固定时间</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">磁石更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">磁石现在可以由 1 个铁锭周围环绕一圈 8 个雕纹石砖块合成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">磁石现在可以在主世界或下界的废弃的传送门中的战利品箱中找到</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 62</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 47</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 62</Paragraph><BlockUIContainer> 
-    <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="
+<ListItem><Paragraph Style="{StaticResource Lp}">撤销了对下列漏洞的修复</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">MC-271065 在潜行或使用特定物品时，斜向移动不正常</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">MC-152728 当做出使玩家减速的动作时玩家仍处于疾跑状态</Paragraph></ListItem>
+</List></ListItem>
+</List><Section Style="{StaticResource Quote}">
+  
+<Paragraph>开发者注释:
+在经过考虑后，我们决定撤销对这两个漏洞所作出的修复。虽然我们确实想在未来重审这些机制，但显然就最近的修复而言并未达到预期，并且其对跑酷、速搭和移动造成了大量负面影响。</Paragraph>
 
-以下是重点摘要，所有更改请见完整日志
-" />
-</BlockUIContainer> <List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在命令中的文本组件如（<TextBox Style="{StaticResource InlineCode}">/tellraw</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">/title</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">/scoreboard</TextBox> 中指定 <TextBox Style="{StaticResource InlineCode}">styled</TextBox> 数字格式时的文本格式）现在需为 SNBT 格式而不再为 JSON 格式</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">/setblock</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">/fill</TextBox> 的语法与对方块实体的处理做了更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">文本组件悬停事件与点击事件的大型改动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增一系列标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">实体掉落几率数据结构更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">区域效果云新字段 <TextBox Style="{StaticResource InlineCode}">potion_duration_scale</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对猪变体的数据驱动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">配方类型 <TextBox Style="{StaticResource InlineCode}">CRAFTING_TRANSMUTE</TextBox> 的更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">WEAPON</TextBox> 和<TextBox Style="{StaticResource InlineCode}">POTION_DURATION_SCALE</TextBox> 物品组件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">TOOL</TextBox> 物品组件增加可选字段 <TextBox Style="{StaticResource InlineCode}">can_destroy_blocks_in_creative</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 47</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为新特性加入了一些新的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更改了 <TextBox Style="{StaticResource InlineCode}">pig</TextBox> 纹理尺寸</Paragraph></ListItem>
+</Section><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">弩现在提示中显示所有蓄发的弹射物而不再只显示第一个</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有蓄发的弹射物同时也会在提示的子段落中加入弹射物的完整的提示，而不再仅显示烟花火箭</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有含有内容物的容器物品，例如使用Ctrl+选取方块
+取得的箱子，将会在提示中显示内容物的前四个物品，就像潜影盒一样。</Paragraph></ListItem>
 </List>
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -176,7 +82,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">被破坏时，所生成的嘎枝会一并被移除。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">与之相连的红石比较器会按其与绑定嘎枝的距离输出红石信号。</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">距离越近，信号强度越强。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">与之相连的红石比较器会按其与绑定嘎枝的距离输出红石信号。</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">斧是破坏此方块的合适工具。附有精准采集的工具能通过破坏使其掉落对应的方块物品，其他情况下则掉落 1–3 个树脂团物品。掉落树脂团的数量受时运影响。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">自然生成的该方块如直接或间接被玩家破坏，还会掉落 20–24 经验值。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">眼眸花</Paragraph><List>
@@ -255,7 +161,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H4}">物品使用动画</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">这也是 <TextBox Style="{StaticResource InlineCode}">consumable</TextBox> 物品堆叠组件中字符串 <TextBox Style="{StaticResource InlineCode}">animation</TextBox> 的有效值之一。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">嘎枝</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">一种被玩家注视前不会主动攻击，且在被未戴着雕刻南瓜的玩家注视时无法行动（包括移动、被击退、骑乘实体）的敌对生物。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">生命值为 1。</Paragraph></ListItem>
@@ -293,11 +199,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H3}">命令格式</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">/attribute</TextBox></Paragraph><Paragraph>加入了新的子命令以重置目标实体的属性默认值。</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">语法：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute &lt;target&gt; &lt;attribute&gt; base reset</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">语法：</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">参数：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox>：受到属性更新的实体。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox>：属性的命名空间 ID。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">参数：</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果目标实体没有对应属性，则命令失败。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了新的命令建议：已指定目标实体和属性 ID 时，现在还会显示实体当前属性已有的属性修饰符 ID。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">常规</Paragraph><Paragraph Style="{StaticResource H4}">文本组件</Paragraph><List>
@@ -399,7 +305,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>

@@ -5,32 +5,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<Style  x:Key="imgTitle" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="Margin" Value="0,0,0,15" />
-</Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <sys:String   x:Key="CloudIcon">
 M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
@@ -43,15 +17,19 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
 0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
 211.6 582.7 160 480 160z</sys:String>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
 </sys:String>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -75,8 +53,30 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
+<Style  x:Key="imgTitle" TargetType="TextBlock">
+  <Setter Property="FontSize" Value="14" />
+  <Setter Property="Foreground" Value="#FF777777" />
+  <Setter Property="HorizontalAlignment" Value="Center" />
+  <Setter Property="Margin" Value="0,0,0,15" />
+</Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="1.20" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
@@ -99,7 +99,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了锻造模板，并重新设计了锻造台的功能</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了新的盔甲纹饰系统，以使用各式各样的装饰来自定义盔甲的外观</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">更改了下界合金装备的合成方式</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">添加了锻造模板，并重新设计了锻造台的功能</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了樱花树林生物群系和樱花木套装</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了竹制套装</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了雕纹书架方块</Paragraph></ListItem>
@@ -119,27 +119,27 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">可疑的砂砾可以在寒带海底废墟，以及古迹废墟中发现</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">这些脆弱的方块难聚易散，一定要小心！</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">用刷子刷可疑的沙子或可疑的砂砾会让尘封多年的物件重现在你眼前</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">添加了可疑的沙子和可疑的砂砾</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了古迹废墟，这是一个消失的文明留下的结构，被掩埋于地下</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">你可以在这里找到四种盔甲纹饰锻造模板</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">古迹废墟可以在针叶林、积雪针叶林、所有原始森林群系和丛林中被发现</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">轻拭结构中的可疑的方块，你可以发现一种新的音乐唱片</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">它在唱片机中会播放 Aaron Cherof 的 &quot;Relic&quot;</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">轻拭结构中的可疑的方块，你可以发现一种新的音乐唱片</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">添加了古迹废墟，这是一个消失的文明留下的结构，被掩埋于地下</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了陶片</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">陶片上画有图案</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在5种考古遗址中散落着20种陶片：沙漠水井、沙漠神殿、寒带海底废墟、温带海底废墟和古迹废墟</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它们无法合成，只有轻拭可疑的沙子或可疑的砂砾方能获得</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">添加了陶片</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">饰纹陶罐</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">使用四种陶片合成一个饰纹陶罐，会使其每一个面都有不同的图案</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在饰纹陶罐的合成配方中，陶片可以用红砖代替</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">用红砖砌成的面没有图案</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">在饰纹陶罐的合成配方中，陶片可以用红砖代替</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">用任何可以破坏方块的工具打碎饰纹陶罐，都可以将其分解回原有的陶片</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">空手击打它，用精准采集的工具，或者用其他任何物品击打它，都会掉落一个完整的陶罐</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">用任何可以破坏方块的工具打碎饰纹陶罐，都可以将其分解回原有的陶片</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">合成的陶罐如果至少有一面有图案，在其物品提示中会显示它使用的陶片或红砖的原料列表</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">嗅探兽</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽是 Minecraft Live 2022 的票选胜出生物</Paragraph></ListItem>
@@ -153,7 +153,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">在世界中放置时，嗅探兽蛋会在一段时间内孵化</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">放在苔藓块上时，孵化嗅探兽蛋需要大约10分钟</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">放在其他方块上时，孵化嗅探兽蛋需要大约20分钟</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">在世界中放置时，嗅探兽蛋会在一段时间内孵化</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">火把花</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">有时，嗅探兽会嗅出火把花种子，它可用于使一对嗅探兽繁殖</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">火把花种子可以在耕地上耕种，并长成火把花</Paragraph></ListItem>
@@ -168,24 +168,19 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 </Paragraph><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0c4a.jpg"/>
 <TextBlock Text="沙漠神殿中的考古学" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">瓶子草可以合成青色染料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0c9d.jpg"/>
 <TextBlock Text="正在挖掘古迹废墟" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">瓶子草可以合成青色染料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d63661c6c8e546fe84e.jpg"/>
 <TextBlock Text="畅游海底废墟" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">瓶子草可以合成青色染料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d62661c6c8e546fe5f7.jpg"/>
 <TextBlock Text="畅游海底废墟" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">瓶子草可以合成青色染料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d9a661c6c8e5470bc06.jpg"/>
 <TextBlock Text="找到嗅探兽蛋了！" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">瓶子草可以合成青色染料
-</Paragraph></ListItem>
+</StackPanel></BlockUIContainer></ListItem>
 </List><Paragraph Style="{StaticResource H3}">骆驼</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">骆驼可以装备鞍，并由两名玩家骑乘</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">骆驼自然生成于沙漠村庄生成时</Paragraph></ListItem>
@@ -194,10 +189,10 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">骆驼很高</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果你骑在骆驼上，大部分敌对生物都够不到你</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它们可以跨越栅栏和墙</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">骆驼很高</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">骆驼时而坐下</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果它坐下了，你就很难让它动起来了</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">骆驼时而坐下</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">骆驼既可以慢悠悠地走，也可以快速奔跑</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它们可以向前狂奔，但一段时间后就会筋疲力竭</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">锻造</Paragraph><List>
@@ -206,19 +201,19 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">锻造模板定义了对装备进行升级的类型</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">它指定了你可以升级什么类型的物品，并规定了哪种材料可以用于本次定制升级</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">有两类锻造模板：分别用于盔甲装饰和下界合金升级</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">锻造模板定义了对装备进行升级的类型</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在锻造台中使用锻造模板来升级物品时，锻造模板会被消耗</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">你可以在工作台中用 7 个钻石 + 1 个模板材料方块 + 1 个锻造模板 来制作一个锻造模板的复制，工作台会输出两个相同的锻造模板</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">下界合金装备</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">下界合金装备的合成现在也需下界合金升级锻造模板</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">下界合金升级锻造模板在所有的堡垒遗迹箱子中随机生成</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">每个堡垒遗迹宝藏室中会生成2个锻造模板。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">下界合金升级锻造模板在所有的堡垒遗迹箱子中随机生成</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">这项更改出于多种原因：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加玩家在使用下界合金装备之前使用钻石装备的时间</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">使下界合金装备成为一个游戏过程中更意义非凡的成就</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">更加自然地将下界合金应用于新的锻造系统</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">这项更改出于多种原因：</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">盔甲纹饰</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">现在你可以在锻造台上使用各式各样的装饰来自定义盔甲的外观</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">盔甲纹饰只是纯纯的视觉效果，不会提供属性加成</Paragraph></ListItem>
@@ -227,18 +222,18 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">锻造模板均生成于各自的结构中的箱子内</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">古迹废墟除外，它没有箱子，锻造模板需要擦拭可疑的砂砾方能找到</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">海底神殿也没有箱子，但远古守卫者有时会在死亡之时掉落锻造模板</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">锻造模板均生成于各自的结构中的箱子内</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">盔甲纹饰有两项属性：图案和材质</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">图案由制作装饰的锻造模板所决定，决定了装饰的外观图案</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">材质由制作装饰的原材料所决定，决定了装饰的颜色</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">盔甲纹饰有两项属性：图案和材质</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">以下原料可以用于决定盔甲纹饰的颜色</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">铁、铜、金、青金石、绿宝石、钻石、下界合金、红石、紫水晶、石英</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">以下原料可以用于决定盔甲纹饰的颜色</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">樱花树林</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了樱花树林生物群系，有着美丽的樱花树</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">这个生物群系可以在山中找到，位于与草甸类似的位置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">添加了樱花树林生物群系，有着美丽的樱花树</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了新的樱花木套装，包含所有可用樱花木制成的木质物品与方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">粉红色的落花从樱花树叶上落下</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加新的粉红色花簇，由很多地面上的粉红花朵组成</Paragraph><List>
@@ -246,7 +241,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">使用骨粉可以增加花簇的数量</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">将粉红色花簇放置在已经放置的花簇方块中，可以增加花簇的数量</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">采集时，会按照方块中花簇的数量掉落粉红色花簇物品</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">添加新的粉红色花簇，由很多地面上的粉红花朵组成</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">竹系木制品</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了竹系木制品，包含所有可用竹子制成的物品与方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">竹块由9个竹子合成，可以像其他原木那样去皮</Paragraph></ListItem>
@@ -256,33 +251,29 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 </Paragraph><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebcbb.jpg"/>
 <TextBlock Text="华丽的盔甲纹饰，与一只骆驼" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">添加了独特的竹筏和运输竹筏，合成表类似于普通的船，不过使用竹板作原料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebdc2.jpg"/>
 <TextBlock Text="樱花树林" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">添加了独特的竹筏和运输竹筏，合成表类似于普通的船，不过使用竹板作原料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebe58.jpg"/>
 <TextBlock Text="樱树小屋" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">添加了独特的竹筏和运输竹筏，合成表类似于普通的船，不过使用竹板作原料
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0bc2.jpg"/>
 <TextBlock Text="玩家正在堡垒遗迹中寻找锻造模板" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">添加了独特的竹筏和运输竹筏，合成表类似于普通的船，不过使用竹板作原料
-</Paragraph></ListItem>
+</StackPanel></BlockUIContainer></ListItem>
 </List><Paragraph Style="{StaticResource H3}">雕纹书架</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">这是书架的新雕纹变种</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">由6个木板与3个木台阶合成</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以存放书、书与笔、成书、附魔书和知识之书</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">可容纳6本书</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">鼠标对准特定槽位，可以向其中放书或从中取书</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">可以存放书、书与笔、成书、附魔书和知识之书</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">比较器信号强度取决于上一本插入或取出的书所在的槽位</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可与漏斗互动</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">悬挂式告示牌</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">悬挂式告示牌比普通的告示牌更昂贵</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">需要2个锁链和6个指定木头种类的去皮原木可合成6个悬挂式告示牌</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">悬挂式告示牌比普通的告示牌更昂贵</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">告示牌</Paragraph><Paragraph>以下更改同时应用于普通的和悬挂式告示牌
 * 放置后，告示牌上的文字现在可以编辑了
     * 与告示牌交互即可编辑
@@ -296,10 +287,10 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">它无法被自然生成，只能通过1个幽匿感测体+3个紫水晶碎片的形式在工作台合成</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">校频幽匿感测体的一面可以用于接受红石信号输入</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">输入的红石信号强度即是这个方块单独监听的频率</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">校频幽匿感测体的一面可以用于接受红石信号输入</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它有着持续20游戏刻的激活与冷却时期</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">它会在激活的前10个游戏刻输出红石信号</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">它有着持续20游戏刻的激活与冷却时期</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它最多可以检测到16格远的震动</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">共振</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果幽匿感测体收到一个振动，毗连的紫水晶块会在其所处位置发出一个单独的振动</Paragraph></ListItem>
@@ -330,7 +321,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 </List><Paragraph Style="{StaticResource H3}">幽匿方块更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">当游戏计划某一幽匿感测体或幽匿尖啸体接收一次振动时，它会加入等待队列中，直到毗连的加载完毕并开始运行游戏刻</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">防止振动在卸载远处区块时停止传播</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">当游戏计划某一幽匿感测体或幽匿尖啸体接收一次振动时，它会加入等待队列中，直到毗连的加载完毕并开始运行游戏刻</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">将幽匿尖啸体含水会使其不发出尖啸声</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">幽匿感测体默认的红石信号输出被修改，以更适合计算距离</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">幽匿感测体和校频幽匿感测体现在会强充能其下方的方块</Paragraph></ListItem>
@@ -350,28 +341,22 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 </Paragraph><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0d60.jpg"/>
 <TextBlock Text="一间竹屋" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebbdc.jpg"/>
 <TextBlock Text="玩家正在摸索雕纹书架的红石装置" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d62661c6c8e546fe661.jpg"/>
 <TextBlock Text="嗅探兽蛋正在苔藓块上孵化" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d63661c6c8e546fe7cd.jpg"/>
 <TextBlock Text="村庄中改造的嗅探兽小农场" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebb7f.jpg"/>
 <TextBlock Text="门前的嗅探兽" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
-</Paragraph><BlockUIContainer><StackPanel>
+</StackPanel></BlockUIContainer><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d62661c6c8e546fe6f1.jpg"/>
 <TextBlock Text="窗外的玩家正在繁殖嗅探兽" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
-</Paragraph></ListItem>
+</StackPanel></BlockUIContainer></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">提升了光照引擎的性能</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">由于告示牌数据格式、物品显示的朝向和进度触发器的修改，数据包版本迭代到15</Paragraph></ListItem>
@@ -401,7 +386,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <ListItem><Paragraph Style="{StaticResource Lp}">在当前执行函数剩余的分开的最顶层命令（如果有）会被跳过</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">当使用 function 命令执行函数时，如果触发了这一命令，其返回值将会从已执行命令个数变为该命令指定的返回值 value</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">return 命令的返回值也将是 value</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource Lp}">return 命令可用于控制函数中的命令执行流，并更改其返回值。效果如下</Paragraph></ListItem>
+</List></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -416,7 +401,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="inuEbisu(MCBBS)" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-01-09" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-01-23" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.20" EventType="启动游戏"
     EventData="1.20" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -431,7 +416,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
