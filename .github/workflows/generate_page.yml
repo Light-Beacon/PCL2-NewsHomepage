@@ -25,7 +25,6 @@ jobs:
        - name: 创建 Pagebuilder 环境
          run: |
             cd builder
-            pip install -r requirements.txt
             pip install .
             cd ..
             cd project
