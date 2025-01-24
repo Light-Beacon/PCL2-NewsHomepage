@@ -1,0 +1,14 @@
+name: 版本详情
+import: 
+    - name: mcv
+      file: ${ver}
+display_name: ${mcv.id} 版本详情
+cards:
+    - IF: ${mcv.image}
+      THEN: VersionPage:Image | link = ${mcv.image}
+    - VersionPage:Changelogs | document = ${mcv.markdown}
+    - IF: ${mcv.wip}
+      THEN:  VersionPage:WIP
+    - VersionPage:ActionButtons | version = ${mcv}
+    - IF: ${mcv.wip}
+      THEN: VersionPage:Translators | tanslators = ${mcv.tanslator}
