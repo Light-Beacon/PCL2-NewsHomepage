@@ -5,10 +5,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -27,15 +26,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w04a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -45,28 +45,78 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">加入了吉尔吉斯语的支持</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">撤销了对下列漏洞的修复</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">撤回了对下列漏洞的修复</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">MC-271065 在潜行或使用特定物品时，斜向移动不正常</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">MC-152728 当做出使玩家减速的动作时玩家仍处于疾跑状态</Paragraph></ListItem>
 </List></ListItem>
 </List><Section Style="{StaticResource Quote}">
   
 <Paragraph>开发者注释:
-在经过考虑后，我们决定撤销对这两个漏洞所作出的修复。虽然我们确实想在未来重审这些机制，但显然就最近的修复而言并未达到预期，并且其对跑酷、速搭和移动造成了大量负面影响。</Paragraph>
+在经过考虑后，我们决定撤回对这两个漏洞所作出的修复。虽然我们确实想在未来重审这些机制，但显然就最近的修复而言并未达到预期，并且其对跑酷、速搭和移动造成了大量负面影响。</Paragraph>
 
 </Section><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">弩现在提示中显示所有蓄发的弹射物而不再只显示第一个</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">所有蓄发的弹射物同时也会在提示的子段落中加入弹射物的完整的提示，而不再仅显示烟花火箭</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有含有内容物的容器物品，例如使用Ctrl+选取方块
-取得的箱子，将会在提示中显示内容物的前四个物品，就像潜影盒一样。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有含有内容物的容器物品，例如使用Ctrl+选取方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">取得的箱子，将会在提示中显示内容物的前四个物品，就像潜影盒一样。</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 64</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 49</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 64</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">potion</TextBox> 实体类型已经被拆分到 <TextBox Style="{StaticResource InlineCode}">splash_potion</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">lingering_potion</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">无任何 <TextBox Style="{StaticResource InlineCode}">map_id</TextBox> 组件的已绘制地图不再显示 “未知地图” 提示（无效的 ID 仍会产生该提示）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">纹饰样式与纹饰材料物品不再在纹饰注册表中区分，而是在分别在配方与物品中区分</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">进度定义中的字段 <TextBox Style="{StaticResource InlineCode}">background</TextBox> 不再包含 <TextBox Style="{StaticResource InlineCode}">textures/</TextBox> 前缀 和 <TextBox Style="{StaticResource InlineCode}">.png</TextBox> 后缀</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对实体变体定义的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">猫和青蛙变体现在为数据驱动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了统一的方式以定义变体选择规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">详见完整日志</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">SNBT 字面量现在接受异构列表</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">SNBT 更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">SNBT （文字表示的像 NBT 一样的数据）已经被扩展以接受异构列表，也就是列表元素允许不同的类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">NBT 格式没有改变</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 SNBT 指令参数转换成 NBT (像 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">/summon</TextBox> 的参数), 列表可能会被转换以绕过 NBT 限制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">转换例如： <TextBox Style="{StaticResource InlineCode}">[&apos;a&apos;, {&apos;b&apos;:3}]</TextBox> 会被存储为 <TextBox Style="{StaticResource InlineCode}">[{&apos;&apos;:&apos;a&apos;},{&apos;b&apos;:3}]</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 命令不会逆转换</Paragraph></ListItem>
+</List></ListItem>
+</List><Section Style="{StaticResource Quote}">
+  
+<Paragraph>开发者注释:
+在内部，新代码中我们以 JSON 和 NBT 两种格式来读写数据。这项更改使得我们不必再担心 NBT 在列表中的限制。我们选择了不扩展 NBT 自身来避免破坏已有的外部工具。</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H3}">其它更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对标签的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对实体变体资源的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weapon</TextBox> 物品组件 <TextBox Style="{StaticResource InlineCode}">can_disable_blocking</TextBox> 被 <TextBox Style="{StaticResource InlineCode}">disable_blocking_for_seconds</TextBox> 取代</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">blocks_attacks</TextBox> 物品组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">break_sound</TextBox> 物品组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">provides_banner_patterns</TextBox> 物品组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">provides_trim_material</TextBox> 物品组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的 <TextBox Style="{StaticResource InlineCode}">tooltip_display</TextBox> 物品组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">拥有两个字段：<TextBox Style="{StaticResource InlineCode}">hide_tooltip</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">hidden_components</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除原有 <TextBox Style="{StaticResource InlineCode}">hide_additional_tooltip</TextBox>、<TextBox Style="{StaticResource InlineCode}">hide_tooltip</TextBox> 物品组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对涉及物品的 <TextBox Style="{StaticResource InlineCode}">show_in_tooltip</TextBox> 字段由 <TextBox Style="{StaticResource InlineCode}">tooltip_display</TextBox> 组件代替</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tinted_leaves</TextBox> 粒子增加 <TextBox Style="{StaticResource InlineCode}">color</TextBox> 参数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">smithing_transform</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">smihing_trim</TextBox> 配方类型的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对战利品表函数 <TextBox Style="{StaticResource InlineCode}">toggle_tooltips</TextBox> 的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以上更改详见完整日志</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 49</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对物品模型 <TextBox Style="{StaticResource InlineCode}">minecraft:component</TextBox> 选择和布尔属性的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:paletted_permutations</TextBox> 精灵图源增加了新的字段 <TextBox Style="{StaticResource InlineCode}">separator</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以上更改详见完整日志</Paragraph></ListItem>
 </List>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -305,7 +355,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
