@@ -6,6 +6,7 @@ fill:
   title: ${file_name}
   #server-jar: ${@ServerJar}
   templates:
+    - VersionPage/VersionPage
     - Newra/VersionLatestCard
     - Newra/VersionMarkdownCard
     - Classic/VersionLatestCard
