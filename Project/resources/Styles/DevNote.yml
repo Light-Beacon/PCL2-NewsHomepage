@@ -1,0 +1,8 @@
+Styles:
+ - Key: devnoteQuote
+   Target: Section
+   BasedOn: typedQuote
+   Setters:
+      BorderBrush: "{StaticResource ColorBrush4}"
+      Background: "{StaticResource ColorBrush6}"
+      FontFamily: "STFangsong"
