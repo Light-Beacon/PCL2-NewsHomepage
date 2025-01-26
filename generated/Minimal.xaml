@@ -5,14 +5,22 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/><Setter Property="FontFamily" Value="STFangsong"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
     <Setter Property="Margin" Value="2,0,2,-4" />
     <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="Height" Value="18" />
     <Setter Property="Template">
         <Setter.Value>
@@ -26,16 +34,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w04a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -49,18 +51,22 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">MC-271065 在潜行或使用特定物品时，斜向移动不正常</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">MC-152728 当做出使玩家减速的动作时玩家仍处于疾跑状态</Paragraph></ListItem>
 </List></ListItem>
-</List><Section Style="{StaticResource Quote}">
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
   
-<Paragraph>开发者注释:
+<Paragraph>
 在经过考虑后，我们决定撤回对这两个漏洞所作出的修复。虽然我们确实想在未来重审这些机制，但显然就最近的修复而言并未达到预期，并且其对跑酷、速搭和移动造成了大量负面影响。</Paragraph>
 
 </Section><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">弩现在提示中显示所有蓄发的弹射物而不再只显示第一个</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">所有蓄发的弹射物同时也会在提示的子段落中加入弹射物的完整的提示，而不再仅显示烟花火箭</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有含有内容物的容器物品，例如使用Ctrl+选取方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">取得的箱子，将会在提示中显示内容物的前四个物品，就像潜影盒一样。</Paragraph></ListItem>
-</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有含有内容物的容器物品，例如使用Ctrl+选取方块取得的箱子，将会在提示中显示内容物的前四个物品，就像潜影盒一样。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 64</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 49</Paragraph></ListItem>
@@ -84,9 +90,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">转换例如： <TextBox Style="{StaticResource InlineCode}">[&apos;a&apos;, {&apos;b&apos;:3}]</TextBox> 会被存储为 <TextBox Style="{StaticResource InlineCode}">[{&apos;&apos;:&apos;a&apos;},{&apos;b&apos;:3}]</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 命令不会逆转换</Paragraph></ListItem>
 </List></ListItem>
-</List><Section Style="{StaticResource Quote}">
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
   
-<Paragraph>开发者注释:
+<Paragraph>
 在内部，新代码中我们以 JSON 和 NBT 两种格式来读写数据。这项更改使得我们不必再担心 NBT 在列表中的限制。我们选择了不扩展 NBT 自身来避免破坏已有的外部工具。</Paragraph>
 
 </Section><Paragraph Style="{StaticResource H3}">其它更改</Paragraph><List>
@@ -116,7 +128,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -355,7 +367,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-01-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
