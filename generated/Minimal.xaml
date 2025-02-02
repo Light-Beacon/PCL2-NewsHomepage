@@ -5,14 +5,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -32,20 +25,27 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w05a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了寒带与温带变种的牛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Firefly Bush</Italic> 方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <Italic>Bush</Italic> 方块</Paragraph></ListItem>
+<Paragraph>快乐快照星期三！（你是不是以为我们已经把新内容发完了？）今天的快照充满了下面这些新特性：向主世界的寒带与热带生物群系上漫步的寒带和热带变种的牛打个招呼，用沙漠环境音效款待你的双耳，用灌木丛萤火虫灌木丛点缀你的建筑！当然，我们同时还带来了一打新鲜的漏洞修复与技术性更新。挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了寒带与温带变种的牛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了萤火虫灌木丛方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了灌木丛方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">向沙漠和恶地生物群系增加了新的环境方块音效</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">牛变种</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了新的牛变种，变种类型取决于生成该牛的生物群系</Paragraph></ListItem>
@@ -72,14 +72,14 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">疏林恶地</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">恶地</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当由玩家繁殖时，牛幼体变种不会由所在群系决定，而是选取双亲随机一方的变种类型</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><Italic>Firefly Bush</Italic></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Firefly Bush</Italic> 可在沼泽和河边找到</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当天黑时，发光的萤火虫粒子会在 <Italic>Firefly Bush</Italic> 周围出现</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 <Italic>Firefly Bush</Italic> 使用骨粉可以产生另一个 <Italic>Firefly Bush</Italic> 物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Firefly Bush</Italic> 发亮度等级为 2 的光</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><Italic>Bush</Italic></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Bush</Italic> 是一种新的装饰方块，它可以以小片聚落的形式在以下生物群系中找到：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当由玩家繁殖时，幼年牛变种不会由所在群系决定，而是选取双亲随机一方的变种类型</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">萤火虫灌木丛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛可在沼泽和河边找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当天黑时，发光的萤火虫粒子会在萤火虫灌木丛周围出现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对萤火虫灌木丛使用骨粉可以产生另一个萤火虫灌木丛物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛会发出亮度等级为 2 的光</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">灌木丛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛是一种新的装饰方块，它可以以小片聚落的形式在以下生物群系中找到：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">平原</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
@@ -90,28 +90,28 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">桦木森林</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">原始桦木森林</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Bush</Italic> 可以用于堆肥堆肥桶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 <Italic>Bush</Italic> 使用骨粉，若可能，会紧挨其生成一个 <Italic>Bush</Italic></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">沙漠和恶地的新的环境音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当玩家被距离 8 个方块远的沙子、红沙和任意颜色的陶瓦包围 3 面时有一定几率播放环境音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛可以用于给堆肥桶堆肥</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对灌木丛使用骨粉，若可能，会紧挨着其生成另一个灌木丛</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">沙漠和恶地的新环境音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家周围被至少 3 个方向，最小 8 格远的沙子、红沙或任意颜色的陶瓦包围，有一定几率播放环境音效</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.idle</TextBox> 在任意生物群系均可播放</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.wind</TextBox> 仅在沙漠和恶地群系播放</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">当枯萎的灌木丛在任意生物群系，两个任意颜色的陶瓦、沙子或红沙上方时有一定几率播放环境音效</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">温带牛外观略有更新，以增加一个扁鼻子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当装备皮革靴子从 2.5 个方块高度以上落下，在细雪上着陆时，会使实体穿过细雪</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">跳跃或低于 2.5 个方块高度掉落允许实体像之前那样踩在细雪上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当装备皮革靴子从 2.5 格以上落下，在细雪上着陆时，会使实体穿过细雪</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">跳跃或低于 2.5 格掉落允许实体像之前那样踩在细雪上</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">信标及其光柱现在渲染距离超过 16 个区块，最高为客户端的渲染距离</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">为了使其在远距离情况下更容易看见，光柱会随着你与其距离的增加变得更粗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">光柱渲染顶端最高从 1024 提升为 2048 个方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">光柱顶端渲染高度从 1024 格提升为 2048 格</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 65</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 50</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">数据包版本 65</Paragraph><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在在使用上下文中 @s 所表示的实体之前， <TextBox Style="{StaticResource InlineCode}">/bossbar</TextBox>、<TextBox Style="{StaticResource InlineCode}">/scoreboard</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">/team</TextBox> 命令中的文本组件参数会被解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/bossbar</TextBox>、<TextBox Style="{StaticResource InlineCode}">/scoreboard</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">/team</TextBox> 命令中的文本组件参数会以 <TextBox Style="{StaticResource InlineCode}">@s</TextBox> 存储的实体的上下文解析</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#plays_ambient_desert_block_sounds</TextBox> - 会播放沙漠方块环境音效的方块</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">伤害类型</Paragraph><List>
@@ -132,8 +132,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         * 能够格挡攻击的玩家朝向与攻击方向之间的最大角度</Paragraph><Paragraph Style="{StaticResource H2}">资源包版本 50</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了猪的纹理</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新的以及更新的牛纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <Italic>Firefly Bush</Italic> 方块的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <Italic>Bush</Italic> 方块的纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了萤火虫灌木丛方块的纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了灌木丛方块的纹理</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">更新猪纹理</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">纹理 <TextBox Style="{StaticResource InlineCode}">pig</TextBox> 被重命名为 <TextBox Style="{StaticResource InlineCode}">temperate_pig</TextBox></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">新的以及更新的牛纹理与模型</Paragraph><List>
@@ -148,13 +148,34 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">牛模型现在有一个鼻子</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">牛模型现在腿部为镜像的了</Paragraph></ListItem>
 </List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">在 25w05a 中修复的漏洞</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-108495">MC-108495</local:MyTextButton></Underline> - 非实体生物可在一个队伍中（并显示颜色），但是不能使用 team= 选择</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-165711">MC-165711</local:MyTextButton></Underline> - 末影之眼碰撞箱总是延迟在动画后 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279257">MC-279257</local:MyTextButton></Underline> - 如果产物物品具有与输入物品相同的 ID，crafting_transmute 配方不会输出物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279280">MC-279280</local:MyTextButton></Underline> - windswept_hills 即在热带也在寒带变种家畜生物群系标签中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279315">MC-279315</local:MyTextButton></Underline> - 热带猪不在风袭热带草原上生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279353">MC-279353</local:MyTextButton></Underline> - 当骑乘特定可骑乘的生物时，minecraft:fall_damage_multiplier 属性不起作用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279390">MC-279390</local:MyTextButton></Underline> - 幼年僵尸猪灵头盔穿模</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279497">MC-279497</local:MyTextButton></Underline> - 到达整型上限大小的结构预览轮廓损坏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279531">MC-279531</local:MyTextButton></Underline> - 游戏测试入口点不报告结构生成失败</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279534">MC-279534</local:MyTextButton></Underline> - 展示实体的传送时长使用插值时长值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279543">MC-279543</local:MyTextButton></Underline> - 在特定条件下的中立生物不会反击玩家</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279556">MC-279556</local:MyTextButton></Underline> - “/execute on attacker” 指令不能选择之前 “/data” 命令曾选中的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279577">MC-279577</local:MyTextButton></Underline> - 盾牌格挡动画不再在格挡攻击时播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279685">MC-279685</local:MyTextButton></Underline> - 当使用鞘翅飞行时疾跑被取消</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279688">MC-279688</local:MyTextButton></Underline> - 乐器组件导致游戏崩溃</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279692">MC-279692</local:MyTextButton></Underline> - 滞留药水被渲染为喷溅药水</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279693">MC-279693</local:MyTextButton></Underline> - 羊驼显示无法交互的鞍槽位</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279698">MC-279698</local:MyTextButton></Underline> - provides_banner_pattern 不使用井号前缀</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279760">MC-279760</local:MyTextButton></Underline> - 在 provides_trim_material 键入一个内联定义导致游戏崩溃</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279857">MC-279857</local:MyTextButton></Underline> - 由 /summon 命令生成的猪灵不会拾取金质物品</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -393,7 +414,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-01-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
