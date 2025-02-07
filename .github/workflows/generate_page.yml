@@ -1,4 +1,3 @@
-name: Generate Pages
 on: 
    workflow_dispatch:
    push:
@@ -7,6 +6,7 @@ on:
 
 jobs:
    generate:
+      name: Generate Pages
       runs-on: ubuntu-latest
       steps:
        - name: 签出工程储存库
@@ -55,3 +55,20 @@ jobs:
             git config --local user.name "Hilda Bot"
             git add *
             git diff-index --quiet HEAD || git commit -S -m "upload generated pages" && git push
+
+   purge_cdn:
+      name: Purge CDN
+      runs-on: ubuntu-latest
+      needs: generate
+      steps:
+       - name: 签出工程储存库
+         uses: actions/checkout@v4
+         with: 
+            path: 'project'
+       - name: 刷新 CDN 缓存
+         shell: bash
+         run: bash Actions/purge_cdn_cache.sh
+         env:
+            secret_id: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+            secret_key: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+            purge_urls: ${{ secrets.TENCENT_CLOUD_CDN_URLS }}
