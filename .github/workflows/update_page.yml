@@ -1,3 +1,4 @@
+name: Check & Update Pages
 on: 
    workflow_dispatch:
    push:
@@ -63,8 +64,6 @@ jobs:
       steps:
        - name: 签出工程储存库
          uses: actions/checkout@v4
-         with: 
-            path: 'project'
        - name: 刷新 CDN 缓存
          shell: bash
          run: bash Actions/purge_cdn_cache.sh
