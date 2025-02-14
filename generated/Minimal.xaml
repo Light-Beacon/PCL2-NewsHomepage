@@ -5,11 +5,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -29,127 +33,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w06a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph>本周我们一直在深思熟虑这个存在性问题：“这个世界上是先有寒带鸡呢，还是先有蓝色鸡蛋呢？”是时候让寒带和热带变种的鸡带着它们的蛋一起步入快照 25w06a。除此之外，粉红色的仙人掌花与枯草也将点缀沙漠与恶地。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了热带和寒带变种的鸡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了矮枯草丛与高枯草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了可以在仙人掌方块上生长的仙人掌花方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">家畜生物变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了热带和寒带变种的鸡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现有的鸡变种已被重命名为温带变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">变种类型取决于生成该鸡的生物群系</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有动物的变种（如鸡、猪、牛）对热带和寒带生物群系均一致</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为热带和寒带的鸡变种增加了两个新的鸡蛋物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蓝色鸡蛋 - 由寒带鸡变种下的，并可以孵化出该变种的鸡蛋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">棕色鸡蛋 - 由热带鸡变种下的，并可以孵化出该变种的鸡蛋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现有的鸡蛋是由温带鸡变种下的，并可以孵化出该变种</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">矮枯草丛与高枯草丛</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了两种新类型的草：矮枯草丛与高枯草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种草都是一格高，使得高枯草丛与两格高的高草丛之间区分开来</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种草均在沙漠与恶地生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种草均像枯萎的灌木一样可以在沙子、陶瓦以及泥土这类方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种草均可对其使用骨粉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对矮枯草丛使用骨粉会使其生长为高枯草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对高枯草丛使用骨粉，若可能，会紧挨着其生成一个矮枯草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种草均可在堆肥桶里堆肥</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊吃这两种草均可以重新长出羊毛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种草均可作为熔炼燃料</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">仙人掌花</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花是一种新的花，有几率生成在沙漠与恶地的仙人掌上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以放置在仙人掌方块或者其它任何顶端中心有支持的方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花几率生成在仙人掌方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果仙人掌是一格或两格高，则有 10% 的概率长出仙人掌花，而仙人掌本身不再长高。 </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果仙人掌是三格或三格以上高，则有 25% 的概率长出仙人掌花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花仅在它周围四面有空间时长出。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可在堆肥桶里堆肥</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以合成一个粉红色染料</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在玩家或其它区块加载源（如末影珍珠）模拟距离内的任何方块现在可能会接受随机刻，而不再是玩家周围的 8 个区块。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：如果一个区块由末影珍珠加载或在出生点区块内，农作物可以生长，冰可以融化，雪可以融化，炼药锅也可以装雨水。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生物生成、熔岩火焰蔓延和雷击仍发生在之前以玩家周围 8 个区块为半径的范围内</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家不再 8 个区块为半径的范围内，火焰不会燃烧和蔓延</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">烟花火箭与弩的提示中，多个重复且相同的烟火之星或弹射物的提示现在改为紧凑形式</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">萤火虫灌木丛</Paragraph><Paragraph>萤火虫灌木丛播放环境音效的条件更改了。现在仅当下列条件均满足时播放：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">是晚上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛上方未被任何实体方块遮挡（除了树叶）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 66</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 51</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 66</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的 <TextBox Style="{StaticResource InlineCode}">allowFireTicksAwayFromPlayer</TextBox> 游戏规则</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">游戏规则</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">allowFireTicksAwayFromPlayer</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当设置为真时，火焰与岩浆刻可以在玩家 8 区块半径外发生</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#dead_bush_may_place_on</TextBox> 被重命名为 <TextBox Style="{StaticResource InlineCode}">#dry_vegetation_may_place_on</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#edible_for_sheep</TextBox> - 羊可以吃这些方块重新长出羊毛</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#eggs</TextBox> - 所有变种的鸡蛋物品</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">玩家的护甲以及非手持装备现在也储存在装备字段中（但使用护甲和非手持物品栏槽的数字写入物品栏的物品仍能正常工作）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">鸡变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">牛变种现在可通过向 <TextBox Style="{StaticResource InlineCode}">data/&lt;namespace&gt;/chicken_variant/&lt;id&gt;.json</TextBox> 增加入口点以数据驱动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这项特性是实验性的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">文件中的字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">model</TextBox> - <TextBox Style="{StaticResource InlineCode}">normal</TextBox>、 <TextBox Style="{StaticResource InlineCode}">cold</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">warm</TextBox> 之一</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">asset_id</TextBox> - 这个变种资源的命名空间 id，解析为 <TextBox Style="{StaticResource InlineCode}">assets/&lt;namespace&gt;/textures/&lt;path&gt;.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">spawn_conditions</TextBox> - 在上述统一变体选择所描述的字段</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 51</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新加入以及更新了鸡的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的蓝色鸡蛋和棕色鸡蛋的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的仙人掌花方块的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了矮枯草丛与高枯草丛方块的纹理</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">新加入以及更新鸡的纹理</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为以下鸡变种增加了新的纹理:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">cold_chicken</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">warm_chicken</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">纹理 <TextBox Style="{StaticResource InlineCode}">chicken</TextBox> 被重命名为 <TextBox Style="{StaticResource InlineCode}">temperate_chicken</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">temperate_chicken</TextBox> 纹理被移动到新的文件夹：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/chicken/temperate_chicken.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">25W06A 修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-157196">MC-157196</local:MyTextButton></Underline> - 驯服的动物不能加入队伍</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-186241">MC-186241</local:MyTextButton></Underline> - 在极高画质下世界边界渲染错误</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279205">MC-279205</local:MyTextButton></Underline> - 枯叶地图颜色错误</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279207">MC-279207</local:MyTextButton></Underline> - 枯叶仅能被放置在泥土类方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279223">MC-279223</local:MyTextButton></Underline> - 天涯共此石进度可以在主世界中完成但仍被列为下界进度</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279235">MC-279235</local:MyTextButton></Underline> - 由于不完整的标签，某些家畜生物不在一些寒带生物群系中生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279242">MC-279242</local:MyTextButton></Underline> - 海带、缠怨藤、垂泪藤和洞穴藤蔓不能通过放置叠高或加长</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279261">MC-279261</local:MyTextButton></Underline> - 使生物成为自己的主人导致持续崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279279">MC-279279</local:MyTextButton></Underline> - 下乘地点与载具位置相同</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279292">MC-279292</local:MyTextButton></Underline> - 猪在沙漠村庄生成为温带变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279309">MC-279309</local:MyTextButton></Underline> - 野花簇物品有意外的透明像素</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279464">MC-279464</local:MyTextButton></Underline> - 游戏刻不运行/燃尽使用 /setblock 放置的火</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279719">MC-279719</local:MyTextButton></Underline> - 鞍属性修饰器槽的提示描述未被翻译</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279912">MC-279912</local:MyTextButton></Underline> - 你可以对无任何地方可供生长的灌木丛使用骨粉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279914">MC-279914</local:MyTextButton></Underline> - 灌木丛碰撞箱没有触底且比起其它相同方块显得太大</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279924">MC-279924</local:MyTextButton></Underline> - 灌木丛不能被树或蘑菇替换</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279933">MC-279933</local:MyTextButton></Underline> - 萤火虫灌木丛不能被树或蘑菇替换</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279950">MC-279950</local:MyTextButton></Underline> - 使用命令更改数据存储抛出错误</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279972">MC-279972</local:MyTextButton></Underline> - 使用 /setblock 与 /fill 放置设置了深度的非完整方块的流体不再进行更新</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 1.21.4" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="最新正式版 - 1.21.4" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -383,7 +272,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
