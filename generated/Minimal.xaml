@@ -5,20 +5,19 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -38,6 +37,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w07a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -186,9 +188,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了哞菇的模型与纹理</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了鼻子模型</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">对腿部模型进行了镜像处理</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">着色器与后处理效果</Paragraph><Section Style="{StaticResource Quote}">
+</List><Paragraph Style="{StaticResource H3}">着色器与后处理效果</Paragraph><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
   
-<Paragraph><Bold>开发者注</Bold>: <Italic>虽然通过资源包覆写核心着色器在操作上是可行的，但我们认为不应当这么做，这并不是资源包应有的行为。这些核心着色器作为游戏内部运行的一部分而存在，因此会随着游戏内部更新而随时发生变化。我们已知晓覆写核心着色器可以实现超酷的资源包功能，且很多黑科技缺少受支持的替代方案。我们将在未来提供更好且受支持的替代方案。</Italic></Paragraph>
+<Paragraph>
+虽然通过资源包覆写核心着色器在操作上是可行的，但我们认为不应当这么做，这并不是资源包应有的行为。这些核心着色器作为游戏内部运行的一部分而存在，因此会随着游戏内部更新而随时发生变化。我们已知晓覆写核心着色器可以实现超酷的资源包功能，且很多黑科技缺少受支持的替代方案。我们将在未来提供更好且受支持的替代方案。</Paragraph>
 
 </Section><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">作为文件定义的核心着色器程序与后处理效果的JSON格式文件已全部移除</Paragraph></ListItem>
@@ -211,9 +220,16 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">只要模型高度（Z坐标）小于1/16格方块高度，物品实体就会被渲染成一摞扁平物品模型的组合</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">其他情况下，物品堆叠会被渲染成数个围绕中心点偏移的物品模型的组合</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在之前的版本中，只有以<TextBox Style="{StaticResource InlineCode}">builtin/generated</TextBox>为父模型的物品会被渲染成一摞扁平物品模型的组合</Paragraph></ListItem>
-</List><Section Style="{StaticResource Quote}">
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
   
-<Paragraph><Bold>开发者注</Bold>： <Italic>由于文章发表时，漏洞追踪器服务仍因迁移中而不可用，下文的漏洞链接将暂时无法打开。</Italic></Paragraph>
+<Paragraph>
+由于文章发表时，漏洞追踪器服务仍因迁移中而不可用，下文的漏洞链接将暂时无法打开。</Paragraph>
 
 </Section><Paragraph Style="{StaticResource H2}">25W07A 修复的漏洞</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-122840">MC-122840</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">/data remove</TextBox>命令无法移除末地水晶的<TextBox Style="{StaticResource InlineCode}">beam_target</TextBox>标签</Paragraph></ListItem>
@@ -240,7 +256,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280133">MC-280133</local:MyTextButton></Underline> - 靠近世界边界时出现图像故障</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280134">MC-280134</local:MyTextButton></Underline> - 潜行速度属性设置为0时潜行会导致游戏假死</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280167">MC-280167</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">F3+L</TextBox>生成分析报告文件时，游戏在日志中输出过量error</Paragraph></ListItem>
-</List><Paragraph>本文来源：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://forum.mczwlt.net/topic/347/java%E7%89%88%E6%9C%AC%E8%B5%84%E8%AE%AF-%E5%BF%AB%E7%85%A7-25w07a-%E5%8F%91%E5%B8%83">红石中继站轰天雷（@Don_Trueno）的译文</local:MyTextButton></Underline></Paragraph>
+</List><Section Style="{StaticResource Hr}"/><Paragraph>本文来源：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://forum.mczwlt.net/topic/347/java%E7%89%88%E6%9C%AC%E8%B5%84%E8%AE%AF-%E5%BF%AB%E7%85%A7-25w07a-%E5%8F%91%E5%B8%83">红石中继站 轰天雷（@Don_Trueno）的译文</local:MyTextButton></Underline></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
