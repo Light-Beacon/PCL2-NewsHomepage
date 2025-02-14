@@ -5,34 +5,43 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Margin="0,0,0,2">
-  <Grid Margin="14,10">
-    <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left">
-        <TextBlock FontSize="14" Opacity="0.7"><Bold>新闻主页</Bold></TextBlock>
+<local:MyCard Title="版本列表" Margin="0,0">
+    <StackPanel Margin="20,40,20,15">
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Active_Trial_Spawner_JE4_BE3813f27e2213dec08.png" Title="棘巧试炼 | 1.21" Info="加入了试炼密室"
+	EventType="打开帮助" EventData="https://news.bugjump.net/1.21_archive.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Cherry_Leaves_JE29cc390fd9b51333d.png" Title="足迹与故事 | 1.20 " Info="加入了考古学与樱花树"
+	EventType="打开帮助" EventData="https://news.bugjump.net/1.20_archive.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Sculk_JE1_BE141e57ad22b2b968e.png" Title="荒野更新 | 1.19" Info="加入了深暗之域与远古城市，以及红树林沼泽"
+	EventType="打开帮助" EventData="https://news.bugjump.net/1.19_archive.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Deepslate_JE3_BE227b47de799b509d8.png" Title="洞穴与山崖（第二部分） | 1.18" Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
+	EventType="打开帮助" EventData="https://news.bugjump.net/1.18_archive_confirm.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Block_of_Amethyst_JE3_BE14f18267120f7bf34.png" Title="洞穴与山崖（第一部分） | 1.17" Info="加入了繁茂洞穴、紫晶洞"
+	EventType="打开帮助" EventData="https://news.bugjump.net/1.17_archive_confirm.json" Type="Clickable" />
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
+     HorizontalAlignment="Center" Stretch="Fill" Margin="2"/>
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Locked_Chest_JE108f3a29ad950e185.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionLists/april_fools_archive.json" Type="Clickable" />
     </StackPanel>
-  </Grid>
-</local:MyCard><local:MyCard Title="更新日志" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}">
-<StackPanel Margin="8,38,8,15">
-<local:MyListItem Margin="10,1,10,1" ToolTip="最新正式版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.4" Info="正式版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.4" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新快照版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="最新快照版 - 25w07a" Info="快照版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=25w07a" Type="Clickable" />
-<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
-     HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
-<local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
-Logo="https://img.picgo.net/2025/02/15/Bookshelf_JE4_BE2de3fa45de5d6d91f.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
-EventType="打开帮助" EventData="https://news.bugjump.net/VersionArchiveList.json" Type="Clickable" />
-</StackPanel>
+</local:MyCard><local:MyCard Margin="0,10">
+    <StackPanel Margin="15,10">
+    <local:MyListItem Margin="0,1,0,1" ToolTip="点击跳转至 Java版版本记录 页面" LogoScale="1.3"
+	Logo="https://img.picgo.net/2025/02/15/mcw_logo_textless73a208d55c979a7e.png" Title="在 Minecraft Wiki 上查看更多日志" Info="浏览 Java 版版本记录"
+	EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Java版版本记录" Type="Clickable" />
+    </StackPanel>
 </local:MyCard><local:MyCard Margin="0,2,0,10">
 <Grid Margin="10,6">
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" Margin="-4,0,0,0">
