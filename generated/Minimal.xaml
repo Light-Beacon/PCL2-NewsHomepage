@@ -5,15 +5,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -33,11 +38,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w07a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -75,7 +75,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">制图师现在会售卖 7 种指向不同生物群系村庄或其他结构的地图。这些地图可以帮助玩家快速寻找到特定的地点</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">不同村庄类型的制图师现在会售卖一系列不同的地图与染色旗帜</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">调整了一些交易的价格和物品数量</Paragraph></ListItem>
-</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="/assets/uploads/files/1739473601465-e047baab-8015-41bf-a756-f352d7da797d.png"/></BlockUIContainer><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://minecraftnetassets.z13.web.core.windows.net/minecraft-net-assets-container/25w07a_wandering_trader_trades.png">原图</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H4}">流浪商人交易项调整</Paragraph><List>
+</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://forum.mczwlt.net/assets/uploads/files/1739473601465-e047baab-8015-41bf-a756-f352d7da797d.png"/></BlockUIContainer><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://minecraftnetassets.z13.web.core.windows.net/minecraft-net-assets-container/25w07a_wandering_trader_trades.png">原图</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H4}">流浪商人交易项调整</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">优化了流浪商人部分交易价格、库存，且流浪商人会提供更多交易项目</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">流浪商人现在也会收购一些物品作为自己的物资，因此即使你不想从流浪商人那里购买物品，你也能够为他们下一次旅程提供帮助，同时得到一些绿宝石</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">流浪商人现在会从下列物品中抽取两项进行收购：</Paragraph></ListItem>
@@ -89,7 +89,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">原木（金合欢、白桦、深色橡木、丛林木、橡木、云杉木、苍白橡木或樱花木）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">附魔铁镐</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">隐身药水</Paragraph></ListItem>
-</List><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="/assets/uploads/files/1739473620306-372637bf-4e44-4029-aece-7ae33bb0189f.png"/></InlineUIContainer> </Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/25w07a_wandering_trader_trades.jpg">原图</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">枯叶与草丛</Paragraph><List>
+</List><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://forum.mczwlt.net/assets/uploads/files/1739473620306-372637bf-4e44-4029-aece-7ae33bb0189f.png"/></InlineUIContainer> </Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/25w07a_wandering_trader_trades.jpg">原图</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">枯叶与草丛</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">减小了枯叶音效文件（挖掘、行走、放置）的音量</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">减小了草丛音效文件（挖掘）的音量，同时影响所有使用此音效的方块</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
