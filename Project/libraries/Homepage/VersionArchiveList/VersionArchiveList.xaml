@@ -1,0 +1,24 @@
+<local:MyCard Title="版本列表" Margin="0,0">
+    <StackPanel Margin="20,40,20,15">
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Active_Trial_Spawner_JE4_BE3813f27e2213dec08.png" Title="棘巧试炼 | 1.21" Info="加入了试炼密室"
+	EventType="打开帮助" EventData="https://${domain}/1.21_archive.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Cherry_Leaves_JE29cc390fd9b51333d.png" Title="足迹与故事 | 1.20 " Info="加入了考古学与樱花树"
+	EventType="打开帮助" EventData="https://${domain}/1.20_archive.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Sculk_JE1_BE141e57ad22b2b968e.png" Title="荒野更新 | 1.19" Info="加入了深暗之域与远古城市，以及红树林沼泽"
+	EventType="打开帮助" EventData="https://${domain}/1.19_archive.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Deepslate_JE3_BE227b47de799b509d8.png" Title="洞穴与山崖（第二部分） | 1.18" Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
+	EventType="打开帮助" EventData="https://${domain}/1.18_archive_confirm.json" Type="Clickable" />
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Block_of_Amethyst_JE3_BE14f18267120f7bf34.png" Title="洞穴与山崖（第一部分） | 1.17" Info="加入了繁茂洞穴、紫晶洞"
+	EventType="打开帮助" EventData="https://${domain}/1.17_archive_confirm.json" Type="Clickable" />
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
+     HorizontalAlignment="Center" Stretch="Fill" Margin="2"/>
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
+	Logo="https://img.picgo.net/2025/02/15/Locked_Chest_JE108f3a29ad950e185.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
+	EventType="打开帮助" EventData="https://${domain}/VersionLists/april_fools_archive.json" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>

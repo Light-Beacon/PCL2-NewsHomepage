@@ -1,5 +1,10 @@
 <local:MyCard Title="${title|最新版本}" CanSwap="${card-can-swap|False}" IsSwaped="${card-is-swaped|False}" ${@IF|${enable-card-style}|Style="{StaticResource Card}"}>
-<StackPanel Margin="${content-margin|8,35,8,15}">
+<StackPanel Margin="${content-margin|8,38,8,15}">
 ${@VersionLatestList}
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
+     HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
+<local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
+Logo="https://img.picgo.net/2025/02/15/Bookshelf_JE4_BE2de3fa45de5d6d91f.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
+EventType="打开帮助" EventData="https://${domain}/VersionArchiveList.json" Type="Clickable" />
 </StackPanel>
 </local:MyCard>

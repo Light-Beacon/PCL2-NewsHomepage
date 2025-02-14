@@ -1,4 +1,4 @@
-<local:MyCard Margin="0,2,0,14">
+<local:MyCard Margin="0,2,0,10">
 <Grid Margin="10,6">
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" Margin="-4,0,0,0">
     <local:MyIconTextButton HorizontalAlignment="Left" Text="${@Global|git.commit.id}" ToolTip="当前 Commit 版本" EventType="打开网页"

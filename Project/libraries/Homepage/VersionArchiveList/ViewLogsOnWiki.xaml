@@ -1,0 +1,7 @@
+<local:MyCard Margin="0,10">
+    <StackPanel Margin="15,10">
+    <local:MyListItem Margin="0,1,0,1" ToolTip="点击跳转至 Java版版本记录 页面" LogoScale="1.3"
+	Logo="https://img.picgo.net/2025/02/15/mcw_logo_textless73a208d55c979a7e.png" Title="在 Minecraft Wiki 上查看更多日志" Info="浏览 Java 版版本记录"
+	EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Java版版本记录" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>
