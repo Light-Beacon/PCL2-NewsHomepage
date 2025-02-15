@@ -5,6 +5,12 @@ alias:
  - 主界面
 cards:
  - animated_noticebar | s = false
- - VersionLatestListCard | title=更新日志 | enable-card-style=True
-# - feedback_hint
- - NewFooter
+ - ${@MainPageVersions|new}
+# - VersionLatestListCard | title=更新日志 | enable-card-style=True
+ - T:Separator | content = 历史版本
+ - ${@MainPageVersions|history}
+ - jumpCard
+ - T:Separator | content = 周边新闻
+ - feedback_hint
+ - NewFooter - ${@MainPageVersions|new}
+

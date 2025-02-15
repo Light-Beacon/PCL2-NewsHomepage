@@ -19,6 +19,6 @@
      HorizontalAlignment="Center" Stretch="Fill" Margin="2"/>
 	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Locked_Chest_JE108f3a29ad950e185.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
-	EventType="打开帮助" EventData="https://${domain}/VersionLists/april_fools_archive.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://${domain}/april_fools_archive.json" Type="Clickable" />
     </StackPanel>
 </local:MyCard>
