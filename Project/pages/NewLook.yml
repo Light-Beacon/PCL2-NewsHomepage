@@ -1,0 +1,6 @@
+name: 新闻主页主界面(新)
+cards:
+ - animated_noticebar | s = false
+ - VersionLatestListCard | title=更新日志 | enable-card-style=True
+ - NewFooter
+
