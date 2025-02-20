@@ -5,25 +5,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/><Setter Property="Margin" Value="0,4"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -43,38 +28,10 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<sys:String   x:Key="CloudIcon">
-M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
-20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
-97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
-42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
-0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
-38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
-69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
-220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
-113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
-0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
-211.6 582.7 160 480 160z</sys:String>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
+<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -98,7 +55,10 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <sys:String   x:Key="LaunchIcon">
 M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
@@ -106,6 +66,43 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
 10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
 295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
+<Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<sys:String   x:Key="CloudIcon">
+M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
+20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
+97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
+42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
+0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
+38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
+69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
+220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
+113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
+0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
+211.6 582.7 160 480 160z</sys:String>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
+<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -119,229 +116,84 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="最新快照版 - 25w07a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 25w08a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://img.picgo.net/2025/02/14/image24d4d59900840191.jpeg" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://img.picgo.net/2025/02/20/image049df67e3b3a0db2.png" Stretch="UniformToFill" />
 </Border.Background>
-<local:MyImage Source="https://img.picgo.net/2025/02/14/image24d4d59900840191.jpeg" Opacity="0" Stretch="Fill"/>
+<local:MyImage Source="https://img.picgo.net/2025/02/20/image049df67e3b3a0db2.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="25w07a" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="25w08a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>蛙，星期四出快照，谁出的主意？！在本周的快照中，我们改进了流浪商人与制图师的交易项目，同时为绵羊添加了基于生物群系的毛色生成规则。是时候出发去探索新世界了！Mojang 的漏洞追踪器 Mojira 正在迁移到云端，在此期间将不可访问。我们会尽快上线新平台，为各位玩家提供登录、创建帐户，以及最重要的——漏洞汇报服务！因此，在漏洞平台关闭期间，也别放过漏洞们，在 Mojira 上线后就快快来汇报它吧！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊现在会基于生成时所在的生物群系而使用不同的毛色生成规则</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">家畜生物变种</Paragraph><Paragraph Style="{StaticResource H4}">炎热/寒冷生物群系的绵羊毛色</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊现会基于生成时所在的生物群系而拥有全新的毛色生成规则：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">温暖生物群系（与原先的生成规则相同）：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">多数绵羊是白色的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">少数绵羊是黑色、灰色、淡灰色或棕色的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">罕见情况下，生成的绵羊是粉红色的</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">寒冷生物群系：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">多数绵羊是黑色的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">少数绵羊是淡灰色、淡蓝色、蓝色和青色的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">罕见情况下，生成的绵羊是粉红色的</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">炎热生物群系：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">多数绵羊是棕色的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">少数绵羊是灰色、黄色、棕色或红色的</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">罕见情况下，生成的绵羊是粉红色的</Paragraph></ListItem>
-</List></ListItem>
+<Paragraph>在本周的快照中，我们添加了一些新鲜、有趣且可爱的特性。刷怪蛋更加可爱了，它们在外观上更加接近所生成的生物。狼现在也拥有了更加个性化的声音变种。狼生成时会获得七种个性中的一种，这与它们的变种或所在生物群系无关。从可爱到暴躁，每只狼都会有属于自己的吠叫、咆哮、喘气、呜咽音效。更为重要的是，落叶堆现在拥有更好的颜色效果，此外，我们对不同生物群系能够生成的绵羊毛色也做出了调整。</Paragraph><Paragraph>祝您探索愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为狼添加了新的音效变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为每种刷怪蛋提供了更好的外观，让它们更易于辨认</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">农场生物变种</Paragraph><Paragraph Style="{StaticResource H4}">炎热、寒冷生物群系的绵羊毛色</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">回退了上周让蓝色、淡蓝色、青色、黄色、橙色和红色的绵羊能够在不同生物群系生成的改动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">黑色绵羊仍然是寒冷生物群系的最常见类型，棕色绵羊是炎热生物群系的最常见类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">粉色绵羊仍然是最稀有的类型，可以在任意能够生成绵羊的位置生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">寒冷生物群系中，少数绵羊会拥有灰色、淡灰色、白色和棕色的毛色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">炎热生物群系中，少数绵羊会拥有灰色、淡灰色、白色和黑色的毛色</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">落叶堆</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在落叶堆会依据所在生物群系着色</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">刷怪蛋视觉增强</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">每一种刷怪蛋现在都拥有独特的外观，能够反映出对应生物的特点</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">刷怪蛋现在会在尺寸上略有区别，对应所生成的生物在世界中的尺寸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">举例说明，更小的生物会倾向于拥有更小的刷怪蛋</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">狼的声音变种</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了6个声音变种，空闲、受伤、死亡、吼叫、呜咽和喘息音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些声音变种是 <TextBox Style="{StaticResource InlineCode}">big</TextBox>、<TextBox Style="{StaticResource InlineCode}">cute</TextBox>、<TextBox Style="{StaticResource InlineCode}">puglin</TextBox>、<TextBox Style="{StaticResource InlineCode}">angry</TextBox>、<TextBox Style="{StaticResource InlineCode}">grumpy</TextBox>和<TextBox Style="{StaticResource InlineCode}">sad</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原先的音效改为名为由 <TextBox Style="{StaticResource InlineCode}">classic</TextBox> 的声音变种使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每种狼都会从所有 6 个新声音变种与原有的声音变种中随机选择1种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">声音变种与纹理变种内部没有关联</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">灌木现只在使用剪刀或附魔了精准采集的工具破坏时掉落自身，并可被其他方块替代放置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">两种哞菇的外观轻微变动，现在会有隆起的鼻子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将仅用于沙漠、恶地和苍白花园的环境音效的方块环境音效由“方块”分类移动到“环境”分类</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">调整了制图师和流浪商人的交易列表</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">骆驼现在可以在沙漠自然生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">收纳袋现可以从村庄的部分战利品箱子内获得</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">降低草丛被破坏时音效的音量，同时影响所有使用这一音效的方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">制图师与流浪商人的交易平衡性调整</Paragraph><Paragraph Style="{StaticResource H4}">制图师交易项调整</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">制图师现在会售卖 7 种指向不同生物群系村庄或其他结构的地图。这些地图可以帮助玩家快速寻找到特定的地点</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不同村庄类型的制图师现在会售卖一系列不同的地图与染色旗帜</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">调整了一些交易的价格和物品数量</Paragraph></ListItem>
-</List><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/02/14/image27c7c5854ab5576c.png"/></BlockUIContainer><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/25w07a_cartographer_trades.jpg">原图</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H4}">流浪商人交易项调整</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">优化了流浪商人部分交易价格、库存，且流浪商人会提供更多交易项目</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人现在也会收购一些物品作为自己的物资，因此即使你不想从流浪商人那里购买物品，你也能够为他们下一次旅程提供帮助，同时得到一些绿宝石</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人现在会从下列物品中抽取两项进行收购：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">水瓶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">水桶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">奶桶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">发酵蛛眼</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">烤马铃薯</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">干草捆</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人现在可能会从下列物品中抽选售卖（追加进可能抽选的交易列表）:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原木（金合欢、白桦、深色橡木、丛林木、橡木、云杉木、苍白橡木或樱花木）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">附魔铁镐</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">隐身药水</Paragraph></ListItem>
-</List><Paragraph><InlineUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/02/14/imagea21dba5390d011ea.png"/></InlineUIContainer> </Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/25w07a_wandering_trader_trades.jpg">原图</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">枯叶与草丛</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">减小了枯叶音效文件（挖掘、行走、放置）的音量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">减小了草丛音效文件（挖掘）的音量，同时影响所有使用此音效的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绵羊被染色后，内层羊毛现在也会着色，以匹配基岩版特性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绵羊现在也可以吃掉蕨类方块，以匹配基岩版特性</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在是 <TextBox Style="{StaticResource InlineCode}">67</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现状是 <TextBox Style="{StaticResource InlineCode}">52</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 <TextBox Style="{StaticResource InlineCode}">67</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">调整了 <TextBox Style="{StaticResource InlineCode}">stepping_on</TextBox> 实体谓词的行为，现只在实体接触地面时结果为真</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#camels_spawnable_on</TextBox> 标签，用于标记骆驼可以在上面生成的方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">结构标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_savanna_village_maps</TextBox> 标签，用于标记可以出现在热带草原村庄地图上的结构</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_desert_village_maps</TextBox> 标签，用于标记可以出现在沙漠村庄地图上的结构</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_plains_village_maps</TextBox> 标签，用于标记可以出现在平原村庄地图上的结构</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_taiga_village_maps</TextBox> 标签，用于标记可以出现在针叶林村庄地图上的结构</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_snowy_village_maps</TextBox> 标签，用于标记可以出现在雪原村庄地图上的结构</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_swamp_explorer_maps</TextBox> 标签，用于标记可以出现在沼泽探险家地图上的结构</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 <TextBox Style="{StaticResource InlineCode}">#on_jungle_explorer_maps</TextBox> 标签，用于标记可以出现在丛林探险家地图上的结构</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在含有错误数组元素数的 <TextBox Style="{StaticResource InlineCode}">Pos</TextBox>、<TextBox Style="{StaticResource InlineCode}">Motion</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Rotation</TextBox>（应分别为3个、3个、2个）会被丢弃，而不再选择特定数量元素</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">SleepingX</TextBox>、<TextBox Style="{StaticResource InlineCode}">SleepingY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">SleepingZ</TextBox> 字段合并为 <TextBox Style="{StaticResource InlineCode}">sleeping_pos</TextBox> 字段</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例：<TextBox Style="{StaticResource InlineCode}">sleeping_pos: [I;1,2,3]</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">箭矢、矿车、方块展示实体、末影人、下落的方块、点燃的 TNT 和移动的活塞臂的实体数据中，方块状态不再能指定为空对象</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Tags</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">allay</TextBox>（悦灵）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除多余的 <TextBox Style="{StaticResource InlineCode}">CanDuplicate</TextBox> 字段（改为由 <TextBox Style="{StaticResource InlineCode}">DuplicationCooldown</TextBox> 控制）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">cat</TextBox>（猫）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">CollarColor</TextBox> 字段在未指定时默认为 <TextBox Style="{StaticResource InlineCode}">14</TextBox>（红色）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">dolphin</TextBox>（海豚）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">TreasurePosX</TextBox>、<TextBox Style="{StaticResource InlineCode}">TreasurePosY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">TreasurePosZ</TextBox> 字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">falling_block</TextBox>（下落的方块）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">BlockState</TextBox> 字段现在可以是 <TextBox Style="{StaticResource InlineCode}">air</TextBox>（会立即消失）——未指定或无效时，将变为默认值 <TextBox Style="{StaticResource InlineCode}">sand</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">fox</TextBox>（狐狸）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Trusted</TextBox> 字段在未指定时默认为空值（且使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 修改时不再合并先前的状态）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">item</TextBox>（物品实体）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除时不再保留 <TextBox Style="{StaticResource InlineCode}">Owner</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Thrower</TextBox> 字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">phantom</TextBox>（幻翼）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">Size</TextBox> 字段重命名为 <TextBox Style="{StaticResource InlineCode}">size</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">AX</TextBox>、<TextBox Style="{StaticResource InlineCode}">AY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">AZ</TextBox> 字段现合并为 <TextBox Style="{StaticResource InlineCode}">anchor_pos</TextBox> 字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">player</TextBox>（玩家）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">SpawnX, SpawnY, SpawnZ, SpawnAngle</TextBox>、<TextBox Style="{StaticResource InlineCode}">SpawnDimension</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">SpawnForced</TextBox> 字段现合并为 <TextBox Style="{StaticResource InlineCode}">respawn</TextBox> 字段</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：带字段的对象</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pos</TextBox>：重生的方块位置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">angle</TextBox>：浮点数类型，重生时旋转的角度（默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox>）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dimension</TextBox>：重生的维度id（默认值：<TextBox Style="{StaticResource InlineCode}">minecraft:overworld</TextBox>）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">forced</TextBox>：布尔类型，使用命令更改重生点时为真（默认值：<TextBox Style="{StaticResource InlineCode}">false</TextBox>）</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">enteredNetherPosition</TextBox> 字段重命名为 <TextBox Style="{StaticResource InlineCode}">entered_nether_pos</TextBox>，其格式更改为由双精度数组成的数组</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例：<TextBox Style="{StaticResource InlineCode}">entered_nether_pos: [1.0, 2.0, 3.0]</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">primed_tnt</TextBox>（点燃的TNT）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">block_state</TextBox> 字段在未指定时默认为 <TextBox Style="{StaticResource InlineCode}">tnt</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">shulker_bullet</TextBox>（潜影贝导弹）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Dir</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Target</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">turtle</TextBox>（海龟）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">HomePosX</TextBox>、<TextBox Style="{StaticResource InlineCode}">HomePosY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">HomePosZ</TextBox> 字段现合并为 <TextBox Style="{StaticResource InlineCode}">home_pos</TextBox> 字段</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">TravelPosX</TextBox>、<TextBox Style="{StaticResource InlineCode}">TravelPosY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">TravelPosZ</TextBox> 字段</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">HasEgg</TextBox> 字段重命名为 <TextBox Style="{StaticResource InlineCode}">has_egg</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">vex</TextBox>（恼鬼）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">LifeTicks</TextBox> 字段重命名为 <TextBox Style="{StaticResource InlineCode}">life_ticks</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">BoundX</TextBox>、<TextBox Style="{StaticResource InlineCode}">BoundY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">BoundZ</TextBox> 字段现合并为 <TextBox Style="{StaticResource InlineCode}">bound_pos</TextBox> 字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">villager</TextBox>（村民）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Gossips</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">wandering_trader</TextBox>（流浪商人）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">wander_target</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">wolf</TextBox>（狼）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在<TextBox Style="{StaticResource InlineCode}">CollarColor</TextBox> 字段在未指定时默认为 <TextBox Style="{StaticResource InlineCode}">14</TextBox>（红色）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">zombie_villager</TextBox>（僵尸村民）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Gossips</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">evoker_fangs</TextBox>（唤魔者尖牙）、<TextBox Style="{StaticResource InlineCode}">area_effect_cloud</TextBox>（区域效果云）和所有弹射物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Owner</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">item_frame</TextBox>、<TextBox Style="{StaticResource InlineCode}">glow_item_frame</TextBox>、<TextBox Style="{StaticResource InlineCode}">painting</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">leash_knot</TextBox>（物品展示框、荧光物品展示框、画、拴绳结）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">TileX</TextBox>、<TextBox Style="{StaticResource InlineCode}">TileY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">TileZ</TextBox> 字段现合并为 <TextBox Style="{StaticResource InlineCode}">block_pos</TextBox> 字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">arrow</TextBox>、<TextBox Style="{StaticResource InlineCode}">spectral_arrow</TextBox>、<TextBox Style="{StaticResource InlineCode}">trident</TextBox>（箭矢、光灵箭、三叉戟）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">inBlockState</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">SoundEvent</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecart</TextBox>、<TextBox Style="{StaticResource InlineCode}">*_minecart</TextBox>（所有种类矿车）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">CustomDisplayTile</TextBox> 字段现不再使用</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">DisplayState</TextBox> 被指定时，将始终覆盖原有的方块状态展示</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在，即使未设定自定义的方块状态展示，也可以直接指定 <TextBox Style="{StaticResource InlineCode}">DisplayOffset</TextBox> 字段来覆盖默认的偏移量</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">block_display</TextBox>、<TextBox Style="{StaticResource InlineCode}">item_display</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">text_display</TextBox>（所有种类展示实体）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">glow_color_override</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">witch</TextBox>、<TextBox Style="{StaticResource InlineCode}">ravager</TextBox>、<TextBox Style="{StaticResource InlineCode}">pillager</TextBox>、<TextBox Style="{StaticResource InlineCode}">illusioner</TextBox>、<TextBox Style="{StaticResource InlineCode}">evoker</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">vindicator</TextBox>（所有灾厄村民）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">patrol_target</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">CustomName</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">LootTable</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">end_gateway</TextBox>（末地折跃门）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exit_portal</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">furnace</TextBox>、<TextBox Style="{StaticResource InlineCode}">smoker</TextBox>、<TextBox Style="{StaticResource InlineCode}">blast_furnace</TextBox>（熔炉、烟熏炉、高炉）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">RecipesUsed</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">skull</TextBox>（头颅方块）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">note_block_sound</TextBox> 字段被移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 52</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更改了世界中物品的渲染行为</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">哞菇</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了哞菇的模型与纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了鼻子模型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对腿部模型进行了镜像处理</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">着色器与后处理效果</Paragraph><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph>
-虽然通过资源包覆写核心着色器在操作上是可行的，但我们认为不应当这么做，这并不是资源包应有的行为。这些核心着色器作为游戏内部运行的一部分而存在，因此会随着游戏内部更新而随时发生变化。我们已知晓覆写核心着色器可以实现超酷的资源包功能，且很多黑科技缺少受支持的替代方案。我们将在未来提供更好且受支持的替代方案。</Paragraph>
-
-</Section><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">作为文件定义的核心着色器程序与后处理效果的 JSON 格式文件已全部移除</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">着色器程序本身仍可访问且覆盖</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">后处理效果仍可使用 JSON 文件调整</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">后处理效果文件定义</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">program</TextBox> 字段由 <TextBox Style="{StaticResource InlineCode}">vertex_shader</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">fragment_shader</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">&lt;namespace&gt;:&lt;path&gt;</TextBox> 将会解析为 <TextBox Style="{StaticResource InlineCode}">assets/&lt;namespace&gt;/shaders/&lt;path&gt;.&lt;vsh|fsh&gt;</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对于每个 uniform，<TextBox Style="{StaticResource InlineCode}">type</TextBox> 字段现在是必填项</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当前允许的值有<TextBox Style="{StaticResource InlineCode}">int</TextBox>、<TextBox Style="{StaticResource InlineCode}">ivec3</TextBox>、<TextBox Style="{StaticResource InlineCode}">float</TextBox>、<TextBox Style="{StaticResource InlineCode}">vec2</TextBox>、<TextBox Style="{StaticResource InlineCode}">vec3</TextBox>、<TextBox Style="{StaticResource InlineCode}">vec4</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">matrix4</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对于每个 uniform，<TextBox Style="{StaticResource InlineCode}">values</TextBox> 字段现在是可选项</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不过不推荐将此项值留空，否则会使用 blur 后处理效果的运行时配置 <Italic>（译者注：原文是Leaving it unset is not recommended and is used for runtime configuration of the blur effect. 可能理解有误）</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">存在 uniform 未指定时将出现未定义行为，你必须指定着色器所用到的每一个 uniform</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品渲染</Paragraph><Paragraph Style="{StaticResource H4}">物品展示实体</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">firstperson_lefthand</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">thirdperson_lefthand</TextBox> 的矩阵变换与手持物品时的变换相同</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">物品实体</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">物品实体在地面上时，现在会基于自身模型大小调整悬停的动量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">因此不论自身大小如何，物品实体的模型将不再穿到下面的方块中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">物品堆叠中各个物品的位置现在由自身模型大小与模型类型决定</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">只要模型高度（Z 坐标）小于 1/16 格方块高度，物品实体就会被渲染成一摞扁平物品模型的组合</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">其他情况下，物品堆叠会被渲染成数个围绕中心点偏移的物品模型的组合</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在之前的版本中，只有以 <TextBox Style="{StaticResource InlineCode}">builtin/generated</TextBox> 为父模型的物品会被渲染成一摞扁平物品模型的组合</Paragraph></ListItem>
-</List><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph>
-由于文章发表时，漏洞追踪器服务仍因迁移中而不可用，下文的漏洞链接将暂时无法打开。</Paragraph>
-
-</Section><Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-122840">MC-122840</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">/data remove</TextBox> 命令无法移除末地水晶的 <TextBox Style="{StaticResource InlineCode}">beam_target</TextBox> 标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-152382">MC-152382</local:MyTextButton></Underline> - 末地折跃门和末地传送门不会因渲染距离迷雾而淡出</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-153392">MC-153392</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">/data remove</TextBox> 命令无法移除村民的言论信息（gossip）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-220091">MC-220091</local:MyTextButton></Underline> - 将 NBT 标签 <TextBox Style="{StaticResource InlineCode}">BlockState</TextBox> 设置为任意空气方块（<TextBox Style="{StaticResource InlineCode}">air</TextBox>、<TextBox Style="{StaticResource InlineCode}">cave_air</TextBox>、<TextBox Style="{StaticResource InlineCode}">void_air</TextBox>）时，下落的方块实体会变成默认的沙子方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-230445">MC-230445</local:MyTextButton></Underline> - 末地折跃门和末地传送门在黑暗与失明效果下渲染异常</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279196">MC-279196</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">/data remove</TextBox> 命令无法移除方块的战利品表</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279364">MC-279364</local:MyTextButton></Underline> - 无法移除方块实体的 <TextBox Style="{StaticResource InlineCode}">CustomName</TextBox> 标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279434">MC-279434</local:MyTextButton></Underline> - 同时站在细雪方块和火方块中时，异常高频播放火焰熄灭的音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279472">MC-279472</local:MyTextButton></Underline> - 与先前版本相比，虚空迷雾出现的高度更低、淡出更快了</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279572">MC-279572</local:MyTextButton></Underline> - 末地折跃门和末地传送门不会受水、熔岩和细雪迷雾的影响</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279598">MC-279598</local:MyTextButton></Underline> - 测试结构在执行 <TextBox Style="{StaticResource InlineCode}">/test clearall</TextBox> 后仍有少量残留</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279637">MC-279637</local:MyTextButton></Underline> - 使用 <TextBox Style="{StaticResource InlineCode}">/test verify</TextBox> 测试一个 <TextBox Style="{StaticResource InlineCode}">max_attempts</TextBox> 大于 1 的测试实例时游戏崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279711">MC-279711</local:MyTextButton></Underline> - 关闭 UI 界面时，测试实例方块的“实体”翻转</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279913">MC-279913</local:MyTextButton></Underline> - 哞菇的鼻子与牛的不一致</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279921">MC-279921</local:MyTextButton></Underline> - “轻功雪上飘”进度在玩家陷入细雪时仍然能够完成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279934">MC-279934</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">block.sand.idle</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">block.sand.wind</TextBox> 不在环境音效分类</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279936">MC-279936</local:MyTextButton></Underline> - 使用<TextBox Style="{StaticResource InlineCode}">/test create</TextBox> 命令时显示 <TextBox Style="{StaticResource InlineCode}">commands.test.success</TextBox> 的原始翻译键</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279948">MC-279948</local:MyTextButton></Underline> - 寒带牛的牛角未作镜像处理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279992">MC-279992</local:MyTextButton></Underline> - 玩家穿着皮革靴子且从一些特地高度坠落到细雪上时，会陷入细雪中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280067">MC-280067</local:MyTextButton></Underline> - 玩家与脚手架交错时无法放置脚手架</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280132">MC-280132</local:MyTextButton></Underline> - 枯叶生成时受非草方块影响的行为不一致</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280133">MC-280133</local:MyTextButton></Underline> - 靠近世界边界时出现图像故障</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280134">MC-280134</local:MyTextButton></Underline> - 潜行速度属性设置为 0 时潜行会导致游戏假死</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280167">MC-280167</local:MyTextButton></Underline> - <TextBox Style="{StaticResource InlineCode}">F3+L</TextBox> 生成分析报告文件时，游戏在日志中输出过量 error</Paragraph></ListItem>
-</List><Section Style="{StaticResource Hr}"/><Paragraph>本文来源：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://forum.mczwlt.net/topic/347/java%E7%89%88%E6%9C%AC%E8%B5%84%E8%AE%AF-%E5%BF%AB%E7%85%A7-25w07a-%E5%8F%91%E5%B8%83">红石中继站 轰天雷（@Don_Trueno）的译文</local:MyTextButton></Underline></Paragraph>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在是 <TextBox Style="{StaticResource InlineCode}">68</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在是 <TextBox Style="{StaticResource InlineCode}">53</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 68</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为狼新增了数据驱动的音效变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">生物群系效果新增字段 <TextBox Style="{StaticResource InlineCode}">dry_foliage_color</TextBox> ，定义干枯生物群系着色的方块将要使用的颜色</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">狼音效变种</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">狼音效变种现在使用数据驱动，可以在 <TextBox Style="{StaticResource InlineCode}">data/&lt;namespace&gt;/wolf_sound_variant/&lt;id&gt;.json</TextBox> 中添加新音效变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">文件需包含以下字段，对应特性行为所使用的声音事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ambient_sound</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">death_sound</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">growl_sound</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hurt_sound</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pant_sound</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">whine_sound</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品组件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">blocks_attacks</TextBox> 组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">被阻挡的伤害没有位置信息时，对于 <TextBox Style="{StaticResource InlineCode}">damage_reductions</TextBox> 中的 <TextBox Style="{StaticResource InlineCode}">horizontal_blocking_angle</TextBox> 字段，用于比较的角度将被假定为最大值 <TextBox Style="{StaticResource InlineCode}">180</TextBox>。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">实体组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">wolf/sound_variant</TextBox> - 对应 <TextBox Style="{StaticResource InlineCode}">wolf_sound_variant</TextBox> 注册项的命名空间ID</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本53</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">方块现在可以使用干枯生物群系着色的颜色图</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了刷怪蛋的纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">改进并新增了狼的声音变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了干枯生物群系着色的颜色图</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将<TextBox Style="{StaticResource InlineCode}">sheep_fur</TextBox>纹理重命名为<TextBox Style="{StaticResource InlineCode}">sheep_wool</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绵羊的内层羊毛现在拥有单独的纹理，在游戏中动态上色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">内层羊毛纹理的文件名是<TextBox Style="{StaticResource InlineCode}">sheep_wool_undercoat</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">刷怪蛋纹理更新</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为每种刷怪蛋新增了纹理文件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">spawn_egg.png</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">spawn_egg_overlay.png</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">装备资产文件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">被配置可染色的装备纹理层会在物品拥有 <TextBox Style="{StaticResource InlineCode}">dyed_color</TextBox>组件时上色，即使物品不在 <TextBox Style="{StaticResource InlineCode}">#dyeable</TextBox> 标签中</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">改进与新增的狼声音变种</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原用于狼的音效文件移动到 <TextBox Style="{StaticResource InlineCode}">classic</TextBox> 目录下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">howl</TextBox> 音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为狼添加了以下音效变种： <TextBox Style="{StaticResource InlineCode}">big</TextBox>、<TextBox Style="{StaticResource InlineCode}">cute</TextBox>、<TextBox Style="{StaticResource InlineCode}">puglin</TextBox>、<TextBox Style="{StaticResource InlineCode}">angry</TextBox>、<TextBox Style="{StaticResource InlineCode}">grumpy</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">sad</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">25w08a 修复的漏洞</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-177522">MC-177522</local:MyTextButton></Underline> - 狼吼叫和哀鸣的伤害在字幕中也被标记为“狼：喘息”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280182">MC-280182</local:MyTextButton></Underline> - 盾牌能够格挡环境伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280230">MC-280230</local:MyTextButton></Underline> - DeathLootTable 字段被错误地拼作 DeathLoothTable</Paragraph></ListItem>
+</List><Section Style="{StaticResource Hr}"/><Paragraph>本文来源：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://forum.mczwlt.net/topic/373/java版本资讯-快照-25w08a-发布">红石中继站 轰天雷（@Don_Trueno）的译文</local:MyTextButton></Underline></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 <Grid VerticalAlignment="Center" Margin="6,10,0,0" HorizontalAlignment="Right">
@@ -355,25 +207,25 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="Don_Trueno" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-18" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-20" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 25w07a" EventType="启动游戏"
-    EventData="25w07a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 25w08a" EventType="启动游戏"
+    EventData="25w08a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/f264312044768694831ad285fdde1d55e2f16c92/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/a813292f7680fa8e2c3514d9a55773badcee2dc9/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/25w07a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/25w08a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-25w07a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-snapshot-25w08a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-18" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -627,7 +479,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="中文 Minecraft Wiki" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-18" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-20" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.4" EventType="启动游戏"
     EventData="1.21.4" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -645,7 +497,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-18" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -667,7 +519,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-18" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -678,8 +530,8 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="f428cbe" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/f428cbe452997f3326f52e2a9e212ce2536d326f"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="2d79b5e" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/2d79b5e3ff3ce249fcf52e86646dc3db79099f4f"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
