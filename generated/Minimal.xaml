@@ -11,6 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -31,90 +34,219 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </Setter>
 </Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w08a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w09a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>在本周的快照中，我们添加了一些新鲜、有趣且可爱的特性。刷怪蛋更加可爱了，它们在外观上更加接近所生成的生物。狼现在也拥有了更加个性化的声音变种。狼生成时会获得七种个性中的一种，这与它们的变种或所在生物群系无关。从可爱到暴躁，每只狼都会有属于自己的吠叫、咆哮、喘气、呜咽音效。更为重要的是，落叶堆现在拥有更好的颜色效果，此外，我们对不同生物群系能够生成的绵羊毛色也做出了调整。</Paragraph><Paragraph>祝您探索愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为狼添加了新的音效变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为每种刷怪蛋提供了更好的外观，让它们更易于辨认</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">农场生物变种</Paragraph><Paragraph Style="{StaticResource H4}">炎热、寒冷生物群系的绵羊毛色</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">回退了上周让蓝色、淡蓝色、青色、黄色、橙色和红色的绵羊能够在不同生物群系生成的改动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">黑色绵羊仍然是寒冷生物群系的最常见类型，棕色绵羊是炎热生物群系的最常见类型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">粉色绵羊仍然是最稀有的类型，可以在任意能够生成绵羊的位置生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">寒冷生物群系中，少数绵羊会拥有灰色、淡灰色、白色和棕色的毛色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">炎热生物群系中，少数绵羊会拥有灰色、淡灰色、白色和黑色的毛色</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">落叶堆</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在落叶堆会依据所在生物群系着色</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">刷怪蛋视觉增强</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">每一种刷怪蛋现在都拥有独特的外观，能够反映出对应生物的特点</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">刷怪蛋现在会在尺寸上略有区别，对应所生成的生物在世界中的尺寸</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">举例说明，更小的生物会倾向于拥有更小的刷怪蛋</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">狼的声音变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了6个声音变种，空闲、受伤、死亡、吼叫、呜咽和喘息音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这些声音变种是 <TextBox Style="{StaticResource InlineCode}">big</TextBox>、<TextBox Style="{StaticResource InlineCode}">cute</TextBox>、<TextBox Style="{StaticResource InlineCode}">puglin</TextBox>、<TextBox Style="{StaticResource InlineCode}">angry</TextBox>、<TextBox Style="{StaticResource InlineCode}">grumpy</TextBox>和<TextBox Style="{StaticResource InlineCode}">sad</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原先的音效改为名为由 <TextBox Style="{StaticResource InlineCode}">classic</TextBox> 的声音变种使用</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">每种狼都会从所有 6 个新声音变种与原有的声音变种中随机选择1种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">声音变种与纹理变种内部没有关联</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊被染色后，内层羊毛现在也会着色，以匹配基岩版特性</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊现在也可以吃掉蕨类方块，以匹配基岩版特性</Paragraph></ListItem>
+<Paragraph>在本周的快照中，我们带来了盼望已久的同步特性——倒下的树木第一次亮相于 Java 版。除此之外，萤火虫灌木丛现在可以在红树林沼泽和罕见地在恶地中生成了。</Paragraph><Paragraph>在技术性方面，命令中的 SNBT 语法获得了扩展与改进，包含了与 SNBT 文本组件阻止在运行中转义相关的漏洞修复。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">同步基岩版，增加了倒下的树木</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">倒下的树木</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树木是一个新的树的装饰性变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树木加入到了以下四种树木类型：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉树</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的白桦树有高矮两种不同版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一些倒下的树上会装饰着蘑菇或藤蔓</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树可以在所有该树种生长的生物群系中找到，下列生物群系除外：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">草甸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">河流</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">雪林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">繁花森林有倒下的白桦树但没有倒下的橡树</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">枯叶</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶现在能被其它方块替换</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">萤火虫灌木丛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛现在可以在红树林沼泽以及恶地（非常罕见）的水边生成，就像其它有水的生物群系一样。</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在是 <TextBox Style="{StaticResource InlineCode}">68</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在是 <TextBox Style="{StaticResource InlineCode}">53</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 68</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为狼新增了数据驱动的音效变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生物群系效果新增字段 <TextBox Style="{StaticResource InlineCode}">dry_foliage_color</TextBox> ，定义干枯生物群系着色的方块将要使用的颜色</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">狼音效变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">狼音效变种现在使用数据驱动，可以在 <TextBox Style="{StaticResource InlineCode}">data/&lt;namespace&gt;/wolf_sound_variant/&lt;id&gt;.json</TextBox> 中添加新音效变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">文件需包含以下字段，对应特性行为所使用的声音事件：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ambient_sound</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">death_sound</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">growl_sound</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hurt_sound</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pant_sound</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">whine_sound</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品组件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">blocks_attacks</TextBox> 组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">被阻挡的伤害没有位置信息时，对于 <TextBox Style="{StaticResource InlineCode}">damage_reductions</TextBox> 中的 <TextBox Style="{StaticResource InlineCode}">horizontal_blocking_angle</TextBox> 字段，用于比较的角度将被假定为最大值 <TextBox Style="{StaticResource InlineCode}">180</TextBox>。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">实体组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新组件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">wolf/sound_variant</TextBox> - 对应 <TextBox Style="{StaticResource InlineCode}">wolf_sound_variant</TextBox> 注册项的命名空间ID</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本53</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">方块现在可以使用干枯生物群系着色的颜色图</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了刷怪蛋的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">改进并新增了狼的声音变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了干枯生物群系着色的颜色图</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将<TextBox Style="{StaticResource InlineCode}">sheep_fur</TextBox>纹理重命名为<TextBox Style="{StaticResource InlineCode}">sheep_wool</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊的内层羊毛现在拥有单独的纹理，在游戏中动态上色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">内层羊毛纹理的文件名是<TextBox Style="{StaticResource InlineCode}">sheep_wool_undercoat</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">刷怪蛋纹理更新</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为每种刷怪蛋新增了纹理文件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">spawn_egg.png</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">spawn_egg_overlay.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">装备资产文件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">被配置可染色的装备纹理层会在物品拥有 <TextBox Style="{StaticResource InlineCode}">dyed_color</TextBox>组件时上色，即使物品不在 <TextBox Style="{StaticResource InlineCode}">#dyeable</TextBox> 标签中</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">改进与新增的狼声音变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">原用于狼的音效文件移动到 <TextBox Style="{StaticResource InlineCode}">classic</TextBox> 目录下</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">howl</TextBox> 音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为狼添加了以下音效变种： <TextBox Style="{StaticResource InlineCode}">big</TextBox>、<TextBox Style="{StaticResource InlineCode}">cute</TextBox>、<TextBox Style="{StaticResource InlineCode}">puglin</TextBox>、<TextBox Style="{StaticResource InlineCode}">angry</TextBox>、<TextBox Style="{StaticResource InlineCode}">grumpy</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">sad</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">25w08a 修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-177522">MC-177522</local:MyTextButton></Underline> - 狼吼叫和哀鸣的伤害在字幕中也被标记为“狼：喘息”</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280182">MC-280182</local:MyTextButton></Underline> - 盾牌能够格挡环境伤害</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280230">MC-280230</local:MyTextButton></Underline> - DeathLootTable 字段被错误地拼作 DeathLoothTable</Paragraph></ListItem>
-</List><Section Style="{StaticResource Hr}"/><Paragraph>本文来源：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://forum.mczwlt.net/topic/373/java版本资讯-快照-25w08a-发布">红石中继站 轰天雷（@Don_Trueno）的译文</local:MyTextButton></Underline></Paragraph>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 69</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">客户端有了新的命令行参数 <TextBox Style="{StaticResource InlineCode}">--renderDebugLabels</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">向相关的 OpenGL 物体增加了调试标签，使得开发者能更简单地调试渲染</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 69</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为 NBT、文本组件以及内联谓词（也称作 SNBT）扩展了在命令中的对象标记</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/data</TextBox> 现在可以透明地创建和修改异构列表</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FallFlying</TextBox> 字段不再在被移除时保留</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Health</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">Air</TextBox> 字段若不指定，则默认为各自的最大值</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">AREA_EFFECT_CLOUD</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Duration</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">Duration</TextBox> 字段为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox>，区域效果云将不再自己消失</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着生成未指定时常的区域效果云将会不再立即消失</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">CREEPER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Fuse</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ExplosionRadius</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">3</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">DOLPHIN</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Moistness</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">2400</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ENDER_DRAGON</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DragonDeathTime</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">FALLING_BLOCK</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">HurtEntities</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> (或 <TextBox Style="{StaticResource InlineCode}">true</TextBox> 如果 <TextBox Style="{StaticResource InlineCode}">BlockState</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">anvil</TextBox>)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">FallHurtAmount</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">FallHurtMax</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">40</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DropItem</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">TileEntityData</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">FIREWORK_ROCKET</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ShotAtAngle</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">FOX</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Trusted</TextBox> 字段若不指定，则默认为空（并且使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 修改时将不再与原状态合并）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">GHAST</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ExplosionPower</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">GOAT</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">HasLeftHorn</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">HasRightHorn</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">INTERACTION</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">width</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">height</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">Item</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Health</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">5</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">PickupDelay</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Age</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Owner</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Thrower</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ITEM_FRAME</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">GLOW_ITEM_FRAME</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ItemDropChance</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">PRIMED_TNT</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">fuse</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">80</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">explosion_power</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">4</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SHULKER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Color</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">16</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SKELETON</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">StrayConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SPECTRAL_ARROW</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Duration</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">200</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SNOW_GOLEM</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Pumpkin</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">TNT_MINECART</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">fuse</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">80</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">explosion_power</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">4</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">explosion_speed_factor</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">TRADER_LLAMA</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DespawnDelay</TextBox> 字段默认值为 <TextBox Style="{StaticResource InlineCode}">47999</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">VILLAGER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">FoodLevel</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Xp</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">WANDERING_TRADER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DespawnDelay</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ZOMBIE</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">DrownedConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ZOMBIE_VILLAGER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Xp</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ARROW</TextBox>, <TextBox Style="{StaticResource InlineCode}">SPECTRAL_ARROW</TextBox>, <TextBox Style="{StaticResource InlineCode}">TRIDENT</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">damage</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">2</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">DRAGON_FIREBALL</TextBox>, <TextBox Style="{StaticResource InlineCode}">WIND_CHARGE</TextBox>, <TextBox Style="{StaticResource InlineCode}">BREEZE_WIND_CHARGE</TextBox>, <TextBox Style="{StaticResource InlineCode}">WITHER_SKULL</TextBox>, <TextBox Style="{StaticResource InlineCode}">SMALL_FIREBALL</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">LARGE_FIREBALL</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">acceleration_power</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0.1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SMALL_FIREBALL</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">LARGE_FIREBALL</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ExplosionPower</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">BLOCK_DISPLAY</TextBox>, <TextBox Style="{StaticResource InlineCode}">ITEM_DISPLAY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">TEXT_DISPLAY</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">interpolation_duration</TextBox>、<TextBox Style="{StaticResource InlineCode}">teleport_duration</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">start_interpolation</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">view_range</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">shadow_radius</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">shadow_strength</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">width</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">height</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块实体数据</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">CAMPFIRE</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">CookingTimes</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">CookingTotalTimes</TextBox> 字段移除时不再保留</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">CHISELED_BOOKSHELF</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">last_interacted_slot</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">HOPPER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">TransferCooldown</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">JIGSAW</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">name</TextBox>、<TextBox Style="{StaticResource InlineCode}">target</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">pool</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">minecraft:empty</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">final_state</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">minecraft:air</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SCULK_SHRIEKER</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">warning_level</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">STRUCTURE_BLOCK</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ignoreEntities</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">showboundingbox</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">posY</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">NBT 更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在游戏中任何有 NBT 数据的接口（SNBT 表示、 <TextBox Style="{StaticResource InlineCode}">/data</TextBox>）现在支持异构列表，即一个元素可以是不同类型的列表。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 插入或替换一个异构列表中的元素不再报错</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">插入任何数组类型（如： <TextBox Style="{StaticResource InlineCode}">[I;1,2,3]</TextBox>）仍限制类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着之前被用于展示异构列表的 &apos;wrapper&apos; 对象将不再可以在游戏中观察到</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/data</TextBox> 不再能遍历有空键的路径（如：<TextBox Style="{StaticResource InlineCode}">/data get ... foo.&apos;&apos;.bar</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">NBT 文件类型未受改变</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">异构列表会在储存前进行转换以越过 NBT 限制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">转换例如：<TextBox Style="{StaticResource InlineCode}">[&apos;a&apos;, {&apos;b&apos;:3}]</TextBox> 将会储存为 <TextBox Style="{StaticResource InlineCode}">[{&apos;&apos;:&apos;a&apos;},{&apos;b&apos;:3}]</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现存的外部工具将仍能够像之前一样读取 NBT 文件，但是异构列表将会以转换过的形式显示</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">游戏产生的数据没有变化：对象如文本组件已经产生这个形式的异构列表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">备注：这些 wrapper 对象可能在游戏中完全不会被观察到，它们仅与直接操作 NBT 文件或网络格式的开发者有关</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">SNBT 更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩展了在命令中描述对象类数据的文本格式（像 NBT、文本组件、谓词等）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">数字格式</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">浮点数的整数或小数部分都可以省略</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如： <TextBox Style="{StaticResource InlineCode}">.1</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">1.</TextBox> 现在都是有效的</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">浮点数可以使用 E 标记</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">1.2e3</TextBox>、<TextBox Style="{StaticResource InlineCode}">1.2E3</TextBox>、<TextBox Style="{StaticResource InlineCode}">1.2E+3</TextBox>、<TextBox Style="{StaticResource InlineCode}">12000e-1</TextBox> 这些都是代表 <TextBox Style="{StaticResource InlineCode}">1200.0</TextBox> 的有效的形式</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">整型数现在可以使用 <TextBox Style="{StaticResource InlineCode}">0x</TextBox> 前缀来代表十六进制，可以使用 <TextBox Style="{StaticResource InlineCode}">0b</TextBox> 前缀来代表二进制</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">0xbad</TextBox>(等于 <TextBox Style="{StaticResource InlineCode}">2989</TextBox>) ，<TextBox Style="{StaticResource InlineCode}">0xCAFE</TextBox>(等于 <TextBox Style="{StaticResource InlineCode}">51966</TextBox>)，<TextBox Style="{StaticResource InlineCode}">0b101</TextBox> (等于 <TextBox Style="{StaticResource InlineCode}">5</TextBox>)</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">整型数现在不能以 <TextBox Style="{StaticResource InlineCode}">0</TextBox> 开头</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">正常它代表八进制，但是我们限制了它以防意外使用</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数字序列中间可以包含 <TextBox Style="{StaticResource InlineCode}">_</TextBox> 字符（但是不能在序列的开头或结尾）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">0b10_01</TextBox>、<TextBox Style="{StaticResource InlineCode}">0xAB_CD</TextBox>、<TextBox Style="{StaticResource InlineCode}">1_2.3_4__5f</TextBox>、<TextBox Style="{StaticResource InlineCode}">1_2e3_4</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">NaN</TextBox>、<TextBox Style="{StaticResource InlineCode}">Inf</TextBox> 和 十六进制浮点表示<Bold>不受</Bold>支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩展了类型后缀</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">整型类型后缀（<TextBox Style="{StaticResource InlineCode}">b</TextBox>、<TextBox Style="{StaticResource InlineCode}">B</TextBox> - 字节；<TextBox Style="{StaticResource InlineCode}">s</TextBox>、<TextBox Style="{StaticResource InlineCode}">S</TextBox> - 短整型；<TextBox Style="{StaticResource InlineCode}">i</TextBox>、<TextBox Style="{StaticResource InlineCode}">I</TextBox> - 整型；<TextBox Style="{StaticResource InlineCode}">l</TextBox>、<TextBox Style="{StaticResource InlineCode}">L</TextBox> - 长整型；）可以增加 <TextBox Style="{StaticResource InlineCode}">s</TextBox>（带符号）或 <TextBox Style="{StaticResource InlineCode}">u</TextBox>（无符号）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新后缀在解析时仅影响有效范围 - 数值仍以带符号储存</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">240ub</TextBox> 等于 <TextBox Style="{StaticResource InlineCode}">-16sb</TextBox>，但 <TextBox Style="{StaticResource InlineCode}">240sb</TextBox> 不解析</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当后缀不带有 <TextBox Style="{StaticResource InlineCode}">u</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">s</TextBox>，默认十进制使用带符号，二进制和十六进制使用不带符号</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">注意：因为 <TextBox Style="{StaticResource InlineCode}">b</TextBox> 也是一个有效的十六进制数，字节范围内的十六进制数值必须注明是否带符号，如 <TextBox Style="{StaticResource InlineCode}">0x11ub</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">0x11sb</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">字符串</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用引号引起的字符串现在使用除 <TextBox Style="{StaticResource InlineCode}">&apos;</TextBox>、 <TextBox Style="{StaticResource InlineCode}">&quot;</TextBox> 以及<TextBox Style="{StaticResource InlineCode}">\</TextBox>之外的转义字符序列</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Unicode 转义：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\x</TextBox> - 双字节转义，如 <TextBox Style="{StaticResource InlineCode}">\x42</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\u</TextBox> - 四字节转义，如 <TextBox Style="{StaticResource InlineCode}">\u2603</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\U</TextBox> - 八字节转义，如 <TextBox Style="{StaticResource InlineCode}">\U00002603</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\N{&lt;name&gt;}</TextBox> - 带名字的 Unicode 字符，例如 <TextBox Style="{StaticResource InlineCode}">\N{Snowman}</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">内置转义序列</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\b</TextBox> - 退格，Unicode <TextBox Style="{StaticResource InlineCode}">\x08</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\s</TextBox> - 空格，Unicode <TextBox Style="{StaticResource InlineCode}">\x20</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\t</TextBox> - 水平 Tab，Unicode <TextBox Style="{StaticResource InlineCode}">\x20</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\n</TextBox> - 换行，Unicode <TextBox Style="{StaticResource InlineCode}">\u0a</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\f</TextBox> - 换页，Unicode <TextBox Style="{StaticResource InlineCode}">\u0c</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\r</TextBox> - 回车，Unicode <TextBox Style="{StaticResource InlineCode}">\u0d</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">未使用引号引起的字符串不能以 <TextBox Style="{StaticResource InlineCode}">0-9</TextBox>、<TextBox Style="{StaticResource InlineCode}">.</TextBox>、<TextBox Style="{StaticResource InlineCode}">+</TextBox>、<TextBox Style="{StaticResource InlineCode}">-</TextBox> 开头以避免与数字的意外冲突</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">数字数组</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">没有后缀的数组中的值（<TextBox Style="{StaticResource InlineCode}">[B;]</TextBox>、<TextBox Style="{StaticResource InlineCode}">[I;]</TextBox>、<TextBox Style="{StaticResource InlineCode}">[L;]</TextBox>）现在假设拥有和数组类型匹配的类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">[B;1,2]</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">[B; 1b, 2b]</TextBox> 相同</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数组现在可以接受比数组类型小的类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">[I;1b,2s,3]</TextBox> 有效且与 <TextBox Style="{StaticResource InlineCode}">[I;1i,2i,3i]</TextBox> 相同</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">列表</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">列表现在接受尾随逗号</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">[1,2,]</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">[1,2]</TextBox> 相同</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能允许一个尾随逗号，并且其必须位于一个有效元素后—— <TextBox Style="{StaticResource InlineCode}">[,]</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">[1,,]</TextBox> 都是无效的</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Compounds</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Compounds（映射）现在接受尾随逗号</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">{a:b,}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能允许一个尾随逗号，并且其必须位于一个有效键值对后—— <TextBox Style="{StaticResource InlineCode}">{,}</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">{a:b,,}</TextBox> 都是无效的</Paragraph></ListItem>
+</List></ListItem>
+</List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-27" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -352,7 +484,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-02-27" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
