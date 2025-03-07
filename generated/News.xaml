@@ -11,19 +11,23 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
 <Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -47,25 +51,22 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
-<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <sys:String   x:Key="CreeperIcon">
 M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
 </sys:String>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <sys:String   x:Key="CloudIcon">
 M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
@@ -97,11 +98,10 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -115,273 +115,66 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="最新快照版 - 25w09b" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 25w10a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://img.picgo.net/2025/02/27/image47a9c6b786471b1c.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://img.picgo.net/2025/03/07/imagea97625d5659c5df1.png" Stretch="UniformToFill" />
 </Border.Background>
-<local:MyImage Source="https://img.picgo.net/2025/02/27/image47a9c6b786471b1c.png" Opacity="0" Stretch="Fill"/>
+<local:MyImage Source="https://img.picgo.net/2025/03/07/imagea97625d5659c5df1.png" Opacity="0" Stretch="Fill"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="25w09b" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="25w10a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">在 25W09B 中修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">直到进入世界前，菜单文字不会渲染</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当尝试渲染监守者时游戏崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">GUI 元素在 macOS 上错误地重叠</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当打开世界时从 GL 错误上崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当尝试渲染旋风人时游戏崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当从下界进入末地时游戏崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当保存世界时游戏有时崩溃</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">举报玩家屏幕损坏</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">加载屏幕最初显示黑色，直到加载完成才显示红色</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-<Grid VerticalAlignment="Center" Margin="6,10,0,0" HorizontalAlignment="Right">
-<Grid.ColumnDefinitions >
-<ColumnDefinition Width="45"/>
-<ColumnDefinition />
-</Grid.ColumnDefinitions>
-<Path Grid.Column="0" Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush4}"
-                    Stretch="Uniform"
-                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
-<TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</Grid>
-
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-28" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
-<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 25w09b" EventType="启动游戏"
-    EventData="25w09b" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
-<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
-    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
-
-<local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/99da672b78a9ff683da6961096e4a6fd6e8db1ca/server.jar" Logo="{StaticResource CloudIcon}" />
-
-<local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/25w09b" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
-<local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-25w09b" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
-</WrapPanel>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="25w09a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://img.picgo.net/2025/02/27/image8a6b146736e32b76.png" Stretch="UniformToFill" />
-</Border.Background>
-<local:MyImage Source="https://img.picgo.net/2025/02/27/image8a6b146736e32b76.png" Opacity="0" Stretch="Fill"/>
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="25w09a" />
-</Border><FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph>在本周的快照中，我们带来了盼望已久的同步特性——倒下的树木第一次亮相于 Java 版。除此之外，萤火虫灌木丛现在可以在红树林沼泽和罕见地在恶地中生成了。</Paragraph><Paragraph>在技术性方面，命令中的 SNBT 语法获得了扩展与改进，包含了与 SNBT 文本组件阻止在运行中转义相关的漏洞修复。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">同步基岩版，增加了倒下的树木</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">倒下的树木</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树木是一个新的树的装饰性变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树木加入到了以下四种树木类型：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">橡树</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">白桦树</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林树</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云杉树</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的白桦树有高矮两种不同版本</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">一些倒下的树上会装饰着蘑菇或藤蔓</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树可以在所有该树种生长的生物群系中找到，下列生物群系除外：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">草甸</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">竹林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">河流</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">雪林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">繁花森林有倒下的白桦树但没有倒下的橡树</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">枯叶</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶现在能被其它方块替换</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">萤火虫灌木丛</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛现在可以在红树林沼泽以及恶地（非常罕见）的水边生成，就像其它有水的生物群系一样。</Paragraph></ListItem>
+<Paragraph>是时候来个新的 Minecraft 快照了！我们这次带来更多的藏在引擎盖下的更新，包括了之前基岩版中加入的 tntExplodes  游戏规则，SNBT 语法中的新特性，还有允许所有实体储存自定义数据。我们同时还带来了更多的漏洞修复。</Paragraph><Paragraph>你现在还可以同时享受新的主菜单背景，祝挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">微调了羊毛纹理以移除后部明显的线条</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被活塞破坏的方块现在会播放其破坏音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为本年第一个小更新更新了菜单全景图</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了测试方块与测试实例方块的纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花现在能被放置在耕地上</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 69</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">客户端有了新的命令行参数 <TextBox Style="{StaticResource InlineCode}">--renderDebugLabels</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">向相关的 OpenGL 物体增加了调试标签，使得开发者能更简单地调试渲染</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 69</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 NBT、文本组件以及内联谓词（也称作 SNBT）扩展了在命令中的对象标记</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/data</TextBox> 现在可以透明地创建和修改异构列表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 70</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 54</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 70</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有实体现在都能储存自定义数据</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对实体与方块实体上的组件统一谓词的格式与功能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 SNBT 的新操作</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的 <TextBox Style="{StaticResource InlineCode}">tntExplodes</TextBox> 游戏规则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#flowers</TextBox> 物品标签 - 对应已存在的 <TextBox Style="{StaticResource InlineCode}">#flowers</TextBox> 方块标签</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FallFlying</TextBox> 字段不再在被移除时保留</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Health</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">Air</TextBox> 字段若不指定，则默认为各自的最大值</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">AREA_EFFECT_CLOUD</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Duration</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">Duration</TextBox> 字段为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox>，区域效果云将不再自己消失</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着生成未指定时常的区域效果云将会不再立即消失</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">CREEPER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Fuse</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ExplosionRadius</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">3</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">DOLPHIN</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Moistness</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">2400</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ENDER_DRAGON</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DragonDeathTime</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">FALLING_BLOCK</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">HurtEntities</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> (或 <TextBox Style="{StaticResource InlineCode}">true</TextBox> 如果 <TextBox Style="{StaticResource InlineCode}">BlockState</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">anvil</TextBox>)</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">FallHurtAmount</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">FallHurtMax</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">40</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DropItem</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">TileEntityData</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">FIREWORK_ROCKET</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ShotAtAngle</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">FOX</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Trusted</TextBox> 字段若不指定，则默认为空（并且使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 修改时将不再与原状态合并）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">GHAST</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ExplosionPower</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">GOAT</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">HasLeftHorn</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">HasRightHorn</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">INTERACTION</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">width</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">height</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">Item</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Health</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">5</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">PickupDelay</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Age</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Owner</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Thrower</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ITEM_FRAME</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">GLOW_ITEM_FRAME</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ItemDropChance</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">PRIMED_TNT</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">fuse</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">80</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">explosion_power</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">4</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SHULKER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Color</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">16</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SKELETON</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">StrayConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SPECTRAL_ARROW</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Duration</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">200</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SNOW_GOLEM</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Pumpkin</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">TNT_MINECART</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">fuse</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">80</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">explosion_power</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">4</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">explosion_speed_factor</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">TRADER_LLAMA</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DespawnDelay</TextBox> 字段默认值为 <TextBox Style="{StaticResource InlineCode}">47999</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">VILLAGER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">FoodLevel</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Xp</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">WANDERING_TRADER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">DespawnDelay</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ZOMBIE</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">DrownedConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ZOMBIE_VILLAGER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">Xp</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ConversionTime</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">ARROW</TextBox>, <TextBox Style="{StaticResource InlineCode}">SPECTRAL_ARROW</TextBox>, <TextBox Style="{StaticResource InlineCode}">TRIDENT</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">damage</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">2</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">DRAGON_FIREBALL</TextBox>, <TextBox Style="{StaticResource InlineCode}">WIND_CHARGE</TextBox>, <TextBox Style="{StaticResource InlineCode}">BREEZE_WIND_CHARGE</TextBox>, <TextBox Style="{StaticResource InlineCode}">WITHER_SKULL</TextBox>, <TextBox Style="{StaticResource InlineCode}">SMALL_FIREBALL</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">LARGE_FIREBALL</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">acceleration_power</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0.1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SMALL_FIREBALL</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">LARGE_FIREBALL</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ExplosionPower</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">BLOCK_DISPLAY</TextBox>, <TextBox Style="{StaticResource InlineCode}">ITEM_DISPLAY</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">TEXT_DISPLAY</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">interpolation_duration</TextBox>、<TextBox Style="{StaticResource InlineCode}">teleport_duration</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">start_interpolation</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">view_range</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">shadow_radius</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">shadow_strength</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">width</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">height</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块实体数据</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">CAMPFIRE</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">CookingTimes</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">CookingTotalTimes</TextBox> 字段移除时不再保留</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">CHISELED_BOOKSHELF</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">last_interacted_slot</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">HOPPER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">TransferCooldown</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">-1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">JIGSAW</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">name</TextBox>、<TextBox Style="{StaticResource InlineCode}">target</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">pool</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">minecraft:empty</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">final_state</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">minecraft:air</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">SCULK_SHRIEKER</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">warning_level</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">STRUCTURE_BLOCK</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">ignoreEntities</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">showboundingbox</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在 <TextBox Style="{StaticResource InlineCode}">posY</TextBox> 字段若不指定，则默认为 <TextBox Style="{StaticResource InlineCode}">1</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">NBT 更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在游戏中任何有 NBT 数据的接口（SNBT 表示、 <TextBox Style="{StaticResource InlineCode}">/data</TextBox>）现在支持异构列表，即一个元素可以是不同类型的列表。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用 <TextBox Style="{StaticResource InlineCode}">/data</TextBox> 插入或替换一个异构列表中的元素不再报错</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">插入任何数组类型（如： <TextBox Style="{StaticResource InlineCode}">[I;1,2,3]</TextBox>）仍限制类型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着之前被用于展示异构列表的 &apos;wrapper&apos; 对象将不再可以在游戏中观察到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">自定义数据（之前仅在标记上存在） 现在对所有实体有效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">其以 <TextBox Style="{StaticResource InlineCode}">minecraft:custom_data</TextBox> 组件公开，所以其可以被生成物品设置也可谓词匹配</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/data</TextBox> 不再能遍历有空键的路径（如：<TextBox Style="{StaticResource InlineCode}">/data get ... foo.&apos;&apos;.bar</TextBox>）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">NBT 文件类型未受改变</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">异构列表会在储存前进行转换以越过 NBT 限制</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">转换例如：<TextBox Style="{StaticResource InlineCode}">[&apos;a&apos;, {&apos;b&apos;:3}]</TextBox> 将会储存为 <TextBox Style="{StaticResource InlineCode}">[{&apos;&apos;:&apos;a&apos;},{&apos;b&apos;:3}]</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现存的外部工具将仍能够像之前一样读取 NBT 文件，但是异构列表将会以转换过的形式显示</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">组件目前存储于名为 <TextBox Style="{StaticResource InlineCode}">data</TextBox> 的组件，当随着对实体组件更合适的存储的加入，其名称会被更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">只有当其不为空时才存储</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体谓词</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">实体谓词加入了一个新的可选字段：<TextBox Style="{StaticResource InlineCode}">predicates</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">它的功能与格式与物品上的 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 字段一致，但是它操作实体组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，<TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 将会匹配实体组件的部分内容</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">游戏产生的数据没有变化：对象如文本组件已经产生这个形式的异构列表</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">备注：这些 wrapper 对象可能在游戏中完全不会被观察到，它们仅与直接操作 NBT 文件或网络格式的开发者有关</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">SNBT 更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">扩展了在命令中描述对象类数据的文本格式（像 NBT、文本组件、谓词等）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">数字格式</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">浮点数的整数或小数部分都可以省略</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如： <TextBox Style="{StaticResource InlineCode}">.1</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">1.</TextBox> 现在都是有效的</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块谓词</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">方块谓词加入了新的可选字段: <TextBox Style="{StaticResource InlineCode}">components</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">它的功能与格式与物品上的 <TextBox Style="{StaticResource InlineCode}">components</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 字段一致，但是它操作方块实体组件（当存在时）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，<TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 将会匹配方块实体组件的精确内容</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，<TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 将会匹配方块实体组件的部分内容</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">浮点数可以使用 E 标记</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">1.2e3</TextBox>、<TextBox Style="{StaticResource InlineCode}">1.2E3</TextBox>、<TextBox Style="{StaticResource InlineCode}">1.2E+3</TextBox>、<TextBox Style="{StaticResource InlineCode}">12000e-1</TextBox> 这些都是代表 <TextBox Style="{StaticResource InlineCode}">1200.0</TextBox> 的有效的形式</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">SNBT 格式</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为了简化输入数据与宏指令使用，SNBT 现在同时支持以下操作：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">bool(arg)</TextBox> - 将参数转换为布尔型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果参数是布尔型，直接返回参数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果参数是数字值，非零时返回 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">整型数现在可以使用 <TextBox Style="{StaticResource InlineCode}">0x</TextBox> 前缀来代表十六进制，可以使用 <TextBox Style="{StaticResource InlineCode}">0b</TextBox> 前缀来代表二进制</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">0xbad</TextBox>(等于 <TextBox Style="{StaticResource InlineCode}">2989</TextBox>) ，<TextBox Style="{StaticResource InlineCode}">0xCAFE</TextBox>(等于 <TextBox Style="{StaticResource InlineCode}">51966</TextBox>)，<TextBox Style="{StaticResource InlineCode}">0b101</TextBox> (等于 <TextBox Style="{StaticResource InlineCode}">5</TextBox>)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">uuid(str)</TextBox> - 将字符串 UUID 转换为整型数组</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">整型数现在不能以 <TextBox Style="{StaticResource InlineCode}">0</TextBox> 开头</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">正常它代表八进制，但是我们限制了它以防意外使用</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">数字序列中间可以包含 <TextBox Style="{StaticResource InlineCode}">_</TextBox> 字符（但是不能在序列的开头或结尾）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">0b10_01</TextBox>、<TextBox Style="{StaticResource InlineCode}">0xAB_CD</TextBox>、<TextBox Style="{StaticResource InlineCode}">1_2.3_4__5f</TextBox>、<TextBox Style="{StaticResource InlineCode}">1_2e3_4</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">NaN</TextBox>、<TextBox Style="{StaticResource InlineCode}">Inf</TextBox> 和 十六进制浮点表示<Bold>不受</Bold>支持</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">扩展了类型后缀</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">整型类型后缀（<TextBox Style="{StaticResource InlineCode}">b</TextBox>、<TextBox Style="{StaticResource InlineCode}">B</TextBox> - 字节；<TextBox Style="{StaticResource InlineCode}">s</TextBox>、<TextBox Style="{StaticResource InlineCode}">S</TextBox> - 短整型；<TextBox Style="{StaticResource InlineCode}">i</TextBox>、<TextBox Style="{StaticResource InlineCode}">I</TextBox> - 整型；<TextBox Style="{StaticResource InlineCode}">l</TextBox>、<TextBox Style="{StaticResource InlineCode}">L</TextBox> - 长整型；）可以增加 <TextBox Style="{StaticResource InlineCode}">s</TextBox>（带符号）或 <TextBox Style="{StaticResource InlineCode}">u</TextBox>（无符号）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新后缀在解析时仅影响有效范围 - 数值仍以带符号储存</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">240ub</TextBox> 等于 <TextBox Style="{StaticResource InlineCode}">-16sb</TextBox>，但 <TextBox Style="{StaticResource InlineCode}">240sb</TextBox> 不解析</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当后缀不带有 <TextBox Style="{StaticResource InlineCode}">u</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">s</TextBox>，默认十进制使用带符号，二进制和十六进制使用不带符号</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">注意：因为 <TextBox Style="{StaticResource InlineCode}">b</TextBox> 也是一个有效的十六进制数，字节范围内的十六进制数值必须注明是否带符号，如 <TextBox Style="{StaticResource InlineCode}">0x11ub</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">0x11sb</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">字符串</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用引号引起的字符串现在使用除 <TextBox Style="{StaticResource InlineCode}">&apos;</TextBox>、 <TextBox Style="{StaticResource InlineCode}">&quot;</TextBox> 以及<TextBox Style="{StaticResource InlineCode}">\</TextBox>之外的转义字符序列</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Unicode 转义：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\x</TextBox> - 双字节转义，如 <TextBox Style="{StaticResource InlineCode}">\x42</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\u</TextBox> - 四字节转义，如 <TextBox Style="{StaticResource InlineCode}">\u2603</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\U</TextBox> - 八字节转义，如 <TextBox Style="{StaticResource InlineCode}">\U00002603</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\N{&lt;name&gt;}</TextBox> - 带名字的 Unicode 字符，例如 <TextBox Style="{StaticResource InlineCode}">\N{Snowman}</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">内置转义序列</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\b</TextBox> - 退格，Unicode <TextBox Style="{StaticResource InlineCode}">\x08</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\s</TextBox> - 空格，Unicode <TextBox Style="{StaticResource InlineCode}">\x20</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\t</TextBox> - 水平 Tab，Unicode <TextBox Style="{StaticResource InlineCode}">\x20</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\n</TextBox> - 换行，Unicode <TextBox Style="{StaticResource InlineCode}">\u0a</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\f</TextBox> - 换页，Unicode <TextBox Style="{StaticResource InlineCode}">\u0c</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">\r</TextBox> - 回车，Unicode <TextBox Style="{StaticResource InlineCode}">\u0d</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">未使用引号引起的字符串不能以 <TextBox Style="{StaticResource InlineCode}">0-9</TextBox>、<TextBox Style="{StaticResource InlineCode}">.</TextBox>、<TextBox Style="{StaticResource InlineCode}">+</TextBox>、<TextBox Style="{StaticResource InlineCode}">-</TextBox> 开头以避免与数字的意外冲突</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">数字数组</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">没有后缀的数组中的值（<TextBox Style="{StaticResource InlineCode}">[B;]</TextBox>、<TextBox Style="{StaticResource InlineCode}">[I;]</TextBox>、<TextBox Style="{StaticResource InlineCode}">[L;]</TextBox>）现在假设拥有和数组类型匹配的类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">[B;1,2]</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">[B; 1b, 2b]</TextBox> 相同</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">数组现在可以接受比数组类型小的类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">[I;1b,2s,3]</TextBox> 有效且与 <TextBox Style="{StaticResource InlineCode}">[I;1i,2i,3i]</TextBox> 相同</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">列表</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">列表现在接受尾随逗号</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">[1,2,]</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">[1,2]</TextBox> 相同</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅能允许一个尾随逗号，并且其必须位于一个有效元素后—— <TextBox Style="{StaticResource InlineCode}">[,]</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">[1,,]</TextBox> 都是无效的</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">Compounds</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Compounds（映射）现在接受尾随逗号</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">{a:b,}</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅能允许一个尾随逗号，并且其必须位于一个有效键值对后—— <TextBox Style="{StaticResource InlineCode}">{,}</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">{a:b,,}</TextBox> 都是无效的</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">溢出到无穷的浮点值（如 <TextBox Style="{StaticResource InlineCode}">1e1000</TextBox>）现在会被拒绝</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}"><TextBox Style="{StaticResource InlineCode}">TNTEXPLODES</TextBox> 游戏规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当设为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> 时，TNT 不会爆炸也不会被激活</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值： <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 54</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">&quot;Global&quot; uniform 可以在任何着色器中定义，并且游戏会尝试填充</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当前，这些 uniform 为： <TextBox Style="{StaticResource InlineCode}">ModelViewMat</TextBox>、 <TextBox Style="{StaticResource InlineCode}">ProjMat</TextBox>、 <TextBox Style="{StaticResource InlineCode}">TextureMat</TextBox>、 <TextBox Style="{StaticResource InlineCode}">ScreenSize</TextBox>、 <TextBox Style="{StaticResource InlineCode}">ColorModulator</TextBox>、 <TextBox Style="{StaticResource InlineCode}">Light0_Direction</TextBox>、 <TextBox Style="{StaticResource InlineCode}">Light1_Direction</TextBox>、 <TextBox Style="{StaticResource InlineCode}">GlintAlpha</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogStart</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogEnd</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogColor</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogShape</TextBox>、 <TextBox Style="{StaticResource InlineCode}">LineWidth</TextBox>、 <TextBox Style="{StaticResource InlineCode}">GameTime</TextBox> 和   <TextBox Style="{StaticResource InlineCode}">ModelOffset</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些类型的 uniform 必须匹配其通常的类型，否则会导致未定义的行为</Paragraph></ListItem>
 </List></ListItem>
 </List>
 </FlowDocument>
@@ -397,25 +190,25 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-28" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-03-07" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-<local:MyIconTextButton Text="启动" ToolTip="启动 25w09a" EventType="启动游戏"
-    EventData="25w09a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 25w10a" EventType="启动游戏"
+    EventData="25w10a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/baab122c7652b302621f7befd5be40abef9b9b7c/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/0177c3a044813dc7d10b43b14b7f47224bd43067/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/25w09a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/25w10a" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-snapshot-25w09a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-snapshot-25w10a" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-03-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -669,7 +462,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="中文 Minecraft Wiki" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-02-28" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-03-07" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.4" EventType="启动游戏"
     EventData="1.21.4" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -687,7 +480,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-03-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -709,7 +502,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-02-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-03-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -720,8 +513,8 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="7a93a77" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/7a93a7741d333f2c47e2d0b07e3c7625fdb1620f"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="1bf9085" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/1bf9085f90a4d858424f5e89e8935aed8d691f0b"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
