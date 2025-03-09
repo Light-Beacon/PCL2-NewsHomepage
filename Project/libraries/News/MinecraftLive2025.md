@@ -1,5 +1,6 @@
 # Minecraft LIVE 即将回归
 
+![一些生物走在一起，背后是晴朗的天空](https://zh.minecraft.wiki/images/thumb/MC_Live_Announcement_Key_Art.jpeg/1280px-MC_Live_Announcement_Key_Art.jpeg?da3e0 "一些生物走在一起，背后是晴朗的天空")
 Minecraft LIVE 是了解 Minecraft 世界动态的绝佳节目！
 
 ## Mojang的下一场直播将于 3 月 22 日星期六，美国东部时间下午 1 点进行
