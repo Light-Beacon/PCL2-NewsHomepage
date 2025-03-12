@@ -11,15 +11,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -39,41 +30,23 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新预发布版 - 1.21.5-pre1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 1.21.5-pre2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>今天我们寄来了 Minecraft 1.21.5 的第一个预发布版本。从现在开始你主要将会看到漏洞修复和技术性调整直到开始下一轮快照。当我们进入到预发布阶段我们将会比固定周三发布快照更频繁地发布新版本，所以留意下一个预发布版本的发布！</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在程序员美术资源包中加入了刷怪蛋贴图</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 55</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以接受像战利品表、谓词、修饰器、数据组件、格式化文本这样内联值的命令（<TextBox Style="{StaticResource InlineCode}">/loot</TextBox>、<TextBox Style="{StaticResource InlineCode}">/give</TextBox>、<TextBox Style="{StaticResource InlineCode}">/tellrow</TextBox>、<TextBox Style="{StaticResource InlineCode}">/execute if predicate</TextBox>、在 <TextBox Style="{StaticResource InlineCode}">/execute if items</TextBox> 中的数据组件等等）参数已恢复接受数字来替代布尔值。</Paragraph></ListItem>
-</List><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph>
-最开始的更改的发生是由于我们移除了使用 NBT 作为解析这些值的一个过渡格式，这意味着布尔值与数值之间分离（类似在 JSON 中的处理）。我们决定暂时恢复这个特性，因为不使用储存和宏函数的话一些功能还无法被实现。然而，一当这些功能被加入进来（并且数据可以在不需要与文本形式之间转换的情况下转移），原有的布尔处理将会重新被移除。</Paragraph>
-
-</Section><Paragraph Style="{StaticResource H4}">网络套接字</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">客户端发的 <TextBox Style="{StaticResource InlineCode}">player_chat</TextBox> 包现在包含对每一个发送到客户端的消息自增的索引</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在登陆时（或被配置阶段与 <TextBox Style="{StaticResource InlineCode}">login</TextBox> 包重置）索引值从 0 开始</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对于每一条消息，服务器应当对该值自增 1</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果这个数值以一种预期之外的方式更新，客户端将会断开连接</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">因为套接字需要每一个聊天包以产生的顺序到达客户端，该索引目标是为了自定义服务器开发者能够更快地检测丢失的或打乱顺序的聊天包，</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">服务端发的 <TextBox Style="{StaticResource InlineCode}">chat</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">chat_command_signed</TextBox> 包现在包含了校验和字节以及 &quot;last seen（上次见到）&quot; 更新</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这是一个因由服务器重建的 &quot;last seen&quot; 签名的简单哈希，允许更快的检测不同步状态</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这项可以以 <TextBox Style="{StaticResource InlineCode}">0</TextBox> 传递来禁用检查，以与套接字转换兼容</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 55</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了枯叶的方块模型</Paragraph></ListItem>
+<Paragraph>在今天的预发布版中，我们带来了一些崩溃修复。</Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 71，因为我们在 Pre-Release 1 中把它给忘了</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">在 1.21.5 Pre-Release 2 中修复的漏洞</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-280482">MC-280482</local:MyTextButton></Underline> - 当使用 Mesa 25.0 时主菜单完全损坏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-296644">MC-296644</local:MyTextButton></Underline> - 当渲染 section 时崩溃/java.lang.NullPointerException：无法读取字段“b”因为“$$3”为 null</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
