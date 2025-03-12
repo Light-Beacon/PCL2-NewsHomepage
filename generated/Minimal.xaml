@@ -11,9 +11,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -33,71 +35,52 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w10a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 1.21.5-pre1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>是时候来个新的 Minecraft 快照了！我们这次带来更多的藏在引擎盖下的更新，包括了之前基岩版中加入的 tntExplodes  游戏规则，SNBT 语法中的新特性，还有允许所有实体储存自定义数据。我们同时还带来了更多的漏洞修复。</Paragraph><Paragraph>你现在还可以同时享受新的主菜单背景，祝挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了羊毛纹理以移除后部明显的线条</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">被活塞破坏的方块现在会播放其破坏音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为本年第一个小更新更新了菜单全景图</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了测试方块与测试实例方块的纹理</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花现在能被放置在耕地上</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 70</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 54</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 70</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有实体现在都能储存自定义数据</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对实体与方块实体上的组件统一谓词的格式与功能</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 SNBT 的新操作</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的 <TextBox Style="{StaticResource InlineCode}">tntExplodes</TextBox> 游戏规则</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#flowers</TextBox> 物品标签 - 对应已存在的 <TextBox Style="{StaticResource InlineCode}">#flowers</TextBox> 方块标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自定义数据（之前仅在标记上存在） 现在对所有实体有效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">其以 <TextBox Style="{StaticResource InlineCode}">minecraft:custom_data</TextBox> 组件公开，所以其可以被生成物品设置也可谓词匹配</Paragraph></ListItem>
+<Paragraph>今天我们寄来了 Minecraft 1.21.5 的第一个预发布版本。从现在开始你主要将会看到漏洞修复和技术性调整直到开始下一轮快照。当我们进入到预发布阶段我们将会比固定周三发布快照更频繁地发布新版本，所以留意下一个预发布版本的发布！</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在程序员美术资源包中加入了刷怪蛋贴图</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 55</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以接受像战利品表、谓词、修饰器、数据组件、格式化文本这样内联值的命令（<TextBox Style="{StaticResource InlineCode}">/loot</TextBox>、<TextBox Style="{StaticResource InlineCode}">/give</TextBox>、<TextBox Style="{StaticResource InlineCode}">/tellrow</TextBox>、<TextBox Style="{StaticResource InlineCode}">/execute if predicate</TextBox>、在 <TextBox Style="{StaticResource InlineCode}">/execute if items</TextBox> 中的数据组件等等）参数已恢复接受数字来替代布尔值。</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph>
+最开始的更改的发生是由于我们移除了使用 NBT 作为解析这些值的一个过渡格式，这意味着布尔值与数值之间分离（类似在 JSON 中的处理）。我们决定暂时恢复这个特性，因为不使用储存和宏函数的话一些功能还无法被实现。然而，一当这些功能被加入进来（并且数据可以在不需要与文本形式之间转换的情况下转移），原有的布尔处理将会重新被移除。</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H4}">网络套接字</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">客户端发的 <TextBox Style="{StaticResource InlineCode}">player_chat</TextBox> 包现在包含对每一个发送到客户端的消息自增的索引</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在登陆时（或被配置阶段与 <TextBox Style="{StaticResource InlineCode}">login</TextBox> 包重置）索引值从 0 开始</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对于每一条消息，服务器应当对该值自增 1</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果这个数值以一种预期之外的方式更新，客户端将会断开连接</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因为套接字需要每一个聊天包以产生的顺序到达客户端，该索引目标是为了自定义服务器开发者能够更快地检测丢失的或打乱顺序的聊天包，</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">组件目前存储于名为 <TextBox Style="{StaticResource InlineCode}">data</TextBox> 的组件，当随着对实体组件更合适的存储的加入，其名称会被更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">只有当其不为空时才存储</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">实体谓词</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">实体谓词加入了一个新的可选字段：<TextBox Style="{StaticResource InlineCode}">predicates</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">它的功能与格式与物品上的 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 字段一致，但是它操作实体组件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，<TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 将会匹配实体组件的部分内容</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">服务端发的 <TextBox Style="{StaticResource InlineCode}">chat</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">chat_command_signed</TextBox> 包现在包含了校验和字节以及 &quot;last seen（上次见到）&quot; 更新</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是一个因由服务器重建的 &quot;last seen&quot; 签名的简单哈希，允许更快的检测不同步状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这项可以以 <TextBox Style="{StaticResource InlineCode}">0</TextBox> 传递来禁用检查，以与套接字转换兼容</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块谓词</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">方块谓词加入了新的可选字段: <TextBox Style="{StaticResource InlineCode}">components</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">它的功能与格式与物品上的 <TextBox Style="{StaticResource InlineCode}">components</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 字段一致，但是它操作方块实体组件（当存在时）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，<TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 将会匹配方块实体组件的精确内容</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，<TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 将会匹配方块实体组件的部分内容</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">SNBT 格式</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为了简化输入数据与宏指令使用，SNBT 现在同时支持以下操作：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">bool(arg)</TextBox> - 将参数转换为布尔型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果参数是布尔型，直接返回参数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果参数是数字值，非零时返回 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">uuid(str)</TextBox> - 将字符串 UUID 转换为整型数组</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">溢出到无穷的浮点值（如 <TextBox Style="{StaticResource InlineCode}">1e1000</TextBox>）现在会被拒绝</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><TextBox Style="{StaticResource InlineCode}">TNTEXPLODES</TextBox> 游戏规则</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当设为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> 时，TNT 不会爆炸也不会被激活</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值： <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 54</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">&quot;Global&quot; uniform 可以在任何着色器中定义，并且游戏会尝试填充</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当前，这些 uniform 为： <TextBox Style="{StaticResource InlineCode}">ModelViewMat</TextBox>、 <TextBox Style="{StaticResource InlineCode}">ProjMat</TextBox>、 <TextBox Style="{StaticResource InlineCode}">TextureMat</TextBox>、 <TextBox Style="{StaticResource InlineCode}">ScreenSize</TextBox>、 <TextBox Style="{StaticResource InlineCode}">ColorModulator</TextBox>、 <TextBox Style="{StaticResource InlineCode}">Light0_Direction</TextBox>、 <TextBox Style="{StaticResource InlineCode}">Light1_Direction</TextBox>、 <TextBox Style="{StaticResource InlineCode}">GlintAlpha</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogStart</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogEnd</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogColor</TextBox>、 <TextBox Style="{StaticResource InlineCode}">FogShape</TextBox>、 <TextBox Style="{StaticResource InlineCode}">LineWidth</TextBox>、 <TextBox Style="{StaticResource InlineCode}">GameTime</TextBox> 和   <TextBox Style="{StaticResource InlineCode}">ModelOffset</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这些类型的 uniform 必须匹配其通常的类型，否则会导致未定义的行为</Paragraph></ListItem>
-</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 55</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">微调了枯叶的方块模型</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-03-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-03-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -335,7 +318,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-03-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-03-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
