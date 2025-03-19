@@ -12,7 +12,7 @@ Mojang还准备了一场不容错过的节目后续活动！它如此特别，Mo
 
 无论观众是经验丰富的工匠还是 Minecraft 新手，这场节目都值得一看！**3 月 22 日星期六**，观众们可以通过 **YouTube、Twitch 或 Minecraft.net** 收看，第一时间获取内部资讯！
 
-[视频 - Minecraft Live 2025 来啦！全新版本公布现场试玩！3 月 23 日凌晨见！！](https://www.bilibili.com/video/BV1mF9oYmEES/?share_source=copy_web&vd_source=6cb742f6cbefcac62080b0ca2b61b053)
+[视频 - Minecraft Live 2025 来啦！全新版本公布现场试玩！3 月 23 日凌晨见！！](https://www.bilibili.com/video/BV1mF9oYmEES/)
 
 Minecraft LIVE 将以英语播出，并提供英语音频描述、美国手语（ASL）和英国手语（BSL）。
 播出后，Mojang将把节目翻译成阿拉伯语（MSA）、中文（简体）、中文（繁体）、捷克语、丹麦语、荷兰语、菲律宾语、法语、加拿大法语、德语、希腊语、希伯来语、印地语、印尼语、意大利语、日语、韩语、马来语、挪威语、波斯语（法语）、波兰语、巴西葡萄牙语、葡萄牙语、西班牙语（卡斯蒂利亚）、拉丁美洲西班牙语（墨西哥）、俄语、瑞典语、泰语、土耳其语、乌克兰语和越南语字幕。
