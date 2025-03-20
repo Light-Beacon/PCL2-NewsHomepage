@@ -13,9 +13,9 @@ Twitch 平台上可以获取家园披风的兑换码。
 
 ![家园披风](https://i0.hdslb.com/bfs/new_dyn/85f00e302638a2c7169e3c268cda522111602644.jpg)
 
-Tiktok 平台上可以获取威胁披风的兑换码。
+Tiktok 平台上可以获取入侵披风的兑换码。
 
-![威胁披风](https://i0.hdslb.com/bfs/new_dyn/ef13eeae0ab1de07463c2b8254ec432411602644.jpg)
+![入侵披风](https://i0.hdslb.com/bfs/new_dyn/ef13eeae0ab1de07463c2b8254ec432411602644.jpg)
 
 ### 兑换
 兑换码可以在 MC 官网[兑换](https://www.minecraft.net/zh-hans/redeem) ，兑换后会加入你的账户。
