@@ -4,18 +4,16 @@
 ## 检测排除方法
 如果你最近运行过最新版模组或模组包的 Minecraft，且担心被感染，下面是检测方法
 ### 检测
-i 这只能检测出下载的恶意程序，并不能检测出被感染的 jar 文件
-i 如果病毒传播更高级的恶意程序，这些方法可能无法检出和排除
+>[!INFO]
+> 这只能检测出下载的恶意程序，并不能检测出被感染的 jar 文件
+> 如果病毒传播更高级的恶意程序，这些方法可能无法检出和排除
 下载 CurseForge 官方的检测工具
-* 龙猫的镜像源1：https://ltcat.lanzoum.com/inF7F0ykhh3c
-* 龙猫的镜像源2：https://pan.baidu.com/s/1h-k39O1qAvySMTjUVaQzyQ?pwd=5yix
-? 按钮 镜像源1 打开网页 https://ltcat.lanzoum.com/inF7F0ykhh3c 打开网页
-? 按钮 镜像源2 打开网页 https://pan.baidu.com/s/1h-k39O1qAvySMTjUVaQzyQ?pwd=5yix 打开网页
+* 龙猫的[镜像源1：https://ltcat.lanzoum.com/inF7F0ykhh3c](https://ltcat.lanzoum.com/inF7F0ykhh3c)
+* 龙猫的[镜像源2：https://pan.baidu.com/s/1h-k39O1qAvySMTjUVaQzyQ?pwd=5yix](https://pan.baidu.com/s/1h-k39O1qAvySMTjUVaQzyQ?pwd=5yix)
 ![checkshot](https://i0.hdslb.com/bfs/article/d405df5a1b01943a7227c1fcf9cc71ba572af421.png "检测方式（图源：龙腾猫跃）")
 ### 处理
 如果你的电脑被检出恶意程序，建议以以下方式处理：
-1. 见 https://prismlauncher.org/news/cf-compromised-alert ，运行清理脚本
-? 按钮 打开该链接 打开网页 https://prismlauncher.org/news/cf-compromised-alert 打开网页
+1. 见 [https://prismlauncher.org/news/cf-compromised-alert](https://prismlauncher.org/news/cf-compromised-alert) ，运行清理脚本
 2. 修改你在电脑上保存过的所有账号和密码
 3. 最近尽量最近不要启动 Minecraft，如需要请重新下载并安装所有 MC核心、Mod、服务器核心、Bukkit插件、（即使文件很老，这些 jar 文件很可能被注入感染了，见程序行为）
 ## 影响范围
