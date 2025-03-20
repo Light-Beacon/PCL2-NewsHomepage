@@ -1,5 +1,5 @@
 ---
-title: Minecraft 大电影新披风
+title: Minecraft 大电影披风活动
 ---
 为了预热即将在清明节上映的 Minecraft 大电影，Mojang 决定在 Twitch 与 Tiktok 直播平台上举行活动赠送玩家披风。
 
