@@ -28,7 +28,7 @@
     </Grid.ColumnDefinitions>
     <local:MyButton Margin="6,2" TextBlock.TextAlignment="Center"
             Grid.Column="0" EventType="打开网页" Height="56"
-            EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"><Run FontWeight="Bold" FontSize="14">观看转播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(B站UP: WuGuangYao)</Span></local:MyButton>
+            EventData="https://live.bilibili.com/53303"><Run FontWeight="Bold" FontSize="14">观看转播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(B站UP: WuGuangYao)</Span></local:MyButton>
     <local:MyButton Margin="6,2" TextBlock.TextAlignment="Center"
             Grid.Column="1" EventType="打开网页" Height="56"
             EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"><Run FontWeight="Bold" FontSize="14">观看直播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(Youtube)</Span></local:MyButton>
