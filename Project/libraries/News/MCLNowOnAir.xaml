@@ -1,19 +1,39 @@
-<local:MyCard Margin="0,0,0,5" Title="       Minecraft Live 正在直播">
-    <Border Background="#30EE1111" CornerRadius="5" BorderBrush="#88EE1111" BorderThickness="1.2">
+<local:MyCard Margin="0,0,0,10" >
+<StackPanel >
+    <StackPanel.Triggers>
+    <EventTrigger RoutedEvent="StackPanel.Loaded">
+    <BeginStoryboard>
+        <Storyboard x:Name="breathing" RepeatBehavior="Forever">
+        <ColorAnimation Storyboard.TargetName="LiveDot" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" From="#AAE21111" To="#AAE21111" Duration="0:0:0" />
+        <ColorAnimation Storyboard.TargetName="LiveText" Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" From="#90E21111" To="#90E21111" Duration="0:0:0" />
+        <ColorAnimation BeginTime="0:0:0.2" Storyboard.TargetName="LiveDot" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" From="#AAE21111" To="#FFE81818" Duration="0:0:1" />
+        <ColorAnimation BeginTime="0:0:3" Storyboard.TargetName="LiveDot" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" From="#FFE81818" To="#AAE21111" Duration="0:0:1" />
+        <ColorAnimation BeginTime="0:0:0.2" Storyboard.TargetName="LiveText" Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" From="#90E21111" To="#FFE81818" Duration="0:0:1" />
+        <ColorAnimation BeginTime="0:0:3" Storyboard.TargetName="LiveText" Storyboard.TargetProperty="Foreground.(SolidColorBrush.Color)" From="#FFE81818" To="#90E21111" Duration="0:0:1" />
+        </Storyboard>
+    </BeginStoryboard>
+    </EventTrigger>
+    </StackPanel.Triggers>
+    <Border x:Name="MCLCardBorder" Background="#C0F6C0C0" CornerRadius="4.5" BorderBrush="#CCE21111" BorderThickness="1.5" >
     <StackPanel>
-    <TextBlock Text="●" Foreground="#DDEE1111" FontSize="28" Margin="20,0"/>
-    <Grid Margin="16,0,16,20">
+    <TextBlock Foreground="#AAE21111" FontWeight="Bold" Margin="18,10,0,0">
+    <InlineUIContainer><Ellipse x:Name="LiveDot" Width="11" Height="11" Fill="#FFE81818" Margin="2,0,2,0"/></InlineUIContainer>
+    <Span x:Name="LiveText" FontSize="14">Minecraft Live 正在直播中</Span>
+    </TextBlock>
+    <Line X1="0" X2="100" Stroke="#DDCC1111" StrokeThickness="2" HorizontalAlignment="Center" Stretch="Fill" Margin="15,8,15,1"/>
+    <Grid Margin="16,10,16,10">
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="4*" />
       <ColumnDefinition Width="5*" />
+      <ColumnDefinition Width="3*" />
     </Grid.ColumnDefinitions>
-    <local:MyButton Margin="6,2"
-            Grid.Column="0" Text="观看油管直播" EventType="打开网页" Height="50"
-            EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"/>
-    <local:MyButton Margin="6,2"
-            Grid.Column="1" Text="观看B站转播（WuGuangYao）" EventType="打开网页" Height="50"
-            EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"/>
+    <local:MyButton Margin="6,2" TextBlock.TextAlignment="Center"
+            Grid.Column="0" EventType="打开网页" Height="56"
+            EventData="https://live.bilibili.com/53303"><Run FontWeight="Bold" FontSize="14">观看转播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(B站UP: WuGuangYao)</Span></local:MyButton>
+    <local:MyButton Margin="6,2" TextBlock.TextAlignment="Center"
+            Grid.Column="1" EventType="打开网页" Height="56"
+            EventData="https://www.youtube.com/watch?v=qnX6sPFjXnA"><Run FontWeight="Bold" FontSize="14">观看直播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(Youtube)</Span></local:MyButton>
     </Grid>
     </StackPanel>
     </Border>
+</StackPanel>
 </local:MyCard>
