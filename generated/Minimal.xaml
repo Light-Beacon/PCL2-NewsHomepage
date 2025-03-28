@@ -11,10 +11,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -34,262 +35,218 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新发布候选版 - 1.21.5-rc2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新正式版 - 1.21.5" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">在 1.21.5 Release Candidate 2 中修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-295665">MC-295665</local:MyTextButton></Underline> - 新区块未与老区块生成过渡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-295688">MC-295688</local:MyTextButton></Underline> - 活塞移动未对实体应用方块效果</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了猪、牛和鸡的热带及寒带变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">羊的羊毛颜色现在取决于其所生成位置的生物群系</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的狼音效变种 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">刷怪蛋视觉改造以改进可读性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了萤火虫灌木丛 方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了枯叶方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了野花簇方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了灌木丛方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了矮枯草丛和高枯草丛方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了可以生长在仙人掌上的仙人掌花方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了对所有没有落叶粒子的树叶方块增加了新的落叶粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在沙漠以及恶地生物群系增加了新的环境方块音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了对吉尔吉斯语的支持</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">家畜生物变种</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列生物增加了热带和寒带变种：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">猪</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">牛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鸡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">变种类型取决于其所生成位置的生物群系</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">温带变种 - 我们都熟悉的变种，在其它变种不在此生成的地方以默认行为生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">寒带变种 - 在下列生物群系（自然或由玩家）生成的变种：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冷水海洋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冷水深海</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">深暗之域</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冰冻深海</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地荒地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地高地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地内陆</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冻洋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冰封山峰</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冻河</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">雪林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冰刺之地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">尖峭山峰</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原始松木针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原始云杉针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地小型岛屿</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">积雪沙滩</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">雪原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">积雪山坡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">积雪针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">裸岩山峰</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">针叶林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">热带变种 - 在下列生物群系（自然或由玩家）生成的变种：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">恶地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玄武岩三角洲</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绯红森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">温水深海</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">沙漠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风蚀恶地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">温水海洋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红树林沼泽</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下界荒地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">热带草原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">热带高原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">灵魂沙峡谷</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">稀疏丛林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">暖水海洋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">诡异森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭热带草原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">疏林恶地</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当由玩家繁殖时，幼体的变种类型不会依据所在生物群系，而是在双亲的变种类型中随机取其一。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为鸡变种增加了两种新的蛋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蓝色鸡蛋 - 由寒带变种的鸡下的蛋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">棕色鸡蛋 - 由热带变种的鸡下的蛋</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">寒带与热带生物群系中的绵羊羊毛颜色</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">绵羊生成时的羊毛颜色现在取决于其所处生物群系：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">温带生物群系：（与之前的行为比未受更改）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">常见的绵羊颜色是白色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不常见的绵羊颜色是黑色、灰色、淡灰色以及棕色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以很低的概率会生成粉色绵羊</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">寒带生物群系：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">常见的绵羊颜色是黑色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不常见的绵羊颜色是灰色、淡灰色、白色以及棕色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以很低的概率会生成粉色绵羊</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">热带生物群系：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">常见的绵羊颜色是棕色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不常见的绵羊颜色是灰色、淡灰色、白色以及黑色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以很低的概率会生成粉色绵羊</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">狼音效变种</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 6 个新的狼音效变种，有着独特的空闲、受伤、死亡、嚎叫、呜咽和喘息音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的6种变种包括大型犬（big）、可爱（cute）、小巴哥犬（puglin）、愤怒（angry）、不爽（grumpy）和悲伤（sad），</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原来的音效现在称为普通（classic）变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每只狼都会从上述7种音效变种中随机选取一种使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">而与其纹理变种无关</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">刷怪蛋视觉改造</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">每个刷怪蛋现在拥有其独特代表其生成生物的特点的外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每个刷怪蛋外观大小体现了其生成的生物在世界中的大小</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如，小生物倾向于拥有一个更小的刷怪蛋</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">倒下的树木</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树木是一个新的树木装饰性变种：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树加入到了以下四种树木类型的变种中：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树  </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦  </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林  </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">倒下的白桦树有短和长两种版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有些倒下的树木附有蘑菇和藤蔓做为装饰</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有会生成对应立式树木的生物群系中均会生成倒下的树木，除了下列生物群系：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹林  </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">繁花森林 (有倒下的白桦树但没有倒下的橡树)  </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">雪林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">草甸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">河流</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">萤火虫灌木丛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛能在沼泽、红树林沼泽、恶地以及靠近河流的水边找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当暗下来时，发光的萤火虫粒子在萤火虫灌木丛周围出现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉会在附近可生成位置生成新萤火虫灌木丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛发出等级为2的光照</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当下列条件满足时，萤火虫灌木丛有概率会发出特殊的环境音效：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">晚上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">上方除树叶、地毯、竹笋外无任何固体方块阻挡</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">枯叶</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶是一种能在森林、 黑森林以及疏林恶地找到的新的装饰性方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">注: 枯叶仅以世界生成的一部分生成，并在游戏中不会重新生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格方块空间内有不同数量的枯叶片</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在同一格方块空间内最多有四片</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对已有枯叶方块放置枯叶会增加枯叶的数量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以以四种方向放置枯叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以放置在有完整顶面的方块上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以由任意树叶方块烧炼而成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以被当作烧炼燃料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以被用于堆肥</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶拥有独特的方块音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯叶会随所处的生物群系着色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当放置方块时枯叶可以被方块直接替换</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">野花簇</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">野花簇是一种新的花，生成于桦木森林、原始桦木森林和草甸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格方块空间内有不同数量的野花簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在同一格方块空间内最多有四簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对已有野花簇方块放置野花簇会增加野花簇的数量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对野花簇使用骨粉会生成更多野花簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以以四种方向放置野花簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">野花簇可以合成黄色染料</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">灌木丛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛是一种新的装饰方块，会在以下生物群系以斑块形式生成：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">桦木森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">冻河</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原始桦木森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">平原</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">河流</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭森林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛可以被用于堆肥</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉会在附近可生成位置生成新灌木丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛仅能由剪刀或附有精准采集的工具破坏时掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当放置方块时灌木丛可以被方块直接替换</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">矮枯草丛和高枯草丛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了两种新的草：矮枯草丛和高枯草丛 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">都只有一格高，意味着高枯草丛与两格高的高草丛不同</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">都在沙漠与恶地生物群系生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与枯萎的灌木一样能放置于沙子、陶瓦和泥土类方块上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">矮枯草丛会生长为高枯草丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">高枯草丛在其周围的有效位置生成矮枯草丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">均可用于堆肥</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绵羊可以食用它们重新长出羊毛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">都可用于作为烧炼燃料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当放置方块时都可被方块直接替换</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">仙人掌花</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花是一种新的花，有概率生成在沙漠和恶地的仙人掌上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以被放置在仙人掌、耕地或任何顶部提供中心支持的方块上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花有概率生成在仙人掌上，并阻止仙人掌长得更高</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果仙人掌 1-2 格高，仙人掌花则有 10% 的概率生长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果仙人掌 3 格高，仙人掌花则有 25% 的概率生长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花仅当四面均无固体方块时才会生长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以被用于堆肥</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以合成一个粉色染料</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">落叶粒子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有树叶方块有概率生成落叶粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列方块受本次更改影响： </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">杜鹃树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">盛开的杜鹃树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红树树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树树叶</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉树叶</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">沙漠和恶地的新环境音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家周围被至少 3 个方向，最小 8 格远的沙子、红沙或任意颜色的陶瓦包围，有一定几率播放环境音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.idle</TextBox> 在任意生物群系均可播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.wind</TextBox> 仅在沙漠和恶地群系播放</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当枯萎的灌木丛在任意生物群系，两个任意颜色的陶瓦、沙子或红沙上方时有一定几率播放环境音效</Paragraph></ListItem>
 </List>
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-03-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 1.21.4" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">新内容</Paragraph><Paragraph Style="{StaticResource H3}">方块</Paragraph><Paragraph Style="{StaticResource H4}">嘎枝之心</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园中的苍白橡树的树干内，四周均被苍白橡木原木覆盖。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以用树脂块与苍白橡木原木合成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">放置在朝向正确的苍白橡木原木或苍白橡木及其去皮变种之间时，它会在夜晚或雷暴时激活，并在水平 16 格、竖直 8 格范围内会生成嘎枝。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所生成的嘎枝被玩家攻击时会发出指向该方块的粒子效果，同时此方块尝试在周围曼哈顿距离 2 格内与其相连的苍白橡木原木、苍白橡木、去皮苍白橡木原木和去皮苍白橡木上生成总计 2–3 个树脂团方块。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">被破坏时，所生成的嘎枝会一并被移除。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与之相连的红石比较器会按其与绑定嘎枝的距离输出红石信号。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">距离越近，信号强度越强。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">斧是破坏此方块的合适工具。附有精准采集的工具能通过破坏使其掉落对应的方块物品，其他情况下则掉落 1–3 个树脂团物品。掉落树脂团的数量受时运影响。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成的该方块如直接或间接被玩家破坏，还会掉落 20–24 经验值。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">眼眸花</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园的花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">有闭合的眼眸花和张开的眼眸花两种变种。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">根据变种不同可以合成具有失明或反胃效果的谜之炖菜，以及灰色或橙色的染料。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对苍白之园中的草方块使用骨粉时，周围有概率生成闭合的眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果在夜间生成，闭合的眼眸花会接收到 1 计划刻，以瞬间转换为张开的眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会随昼夜更替而转换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在白天会转换为闭合的眼眸花，在夜晚会转换为张开的眼眸花。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在没有昼夜更替的维度会保持原样。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在转换时会发出粒子效果。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">周围的眼眸花会传递信息，以协助各自的转换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对应的盆栽方块也会参与转换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">触碰张开的眼眸花的蜜蜂会获得中毒效果。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">手持张开的眼眸花的玩家会吸引蜜蜂，但与之交互时会使蜜蜂受到中毒效果，而非繁殖或加速生长。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售张开的眼眸花。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白橡树树苗</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的树苗，由苍白橡树树叶掉落，也可由与流浪商人交易获得。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与深色橡树树苗一样，单个无法生长，在 2×2 空间摆放的 4 个苍白橡树树苗才可生长为苍白橡树。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与自然生成的苍白橡树不同，树苗长成的苍白橡树不会长出嘎枝之心、苍白垂须、苍白覆地苔藓和苍白苔藓块。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白橡树树叶</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">随苍白橡树生成的自然方块。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">底部暴露在外的苍白橡树树叶有概率生成落叶粒子。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白橡木原木</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">随苍白橡树生成的自然方块。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">有对应的去皮变种。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">去皮苍白橡木原木可用于合成对应的悬挂式告示牌。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白橡木</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由 4 个苍白橡木原木合成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">有对应的去皮变种。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">苍白橡木木板</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的木板。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可用于合成对应的按钮、门、栅栏、栅栏门、压力板、告示牌、台阶、楼梯、活板门、船和运输船。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白苔藓块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园生物群系中。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">类似于苔藓块，植物类方块能放置在其上。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">锄是破坏此方块的合适工具。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人有概率出售此物品。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白覆地苔藓</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园生物群系中。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">放置时，会尝试依附相邻的方块向上延伸至多两格。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉时，会向所有相邻方块的对应面延伸。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">锄是破坏此方块的合适工具。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白垂须</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成于苍白之园生物群系中苍白橡树的树叶下方的网状藤蔓。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">苍白橡木、去皮苍白橡木原木和去皮苍白橡木下的苍白垂须会产生闲置音效。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在流浪商人有概率出售此物品。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不因随机刻自然生长，但可使用骨粉使其向下生长。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏，只会在被剪刀或附有精准采集的工具破坏时掉落对应的方块物品。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">树脂团</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由嘎枝之心生成的一种无碰撞箱的依附型方块，需要放在方块的支撑面上。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以含水。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能被方块直接替换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">树脂团物品具有独特纹理。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">烧制树脂团物品会得到树脂砖。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">林地府邸战利品箱中有概率找到 2–4 个树脂团。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">树脂块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于存储树脂团，由 9 个树脂团合成，也可分解为 9 个树脂团。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可与苍白橡木原木合成出嘎枝之心。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能被瞬间破坏。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">可使用 4 个树脂砖合成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可用于合成对应的楼梯、墙和台阶。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">镐是这类方块的合适破坏工具。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">雕纹树脂砖块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的建筑方块，由 2 个树脂砖台阶合成，也可在切石机中用树脂砖块制成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">镐是这种方块的合适破坏工具。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品</Paragraph><Paragraph Style="{StaticResource H4}">树脂砖</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的砖，可通过烧制树脂团获取。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能作为盔甲纹饰的材料。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于合成树脂砖块、树脂砖台阶、树脂砖楼梯、树脂砖墙和雕纹树脂砖块。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">刷怪蛋</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了嘎枝刷怪蛋。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">物品使用动画</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了收纳袋使用动画 <TextBox Style="{StaticResource InlineCode}">bundle</TextBox>。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这也是 <TextBox Style="{StaticResource InlineCode}">consumable</TextBox> 物品堆叠组件中字符串 <TextBox Style="{StaticResource InlineCode}">animation</TextBox> 的有效值之一。</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">嘎枝</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种被玩家注视前不会主动攻击，且在被未戴着雕刻南瓜的玩家注视时无法行动（包括移动、被击退、骑乘实体）的敌对生物。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生命值为 1。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">攻击伤害为 3。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">灾厄村民会主动远离嘎枝。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">能在水中漂浮。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由嘎枝之心生成的嘎枝与其绑定，这种嘎枝还具有以下特性：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生成和消失完全由嘎枝之心决定，不受亮度影响。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果处在白天且天气非雷暴，则会消失。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">边界箱持续覆盖最近的生存模式或冒险模式玩家的视平线 5 秒后消失。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">离所绑定的嘎枝之心的欧几里得距离超过 34 格时消失。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果所绑定的嘎枝之心未激活或已被破坏，则生命值归零，同时消失。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">免疫无懈可击所能免疫的一切伤害。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">无视仙人掌、甜浆果丛、细雪和熔岩这类危险环境，且能从中穿过。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">受到来自玩家的直接或间接攻击时，会在原地摇摆。同时，如果前 100 游戏刻（5 秒）内未触发过嘎枝之心，则会生成一条指向嘎枝之心的粒子，并使嘎枝之心尝试生成树脂团。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不能穿越传送门。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不能被命名牌命名。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">非生物实体</Paragraph><Paragraph Style="{StaticResource H4}">苍白橡木船</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由苍白橡木木板合成的船变种。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白橡木运输船</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由苍白橡木木板合成的运输船变种。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">TNT矿车</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选字段单精度浮点数 <TextBox Style="{StaticResource InlineCode}">explosion_speed_factor</TextBox> 以控制随TNT矿车速度增加的爆炸威力。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值为 1.0。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">苍白之园</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">黑森林的新变种，但林地府邸不会在此生成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会自然生成悬有苍白垂须的苍白橡树，地表覆盖着苍白苔藓块或苍白覆地苔藓。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">动物类生物不会在这里自然生成。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不会播放背景音乐。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">正在播放的音乐会在玩家进入此生物群系时淡出。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">拥有独特的、由此生物群系中的方块产生的环境音效。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这些音效主要由依附于苍白橡树树叶或原木的苍白垂须和夜间激活的嘎枝之心方块产生。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">苍白橡树</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了新生苍白橡树，以与自然生成的苍白橡树区分。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令格式</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">/attribute</TextBox></Paragraph><Paragraph>加入了新的子命令以重置目标实体的属性默认值。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">语法：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute &lt;target&gt; &lt;attribute&gt; base reset</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">参数：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox>：受到属性更新的实体。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox>：属性的命名空间 ID。</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果目标实体没有对应属性，则命令失败。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了新的命令建议：已指定目标实体和属性 ID 时，现在还会显示实体当前属性已有的属性修饰符 ID。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">常规</Paragraph><Paragraph Style="{StaticResource H4}">文本组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">加入了可选的整型 NBT 列表/JSON 数组 <TextBox Style="{StaticResource InlineCode}">shadow_color</TextBox> 样式字段，用于覆写文本的阴影属性。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以为整型 ARGB 值，也可以为 NBT 列表/JSON 数组。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 0 时，阴影被隐藏；反之，阴影总以此颜色显示。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">方块</Paragraph><Paragraph Style="{StaticResource H4}">钟、灯笼、灵魂灯笼、铜门、铁门、重质测重压力板、轻质测重压力板、磨制黑石压力板和石头压力板</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这类需要下方方块支撑的方块现在被任意工具破坏时都会掉落。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">饰纹陶罐</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在默认具有 <TextBox Style="{StaticResource InlineCode}">container</TextBox> 组件，因此现在饰纹陶罐可以正常地由选取方块键选取了。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">末影箱</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在被不合适的工具破坏时也会产生掉落物。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下界砖块、红色下界砖块、裂纹下界砖块和雕纹下界砖块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更改了纹理，以与其他砖类方块的砖纹对齐。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">覆地苔藓</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">不再能被剑加速破坏。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">酿造台</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在被任意工具破坏时都会掉落。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">光源方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在其物品默认具有 <TextBox Style="{StaticResource InlineCode}">block_state</TextBox> 物品堆叠组件。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品</Paragraph><Paragraph Style="{StaticResource H4}">谜之炖菜</Paragraph><Paragraph>修改了部分谜之炖菜状态效果的持续时间：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">抗火：3 秒（60 游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">失明：11 秒（220 游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">虚弱：7 秒（140 游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">生命恢复：7 秒（140 游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">跳跃提升：5 秒（100 游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">凋零：7 秒（140 游戏刻）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">中毒：11 秒（220 游戏刻）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">刷怪蛋</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">若刷怪蛋拥有物品堆叠组件 <TextBox Style="{StaticResource InlineCode}">entity_data</TextBox> 且其中实体类型为下落的方块、命令方块矿车或刷怪笼矿车时，权限等级为 2 及以上的玩家会在其物品提示框中看到警告信息。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">生物</Paragraph><Paragraph Style="{StaticResource H4}">蜜蜂</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在玩家用凋灵玫瑰与之交互时，蜜蜂会获得凋零效果，而非繁殖或加速生长。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">幼年狼和幼年猫</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">项圈颜色现在默认为其父母项圈颜色的有效混色，除非混色不存在或父母的项圈颜色无法混合。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">溺尸</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在更愿意拾取三叉戟。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">玩家</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">客户端加载完成后，玩家的无懈可击会立即停止。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">加载期间，玩家仍然无懈可击，直到加载时长超过 60 游戏刻（3 秒）。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">成年猪灵和掠夺者</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在更愿意拾取弩。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">骷髅、流浪者和沼骸</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在更愿意拾取弓。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">岩浆怪</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 UV 映射。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">拾取物品</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在能装备于盔甲槽的物品会按以下顺序相比较：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">具有 <TextBox Style="{StaticResource InlineCode}">prevent_armor_change</TextBox> 魔咒效果组件（即绑定诅咒魔咒）的旧物品不会被替换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础护甲值时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础盔甲韧性时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅 <TextBox Style="{StaticResource InlineCode}">enchantments</TextBox> 组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有更多耐久度时，旧物品会被替换；更少时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有自定义名称，且当前所装备的物品没有时，旧物品会被替换。否则，不会发生替换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在属于主手槽位的物品会按以下顺序相比较：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品符合生物的意愿，且当前所持的物品不符合时，物品会被替换；反之，新物品不符合生物的意愿，且当前所持的物品符合时，物品不会被替换；其他情况则比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品具有更高的基础攻击伤害时，旧物品会被替换；更低时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品附有更多魔咒（仅 <TextBox Style="{StaticResource InlineCode}">enchantments</TextBox> 组件中的魔咒）时，旧物品会被替换；更少时，不会发生替换；数量相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有更多耐久度时，旧物品会被替换；更少时，不会发生替换；相同时，比较下一项。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新物品拥有自定义名称，且当前所持物品没有时，旧物品会被替换。否则，不会发生替换。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">非生物实体</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">TNT矿车</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据字段 <TextBox Style="{StaticResource InlineCode}">TNTFuse</TextBox> 字段现被重命名为 <TextBox Style="{StaticResource InlineCode}">fuse</TextBox>。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">苍白橡树</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将嘎枝苍白橡树的自然生成概率由 20% 降低到 10%，以匹配基岩版。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">普通苍白橡树和嘎枝苍白橡树不再有概率在树干上生成苍白覆地苔藓。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">树木</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在可以在生成时替换小型花。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">随机斑块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pale_moss_vegetation</TextBox> 斑块生成苍白覆地苔藓、矮草丛和高草丛的概率分别由约 29%、59% 和 12% 调整为约 42%、42% 和 17%。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">游戏内容</Paragraph><Paragraph Style="{StaticResource H4}">魔咒</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">力量魔咒的基础伤害增值还原至 1.21 前。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冰霜行者魔咒不再在目标实体骑乘其他实体时生效。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">进度</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">“怪物猎人”现在可以由击杀嘎枝来获取。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">“资深怪物猎人”现在还需要击杀嘎枝。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">选取方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">物品栏中已有数据相同的非默认物品时，Ctrl + 选取方块键不再给玩家新物品。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令格式</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">/time</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在会在 <TextBox Style="{StaticResource InlineCode}">add</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">set</TextBox> 子命令执行后强制同步时间。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">数据包</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将数据包版本号更改为 61。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了“冬季小更新”内置数据包和 <TextBox Style="{StaticResource InlineCode}">winter_drop</TextBox> 功能开关。</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">资源包</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">将资源包版本号更改为 46。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 GUI 精灵图。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">equipment</TextBox> 文件夹现在上移一级，即 <TextBox Style="{StaticResource InlineCode}">models/equipment/</TextBox> 现在移动到 <TextBox Style="{StaticResource InlineCode}">equipment/</TextBox>。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">broken_elytra</TextBox> 模型和纹理现在重命名为 <TextBox Style="{StaticResource InlineCode}">elytra_broken</TextBox>。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">之前仅渲染方块实体模型的方块（旗帜、头颅、床、箱子、潮涌核心、饰纹陶罐、潜影盒和告示牌）现在也会在此之上渲染普通方块模型。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Unifont 已更新到 16.0.01。</Paragraph></ListItem>
-</List><BlockUIContainer> 
-    <local:MyHint Margin="0,4,0,8" IsWarn="False" Text="
-
-其它内容详见完整日志
-" />
-</BlockUIContainer> 
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-03-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-03-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
