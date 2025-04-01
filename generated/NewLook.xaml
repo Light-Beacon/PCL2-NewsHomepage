@@ -29,7 +29,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Margin="8,38,8,15">
 <local:MyListItem Margin="10,1,10,1" ToolTip="最新正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.5" Info="正式版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.5" Type="Clickable" />
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.5" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新愚人节版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="最新愚人节版 - 25w14craftmine" Info="2025 - 终于是时候变得更加庞大并无所不合！"
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=25w14craftmine" Type="Clickable" />
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
 <local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
@@ -43,8 +45,8 @@ EventType="打开帮助" EventData="https://news.bugjump.net/VersionArchiveList.
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="2713d2e" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/2713d2ed2e130479453a79a4d6acdfb2151f5575"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="35bc9e6" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/35bc9e6a2d0ced15a4a885747fd069c915db9c86"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
