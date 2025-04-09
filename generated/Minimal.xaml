@@ -12,13 +12,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style  x:Key="imgTitle" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="Margin" Value="0,0,0,15" />
-</Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
@@ -40,26 +36,229 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </Setter>
 </Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
 <Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新愚人节版 - 25w14craftmine" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w15a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>我们非常自豪地告诉你一个事实：你可以在 Minecraft 中合成任何东西！</Paragraph><Paragraph>Minecraft 确实提供了充足的可能性来创造你所想要的...至少我们曾是这么想的。因为最近我们意识到这里还有限制，而且像这样扼杀创造力并不是我们的愿景</Paragraph><Paragraph>但别担心，我们已经有了一个解决方案。一个能够让你合成更多，还更大！我们给予你 <Italic>（敲鼓声）</Italic> 我的石界！</Paragraph><Paragraph Style="{StaticResource H3}">我的石界简述</Paragraph><Paragraph>简而言之，你现在可以合成你自己的矿井！我的+石界 —— 懂了吗？并且提一嘴我们的“石”是指的是等级（但经过无数个小时的会议（还有 fika ——嗯...你能在括号里再加一个括号吗？哦事实证明这是可以的）我们为本次更新想出了这个精确的名称，并且现在已经比下界都下不来最开始来重新定一个了！）</Paragraph><Paragraph Style="{StaticResource H3}">怎么玩</Paragraph><Paragraph>这样，在这个新的更新中，合成有着更多 <Span TextDecorations="Strikethrough">随机</Span> 乐趣并且充满了 <Span TextDecorations="Strikethrough">对所有人来说都不合理的结果</Span> 允许你创造你所想要的最 <Span TextDecorations="Strikethrough">混乱</Span> 准确的世界的选项！</Paragraph><Paragraph>你基本上要获取一些资源，将它们放进 <Bold>Craftminer</Bold> （我们花了好多时间才想出这个名字！）—— 然后它会给你生成矿井。 </Paragraph><Paragraph></Paragraph><BlockUIContainer><StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/image4286ff7ff32f1feb.png"/>
-<TextBlock Text="瞧瞧：Craftminer!" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph></Paragraph><Paragraph>在你的矿井中，有着许多资源去收集，你还甚至可以用它们去创造更令人震惊的矿井！你仅需要生存足够长的时间来到达出口，或者寄掉...好吧，你必须生存下来，但是生存下来有多么困难真的依赖于你创造的世界的元素。但其实，不是<Bold>你</Bold>创建了它们，而是 Craftminer，不过其实也不是真的 Craftminer 创建的，而仅仅是用代码搞得，你懂吧，就是开发代码。这不是一台真正的机器，这不像我们在现实生活中创建，然后想方设法放进游戏中的那种机器，不可能的，但是仍希望你玩得开心！</Paragraph><Paragraph>所以这就是所有内容：你仅需要扎入矿井中然后看看你能否发现出口，一旦你发现了出口你就可以生成下一个矿井。</Paragraph><Paragraph>有任何问题吗？没有？好的，因为我可能没有你要的答案。</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/image1332d537aec8ec7c.jpeg"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/imagee45005ac8ddf3803.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/imaged9f55b1ea4b03f1a.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/image36e17ba89630a57b.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H3}">下一步</Paragraph><Paragraph>如果你坐在那里觉得这东西把合成全搞砸了，还把它变得又奇有怪。要这样的话，我向你保证，我们有很多 fika 想出了这些想法，并且我们真的不想浪费那些肉桂面包。所以...自己享受吧！</Paragraph><Paragraph>我们都很激动，就瞅瞅这些世界吧：</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/image1a692bd1fac52f03.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/imageb7456d2e2f430b7a.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/imaged2fa01bc625613a9.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/image291eca2be00ca93b.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://img.picgo.net/2025/04/02/image8ac1f7ec0a5f896b.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H3}">如何尝鲜本次更新</Paragraph><Paragraph>快照可以用于 Minecraft: Java 版。要安装快照在上方点击下载然后下载最新快照。你甚至可以和你的朋友在 Realms 中游玩快照！</Paragraph><Paragraph>记住，快照会破坏你的世界，所以请备份你的世界并且/或者在不是你原来世界的另一个文件夹中运行快照。</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="下载文件" EventData="https://piston-data.mojang.com/v1/objects/4527a9019e37e001770787e4523b505f79cac4c5/server.jar">下载跨平台服务器 jar 文件</local:MyTextButton></Underline></Paragraph><Paragraph Style="{StaticResource H3}">常见问题</Paragraph><Paragraph Style="{StaticResource H5}">哪更新有多少厚？</Paragraph><Paragraph>这是什么鬼问题？</Paragraph><Paragraph Style="{StaticResource H5}">Craftminer？</Paragraph><Paragraph>是啊，对的。Fika，就像我说的。</Paragraph><Paragraph Style="{StaticResource H5}">如果我不想创建我自己的矿井呢？</Paragraph><Paragraph>又来了... 我们有很多 fika。</Paragraph><Paragraph Style="{StaticResource H5}">我什么时候可以试试这次更新呢</Paragraph><Paragraph>现在，或者你啥时有时间啥时来。</Paragraph><Paragraph Style="{StaticResource H5}">我的洗发水用完了</Paragraph><Paragraph>是。</Paragraph><Paragraph Style="{StaticResource H5}">为什么你管它叫“矿井（mines）”</Paragraph><Paragraph>你喜欢叫什么就叫什么，我们这办公室还有人叫它“壑砩奜扐剋絲爾笥”，但是有些人觉得这玩意太难读了。所以这基本取决于你。</Paragraph><Paragraph Style="{StaticResource H5}">这只是一场恶作剧吗？</Paragraph><Paragraph>恶作剧？那是啥？我没听过的一种新生物吗？</Paragraph><Paragraph Style="{StaticResource H5}">你真的创建了整个世界？</Paragraph><Paragraph>矿井！我们管它叫矿井！（或者壑砩奜扐剋絲爾笥，如果你喜欢的话）。</Paragraph><Paragraph Style="{StaticResource H5}">你们什么时候在 Minecraft 中实现 Office 助手回形针</Paragraph><Paragraph>... </Paragraph><Paragraph Style="{StaticResource H5}">我可以带朋友来吗？</Paragraph><Paragraph>带到哪？超市吗？</Paragraph><Paragraph Style="{StaticResource H5}">我可以用 Craftminer 在超市中创建一个洗发水世界吗？</Paragraph><Paragraph>好了，打住，别再问了！</Paragraph>
+<Paragraph>周二发的快照？对的！从现在开始我们将每周快照日移到了固定的一天——星期二。</Paragraph><Paragraph>在本周我们发布了 2025 第二个小更新的第一个快照，包含了 <Italic>Happy Ghast</Italic>、<Italic>Ghastling</Italic>、<Italic>Dried Ghast</Italic>、<Italic>Ghast Harness</Italic>。感谢 <Italic>Happy Ghast</Italic> 让你能在新的游戏体验中翱翔，发掘与抚育自己的 <Italic>Happy Ghast</Italic> —— 在下界中取回 <Italic>Dried Ghast</Italic> 方块，在主世界里将其浸入水中来生成一只 <Italic>Ghastling</Italic>。我们这周同时也将定位栏功能带入了 Java 版，可以使你在外出探险时能够轻而易举地找到你的朋友。</Paragraph><Paragraph>来体验你第一次试飞 <Italic>Happy Ghast</Italic>，合成你自己的 <Italic>Dried Ghast</Italic> —— 并向我们发送你的<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://feedback.minecraft.net/hc/en-us/community/topics/35301401438605-Upcoming-Game-Drop-Features?sort_by=votes">反馈</local:MyTextButton></Underline>！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Dried Ghast</Italic> 方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Happy Ghast</Italic> 生物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了挽具物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的进度</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}"><Italic>Dried Ghast</Italic></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以在下界的下界化石结构中找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">也可使用 1 个骨块与 8 个恶魂之泪合成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当含水时回经历大约 20 分钟的三个阶段的变化直到其变成 <Italic>Ghastling</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">基于当前阶段发出音效并显示粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果在含水状态时挖下，无论在含水时到了哪个阶段，其将恢复“干”的阶段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当不再含水时它会使用相同时间恢复到最初始的“干”的阶段</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}"><Italic>Happy Ghast</Italic></Paragraph><Paragraph Style="{StaticResource H4}"><Italic>Ghastling</Italic></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Ghastling</Italic> 是 <Italic>Happy Ghast</Italic> 的幼年版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 <Italic>Dried Ghast</Italic> 方块持续含水大约 20 分钟时生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在生成后，<Italic>Ghastling</Italic> 将会尝试跟随：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在 16 格范围内的玩家或</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在 16 格范围内的成年非水生被动生物（以及一些中立生物）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果在 <Italic>Ghastling</Italic> 附近没有没有玩家或合适的生物，则 <Italic>Ghastling</Italic> 将会在距离其家位置（其生成位置或最后一次交互位置）32格之内闲逛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其会重置其家位置如果其在家区域边界外移动了超过 16 格方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以被雪球吸引也可以喂食雪球</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会在约 20 分钟后成长为 <Italic>Happy Ghast</Italic> (若喂食雪球则更快)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><Italic>Happy Ghast</Italic></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">成年的 <Italic>Happy Ghast</Italic> 是一个新的飞行载具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由 <Italic>Ghastling</Italic> 经历 20 分钟后(若喂食雪球则更快)成长为 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以装备挽具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被挽具和雪球吸引</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">挽具仅在其在没有装备挽具时吸引</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在收到伤害时无受惊行为</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">无法繁殖</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">缓慢地恢复生命值，在下雨、下雪或在以渲染的云层相同的高度飞行时恢复更快</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">第一个骑乘 <Italic>Happy Ghast</Italic> 的玩家可以控制，坐在 <Italic>Happy Ghast</Italic> 的最前面，在脸的上方</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下前进键会使 <Italic>Happy Ghast</Italic> 飞向玩家目视方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下后退键会使 <Italic>Happy Ghast</Italic> 飞向玩家目视反方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下左右键会使 <Italic>Happy Ghast</Italic> 以相应方向平移</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下跳跃键会使 <Italic>Happy Ghast</Italic> 竖直向上飞行</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键会使玩家不再骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家骑乘时, 在 <Italic>Happy Ghast</Italic> 上的护目镜会拉下盖住其眼睛，指示它现在可以被控制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当第一名玩家控制 <Italic>Happy Ghast</Italic> 后骑乘的玩家放在其各个侧面，从第一个玩家开始顺时针放置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键使得在 <Italic>Happy Ghast</Italic> 顶部的玩家不再骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 <Italic>Happy Ghast</Italic> 监测到玩家在其头顶，它会停止所有的移动并对其最近垂直方向</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">无论其是否装备挽具都有此行为</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当骑乘 <Italic>Happy Ghast</Italic> 第三人称镜头会向后拉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当没有玩家骑乘或走在 <Italic>Happy Ghast</Italic> 上，护目镜会抬起并且 <Italic>Happy Ghast</Italic> 会开始在家位置周围游荡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在半空中取消骑乘，<Italic>Happy Ghast</Italic> 将会在恢复游荡之前向地面下降</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不能骑乘在船上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与 <Italic>Ghastling</Italic> 相似的方式在距离家位置 64 格内闲逛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果装备了挽具，<Italic>Happy Ghast</Italic> 在闲逛时距离家位置更近（32格）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在自己游荡时 <Italic>Happy Ghast</Italic> 会尝试贴近方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">恶魂</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了恶魂的纹理</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">挽具</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">挽具是一个新的可以装在 <Italic>Happy Ghast</Italic> 身上使得玩家可以骑乘在其身上的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其是 16 个物品，每种颜色各一个</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用 3 个皮革、2 个玻璃和 1 个羊毛合成，<Italic>Harness</Italic> 的颜色为合成它的羊毛颜色 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以重新染色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能装备于 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许最多 4 名玩家骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用剪刀从 <Italic>Happy Ghast</Italic> 身上移除，但仅当其身上没玩家骑乘的时候</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">进度</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的农牧业进度 &quot;Stay Hydrated!&quot; —— 将 <Italic>Dried Ghast</Italic> 方块放入水中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的冒险进度 &quot;Heart Transplanter&quot; ，当玩家将嘎枝之心以正确的朝向放置在两个苍白橡木原木之间</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">本次快照引入了新的实验性特性开关，添加了一个导航条以更轻松地寻找你的朋友。如果你想测试本项特性你必须在创建一个新世界实验型菜单中开启这项开关。你可以在<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition">这里</local:MyTextButton></Underline>找到更多关于特性开关的内容</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">定位栏</Paragraph><Paragraph>定位栏是一个实验性的新的 UI 元素，可以向玩家显示路径点方向。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这项实验性特性允许服务器管理路径点以及其于玩家间的连接</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在默认情况下，所有玩家从其自身传输一个路径点，并且所有玩家会收到全部的路径点，允许玩家在多人模式下互相定位</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当摄像机朝向一个 120 度之内的路径点时定位栏会显示带颜色的指示器。当路径点在摄像机视口（屏幕）的上方或下方时，会显示一个向上或向下的箭头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">任何由属于一个队伍的玩家或生物的路径点指示器颜色匹配为队伍颜色</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">玩家更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">潜行可以隐藏玩家，阻止他们在其它玩家的定位栏中显示</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在旁观者模式下的玩家仅能其他旁观者模式玩家的定位栏显示</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列物品放置在头上时会隐藏玩家T：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">雕刻南瓜</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骷髅头颅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">凋灵骷髅头颅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">苦力怕的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">龙首</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">猪灵的头</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">药水更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用隐身药水同样能使玩家在定位栏中隐藏</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">游戏规则</Paragraph><Paragraph Style="{StaticResource H5}">增加了 <TextBox Style="{StaticResource InlineCode}">useLocatorBar</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为开启定位栏实验性功能的服务器开启</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">切换到关闭将从所有玩家移除所有存在的路径点</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">属性</Paragraph><Paragraph Style="{StaticResource H5}">增加了 <TextBox Style="{StaticResource InlineCode}">waypoint_transmit_range</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">waypoint_receive_range</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox>，最小值: <TextBox Style="{StaticResource InlineCode}">0.0</TextBox>，最大值: <TextBox Style="{StaticResource InlineCode}">60000000.0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家默认拥有距离为 60,000,000 的收发范围</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">传输距离为正的生物会向附近的接收者发送路径点包</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">类似的，接收者只能在接收距离为正的情况下接收，且无法接受超过这个距离的路径点</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">waypoint</TextBox> 命令</Paragraph><Paragraph>这是一个新的用于查询和更改路径点的指令。</Paragraph><Paragraph></Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="waypoint list&#x000A;&#x000A;waypoint modify &lt;实体选择器&gt; color &lt;颜色&gt;&#x000A;waypoint modify &lt;实体选择器&gt; color hex &lt;16进制颜色&gt;&#x000A;waypoint modify &lt;实体选择器&gt; color reset&#x000A;waypoint modify &lt;实体选择器&gt; fade &lt;淡出起始点&gt; &lt;透明度起始点&gt; &lt;淡出终止点&gt; &lt;透明度终止点&gt;&#x000A;waypoint modify &lt;实体选择器&gt; fade reset"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph>
+参数:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">实体选择器</TextBox>: 用于选择作为路径点传输的实体(见 <TextBox Style="{StaticResource InlineCode}">waypoint_transmit_range</TextBox> 属性)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">颜色</TextBox>: 覆盖此路径点的定位栏图标颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hex &lt;16进制颜色&gt;</TextBox>: web 格式的十六进制颜色参数(RRGGBB)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红色为 <TextBox Style="{StaticResource InlineCode}">hex F00</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">hex FF0000</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">矢车菊蓝为 <TextBox Style="{StaticResource InlineCode}">hex 6495ED</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fade</TextBox>: 设置路径点淡出效果</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其参数 <TextBox Style="{StaticResource InlineCode}">&lt;fade_start&gt; &lt;alpha_start&gt; &lt;fade_end&gt; &lt;alpha_end&gt;</TextBox> 处理起始/终止淡出距离与阿尔法透明度</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">*起始点</TextBox> 是近处的值 (靠近玩家处)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">*终止点</TextBox> 是远处的值 (远离玩家处)</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">reset</TextBox> 将会重置为默认行为，远处定位栏图标淡出至 0.2 透明度</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了恶魂的纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当以旁观者模式附身或骑乘于恶魂、末影龙和巨人时第三人称摄像机距离会拉长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">狼、绵羊和猪有着镜像的腿</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">旁观者模式将会随着其附身的实体一起传送，但是在实体进入其它维度时停止旁观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">微调了沙漠方块环境音效的规则</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">沙漠方块环境音效更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">沙子环境音效播放不再需求其对天空的接触</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">沙子环境音效现在播放概率略微降低</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">陶瓦方块不再触发环境沙子音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">沙子方块不再触发环境风音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">陶瓦方块不再触发环境风音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当在 2 格沙子、红沙或陶瓦方块上方时，矮枯草丛与高枯草丛现在可以出发环境风音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">枯萎的灌木环境音效现在播放概率略微提高</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 73</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 56</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下 F3 + V 现在会打印客户端侧版本信息</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph>
+ <Italic>在本快照系列中，GUI 渲染代码经历了一个巨大的重构。此快照中发布的版本不是最终版本，将会进一步地进行迭代。</Italic></Paragraph>
+
+</Section><Paragraph Style="{StaticResource H2}">数据包版本 73</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">维度类型定义有了一个新的可选字段——<TextBox Style="{StaticResource InlineCode}">cloud_height</TextBox>，标识在该维度的云层开始的 y 轴高度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的版本命令</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的创建数据包子命令</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">version</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">没有参数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">打印服务端侧的当前版本信息</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对单人游戏以及服务器操作员可用</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">datapack create</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为当前世界创建新的空文件夹数据包</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">支持包的版本为游戏所支持的版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅对服务器所有者可用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">语法: <TextBox Style="{StaticResource InlineCode}">datapack create &lt;id&gt; &lt;name&gt;</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox> - 新的包名称，必须为一个有效的文件夹名称</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">name</TextBox> - 放在 <TextBox Style="{StaticResource InlineCode}">pack.mcmeta</TextBox> 文件中的描述的文本组件</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">属性</Paragraph><Paragraph Style="{StaticResource H4}">新增了 <TextBox Style="{StaticResource InlineCode}">camera_distance</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">4.0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修改在晚间或被旁观实体在第三人称视角下的相机放置距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果被骑乘的实体有着更高 <TextBox Style="{StaticResource InlineCode}">camera_distance</TextBox> 的属性，则该距离会被应用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个距离会乘上 <TextBox Style="{StaticResource InlineCode}">scale</TextBox> 属性来得到最终目标相机距离</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">attribute_modifiers</TextBox> 物品组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">attributes_modifiers</TextBox> 入口增加了可选显示字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有三种显示类型：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">default</TextBox> - 当前行为，在提示中显示计算后的属性修饰器值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hidden</TextBox> - 不显示属性修饰器入口</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">override</TextBox> - 替换属性修饰器文本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">包含一个单一字段值，用于显示在属性修饰器的文本内容</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">area_effect_cloud</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Particle</TextBox> 字段重命名为 <TextBox Style="{StaticResource InlineCode}">custom_particle</TextBox>，并且现在一直以带颜色的 <TextBox Style="{StaticResource InlineCode}">entity_effect</TextBox> 粒子确定的重载运行</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果不指定重载这项字段不会被写入</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当指定 <TextBox Style="{StaticResource InlineCode}">entity_effect</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">tinted_leaves</TextBox> 粒子类型时，颜色将不再继承于药水内容</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <TextBox Style="{StaticResource InlineCode}">#triggers_ambient_desert_dry_vegetation_block_sounds</TextBox> - 能够触发上方方块播放环境枯植被音效的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#plays_ambient_desert_block_sounds</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">#triggers_ambient_desert_sand_block_sounds</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_food</TextBox> - 可以用于喂食 <Italic>Happy Ghasts</Italic> 的物品 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_tempt_items</TextBox> - 可以用于吸引 <Italic>Happy Ghasts</Italic> 的物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#can_equip_harness</TextBox> - 可以装备挽具的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#followable_friendly_mobs</TextBox> - 幼年 <Italic>Happy Ghasts</Italic> 会跟随的非幼年实体</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 56</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">游戏现在会不断地询问在 <TextBox Style="{StaticResource InlineCode}">.png.mcmeta</TextBox> 文件中的模糊纹理参数</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.wind</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">block.dry_grass.ambient</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了发光鱿鱼、鱿鱼、守卫者、马、兔子以及河豚的音效位置，从实体文件夹移动到生物文件夹</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">装备资源</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了新的 <TextBox Style="{StaticResource InlineCode}">happy_ghast_body</TextBox> 层类型，在 <Italic>Happy Ghast</Italic> 的身体槽位渲染</Paragraph></ListItem>
+</List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-04-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-04-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -271,7 +470,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-04-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-04-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
