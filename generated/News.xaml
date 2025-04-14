@@ -11,23 +11,28 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
 <sys:String   x:Key="CloudIcon">
 M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
@@ -40,8 +45,9 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
 0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
 211.6 582.7 160 480 160z</sys:String>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -65,43 +71,8 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style  TargetType="TextBox" x:Key="BlockCode">
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
-<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -121,7 +92,36 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -172,69 +172,69 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="25w15a" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>周二发的快照？对的！从现在开始我们将每周快照日移到了固定的一天——星期二。</Paragraph><Paragraph>在本周我们发布了 2025 第二个小更新的第一个快照，包含了 <Italic>Happy Ghast</Italic>、<Italic>Ghastling</Italic>、<Italic>Dried Ghast</Italic>、<Italic>Ghast Harness</Italic>。感谢 <Italic>Happy Ghast</Italic> 让你能在新的游戏体验中翱翔，发掘与抚育自己的 <Italic>Happy Ghast</Italic> —— 在下界中取回 <Italic>Dried Ghast</Italic> 方块，在主世界里将其浸入水中来生成一只 <Italic>Ghastling</Italic>。我们这周同时也将定位栏功能带入了 Java 版，可以使你在外出探险时能够轻而易举地找到你的朋友。</Paragraph><Paragraph>来体验你第一次试飞 <Italic>Happy Ghast</Italic>，合成你自己的 <Italic>Dried Ghast</Italic> —— 并向我们发送你的<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://feedback.minecraft.net/hc/en-us/community/topics/35301401438605-Upcoming-Game-Drop-Features?sort_by=votes">反馈</local:MyTextButton></Underline>！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Dried Ghast</Italic> 方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Happy Ghast</Italic> 生物</Paragraph></ListItem>
+<Paragraph>周二发的快照？对的！从现在开始我们将每周快照日移到了固定的一天——星期二。</Paragraph><Paragraph>在本周我们发布了 2025 第二个小更新的第一个快照，包含了快乐恶魂、小恶魂、<Italic>Dried Ghast</Italic>、<Italic>Ghast Harness</Italic>。感谢快乐恶魂让你能在新的游戏体验中翱翔，发掘与抚育自己的快乐恶魂—— 在下界中取回失水恶魂方块，在主世界里将其浸入水中来生成一只小恶魂。我们这周同时也将定位栏功能带入了 Java 版，可以使你在外出探险时能够轻而易举地找到你的朋友。</Paragraph><Paragraph>来体验你第一次试飞快乐恶魂，合成你自己的失水恶魂——并向我们发送你的<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://feedback.minecraft.net/hc/en-us/community/topics/35301401438605-Upcoming-Game-Drop-Features?sort_by=votes">反馈</local:MyTextButton></Underline>！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了失水恶魂方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了快乐恶魂生物</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新增了挽具物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新的进度</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><Italic>Dried Ghast</Italic></Paragraph><List>
+</List><Paragraph Style="{StaticResource H3}">失水恶魂</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以在下界的下界化石结构中找到</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">也可使用 1 个骨块与 8 个恶魂之泪合成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当含水时回经历大约 20 分钟的三个阶段的变化直到其变成 <Italic>Ghastling</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当含水时回经历大约 20 分钟的三个阶段的变化直到其变成小恶魂</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">基于当前阶段发出音效并显示粒子</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果在含水状态时挖下，无论在含水时到了哪个阶段，其将恢复“干”的阶段</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">当不再含水时它会使用相同时间恢复到最初始的“干”的阶段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><Italic>Happy Ghast</Italic></Paragraph><Paragraph Style="{StaticResource H4}"><Italic>Ghastling</Italic></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Ghastling</Italic> 是 <Italic>Happy Ghast</Italic> 的幼年版本</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当 <Italic>Dried Ghast</Italic> 方块持续含水大约 20 分钟时生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在生成后，<Italic>Ghastling</Italic> 将会尝试跟随：</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">快乐恶魂</Paragraph><Paragraph Style="{StaticResource H4}">小恶魂</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">小恶魂是快乐恶魂的幼年版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当失水恶魂方块持续含水大约 20 分钟时生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在生成后，小恶魂将会尝试跟随：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在 16 格范围内的玩家或</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在 16 格范围内的成年非水生被动生物（以及一些中立生物）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果在 <Italic>Ghastling</Italic> 附近没有没有玩家或合适的生物，则 <Italic>Ghastling</Italic> 将会在距离其家位置（其生成位置或最后一次交互位置）32格之内闲逛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果在小恶魂附近没有没有玩家或合适的生物，则小恶魂将会在距离其家位置（其生成位置或最后一次交互位置）32格之内闲逛</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">其会重置其家位置如果其在家区域边界外移动了超过 16 格方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以被雪球吸引也可以喂食雪球</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会在约 20 分钟后成长为 <Italic>Happy Ghast</Italic> (若喂食雪球则更快)</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><Italic>Happy Ghast</Italic></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">成年的 <Italic>Happy Ghast</Italic> 是一个新的飞行载具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由 <Italic>Ghastling</Italic> 经历 20 分钟后(若喂食雪球则更快)成长为 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会在约 20 分钟后成长为快乐恶魂(若喂食雪球则更快)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">快乐恶魂</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">成年的快乐恶魂是一个新的飞行载具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由小恶魂经历 20 分钟后(若喂食雪球则更快)成长为快乐恶魂</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以装备挽具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">被挽具和雪球吸引</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">挽具仅在其在没有装备挽具时吸引</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在收到伤害时无受惊行为</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">无法繁殖</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">缓慢地恢复生命值，在下雨、下雪或在以渲染的云层相同的高度飞行时恢复更快</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">第一个骑乘 <Italic>Happy Ghast</Italic> 的玩家可以控制，坐在 <Italic>Happy Ghast</Italic> 的最前面，在脸的上方</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下前进键会使 <Italic>Happy Ghast</Italic> 飞向玩家目视方向</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下后退键会使 <Italic>Happy Ghast</Italic> 飞向玩家目视反方向</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下左右键会使 <Italic>Happy Ghast</Italic> 以相应方向平移</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下跳跃键会使 <Italic>Happy Ghast</Italic> 竖直向上飞行</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键会使玩家不再骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当玩家骑乘时, 在 <Italic>Happy Ghast</Italic> 上的护目镜会拉下盖住其眼睛，指示它现在可以被控制</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当第一名玩家控制 <Italic>Happy Ghast</Italic> 后骑乘的玩家放在其各个侧面，从第一个玩家开始顺时针放置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键使得在 <Italic>Happy Ghast</Italic> 顶部的玩家不再骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <Italic>Happy Ghast</Italic> 监测到玩家在其头顶，它会停止所有的移动并对其最近垂直方向</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">第一个骑乘快乐恶魂的玩家可以控制，坐在快乐恶魂的最前面，在脸的上方</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下前进键会使快乐恶魂飞向玩家目视方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下后退键会使快乐恶魂飞向玩家目视反方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下左右键会使快乐恶魂以相应方向平移·</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下跳跃键会使快乐恶魂竖直向上飞行</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键会使玩家不再骑乘快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家骑乘时, 在快乐恶魂上的护目镜会拉下盖住其眼睛，指示它现在可以被控制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当第一名玩家控制快乐恶魂后骑乘的玩家放在其各个侧面，从第一个玩家开始顺时针放置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键使得在快乐恶魂顶部的玩家不再骑乘快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果快乐恶魂监测到玩家在其头顶，它会停止所有的移动并对其最近垂直方向</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">无论其是否装备挽具都有此行为</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当骑乘 <Italic>Happy Ghast</Italic> 第三人称镜头会向后拉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当没有玩家骑乘或走在 <Italic>Happy Ghast</Italic> 上，护目镜会抬起并且 <Italic>Happy Ghast</Italic> 会开始在家位置周围游荡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在半空中取消骑乘，<Italic>Happy Ghast</Italic> 将会在恢复游荡之前向地面下降</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当骑乘快乐恶魂第三人称镜头会向后拉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当没有玩家骑乘或走在快乐恶魂上，护目镜会抬起并且快乐恶魂会开始在家位置周围游荡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在半空中取消骑乘，快乐恶魂将会在恢复游荡之前向地面下降</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">不能骑乘在船上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与 <Italic>Ghastling</Italic> 相似的方式在距离家位置 64 格内闲逛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果装备了挽具，<Italic>Happy Ghast</Italic> 在闲逛时距离家位置更近（32格）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在自己游荡时 <Italic>Happy Ghast</Italic> 会尝试贴近方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与小恶魂相似的方式在距离家位置 64 格内闲逛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果装备了挽具，快乐恶魂在闲逛时距离家位置更近（32格）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在自己游荡时快乐恶魂会尝试贴近方块</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">恶魂</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了恶魂的纹理</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">挽具</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">挽具是一个新的可以装在 <Italic>Happy Ghast</Italic> 身上使得玩家可以骑乘在其身上的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">挽具是一个新的可以装在快乐恶魂身上使得玩家可以骑乘在其身上的物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">其是 16 个物品，每种颜色各一个</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用 3 个皮革、2 个玻璃和 1 个羊毛合成，<Italic>Harness</Italic> 的颜色为合成它的羊毛颜色 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用 3 个皮革、2 个玻璃和 1 个羊毛合成，挽具的颜色为合成它的羊毛颜色 </Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以重新染色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅能装备于 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">允许最多 4 名玩家骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以使用剪刀从 <Italic>Happy Ghast</Italic> 身上移除，但仅当其身上没玩家骑乘的时候</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能装备于快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许最多 4 名玩家骑乘快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用剪刀从快乐恶魂身上移除，但仅当其身上没玩家骑乘的时候</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">进度</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的农牧业进度 &quot;Stay Hydrated!&quot; —— 将 <Italic>Dried Ghast</Italic> 方块放入水中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的冒险进度 &quot;Heart Transplanter&quot; ，当玩家将嘎枝之心以正确的朝向放置在两个苍白橡木原木之间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的农牧业进度 &quot;补水保湿！&quot; —— 将失水恶魂方块放入水中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的冒险进度 &quot;移心接木&quot; ，当玩家将嘎枝之心以正确的朝向放置在两个苍白橡木原木之间</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">本次快照引入了新的实验性特性开关，添加了一个导航条以更轻松地寻找你的朋友。如果你想测试本项特性你必须在创建一个新世界实验型菜单中开启这项开关。你可以在<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition">这里</local:MyTextButton></Underline>找到更多关于特性开关的内容</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">定位栏</Paragraph><Paragraph>定位栏是一个实验性的新的 UI 元素，可以向玩家显示路径点方向。</Paragraph><List>
@@ -350,11 +350,11 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 <ListItem><Paragraph Style="{StaticResource Lp}">新增了 <TextBox Style="{StaticResource InlineCode}">#triggers_ambient_desert_dry_vegetation_block_sounds</TextBox> - 能够触发上方方块播放环境枯植被音效的方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#plays_ambient_desert_block_sounds</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">#triggers_ambient_desert_sand_block_sounds</TextBox></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_food</TextBox> - 可以用于喂食 <Italic>Happy Ghasts</Italic> 的物品 </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_tempt_items</TextBox> - 可以用于吸引 <Italic>Happy Ghasts</Italic> 的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_food</TextBox> - 可以用于喂食快乐恶魂的物品 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_tempt_items</TextBox> - 可以用于吸引快乐恶魂的物品</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#can_equip_harness</TextBox> - 可以装备挽具的实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#followable_friendly_mobs</TextBox> - 幼年 <Italic>Happy Ghasts</Italic> 会跟随的非幼年实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#followable_friendly_mobs</TextBox> - 幼年快乐恶魂会跟随的非幼年实体</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">资源包版本 56</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">游戏现在会不断地询问在 <TextBox Style="{StaticResource InlineCode}">.png.mcmeta</TextBox> 文件中的模糊纹理参数</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">音效事件</Paragraph><List>
@@ -362,7 +362,7 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
 </List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更改了发光鱿鱼、鱿鱼、守卫者、马、兔子以及河豚的音效位置，从实体文件夹移动到生物文件夹</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">装备资源</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了新的 <TextBox Style="{StaticResource InlineCode}">happy_ghast_body</TextBox> 层类型，在 <Italic>Happy Ghast</Italic> 的身体槽位渲染</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了新的 <TextBox Style="{StaticResource InlineCode}">happy_ghast_body</TextBox> 层类型，在快乐恶魂的身体槽位渲染</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -674,8 +674,8 @@ M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="b013e02" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/b013e023025abc92a1d0cda4c0bff5e27bdf0ad2"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="67a3697" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/67a369779ac9dd69ca53ca9a2d27246e68a441ed"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">

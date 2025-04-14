@@ -11,12 +11,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -32,6 +31,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
 <Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
@@ -54,77 +55,76 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w15a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>周二发的快照？对的！从现在开始我们将每周快照日移到了固定的一天——星期二。</Paragraph><Paragraph>在本周我们发布了 2025 第二个小更新的第一个快照，包含了 <Italic>Happy Ghast</Italic>、<Italic>Ghastling</Italic>、<Italic>Dried Ghast</Italic>、<Italic>Ghast Harness</Italic>。感谢 <Italic>Happy Ghast</Italic> 让你能在新的游戏体验中翱翔，发掘与抚育自己的 <Italic>Happy Ghast</Italic> —— 在下界中取回 <Italic>Dried Ghast</Italic> 方块，在主世界里将其浸入水中来生成一只 <Italic>Ghastling</Italic>。我们这周同时也将定位栏功能带入了 Java 版，可以使你在外出探险时能够轻而易举地找到你的朋友。</Paragraph><Paragraph>来体验你第一次试飞 <Italic>Happy Ghast</Italic>，合成你自己的 <Italic>Dried Ghast</Italic> —— 并向我们发送你的<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://feedback.minecraft.net/hc/en-us/community/topics/35301401438605-Upcoming-Game-Drop-Features?sort_by=votes">反馈</local:MyTextButton></Underline>！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Dried Ghast</Italic> 方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了 <Italic>Happy Ghast</Italic> 生物</Paragraph></ListItem>
+<Paragraph>周二发的快照？对的！从现在开始我们将每周快照日移到了固定的一天——星期二。</Paragraph><Paragraph>在本周我们发布了 2025 第二个小更新的第一个快照，包含了快乐恶魂、小恶魂、<Italic>Dried Ghast</Italic>、<Italic>Ghast Harness</Italic>。感谢快乐恶魂让你能在新的游戏体验中翱翔，发掘与抚育自己的快乐恶魂—— 在下界中取回失水恶魂方块，在主世界里将其浸入水中来生成一只小恶魂。我们这周同时也将定位栏功能带入了 Java 版，可以使你在外出探险时能够轻而易举地找到你的朋友。</Paragraph><Paragraph>来体验你第一次试飞快乐恶魂，合成你自己的失水恶魂——并向我们发送你的<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://feedback.minecraft.net/hc/en-us/community/topics/35301401438605-Upcoming-Game-Drop-Features?sort_by=votes">反馈</local:MyTextButton></Underline>！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了失水恶魂方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了快乐恶魂生物</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新增了挽具物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">新的进度</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><Italic>Dried Ghast</Italic></Paragraph><List>
+</List><Paragraph Style="{StaticResource H3}">失水恶魂</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以在下界的下界化石结构中找到</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">也可使用 1 个骨块与 8 个恶魂之泪合成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当含水时回经历大约 20 分钟的三个阶段的变化直到其变成 <Italic>Ghastling</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当含水时回经历大约 20 分钟的三个阶段的变化直到其变成小恶魂</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">基于当前阶段发出音效并显示粒子</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果在含水状态时挖下，无论在含水时到了哪个阶段，其将恢复“干”的阶段</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">当不再含水时它会使用相同时间恢复到最初始的“干”的阶段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}"><Italic>Happy Ghast</Italic></Paragraph><Paragraph Style="{StaticResource H4}"><Italic>Ghastling</Italic></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Italic>Ghastling</Italic> 是 <Italic>Happy Ghast</Italic> 的幼年版本</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当 <Italic>Dried Ghast</Italic> 方块持续含水大约 20 分钟时生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在生成后，<Italic>Ghastling</Italic> 将会尝试跟随：</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">快乐恶魂</Paragraph><Paragraph Style="{StaticResource H4}">小恶魂</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">小恶魂是快乐恶魂的幼年版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当失水恶魂方块持续含水大约 20 分钟时生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在生成后，小恶魂将会尝试跟随：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在 16 格范围内的玩家或</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在 16 格范围内的成年非水生被动生物（以及一些中立生物）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果在 <Italic>Ghastling</Italic> 附近没有没有玩家或合适的生物，则 <Italic>Ghastling</Italic> 将会在距离其家位置（其生成位置或最后一次交互位置）32格之内闲逛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果在小恶魂附近没有没有玩家或合适的生物，则小恶魂将会在距离其家位置（其生成位置或最后一次交互位置）32格之内闲逛</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">其会重置其家位置如果其在家区域边界外移动了超过 16 格方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以被雪球吸引也可以喂食雪球</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会在约 20 分钟后成长为 <Italic>Happy Ghast</Italic> (若喂食雪球则更快)</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><Italic>Happy Ghast</Italic></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">成年的 <Italic>Happy Ghast</Italic> 是一个新的飞行载具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由 <Italic>Ghastling</Italic> 经历 20 分钟后(若喂食雪球则更快)成长为 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会在约 20 分钟后成长为快乐恶魂(若喂食雪球则更快)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">快乐恶魂</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">成年的快乐恶魂是一个新的飞行载具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由小恶魂经历 20 分钟后(若喂食雪球则更快)成长为快乐恶魂</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以装备挽具，最多可以支持四名玩家乘坐</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">被挽具和雪球吸引</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">挽具仅在其在没有装备挽具时吸引</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在收到伤害时无受惊行为</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">无法繁殖</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">缓慢地恢复生命值，在下雨、下雪或在以渲染的云层相同的高度飞行时恢复更快</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">第一个骑乘 <Italic>Happy Ghast</Italic> 的玩家可以控制，坐在 <Italic>Happy Ghast</Italic> 的最前面，在脸的上方</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下前进键会使 <Italic>Happy Ghast</Italic> 飞向玩家目视方向</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下后退键会使 <Italic>Happy Ghast</Italic> 飞向玩家目视反方向</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下左右键会使 <Italic>Happy Ghast</Italic> 以相应方向平移</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下跳跃键会使 <Italic>Happy Ghast</Italic> 竖直向上飞行</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键会使玩家不再骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当玩家骑乘时, 在 <Italic>Happy Ghast</Italic> 上的护目镜会拉下盖住其眼睛，指示它现在可以被控制</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当第一名玩家控制 <Italic>Happy Ghast</Italic> 后骑乘的玩家放在其各个侧面，从第一个玩家开始顺时针放置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键使得在 <Italic>Happy Ghast</Italic> 顶部的玩家不再骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <Italic>Happy Ghast</Italic> 监测到玩家在其头顶，它会停止所有的移动并对其最近垂直方向</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">第一个骑乘快乐恶魂的玩家可以控制，坐在快乐恶魂的最前面，在脸的上方</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下前进键会使快乐恶魂飞向玩家目视方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下后退键会使快乐恶魂飞向玩家目视反方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下左右键会使快乐恶魂以相应方向平移·</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下跳跃键会使快乐恶魂竖直向上飞行</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键会使玩家不再骑乘快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家骑乘时, 在快乐恶魂上的护目镜会拉下盖住其眼睛，指示它现在可以被控制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当第一名玩家控制快乐恶魂后骑乘的玩家放在其各个侧面，从第一个玩家开始顺时针放置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下潜行键使得在快乐恶魂顶部的玩家不再骑乘快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果快乐恶魂监测到玩家在其头顶，它会停止所有的移动并对其最近垂直方向</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">无论其是否装备挽具都有此行为</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当骑乘 <Italic>Happy Ghast</Italic> 第三人称镜头会向后拉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当没有玩家骑乘或走在 <Italic>Happy Ghast</Italic> 上，护目镜会抬起并且 <Italic>Happy Ghast</Italic> 会开始在家位置周围游荡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在半空中取消骑乘，<Italic>Happy Ghast</Italic> 将会在恢复游荡之前向地面下降</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当骑乘快乐恶魂第三人称镜头会向后拉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当没有玩家骑乘或走在快乐恶魂上，护目镜会抬起并且快乐恶魂会开始在家位置周围游荡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在半空中取消骑乘，快乐恶魂将会在恢复游荡之前向地面下降</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">不能骑乘在船上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与 <Italic>Ghastling</Italic> 相似的方式在距离家位置 64 格内闲逛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果装备了挽具，<Italic>Happy Ghast</Italic> 在闲逛时距离家位置更近（32格）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在自己游荡时 <Italic>Happy Ghast</Italic> 会尝试贴近方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与小恶魂相似的方式在距离家位置 64 格内闲逛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果装备了挽具，快乐恶魂在闲逛时距离家位置更近（32格）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在自己游荡时快乐恶魂会尝试贴近方块</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">恶魂</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了恶魂的纹理</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">挽具</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">挽具是一个新的可以装在 <Italic>Happy Ghast</Italic> 身上使得玩家可以骑乘在其身上的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">挽具是一个新的可以装在快乐恶魂身上使得玩家可以骑乘在其身上的物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">其是 16 个物品，每种颜色各一个</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用 3 个皮革、2 个玻璃和 1 个羊毛合成，<Italic>Harness</Italic> 的颜色为合成它的羊毛颜色 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用 3 个皮革、2 个玻璃和 1 个羊毛合成，挽具的颜色为合成它的羊毛颜色 </Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可以重新染色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅能装备于 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">允许最多 4 名玩家骑乘 <Italic>Happy Ghast</Italic></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以使用剪刀从 <Italic>Happy Ghast</Italic> 身上移除，但仅当其身上没玩家骑乘的时候</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能装备于快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许最多 4 名玩家骑乘快乐恶魂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用剪刀从快乐恶魂身上移除，但仅当其身上没玩家骑乘的时候</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">进度</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的农牧业进度 &quot;Stay Hydrated!&quot; —— 将 <Italic>Dried Ghast</Italic> 方块放入水中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的冒险进度 &quot;Heart Transplanter&quot; ，当玩家将嘎枝之心以正确的朝向放置在两个苍白橡木原木之间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的农牧业进度 &quot;补水保湿！&quot; —— 将失水恶魂方块放入水中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的冒险进度 &quot;移心接木&quot; ，当玩家将嘎枝之心以正确的朝向放置在两个苍白橡木原木之间</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">实验性特性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">本次快照引入了新的实验性特性开关，添加了一个导航条以更轻松地寻找你的朋友。如果你想测试本项特性你必须在创建一个新世界实验型菜单中开启这项开关。你可以在<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.minecraft.net/article/testing-new-minecraft-features/feature-toggles-java-edition">这里</local:MyTextButton></Underline>找到更多关于特性开关的内容</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">定位栏</Paragraph><Paragraph>定位栏是一个实验性的新的 UI 元素，可以向玩家显示路径点方向。</Paragraph><List>
@@ -240,11 +240,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">新增了 <TextBox Style="{StaticResource InlineCode}">#triggers_ambient_desert_dry_vegetation_block_sounds</TextBox> - 能够触发上方方块播放环境枯植被音效的方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#plays_ambient_desert_block_sounds</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">#triggers_ambient_desert_sand_block_sounds</TextBox></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_food</TextBox> - 可以用于喂食 <Italic>Happy Ghasts</Italic> 的物品 </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_tempt_items</TextBox> - 可以用于吸引 <Italic>Happy Ghasts</Italic> 的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_food</TextBox> - 可以用于喂食快乐恶魂的物品 </Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#happy_ghast_tempt_items</TextBox> - 可以用于吸引快乐恶魂的物品</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#can_equip_harness</TextBox> - 可以装备挽具的实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#followable_friendly_mobs</TextBox> - 幼年 <Italic>Happy Ghasts</Italic> 会跟随的非幼年实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#followable_friendly_mobs</TextBox> - 幼年快乐恶魂会跟随的非幼年实体</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">资源包版本 56</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">游戏现在会不断地询问在 <TextBox Style="{StaticResource InlineCode}">.png.mcmeta</TextBox> 文件中的模糊纹理参数</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">音效事件</Paragraph><List>
@@ -252,7 +252,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更改了发光鱿鱼、鱿鱼、守卫者、马、兔子以及河豚的音效位置，从实体文件夹移动到生物文件夹</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">装备资源</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增了新的 <TextBox Style="{StaticResource InlineCode}">happy_ghast_body</TextBox> 层类型，在 <Italic>Happy Ghast</Italic> 的身体槽位渲染</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了新的 <TextBox Style="{StaticResource InlineCode}">happy_ghast_body</TextBox> 层类型，在快乐恶魂的身体槽位渲染</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
