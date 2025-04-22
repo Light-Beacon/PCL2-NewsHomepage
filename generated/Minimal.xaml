@@ -11,9 +11,22 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -33,94 +46,122 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w16a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w17a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>在本周的快照中，拴绳有了新的力学机制，使其将生物拴在一起以及将生物拴在像船这样的实体上成为可能！现在你可以带着你的驼队横穿沙漠，或者空运你放在快乐恶魂上的载在运输船上的宝藏。运输村民从未如此简单！当你翱翔于天际之时你会见到云层渲染无边无尽。</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更改了拴绳的力学机制</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更改了鞘翅。在滑翔时，烟花火箭现在仅能用于加速，即使对方块使用也是如此</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云现在一直渲染到地平线</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">回退了对 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-101556">MC-101556</local:MyTextButton></Underline> 的修复: 下界传送门的传送范围过大（等同一个完整方块）</Paragraph></ListItem>
-</List><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph>
-在经过考虑后，我们决定回退这项更改，因为它在快照周期中来的太迟了，并且无意中破坏了我们社区依靠的一些功能。我们愿意在未来的某个时间点当有时间来解决这项更改所导致的问题时我们会重提这项更改。</Paragraph>
-
-</Section><Paragraph Style="{StaticResource H3}">拴绳更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为匹配基岩版，拴绳现在渲染两倍厚度</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">拴绳现在可以将两个生物拴在一起</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当手握拴住生物的拴绳的一头时，潜行对任意生物使用该拴绳将会把这两个生物拴在一起</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">你不可以将任何生物拴在它自己身上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果重新拴上实体会导致拴绳由于距离原因立即崩断，将不会拴上该实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对拴绳拴住的生物使用剪刀可以将其剪开其拴绳</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">应用于其自身拴绳连接和其相连的所有实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当发射器装有剪刀时也可以剪断拴绳连接</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">改进了拴绳的力学机制, 重做了拴绳的物理，允许其有着更稳定的连接，尤其是当被拴住的实体不在地面上的时候</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当被拴绳拉的时候，被拴的物体现在会朝向拴绳方向</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当拴着生物在飞行时使用烟花火箭将会断开拴绳的连接</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当拴绳连接一个已经被拴的生物，已经连接的拴绳将会崩断，使得玩家会重新拴上该物体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">你不可以从其它玩家手上偷走其拴住的实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">拴绳结与栅栏方块的交互更改：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当和拴绳结或栅栏方块交互时，如果在拴绳结范围内有任何玩家手上拴住的实体，它会重新拴在拴绳结或栅栏方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为了防止由于距离或者无任何可连接对象导致的连接生物失败，玩家现在将会转移所有栅栏拴住的物体到其本人</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果没有任何剩下生物的连接到拴绳结，拴绳结会消失</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">潜行交互只会导致玩家手上的生物连接到栅栏</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用剪刀或敲掉拴绳结将会断开所有当前连接</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">船和大型生物现在可以被拴绳连接，但是不能乘船的生物 （马、驴、骡子、骆驼以及嗅探兽）会用特别地用四根绳子连接到快乐恶魂的四个角</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">快乐恶魂现在在四角拴物体的时候同样显示自定义层</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">四角的拴绳在渲染时不会松弛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">拴绳崩断距离从 10 格改为 12 格</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">距离为两个实体判定箱的中心的距离，而不再是之前以脚下决定拴绳的所拴实体两者之间的距离</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">快乐恶魂拴绳现在更长 —— 10 格范围内自由移动，16 格距离崩断</Paragraph></ListItem>
+<Paragraph>在经历了一个漫长的周末后我们带着新快照回来了！本周我们将定位栏移出了实验性特性，快来试试并继续向我们提供反馈于 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="http://feedback.minecraft.net/">feedback.minecraft.net</local:MyTextButton></Underline>。我们也对 Realms UI 做了一些改进，包括选择你的世界所在的地区。祝挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了减少云层范围的选项</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了定位栏，一个新的在多人游戏中展示其它玩家位置的 HUD 元素</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">定位栏</Paragraph><Paragraph>定位栏是一个新的 UI 元素，可以向玩家显示世界中其它玩家的方向。</Paragraph><Paragraph>如果世界中没有其它玩家则经验条会照常显示，否则如果其它玩家在世界中（且其没有隐藏），经验条会在获得经验的时候显示，其余时间将会在同一区域显示定位栏。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">多人游戏服务器可以使用 <TextBox Style="{StaticResource InlineCode}">locatorBar</TextBox> 游戏规则切换定位栏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家可通过潜行、头戴生物头颅或雕刻南瓜或使用隐身药水隐藏自己</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在旁观者模式下的玩家不会在定位栏中可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">但旁观者模式下的玩家彼此之间仍可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">摄像机朝向一个 120 度之内的玩家时时定位栏会以带颜色的指示器显示其位置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家在屏幕的上方或下方时，指示器会显示一个向上或向下的箭头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">指示器会依据其指示玩家的距离来改变不同的图标大小</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">指示器颜色对各个玩家时随机的</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">服务器可以使用 <TextBox Style="{StaticResource InlineCode}">/waypoint</TextBox> 修改指示器颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如: <TextBox Style="{StaticResource InlineCode}">/waypoint modify @s color red</TextBox> 设置指示器为红色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在队伍中的玩家会以其队伍颜色覆盖其默认指示器颜色</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">玩家更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">潜行将会隐藏玩家，阻止其在其它玩家的定位栏中出现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">旁观者模式玩家仅对其它旁观者模式玩家在定位栏中可见</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列物品装备在头部槽位时会隐藏玩家：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">雕刻南瓜</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骷髅头颅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">凋灵骷髅头颅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">苦力怕的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">龙首</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">猪灵的头</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">药水更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用隐身药水会使自身在其它玩家定位栏中隐藏</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">改进了 Realms 配置界面</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">引入了区域偏好设置，允许更精细的控制 Realm 启动区域</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Realms</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改 Realms 配置界面外观，使用标签页</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界标签页包含了对世界槽位的更改，创建新世界以及更改其设置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家标签页可以管理可访问 Realm 的玩家以及其访问等级</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">订阅标签页可以管理 Realms 订阅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">设置标签页可以更改 Realm 的设置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">引入了区域偏好设置，允许更精细的控制 Realm 启动区域</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将关闭/打开 Realm 的措辞更改为 暂时关闭/重新打开 Realm</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 73</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版现在为 57</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 73</Paragraph><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">painting/varian</TextBox> 物品组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">不再接受内联变种</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 57</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有核心着色器 uniforms 现在为 uniform 块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云纹理（clouds.png）不再可以有颜色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">方块模型旋转角度不再限制于 22.5 的倍数</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块模型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在方块模型中的 <TextBox Style="{StaticResource InlineCode}">elements[].rotation.angle</TextBox> 值不再限制为 22.5 度的倍数，现在可以为 -45 到 +45 之间的任意角度</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">着色器与后处理器效果</Paragraph><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph>
-尽管可以通过资源包使用，但覆盖核心着色器仍被视为一个未受支持并且未被预期的资源包特性。这些着色器作为游戏内部实现的一部分而存在，因此随着游戏内部的开发该特性可能会随时发生更改。我们理解覆盖核心着色器是一个非常酷的资源包特性，但其缺少受支持的替代方案。我们愿意在将来提供更好、受支持的替代方案 </Paragraph>
-
-</Section><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有内建 uniforms 现在为 uniform 块而不再是不透明松散 uniforms</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">给后处理着色器自定义 uniform 现在为 uniform 块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">json 文件内的 uniform 定义现在按块定义</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">详见完整日志</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 74</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 58</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器认证的路径点广播系统以控制定位栏对玩家的行为</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 74</Paragraph><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">waypoint</TextBox></Paragraph><Paragraph>这是一个新的用于查询和更改路径点的指令。</Paragraph><Paragraph></Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="waypoint list&#x000A;&#x000A;waypoint modify &lt;实体选择器&gt; color &lt;颜色&gt;&#x000A;waypoint modify &lt;实体选择器&gt; color hex &lt;16进制颜色&gt;&#x000A;waypoint modify &lt;实体选择器&gt; color reset&#x000A;waypoint modify &lt;实体选择器&gt; style set &lt;路径点样式/资源&gt;&#x000A;waypoint modify &lt;实体选择器&gt; style reset"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph></Paragraph><Paragraph>参数:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">实体选择器</TextBox>: 用于选择作为路径点传输的实体(见 <TextBox Style="{StaticResource InlineCode}">waypoint_transmit_range</TextBox> 属性)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">颜色</TextBox>: 覆盖此路径点的定位栏图标颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hex &lt;16进制颜色&gt;</TextBox>: web 格式的十六进制颜色参数(RRGGBB)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红色为 <TextBox Style="{StaticResource InlineCode}">hex F00</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">hex FF0000</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">矢车菊蓝为 <TextBox Style="{StaticResource InlineCode}">hex 6495ED</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">style</TextBox>: 用于更改图标精灵图集以及选择距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">set &lt;路径点样式/资源&gt;</TextBox> 更改样式到在 <TextBox Style="{StaticResource InlineCode}">waypoint_style/</TextBox> 下的指定资源</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">reset</TextBox> 将会重置定位栏为默认图标行为</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">路径点样式</Paragraph><Paragraph>这定义了要显示于定位栏以及在 <TextBox Style="{StaticResource InlineCode}">waypoint_style/</TextBox> 资源文件夹中的自定义图标。</Paragraph><Paragraph>默认的实现如下所示：</Paragraph><Paragraph></Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{&#x000A;  &quot;near_distance&quot;: 128,&#x000A;  &quot;far_distance&quot;: 332,&#x000A;  &quot;sprites&quot;: [&#x000A;    &quot;minecraft:default_0&quot;,&#x000A;    &quot;minecraft:default_1&quot;,&#x000A;    &quot;minecraft:default_2&quot;,&#x000A;    &quot;minecraft:default_3&quot;&#x000A;  ]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">near_distance</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">far_distance</TextBox> 是可选的，分别默认为 <TextBox Style="{StaticResource InlineCode}">128</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">332</TextBox>。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">far_distance</TextBox> 距离必须比 <TextBox Style="{StaticResource InlineCode}">near_distance</TextBox> 要大</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每一个前缀为 <TextBox Style="{StaticResource InlineCode}">hud/locator_bar_dot/</TextBox> （在 <TextBox Style="{StaticResource InlineCode}">textures/gui/sprites/hud/locator_bar_dot</TextBox> 文件夹里的）的精灵图都会被搜索</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个生成自定义名字为 &quot;Xilefian&quot; 的传播自定义图标路径点的生物的例子:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">/summon armor_stand ~ ~ ~ {CustomName:[{text:Xilefian}],attributes:[{id:waypoint_transmit_range,base:1000f}]}</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏规则</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">locatorBar</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为开启，启用定位栏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">切换到关闭将从所有玩家移除所有存在的路径点</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">游戏规则从实验性的 <TextBox Style="{StaticResource InlineCode}">useLocatorBar</TextBox> 重命名为当前名称。这可能破坏在之前快照中创建的次要的命令相关特性</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">waypoint_transmit_range</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">waypoint_receive_range</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox>，最小值: <TextBox Style="{StaticResource InlineCode}">0.0</TextBox>，最大值: <TextBox Style="{StaticResource InlineCode}">60000000.0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家默认拥有距离为 60,000,000 的收发范围</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">传输距离为正的生物会向附近的接收者发送路径点包</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">类似的，接收者只能在接收距离为正的情况下接收，且无法接受超过这个距离的路径点</Paragraph></ListItem>
+</List><Paragraph>例如:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute @s minecraft:waypoint_transmit_range base set 0</TextBox> 会阻止玩家传输（隐藏他们）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute @s minecraft:waypoint_transmit_range base set 80</TextBox> 会仅让玩家传输最远 80 格（对比这个距离远的玩家隐藏）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute @s minecraft:waypoint_receive_range base set 0</TextBox> 会阻止玩家接收（关闭他们的定位栏）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">/attribute @s minecraft:waypoint_receive_range base set 120</TextBox> 会仅玩家看见 120 格方块内的定位栏点(隐藏远于此距离的所有玩家)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">路径点广播</Paragraph><Paragraph>定位栏使用服务器控制的路径点系统，路径点由玩家接收，且路径点与玩家之间的连接由多人游戏服务器管理。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在默认情况下，所有玩家从自身传输路径点，并且所有玩家会收到所有路径点</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以由 <TextBox Style="{StaticResource InlineCode}">waypoint_transmit_range</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">waypoint_receive_range</TextBox> 属性控制个别玩家的传输以及接收范围</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">happy_ghast_avoids</TextBox> - 快乐恶魂避免靠近的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">triggers_ambient_dried_ghast_block_sounds</TextBox> - 当失水恶魂放置在其上边时可以触发失水恶魂环境音效的方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 58</Paragraph><Paragraph Style="{StaticResource H3}">着色器以及后处理器效果</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">fog</TextBox> Uniform 块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FOG_IS_SKY</TextBox> 已被移除以拆分天空着色器</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-04-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-04-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -332,7 +373,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-04-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-04-22" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
