@@ -1,7 +1,7 @@
 name: Check Minecraft Version
 on:
    schedule:
-    - cron:  '0/30 * * * *'
+    - cron:  '0/15 13-19 * * *'
    workflow_dispatch:
       
 jobs:
