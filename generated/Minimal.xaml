@@ -31,55 +31,65 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w18a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w19a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">喷溅药水效果持续时间现在基于距离判定箱的距离</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在拴绳配方中的黏液球现在替换为线</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">猪灵以物易物时可以交易失水恶魂</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">失水恶魂配方现在需求一个灵魂沙而不再为一个骨块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">喷溅药水</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">喷溅药水影响实体的距离现在取决于实体判定箱与喷溅药水落地的判定箱最近的距离</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着如果实体直接被喷溅药水击中，则其会完整地获得药水效果</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果实体在一起，它们会获得相同的效果持续时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">弹射物目标差幅随着时间变化</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">微调了迷雾以改进大气透视</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下雨时迷雾更浓了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">测试框架在服务器重启后不再尝试重启测试</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">弹射物瞄准</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">弹射物目标差幅现在随着时间变化</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在之前，所有弹射物拥有 0.3 格的目标差幅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在，所有弹射物飞行的最开始两个游戏刻无差幅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在这之后，弹射物差幅在没将会扩宽 0.05 格直到其达到之前的 0.3 格宽</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这允许了在玩家或实体更精确地发射弹射物，并在弹射物很远的时候仍允许一些碰撞误差</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 75</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 59</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有 JSON 文件（在世界、包、配置等等中的）现在以严格模式解析</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 75</Paragraph><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">对所有生物增加了 <TextBox Style="{StaticResource InlineCode}">home_pos</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">home_radius</TextBox> 字段</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">设置了家位置的生物将会限制其寻路以呆在指定区域</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">一些生物，如蝙蝠、史莱姆、岩浆怪、幻翼以及末影龙可能会忽略它</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用拴绳或骑乘可能更改生物的家位置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 <TextBox Style="{StaticResource InlineCode}">#followable_friendly_mobs</TextBox> 以包含快乐恶魂</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 59</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 Unifont 至 16.0.03</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 76</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">--quickPlaySingleplayer</TextBox> 命令行参数现在可以在无标识符时启动上一次游玩的世界</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包本包 76</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">快乐恶魂的 <TextBox Style="{StaticResource InlineCode}">scale</TextBox> 属性现在上限为 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><Paragraph Style="{StaticResource H4}">TNT</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">点燃 TNT 的实体现在被存储于可选的 <TextBox Style="{StaticResource InlineCode}">owner</TextBox> 字段 (活体的 UUID)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">恼鬼</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">恼鬼的主人现在存储于可选的 <TextBox Style="{StaticResource InlineCode}">owner</TextBox> 字段（生物的 UUID）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 60</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">全景图纹理现在必须有着相同的大小且为正方形</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">失水恶魂的音效更改</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">UI 精灵图</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hud/locator_bar_arrow_up</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">hud/locator_bar_arrow_down</TextBox> 精灵图现在以 <TextBox Style="{StaticResource InlineCode}">.mcmeta</TextBox> 文件对应的动画标准动画定义展示动画</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">字体</Paragraph><Paragraph Style="{StaticResource H4}">Unifont</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 Unifont 至 16.0.03</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了之前忽略的私用区字形</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这些字形以分割的子字体 <TextBox Style="{StaticResource InlineCode}">minecraft:include/unifont_pua</TextBox> 加载并且不包含任何通常使用到的字体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在这些区域的字符由 Under-CSUR (Under-ConScript Unicode Registry) 管理，其增加了各样的不在官方 Unicode 集合中的脚本, 如 Tengwar 以及 Sitelen Pona</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">unihex 字体提供器</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">字段 <TextBox Style="{StaticResource InlineCode}">size_overrides</TextBox> 现在为可选字段 (默认为空列表)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">生物效果图集被移除，在 <TextBox Style="{StaticResource InlineCode}">textures/mob_effect/</TextBox> 文件夹下的精灵图现在包含于 GUI 图集中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着生物效果精灵图现在支持 GUI 精灵图缩放属性</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">着色器与后处理器效果</Paragraph><Paragraph Style="{StaticResource H4}">着色器迷雾更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">迷雾现在被拆分为环境迷雾以及基于距离渲染的迷雾</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前这两个概念在相同的 uniform 中混合使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">环境迷雾应用于表达玩家所在的 “雾蒙蒙” 的环境：熔岩、水以及一些空气</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">距离渲染迷雾应用于模糊可见地形的边界</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">环境迷雾使用球形距离来决定其强度，距离渲染迷雾使用圆柱形距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">给定的定点的迷雾值结果是两者中的最大值</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">Fog</TextBox> Uniform 块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FogStart</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">FogRenderDistanceStart</TextBox> 并现在代表迷雾起始渲染距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FogEnd</TextBox>重命名为 <TextBox Style="{StaticResource InlineCode}">FogRenderDistanceEnd</TextBox> 并现在代表迷雾结束渲染距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FogEnvironmentalStart</TextBox> 是一个新的字段，代表环境迷雾渲染的起始</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FogEnvironmentalEnd</TextBox> 是一个新的字段，代表环境迷雾渲染的结束</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">FogShape</TextBox> 被移除。 迷雾渲染距离现在为圆柱形，环境迷雾现在为球形</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">声音事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.dried_ghast.hit</TextBox> 被移除</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-05-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -291,7 +301,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-05-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
