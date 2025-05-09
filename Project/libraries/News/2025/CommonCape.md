@@ -7,11 +7,11 @@ title: 新披风与披风迁移
 ![](https://img.picgo.net/2025/05/07/IMG_2038d256d3df8a12f396.png)
 
 ### 两个基岩版披风同步到 Java 版
-在基岩版上 薄煎饼披风 与 MINECON Live 2019 创始人披风 正同步到 Java 版。
+在基岩版上 薄煎饼披风 与 创始人披风 正同步到 Java 版。
 
 ![](https://img.picgo.net/2025/05/09/2025-05-09-16.56.292f07d2c733e86e64.png)
 
 注：
 
 * 薄煎饼披风所有基岩版账号默认拥有该披风
-* MINECON Live 2019 创始人披风 于 MINECON Live 2019 期间在基岩版商店免费获取
+* 创始人披风于 MINECON Live 2019 期间在基岩版商店免费获取
