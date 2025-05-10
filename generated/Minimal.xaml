@@ -11,11 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -35,6 +33,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
@@ -56,7 +56,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 76</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">--quickPlaySingleplayer</TextBox> 命令行参数现在可以在无标识符时启动上一次游玩的世界</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包本包 76</Paragraph><List>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 76</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">快乐恶魂的 <TextBox Style="{StaticResource InlineCode}">scale</TextBox> 属性现在上限为 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><Paragraph Style="{StaticResource H4}">TNT</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">点燃 TNT 的实体现在被存储于可选的 <TextBox Style="{StaticResource InlineCode}">owner</TextBox> 字段 (活体的 UUID)</Paragraph></ListItem>
@@ -89,7 +89,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-05-10" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -301,7 +301,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-05-10" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
