@@ -1,6 +1,9 @@
+"""
+获取版本分类的卡片ID列表
+"""
 from homepagebuilder.interfaces import script,require
 
-mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
+mcv = require('minecraft_version') # 需求前置 MinecraftVersions
 MANIFSET = mcv.get_manifset()
 FULL_VERSIONS = MANIFSET.get('versions')
 ID_LIST = [version.get('id') for version in FULL_VERSIONS]

@@ -1,3 +1,7 @@
+"""
+分割线内容空格生成
+"""
+
 from homepagebuilder.interfaces import script
 
 @script('SeparatorContent')

@@ -1,6 +1,10 @@
+"""
+版本最新、存档页面列表
+"""
+
 from homepagebuilder.interfaces import require,script,format_code
 
-mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
+mcv = require('minecraft_version') # 需求前置 MinecraftVersions
 MANIFSET = mcv.get_manifset()
 FULL_VERSIONS = MANIFSET.get('versions')
 ID_LIST = [version.get('id') for version in FULL_VERSIONS]

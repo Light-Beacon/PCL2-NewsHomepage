@@ -1,3 +1,8 @@
+""" 
+替换主页的主题颜色 
+启用: news.replacecolor 设为 true
+"""
+
 from homepagebuilder.interfaces.Events import on, ResultOverride
 from homepagebuilder.core.config import enable_by_config
 

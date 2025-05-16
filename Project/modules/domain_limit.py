@@ -1,3 +1,7 @@
+"""
+限制域名为指定列表内容
+"""
+
 from homepagebuilder.interfaces import config
 from homepagebuilder.interfaces.Events import on, ResultOverride
 

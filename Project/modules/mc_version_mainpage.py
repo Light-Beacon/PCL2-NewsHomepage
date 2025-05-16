@@ -1,6 +1,9 @@
+"""
+主页MC版本卡片选择器
+"""
 from homepagebuilder.interfaces import script,require,Logger
 
-mcv = require('MinecraftVersions') # 需求前置 MinecraftVersions
+mcv = require('minecraft_version') # 需求前置 MinecraftVersions
 latest_version = mcv.get_latest()
 latest_type = mcv.get_version_type(latest_version)
 logger = Logger('MainPageVersions')

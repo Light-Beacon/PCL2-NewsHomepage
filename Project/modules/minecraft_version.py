@@ -1,3 +1,7 @@
+"""
+获取 MC 版本信息
+"""
+
 from homepagebuilder.interfaces import Logger
 import requests
 import json

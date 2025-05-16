@@ -1,3 +1,7 @@
+"""
+生成官网链接
+"""
+
 import re
 from homepagebuilder.interfaces import script
 from homepagebuilder.core.formatter import format_code
