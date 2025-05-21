@@ -1,4 +1,6 @@
 ---
+display_time: 2025-5-7
+display_span: 30d
 title: 新披风与披风迁移
 ---
 ### 免费领取普通披风
