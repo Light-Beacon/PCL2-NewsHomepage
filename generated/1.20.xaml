@@ -223,13 +223,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="85f20ce" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/85f20ced5a15699c036d4710dba1c2af8e8c15e9"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="e15f11e" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/e15f11ef2668656a20491cbb673156c2c6894fe7"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
-    <Image Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/LB.png"/>
-    <Image Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/PHB_2.png"/>
+    <local:MyImage Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/LB.png"/>
+    <local:MyImage Margin="2" Source="https://image.stapxs.cn/i/2024/05/24/PHB_2.png"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,0,0,2">
     <local:MyIconTextButton HorizontalAlignment="Left" Text="GitHub" ToolTip="前往新闻主页 GitHub 页面" EventType="打开网页"
