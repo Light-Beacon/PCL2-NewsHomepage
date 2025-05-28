@@ -11,9 +11,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
@@ -34,80 +31,24 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w21a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 1.21.6-pre1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>在这个快照星期二，夏季的风终于吹到了斯德哥尔摩。但我们的一些开发者似乎还在心心念念着那些美丽的灰蒙蒙的下着小雨的天空，入情太深，坚决要求要把 Minecraft 的云层换个新颜。多么让人眼前“移”亮啊!</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了天空的云的图案</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在可以通过喂食马、驴和骡胡萝卜来治疗、加速成长以及驯化性格</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">音乐与音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的拴绳断裂音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的剪下鞍、马铠以及从羊驼身上剪下地毯的自定义音效</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 78</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 62</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 78</Paragraph><Paragraph Style="{StaticResource H3}">对话框</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">run_command</TextBox> 点击事件现在会正确地关闭对话框以及书屏幕，即使命令不需要权限提升</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对话框现在应该在任何关闭的情况下正确返回到之前不是对话框的屏幕</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果在一个警告屏幕显示时一个新的对话框被客户端接收现在将不会替换警告屏幕，但是如果用户点击返回按钮，新的对话框将恢复</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对话框元素的尺寸现在被限制：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">按钮 - 1 到 1024（含）之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:plain_message</TextBox> 对话框体 - 1 到 1024（含）之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:item</TextBox> 对话框体</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">description</TextBox> 的 <TextBox Style="{StaticResource InlineCode}">width</TextBox> - 1 到 1024（含）之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">width</TextBox> - 1 到 256（含）之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">height</TextBox> - 1 到 256（含）之间</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:text</TextBox> 输入控件 - 1 到 1024（含）之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:single_option</TextBox> 输入控件 - 1 到 1024（含）之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:number_range</TextBox> 输入控件 - 1 到 1024（含）之间</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">MINECRAFT:TEXT</TextBox> 输入控件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">max_length</TextBox> - 输入最大长度，正整型值，默认为32</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">multiline</TextBox> - 若指定，允许用户输入多行，可选，含有以下字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">max_lines</TextBox> - 若指定, 限制最多行数，可选，正整型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">height</TextBox> - 输入框的高度，可选的整型，1 到 512 之间</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果未指定该字段，但 <TextBox Style="{StaticResource InlineCode}">max_lines</TextBox> 指定，高度会贴合最大行数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果该字段与 <TextBox Style="{StaticResource InlineCode}">max_lines</TextBox> 均未指定，默认高度为4行</Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">MINECRAFT:NUMBER_RANGE</TextBox> 输入控件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">steps</TextBox> 被替换为如下新字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">step</TextBox> - 步长值，可选正浮点值</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">若指定，仅符合 <TextBox Style="{StaticResource InlineCode}">initial + &lt;any integer&gt; * step</TextBox> 的值被允许</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，范围内的任何值都被允许</Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">initial</TextBox> - 如果未指定，默认为范围的中间值</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">MINECRAFT:MULTI_ACTION_INPUT_FORM</TextBox> 对话框类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的字段 <TextBox Style="{StaticResource InlineCode}">columns</TextBox> - 描述列数的正整型，默认：<TextBox Style="{StaticResource InlineCode}">2</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">资源包版本 62</Paragraph><Paragraph Style="{StaticResource H4}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加拴绳断裂音效 <TextBox Style="{StaticResource InlineCode}">entity/leashknot/break</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列音效被重命名：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/leashknot/break1</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/leashknot/unleash1</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/leashknot/break2</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/leashknot/unleash2</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/leashknot/break3</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/leashknot/unleash3</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/leashknot/place1</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/leashknot/leash1</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/leashknot/place2</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/leashknot/leash2</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/leashknot/place3</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/leashknot/leash3</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列音效被添加，用在剪下鞍、马铠以及从羊驼身上剪下地毯</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">mob/horse/armor_unequip</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">mob/horse/saddle_unequip</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">mob/llama/unequip</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List>
+
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-05-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -319,7 +260,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-23" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-05-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
