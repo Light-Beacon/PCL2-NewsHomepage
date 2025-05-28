@@ -1,4 +1,4 @@
-<Style TargetType="Image" x:Key="VersionImage" >
+<Style TargetType="local:MyImage" x:Key="VersionImage" >
   <Setter Property="Stretch" Value="UniformToFill"/>
   <Setter Property="VerticalAlignment" Value="Center"/>
 </Style>
