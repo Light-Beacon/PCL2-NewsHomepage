@@ -30,57 +30,36 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新预发布版 - 1.21.6-pre1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 1.21.6-pre2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>嘿！这里是 1.21.6 的第一个预发布版。从现在开始，你更多会看到我们在修复漏洞，并且每周的发布计划中可能不止一个快照。我们现在正在本年度第二个小更新的终点线上！</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">失水恶魂现在当方块状态更改时发出频率为 11 的震动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">剪下鞍、马铠和地毯现在会发出频率为 6 的震动，并同时发出频率为 4 的卸下装备震动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">失水恶魂环境音效现在调整至方块音效选项下，而不再是环境音效下</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">骑乘快乐恶魂的玩家不再完全地飞行穿过另一个玩家骑乘的快乐恶魂</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 79</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 63</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 79</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">对话框现在可以在暂停游戏时并在动作执行完毕后关闭时配置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有对话框现在可以有输入并可以提交信息</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">对动作的定义已被更改以容纳该行为</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">因为现在多余，专用的输入对话框类型已被移除</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">元素的顺序为：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Body</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Inputs</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Actions</Paragraph></ListItem>
+<Paragraph>我们用另一个预发布版来敲开本周的大门，本次预发布包含了一些音乐以及快乐恶魂的漏洞修复。随着距离“追逐天空”小更新的发布越来越近，发布预发布版的频率可能超过每周一次。</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">音乐与音效</Paragraph><Paragraph>下列音效分类被重命名</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Friendly Creatures -&gt; Friendly Mobs</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Hostile Creatures -&gt; Hostile Mobs</Paragraph></ListItem>
+</List><Paragraph><Italic>（译者注：对中文玩家无影响）</Italic></Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><Paragraph Style="{StaticResource H3}">对话框</Paragraph><Paragraph Style="{StaticResource H4}">对话框控件格式</Paragraph><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:text</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">作为模版代替：转译了有着特殊字符的内容以适配 SNBT （注：<TextBox Style="{StaticResource InlineCode}">&apos;</TextBox>与<TextBox Style="{StaticResource InlineCode}">&quot;</TextBox>均转译）</Paragraph></ListItem>
 </List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对多行字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">height</TextBox> 字段缺省，但指定了 <TextBox Style="{StaticResource InlineCode}">max_lines</TextBox>，高度将会适应为不超过 <TextBox Style="{StaticResource InlineCode}">512</TextBox> 的最大行数</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:custom</TextBox> 点击事件被扩展以承载完整 NBT 标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的按键绑定“快捷操作”以允许访问内容配置的对话框</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">快捷操作按键绑定</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的按键绑定以允许用户访问一系列对话框</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认按键：<TextBox Style="{StaticResource InlineCode}">G</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这项特性由 <TextBox Style="{StaticResource InlineCode}">minecraft:quick_actions</TextBox> 对话框标签配置</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果标签为空，按键绑定不产生任何效果</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果标签是单一元素，按键绑定将会打开对话框</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果标签是多个元素，按键绑定将会（默认）给玩家带到 <TextBox Style="{StaticResource InlineCode}">minecraft:quick_actions</TextBox> 对话框以使玩家选择一个标签元素</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果对话框被移除，按键绑定不产生任何效果</Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这个选项目的是在自定义内容以及服务器中使用，所以这个标签默认为空</Paragraph></ListItem>
 </List>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-06-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -292,7 +271,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-05-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-06-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
