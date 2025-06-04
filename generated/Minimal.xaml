@@ -11,6 +11,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -30,36 +35,34 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新预发布版 - 1.21.6-pre2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 1.21.6-pre3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>我们用另一个预发布版来敲开本周的大门，本次预发布包含了一些音乐以及快乐恶魂的漏洞修复。随着距离“追逐天空”小更新的发布越来越近，发布预发布版的频率可能超过每周一次。</Paragraph><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">音乐与音效</Paragraph><Paragraph>下列音效分类被重命名</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Friendly Creatures -&gt; Friendly Mobs</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Hostile Creatures -&gt; Hostile Mobs</Paragraph></ListItem>
-</List><Paragraph><Italic>（译者注：对中文玩家无影响）</Italic></Paragraph><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><Paragraph Style="{StaticResource H3}">对话框</Paragraph><Paragraph Style="{StaticResource H4}">对话框控件格式</Paragraph><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:text</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">输出值：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">作为模版代替：转译了有着特殊字符的内容以适配 SNBT （注：<TextBox Style="{StaticResource InlineCode}">&apos;</TextBox>与<TextBox Style="{StaticResource InlineCode}">&quot;</TextBox>均转译）</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对多行字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">height</TextBox> 字段缺省，但指定了 <TextBox Style="{StaticResource InlineCode}">max_lines</TextBox>，高度将会适应为不超过 <TextBox Style="{StaticResource InlineCode}">512</TextBox> 的最大行数</Paragraph></ListItem>
-</List></ListItem>
+<Paragraph>我们发布了最新最热的另一个预发布版！这个版本带来了新的进度触发器以及音效类别，最重要的是带来了一些必要的漏洞修复。</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><Paragraph Style="{StaticResource H3}">音乐与音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为 UI 元素播放的音效，如按钮点击，增加了新的音效类别 &quot;UI&quot;</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 80</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 80</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">player_sheared_equipment</TextBox> 触发器</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">新触发器</Paragraph><Paragraph>增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:player_sheared_equipment</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在玩家剪下实体的可剪装备时触发</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">条件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item</TextBox> - 被剪下的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity</TextBox> - 被剪下的实体</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">PLAYSOUND</TextBox> 修改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的类别 <TextBox Style="{StaticResource InlineCode}">ui</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">类似于 <TextBox Style="{StaticResource InlineCode}">music</TextBox>，此类别中的音效在游戏暂停时仍会继续播放</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-06-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-06-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -271,7 +274,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-06-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-06-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
