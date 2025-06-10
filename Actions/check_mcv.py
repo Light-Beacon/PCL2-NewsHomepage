@@ -49,12 +49,12 @@ def update_library(version_mainfest, version_libloc:str, ver_type:str, ver_id:st
     #write file
     filepath = Path(version_libloc) / generate_filepath(ver_type, ver_id)
     if os.path.exists(filepath):
-        print(f'版本库内已存在 {ver_type} 版 {ver_id} 的文件，跳过添加')
+        #print(f'版本库内已存在 {ver_type} 版 {ver_id} 的文件，跳过添加')
         return False
     else:
         with open(filepath.absolute(), "w", encoding='UTF-8') as file:
             file.write(content)
-        print(f'已添加 {ver_type} 版 {ver_id} 的文件到版本库')
+        #print(f'已添加 {ver_type} 版 {ver_id} 的文件到版本库')
         return True
 
 def get_server_jar(version_mainfest,version_id):
