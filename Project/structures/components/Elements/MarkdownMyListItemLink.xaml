@@ -1,0 +1,7 @@
+<local:MyListItem 
+    ${@IF|${tooltip}|ToolTip="${tooltip}"}
+    ${@IF|${logo_scale}|LogoScale="${logo_scale}"}
+    Logo="${logo}"
+    Title="${title}"
+    ${@IF|${info}|Info="${info}"}
+    EventType="打开网页" EventData="${href}" Type="Clickable" />
