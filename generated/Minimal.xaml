@@ -11,256 +11,33 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style  TargetType="TextBox" x:Key="InlineCode">
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="Margin" Value="2,0,2,-4" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="Height" Value="18" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-                <ControlTemplate.Triggers>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新发布候选版 - 1.21.6-rc1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新正式版 - 1.21.6" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>我们已经准备好“追逐天空”了，这是我们第一次试飞 1.21.6 —— 也就是发布候选 1！</Paragraph><Paragraph>快乐恶魂快乐！</Paragraph>
+<BlockUIContainer><local:MyListItem 
+    
+    LogoScale="1.0"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png"
+    Title="观看宣传片"
+    Info="B站视频 ｜ UP：WuGuangYao"
+    EventType="打开网页" EventData="https://b23.tv/Eau6oDU" Type="Clickable" /></BlockUIContainer><BlockUIContainer><local:MyListItem 
+    
+    LogoScale="1.0"
+    Logo="pack://application:,,,/images/Blocks/Fabric.png"
+    Title="浏览宣传册"
+    Info="B站专栏 ｜ 译者：最亮的信标"
+    EventType="打开网页" EventData="https://b23.tv/dvD0Xo9" Type="Clickable" /></BlockUIContainer>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-06-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 1.21.5" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了猪、牛和鸡的热带及寒带变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">羊的羊毛颜色现在取决于其所生成位置的生物群系</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的狼音效变种 </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">刷怪蛋视觉改造以改进可读性</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了萤火虫灌木丛 方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了枯叶方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了野花簇方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了灌木丛方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了矮枯草丛和高枯草丛方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了可以生长在仙人掌上的仙人掌花方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了对所有没有落叶粒子的树叶方块增加了新的落叶粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在沙漠以及恶地生物群系增加了新的环境方块音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了对吉尔吉斯语的支持</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">家畜生物变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列生物增加了热带和寒带变种：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">猪</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">牛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">鸡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">变种类型取决于其所生成位置的生物群系</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">温带变种 - 我们都熟悉的变种，在其它变种不在此生成的地方以默认行为生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">寒带变种 - 在下列生物群系（自然或由玩家）生成的变种：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冷水海洋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冷水深海</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">深暗之域</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冰冻深海</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末地荒地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末地高地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末地内陆</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冻洋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冰封山峰</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冻河</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">雪林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冰刺之地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">尖峭山峰</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原始松木针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原始云杉针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末地小型岛屿</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">积雪沙滩</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">雪原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">积雪山坡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">积雪针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">裸岩山峰</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">针叶林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">末地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">热带变种 - 在下列生物群系（自然或由玩家）生成的变种：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">恶地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">竹林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">玄武岩三角洲</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绯红森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">温水深海</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">沙漠</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风蚀恶地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">温水海洋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">红树林沼泽</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下界荒地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">热带草原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">热带高原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">灵魂沙峡谷</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">稀疏丛林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">暖水海洋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">诡异森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭热带草原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">疏林恶地</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当由玩家繁殖时，幼体的变种类型不会依据所在生物群系，而是在双亲的变种类型中随机取其一。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为鸡变种增加了两种新的蛋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蓝色鸡蛋 - 由寒带变种的鸡下的蛋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">棕色鸡蛋 - 由热带变种的鸡下的蛋</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">寒带与热带生物群系中的绵羊羊毛颜色</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊生成时的羊毛颜色现在取决于其所处生物群系：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">温带生物群系：（与之前的行为比未受更改）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">常见的绵羊颜色是白色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不常见的绵羊颜色是黑色、灰色、淡灰色以及棕色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">以很低的概率会生成粉色绵羊</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">寒带生物群系：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">常见的绵羊颜色是黑色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不常见的绵羊颜色是灰色、淡灰色、白色以及棕色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">以很低的概率会生成粉色绵羊</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">热带生物群系：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">常见的绵羊颜色是棕色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">不常见的绵羊颜色是灰色、淡灰色、白色以及黑色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">以很低的概率会生成粉色绵羊</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">狼音效变种</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 6 个新的狼音效变种，有着独特的空闲、受伤、死亡、嚎叫、呜咽和喘息音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新的6种变种包括大型犬（big）、可爱（cute）、小巴哥犬（puglin）、愤怒（angry）、不爽（grumpy）和悲伤（sad），</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原来的音效现在称为普通（classic）变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">每只狼都会从上述7种音效变种中随机选取一种使用</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">而与其纹理变种无关</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">刷怪蛋视觉改造</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">每个刷怪蛋现在拥有其独特代表其生成生物的特点的外观</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">每个刷怪蛋外观大小体现了其生成的生物在世界中的大小</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如，小生物倾向于拥有一个更小的刷怪蛋</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">倒下的树木</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树木是一个新的树木装饰性变种：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的树加入到了以下四种树木类型的变种中：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">橡树  </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">白桦  </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林  </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云杉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">倒下的白桦树有短和长两种版本</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">有些倒下的树木附有蘑菇和藤蔓做为装饰</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有会生成对应立式树木的生物群系中均会生成倒下的树木，除了下列生物群系：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">竹林  </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">繁花森林 (有倒下的白桦树但没有倒下的橡树)  </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">雪林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">草甸</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">河流</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">萤火虫灌木丛</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛能在沼泽、红树林沼泽、恶地以及靠近河流的水边找到</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当暗下来时，发光的萤火虫粒子在萤火虫灌木丛周围出现</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉会在附近可生成位置生成新萤火虫灌木丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛发出等级为2的光照</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当下列条件满足时，萤火虫灌木丛有概率会发出特殊的环境音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">晚上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">上方除树叶、地毯、竹笋外无任何固体方块阻挡</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">枯叶</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶是一种能在森林、 黑森林以及疏林恶地找到的新的装饰性方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">注: 枯叶仅以世界生成的一部分生成，并在游戏中不会重新生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格方块空间内有不同数量的枯叶片</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在同一格方块空间内最多有四片</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对已有枯叶方块放置枯叶会增加枯叶的数量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以以四种方向放置枯叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以放置在有完整顶面的方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以由任意树叶方块烧炼而成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以被当作烧炼燃料</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶可以被用于堆肥</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶拥有独特的方块音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">枯叶会随所处的生物群系着色</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当放置方块时枯叶可以被方块直接替换</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">野花簇</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">野花簇是一种新的花，生成于桦木森林、原始桦木森林和草甸</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以在一格方块空间内有不同数量的野花簇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在同一格方块空间内最多有四簇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对已有野花簇方块放置野花簇会增加野花簇的数量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对野花簇使用骨粉会生成更多野花簇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以以四种方向放置野花簇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">野花簇可以合成黄色染料</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">灌木丛</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛是一种新的装饰方块，会在以下生物群系以斑块形式生成：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">桦木森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">冻河</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">原始桦木森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">平原</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">河流</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭森林</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭沙砾丘陵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">风袭丘陵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛可以被用于堆肥</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉会在附近可生成位置生成新灌木丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛仅能由剪刀或附有精准采集的工具破坏时掉落</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当放置方块时灌木丛可以被方块直接替换</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">矮枯草丛和高枯草丛</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了两种新的草：矮枯草丛和高枯草丛 </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">都只有一格高，意味着高枯草丛与两格高的高草丛不同</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">都在沙漠与恶地生物群系生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与枯萎的灌木一样能放置于沙子、陶瓦和泥土类方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对其使用骨粉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">矮枯草丛会生长为高枯草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">高枯草丛在其周围的有效位置生成矮枯草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">均可用于堆肥</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绵羊可以食用它们重新长出羊毛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">都可用于作为烧炼燃料</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当放置方块时都可被方块直接替换</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">仙人掌花</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花是一种新的花，有概率生成在沙漠和恶地的仙人掌上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以被放置在仙人掌、耕地或任何顶部提供中心支持的方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花有概率生成在仙人掌上，并阻止仙人掌长得更高</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果仙人掌 1-2 格高，仙人掌花则有 10% 的概率生长</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果仙人掌 3 格高，仙人掌花则有 25% 的概率生长</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花仅当四面均无固体方块时才会生长</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以被用于堆肥</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仙人掌花可以合成一个粉色染料</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">落叶粒子</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有树叶方块有概率生成落叶粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列方块受本次更改影响： </Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">杜鹃树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">白桦树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">盛开的杜鹃树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">红树树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">橡树树叶</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云杉树叶</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">沙漠和恶地的新环境音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当玩家周围被至少 3 个方向，最小 8 格远的沙子、红沙或任意颜色的陶瓦包围，有一定几率播放环境音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.idle</TextBox> 在任意生物群系均可播放</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sand.wind</TextBox> 仅在沙漠和恶地群系播放</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当枯萎的灌木丛在任意生物群系，两个任意颜色的陶瓦、沙子或红沙上方时有一定几率播放环境音效</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-06-12" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-06-21" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
