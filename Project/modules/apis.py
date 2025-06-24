@@ -27,7 +27,7 @@ class StatusPage(CodeBasedPage):
     def generate(self, *args, **kwargs):
         return 'ok'
 
-    def get_content_type(self, setter):
+    def get_content_type(self, setter, *args, **kwargs):
         return 'text/plain'
 
 mcv = require('minecraft_version') # 需求前置 MinecraftVersions
@@ -70,27 +70,27 @@ class LatestVersionAPI(CodeBasedPage):
         self.copyinfo(respond,expendedcard,'title')
         respond['homepage-json-link'] = f"https://news.bugjump.net/VersionDetail.json?ver={expendedcard['version-id']}"
         return respond
-    
+
     def copyinfo(self,respond,card,key):
         respond[key] = card.get(key)
 
-    def generate(self, context):
+    def generate(self, context, *args, **kwargs):
         args = get_args(context)
         ensure_ascii = is_true(args.get('ascii',False))
         if not self.respond:
             self.pregen_respond(context)
         return json.dumps(self.respond,ensure_ascii=ensure_ascii)
-    
-    def get_content_type(self, setter):
+
+    def get_content_type(self, setter, *args, **kwargs):
         return 'application/json'
-    
+
 @page_class_handles('apis/versions/latest-card')
 class LatestVersionCardAPI(CodeBasedPage):
-    def generate(self, context:'Context'):
+    def generate(self, context:'Context', *args, **kwargs):
         setter = context.setter
         card = self.project.base_library.get_card('VersionLatestListCard', False)
         card = setter.decorate(card)
         return context.builder.template_manager.build(card, context=context)
 
-    def get_content_type(self, setter):
+    def get_content_type(self, setter, *args, **kwargs):
         return 'application/xml'
