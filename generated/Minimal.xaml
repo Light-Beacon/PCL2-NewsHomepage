@@ -13,9 +13,36 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新正式版 - 1.21.6" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新发布候选版 - 1.21.7-rc1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph>今天我们带来了 1.21.7 的发布后选 1，对一些在追逐天空小更新（1.21.6）中偷偷藏起来的严重问题的热修复。这份热修复还包含了新的音乐唱片以及好狗狗丹尼斯（译者注：MC大电影的史蒂夫的狗）的画。如果没有发现其它严重问题，这就是马上要发布的 1.21.7 的正式版本。祝挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了由 Sarah Boeving 创作的好狗狗的画</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了由 Hyper Potions 创作的音乐唱片《Lava Chicken》（译者注：改自MC大电影的熔岩烤鸡）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当杀死骑着鸡的幼年僵尸（鸡骑士）时掉落</Paragraph></ListItem>
+</List></ListItem>
+</List><BlockUIContainer><local:MyListItem 
+    
+    LogoScale="1.0"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png"
+    Title="听新唱片《Lava Chicken》"
+    Info="B站视频 ｜ UP：WuGuangYao"
+    EventType="打开网页" EventData="https://b23.tv/yPIfMjF" Type="Clickable" /></BlockUIContainer>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2025-06-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.6" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -37,7 +64,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-06-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-06-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
