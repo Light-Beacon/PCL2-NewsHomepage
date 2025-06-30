@@ -11,9 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
@@ -21,7 +21,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>热如熔岩的热修复。这就是 Minecraft 1.21.7，带给了你迪斯科舞会的最热更新，再加上壁画以及一些崩溃与漏洞修复。我们添加了新的 3x3 的画来致敬所有人的最好的伙伴，同时还刷新了一个标志性生物的战利品。骑着鸡的幼年僵尸（鸡骑士）将会在被击杀时掉落 “Lava Chicken” 音乐唱片。</Paragraph><Paragraph>在之后的几周内我们会来着下一个快照回来。</Paragraph><Paragraph>挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<Paragraph>热如熔岩的热修复。这就是 Minecraft 1.21.7，带给了你迪斯科舞会的最热更新，再加上壁画以及一些崩溃与漏洞修复。我们添加了新的 3x3 的画来致敬所有人的最好的伙伴，同时还刷新了一个标志性生物的战利品。骑着鸡的幼年僵尸（鸡骑士）将会在被击杀时掉落 “Lava Chicken” 音乐唱片。</Paragraph><Paragraph>在之后的几周内我们会带着下一个快照回来。</Paragraph><Paragraph>挖矿愉快！</Paragraph><Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了由 Sarah Boeving 创作的好狗狗的画</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了由 Hyper Potions 创作的音乐唱片《Lava Chicken》（译者注：改自MC大电影的熔岩烤鸡）</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">当击杀骑着鸡的幼年僵尸（鸡骑士）时掉落</Paragraph></ListItem>
