@@ -1,5 +1,5 @@
 ---
-version-image-link: https://image.stapxs.cn/i/2024/06/09/image.png
+version-image-link: http://i0.hdslb.com/bfs/new_dyn/1600ebd6d03eae3086b62bd2155e7de0558830935.png
 official-link: https://www.minecraft.net/en-us/article/vote-update
 title: 重磅来袭：投票更新
 intro: 2023 - 在 Minecraft 的世界中作出更多选择！

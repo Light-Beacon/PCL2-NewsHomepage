@@ -1,5 +1,5 @@
 ---
-version-image-link: https://img.picgo.net/2025/04/02/imagebe06fdae7702c611.jpeg
+version-image-link: http://i0.hdslb.com/bfs/new_dyn/3f9b6b15e3b43c52f5302efa3f2adc6b558830935.jpg
 official-link: https://www.minecraft.net/en-us/article/the-craftmine-update
 server-jar: https://piston-data.mojang.com/v1/objects/4527a9019e37e001770787e4523b505f79cac4c5/server.jar
 title: 我的石界更新！
