@@ -1,5 +1,5 @@
 ---
-version-image-link: http://i0.hdslb.com/bfs/new_dyn/1600ebd6d03eae3086b62bd2155e7de0558830935.png
+version-image-link: https://i0.hdslb.com/bfs/archive/f1cca5b6fbb858b7cc95b32763ea96718acfefc7.png
 official-link: https://www.minecraft.net/en-us/article/vote-update
 title: 重磅来袭：投票更新
 intro: 2023 - 在 Minecraft 的世界中作出更多选择！

@@ -1,5 +1,5 @@
 ---
-version-image-link: http://i0.hdslb.com/bfs/new_dyn/567052a29c980098fbf99751f7f384e1558830935.png
+version-image-link: https://i0.hdslb.com/bfs/archive/12a1d248590fbc2190b4ae3352a6c44781f24e84.png
 official-link: https://www.minecraft.net/en-us/article/poisonous-potato-update
 title: 毒马铃薯更新！--你所期待的粉糊糊状更新！
 intro: 2024 - 你有没有想过成为一只...毒马铃薯？
