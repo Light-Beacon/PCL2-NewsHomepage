@@ -1,5 +1,5 @@
 <Border Style="{StaticResource VersionImageBorder}">
-<local:MyImage Source="${version-image-link}" Style="{StaticResource VersionImage}"/>
+<local:MyImage Source="${version-image-link}" ${@IF|${version-image-link-fallback}|FallbackSource="${version-image-link-fallback}" } Style="{StaticResource VersionImage}"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="${version-id}" />
