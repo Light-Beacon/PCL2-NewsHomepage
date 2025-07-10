@@ -1,5 +1,5 @@
 name: versions
-fill:
+default:
   official-link: ${$GetLink|Official}
   version-image-link: ${$GetLink|ImageSta}
   version-id: ${file_name}

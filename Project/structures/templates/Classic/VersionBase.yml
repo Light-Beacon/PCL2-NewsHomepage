@@ -7,5 +7,5 @@ components:
  - ${@IF|!${disable-websites}|Classic/VersionWebsites}
  - ${@IF|!${disable-toolbar}|Classic/VersionToolBar}
 base: Card
-fill:
+default:
    loading_content: 翻译施工中

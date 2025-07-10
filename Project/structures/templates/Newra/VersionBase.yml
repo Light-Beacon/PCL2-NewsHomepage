@@ -8,5 +8,5 @@ components:
  - ${@IF|!${disable-lastupdate}|LastUpdateBox}
  - ${@IF|!${disable-toolbar}|VersionToolBar}
 base: Card
-fill:
+default:
    loading_content: 翻译施工中

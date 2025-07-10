@@ -6,5 +6,5 @@ filter:
     - md
     - markdown
   latest: true
-cover:
+override:
   title: 最新${version-type} - ${version-id}

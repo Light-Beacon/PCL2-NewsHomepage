@@ -7,5 +7,5 @@ filter:
     - markdown
   skin: newra
   latest: true
-cover:
+override:
   title: 最新${version-type} - ${version-id}
