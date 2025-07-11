@@ -11,7 +11,7 @@
 - 代码部分（.py python 文件）：MIT License
 
 ## 使用方法
-1. 下载 PCL2（下载地址：[点我跳转](https://afdian.net/p/0164034c016c11ebafcb52540025c377)）
+1. 下载 PCL2（下载地址：[点我跳转](https://afdian.com/p/0164034c016c11ebafcb52540025c377)）
 2. 打开 PCL2
 3. 依次点击设置 -> 个性化 -> 自定义主页
 #### 使用预设（推荐）
