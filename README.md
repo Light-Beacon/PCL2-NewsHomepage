@@ -2,13 +2,13 @@
 
 <div align="center"><img src="https://news.bugjump.net/new_banner_fixed.jpg" alt="新闻主页 Header"/></div>
 
-在 [PCL2](https://github.com/Meloong-Git/PCL) 中提供MC相关新闻的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
+在 [PCL2](https://github.com/Meloong-Git/PCL) 中提供 MC 相关新闻的主页, 由 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 驱动
 
-网站地址： [https://news.bugjump.net](https://news.bugjump.net)
+网站地址：[https://news.bugjump.net](https://news.bugjump.net)
 
 授权协议：
-- 内容部分（任何非 python 文件）： [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-- 代码部分（.py python 文件）： MIT License
+- 内容部分（任何非 python 文件）：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+- 代码部分（.py python 文件）：MIT License
 
 ## 使用方法
 1. 下载 PCL2（下载地址：[点我跳转](https://afdian.net/p/0164034c016c11ebafcb52540025c377)）
@@ -37,7 +37,7 @@
 仓库配置了 GitHub Actions 用于在提交后生成构建后 PCL2 可以直接使用的代码，若需要可以在 [generated](https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/generated) 分支上获取。
 
 #### 在自己的主页中插入新闻主页
-参见 [新闻主页API](https://news.docs.bugjump.net) 文档,
+参见 [新闻主页 API](https://news.docs.bugjump.net) 文档,
 
 ## 注意事项
 
