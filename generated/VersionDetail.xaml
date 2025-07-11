@@ -13,5 +13,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 
 </StackPanel.Resources>
-
+<local:MyCard Title="">
+    <StackPanel Margin="25,30,25,30">
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush2}"
+                   Text="404" FontSize="70" TextAlignment = "Center" FontWeight="Bold"/>
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush3}" FontSize="16"
+                   Text="你到达了世界边界" TextAlignment = "Center"/>
+    </StackPanel>
+</local:MyCard>
 </StackPanel>
