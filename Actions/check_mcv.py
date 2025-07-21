@@ -41,7 +41,7 @@ def update_library(version_mainfest, version_libloc:str, ver_type:str, ver_id:st
     #gen content
     content = '---\n'
     content += 'version-image-link: null\n'
-    content += 'version-image-link-fallback: null\n'
+    #content += 'version-image-link-fallback: null\n'
     content += 'not_finished: true\n'
     content += f'server-jar: {get_server_jar(version_mainfest, ver_id)}\n'
     content += 'translator: null\n'
