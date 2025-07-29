@@ -11,11 +11,121 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新正式版 - 1.21.8" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w31a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Chest</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Golem Statue方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制装备</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了Shelf</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Copper Chest</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest是一种新类型的有着涂蜡与氧化变种的箱子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest可以使用箱子和Copper Ingots合成</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜傀儡</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡是一种可以通过在铜块上放置南瓜灯或雕刻南瓜生成的生物。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡完全氧化并且没有被涂蜡，它将会变成Copper Golem Statue方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当变成Copper Golem Statue时它会掉落任何它手上拿着的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">变成Copper Golem Statue的被命名牌命名的铜傀儡会保留它的名字</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡可以帮助将物品分类到箱子里</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与铜傀儡交互将会清除它手上的物品并使其掉落</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">铜傀儡物品分类</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡没有持有物品，它将会寻找最近的Copper Chest尝试拾取一个物品</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡会寻找任何氧化状态以及涂蜡状态变种来拾取物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它会同时拾取最多 16 个物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest中所有的物品都可以被拾取</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡正拿着一个物品，它将会寻找最近的箱子尝试放进去</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡会寻找箱子以及陷阱箱尝试放入物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它会把物品放进空箱子里，或放进包含有着其手持的物品相同种类的物品的箱子里</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡一次按顺序最多访问 10 个箱子或Copper Chest来拾取或放下物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果没有找到匹配的箱子铜傀儡将会闲置7秒后重试</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">箱子的搜索范围为以铜傀儡的位置为中心，横向32格，垂直8格</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Copper Golem Statue方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Copper Golem Statue方块是一种有着涂蜡与氧化变种的新型装饰性方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Copper Golem Statue像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以对Copper Golem Statue交互改变它的姿势</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果Copper Golem Statue没有被氧化，对其使用斧头会将其变回铜傀儡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每一种姿势都传输红石比较器信号</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">避雷针</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">避雷针现在像其它铜方块以及铜傀儡头上的避雷针一样会被氧化</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">铜制装备</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Nugget</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制护甲</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Helmet、Copper Chestplate、Copper Leggings以及Copper Boots</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜制护甲有着比皮革以及金制护甲更高的耐久</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜制护甲比铁质护甲有着略低的附魔能力</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制工具以及武器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Axe、Copper Pickaxe、Copper Shovel以及Copper Sword</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜制工具以及武器有着与石质相同的伤害，但是有着更高的耐久</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜制工具比石质工具效率更高</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜制工具有着比钻石更高但比铁更低的附魔能力</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用铜锭合成铜制装备</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用铜锭修复铜制装备</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当熔炼时，铜制装备会被炼成铜锭</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Copper Horse Armor</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有着与相同的铁马铠相同的战利品表以及概率</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">护甲值：4</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Shelf</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Shelf是一种新型的装饰性方块，有着以下变种：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">樱花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">苍白橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绯红</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">扭曲</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Shelf可以通过六个相同去皮原木方块、去皮菌柄以及去皮竹块，填满顶行和底行合成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个配方生产 6 个Shelf</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Shelf可储存最多三组物品：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与其正面的任意3个槽位交互将会交换槽位中的物品与玩家手中的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Shelf在正面显示所有物品，与物品展示框相同</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果Shelf被红石充能，其正面纹理会更改以反映其被充能；当它们被并排放置时，最多三个充能的Shelf会被连接</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与单独一个充能的Shelf交互会与玩家热键栏最右侧三个槽交换物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与两个充能的Shelf交互会与玩家热键栏最右侧六个槽交换物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与三个充能的Shelf交互会与玩家热键栏的所有物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其行为与玩家具体交互了哪个Shelf无关</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">辅助功能</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">“攻击/破坏” 以及 “使用物品/放置方块” 按键绑定现在可以切换，意味着现在它们可以在控制屏幕中设置为“保持”或者“切换”中的任意一种状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在鼠标设置屏幕中增加了“反转鼠标X轴移动”选项</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在鼠标设置屏幕中增加了“疾跑间隔”选项，代表了双击前进键变为疾跑状态的两次双击以刻为单位的时间间隔</Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2025-07-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.8" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -25,7 +135,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-07-21" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-07-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>

@@ -28,7 +28,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </Border>
 </local:MyCard><local:MyCard Title="版本列表" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
-<StackPanel Margin="8,2,8,15"><local:MyListItem Margin="10,1,10,1" ToolTip="正式版 点击查看该版本更新日志"
+<StackPanel Margin="8,2,8,15"><local:MyListItem Margin="10,1,10,1" ToolTip="版本尚未发布"
+	Logo="pack://application:,,,/images/Blocks/Cobblestone.png" Title="尚未发布的版本" Info="未来的正式版" 
+	EventType="弹出窗口" EventData="未来的正式版|该版本尚未发布" Type="Clickable"/><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="25w31a" Info="快照版"
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=25w31a" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="1.21.8" Info="正式版"
 	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.8" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="发布候选版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="1.21.8-rc1" Info="发布候选版"
@@ -291,8 +295,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="0f520b8" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/0f520b89b1a68b7b20a034c3bd813655f3aceb84"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="ab3488e" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/ab3488ebe76d6773cfc39a23533e3f8f8ebaedfd"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
