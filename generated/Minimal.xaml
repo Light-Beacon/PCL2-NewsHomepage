@@ -11,12 +11,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w31a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -24,54 +24,54 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Chest</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜箱子</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Golem Statue方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡像方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制装备</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了Shelf</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Copper Chest</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest是一种新类型的有着涂蜡与氧化变种的箱子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest可以使用箱子和Copper Ingots合成</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜箱子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子是一种新类型的有着涂蜡与氧化变种的箱子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子可以使用箱子和Copper Ingots合成</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">铜傀儡</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡是一种可以通过在铜块上放置南瓜灯或雕刻南瓜生成的生物。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡完全氧化并且没有被涂蜡，它将会变成Copper Golem Statue方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当变成Copper Golem Statue时它会掉落任何它手上拿着的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">变成Copper Golem Statue的被命名牌命名的铜傀儡会保留它的名字</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡完全氧化并且没有被涂蜡，它将会变成铜傀儡像方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当变成铜傀儡像时它会掉落任何它手上拿着的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">变成铜傀儡像的被命名牌命名的铜傀儡会保留它的名字</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡可以帮助将物品分类到箱子里</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">与铜傀儡交互将会清除它手上的物品并使其掉落</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">铜傀儡物品分类</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡没有持有物品，它将会寻找最近的Copper Chest尝试拾取一个物品</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡没有持有物品，它将会寻找最近的铜箱子尝试拾取一个物品</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡会寻找任何氧化状态以及涂蜡状态变种来拾取物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它会同时拾取最多 16 个物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Copper Chest中所有的物品都可以被拾取</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子中所有的物品都可以被拾取</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡正拿着一个物品，它将会寻找最近的箱子尝试放进去</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡会寻找箱子以及陷阱箱尝试放入物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">它会把物品放进空箱子里，或放进包含有着其手持的物品相同种类的物品的箱子里</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡一次按顺序最多访问 10 个箱子或Copper Chest来拾取或放下物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡一次按顺序最多访问 10 个箱子或铜箱子来拾取或放下物品</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">如果没有找到匹配的箱子铜傀儡将会闲置7秒后重试</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">箱子的搜索范围为以铜傀儡的位置为中心，横向32格，垂直8格</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">Copper Golem Statue方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Copper Golem Statue方块是一种有着涂蜡与氧化变种的新型装饰性方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Copper Golem Statue像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以对Copper Golem Statue交互改变它的姿势</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果Copper Golem Statue没有被氧化，对其使用斧头会将其变回铜傀儡</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">铜傀儡像方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像方块是一种有着涂蜡与氧化变种的新型装饰性方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以对铜傀儡像交互改变它的姿势</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡像没有被氧化，对其使用斧头会将其变回铜傀儡</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">每一种姿势都传输红石比较器信号</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">避雷针</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">避雷针现在像其它铜方块以及铜傀儡头上的避雷针一样会被氧化</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">铜制装备</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Nugget</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜粒</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制护甲</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Helmet、Copper Chestplate、Copper Leggings以及Copper Boots</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜头盔、铜胸甲、铜护腿以及铜靴子</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜制护甲有着比皮革以及金制护甲更高的耐久</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜制护甲比铁质护甲有着略低的附魔能力</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制工具以及武器</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了Copper Axe、Copper Pickaxe、Copper Shovel以及Copper Sword</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜斧、铜镐、铜锹以及铜剑</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜制工具以及武器有着与石质相同的伤害，但是有着更高的耐久</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜制工具比石质工具效率更高</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜制工具有着比钻石更高但比铁更低的附魔能力</Paragraph></ListItem>
@@ -79,8 +79,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">可以使用铜锭修复铜制装备</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">当熔炼时，铜制装备会被炼成铜锭</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Copper Horse Armor</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">有着与相同的铁马铠相同的战利品表以及概率</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 铜马铠</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有着与铁马铠相同的战利品表以及概率</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">护甲值：4</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">Shelf</Paragraph><List>
@@ -121,7 +121,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-07-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-07-30" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -135,7 +135,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-07-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-07-30" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
