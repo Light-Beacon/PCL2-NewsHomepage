@@ -1,10 +1,10 @@
 from homepagebuilder.interfaces import script
 from homepagebuilder.core.types import Context
 
-def true_that(obj):
-    if obj.isinstance(bool):
+def true_that(obj:str):
+    if isinstance(obj, bool):
         return obj
-    if obj.isinstance(str):
+    if isinstance(obj, str):
         return obj.lower() == 'true'
 
 @script('PreferenceUrl')
