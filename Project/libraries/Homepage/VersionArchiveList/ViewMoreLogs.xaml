@@ -2,6 +2,6 @@
     <StackPanel Margin="15,10">
     <local:MyListItem Margin="0,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
     Logo="https://s21.ax1x.com/2025/07/11/pVQXQTx.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
-    EventType="打开帮助" EventData="https://${domain}/VersionArchiveList.json" Type="Clickable" />
+    EventType="打开帮助" EventData="${@Link|VersionArchiveList}" Type="Clickable" />
     </StackPanel>
 </local:MyCard>

@@ -45,7 +45,7 @@
     <StackPanel Margin="15,5">
         <TextBlock x:Name="OutputTextBlock" Visibility="Collapsed">
             <TextBlock.Text>
-                <MultiBinding StringFormat="{}https://pcl.mcnews.thestack.top/SaveChanges.json?SkinBasic={0}&amp;SkinNewra={1}&amp;StandardEdition={2}&amp;LightEdition={3}&amp;HideTranslating={4}">
+                <MultiBinding StringFormat="{}${@Link|SaveChanges.json?SkinBasic={0}&amp;SkinNewra={1}&amp;StandardEdition={2}&amp;LightEdition={3}&amp;HideTranslating={4}}">
                     <Binding Path="Checked" ElementName="BasicSkinRadioBox"/>
                     <Binding Path="Checked" ElementName="NewraSkinRadioBox"/>
                     <Binding Path="Checked" ElementName="StandardEditionRadioBox"/>
