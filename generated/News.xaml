@@ -11,38 +11,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<sys:String   x:Key="CloudIcon">
-M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
-20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
-97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
-42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
-0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
-38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
-69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
-220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
-113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
-0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
-211.6 582.7 160 480 160z</sys:String>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="InlineLink" TargetType="local:MyTextButton"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
-<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -66,7 +36,48 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<sys:String   x:Key="CloudIcon">
+M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
+20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
+97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
+42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
+0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
+38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
+69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
+220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
+113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
+0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
+211.6 582.7 160 480 160z</sys:String>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InlineLink" TargetType="local:MyTextButton"><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
+<Style  TargetType="local:MyImage" x:Key="VersionImage">
+  <Setter Property="Stretch" Value="UniformToFill" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+</Style>
+
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
 <sys:String   x:Key="LaunchIcon">
 M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
@@ -75,20 +86,9 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
 295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
 <Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
 <sys:String   x:Key="CreeperIcon">
 M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
 </sys:String>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style  TargetType="local:MyImage" x:Key="VersionImage">
-  <Setter Property="Stretch" Value="UniformToFill" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-</Style>
-
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -116,11 +116,11 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡像方块</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制装备</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了Shelf</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了展示架</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">铜箱子</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜箱子是一种新类型的有着涂蜡与氧化变种的箱子</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜箱子像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子可以使用箱子和Copper Ingots合成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子可以使用箱子和铜锭合成</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">铜傀儡</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡是一种可以通过在铜块上放置南瓜灯或雕刻南瓜生成的生物。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
@@ -171,8 +171,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph Style="{StaticResource Lp}">有着与铁马铠相同的战利品表以及概率</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">护甲值：4</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Shelf</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">Shelf是一种新型的装饰性方块，有着以下变种：</Paragraph><List>
+</List><Paragraph Style="{StaticResource H3}">展示架</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架是一种新型的装饰性方块，有着以下变种：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">橡树</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">云杉</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">白桦</Paragraph></ListItem>
@@ -186,18 +186,18 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <ListItem><Paragraph Style="{StaticResource Lp}">绯红</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">扭曲</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Shelf可以通过六个相同去皮原木方块、去皮菌柄以及去皮竹块，填满顶行和底行合成</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这个配方生产 6 个Shelf</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架可以通过六个相同去皮原木方块、去皮菌柄以及去皮竹块，填满顶行和底行合成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个配方生产 6 个展示架</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Shelf可储存最多三组物品：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架可储存最多三组物品：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">与其正面的任意3个槽位交互将会交换槽位中的物品与玩家手中的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Shelf在正面显示所有物品，与物品展示框相同</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架在正面显示所有物品，与物品展示框相同</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果Shelf被红石充能，其正面纹理会更改以反映其被充能；当它们被并排放置时，最多三个充能的Shelf会被连接</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">与单独一个充能的Shelf交互会与玩家热键栏最右侧三个槽交换物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与两个充能的Shelf交互会与玩家热键栏最右侧六个槽交换物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">与三个充能的Shelf交互会与玩家热键栏的所有物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">其行为与玩家具体交互了哪个Shelf无关</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果展示架被红石充能，其正面纹理会更改以反映其被充能；当它们被并排放置时，最多三个充能的展示架会被连接</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与单独一个充能的展示架交互会与玩家热键栏最右侧三个槽交换物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与两个充能的展示架交互会与玩家热键栏最右侧六个槽交换物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与三个充能的展示架交互会与玩家热键栏的所有物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其行为与玩家具体交互了哪个展示架无关</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">辅助功能</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">“攻击/破坏” 以及 “使用物品/放置方块” 按键绑定现在可以切换，意味着现在它们可以在控制屏幕中设置为“保持”或者“切换”中的任意一种状态</Paragraph></ListItem>
@@ -217,7 +217,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-07-30" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-08-05" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 25w31a" EventType="启动游戏"
     EventData="25w31a" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -235,7 +235,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-07-30" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -251,7 +251,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <Paragraph>修复了几个 Bug。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-07-30" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-08-05" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.8" EventType="启动游戏"
     EventData="1.21.8" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
@@ -269,7 +269,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-07-30" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -277,7 +277,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel Margin="15,10">
     <local:MyListItem Margin="0,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
     Logo="https://s21.ax1x.com/2025/07/11/pVQXQTx.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
-    EventType="打开帮助" EventData="https://news.bugjump.net/VersionArchiveList.json" Type="Clickable" />
+    EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/VersionArchiveList.json" Type="Clickable" />
     </StackPanel>
 </local:MyCard><ContentControl Content="周  边  新  闻" Template="{StaticResource Separator}"/><local:MyCard Title="📢 关于反馈新闻主页相关问题的提示" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
@@ -291,7 +291,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-07-30" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-05" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -302,8 +302,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="9fc393c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/9fc393c6c83c6f8861a16fda6d7962b7f6f297a2"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="106da87" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/106da87a6434058d80d2d0ca39d53321b036fc53"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
@@ -323,6 +323,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     </StackPanel>
     </StackPanel>
     <StackPanel HorizontalAlignment="Right" >
+    
     <local:MyIconTextButton HorizontalAlignment="Left" Text="反馈" ToolTip="反馈新闻主页问题" EventType="打开网页"
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new/choose"
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>

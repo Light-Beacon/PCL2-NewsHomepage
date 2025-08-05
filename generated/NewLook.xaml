@@ -29,14 +29,14 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Margin="8,38,8,15">
 <local:MyListItem Margin="10,1,10,1" ToolTip="最新正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.8" Info="正式版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.8" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新快照版 点击查看该版本更新日志"
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/VersionDetail.json?ver=1.21.8" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新快照版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="最新快照版 - 25w31a" Info="快照版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=25w31a" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/VersionDetail.json?ver=25w31a" Type="Clickable" />
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
 <local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
 Logo="https://img.picgo.net/2025/02/15/Bookshelf_JE4_BE2de3fa45de5d6d91f.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
-EventType="打开帮助" EventData="https://news.bugjump.net/VersionArchiveList.json" Type="Clickable" />
+EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/VersionArchiveList.json" Type="Clickable" />
 </StackPanel>
 </local:MyCard><local:MyCard Margin="0,5,0,14">
 <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,8">
@@ -45,8 +45,8 @@ EventType="打开帮助" EventData="https://news.bugjump.net/VersionArchiveList.
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="9fc393c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/9fc393c6c83c6f8861a16fda6d7962b7f6f297a2"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="106da87" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/106da87a6434058d80d2d0ca39d53321b036fc53"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
@@ -66,6 +66,7 @@ EventType="打开帮助" EventData="https://news.bugjump.net/VersionArchiveList.
     </StackPanel>
     </StackPanel>
     <StackPanel HorizontalAlignment="Right" >
+    
     <local:MyIconTextButton HorizontalAlignment="Left" Text="反馈" ToolTip="反馈新闻主页问题" EventType="打开网页"
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new/choose"
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>

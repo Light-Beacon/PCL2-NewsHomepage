@@ -17,24 +17,24 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel Margin="20,40,20,15">
     <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Active_Trial_Spawner_JE4_BE3813f27e2213dec08.png" Title="棘巧试炼 | 1.21" Info="加入了试炼密室"
-	EventType="打开帮助" EventData="https://news.bugjump.net/1.21_archive.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/1.21_archive.json" Type="Clickable" />
     <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Cherry_Leaves_JE29cc390fd9b51333d.png" Title="足迹与故事 | 1.20 " Info="加入了考古学与樱花树"
-	EventType="打开帮助" EventData="https://news.bugjump.net/1.20_archive.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/1.20_archive.json" Type="Clickable" />
     <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Sculk_JE1_BE141e57ad22b2b968e.png" Title="荒野更新 | 1.19" Info="加入了深暗之域与远古城市，以及红树林沼泽"
-	EventType="打开帮助" EventData="https://news.bugjump.net/1.19_archive.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/1.19_archive.json" Type="Clickable" />
     <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Deepslate_JE3_BE227b47de799b509d8.png" Title="洞穴与山崖（第二部分） | 1.18" Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
-	EventType="打开帮助" EventData="https://news.bugjump.net/1.18_archive_confirm.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/1.18_archive_confirm.json" Type="Clickable" />
     <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Block_of_Amethyst_JE3_BE14f18267120f7bf34.png" Title="洞穴与山崖（第一部分） | 1.17" Info="加入了繁茂洞穴、紫晶洞"
-	EventType="打开帮助" EventData="https://news.bugjump.net/1.17_archive_confirm.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/1.17_archive_confirm.json" Type="Clickable" />
 	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="2"/>
 	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
 	Logo="https://img.picgo.net/2025/02/15/Locked_Chest_JE108f3a29ad950e185.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
-	EventType="打开帮助" EventData="https://news.bugjump.net/april_fools_archive.json" Type="Clickable" />
+	EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/april_fools_archive.json" Type="Clickable" />
     </StackPanel>
 </local:MyCard><local:MyCard Margin="0,10">
     <StackPanel Margin="15,10">
@@ -45,11 +45,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </local:MyCard><local:MyCard Margin="0,2,0,10">
 <Grid Margin="10,6">
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" Margin="-4,0,0,0">
-    <local:MyIconTextButton HorizontalAlignment="Left" Text="9fc393c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/9fc393c6c83c6f8861a16fda6d7962b7f6f297a2"
+    <local:MyIconTextButton HorizontalAlignment="Left" Text="106da87" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/106da87a6434058d80d2d0ca39d53321b036fc53"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" Margin="-4,0,0,0">
+    
+    
     <local:MyIconTextButton HorizontalAlignment="Left" Text="反馈" ToolTip="反馈新闻主页问题" EventType="打开网页"
     EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/issues/new/choose"
     LogoScale="1" Logo="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z M1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0z"/>

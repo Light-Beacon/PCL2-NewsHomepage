@@ -1,0 +1,37 @@
+﻿<!--title=主页设置：预览提示-->
+<local:MyCard Margin="0,0,0,15" CanSwap="False">
+    <local:MyCard.Inlines>
+        主页设置
+        <InlineUIContainer>
+            <Border Background="{DynamicResource ColorBrush5}" CornerRadius="6">
+                <TextBlock FontSize="10" Margin="6,2" >
+                    <TextBlock.Foreground>
+                        <Binding Path="Foreground" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=TextBlock, AncestorLevel=1}"/>
+                    </TextBlock.Foreground>
+                    预览功能
+                </TextBlock>
+            </Border>
+        </InlineUIContainer>
+    </local:MyCard.Inlines>
+    <StackPanel Margin="25,50,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4">
+            主页设置是新闻主页的预览功能，在这里你可以按照自己的喜好调整主页的显示内容。
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4">
+            这些选项是<Bold>正在测试</Bold>的新功能，<Bold>可能不稳定</Bold>，也不代表最终成果，也可能随时取消。<Bold>但不会对你使用PCL的其它功能造成影响，也不会造成你的数据损坏、丢失。</Bold>
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4">
+            由于PCL主页限制，<Bold>使用该功能需要将主页从“预设”改为“联网更新”</Bold>，稍后会提供链接地址，你可以选择自动更改（暂时不可用）或手动更改。
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+            如果你遇到问题或者有改进建议可以在新闻主页的 GitHub 仓库中提出。
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">
+            你可以随时将主页从“联网更新”改回“预设”以关闭该功能（进行过配置的选项不会保留）。如果你不想或在稍后进行本次测试你可以点击窗口左上角返回。
+        </TextBlock>
+        <local:MyCheckBox Text="我已阅读、了解并同意上述内容" x:Name="ConfirmCheckBox"/>
+        <local:MyButton IsEnabled="{Binding Path=Checked, ElementName=ConfirmCheckBox}" Text="进入设置页面" 
+                        EventType="打开帮助" EventData="https://pcl.mcnews.thestack.top/Preference.json"
+                        Height="40" Margin="20,10,20,10"/>
+    </StackPanel>
+</local:MyCard>

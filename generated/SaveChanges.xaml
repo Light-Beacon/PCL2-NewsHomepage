@@ -1,0 +1,65 @@
+﻿<!--title=保存更改-->
+<StackPanel>
+    <StackPanel.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="IsReadOnly" Value="True" />
+            <Setter Property="Margin" Value="2,0,2,0" />
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/>
+            <Setter Property="Height" Value="26"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9"
+                            BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0"
+                            CornerRadius="5" Padding="4,4,4,0.2"> 
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false"
+                                HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+</StackPanel.Resources>
+<local:MyCard Margin="0,0,0,15" CanSwap="False">
+    <local:MyCard.Inlines>
+        自动保存
+    </local:MyCard.Inlines>
+    <StackPanel Margin="25,50,23,15">
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,4">
+            点击下方按钮会自动执行保存命令并重启PCL。
+        </TextBlock>
+        <local:MyButton Text="技术原因暂不可用" IsEnabled="False"
+                        EventType="打开文件"
+                        Height="40" Margin="20,10,20,10" EventData="Powershell| -NoExit -Command"/>
+    </StackPanel>
+</local:MyCard>
+<local:MyCard Margin="0,0,0,15" CanSwap="False">
+    <local:MyCard.Inlines>
+        手动更改
+    </local:MyCard.Inlines>
+    <StackPanel Margin="25,40,23,15">
+        <Grid  Margin="0,0,0,14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+        <TextBox Grid.Column="0" TextWrapping="Wrap" x:Name="LinkTextBox" Margin="0,0,10,0">
+            https://pcl.mcnews.thestack.top/?beta=true
+        </TextBox>
+        <local:MyButton Grid.Column="1" Height="26" EventType="复制文本" EventData="{Binding ElementName=LinkTextBox, Path=Text}">
+            复制链接
+        </local:MyButton>
+        </Grid>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,10">
+            复制以上链接，点击下方按钮，找到：主页 -> 联网更新，粘贴链接，回到主页即可完成设置。
+        </TextBlock>
+        <local:MyButton Height="40" Margin="20,10,20,10" EventType="切换页面" EventData="3|1">
+            打开个性化设置
+        </local:MyButton>
+    </StackPanel>
+</local:MyCard>
+</StackPanel>
