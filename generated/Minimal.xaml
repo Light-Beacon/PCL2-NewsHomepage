@@ -30,12 +30,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w32a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
@@ -45,19 +45,23 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制装饰品</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">铜制装饰品</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜火把</Paragraph></ListItem>
+<ListItem><Paragraph>增加了铜火把</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">一个使用铜粒、煤炭与木棍合成的绿色的火把变体</Paragraph></ListItem>
-<ListItem><Paragraph>和火把的作用一样</Paragraph></ListItem>
-<ListItem><Paragraph>增加了铜栏杆</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">和火把的作用一样</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了铜栏杆</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">和现存的铁栏杆的作用一样</Paragraph></ListItem>
-<ListItem><Paragraph>会随时间氧化</Paragraph></ListItem>
-<ListItem><Paragraph>增加了铜链</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会随时间氧化</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了铜链</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">和现存的锁链（现在重命名成铁链了）的作用一样</Paragraph></ListItem>
-<ListItem><Paragraph>会随时间氧化</Paragraph></ListItem>
-<ListItem><Paragraph>增加了铜灯笼</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会随时间氧化</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了铜灯笼</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">与普通灯笼合成配方相似但使用铜以及铜火把</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">灯笼会自己氧化，随着时间外观也在变化</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">和现存的灯笼的作用一样</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">锁链方块现在重命名为“铁链”</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">对方块、物品以及实体的微调</Paragraph><List>
@@ -71,18 +75,20 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 65.1</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了在文本中使用 GUI 以及物品精灵图的方式</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">数据包版本 83.0</Paragraph><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">copper_golem</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weather_state</TextBox> 字段现在期望一个字符串 id 而不再是整数 id</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weather_state</TextBox> 字段现在期望一个字符串 id 而不再是整数 id</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">0 -&gt; <TextBox Style="{StaticResource InlineCode}">unaffected</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">1 -&gt; <TextBox Style="{StaticResource InlineCode}">exposed</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">2 -&gt; <TextBox Style="{StaticResource InlineCode}">weathered</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">3 -&gt; <TextBox Style="{StaticResource InlineCode}">oxidized</TextBox></Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">文本渲染</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">object</TextBox> 文本组件</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">添加了新的文本组件 <TextBox Style="{StaticResource InlineCode}">object</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">这个组件会从精灵图纹理图集以字符显示单个精灵图</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">精灵图一直会以 8x8 像素的矩形渲染</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">atlas</TextBox> - 纹理图集的命名空间 ID，默认值: <TextBox Style="{StaticResource InlineCode}">minecraft:blocks</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">sprite</TextBox> - 在纹理图集中的精灵图命名空间 ID，例如： <TextBox Style="{StaticResource InlineCode}">item/porkchop</TextBox></Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">战利品表</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">harvest/sweet_berry_bush</TextBox> 战利品表，用于交互收获有浆果的浆果丛的掉落</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
