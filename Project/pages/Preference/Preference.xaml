@@ -1,182 +1,290 @@
 ﻿<!--title=主页设置-->
-<local:MyTextBox Visibility="Collapsed"><local:MyTextBox.Text>
-    <Binding UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource"
-    Path="VerticalScrollBarVisibility" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:MyScrollViewer, AncestorLevel=1}" 
-    FallbackValue="Disabled"/></local:MyTextBox.Text></local:MyTextBox>
-<local:MyTextBox Visibility="Collapsed"><local:MyTextBox.Text>
-    <Binding UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource"
-    Path="Margin" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=StackPanel, AncestorLevel=2}" 
-    FallbackValue="20,0,0,0"/></local:MyTextBox.Text></local:MyTextBox>
+<local:MyTextBox Visibility="Collapsed">
+    <local:MyTextBox.Text>
+        <Binding UpdateSourceTrigger="PropertyChanged"
+                 Mode="OneWayToSource"
+                 Path="VerticalScrollBarVisibility"
+                 RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:MyScrollViewer, AncestorLevel=1}"
+                 FallbackValue="Disabled"/>
+    </local:MyTextBox.Text>
+</local:MyTextBox>
+<local:MyTextBox Visibility="Collapsed">
+    <local:MyTextBox.Text>
+        <Binding UpdateSourceTrigger="PropertyChanged"
+                 Mode="OneWayToSource"
+                 Path="Margin"
+                 RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=StackPanel, AncestorLevel=2}"
+                 FallbackValue="0,0,0,0"/>
+    </local:MyTextBox.Text>
+</local:MyTextBox>
+
 <Grid>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="180"/>
+        <ColumnDefinition Width="0"/>
+        <ColumnDefinition Width="300"/>
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
-    <Grid.RowDefinitions>
-        <RowDefinition/>
-        <RowDefinition MaxHeight="100"/>
-    </Grid.RowDefinitions>
 
-<StackPanel Margin="0,15,5,0" Grid.Column="0" Grid.Row="0">
-    <local:MyCard Margin="0,0,0,15" CanSwap="False" >
-        <local:MyCard.Inlines>
-            主页设置
-            <InlineUIContainer>
-                <Border Background="{DynamicResource ColorBrush5}" CornerRadius="6">
-                    <TextBlock FontSize="10" Margin="6,2" >
-                        <TextBlock.Foreground>
-                            <Binding Path="Foreground" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=TextBlock, AncestorLevel=1}"/>
-                        </TextBlock.Foreground>
-                        预览功能
+    <Grid Grid.Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="SettingHeight2"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <local:MyButton Grid.Row="0"
+              x:Name="SettingHeight"/>
+    </Grid>
+
+    <Grid Grid.Column="1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <local:MyScrollViewer VerticalScrollBarVisibility="Auto"
+                              HorizontalScrollBarVisibility="Disabled">
+            <local:MyScrollViewer.Height>
+                <Binding
+                    Path="ActualHeight"
+                    ElementName="SettingHeight"/>
+            </local:MyScrollViewer.Height>
+            <StackPanel Margin="20,15,20,0">
+                <local:MyCard CanSwap="False">
+                    <local:MyCard.Inlines>
+                        主页设置
+                        <InlineUIContainer>
+                            <Border Background="{DynamicResource ColorBrush5}"
+                                    CornerRadius="6">
+                                <TextBlock FontSize="10"
+                                           Margin="6,2">
+                                    <TextBlock.Foreground>
+                                        <Binding Path="Foreground"
+                                                 Source="{RelativeSource Mode=FindAncestor, AncestorType=TextBlock, AncestorLevel=1}"/>
+                                    </TextBlock.Foreground>
+                            预览功能
+                                </TextBlock>
+                            </Border>
+                        </InlineUIContainer>
+                    </local:MyCard.Inlines>
+                    <StackPanel Margin="25,40,23,15">
+                        <TextBlock TextWrapping="Wrap"
+                                   Margin="0,0,0,4">
+                    主页设置是新闻主页的预览功能，在这里你可以按照自己的喜好调整主页的显示内容。
+                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap"
+                                   Margin="0,0,0,4">
+                    这些选项是正在测试的新功能，可能不稳定，也不代表最终成果，也可能随时取消。
+                        </TextBlock>
+                    </StackPanel>
+                </local:MyCard>
+
+                <!--设置区域-->
+                <local:MyCard Margin="0,0,0,10"
+                              CanSwap="False"
+                              Title="主页面">
+                    <StackPanel Margin="25,30,23,15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0"
+                                    Height="50"
+                                    Margin="5"
+                                    BorderThickness="0.5"
+                                    CornerRadius="6">
+                                <Border.BorderBrush>
+                                    <Binding Path="Children[1].Stroke"
+                                             ElementName="StandardEditionRadioBox"/>
+                                </Border.BorderBrush>
+                            </Border>
+                            <Border Grid.Row="0"
+                                    Height="50"
+                                    Margin="5"
+                                    CornerRadius="6"
+                                    Opacity="0.2">
+                                <Border.BorderBrush>
+                                    <Binding Path="Children[0].Foreground"
+                                             ElementName="StandardEditionRadioBox"/>
+                                </Border.BorderBrush>
+                                <Border.Background>
+                                    <Binding Path="Children[2].Fill"
+                                             ElementName="StandardEditionRadioBox"/>
+                                </Border.Background>
+                            </Border>
+                            <local:MyRadioBox Grid.Row="0"
+                                              Height="50"
+                                              Margin="15,5,10,5"
+                                              x:Name="StandardEditionRadioBox"
+                                              Checked="True">
+                                <Run>完整</Run>
+                                <LineBreak/>
+                                <Run FontSize="10">原汁原味的新闻主页体验</Run>
+                            </local:MyRadioBox>
+
+                            <Border Grid.Row="1"
+                                    Height="50"
+                                    Margin="5"
+                                    BorderThickness="0.5"
+                                    CornerRadius="6">
+                                <Border.BorderBrush>
+                                    <Binding Path="Children[1].Stroke"
+                                             ElementName="LightEditionRadioBox"/>
+                                </Border.BorderBrush>
+                            </Border>
+                            <Border Grid.Row="1"
+                                    Height="50"
+                                    Margin="5"
+                                    CornerRadius="6"
+                                    Opacity="0.2">
+                                <Border.Background>
+                                    <Binding Path="Children[2].Fill"
+                                             ElementName="LightEditionRadioBox"/>
+                                </Border.Background>
+                            </Border>
+                            <local:MyRadioBox Grid.Row="1"
+                                              Height="50"
+                                              Margin="15,5,10,5"
+                                              x:Name="LightEditionRadioBox">
+                                <Run>精简</Run>
+                                <LineBreak/>
+                                <Run FontSize="10">只保留最新版本的链接，性能更高</Run>
+                            </local:MyRadioBox>
+                        </Grid>
+                    </StackPanel>
+                </local:MyCard>
+
+                <local:MyCard Margin="0,0,0,10"
+                              CanSwap="False"
+                              Title="皮肤">
+                    <StackPanel Margin="25,30,23,15">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0"
+                                    Height="50"
+                                    Margin="5"
+                                    BorderThickness="0.5"
+                                    CornerRadius="6">
+                                <Border.BorderBrush>
+                                    <Binding Path="Children[1].Stroke"
+                                             ElementName="BasicSkinRadioBox"/>
+                                </Border.BorderBrush>
+                            </Border>
+                            <Border Grid.Row="0"
+                                    Height="50"
+                                    Margin="5"
+                                    CornerRadius="6"
+                                    Opacity="0.2">
+                                <Border.Background>
+                                    <Binding Path="Children[2].Fill"
+                                             ElementName="BasicSkinRadioBox"/>
+                                </Border.Background>
+                            </Border>
+                            <local:MyRadioBox Grid.Row="0"
+                                              Height="50"
+                                              Margin="15,5,10,5"
+                                              x:Name="BasicSkinRadioBox"
+                                              Checked="True">
+                                <Run>经典</Run>
+                            </local:MyRadioBox>
+
+                            <Border Grid.Row="1"
+                                    Height="50"
+                                    Margin="5"
+                                    BorderThickness="0.5"
+                                    CornerRadius="6">
+                                <Border.BorderBrush>
+                                    <Binding Path="Children[1].Stroke"
+                                             ElementName="NewraSkinRadioBox"/>
+                                </Border.BorderBrush>
+                            </Border>
+                            <Border Grid.Row="1"
+                                    Height="50"
+                                    Margin="5"
+                                    CornerRadius="6"
+                                    Opacity="0.2">
+                                <Border.BorderBrush>
+                                    <Binding Path="Children[0].Foreground"
+                                             ElementName="NewraSkinRadioBox"/>
+                                </Border.BorderBrush>
+                                <Border.Background>
+                                    <Binding Path="Children[2].Fill"
+                                             ElementName="NewraSkinRadioBox"/>
+                                </Border.Background>
+                            </Border>
+                            <local:MyRadioBox Grid.Row="1"
+                                              Height="50"
+                                              Margin="15,5,10,5"
+                                              x:Name="NewraSkinRadioBox">
+                                <Run>通透</Run>
+                            </local:MyRadioBox>
+                        </Grid>
+                    </StackPanel>
+                </local:MyCard>
+
+                <local:MyCard Margin="0,0,0,15"
+                              CanSwap="False"
+                              Title="杂项">
+                    <StackPanel Margin="25,40,23,15">
+                        <local:MyCheckBox Text="隐藏“正在翻译中”动画"
+                                          x:Name="HideTranslatingCheckBox"/>
+                    </StackPanel>
+                </local:MyCard>
+            </StackPanel>
+        </local:MyScrollViewer>
+
+        <StackPanel Grid.Row="1">
+            <local:MyCard Grid.Row="1"
+                          Margin="10,0,10,0"
+                          CanSwap="False">
+                <StackPanel Margin="15,5">
+                    <TextBlock x:Name="OutputTextBlock"
+                               Visibility="Collapsed">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}${@Link|SaveChanges.json?SkinBasic={0}&amp;SkinNewra={1}&amp;StandardEdition={2}&amp;LightEdition={3}&amp;HideTranslating={4}}">
+                                <Binding Path="Checked"
+                                         ElementName="BasicSkinRadioBox"/>
+                                <Binding Path="Checked"
+                                         ElementName="NewraSkinRadioBox"/>
+                                <Binding Path="Checked"
+                                         ElementName="StandardEditionRadioBox"/>
+                                <Binding Path="Checked"
+                                         ElementName="LightEditionRadioBox"/>
+                                <Binding Path="Checked"
+                                         ElementName="HideTranslatingCheckBox"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
                     </TextBlock>
-                </Border>
-            </InlineUIContainer>
-        </local:MyCard.Inlines>
-        <StackPanel Margin="25,40,23,15">
-            <TextBlock TextWrapping="Wrap" Margin="0,0,0,4">
-                主页设置是新闻主页的预览功能，在这里你可以按照自己的喜好调整主页的显示内容。
-            </TextBlock>
-            <TextBlock TextWrapping="Wrap" Margin="0,0,0,4">
-                这些选项是正在测试的新功能，可能不稳定，也不代表最终成果，也可能随时取消。
-            </TextBlock>
+                    <local:MyButton IsEnabled="{Binding Path=Checked, ElementName=ConfirmCheckBox}"
+                                    Text="保存"
+                                    ColorType="Highlight"
+                                    EventType="打开帮助"
+                                    ToolTip="跳转到保存页面"
+                                    Height="40"
+                                    Margin="0,10,0,10">
+                        <local:MyButton.EventData>
+                            <Binding Path="Text"
+                                     ElementName="OutputTextBlock"/>
+                        </local:MyButton.EventData>
+                    </local:MyButton>
+                </StackPanel>
+            </local:MyCard>
         </StackPanel>
-    </local:MyCard>
-    <local:MyCard Margin="0,0,0,15" CanSwap="False">
-    <StackPanel Margin="15,5">
-        <TextBlock x:Name="OutputTextBlock" Visibility="Collapsed">
-            <TextBlock.Text>
-                <MultiBinding StringFormat="{}${@Link|SaveChanges.json?SkinBasic={0}&amp;SkinNewra={1}&amp;StandardEdition={2}&amp;LightEdition={3}&amp;HideTranslating={4}}">
-                    <Binding Path="Checked" ElementName="BasicSkinRadioBox"/>
-                    <Binding Path="Checked" ElementName="NewraSkinRadioBox"/>
-                    <Binding Path="Checked" ElementName="StandardEditionRadioBox"/>
-                    <Binding Path="Checked" ElementName="LightEditionRadioBox"/>
-                    <Binding Path="Checked" ElementName="HideTranslatingCheckBox"/>
-                </MultiBinding>
-            </TextBlock.Text>
-        </TextBlock>
-        <local:MyButton IsEnabled="{Binding Path=Checked, ElementName=ConfirmCheckBox}"
-                        Text="保存" ColorType="Highlight"
-                        EventType="打开帮助" ToolTip="跳转到保存页面"
-                        Height="40" Margin="0,10,0,10">
-            <local:MyButton.EventData>
-                <Binding Path="Text" ElementName="OutputTextBlock"/>
-            </local:MyButton.EventData>
-        </local:MyButton>
-    </StackPanel>   
-</local:MyCard>
-</StackPanel>
-
-<StackPanel Margin="0,15,5,0" Grid.Column="0" Grid.Row="1">
-</StackPanel>
+    </Grid>
 
 
+    <local:MyScrollViewer VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Grid.Column="2">
+        <local:MyScrollViewer.Height>
+            <Binding
+                Path="ActualHeight"
+                RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:MyPageRight, AncestorLevel=1}"/>
+        </local:MyScrollViewer.Height>
+        <StackPanel Margin="20,0,20,0">
 
-<local:MyScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Column="1" Grid.RowSpan="2">
-    <local:MyScrollViewer.Height>
-        <Binding
-        Path="ActualHeight" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=local:MyPageRight, AncestorLevel=1}"/>
-    </local:MyScrollViewer.Height>
-<StackPanel Margin="15,0,15,0">
-<local:MyCard Margin="0,15,0,15" CanSwap="False" Title="主页面">
-    <StackPanel Margin="25,30,23,15"> 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="StandardEditionRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="0" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.BorderBrush>
-                    <Binding Path="Children[0].Foreground" ElementName="StandardEditionRadioBox"/>
-                </Border.BorderBrush>
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="StandardEditionRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="0" Height="50" Margin="20,10,10,10" x:Name="StandardEditionRadioBox" Checked="True">
-                <Run>完整</Run>
-                <LineBreak/>
-                <Run FontSize="10">原汁原味的新闻主页体验</Run>
-            </local:MyRadioBox>
-
-            <Border Grid.Column="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="LightEditionRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="LightEditionRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="1" Height="50" Margin="20,10,10,10" x:Name="LightEditionRadioBox">
-                <Run>精简</Run>
-                <LineBreak/>
-                <Run FontSize="10">只保留最新版本的链接，性能更高</Run>
-            </local:MyRadioBox>
-
-        </Grid>
-    </StackPanel>
-</local:MyCard>
-
-<local:MyCard Margin="0,0,0,15" CanSwap="False" Title="皮肤">
-    <StackPanel Margin="25,30,23,15"> 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="BasicSkinRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="0" Grid.Row="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="BasicSkinRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="0" Grid.Row="1" Height="50" Margin="20,10,10,10" x:Name="BasicSkinRadioBox" Checked="True">
-                <Run>经典</Run>
-            </local:MyRadioBox>
-            <local:MyImage Grid.Column="0" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNbeg0.png" Margin="10,5"/>
-
-            <Border Grid.Column="1" Grid.Row="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="NewraSkinRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="1" Grid.Row="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.BorderBrush>
-                    <Binding Path="Children[0].Foreground" ElementName="NewraSkinRadioBox"/>
-                </Border.BorderBrush>
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="NewraSkinRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="1" Grid.Row="1" Height="50" Margin="20,10,10,10" x:Name="NewraSkinRadioBox" >
-                <Run>通透</Run>
-            </local:MyRadioBox>
-            <local:MyImage Grid.Column="1" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNb359.png" Margin="10,5"/>
-        </Grid>
-    </StackPanel>
-</local:MyCard>
-
-<local:MyCard Margin="0,0,0,15" CanSwap="False" Title="杂项">
-    <StackPanel Margin="25,40,23,15"> 
-        <local:MyCheckBox Text="隐藏“正在翻译中”动画" x:Name="HideTranslatingCheckBox"/>
-    </StackPanel>
-</local:MyCard>
-
-</StackPanel>
-</local:MyScrollViewer>
+        </StackPanel>
+    </local:MyScrollViewer>
 </Grid>
