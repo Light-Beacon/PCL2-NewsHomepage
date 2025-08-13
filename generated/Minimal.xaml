@@ -11,184 +11,25 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style  TargetType="TextBox" x:Key="InlineCode">
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="Margin" Value="2,0,2,-4" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="Height" Value="18" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-                <ControlTemplate.Triggers>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w32a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w33a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜制装饰品</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">铜制装饰品</Paragraph><List>
-<ListItem><Paragraph>增加了铜火把</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一个使用铜粒、煤炭与木棍合成的绿色的火把变体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">和火把的作用一样</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>增加了铜栏杆</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">和现存的铁栏杆的作用一样</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会随时间氧化</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>增加了铜链</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">和现存的锁链（现在重命名成铁链了）的作用一样</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会随时间氧化</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>增加了铜灯笼</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">与普通灯笼合成配方相似但使用铜以及铜火把</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">灯笼会自己氧化，随着时间外观也在变化</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">和现存的灯笼的作用一样</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">锁链方块现在重命名为“铁链”</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">对方块、物品以及实体的微调</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在展示架上的物品位置调整以能放在槽位上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有铜傀儡像都会在被破坏时掉落</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有铜傀儡像都会在被活塞推动时掉落</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">配方</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更改了铜活板门的配方，从 6 个铜锭(合成两个)变为 4 个铜锭(合成一个)</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 83.0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 65.1</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了在文本中使用 GUI 以及物品精灵图的方式</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 83.0</Paragraph><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">copper_golem</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weather_state</TextBox> 字段现在期望一个字符串 id 而不再是整数 id</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">0 -&gt; <TextBox Style="{StaticResource InlineCode}">unaffected</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">1 -&gt; <TextBox Style="{StaticResource InlineCode}">exposed</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">2 -&gt; <TextBox Style="{StaticResource InlineCode}">weathered</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">3 -&gt; <TextBox Style="{StaticResource InlineCode}">oxidized</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">文本渲染</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">object</TextBox> 文本组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的文本组件 <TextBox Style="{StaticResource InlineCode}">object</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这个组件会从精灵图纹理图集以字符显示单个精灵图</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">精灵图一直会以 8x8 像素的矩形渲染</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">atlas</TextBox> - 纹理图集的命名空间 ID，默认值: <TextBox Style="{StaticResource InlineCode}">minecraft:blocks</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">sprite</TextBox> - 在纹理图集中的精灵图命名空间 ID，例如： <TextBox Style="{StaticResource InlineCode}">item/porkchop</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">战利品表</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">harvest/sweet_berry_bush</TextBox> 战利品表，用于交互收获有浆果的浆果丛的掉落</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#chains</TextBox> - 所有锁链方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#lanterns</TextBox> - 所有灯笼方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#bars</TextBox> - 所有金属栏杆方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#chains</TextBox> - 所有锁链方块物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#lanterns</TextBox> - 所有灯笼方块物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#bars</TextBox> - 所有金属栏杆方块物品</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 65.1</Paragraph><Paragraph Style="{StaticResource H3}">方块精灵图</Paragraph><Paragraph>增加了新方块的精灵图:</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_bars</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_torch</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_bars</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_torch</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_bars</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_torch</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_bars</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_torch</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品精灵图</Paragraph><Paragraph>增加了新物品的精灵图:</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_lantern</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_chain</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_lantern</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><Paragraph>增加了新的粒子:</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_fire_flame</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">25W32A 修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-163218">MC-163218</local:MyTextButton></Underline> - Players with the Sneak option set to &quot;Toggle&quot; can sneak while in GUIs</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-174759">MC-174759</local:MyTextButton></Underline> - Dragon eggs can be teleported to a height below void</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-257540">MC-257540</local:MyTextButton></Underline> - Sheep eat half as often as they did before 21w39a</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-273943">MC-273943</local:MyTextButton></Underline> - Sweet berries drop from harvested bushes is hardcoded</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-276431">MC-276431</local:MyTextButton></Underline> - Dragon egg teleports above the build height limit and deletes itself</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-279548">MC-279548</local:MyTextButton></Underline> - TNT minecart does not remember ignition source when exploding from a fall</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-295841">MC-295841</local:MyTextButton></Underline> - Interactive collision check path is broken</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-296054">MC-296054</local:MyTextButton></Underline> - Fast non-projectile entity movements may fail to apply block effects from blocks around the starting position when moving in positive directions</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-296055">MC-296055</local:MyTextButton></Underline> - Slow non-projectile entity movements may fail to apply block effects from origin block</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-296057">MC-296057</local:MyTextButton></Underline> - Sideways non-projectile movements may fail to apply block effects from blocks around start of sideways motion</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-296372">MC-296372</local:MyTextButton></Underline> - Teleport duration is unreliable as of 1.21.5</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299314">MC-299314</local:MyTextButton></Underline> - Breaking jukeboxes in certain ways doesn&apos;t stop the music</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299627">MC-299627</local:MyTextButton></Underline> - Entity interpolation for high speed projectiles is wildly inaccurate</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299770">MC-299770</local:MyTextButton></Underline> - Chunks loaded by ender pearls permanently unload upon player death even when enderPearlsVanishOnDeath is set to false</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299837">MC-299837</local:MyTextButton></Underline> - Running two or more /rotate commands in the same tick only applies the rotation of the last command</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299872">MC-299872</local:MyTextButton></Underline> - The freezing overlay flashes when a freezing player touches fire</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299913">MC-299913</local:MyTextButton></Underline> - The &quot;You don&apos;t seem to have a Realm...&quot; focusable text widget now has a black background</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300051">MC-300051</local:MyTextButton></Underline> - The top part of worn leggings does not render</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300092">MC-300092</local:MyTextButton></Underline> - F3 pie chart particle entries are missing names</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300094">MC-300094</local:MyTextButton></Underline> - Entities&apos; held items no longer follow their arm movements when they have the invisibility effect</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300100">MC-300100</local:MyTextButton></Underline> - The “biome” debug option no longer has a space before its biome name</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300105">MC-300105</local:MyTextButton></Underline> - The player can drown while the game is paused</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300108">MC-300108</local:MyTextButton></Underline> - Villagers&apos; and zombie villagers&apos; clothes are incomplete</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300113">MC-300113</local:MyTextButton></Underline> - pack.mcmeta no longer accepts the longform object syntax in the supported_formats field</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300121">MC-300121</local:MyTextButton></Underline> - Interacting with a group of more than 3 connected shelves causes the game to crash</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300122">MC-300122</local:MyTextButton></Underline> - Certain parts of horse armor are sometimes invisible</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300131">MC-300131</local:MyTextButton></Underline> - The &quot;debug.entry.currently.inF3&quot; string is improperly capitalized</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300136">MC-300136</local:MyTextButton></Underline> - Held item positions are synchronized between entities of the same model in view</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300145">MC-300145</local:MyTextButton></Underline> - Players can use items while their inventories are open when the “Use Item/Place Block” option is set to “Toggle”</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300146">MC-300146</local:MyTextButton></Underline> - Exiting interfaces is incredibly difficult when the “Use Item/Place Block” option is set to “Toggle”</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300153">MC-300153</local:MyTextButton></Underline> - The inner cubes of slimes are sometimes invisible from the outside</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300155">MC-300155</local:MyTextButton></Underline> - Players can freeze while standing in powder snow despite the game being paused</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300164">MC-300164</local:MyTextButton></Underline> - The value of the &quot;Sprint Window&quot; option is not saved</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300165">MC-300165</local:MyTextButton></Underline> - Players are damaged when blocking attacks with shields that disable shields</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300166">MC-300166</local:MyTextButton></Underline> - When looking_at_block or looking_at_fluid is enabled in the debug options, FPS is impacted by server tick rate</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300168">MC-300168</local:MyTextButton></Underline> - All shelf variants are in the redstone section of the creative inventory</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300180">MC-300180</local:MyTextButton></Underline> - Debug screen text now stays on the screen in F1</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300187">MC-300187</local:MyTextButton></Underline> - Interacting with items with certain components in the inventory causes a crash</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300193">MC-300193</local:MyTextButton></Underline> - Dying and respawning within the same dimension consistently shows a loading terrain screen</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300196">MC-300196</local:MyTextButton></Underline> - Local Difficulty debug information flickers if it is open while GUI is hidden</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300214">MC-300214</local:MyTextButton></Underline> - The shadows of baby mobs are now of the same size as those of their adult counterparts</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300235">MC-300235</local:MyTextButton></Underline> - First number in E counter is always stuck at 0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300248">MC-300248</local:MyTextButton></Underline> - Subtitles/closed captions obstruct the inventory UI</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300275">MC-300275</local:MyTextButton></Underline> - Pausing while riding a strider on top of lava sets the player on fire</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300305">MC-300305</local:MyTextButton></Underline> - When multiple people use fishing rods, an additional black line is drawn</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300340">MC-300340</local:MyTextButton></Underline> - Continuously clicking &quot;Continue&quot; on the welcome page resets the button disappearance animation progress</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300394">MC-300394</local:MyTextButton></Underline> - Oxidized/waxed oxidized copper golems, statue and entity versions, have the wrong pixels underneath their feet compared to their other counterparts</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300421">MC-300421</local:MyTextButton></Underline> - Inconsistent capitalization for F3+F5 description in F3+Q debug menu</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300440">MC-300440</local:MyTextButton></Underline> - Elytra consumes durability while the game is paused in singleplayer</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300464">MC-300464</local:MyTextButton></Underline> - The debug crosshair is rendered in third person</Paragraph></ListItem>
-</List>
+
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-13" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 1.21.8" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.8" CanSwap="True" IsSwapped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -198,7 +39,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-13" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
