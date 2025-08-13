@@ -1,0 +1,56 @@
+name: Check & Update Pages [DEBUG]
+on: 
+   workflow_dispatch:
+
+jobs:
+   generate:
+      name: Generate Pages
+      runs-on: ubuntu-latest
+      steps:
+       - name: 签出工程储存库
+         uses: actions/checkout@v4
+         with: 
+            path: 'project'
+       - name: 配置 Python 环境
+         uses: actions/setup-python@v4
+         with:
+           python-version: 3.11
+       - name: 签出 PageBuilder 储存库
+         uses: actions/checkout@v4
+         with: 
+            repository: 'Light-Beacon/HomepageBuilder'
+            ref: 'developing'
+            path: 'builder'
+       - name: 创建 Pagebuilder 环境
+         run: |
+            cd builder
+            pip install .
+            cd ..
+            cd project
+            pip install -r requirements.txt
+       - name: 签出生成文件储存库
+         uses: actions/checkout@v4
+         with: 
+            ref: 'generated'
+            path: 'generated'
+       - name: 删除之前版本
+         run: |
+            cd generated
+            git rm -r generated/* --ignore-unmatch
+            git clean -f
+       - name: 构建页面
+         run: builder build --project ${GITHUB_WORKSPACE}/project/Project/Project.yml --output ${GITHUB_WORKSPACE}/generated/generated -a --debug
+       - name: 配置 GPG 信息
+         uses: crazy-max/ghaction-import-gpg@v6
+         with:
+            gpg_private_key: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
+            git_user_signingkey: true
+            git_commit_gpgsign: true
+            workdir: generated
+       - name: 提交与推送更改
+         run: |
+            cd generated
+            git config --local user.email "bot@bugjump.net"
+            git config --local user.name "Hilda Bot"
+            git add *
+            git diff-index --quiet HEAD || git commit -S -m "upload generated pages" && git push
