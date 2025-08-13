@@ -1,4 +1,4 @@
-from homepagebuilder.interfaces import script
+from homepagebuilder.interfaces import script, config
 from homepagebuilder.core.types import Context
 
 def true_that(obj:str):
@@ -13,7 +13,9 @@ PREFERENCE_LIST=[
     'beta',
     'domain'
 ]
-DOMAIN = 'https://pcl.mcnews.thestack.top/'
+DOMAIN = config('NewsHomepage.Domain', 'https://pcl.mcnews.thestack.top/', str)
+if not DOMAIN.endswith('/'):
+    DOMAIN += '/'
 
 @script('PreferenceUrl')
 def get_preferece_url(context:'Context', *_args, **_kwargs):

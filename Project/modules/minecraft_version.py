@@ -3,9 +3,14 @@
 """
 
 from homepagebuilder.interfaces import Logger
+from homepagebuilder.core.config import config
+from typing import TYPE_CHECKING
 import requests
 import json
 import re
+
+if TYPE_CHECKING:
+    from homepagebuilder.core.types import Context
 
 LAUNCHER_MANIFSET_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest.json'
 MANIFSET = None
@@ -16,6 +21,7 @@ LATEST_VERSIONS = None
 logger = Logger("VersionScript")
 
 def fetch_manifset():
+    logger.info("正在加载 MC 版本列表")
     try:
         response = requests.get(LAUNCHER_MANIFSET_URL,timeout=10000)
         return json.loads(response.content)
@@ -86,3 +92,11 @@ def get_version_type(version_id):
     if re.match(RELEASE_PATTERN,version_id):
         return 'release'
     return 'other'
+
+def init(context:'Context', *args, **kwargs):
+    global MANIFSET
+    if config('NewsHomepage.MCV.UseReloadCache', config('NewsHomepage.Debug')):
+        if mcv_manifset_cache := context.builder.get_data('mcv_manifset_cache'):
+            MANIFSET = mcv_manifset_cache
+        else:
+            context.builder.set_data('mcv_manifset_cache', get_manifset())
