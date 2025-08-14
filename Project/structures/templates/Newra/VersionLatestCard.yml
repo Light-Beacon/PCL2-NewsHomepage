@@ -5,7 +5,7 @@ filter:
   file_exten:
     - md
     - markdown
-  skin: newra
+  args.skin: newra
   latest: true
 override:
   title: 最新${version-type} - ${version-id}

@@ -10,6 +10,7 @@ def true_that(obj:str):
 PREFERENCE_LIST=[
     'skin',
     'not_finished',
+    'mod',
     'beta',
     'domain'
 ]
@@ -19,12 +20,12 @@ if not DOMAIN.endswith('/'):
 
 @script('PreferenceUrl')
 def get_preferece_url(context:'Context', *_args, **_kwargs):
-    settings = context.setter.toProperties()
+    settings = context.setter.toProperties().get('args',{})
     url = DOMAIN
     if true_that(settings.get('LightEdition', False)):
         url += 'Light'
     args = []
-    args.append('beta=true')
+    args.append('mod')
     if true_that(settings.get('SkinNewra', False)):
         args.append('skin=newra')
     if true_that(settings.get('HideTranslating', False)):

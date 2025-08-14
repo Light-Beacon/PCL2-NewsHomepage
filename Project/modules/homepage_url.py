@@ -7,7 +7,7 @@ DOMAIN = pref_module.DOMAIN
 
 @script('Link')
 def link_script(page_name, context, *_args, **kwargs):
-    settings:dict = context.setter.toProperties()
+    settings:dict = context.setter.toProperties().get('args',{})
     settings_length = len(settings)
     if '.json' not in page_name:
         page_name += '.json'
