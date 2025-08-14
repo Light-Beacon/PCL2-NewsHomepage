@@ -11,21 +11,148 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style  TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w33a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">作为正在进行的 Vibrant Visuals（灵动视效）的一部分，在末地维度增加了闪光。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铁傀儡有时会在最近的铜傀儡上种装饰花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">未发送的聊天消息现在会存为聊天草稿</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">末地闪光</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地维度现在有了天空光照</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">通常天空光照不影响维度外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">随着时间末地天空会出现闪光</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当其发生时天空光照强度会增加使维度充满紫色光</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜傀儡</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铁傀儡有时会在最近的铜傀儡上种装饰花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">花可以使用剪刀剪下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当铜傀儡变为铜傀儡像时花会掉落</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">聊天草稿</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果聊天被强制关闭，未发送的聊天信息现在会被存为聊天草稿</Paragraph></ListItem>
+<ListItem><Paragraph>这包含了被外边源关闭的情况，比如死亡或者打开了对话框，但是不包含玩家自己关闭了对话框</Paragraph></ListItem>
+<ListItem><Paragraph>任何存在的聊天草稿将会在下一次聊天栏打开时提前填充到消息框</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">草稿文字有着灰色外观，直到其恢复</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以通过交互使得恢复草稿文字为正常文字：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">键入更多文字</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用方向键移动光标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">点击</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">高亮</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在草稿未恢复时按下 Enter 键会像正常聊天消息一样发送出去</Paragraph></ListItem>
+<ListItem><Paragraph>在草稿未恢复时按下 Backspace 键会删除草稿</Paragraph></ListItem>
+<ListItem><Paragraph>在聊天设置菜单中增加了一个选项，默认情况下保存未发送的聊天消息</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当该选项启用时，未发送的消息将会 <Italic>一直</Italic> 保存为聊天草稿，即使玩家是自己关闭了聊天栏</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在当前服务器世界中的玩家现在一直会显示在社交屏幕中，即使它们离线</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块</Paragraph><Paragraph Style="{StaticResource H4}">展示架</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在展示架中的物品现在会渲染在展示架的中部</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了许多展示架内物品的大小以更好适配展示架</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 感谢你们所有有价值的对展示架的反馈！我们看到了很多创意性地使用这个新方块的方式，我们决定回退上周将物品调整至展示架底部的更改，因为我们同意将物品居中放置会在建造中提供更多创意机会。</Paragraph>
 
+</Section><Paragraph Style="{StaticResource H3}">UI</Paragraph><Paragraph Style="{StaticResource H4}">聊天</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以站在下界传送门中开始聊天</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在进入另一个维度时正在聊天，聊天栏会保持打开并且不会改变</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 83.1</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 65.2</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的物品渲染变换 <TextBox Style="{StaticResource InlineCode}">on_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用于在展示架上展示物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 83.1</Paragraph><Paragraph Style="{StaticResource H3}">方块状态</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对展示架增加了 <TextBox Style="{StaticResource InlineCode}">align_items_to_bottom</TextBox> 方块状态属性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果为 <TextBox Style="{StaticResource InlineCode}">false</TextBox>，在展示架上的物品将会忽略 <TextBox Style="{StaticResource InlineCode}">on_shelf</TextBox> 物品渲染变换的垂直偏移并且渲染在展示架的中部</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果为 <TextBox Style="{StaticResource InlineCode}">true</TextBox> ，在展示架上的物品会从底部向上渲染并遵从 <TextBox Style="{StaticResource InlineCode}">on_shelf</TextBox> 物品渲染变换的垂直偏移</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> （物品排布在展示架的中部）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">属性</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">run_command</TextBox> 点击事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在之前，如果命令字段包含一个需要签名消息的命令（<TextBox Style="{StaticResource InlineCode}">/say</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/me</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/msg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/tell</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/w</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/teammsg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/tm</TextBox>），它会自动放弃</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在，会展示一个屏幕允许用户插入命令到聊天栏，如果窗口不能打开则会复制命令到剪贴板。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">附魔</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">explode</TextBox> 效果</Paragraph><Paragraph>新字段: <TextBox Style="{StaticResource InlineCode}">block_effects</TextBox> —— 指定每种方块的粒子。每个方块粒子会随机地基于权重选择。在每一个爆炸刻会生成一系列的方块粒子</Paragraph><Paragraph>格式: 一个入口点列表:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weight</TextBox>: 代表随机选择的权重的非负整型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle</TextBox>: 要生成的粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">scaling</TextBox>: 可选的在爆炸中心与方块位置之间的缩放，默认为 1.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">speed</TextBox>(译者注：游戏中是<TextBox Style="{StaticResource InlineCode}">speec</TextBox>): 可选的粒子速度倍数，默认为 1.0</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#shearable_from_copper_golem</TextBox> - 所有可以使用剪刀从铜傀儡的头部槽移除的物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 65.2</Paragraph><Paragraph Style="{StaticResource H3}">纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的纹理:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">environment/end_flash.png</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><Paragraph Style="{StaticResource H4}">音效事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的音效事件:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weather.end_flash</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">25W33A 修复的漏洞</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-26334">MC-26334</local:MyTextButton></Underline> - Chat UI is forcibly cleared when killed</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-46503">MC-46503</local:MyTextButton></Underline> - You can retain entities&apos; shaders by running the &quot;/kill&quot; command while in spectator mode</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-69216">MC-69216</local:MyTextButton></Underline> - Switching to spectator mode while fishing keeps rod cast</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-98322">MC-98322</local:MyTextButton></Underline> - Flying after shifting between Creative/Spectator</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-99785">MC-99785</local:MyTextButton></Underline> - You can leash entities in spectator mode</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-119417">MC-119417</local:MyTextButton></Underline> - A spectator can occupy a bed if they enter it and then are switched to spectator mode</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-165991">MC-165991</local:MyTextButton></Underline> - TNT explosion no longer shows additional smoke particles since 1.15 Pre-release 1</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-173730">MC-173730</local:MyTextButton></Underline> - Shift-clicking water buckets against a waterloggable block doesn&apos;t place the water beside the waterloggable block</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-183784">MC-183784</local:MyTextButton></Underline> - Visual bug to the Game Mode Switcher debug menu after resizing the window</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-187850">MC-187850</local:MyTextButton></Underline> - &quot;run_command&quot; click_event doesn&apos;t work in written books if chat is hidden</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-191669">MC-191669</local:MyTextButton></Underline> - Sprinting is disabled when switching your gamemode to spectator while sprinting into a block or general obstruction</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-232968">MC-232968</local:MyTextButton></Underline> - Spectators can prevent the closing animation of a chest/barrel when viewing it at the same time as a non-spectator</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-238146">MC-238146</local:MyTextButton></Underline> - When you switch to Spectator mode while sleeping, the night never skips</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-259571">MC-259571</local:MyTextButton></Underline> - Last player game mode not saved after player dies or the game is reloaded</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-270172">MC-270172</local:MyTextButton></Underline> - Client and server desync for hooked players when changing gamemode to spectator</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-297898">MC-297898</local:MyTextButton></Underline> - Entering a dialog temporarily closes the chat and clears anything the player was currently typing</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299548">MC-299548</local:MyTextButton></Underline> - &quot;run_command&quot; dialog actions don&apos;t work if chat is hidden</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299823">MC-299823</local:MyTextButton></Underline> - Minecraft shaders cause C7050 warnings</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299873">MC-299873</local:MyTextButton></Underline> - Selection boxes of plain messages within dialogs can get cut off</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300034">MC-300034</local:MyTextButton></Underline> - Dolphins can ride boats</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300057">MC-300057</local:MyTextButton></Underline> - Monsters still spawn for a tick when spawning them with a Spawn Egg in Peaceful</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300417">MC-300417</local:MyTextButton></Underline> - The copper pickaxe is not part of the #cluster_max_harvestables item tag</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300457">MC-300457</local:MyTextButton></Underline> - Dialog is unescapable when action or exit_action is set to run_command with a command that would produce a signed chat message</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300722">MC-300722</local:MyTextButton></Underline> - Hoppers appear to randomly stop draining items through shelves</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300732">MC-300732</local:MyTextButton></Underline> - Loaded ender pearls are deleted when viewing the end credits for the first time when enderPearlsVanishOnDeath is true</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300739">MC-300739</local:MyTextButton></Underline> - Server crash when generating custom structures containing shelf blocks</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300746">MC-300746</local:MyTextButton></Underline> - Missing translation for copper wall torch</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300747">MC-300747</local:MyTextButton></Underline> - Cannot see villager&apos;s profession layer behind slime</Paragraph></ListItem>
+</List>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-13" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -39,7 +166,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-13" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
