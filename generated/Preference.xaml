@@ -45,13 +45,7 @@
     <StackPanel Margin="15,5">
         <TextBlock x:Name="OutputTextBlock" Visibility="Collapsed">
             <TextBlock.Text>
-                <MultiBinding StringFormat="{}https://pcl.mcnews.thestack.top/SaveChanges.json?SkinBasic={0}&amp;SkinNewra={1}&amp;StandardEdition={2}&amp;LightEdition={3}&amp;HideTranslating={4}">
-                    <Binding Path="Checked" ElementName="BasicSkinRadioBox"/>
-                    <Binding Path="Checked" ElementName="NewraSkinRadioBox"/>
-                    <Binding Path="Checked" ElementName="StandardEditionRadioBox"/>
-                    <Binding Path="Checked" ElementName="LightEditionRadioBox"/>
-                    <Binding Path="Checked" ElementName="HideTranslatingCheckBox"/>
-                </MultiBinding>
+                <MultiBinding StringFormat="{}https://pcl.mcnews.thestack.top/SaveChanges.json?skinbasic={0}&amp;skinnewra={1}&amp;editionstandard={2}&amp;editionlight={3}&amp;hidewip={4}&amp;"><Binding Path="Checked" ElementName="skinbasic"/><Binding Path="Checked" ElementName="skinnewra"/><Binding Path="Checked" ElementName="editionstandard"/><Binding Path="Checked" ElementName="editionlight"/><Binding Path="Checked" ElementName="hidewip"/></MultiBinding>
             </TextBlock.Text>
         </TextBlock>
         <local:MyButton IsEnabled="{Binding Path=Checked, ElementName=ConfirmCheckBox}"
@@ -84,42 +78,40 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-            <Border Grid.Column="0" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="StandardEditionRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="0" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.BorderBrush>
-                    <Binding Path="Children[0].Foreground" ElementName="StandardEditionRadioBox"/>
-                </Border.BorderBrush>
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="StandardEditionRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="0" Height="50" Margin="20,10,10,10" x:Name="StandardEditionRadioBox" Checked="True">
+            <Border Grid.Row="0" Grid.Column="0" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
+    <Border.BorderBrush>
+        <Binding Path="Children[1].Stroke" ElementName="editionstandard"/>
+    </Border.BorderBrush>
+</Border>
+<Border Grid.Row="0" Grid.Column="0" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
+    <Border.Background>
+        <Binding Path="Children[2].Fill" ElementName="editionstandard"/>
+    </Border.Background>
+</Border>
+<local:MyRadioBox Grid.Row="0" Grid.Column="0" Checked="True" Height="50" Margin="20,10,10,10" x:Name="editionstandard">
+    
                 <Run>完整</Run>
                 <LineBreak/>
                 <Run FontSize="10">原汁原味的新闻主页体验</Run>
-            </local:MyRadioBox>
-
-            <Border Grid.Column="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="LightEditionRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="LightEditionRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="1" Height="50" Margin="20,10,10,10" x:Name="LightEditionRadioBox">
+            
+</local:MyRadioBox>
+            <Border Grid.Row="0" Grid.Column="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
+    <Border.BorderBrush>
+        <Binding Path="Children[1].Stroke" ElementName="editionlight"/>
+    </Border.BorderBrush>
+</Border>
+<Border Grid.Row="0" Grid.Column="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
+    <Border.Background>
+        <Binding Path="Children[2].Fill" ElementName="editionlight"/>
+    </Border.Background>
+</Border>
+<local:MyRadioBox Grid.Row="0" Grid.Column="1" Checked="False" Height="50" Margin="20,10,10,10" x:Name="editionlight">
+    
                 <Run>精简</Run>
                 <LineBreak/>
                 <Run FontSize="10">只保留最新版本的链接，性能更高</Run>
-            </local:MyRadioBox>
-
+            
+</local:MyRadioBox>
         </Grid>
     </StackPanel>
 </local:MyCard>
@@ -135,37 +127,37 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="BasicSkinRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="0" Grid.Row="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="BasicSkinRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="0" Grid.Row="1" Height="50" Margin="20,10,10,10" x:Name="BasicSkinRadioBox" Checked="True">
-                <Run>经典</Run>
-            </local:MyRadioBox>
-            <local:MyImage Grid.Column="0" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNbeg0.png" Margin="10,5"/>
-
-            <Border Grid.Column="1" Grid.Row="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-                <Border.BorderBrush>
-                    <Binding Path="Children[1].Stroke" ElementName="NewraSkinRadioBox"/>
-                </Border.BorderBrush>
-            </Border>
-            <Border Grid.Column="1" Grid.Row="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-                <Border.BorderBrush>
-                    <Binding Path="Children[0].Foreground" ElementName="NewraSkinRadioBox"/>
-                </Border.BorderBrush>
-                <Border.Background>
-                    <Binding Path="Children[2].Fill" ElementName="NewraSkinRadioBox"/>
-                </Border.Background>
-            </Border>
-            <local:MyRadioBox Grid.Column="1" Grid.Row="1" Height="50" Margin="20,10,10,10" x:Name="NewraSkinRadioBox" >
+            <Border Grid.Row="1" Grid.Column="0" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
+    <Border.BorderBrush>
+        <Binding Path="Children[1].Stroke" ElementName="skinbasic"/>
+    </Border.BorderBrush>
+</Border>
+<Border Grid.Row="1" Grid.Column="0" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
+    <Border.Background>
+        <Binding Path="Children[2].Fill" ElementName="skinbasic"/>
+    </Border.Background>
+</Border>
+<local:MyRadioBox Grid.Row="1" Grid.Column="0" Checked="True" Height="50" Margin="20,10,10,10" x:Name="skinbasic">
+    
+                <Run>基础</Run>
+            
+</local:MyRadioBox>
+            <Border Grid.Row="1" Grid.Column="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
+    <Border.BorderBrush>
+        <Binding Path="Children[1].Stroke" ElementName="skinnewra"/>
+    </Border.BorderBrush>
+</Border>
+<Border Grid.Row="1" Grid.Column="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
+    <Border.Background>
+        <Binding Path="Children[2].Fill" ElementName="skinnewra"/>
+    </Border.Background>
+</Border>
+<local:MyRadioBox Grid.Row="1" Grid.Column="1" Checked="False" Height="50" Margin="20,10,10,10" x:Name="skinnewra">
+    
                 <Run>通透</Run>
-            </local:MyRadioBox>
+            
+</local:MyRadioBox>
+            <local:MyImage Grid.Column="0" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNbeg0.png" Margin="10,5"/>
             <local:MyImage Grid.Column="1" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNb359.png" Margin="10,5"/>
         </Grid>
     </StackPanel>
@@ -173,7 +165,7 @@
 
 <local:MyCard Margin="0,0,0,15" CanSwap="False" Title="杂项">
     <StackPanel Margin="25,40,23,15"> 
-        <local:MyCheckBox Text="隐藏“正在翻译中”动画" x:Name="HideTranslatingCheckBox"/>
+        <local:MyCheckBox Text="隐藏“正在翻译中”动画" x:Name="hidewip" Checked="False"/>
     </StackPanel>
 </local:MyCard>
 
