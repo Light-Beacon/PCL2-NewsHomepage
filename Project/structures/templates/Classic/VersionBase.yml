@@ -3,7 +3,7 @@ components:
  - ${@IF|${hint}|Head/Hint}
  - ${@IF|${version-image-link}|VersionHeaderImage}
  - FlowDocumentViewer
- - ${@IF|${not_finished}|Loading}
+ - ${@IF|${args.hidewip}|${@IF|${not_finished}|Loading}}
  - ${@IF|!${disable-websites}|Classic/VersionWebsites}
  - ${@IF|!${disable-toolbar}|Classic/VersionToolBar}
 base: Card

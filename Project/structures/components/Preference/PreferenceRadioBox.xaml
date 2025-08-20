@@ -1,0 +1,13 @@
+<Border Grid.Row="${row}" Grid.Column="${column}" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
+    <Border.BorderBrush>
+        <Binding Path="Children[1].Stroke" ElementName="${element_key}"/>
+    </Border.BorderBrush>
+</Border>
+<Border Grid.Row="${row}" Grid.Column="${column}" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
+    <Border.Background>
+        <Binding Path="Children[2].Fill" ElementName="${element_key}"/>
+    </Border.Background>
+</Border>
+<local:MyRadioBox Grid.Row="${row}" Grid.Column="${column}" Checked="${check}" Height="50" Margin="20,10,10,10" x:Name="${element_key}">
+    ${content}
+</local:MyRadioBox>

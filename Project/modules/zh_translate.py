@@ -25,12 +25,12 @@ def fetch_transltions():
     logger.info("正在加载中文翻译")
     try:
         response = requests.get('https://raw.githubusercontent.com/Light-Beacon/Minecraft-ZH-Translation-Sheet/refs/heads/main/data/translations.json', 
-                        timeout=10)
-    except ConnectionError:
+                        timeout=5)
+    except requests.ConnectionError:
         logger.warning("无法加载中文翻译：连接错误")
         return {}
-    except Exception as ex:
-        logger.warning(f"无法加载中文翻译：{type(ex)}:{ex}")
+    except requests.ReadTimeout as ex:
+        logger.warning("无法加载中文翻译：访问超时")
         return {}
     response_content = response.content
     return json.loads(response_content)
@@ -43,5 +43,6 @@ def init(context:'Context', *args, **kwargs):
             logger.info("从缓存中加载中文翻译数据成功, 共计 %d 条翻译", len(TRANSLATIONS))
             return
     TRANSLATIONS = fetch_transltions()
-    logger.info("加载中文翻译数据成功, 共计 %d 条翻译", len(TRANSLATIONS))
+    if len(TRANSLATIONS) > 0:
+        logger.info("加载中文翻译数据成功, 共计 %d 条翻译", len(TRANSLATIONS))
     context.builder.set_data('translation_manifset_cache', TRANSLATIONS)
