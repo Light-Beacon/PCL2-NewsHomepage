@@ -78,12 +78,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            ${@PreferenceRadioBox|edition|standard|0|0|
+            ${@PreferenceRadioBox|Edition|standard|0|0|
                 <Run>完整</Run>
                 <LineBreak/>
                 <Run FontSize="10">原汁原味的新闻主页体验</Run>
             }
-            ${@PreferenceRadioBox|edition|light|1|0|
+            ${@PreferenceRadioBox|Edition|light|1|0|
                 <Run>精简</Run>
                 <LineBreak/>
                 <Run FontSize="10">只保留最新版本的链接，性能更高</Run>
@@ -98,26 +98,31 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            ${@PreferenceRadioBox|skin|basic|0|1|
-                <Run>基础</Run>
+            ${@PreferenceRadioBox|Skin|basic|0|1|
+                <Run>默认</Run>
             }
-            ${@PreferenceRadioBox|skin|newra|1|1|
+            ${@PreferenceRadioBox|Skin|newra|1|1|
                 <Run>通透</Run>
+                <LineBreak/>
+                <Run FontSize="10">不一样的头图栏</Run>
             }
-            <local:MyImage Grid.Column="0" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNbeg0.png" Margin="10,5"/>
-            <local:MyImage Grid.Column="1" Grid.Row="0" Source="https://s21.ax1x.com/2025/08/03/pVNb359.png" Margin="10,5"/>
+            ${@PreferenceRadioBox|Skin|classic|2|1|
+                <Run>经典</Run>
+                <LineBreak/>
+                <Run FontSize="10">2023 新闻主页经典款式</Run>
+            }
         </Grid>
     </StackPanel>
 </local:MyCard>
 
 <local:MyCard Margin="0,0,0,15" CanSwap="False" Title="杂项">
     <StackPanel Margin="25,40,23,15"> 
-        ${@PreferenceCheckBox|hidewip|隐藏“正在翻译中”动画}
+        ${@PreferenceCheckBox|HideWIP|隐藏“正在翻译中”动画}
+        ${@PreferenceCheckBox|HideLaunchButton|隐藏启动按钮}
+        ${@PreferenceCheckBox|HideDownloadButton|隐藏下载按钮}
+        ${@PreferenceCheckBox|HideServerJarButton|隐藏服务端下载按钮}
     </StackPanel>
 </local:MyCard>
 

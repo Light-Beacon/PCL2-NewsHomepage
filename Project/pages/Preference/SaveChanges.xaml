@@ -29,10 +29,11 @@
         自动保存
     </local:MyCard.Inlines>
     <StackPanel Margin="25,50,23,15">
-        ${@IF|${args.mod}|
+        <local:MyHint Margin="0,0,0,4" Theme="yellow">自动保存仅支持 PCL 版本 2.10.6+，若无法使用自动保存请使用下方的手动保存。</local:MyHint>
+        ${@IsUsingPreset|
         <TextBlock Margin="0,0,0,4">
-            0.应用设置前需要将主页设置从预设改为联网更新。你需要点击下方按钮更改设置。
-        </local:TextBlock>
+            0.应用设置前需要将主页设置从预设改为联网更新（之后再次设置时无需更改）。你需要点击下方按钮更改设置。
+        </TextBlock>
         <local:MyButton Text="切换为联网更新" 
                         EventType="修改设置"
                         Height="40" Margin="20,10,20,10" EventData="UiCustomType|2"/>}
@@ -55,9 +56,9 @@
         </local:MyButton>
     </StackPanel>
 </local:MyCard>
-<local:MyCard Title="手动更改" Margin="0,0,0,15" CanSwap="False">
+<local:MyCard Title="手动保存" Margin="0,0,0,15" CanSwap="True" IsSwapped="True">
     <StackPanel Margin="25,40,23,15">
-        <Grid  Margin="0,0,0,14">
+        <Grid Margin="0,0,0,14">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="80"/>

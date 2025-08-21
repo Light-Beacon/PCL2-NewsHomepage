@@ -3,7 +3,7 @@ components:
  - ${@IF|${hint}|Head/Hint}
  - ${@IF|!${disable-versionimage}|${@IF|${version-image-link}|VersionHeaderImage}}
  - FlowDocumentViewer
- - ${@IF|${args.hidewip}|${@IF|${not_finished}|Loading}}
+ - ${@IF|${args.HideWIP}||${@IF|${not_finished}|Loading}}
  - ${@IF|!${disable-translator}|TranslatorBar}
  - ${@IF|!${disable-lastupdate}|LastUpdateBox}
  - ${@IF|!${disable-toolbar}|VersionToolBar}

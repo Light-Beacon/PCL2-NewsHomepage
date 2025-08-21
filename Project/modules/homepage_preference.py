@@ -12,6 +12,7 @@ def is_true(obj:str):
     if isinstance(obj, str):
         return obj.lower() == 'true' or obj == ''
 
+
 GET_DOMAIN_URL = require('domain').get_doamin_url
 
 class PrefenrenceEntry:
@@ -24,6 +25,9 @@ class PrefenrenceEntry:
         self.__type = type
         self.__default = default
         
+    @property
+    def type(self):
+        return self.__type
     
     @property
     def modify_method(self):
@@ -49,6 +53,22 @@ class PrefenrenceEntry:
 
     def get_value_from_save_page(self, settings):
         raise NotImplementedError()
+    
+    def convert_value(self, value):
+        type = self.__type
+        match type.__name__:
+            case 'str':
+                if isinstance(value, str):
+                    return value
+                else:
+                    return str(value)
+            case 'bool':
+                if isinstance(value, str):
+                    return value.lower() == 'true' or value == ''
+                else:
+                    return bool(value)
+            case _:
+                raise TypeError(type)
 
 class PrefenrenceHiddenEntry(PrefenrenceEntry):
     def get_element_names(self):
@@ -107,6 +127,16 @@ class PrefenrenceBoolEntry(PrefenrenceEntry):
     
     def get_value_from_save_page(self, settings):
         return is_true(settings.get(self.get_element_name(), self.default))
+    
+class PrefenrenceResetEntry(PrefenrenceHiddenEntry):
+    
+    def __init__(self, name, type, default, reset_value):
+        super().__init__(name, type, default)
+        self.__reset_value = reset_value
+    
+    @property
+    def reset_value(self):
+        return self.__reset_value
 
 class PreferenceManager:
     __entries:Dict[str, PrefenrenceEntry] = {}
@@ -134,7 +164,10 @@ class PreferenceManager:
         settings = context.setter.toProperties().get('args',{})
         current_value = settings.get(key)
         if current_value is not None:
-            return current_value == value
+            if value == True:
+                return is_true(current_value)
+            else:
+                return current_value == value
         else:
             return entry.default == value
     
@@ -147,14 +180,25 @@ class PreferenceManager:
         return self.__entries.values()
     
 PreferenceManager.add_entries([
-            PrefenrenceChoiceEntry('skin', str, 'basic',
-                             ['basic', 'newra']),
-            PrefenrenceChoiceEntry('edition', str, 'standard',
-                             ['standard', 'light']),
-            PrefenrenceBoolEntry('hidewip', bool, False),
-            PrefenrenceHiddenEntry('mod', bool, False),
-            PrefenrenceHiddenEntry('beta', bool, False)
-        ])
+    PrefenrenceChoiceEntry('Skin', str, 'basic',
+                        ['basic', 'newra', 'classic',]),
+    PrefenrenceChoiceEntry('Edition', str, 'standard',
+                        ['standard', 'light']),
+    PrefenrenceBoolEntry('HideWIP', bool, False),
+    PrefenrenceBoolEntry('HideLaunchButton', bool, False),
+    PrefenrenceBoolEntry('HideDownloadButton', bool, False),
+    PrefenrenceBoolEntry('HideServerJarButton', bool, False),
+    PrefenrenceResetEntry('mod', bool, False, True),
+    PrefenrenceResetEntry('beta', bool, False, False)
+])
+
+@script('IsUsingPreset')
+def get(content, context:'Context', *_args, **_kwargs):
+    settings = context.setter.toProperties().get('args',{})
+    if not is_true(settings.get('mod')):
+        return content
+    else:
+        return ''
 
 @script('PreferenceUrl')
 def get_preferece_url(context:'Context', *_args, **_kwargs):
@@ -163,8 +207,11 @@ def get_preferece_url(context:'Context', *_args, **_kwargs):
     url = GET_DOMAIN_URL(context)
     for entry in PreferenceManager.get_entries():
         value = entry.get_value_from_save_page(settings=settings)
+        value = entry.convert_value(value)
+        if isinstance(entry, PrefenrenceResetEntry):
+            value = entry.reset_value
         if value != entry.default:
-            if is_true(value):
+            if value == True:
                 args.append(entry.name)
             else:
                 args.append(entry.name + '=' + value)
@@ -182,7 +229,8 @@ def preferece_save_page_url(context:'Context', *_args, **_kwargs):
         if isinstance(entry, PrefenrenceHiddenEntry):
             value = settings.get(entry.name)
             if value is not None:
-                string_format += f'{entry.name}={value}'
+                value = entry.convert_value(value)
+                string_format += f'{entry.name}={value}&amp;'
             continue
         for name in entry.get_element_names():
             string_format += f'{name}={{{i}}}&amp;'

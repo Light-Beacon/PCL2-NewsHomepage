@@ -9,14 +9,18 @@ ${@IF|${translator}|${@IF|!${translators_in_new_line}|
 }}
 
 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+${@IF|${args.HideLaunchButton}||
 <local:MyIconTextButton Text="启动" ToolTip="启动 ${version-id}" EventType="启动游戏"
     EventData="${version-id}" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+}
+${@IF|${args.HideDownloadButton}||
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
-${@IF|${server-jar}|
+}
+${@IF|${server-jar}|${@IF|${args.HideServerJarButton}||
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
     LogoScale="1.05" EventData="${server-jar}" Logo="{StaticResource CloudIcon}" />
-}
+}}
 </StackPanel>
 </Grid>
 
