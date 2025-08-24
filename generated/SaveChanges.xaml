@@ -64,7 +64,7 @@
                 <ColumnDefinition Width="80"/>
             </Grid.ColumnDefinitions>
         <TextBox Grid.Column="0" TextWrapping="Wrap" x:Name="LinkTextBox" Margin="0,0,10,0">
-            https://pcl.mcnews.thestack.top/?mod
+            https://mcnews.meloong.com/?mod
         </TextBox>
         <local:MyButton Grid.Column="1" Height="26" EventType="复制文本" EventData="{Binding ElementName=LinkTextBox, Path=Text}">
             复制链接
