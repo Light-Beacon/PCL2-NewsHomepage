@@ -2,7 +2,7 @@ from homepagebuilder.interfaces import config, Logger
 from homepagebuilder.core.types import Context
 
 _PROTOCOL = config('NewsHomepage.Protocol', 'https', str)
-_DOMAIN = config('NewsHomepage.Domain', 'pcl.mcnews.thestack.top', str)
+_DOMAIN = config('NewsHomepage.Domain', 'mcnews.meloong.com', str)
 _PORT = config('NewsHomepage.Port', '443', str)
 
 logger = Logger('Domain')
