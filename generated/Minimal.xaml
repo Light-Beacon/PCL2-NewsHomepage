@@ -11,6 +11,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
@@ -31,169 +35,162 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w34b" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300911">MC-300911</local:MyTextButton></Underline> - Glowing item &amp; block displays no longer glow</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="25w34a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w35a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">服务器现在拥有了游戏内的行为准则</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">服务器行为准则</Paragraph><Paragraph>当连接到服务器时，现在会显示服务器行为准则屏幕。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">游玩服务器必须接受服务器行为准则</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会提供一个检查框，勾选后不会再显示行为准则</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果行为准则更改，它还会再次显示</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">服务器设置</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一个新的布尔字段 <TextBox Style="{StaticResource InlineCode}">enable-code-of-conduct</TextBox> 添加进了 server.properties</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果将其设为 <TextBox Style="{StaticResource InlineCode}">true</TextBox> 将会使服务器在与 <TextBox Style="{StaticResource InlineCode}">server.properties</TextBox> 所在文件夹中的名为 <TextBox Style="{StaticResource InlineCode}">codeofconduct</TextBox> 子文件夹中寻找行为准则文件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在文件夹中的每一个文件名应符合 <TextBox Style="{StaticResource InlineCode}">&lt;language_code&gt;.txt</TextBox> 格式</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">上方的语言将会尝试匹配玩家的语言</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果不存在匹配玩家语言的文件，会使用 <TextBox Style="{StaticResource InlineCode}">en_us</TextBox> 的行为准则</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">en_us</TextBox> 也不存在，则会匹配任意文件</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在更新了主菜单的全景图，展示了村庄中的铜傀儡</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">末地闪光</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由闪光造成的音效现在有了更长的延迟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">&quot;隐藏天空闪电效果&quot; 无障碍设置被重命名为 &quot;隐藏天空闪烁效果&quot;，启用的同时也会隐藏末地闪光</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当闪光由设置禁用时，世界不会被闪光点亮，但是闪光源以及音效仍会显示与播放</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块、物品以及实体的微调</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当铜傀儡受到隐身药水效果时，它的眼睛现在会隐藏</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡碰撞箱微调</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">碰撞箱宽度现在为 0.6 格，以能够寻路通过门</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">碰撞箱高度现在为 1.01 格，以不会被某些方块卡住</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡以及铜箱子现在可以在 12 格外听到其发出的音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">分类音效现在被调整地更安静</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了对哈利奇地方语言的支持 <Italic>（译者注：哈利奇是乌克兰的一个城市）</Italic></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Minecraft 服务端管理协议</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议（MSMP）</Paragraph><Paragraph>增加了一个服务器管理 API (JSON-RPC over WebSocket) 用于专用服务器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">此 API 默认禁用，可以由服务器 properties 文件启用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-enabled=true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-host=localhost</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">management-server-port=25585</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph>当启用时 API 可以通过 <TextBox Style="{StaticResource InlineCode}">ws://&lt;management-server-host&gt;:&lt;management-server-port&gt;</TextBox> 访问</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">支持查询以及更新服务器状态(玩家、白名单、操作员、设置、游戏规则)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在状态更改时发送通知 (e.g. 如玩家加入、游戏规则更新)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调用 <TextBox Style="{StaticResource InlineCode}">{}{&quot;id&quot;:1,&quot;method&quot;:&quot;rpc.discover&quot;}</TextBox> 返回一个包含了当前运行的服务器支持的方法以及通知的 API schema</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据生成器在报告输出文件夹中提供一个 API schema (<TextBox Style="{StaticResource InlineCode}">json-rpc-api-schema.json</TextBox>) 反映了 <TextBox Style="{StaticResource InlineCode}">rpc.discover</TextBox> 方法返回的内容</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">API 遵守 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.jsonrpc.org/specification">JSON-RPC 2.0 规范</local:MyTextButton></Underline></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用带有命名空间的方法，并且保留的命名空间为 <TextBox Style="{StaticResource InlineCode}">minecraft</TextBox> （如：<TextBox Style="{StaticResource InlineCode}">minecraft:players</TextBox>,<TextBox Style="{StaticResource InlineCode}">minecraft:allowlist/add</TextBox>）以及 <TextBox Style="{StaticResource InlineCode}">notification</TextBox> （如 <TextBox Style="{StaticResource InlineCode}">notification:players/joined</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用自定义命名空间以及额外方法进行扩展</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">核心方法组: 玩家、白名单、操作员、服务器（保存、停止）、服务器设置、游戏规则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">方法调用示例:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">请求: <TextBox Style="{StaticResource InlineCode}">{}{&quot;method&quot;:&quot;minecraft:allowlist/add&quot;,&quot;id&quot;:1,&quot;params&quot;:[{}{&quot;name&quot;:&quot;jeb_&quot;}](https://zh.minecraft.wiki/w/{}{&quot;name&quot;:&quot;jeb_&quot;})}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">响应: <TextBox Style="{StaticResource InlineCode}">{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:[{}{&quot;id&quot;:&quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;,&quot;name&quot;:&quot;jeb_&quot;}]}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">通知示例:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;notification:players/joined&quot;,&quot;params&quot;:[{}{&quot;id&quot;:&quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;,&quot;name&quot;:&quot;jeb_&quot;}]}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">错误示例:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">请求: <TextBox Style="{StaticResource InlineCode}">{}{&quot;method&quot;: &quot;minecraft:foo/bar&quot;,&quot;id&quot;: 1}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">响应: <TextBox Style="{StaticResource InlineCode}">{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;error&quot;:{}{&quot;code&quot;:-32601,&quot;message&quot;:&quot;Method not found&quot;,&quot;data&quot;:&quot;Method not found: minecraft:foo/bar&quot;}}}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">错误以及错误代码遵守 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.jsonrpc.org/specification#error_object">JSON-RPC 2.0 错误对象格式</local:MyTextButton></Underline> (译者注：并未完全遵守，见 MC-301531)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当添加一个新的服务器到服务器列表时，名称不再预填充。当名称留空时使用默认名称。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更多文本输入框现在支持使用鼠标拖拽选择文字</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">鼠标指针</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一些 UI 组件现在会更改鼠标指针的形状</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如: 文本输入框、数字滑块、按钮、滚动栏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">此外，字符标签可点击的部分（如链接）现在会将指针改为 “手” 状</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这项特性现在可以通过在 &quot;鼠标设置&quot; 的 &quot;允许光标变化&quot; 菜单中更改</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">对方块、物品以及实体的微调</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡的碰撞箱微调</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在碰撞箱是 0.98 格高，以可以寻路通过一格高的空间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在生成铜傀儡时创建的铜箱子现在与附近的其它铜箱子正常连接</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡现在使用鞍装备槽放置在其避雷针顶上的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其头装备槽现在与正常的头装备槽一样，类似于人型生物</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 84.0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 66.0</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 84.0</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在数据组件以及方块实体的玩家档案不再会自动解析</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">fetchprofile</TextBox> 命令以下载玩家档案</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块状态</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">从展示架上移除了方块状态 <TextBox Style="{StaticResource InlineCode}">align_items_to_bottom</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">它被替换为在展示架方块实体上有着相同名称的布尔字段</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在上个快照创建的有着这个属性的展示架将会重置为默认值（<TextBox Style="{StaticResource InlineCode}">false</TextBox>）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">fetchprofile</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了从 Minecraft 服务器上获取玩家档案内容的命令</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">因为这个操作可能需要一些时间，它在工作时为异步进行</Paragraph></ListItem>
-<ListItem><Paragraph>当操作完成时结果会被打印，但是游戏会一直不间断地运行</Paragraph></ListItem>
-<ListItem><Paragraph>在成功完成后，会显示以让用户复制的一条消息完全储存的 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件内容，或有着 <TextBox Style="{StaticResource InlineCode}">said</TextBox> 组件的 <TextBox Style="{StaticResource InlineCode}">/give @s minecraft:player_head</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">因为命令执行不会立即产生结果，这个指令返回值恒为 1</Paragraph></ListItem>
-</List><Paragraph>语法:</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fetchprofile name &lt;player name&gt;</TextBox> - 返回由玩家名（大小写不敏感）解析的档案</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fetchprofile id &lt;uuid&gt;</TextBox> - 返回由 id 解析的档案</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}">更改了 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">之前这个组件的内容会在档案被解析时永久的改变，例如在从 Minecraft 服务时</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为了避免这个意料之外的更改的问题，现在解析值不再存储，并且档案内容会一直保持不被更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着这个组件现在有两个行为：</Paragraph></ListItem>
-<ListItem><Paragraph>静态: 当其存在 <TextBox Style="{StaticResource InlineCode}">properties</TextBox> 字段时，或 <TextBox Style="{StaticResource InlineCode}">name</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 均设置或均未设置时</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在这个状态下，档案会直接渲染</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">properties</TextBox> 字段缺省，会使用默认皮肤（由 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 决定，与离线模式相同）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">只意味着在组件创建时皮肤变为只读</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这个选项适合装饰用途</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 85.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 67.0</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">服务器 Properties</Paragraph><Paragraph>因使用了一些新游戏规则，一些服务器 properties 的被移除，以允许在服务器运行时更改这些设置。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">因使用新游戏规则，移除了服务器 property <TextBox Style="{StaticResource InlineCode}">allow-nether</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因使用新游戏规则，移除了服务器 property <TextBox Style="{StaticResource InlineCode}">spawn-monster</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因使用新游戏规则，移除了服务器 property <TextBox Style="{StaticResource InlineCode}">enable-command-block</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因使用新游戏规则，移除了服务器 property <TextBox Style="{StaticResource InlineCode}">pvp</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器 property <TextBox Style="{StaticResource InlineCode}">management-server-enabled</TextBox> 以控制服务器是否启用 Minecraft 服务端管理协议</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器 property <TextBox Style="{StaticResource InlineCode}">management-server-port</TextBox> 以控制服务器 Minecraft 服务端管理协议的端口</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">25585</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器 property <TextBox Style="{StaticResource InlineCode}">management-server-host</TextBox> 以控制服务器 Minecraft 服务端管理协议的主机</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">localhost</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器 property <TextBox Style="{StaticResource InlineCode}">status-heartbeat-interval</TextBox> 以控制服务器发送通知到连接的客户端的时间间隔</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 0，意味着被禁用</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 85.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">chain</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">iron_chain</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">pvp</TextBox> 游戏规则控制，以控制玩家是否可以对其它玩家造成伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">allowEnteringNetherUsingPortals</TextBox> 游戏规则以控制下界是否可以通过传送门进入</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">spawnMonsters</TextBox> 游戏规则以控制怪物是否自然生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">enableCommandBlocks</TextBox> 游戏规则以控制命令方块是否启用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">文本渲染</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">object</TextBox> 文本组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了该组件以支持显示其它非字符对象作为文本的一部分</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新格式:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">object</TextBox>: 对象的类型，字符串，值见下方</Paragraph></ListItem>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">&lt;type-specific&gt;</TextBox>: 由对象类型决定的可选字段</Paragraph></ListItem>
+<ListItem><Paragraph>与 <TextBox Style="{StaticResource InlineCode}">nbt</TextBox> 文本组件相似，<TextBox Style="{StaticResource InlineCode}">object</TextBox> 字段可以省略</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">然而，为了检查错误，我们推荐提供</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">atlas</TextBox> 对象类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与之前 <TextBox Style="{StaticResource InlineCode}">object</TextBox> 组件有相同的行为，但是现在其分离为一个对象类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与之前使用相同的格式</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">player</TextBox> 对象类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">渲染玩家的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果提供了部分档案，皮肤会被与 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件在玩家的头上以相同的方式解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">player</TextBox>: 玩家档案</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">name</TextBox>:玩家名称，可选字符串</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox>: 玩家 UUID，可选的UUID</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">properties</TextBox>: 档案属性，可选的映射</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph>动态: 当没有 <TextBox Style="{StaticResource InlineCode}">name</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 时（但不是两个都没有）</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当包含这个档案的物品在客户端渲染时，档案将会被解析为最近期的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着这个物品将会一直渲染为目标玩家的当前皮肤</Paragraph></ListItem>
-<ListItem><Paragraph>注：如果玩家在游戏运行时更改了皮肤，其更改不可见直到客户端重启</Paragraph></ListItem>
-<ListItem><Paragraph>在解析时可能会造成延迟，在这时物品会渲染为默认皮肤</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，物品名称将会替换档案名称</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">只有 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 的物品会展示默认名称</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">具有动态档案的物品会用提示栏与静态物品区分</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph>物品堆叠基于精确的内容，所以即使动态组件与静态组件解析结果完全一样，它们也不会堆叠</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在以前的地图上的未被新版本加载的玩家的头通常将会转为动态内容</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块实体数据</Paragraph><Paragraph Style="{StaticResource H4}">更改 <TextBox Style="{StaticResource InlineCode}">minecraft:skull</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">profile</TextBox> 字段被更改以匹配 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着其不可修改并只有在必要时才会解析</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">文本组件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">粗体与斜体样式在绘制精灵图时会被忽略</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 66.0</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">从展示架上移除了方块状态 <TextBox Style="{StaticResource InlineCode}">align_items_to_bottom</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">25W34A 修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-383">MC-383</local:MyTextButton></Underline> - In the world selection screen, world names/versions/timestamps can overflow the list to the right</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-36783">MC-36783</local:MyTextButton></Underline> - Item frames/Glow item frames don&apos;t change their hitbox if they contain a map</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-59413">MC-59413</local:MyTextButton></Underline> - Water and lava can drip from barriers</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-147784">MC-147784</local:MyTextButton></Underline> - Fletching table flashes crafting table&apos;s GUI for about a second upon right-clicking it in spectator mode</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-259673">MC-259673</local:MyTextButton></Underline> - Tab selection works differently in world creation and statistics screens</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-260591">MC-260591</local:MyTextButton></Underline> - &apos;execute on origin&apos; and &apos;execute on owner&apos; fail to find the targeted entity when it is in a separate dimension</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-260920">MC-260920</local:MyTextButton></Underline> - Statistics screen columns are not accessible through keyboard navigation</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-265290">MC-265290</local:MyTextButton></Underline> - Elements within the command block interface are not selected in order when using the TAB key</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-270190">MC-270190</local:MyTextButton></Underline> - Hovering over banner patterns in the loom UI does not display tooltips</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-270669">MC-270669</local:MyTextButton></Underline> - Incorrect argument order in translation key argument.block.property.novalue</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-272584">MC-272584</local:MyTextButton></Underline> - Fireballs redirected by explosions caused by player owned entities no longer carry player ownership</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-276931">MC-276931</local:MyTextButton></Underline> - Enchanted books have the wrong rarity</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-296789">MC-296789</local:MyTextButton></Underline> - The color of text within the test instance block interface is inconsistent with other similar interfaces</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-297496">MC-297496</local:MyTextButton></Underline> - Text inside the middle of the java realms information box completely disappears when selected</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-298605">MC-298605</local:MyTextButton></Underline> - When creating a Water World superflat world, the player spawns at the bottom of the sea</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299067">MC-299067</local:MyTextButton></Underline> - Arrows can lose ownership on disconnection in multiplayer</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-299115">MC-299115</local:MyTextButton></Underline> - Arrows lose their owner tag when deflected while the owner is offline</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300045">MC-300045</local:MyTextButton></Underline> - The hand animation plays when right-clicking copper golems</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300046">MC-300046</local:MyTextButton></Underline> - The copper golem statue models in the inventory are partly cut off at the top</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300048">MC-300048</local:MyTextButton></Underline> - Copper golem statue item entities are rendered too large</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300066">MC-300066</local:MyTextButton></Underline> - The Ender Dragon Spawn Egg has the &quot;Disabled in Peaceful&quot; note despite being able to spawn in Peaceful mode</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300082">MC-300082</local:MyTextButton></Underline> - Copper golems with the “NoAI” tag can adjust their rotation and spin</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300083">MC-300083</local:MyTextButton></Underline> - Copper golems with the “Silent” tag can still produce some sounds</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300085">MC-300085</local:MyTextButton></Underline> - Copper golem statues&apos; poses are off-centered</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300130">MC-300130</local:MyTextButton></Underline> - The &quot;commands.summon.failed.peaceful&quot; string doesn’t pluralize the word &quot;Monster&quot;</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300134">MC-300134</local:MyTextButton></Underline> - Copper Golem Spawn Egg isn&apos;t alphabetized in the creative inventory</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300213">MC-300213</local:MyTextButton></Underline> - Copper golems&apos; hitbox is too large to fit through open single doors</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300222">MC-300222</local:MyTextButton></Underline> - Upon exiting the gamemode switcher (F3+F4) or debug options menu (F3+F5) while viewing the credits, the player does not resume viewing the credits and instead remains in the end in a phantom state until they relog</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300245">MC-300245</local:MyTextButton></Underline> - Any double chests variant doesnt play any sound when a copper golem interacts with the right part of the chest specifically</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300249">MC-300249</local:MyTextButton></Underline> - Copper golem statue block outline is above the top of the block below</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300365">MC-300365</local:MyTextButton></Underline> - Copper golems inconsistently activate trapped chests</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300406">MC-300406</local:MyTextButton></Underline> - Updating open copper chests causes the chests to remain open</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300441">MC-300441</local:MyTextButton></Underline> - Nether ambient sounds continue playing after leaving the Nether</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300475">MC-300475</local:MyTextButton></Underline> - The Glowing outline now appears black on the fur model parts of invisible sheep</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300480">MC-300480</local:MyTextButton></Underline> - Worn copper golem statues are incorrectly rotated</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300695">MC-300695</local:MyTextButton></Underline> - The sprint toggle state is now reset when viewing any screen</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300718">MC-300718</local:MyTextButton></Underline> - Player doesn&apos;t re-sneak automatically if they were sneaking before opening a GUI with Sneak Toggle set</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300796">MC-300796</local:MyTextButton></Underline> - Harvesting from sweet berry bushes can drop more sweet berries than before</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300804">MC-300804</local:MyTextButton></Underline> - The Glowing outline is now always white on invisible entities that aren&apos;t the player, unless the player is in the same team</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300825">MC-300825</local:MyTextButton></Underline> - Entities with NaN motion cause clients to be kicked and softlocked</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300839">MC-300839</local:MyTextButton></Underline> - Disc sounds can be heard in another dimension</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300846">MC-300846</local:MyTextButton></Underline> - The /rotate command doubles the target entity&apos;s motion each time it is run</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300856">MC-300856</local:MyTextButton></Underline> - I-beam cursor in book signing screen has wrong color</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300888">MC-300888</local:MyTextButton></Underline> - pack.mcmeta no longer supports versions below 16 in the supported_formats field</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300968">MC-300968</local:MyTextButton></Underline> - Flying state is not saved when reloading world</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300970">MC-300970</local:MyTextButton></Underline> - Missing sound for event: minecraft:entity.copper_golem.shear</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300972">MC-300972</local:MyTextButton></Underline> - End light flashes sound can be heard while looking at the credits</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300975">MC-300975</local:MyTextButton></Underline> - Copper golems wear banners backwards</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300983">MC-300983</local:MyTextButton></Underline> - The speed field in ExplosionParticleInfo codec is misspelled as &quot;speec&quot;</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300995">MC-300995</local:MyTextButton></Underline> - Game crashes when changing the F3 menu during world disconnection</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301004">MC-301004</local:MyTextButton></Underline> - Normal guardians are no longer able to enter boats</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301030">MC-301030</local:MyTextButton></Underline> - Frosted ice now melts in the End</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301032">MC-301032</local:MyTextButton></Underline> - Bees in the End now hide in their hive when it&apos;s raining in the Overworld</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hat</TextBox>: 控制是否渲染帽子层，布尔值，默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">配方</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">悬挂告示牌现在可以使用铁链合成</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 67.0</Paragraph><Paragraph Style="{StaticResource H3}">方块精灵图</Paragraph><Paragraph>重命名了以下方块精灵图:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">chain</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">iron_chain</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品精灵图</Paragraph><Paragraph>重命名了以下物品精灵图:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">chain</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">iron_chain</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">25W35A 修复的漏洞</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-278550">MC-278550</local:MyTextButton></Underline> - While flying in creative or spectator mode, the surface of water can prevent you from sprinting</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-297126">MC-297126</local:MyTextButton></Underline> - &quot;Failed to read field...&quot; error spam when upgrading a 25w15a or 25w16a world</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300044">MC-300044</local:MyTextButton></Underline> - Z-fighting occurs when the heads of copper golems intersect their bodies</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300049">MC-300049</local:MyTextButton></Underline> - The debug text is rendered on top of the debug options</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300054">MC-300054</local:MyTextButton></Underline> - Double oxidized copper chest texture UV is missing pixels</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300067">MC-300067</local:MyTextButton></Underline> - Copper golems continue their chest searching animations while dying</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300074">MC-300074</local:MyTextButton></Underline> - No particles are produced when scraping oxidation off copper golems</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300077">MC-300077</local:MyTextButton></Underline> - Copper golems can interact with chests diagonally through solid blocks</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300089">MC-300089</local:MyTextButton></Underline> - Chests sometimes get stuck in inverted states after being interacted with by copper golems</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300102">MC-300102</local:MyTextButton></Underline> - Shelves float when held in the player&apos;s hand in third person</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300103">MC-300103</local:MyTextButton></Underline> - Removing items from a shelf uses the &quot;Item placed&quot; caption</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300119">MC-300119</local:MyTextButton></Underline> - Copper golems don’t always avoid dangerous blocks when pathfinding to chests</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300124">MC-300124</local:MyTextButton></Underline> - All the oxidation states of the lightning rod are listed in the redstone tab of the creative inventory</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300129">MC-300129</local:MyTextButton></Underline> - Copper golems can&apos;t put items into chests above them</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300173">MC-300173</local:MyTextButton></Underline> - The Copper Chest textures&apos; diagonal glint direction doesn&apos;t match the large chest variants&apos; on some sides</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300229">MC-300229</local:MyTextButton></Underline> - Z-fighting on antenna when putting certain blocks above a copper golem statue</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300267">MC-300267</local:MyTextButton></Underline> - The miniature mobs inside spawners and trial spawners are sometimes lit incorrectly</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300301">MC-300301</local:MyTextButton></Underline> - Shelves produce unusually high-resolution particles due to having a 32x32 texture</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300304">MC-300304</local:MyTextButton></Underline> - Comparators can stay active when measuring the pose of a copper golem statue block which is revived</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300462">MC-300462</local:MyTextButton></Underline> - Copper golems attached to leads still attempt to pathfind toward chests</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300501">MC-300501</local:MyTextButton></Underline> - Variants of copper chests are not included in the &quot;Redstone Blocks&quot; tab in the creative inventory whereas normal chests are</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300568">MC-300568</local:MyTextButton></Underline> - Copper golems don&apos;t open chests if given room to walk about</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300688">MC-300688</local:MyTextButton></Underline> - The iron chain&apos;s block/item ID is still &quot;chain&quot;</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300703">MC-300703</local:MyTextButton></Underline> - The underside of double copper chests does not use a merged texture</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300744">MC-300744</local:MyTextButton></Underline> - The copper and iron nuggets are inverted and arranged incorrectly in the Creative mode inventory</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300762">MC-300762</local:MyTextButton></Underline> - Copper golems require at least 3 blocks of space above a chest to place anything</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300797">MC-300797</local:MyTextButton></Underline> - The glowing effect causes entities to render incorrectly inside of inventories</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300827">MC-300827</local:MyTextButton></Underline> - Pressing F3+Q in certain screens does not show help, despite F3 suggesting it</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-300977">MC-300977</local:MyTextButton></Underline> - Clocks function in the recipe book/villager/crafter UI</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301023">MC-301023</local:MyTextButton></Underline> - When a warden applies the darkness effect to you, the chat interface, item bar, and items become dark</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301025">MC-301025</local:MyTextButton></Underline> - End flash purplish light saturation is affected by brightness values</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301026">MC-301026</local:MyTextButton></Underline> - End flash purplish light becomes extremely saturated when the player is affected by darkness</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301048">MC-301048</local:MyTextButton></Underline> - In the &quot;sitting&quot; pose, the copper statue’s rod becomes shorter</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301101">MC-301101</local:MyTextButton></Underline> - Certain similar blocks are positioned differently on copper golems&apos; heads</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301224">MC-301224</local:MyTextButton></Underline> - The first few stages of block cracks are not rendered on chests</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301225">MC-301225</local:MyTextButton></Underline> - Game crashes when quitting creating new world menu without other worlds created before</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301226">MC-301226</local:MyTextButton></Underline> - Block cracks no longer render on banners</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301228">MC-301228</local:MyTextButton></Underline> - Block cracks no longer render on heads and skulls</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301230">MC-301230</local:MyTextButton></Underline> -The word &quot;resolve&quot; is misspelled as &quot;resolved&quot; within the &quot;commands.profile_fetch.id.failure&quot; string</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301231">MC-301231</local:MyTextButton></Underline> - Enchanting table book animations are not independent</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301236">MC-301236</local:MyTextButton></Underline> - Enchantment glint is no longer visible on held tridents</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301242">MC-301242</local:MyTextButton></Underline> - Enchantment glint is no longer visible on shields</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301273">MC-301273</local:MyTextButton></Underline> - Clicking on the join server hover button now selects the server, unless any server is already selected</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301290">MC-301290</local:MyTextButton></Underline> - Game crashes when trying to render a glowing enchanted item</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301295">MC-301295</local:MyTextButton></Underline> - TTF font provider oversample increases width of characters</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301328">MC-301328</local:MyTextButton></Underline> - Glowing item entities briefly turn white upon pickup</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-301339">MC-301339</local:MyTextButton></Underline> - Miniature mobs inside spawners always render fully lit</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -207,7 +204,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-08-24" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-08-26" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
