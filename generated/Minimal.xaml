@@ -11,11 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -35,8 +33,26 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w35a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
@@ -47,8 +63,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了对哈利奇地方语言的支持 <Italic>（译者注：哈利奇是乌克兰的一个城市）</Italic></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">增加了 Minecraft 服务端管理协议</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议（MSMP）</Paragraph><Paragraph>增加了一个服务器管理 API (JSON-RPC over WebSocket) 用于专用服务器</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">此 API 默认禁用，可以由服务器 properties 文件启用</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-enabled=true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph>此 API 默认禁用，可以由服务器 properties 文件启用</Paragraph></ListItem>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">management-server-enabled=true</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-host=localhost</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">management-server-port=25585</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph>当启用时 API 可以通过 <TextBox Style="{StaticResource InlineCode}">ws://&lt;management-server-host&gt;:&lt;management-server-port&gt;</TextBox> 访问</Paragraph></ListItem>
@@ -61,14 +77,45 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">可以使用自定义命名空间以及额外方法进行扩展</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">核心方法组: 玩家、白名单、操作员、服务器（保存、停止）、服务器设置、游戏规则</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">方法调用示例:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">请求: <TextBox Style="{StaticResource InlineCode}">{}{&quot;method&quot;:&quot;minecraft:allowlist/add&quot;,&quot;id&quot;:1,&quot;params&quot;:[{}{&quot;name&quot;:&quot;jeb_&quot;}](https://zh.minecraft.wiki/w/{}{&quot;name&quot;:&quot;jeb_&quot;})}</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">响应: <TextBox Style="{StaticResource InlineCode}">{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:[{}{&quot;id&quot;:&quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;,&quot;name&quot;:&quot;jeb_&quot;}]}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">请求:</Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;method&quot;: &quot;minecraft:allowlist/add&quot;,&#x000A;  &quot;id&quot;: 1,&#x000A;  &quot;params&quot;: [[{}{ &quot;name&quot;: &quot;jeb_&quot; }]]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">响应:</Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;  &quot;id&quot;: 1,&#x000A;  &quot;result&quot;: [{}{ &quot;id&quot;: &quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;, &quot;name&quot;: &quot;jeb_&quot; }]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">通知示例:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;notification:players/joined&quot;,&quot;params&quot;:[{}{&quot;id&quot;:&quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;,&quot;name&quot;:&quot;jeb_&quot;}]}</TextBox></Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;  &quot;method&quot;: &quot;notification:players/joined&quot;,&#x000A;  &quot;params&quot;: [{}{ &quot;id&quot;: &quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;, &quot;name&quot;: &quot;jeb_&quot; }]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">错误示例:</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">请求: <TextBox Style="{StaticResource InlineCode}">{}{&quot;method&quot;: &quot;minecraft:foo/bar&quot;,&quot;id&quot;: 1}</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">响应: <TextBox Style="{StaticResource InlineCode}">{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:{}{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;error&quot;:{}{&quot;code&quot;:-32601,&quot;message&quot;:&quot;Method not found&quot;,&quot;data&quot;:&quot;Method not found: minecraft:foo/bar&quot;}}}</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">错误以及错误代码遵守 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.jsonrpc.org/specification#error_object">JSON-RPC 2.0 错误对象格式</local:MyTextButton></Underline> (译者注：并未完全遵守，见 MC-301531)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">响应:</Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;  &quot;id&quot;: 1,&#x000A;  &quot;result&quot;: {}{&#x000A;    &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;    &quot;id&quot;: 1,&#x000A;    &quot;error&quot;: {}{&#x000A;      &quot;code&quot;: -32601,&#x000A;      &quot;message&quot;: &quot;Method not found&quot;,&#x000A;      &quot;data&quot;: &quot;Method not found: minecraft:foo/bar&quot;&#x000A;    }&#x000A;  }&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">错误以及错误代码遵守 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.jsonrpc.org/specification#error_object">JSON-RPC 2.0 错误对象格式</local:MyTextButton></Underline><Italic>(译者注：并未完全遵守，见 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC/issues/MC-301531">MC-301531</local:MyTextButton></Underline>)</Italic></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">当添加一个新的服务器到服务器列表时，名称不再预填充。当名称留空时使用默认名称。</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">更多文本输入框现在支持使用鼠标拖拽选择文字</Paragraph></ListItem>
@@ -112,8 +159,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">文本渲染</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">object</TextBox> 文本组件</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了该组件以支持显示其它非字符对象作为文本的一部分</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新格式:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">object</TextBox>: 对象的类型，字符串，值见下方</Paragraph></ListItem>
+<ListItem><Paragraph>新格式:</Paragraph></ListItem>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">object</TextBox>: 对象的类型，字符串，值见下方</Paragraph></ListItem>
 <ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">&lt;type-specific&gt;</TextBox>: 由对象类型决定的可选字段</Paragraph></ListItem>
 <ListItem><Paragraph>与 <TextBox Style="{StaticResource InlineCode}">nbt</TextBox> 文本组件相似，<TextBox Style="{StaticResource InlineCode}">object</TextBox> 字段可以省略</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">然而，为了检查错误，我们推荐提供</Paragraph></ListItem>
@@ -126,7 +173,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">player</TextBox>: 玩家档案</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">name</TextBox>:玩家名称，可选字符串</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox>: 玩家 UUID，可选的UUID</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox>: 玩家 UUID，可选的 UUID</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">properties</TextBox>: 档案属性，可选的映射</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hat</TextBox>: 控制是否渲染帽子层，布尔值，默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
