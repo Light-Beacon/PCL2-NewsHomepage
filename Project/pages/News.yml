@@ -5,6 +5,7 @@ alias:
  - 主界面
 cards:
  - animated_noticebar | s = false
+ - ${@IF|${args.debug}|debug}
  - ${@NewsList}
  - ${@MainPageVersions|new}
 # - VersionLatestListCard | title=更新日志 | enable-card-style=True

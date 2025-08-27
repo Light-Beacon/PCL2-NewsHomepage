@@ -180,6 +180,7 @@ class PreferenceManager:
         return self.__entries.values()
     
 PreferenceManager.add_entries([
+    PrefenrenceHiddenEntry('debug', bool, False, True),
     PrefenrenceChoiceEntry('Skin', str, 'basic',
                         ['basic', 'newra', 'classic',]),
     PrefenrenceChoiceEntry('Edition', str, 'standard',
