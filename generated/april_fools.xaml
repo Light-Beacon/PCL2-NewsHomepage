@@ -11,8 +11,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwapped="false" Margin="0,-2,0,6">
@@ -30,11 +30,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,2,8,15"><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="25w14craftmine" Info="2025 - 终于是时候变得更加庞大并无所不合！"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=25w14craftmine" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
+	EventType="打开帮助" EventData="" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="24w14potato" Info="2024 - 你有没有想过成为一只...毒马铃薯？"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=24w14potato" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
+	EventType="打开帮助" EventData="" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="23w13a_or_b" Info="2023 - 在 Minecraft 的世界中作出更多选择！"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=23w13a_or_b" Type="Clickable" /></StackPanel>
+	EventType="打开帮助" EventData="" Type="Clickable" /></StackPanel>
 
 
 </StackPanel>
@@ -45,8 +45,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="db2bea3" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/db2bea357acbe4346523089c2b5b81cc11d18502"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="d7fd1f8" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/d7fd1f8a3d8e7640beb1b7c50eec54fbe7d91162"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">

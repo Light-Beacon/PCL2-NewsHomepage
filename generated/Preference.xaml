@@ -45,7 +45,7 @@
     <StackPanel Margin="15,5">
         <TextBlock x:Name="OutputTextBlock" Visibility="Collapsed">
             <TextBlock.Text>
-                <MultiBinding StringFormat="{}https://mcnews.meloong.com/SaveChanges.json?Skinbasic={0}&amp;Skinnewra={1}&amp;Skinclassic={2}&amp;Editionstandard={3}&amp;Editionlight={4}&amp;HideWIP={5}&amp;HideLaunchButton={6}&amp;HideDownloadButton={7}&amp;HideServerJarButton={8}&amp;"><Binding Path="Checked" ElementName="Skinbasic"/><Binding Path="Checked" ElementName="Skinnewra"/><Binding Path="Checked" ElementName="Skinclassic"/><Binding Path="Checked" ElementName="Editionstandard"/><Binding Path="Checked" ElementName="Editionlight"/><Binding Path="Checked" ElementName="HideWIP"/><Binding Path="Checked" ElementName="HideLaunchButton"/><Binding Path="Checked" ElementName="HideDownloadButton"/><Binding Path="Checked" ElementName="HideServerJarButton"/></MultiBinding>
+                
             </TextBlock.Text>
         </TextBlock>
         <local:MyButton IsEnabled="{Binding Path=Checked, ElementName=ConfirmCheckBox}"
@@ -78,40 +78,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-    <Border.BorderBrush>
-        <Binding Path="Children[1].Stroke" ElementName="Editionstandard"/>
-    </Border.BorderBrush>
-</Border>
-<Border Grid.Row="0" Grid.Column="0" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-    <Border.Background>
-        <Binding Path="Children[2].Fill" ElementName="Editionstandard"/>
-    </Border.Background>
-</Border>
-<local:MyRadioBox Grid.Row="0" Grid.Column="0" Checked="True" Height="50" Margin="20,10,10,10" x:Name="Editionstandard">
-    
-                <Run>完整</Run>
-                <LineBreak/>
-                <Run FontSize="10">原汁原味的新闻主页体验</Run>
             
-</local:MyRadioBox>
-            <Border Grid.Row="0" Grid.Column="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-    <Border.BorderBrush>
-        <Binding Path="Children[1].Stroke" ElementName="Editionlight"/>
-    </Border.BorderBrush>
-</Border>
-<Border Grid.Row="0" Grid.Column="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-    <Border.Background>
-        <Binding Path="Children[2].Fill" ElementName="Editionlight"/>
-    </Border.Background>
-</Border>
-<local:MyRadioBox Grid.Row="0" Grid.Column="1" Checked="False" Height="50" Margin="20,10,10,10" x:Name="Editionlight">
-    
-                <Run>精简</Run>
-                <LineBreak/>
-                <Run FontSize="10">只保留最新版本的链接，性能更高</Run>
             
-</local:MyRadioBox>
         </Grid>
     </StackPanel>
 </local:MyCard>
@@ -124,65 +92,19 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="1" Grid.Column="0" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-    <Border.BorderBrush>
-        <Binding Path="Children[1].Stroke" ElementName="Skinbasic"/>
-    </Border.BorderBrush>
-</Border>
-<Border Grid.Row="1" Grid.Column="0" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-    <Border.Background>
-        <Binding Path="Children[2].Fill" ElementName="Skinbasic"/>
-    </Border.Background>
-</Border>
-<local:MyRadioBox Grid.Row="1" Grid.Column="0" Checked="True" Height="50" Margin="20,10,10,10" x:Name="Skinbasic">
-    
-                <Run>默认</Run>
             
-</local:MyRadioBox>
-            <Border Grid.Row="1" Grid.Column="1" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-    <Border.BorderBrush>
-        <Binding Path="Children[1].Stroke" ElementName="Skinnewra"/>
-    </Border.BorderBrush>
-</Border>
-<Border Grid.Row="1" Grid.Column="1" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-    <Border.Background>
-        <Binding Path="Children[2].Fill" ElementName="Skinnewra"/>
-    </Border.Background>
-</Border>
-<local:MyRadioBox Grid.Row="1" Grid.Column="1" Checked="False" Height="50" Margin="20,10,10,10" x:Name="Skinnewra">
-    
-                <Run>通透</Run>
-                <LineBreak/>
-                <Run FontSize="10">不一样的头图栏</Run>
             
-</local:MyRadioBox>
-            <Border Grid.Row="1" Grid.Column="2" Height="50" Margin="10" BorderThickness="0.5" CornerRadius="6">
-    <Border.BorderBrush>
-        <Binding Path="Children[1].Stroke" ElementName="Skinclassic"/>
-    </Border.BorderBrush>
-</Border>
-<Border Grid.Row="1" Grid.Column="2" Height="50" Margin="10" CornerRadius="6" Opacity="0.2">
-    <Border.Background>
-        <Binding Path="Children[2].Fill" ElementName="Skinclassic"/>
-    </Border.Background>
-</Border>
-<local:MyRadioBox Grid.Row="1" Grid.Column="2" Checked="False" Height="50" Margin="20,10,10,10" x:Name="Skinclassic">
-    
-                <Run>经典</Run>
-                <LineBreak/>
-                <Run FontSize="10">2023 新闻主页经典款式</Run>
             
-</local:MyRadioBox>
         </Grid>
     </StackPanel>
 </local:MyCard>
 
 <local:MyCard Margin="0,0,0,15" CanSwap="False" Title="杂项">
     <StackPanel Margin="25,40,23,15"> 
-        <local:MyCheckBox Text="隐藏“正在翻译中”动画" x:Name="HideWIP" Checked="False"/>
-        <local:MyCheckBox Text="隐藏启动按钮" x:Name="HideLaunchButton" Checked="False"/>
-        <local:MyCheckBox Text="隐藏下载按钮" x:Name="HideDownloadButton" Checked="False"/>
-        <local:MyCheckBox Text="隐藏服务端下载按钮" x:Name="HideServerJarButton" Checked="False"/>
+        
+        
+        
+        
     </StackPanel>
 </local:MyCard>
 

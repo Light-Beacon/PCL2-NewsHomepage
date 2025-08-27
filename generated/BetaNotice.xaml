@@ -31,7 +31,7 @@
         </TextBlock>
         <local:MyCheckBox Text="我已阅读、了解并同意上述内容" x:Name="ConfirmCheckBox"/>
         <local:MyButton IsEnabled="{Binding Path=Checked, ElementName=ConfirmCheckBox}" Text="进入设置页面" 
-                        EventType="打开帮助" EventData="https://mcnews.meloong.com/Preference.json"
+                        EventType="打开帮助" EventData=""
                         Height="40" Margin="20,10,20,10"/>
     </StackPanel>
 </local:MyCard>
