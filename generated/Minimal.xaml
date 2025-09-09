@@ -11,8 +11,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -32,105 +30,157 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 25w36b" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w37a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>修复了两个会导致崩溃的漏洞。</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在游玩游戏依赖从 OpenGL 3.2 升至 3.3。这并不会改变我们之前发布的最低配置需求。</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 我们预计更新 OpenGL 不会使得很多人受影响。我们发布的最低配置要求自从 2017 年就是 OpenGL 4.0 了，并且 OpenGL 3.3 已经发布了 15 年了。</Paragraph>
 
+</Section><Paragraph Style="{StaticResource H3}">对方块、物品与实体的微调</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">修复了一个漏洞：当另一个玩家在交互的时候破坏展示架会导致玩家的物品栏出现显示问题</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡的碰撞箱微调 <Italic>(译者：调调乐，都调几次了)</Italic></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">碰撞箱现在宽度为 0.49 格以允许其寻路时能通过狭窄路段</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡现在可以开门</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">测试实例方块现在保留错误标记，直到世界重载</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调整了实体上的环境光照，使其更视觉上与方块以及尤其其它部分更一致</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在平面的下方同方向会发光，而不再为相反方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这主要影响了使用扁平或“空心”立方体的模型，如：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">穿戴盔甲</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">穿戴鞘翅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家皮肤的外层</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骷髅和骷髅马的胸廓</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鸡和青蛙的脚</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幻翼和末影龙的翅膀</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鱼鳍</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">还有更多！</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏模式切换</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">从旁观者模式切换到创造模式不再会导致玩家停止飞行</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在仅当玩家靠近地面时切换游戏模式才会关闭飞行状态</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">靠近地面标准为玩家在可以碰撞的平面（如：快乐恶魂、船）上方 1 格内</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家在方块或可碰撞实体内飞行状态不会关闭</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这防止了玩家突然掉至地面</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 这项更改是对之前快照的漏洞修复的部分回退，尽管之前的修复行为是无意的，我们修复飞行的方式并未按照我们的意图落地。为了回应社区的反馈，我们正尝试这种新的破坏性较小的替代方案。</Paragraph>
 
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Title="25w36a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在可以为每个维度设置世界边界</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">末地闪光</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当末影龙雾效果激活时，天空中的闪光源不再可见，并削弱了光效亮度</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">无障碍</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绑定到相同按键的多个按键绑定现在可以同时生效，之前只有其中一个会生效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如，你可以绑定 <TextBox Style="{StaticResource InlineCode}">D</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">跳跃</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">向左移动</TextBox>，以同时跳跃并向左移动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绑定到相同按键的警告从红色变为黄色</Paragraph></ListItem>
+</Section><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议（MSMP）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">客户端必须通过认证才能访问 API</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">客户端应该提供一个有着服务器密钥的 <TextBox Style="{StaticResource InlineCode}">Authorization</TextBox> Bearer Token 头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">密钥配置在服务器的 properties 文件里</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-secret=</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">密钥应当为 40 位字母或数字字符（A-Z，a-z，0-9）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果该属性为空密钥会自动生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">未认证的请求会以 401 Unauthorized 拒绝</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">旁观者热键栏菜单键现在可以重新绑定</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">其为在按键绑定屏幕中的新的 <TextBox Style="{StaticResource InlineCode}">旁观者</TextBox> 类别的一部分，除此之外还有之前加入的 <TextBox Style="{StaticResource InlineCode}">高亮玩家</TextBox> 按键绑定</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">从行为准则文件中删除了格式化代码</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界边界</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">每个维度现在有着独立的世界边界</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这意味着每个维度现在可以有自己的世界边界大小以及位置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认启用 TLS</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用服务器 properties 文件禁用</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-tls-enabled=false</TextBox></Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">对方块、物品以及实体的微调</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">调整了铜火把以及铜灯笼的颜色，以便色觉障碍玩家分辨</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">需要在服务器 properties 文件中设置一个 keystore 文件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-tls-keystore=path/to/keystore.p12</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">keystore 文件必须为 PKCS12 格式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">keystore 密码可以以下列（以优先级排序）方式设置</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">环境变量：<TextBox Style="{StaticResource InlineCode}">MINECRAFT_MANAGEMENT_TLS_KEYSTORE_PASSWORD</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">JVM 参数：<TextBox Style="{StaticResource InlineCode}">-Dmanagement.tls.keystore.password=</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">服务器 property：<TextBox Style="{StaticResource InlineCode}">management-server-tls-keystore-password=</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">服务器 Properties</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-port</TextBox> 的默认值从 <TextBox Style="{StaticResource InlineCode}">25585</TextBox> 更改为 <TextBox Style="{StaticResource InlineCode}">0</TextBox>，每次服务器启动时分配一个可用的端口</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-tls-enabled</TextBox> 控制 Minecraft 服务端管理协议是否使用 TLS</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-tls-keystore</TextBox> 用于控制 TLS 的 keystore 文件路径</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为空字符串</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 TLS 启用并且未提供 keystore 时专用服务器不会启动</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-tls-keystore-password</TextBox> 用于控制用于 TLS 的 keystore 文件的密码</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为空字符串</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">spawnerBlocksEnabled</TextBox> 游戏规则一控制刷怪笼是否启用</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">调整了生成身着装备的生物的装备类型选择逻辑以增加铜装备的可能性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">初始类型会在皮革、铜和金中选择</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">提升护甲等级的概率从 9.5% 上升至 10.87%</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在音乐与音效选项中的一些音量滑块会在世界外调整设置时播放预览音效</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在编辑框中双击世界现在会选中它</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块状态</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">充能的展示架现在只与其它拥有相同朝向的充能的展示架相连</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">性能改进</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在玩家视野外的粒子不再渲染，这会在一些情况下提升性能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包和数据包选择屏幕现在有了一个搜索框</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 86.0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 68.0</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 86.0</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了玩家模型实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">世界边界现在是维度独立的了</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">玩家模型</Paragraph><Paragraph>增加了一种新的技术性实体，名为 <TextBox Style="{StaticResource InlineCode}">minecraft:mannequin</TextBox>，仅能通过命令生成。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型是一个有着玩家外形但不与玩家连接的实体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型总是会在 <TextBox Style="{StaticResource InlineCode}">below_name</TextBox> 记分栏位处显示一个“NPC”文本</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型与活体功能相同——它们可以手持、装备物品，有属性与效果，会受到伤害等</Paragraph></ListItem>
-</List><Paragraph>数据字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">profile</TextBox> - 在实体上显示的档案。这可以是玩家档案（与 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件格式相同），或一个有着下列字段的玩家模型档案：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">texture</TextBox> - 要使用的皮肤纹理的带有命名空间的 ID</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">皮肤在以相对于 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 文件夹的路径区分，有着 <TextBox Style="{StaticResource InlineCode}">.png</TextBox> 后缀</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">entity/player/wide/steve</TextBox> 会使用默认的史蒂夫皮肤</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 87.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 69.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前隐藏的一些调试特性现在公开给玩家</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">调试特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前在编译时移除的一些调试特性现在保留了下来并可以被玩家使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用 JVM 属性启用单个值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">首先，必须使用 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_ENABLED</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_ENABLED=true</TextBox> 启用全局调试标记</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">然后，可以启用指定的特性，如 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_BRAIN</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_BRAIN=true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_PRINT_PROPERTIES</TextBox> 可以获取所有可用的调试属性的列表</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">cape</TextBox> - 可选的要使用的披风的命名空间 ID</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当指定时，使用与 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 字段相同的格式</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当缺省时，玩家模型无披风</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">警告：这是调试代码，务必谨慎使用！</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是一项用于帮助模组制作者的高级功能——不应在平时游戏中使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些特性不被保证能正常运行</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它们可能会崩溃你的游戏、破坏你的存档</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">单独的选项可能会在未经通知的情况下加入、更改或删除</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">elytra</TextBox> - 可选的要使用的鞘翅的命名空间 ID</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当指定时，使用与 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 字段相同的格式</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当缺省时，使用披风对应的鞘翅纹理，如果披风也缺省则使用默认鞘翅纹理</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">数据包版本 87.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">重命名了游戏规则 <TextBox Style="{StaticResource InlineCode}">enableCommandBlocks</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">commandBlocksEnabled</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">资源包版本 69.0</Paragraph><Paragraph Style="{StaticResource H4}">纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">gui/container/villager.png</TextBox> 的输出槽向上移动了一个像素</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">着色器与后处理器效果</Paragraph><Paragraph Style="{StaticResource H5}">着色器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了一个新的标记 <TextBox Style="{StaticResource InlineCode}">PER_FACE_LIGHTING</TextBox> 到下列着色器：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/entity.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/entity.fsh</TextBox></Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">module</TextBox> - 可选的模型类别，<TextBox Style="{StaticResource InlineCode}">wide</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">slim</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当缺省时，使用 <TextBox Style="{StaticResource InlineCode}">wide</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hidden_layers</TextBox> - 隐藏的皮肤层的列表</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">有效值：<TextBox Style="{StaticResource InlineCode}">cape</TextBox>、 <TextBox Style="{StaticResource InlineCode}">jacket</TextBox>、 <TextBox Style="{StaticResource InlineCode}">left_sleeve</TextBox>、 <TextBox Style="{StaticResource InlineCode}">right_sleeve</TextBox>、 <TextBox Style="{StaticResource InlineCode}">left_pants_leg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">right_pants_leg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">hat</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">main_hand</TextBox> - 玩家模型的主手——<TextBox Style="{StaticResource InlineCode}">left</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">right</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dragon_breath</TextBox> 现在可选地使用 <TextBox Style="{StaticResource InlineCode}">power</TextBox> 参数（浮点值，默认 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox>），在所有随机进行过后会乘到自身的初速度上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">instant_effect</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">effect</TextBox> 现在可选地使用 <TextBox Style="{StaticResource InlineCode}">power</TextBox>（浮点值，默认 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox>）以及 <TextBox Style="{StaticResource InlineCode}">color</TextBox>（RGB，默认<TextBox Style="{StaticResource InlineCode}">0xFFFFFF</TextBox>）参数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">flash</TextBox> 现在需要 <TextBox Style="{StaticResource InlineCode}">color</TextBox> 参数</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 68.0</Paragraph><Paragraph Style="{StaticResource H3}">着色器</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">下列未使用的着色器被移除</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_lightmap.vsh</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_lightmap.fsh</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_tex_lightmap.vsh</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_tex_lightmap.fsh</TextBox></Paragraph></ListItem>
-</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当设置时，正面和背面的基光照将会被分别计算</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在需求 OpenGL 3.3，我们将所有的着色器版本从 <TextBox Style="{StaticResource InlineCode}">150</TextBox> bump 至 <TextBox Style="{StaticResource InlineCode}">330</TextBox></Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-09-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -144,7 +194,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-02" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-09-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
