@@ -1,7 +1,7 @@
 <local:MyCard Margin="0,5">
     <StackPanel Margin="15,10">
     <local:MyListItem Margin="0,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
-    Logo="https://tc.z.wiki/autoupload/f/XTxqEIEXt3ek2iMfNVy0xHr9SBDGMOz2CzLFKIoBJwSyl5f0KlZfm6UsKj-HyTuv/20250913/MV2J/300X300/image.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
+    Logo="hhttps://tc-new.z.wiki/autoupload/f/XTxqEIEXt3ek2iMfNVy0xHr9SBDGMOz2CzLFKIoBJwSyl5f0KlZfm6UsKj-HyTuv/20250913/9NA0/300X300/pVQXQTx.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
     EventType="打开帮助" EventData="${@Link|VersionArchiveList}" Type="Clickable" />
     </StackPanel>
 </local:MyCard>
