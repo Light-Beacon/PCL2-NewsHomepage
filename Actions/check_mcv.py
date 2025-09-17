@@ -27,7 +27,7 @@ def get_version_type(vid:str):
         return 'Release'
     return 'Others'
 
-def generate_filepath(ver_type:str, ver_id:str):
+def generate_filepath(ver_type:str, ver_id:str) -> Path:
     if ver_type == 'Snapshot':
         return Path(f'Snapshot/20{ver_id[:2]}/{ver_id}.md')
     if ver_type == 'Pre-Release':
@@ -36,6 +36,7 @@ def generate_filepath(ver_type:str, ver_id:str):
         return Path(f'Release-Candidate/{ver_id}.md')
     if ver_type == 'Release':
         return Path(f'Release/{ver_id}.md')
+    return Path(f'Others/{ver_id}.md')
 
 def update_library(version_mainfest, version_libloc:str, ver_type:str, ver_id:str):
     #gen content
@@ -70,7 +71,8 @@ try:
     response = requests.get(LAUNCHER_MANIFSET_URL)
     VERSION_MAINFEST = json.loads(response.content)
 except Exception as e:
-    print(f'error_log={e.with_traceback()}')
+    import traceback
+    print(f'error_log={traceback.format_exc()}')
     exit(1)
 
 def main():

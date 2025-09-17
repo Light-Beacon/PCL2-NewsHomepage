@@ -15,48 +15,47 @@ def is_true(obj:str):
 
 GET_DOMAIN_URL = require('domain').get_doamin_url
 
-class PrefenrenceEntry:
-    __name:str
-    __type:Type[T]
-    __default:T
-    
-    def __init__(self, name:str, type:Type[T], default:T):
+class PreferenceEntry:
+
+    def __init__(self, name:str, value_type:Type[T], default:T):
         self.__name = name
-        self.__type = type
+        self.__value_type = value_type
         self.__default = default
-        
-    @property
-    def type(self):
-        return self.__type
     
     @property
-    def modify_method(self):
-        return self.__method
-    
+    def value_type(self):
+        """返回值类型"""
+        return self.__value_type
+
     @property
     def name(self):
+        """名称"""
         return self.__name
-    
+
     @property
     def default(self):
+        """默认值"""
         return self.__default
 
     def get_element_names(self) -> List[str]:
         return []
     
-    def get_element_name(cls) -> str:
+    @classmethod
+    def get_element_name(cls, *args, **kwargs) -> str:
+        """返回设置该项的元素名称"""
         raise NotImplementedError()
     
     @classmethod
     def binding(cls, name) -> str:
-         raise NotImplementedError()
+        """返回绑定代码"""
+        raise NotImplementedError()
 
     def get_value_from_save_page(self, settings):
         raise NotImplementedError()
     
     def convert_value(self, value):
-        type = self.__type
-        match type.__name__:
+        value_type = self.__value_type
+        match value_type.__name__:
             case 'str':
                 if isinstance(value, str):
                     return value
@@ -68,34 +67,35 @@ class PrefenrenceEntry:
                 else:
                     return bool(value)
             case _:
-                raise TypeError(type)
+                raise TypeError(value_type)
 
-class PrefenrenceHiddenEntry(PrefenrenceEntry):
+class PreferenceHiddenEntry(PreferenceEntry):
     def get_element_names(self):
         return []
-    
+
+    @classmethod
     def get_element_name(cls, name:str) -> str:
         raise NotImplementedError()
-    
+
     @classmethod
     def binding(cls, name):
          raise NotImplementedError()
-     
+
     def get_value_from_save_page(self, settings):
         return settings.get(self.name, self.default)
 
-class PrefenrenceChoiceEntry(PrefenrenceEntry):
-    
-    def __init__(self, name, type, default, values:List[T]):
-        super().__init__(name, type, default)
+class PreferenceChoiceEntry(PreferenceEntry):
+
+    def __init__(self, name, value_type, default, values:List[T]):
+        super().__init__(name, value_type, default)
         self.__values = values
-    
+
     def get_element_names(self):
         return [self.get_element_name(value) for value in self.__values]
-    
+
     def get_element_name(self, value):
         return self.get_element_name_by_value(self.name, value)
-    
+
     @classmethod
     def get_element_name_by_value(cls, name, value):
         return name + value
@@ -110,7 +110,7 @@ class PrefenrenceChoiceEntry(PrefenrenceEntry):
                 return value
         return self.default
 
-class PrefenrenceBoolEntry(PrefenrenceEntry):
+class PreferenceBoolEntry(PreferenceEntry):
     def get_element_names(self):
         return [self.get_element_name()]
     
@@ -128,10 +128,10 @@ class PrefenrenceBoolEntry(PrefenrenceEntry):
     def get_value_from_save_page(self, settings):
         return is_true(settings.get(self.get_element_name(), self.default))
     
-class PrefenrenceResetEntry(PrefenrenceHiddenEntry):
+class PreferenceResetEntry(PreferenceHiddenEntry):
     
-    def __init__(self, name, type, default, reset_value):
-        super().__init__(name, type, default)
+    def __init__(self, name, value_type, default, reset_value):
+        super().__init__(name, value_type, default)
         self.__reset_value = reset_value
     
     @property
@@ -139,23 +139,23 @@ class PrefenrenceResetEntry(PrefenrenceHiddenEntry):
         return self.__reset_value
 
 class PreferenceManager:
-    __entries:Dict[str, PrefenrenceEntry] = {}
-    
+    __entries:Dict[str, PreferenceEntry] = {}
+
     @classmethod
-    def add_entries(cls, entries:Iterable[PrefenrenceEntry]):
+    def add_entries(cls, entries:Iterable[PreferenceEntry]):
         for entry in entries:
             cls.__entries[entry.name] = entry
-    
+
     @classmethod
     def has(cls, item):
         if isinstance(item, str):
             return item in cls.__entries
         raise TypeError()
-    
+
     @classmethod
     def get(cls, key:str, default = None):
         return cls.__entries.get(key, default)
-    
+
     @classmethod
     def is_using(cls, context:'Context', key, value) -> bool:
         entry = cls.get(key)
@@ -170,27 +170,27 @@ class PreferenceManager:
                 return current_value == value
         else:
             return entry.default == value
-    
+
     @classmethod
     def pref_length(cls):
         return len(cls.__entries)
-    
+
     @classmethod
-    def get_entries(self):
-        return self.__entries.values()
-    
+    def get_entries(cls):
+        return cls.__entries.values()
+
 PreferenceManager.add_entries([
-    PrefenrenceHiddenEntry('debug', bool, False, True),
-    PrefenrenceChoiceEntry('Skin', str, 'basic',
+    PreferenceHiddenEntry('debug', bool, False),
+    PreferenceChoiceEntry('Skin', str, 'basic',
                         ['basic', 'newra', 'classic',]),
-    PrefenrenceChoiceEntry('Edition', str, 'standard',
+    PreferenceChoiceEntry('Edition', str, 'standard',
                         ['standard', 'light']),
-    PrefenrenceBoolEntry('HideWIP', bool, False),
-    PrefenrenceBoolEntry('HideLaunchButton', bool, False),
-    PrefenrenceBoolEntry('HideDownloadButton', bool, False),
-    PrefenrenceBoolEntry('HideServerJarButton', bool, False),
-    PrefenrenceResetEntry('mod', bool, False, True),
-    PrefenrenceResetEntry('beta', bool, False, False)
+    PreferenceBoolEntry('HideWIP', bool, False),
+    PreferenceBoolEntry('HideLaunchButton', bool, False),
+    PreferenceBoolEntry('HideDownloadButton', bool, False),
+    PreferenceBoolEntry('HideServerJarButton', bool, False),
+    PreferenceResetEntry('mod', bool, False, True),
+    PreferenceResetEntry('beta', bool, False, False)
 ])
 
 @script('IsUsingPreset')
@@ -209,7 +209,7 @@ def get_preferece_url(context:'Context', *_args, **_kwargs):
     for entry in PreferenceManager.get_entries():
         value = entry.get_value_from_save_page(settings=settings)
         value = entry.convert_value(value)
-        if isinstance(entry, PrefenrenceResetEntry):
+        if isinstance(entry, PreferenceResetEntry):
             value = entry.reset_value
         if value != entry.default:
             if value == True:
@@ -227,7 +227,7 @@ def preferece_save_page_url(context:'Context', *_args, **_kwargs):
     bindings = ''
     i = 0
     for entry in PreferenceManager.get_entries():
-        if isinstance(entry, PrefenrenceHiddenEntry):
+        if isinstance(entry, PreferenceHiddenEntry):
             value = settings.get(entry.name)
             if value is not None:
                 value = entry.convert_value(value)
@@ -246,7 +246,7 @@ def preferece_radio(pref_key, pref_value, column, row, content, context:'Context
     data['column'] = column
     data['row'] = row
     data['content'] = content
-    data['element_key'] = PrefenrenceChoiceEntry.get_element_name_by_value(pref_key, pref_value)
+    data['element_key'] = PreferenceChoiceEntry.get_element_name_by_value(pref_key, pref_value)
     data['check'] = PreferenceManager.is_using(context, pref_key, pref_value)
     return context.components['Preference/PreferenceRadioBox'].toxaml(data, context)
 
@@ -254,6 +254,6 @@ def preferece_radio(pref_key, pref_value, column, row, content, context:'Context
 def preferece_check(pref_key, content, context:'Context', **_kwargs):
     data = {}
     data['content'] = content
-    data['element_key'] = PrefenrenceBoolEntry.get_element_name_by_value(pref_key)
+    data['element_key'] = PreferenceBoolEntry.get_element_name_by_value(pref_key)
     data['check'] = PreferenceManager.is_using(context, pref_key, True)
     return context.components['Preference/PreferenceCheckBox'].toxaml(data, context)
