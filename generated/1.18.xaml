@@ -25,7 +25,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-09-17" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -33,7 +33,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel Margin="15,10">
     <local:MyListItem Margin="0,1,0,1" ToolTip="继续浏览"
 	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="确认" Info="继续浏览"
-	EventType="打开帮助" EventData="" Type="Clickable" />
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/1.18_archive.json" Type="Clickable" />
     </StackPanel>
 </local:MyCard>
 </StackPanel>
