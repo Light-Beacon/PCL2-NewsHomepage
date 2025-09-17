@@ -22,6 +22,6 @@ def get_doamin_url(context:Context):
     display_port = _DISP_PORT_STR
     if config('NewsHomepage.UseRuntimePort', False):
         display_port = ':' + str(context.builder.get_data('server.port'))
-    if not display_port:
+    if display_port != '' and not display_port:
         logger.warning('无效的端口')
     return f"{_PROTOCOL}://{_DOMAIN}{display_port}/"
