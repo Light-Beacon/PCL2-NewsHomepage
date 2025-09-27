@@ -27,8 +27,8 @@ title: Minecraft Live 总结
 
 ![](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/WPGR/MCV_LIVE_holiday2025_editorial_1170x500.jpg.avif/webp)
 
-![鹦鹉螺](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/LfYj/MCV_holidaydrop2025_LIVE_nautilus_01_1280x720.jpg.avif/webp "鹦鹉螺")
+![鹦鹉螺](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/LfYj/MCV_holidaydrop2025_LIVE_nautilus_01_1280x720.jpg.avif/webp)
 
-![有着鹦鹉螺甲的鹦鹉螺](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/JNp8/MCV_holidaydrop2025_LIVE_nautilus_06_armor_gold_1280x720.jpg.avif/webp "有着鹦鹉螺甲的鹦鹉螺")
+![有着鹦鹉螺甲的鹦鹉螺](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/JNp8/MCV_holidaydrop2025_LIVE_nautilus_06_armor_gold_1280x720.jpg.avif/webp)
 
-![拿着矛的玩家](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/CdWK/MCV_holidaydrop2025_LIVE_attack_jab_3_1280x720.jpg.avif/webp "拿着矛的玩家")
+![拿着矛的玩家](https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250928/CdWK/MCV_holidaydrop2025_LIVE_attack_jab_3_1280x720.jpg.avif/webp)
