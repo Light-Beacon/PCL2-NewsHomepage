@@ -6,7 +6,6 @@ alias:
 cards:
  - animated_noticebar | s = false
  - ${@IF|${args.debug}|debug}
- - MCLNowOnAir
  - ${@NewsList}
  - ${@MainPageVersions|new}
 # - VersionLatestListCard | title=更新日志 | enable-card-style=True
