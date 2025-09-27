@@ -11,7 +11,7 @@ title: Minecraft Live 总结
 * 名称为 《Mounts of Mayhem》
 * 加入了 The Nautilus（鹦鹉螺生物），在海中生成，玩家可以喂河豚，使用鞍骑乘穿梭于海底
     * 会被河豚吸引
-    * 在骑乘的时候会有一个状态效果，湿的氧气不会消耗
+    * 在骑乘的时候会有一个状态效果，使得氧气不会消耗
     * 可以冲刺
     * 有其幼年形态 Baby Nautilus
     * 可以装备不同材料制成的 Nautilus Armor（鹦鹉螺甲）
