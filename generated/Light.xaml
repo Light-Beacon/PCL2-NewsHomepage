@@ -23,10 +23,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </local:MyCard><local:MyCard Title="更新日志" CanSwap="False" IsSwapped="False" Style="{StaticResource Card}">
 <StackPanel Margin="8,38,8,15">
 <local:MyListItem Margin="10,1,10,1" ToolTip="最新正式版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.8" Info="正式版"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.8" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新发布候选版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="最新发布候选版 - 1.21.9-rc1" Info="发布候选版"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.9-rc1" Type="Clickable" />
+	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.9" Info="正式版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.9" Type="Clickable" />
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
 <local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
@@ -36,8 +34,8 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
 </local:MyCard><local:MyCard Margin="0,2,0,10">
 <Grid Margin="10,6">
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" Margin="-4,0,0,0">
-    <local:MyIconTextButton HorizontalAlignment="Left" Text="1119dcf" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/1119dcfa9a10f03f76c839c152cb3f903d1c7d53"
+    <local:MyIconTextButton HorizontalAlignment="Left" Text="2f191fd" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/2f191fd60320c64cd084cb77b4e8709b6657e775"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" Margin="-4,0,0,0">

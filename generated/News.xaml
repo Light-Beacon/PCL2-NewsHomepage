@@ -11,7 +11,96 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<sys:String   x:Key="CloudIcon">
+M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
+20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
+97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
+42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
+0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
+38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
+69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
+220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
+113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
+0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
+211.6 582.7 160 480 160z</sys:String>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style  TargetType="local:MyImage" x:Key="VersionImage">
+  <Setter Property="Stretch" Value="UniformToFill" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+</Style>
+
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style  TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -35,58 +124,11 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<Style  TargetType="local:MyImage" x:Key="VersionImage">
-  <Setter Property="Stretch" Value="UniformToFill" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-</Style>
-
-<sys:String   x:Key="CloudIcon">
-M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
-20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
-97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
-42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
-0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
-38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
-69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
-220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
-113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
-0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
-211.6 582.7 160 480 160z</sys:String>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwapped="false" Margin="0,-2,0,6">
@@ -128,22 +170,827 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-10-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新发布候选版 - 1.21.9-rc1" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.9" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
-<local:MyImage Source="https://tc-new.z.wiki/autoupload/f/2c6MK0d62soElBOCIA-_FXmEkftwpfXYFOUOEy8VZ4ayl5f0KlZfm6UsKj-HyTuv/20250925/4m8L/1170X500/image.png/webp" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png"  Style="{StaticResource VersionImage}"/>
+<local:MyImage Source="https://tc-new.z.wiki/autoupload/f/XTxqEIEXt3ek2iMfNVy0xHr9SBDGMOz2CzLFKIoBJwSyl5f0KlZfm6UsKj-HyTuv/20251001/ebND/1170X500/image.png" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png"  Style="{StaticResource VersionImage}"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21.9-rc1" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21.9" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当 spawnMonsters 游戏规则设为 false 时嘎枝仍生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">潮涌核心中间的纹理上下颠倒</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜箱子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜傀儡像方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜质装备</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜质装饰品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了展示架</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">作为正在进行的 Vibrant Visuals（灵动视效）的一部分，在末地维度增加了闪光。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">未发送的聊天消息现在会存为聊天草稿</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在音乐与音效选项中的一些音量滑块会在世界外调整设置时播放预览音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Minecraft 服务端管理协议</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">服务器现在拥有了游戏内的行为准则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了对哈利奇地方语言的支持 <Italic>(译者注：哈利奇是乌克兰的一个城市)</Italic></Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 你知道 Minecraft:Java 版支持上百种语言吗？并且这些全都归功与你、我们的社区，以及你们对翻译项目运行做出的不可忽视的贡献。如果你想要帮助我们翻译游戏，可以在<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://crowdin.com/project/minecraft">Crowdin</local:MyTextButton></Underline>上加入我们。国际翻译日快乐！</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H3}">铜箱子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子是一种新类型的有着涂蜡与氧化变种的箱子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子可以使用箱子和铜锭合成</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜傀儡</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡是一种可以通过在铜块上放置南瓜灯或雕刻南瓜生成的生物。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡完全氧化并且没有被涂蜡，它将会变成铜傀儡像方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当变成铜傀儡像时它会掉落任何它手上拿着的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">变成铜傀儡像的被命名牌命名的铜傀儡会保留它的名字</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡可以帮助将物品分类到箱子里</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与铜傀儡交互将会清除它手上的物品并使其掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铁傀儡有时会在最近的铜傀儡上种装饰花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">花可以使用剪刀剪下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当铜傀儡变为铜傀儡像时花会掉落</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">铜傀儡物品分类</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡没有持有物品，它将会寻找最近的铜箱子尝试拾取一个物品</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡会寻找任何氧化状态以及涂蜡状态变种来拾取物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它会同时拾取最多 16 个物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜箱子中所有的物品都可以被拾取</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡正拿着一个物品，它将会寻找最近的箱子尝试放进去</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡会寻找箱子以及陷阱箱尝试放入物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它会把物品放进空箱子里，或放进包含有着其手持的物品相同种类的物品的箱子里</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡一次按顺序最多访问 10 个箱子或铜箱子来拾取或放下物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果没有找到匹配的箱子铜傀儡将会闲置7秒后重试</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">箱子的搜索范围为以铜傀儡的位置为中心，横向32格，垂直8格</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜傀儡像方块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像方块是一种有着涂蜡与氧化变种的新型装饰性方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜傀儡像像铜块一样会随着时间氧化，并可以被涂蜡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以对铜傀儡像交互改变它的姿势</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果铜傀儡像没有被氧化，对其使用斧头会将其变回铜傀儡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每一种姿势都传输红石比较器信号</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜质装备</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜粒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜质护甲</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜头盔、铜胸甲、铜护腿以及铜靴子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜质护甲有着比皮革以及金制护甲更高的耐久</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜质护甲比铁质护甲有着略低的附魔能力</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜质工具以及武器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了铜斧、铜镐、铜锹以及铜剑</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜质工具以及武器有着与石质相同的伤害，但是有着更高的耐久</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜质工具比石质工具效率更高</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜质工具有着比钻石更高但比铁更低的附魔能力</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用铜锭合成铜质装备</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用铜锭修复铜质装备</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当熔炼时，铜质装备会被炼成铜锭</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 铜马铠</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有着与铁马铠相同的战利品表以及概率</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">护甲值：4</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">铜质装饰品</Paragraph><List>
+<ListItem><Paragraph>增加了铜火把</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个使用铜粒、煤炭与木棍合成的绿色的火把变体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">和火把的作用一样</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了铜栏杆</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">和现存的铁栏杆的作用一样</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会随时间氧化</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了铜链</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">和现存的锁链（现在重命名成铁链了）的作用一样</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会随时间氧化</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>增加了铜灯笼</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与普通灯笼合成配方相似但使用铜以及铜火把</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">灯笼会自己氧化，随着时间外观也在变化</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">和现存的灯笼的作用一样</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">展示架</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架是一种新型的装饰性方块，有着以下变种：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">樱花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">苍白橡树</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绯红</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">扭曲</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架可以通过六个相同去皮原木方块、去皮菌柄以及去皮竹块，填满顶行和底行合成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个配方生产 6 个展示架</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架可储存最多三组物品：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与其正面的任意3个槽位交互将会交换槽位中的物品与玩家手中的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">展示架在正面显示所有物品，与物品展示框相同</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果展示架被红石充能，其正面纹理会更改以反映其被充能；当它们被并排放置时，最多三个充能的展示架会被连接</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与单独一个充能的展示架交互会与玩家热键栏最右侧三个槽交换物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与两个充能的展示架交互会与玩家热键栏最右侧六个槽交换物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与三个充能的展示架交互会与玩家热键栏的所有物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其行为与玩家具体交互了哪个展示架无关</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">避雷针</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">避雷针现在像其它铜方块以及铜傀儡头上的避雷针一样会被氧化</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">末地闪光</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地维度现在有了天空光照</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">通常天空光照不影响维度外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">随着时间末地天空会出现闪光</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当其发生时天空光照强度会增加使维度充满紫色光</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由闪光造成的音效现在有了更长的延迟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">&quot;隐藏天空闪电效果&quot; 无障碍设置被重命名为 &quot;隐藏天空闪烁效果&quot;，启用的同时也会隐藏末地闪光</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当闪光由设置禁用时，世界不会被闪光点亮，但是闪光源以及音效仍会显示与播放</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议（MSMP）</Paragraph><Paragraph>增加了一个服务器管理 API (JSON-RPC over WebSocket) 用于专用服务器</Paragraph><List>
+<ListItem><Paragraph>此 API 默认禁用，可以由服务器 properties 文件启用</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-enabled=true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-host=localhost</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">management-server-port=25585</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>当启用时 API 可以通过 <TextBox Style="{StaticResource InlineCode}">ws://&lt;management-server-host&gt;:&lt;management-server-port&gt;</TextBox> 访问</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">支持查询以及更新服务器状态(玩家、白名单、操作员、设置、游戏规则)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在状态更改时发送通知 (如：玩家加入、游戏规则更新)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调用 <TextBox Style="{StaticResource InlineCode}">{&quot;id&quot;:1,&quot;method&quot;:&quot;rpc.discover&quot;}</TextBox> 返回一个包含了当前运行的服务器支持的方法以及通知的 API schema</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据生成器在报表输出文件夹中提供一个 API schema (<TextBox Style="{StaticResource InlineCode}">json-rpc-api-schema.json</TextBox>) 反映了 <TextBox Style="{StaticResource InlineCode}">rpc.discover</TextBox> 方法返回的内容</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">API 遵守 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.jsonrpc.org/specification">JSON-RPC 2.0 规范</local:MyTextButton></Underline></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用带有命名空间的方法，并且保留的命名空间为 <TextBox Style="{StaticResource InlineCode}">minecraft</TextBox> （如：<TextBox Style="{StaticResource InlineCode}">minecraft:players</TextBox>,<TextBox Style="{StaticResource InlineCode}">minecraft:allowlist/add</TextBox>）以及 <TextBox Style="{StaticResource InlineCode}">notification</TextBox> （如 <TextBox Style="{StaticResource InlineCode}">notification:players/joined</TextBox>）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用自定义命名空间以及额外方法进行扩展</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">核心方法组: 玩家、白名单、操作员、服务器(保存、停止)、服务器设置、游戏规则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">方法调用示例:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">请求:</Paragraph></ListItem>
+</List></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;method&quot;: &quot;minecraft:allowlist/add&quot;,&#x000A;  &quot;id&quot;: 1,&#x000A;  &quot;params&quot;: [ [{ &quot;name&quot;: &quot;jeb_&quot; }] ]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">响应:</Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;  &quot;id&quot;: 1,&#x000A;  &quot;result&quot;: [{ &quot;id&quot;: &quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;, &quot;name&quot;: &quot;jeb_&quot; }]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">通知示例:</Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;  &quot;method&quot;: &quot;notification:players/joined&quot;,&#x000A;  &quot;params&quot;: [{ &quot;id&quot;: &quot;853c80ef-3c37-49fd-aa49-938b674adae6&quot;, &quot;name&quot;: &quot;jeb_&quot; }]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">错误示例:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">请求: <TextBox Style="{StaticResource InlineCode}">{&quot;method&quot;: &quot;minecraft:foo/bar&quot;,&quot;id&quot;: 1}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">响应:</Paragraph></ListItem>
+</List></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;  &quot;id&quot;: 1,&#x000A;  &quot;result&quot;: {&#x000A;    &quot;jsonrpc&quot;: &quot;2.0&quot;,&#x000A;    &quot;id&quot;: 1,&#x000A;    &quot;error&quot;: {&#x000A;      &quot;code&quot;: -32601,&#x000A;      &quot;message&quot;: &quot;Method not found&quot;,&#x000A;      &quot;data&quot;: &quot;Method not found: minecraft:foo/bar&quot;&#x000A;    }&#x000A;  }&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">错误以及错误代码遵守 <Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.jsonrpc.org/specification#error_object">JSON-RPC 2.0 错误对象格式</local:MyTextButton></Underline></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">聊天草稿</Paragraph><List>
+<ListItem><Paragraph>如果聊天被强制关闭，未发送的聊天信息现在会被存为聊天草稿</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这包含了被外边源关闭的情况，比如死亡或者打开了对话框，但是不包含玩家自己关闭了对话框</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>任何存在的聊天草稿将会在下一次聊天栏打开时提前填充到消息框</Paragraph></ListItem>
+<ListItem><Paragraph>草稿文字有着灰色外观，直到其恢复</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以通过交互使得恢复草稿文字为正常文字：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">键入更多文字</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用方向键移动光标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">点击</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">高亮</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在草稿未恢复时按下 Enter 键会像正常聊天消息一样发送出去</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在草稿未恢复时按下 Backspace 键会删除草稿</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>在聊天设置菜单中增加了一个选项，默认情况下保存未发送的聊天消息</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当该选项启用时，未发送的消息将会 <Italic>一直</Italic> 保存为聊天草稿，即使玩家是自己关闭了聊天栏</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">服务器行为准则</Paragraph><Paragraph>当连接到服务器时，现在会显示服务器行为准则屏幕。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">游玩服务器必须接受服务器行为准则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会提供一个检查框，勾选后不会再显示行为准则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果行为准则更改，它还会再次显示</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">服务器设置</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个新的布尔字段 <TextBox Style="{StaticResource InlineCode}">enable-code-of-conduct</TextBox> 添加入了 server.properties</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果将其设为 <TextBox Style="{StaticResource InlineCode}">true</TextBox> 将会使服务器在与 <TextBox Style="{StaticResource InlineCode}">server.properties</TextBox> 所在文件夹中的名为 <TextBox Style="{StaticResource InlineCode}">codeofconduct</TextBox> 子文件夹中寻找行为准则文件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在文件夹中的每一个文件名应符合 <TextBox Style="{StaticResource InlineCode}">&lt;language_code&gt;.txt</TextBox> 格式</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">上方的语言将会尝试匹配玩家的语言</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果不存在匹配玩家语言的文件，会使用 <TextBox Style="{StaticResource InlineCode}">en_us</TextBox> 的行为准则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">en_us</TextBox> 也不存在，则会匹配任意文件</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在音乐与音效选项中的一些音量滑块会在世界外调整设置时播放预览音效</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">辅助功能</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">染料颜色现在有了更新的图标</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">目标是在增强整个染料集合视觉统一感的同时维持不同形状以支持色觉障碍友好</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">辅助功能设置屏幕增加了一个跳转到控制设置的按钮</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">“自动跳跃” 选项以及 “潜行” 与 “疾跑” 切换被从辅助功能设置屏幕移除</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“显示字幕” 选项被改写为 “隐藏式字幕” 以更准确描述其作用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“隐藏闪电闪光” 无障碍设置被重命名为 “隐藏天空闪烁” 因其包含末地闪光</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">性能改进</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">锁链方块现在重命名为“铁链”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">怪物刷怪蛋现在在难度设为和平时有一条提示说明</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当尝试在和平难度使用刷怪蛋时不再会短暂生成一刻</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界加载与“出生区区块”的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">拥有任意玩家活动、被 forceload 的区块、激活的传送门或正在飞行的末影珍珠的维度现在会被视为“激活”，并会持续处理区块以及实体</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前只有当玩家在该维度或某个区块被 forceload 时才会应用</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">重新设计了调试信息使其更少杂乱也更可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在当前服务器世界中的玩家现在一直会显示在社交屏幕中，即使他们离线</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当从旁观者模式切换至创造模式时，如果玩家靠近地面，现在会停止飞行</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家在其下方 1 格内有可碰撞表面（方块、快乐恶魂、船等）时被视为靠近地面</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家在方块或可碰撞实体内部时飞行不会被禁用</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这用于防止玩家突然掉下</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">迁移了若干服务器属性到游戏规则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在游玩游戏需要 OpenGL 3.3，从 3.2 提升。这不会改变我们之前发布的最低配置需求</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">性能改进</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">实体渲染顺序被改进以显著提高性能</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在有大量生物的区域（例如刷怪塔）你会注意到更流畅的游戏体验</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果你的帧率瓶颈不是来自实体（例如高渲染距离且附近实体不多），FPS 不会有明显提升</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在玩家视野外的粒子不再渲染，这在某些情况下会提供性能提升</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界加载与出生区区块</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">固定的“出生区区块”概念被移除</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">游戏会确保以下区块在玩家加入或服务器启动前被完整加载，其方式与之前出生区区块一致：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">被 forceload 命令加载的区块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由于传送门活动而激活的区块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被投掷的末影珍珠（仅单人）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家附近的一小片区块（仅单人）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">创建世界时用于分配全局世界出生点的区块</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界加载界面现在显示玩家即将被放入的区块，而不是世界出生点周围的区块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">加载界面现在有了一个进度条</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">该进度条会计入上述所有类别的区块加载</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">服务器属性</Paragraph><Paragraph>为允许在服务器运行时更改设置，若干服务器属性被移除改为游戏规则。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除服务器属性 <TextBox Style="{StaticResource InlineCode}">allow-nether</TextBox>，改用新的游戏规则 <TextBox Style="{StaticResource InlineCode}">allowEnteringNetherUsingPortals</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除服务器属性 <TextBox Style="{StaticResource InlineCode}">spawn-monsters</TextBox>，改用新的游戏规则 <TextBox Style="{StaticResource InlineCode}">spawnMonsters</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除服务器属性 <TextBox Style="{StaticResource InlineCode}">enable-command-block</TextBox>，改用新的游戏规则 <TextBox Style="{StaticResource InlineCode}">commandBlocksEnabled</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除服务器属性 <TextBox Style="{StaticResource InlineCode}">pvp</TextBox>，改用新的游戏规则 <TextBox Style="{StaticResource InlineCode}">pvp</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-enabled</TextBox> 控制是否启用 Minecraft 服务端管理协议</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-port</TextBox> 控制 Minecraft 服务端管理协议端口</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">0</TextBox>，每次启动分配可用端口</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-host</TextBox> 控制 Minecraft 服务端管理协议主机</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">localhost</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-tls-enabled</TextBox> 控制 Minecraft 服务端管理协议是否使用 TLS</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-tls-keystore</TextBox> 控制 TLS keystore 文件路径</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 空字符串</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当启用 TLS 且未提供 keystore 时专用服务器不会启动</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">management-server-tls-keystore-password</TextBox> 控制 TLS keystore 密码</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 空字符串</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">status-heartbeat-interval</TextBox> 控制管理服务器向已连接客户端发送心跳通知的间隔</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 0（禁用）</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加服务器属性 <TextBox Style="{StaticResource InlineCode}">enable-code-of-conduct</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">详情见“服务器设置”标题</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">spawnChunkRadius</TextBox> 游戏规则</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">pvp</TextBox> 游戏规则控制玩家是否可以对其他玩家造成伤害</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">allowEnteringNetherUsingPortals</TextBox> 游戏规则控制下界是否可通过传送门进入</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">spawnMonsters</TextBox> 游戏规则控制怪物是否自然生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">commandBlocksEnabled</TextBox> 游戏规则控制命令方块是否启用</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">spawnerBlocksEnabled</TextBox> 游戏规则控制刷怪笼是否启用</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">调整生成携带装备的生物的装备类型选择逻辑以增加铜装备的可能性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">初始类型现在在 皮革、铜 和 金 中选择</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">提升护甲等级的概率从 9.5% 上升至 10.87%</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块，物品与实体的微调</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">测试实例方块现在在世界重载之间保留错误标记</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调整了实体上的环境光照以更视觉地与方块及其它部分一致</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">平面下方现在会朝该方向被照亮，而不是相反方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这主要影响包含扁平或“空心”立方体的模型，例如：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">穿戴的护甲</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">穿戴的鞘翅</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家皮肤的外层</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骷髅与骷髅马的胸腔</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鸡与青蛙的脚</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幻翼与末影龙的翅膀</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鱼的鱼鳍</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">还有更多！</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">配方</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了铜活板门的配方，从 6 个铜锭(合成两个)变为 4 个铜锭(合成一个)</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">快乐恶魂现在可在 64 格外听到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">箱子音效现在以更低的音量播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">播放音效的音量现在尊重音效源的音量值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“语音/说话” 音效源被改写为 “讲述人/语音”</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包与数据包选择屏幕现在有了搜索框</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更多文本输入现在支持通过鼠标拖动选择文本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在编辑框中双击一个单词现在会选中它</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当向服务器列表添加新服务器时，服务器名称不再预填</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">留空时会使用默认名称 “Minecraft Server”</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">鼠标指针</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一些 UI 组件现在会改变鼠标指针的形状</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如: 文本输入、数字滑块、按钮、滚动条</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">此外，可点击的文本标签部分（如链接）现在会将指针改为 “手” 形状</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">该特性可通过 “鼠标设置” 中的 “允许光标变化” 关闭</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">调试信息</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试信息仍可通过 F3 打开</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试信息现在在游戏任意界面都可访问，不只是在游戏世界中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其现在更少杂乱，默认显示更少信息</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的调试选项屏幕，可通过 F3 + F6 打开，用于配置要显示哪些调试信息</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对每一个元素，你可以配置其是否应在调试信息中显示，甚至可以设置为在不按调试信息时也总是可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前可用的一些调试功能（如区块边界渲染、实体碰撞箱渲染）现在可以通过调试选项屏幕切换</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一些之前对社区不可用的调试功能（如八叉树可视化）现在可通过调试选项屏幕访问</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试选项屏幕的状态在游戏启动之间持久化</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试选项屏幕有以下预设配置：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认：重置全部为默认状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">性能：显示简单性能指标，并始终显示 FPS 计数</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">聊天</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以站在下界传送门中开始聊天</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果玩家在进入另一个维度时正在聊天，聊天栏会保持打开并且不会改变</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包与资源包版本现在有次版本号</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 88.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 69.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前隐藏的一些调试特性现在向玩家开放</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">包格式</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包与资源包的版本现在有次版本号</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">游戏的包版本进行次版本号递增是向后兼容的，意味着该主版本之前迭代制作的所有包仍能工作</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果依赖次版本号中引入的资源，包可以对次版本号声明兼容性需求</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">包元数据</Paragraph><Paragraph>pack.mcmeta 格式已更新：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">supported_formats</TextBox> 字段</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果你的包声明支持旧格式的包版本（数据包 &lt; 82，资源包 &lt; 65），仍然需要</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">否则不允许，必须移除</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pack_format</TextBox> 字段现在可选</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果你的包声明支持旧格式的包版本（数据包 &lt; 82，资源包 &lt; 65），仍然需要</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增必需字段 <TextBox Style="{StaticResource InlineCode}">min_format</TextBox> —— 指定支持的最小版本</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">完整版本由两个整数列表指定，例如 <TextBox Style="{StaticResource InlineCode}">[74, 1]</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定单个整数被解释为该主版本，例如 <TextBox Style="{StaticResource InlineCode}">74</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">[74, 0]</TextBox> 相同</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定仅一个整数的列表与直接指定该整数等价</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增必需字段 <TextBox Style="{StaticResource InlineCode}">max_format</TextBox> —— 指定支持的最大版本</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">完整版本由两个整数列表指定，例如 <TextBox Style="{StaticResource InlineCode}">[74, 1]</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定单个整数被解释为任意次版本，即次版本被视为 <TextBox Style="{StaticResource InlineCode}">0x7fffffff</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定仅一个整数的列表与直接指定该整数等价</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 overlay 条目：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">formats</TextBox> 字段</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果你的包包含的任意 overlay 范围包含旧格式版本（数据包 &lt; 82，资源包 &lt; 65），则该字段对所有 overlay 定义仍然需要</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">否则不允许，必须移除</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增必需字段 <TextBox Style="{StaticResource InlineCode}">min_format</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">max_format</TextBox>，其格式与上述字段相同</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">调试特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一些之前在编译时被移除的调试特性现在被保留并可被玩家使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可通过 JVM 属性启用单个值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">首先必须使用 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_ENABLED</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_ENABLED=true</TextBox> 启用全局调试标记</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">然后可启用指定特性，例如 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_BRAIN</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_BRAIN=true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加 <TextBox Style="{StaticResource InlineCode}">-DMC_DEBUG_PRINT_PROPERTIES</TextBox> 可获取所有可用调试属性列表</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">警告：这是调试代码，主要意图是帮助模组作者——不用于正常游戏，务必谨慎！</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些特性可能会崩溃你的游戏或破坏你的存档</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些特性不保证按预期运行</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些特性可能在未通知的情况下加入、修改或删除</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 82.0 至 88.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了玩家模型（Mannequin）实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界边界现在可为维度独立设置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了在文本中使用 GUI 以及物品精灵图的方式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据组件与方块实体中的玩家档案不再自动解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">fetchprofile</TextBox> 命令以下载玩家档案</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">chain</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">iron_chain</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">玩家模型</Paragraph><Paragraph>增加了一种新的技术性实体，名为 <TextBox Style="{StaticResource InlineCode}">minecraft:mannequin</TextBox>，仅能通过命令生成。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型是一个有着玩家外形但未与玩家连接的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型总是会在 <TextBox Style="{StaticResource InlineCode}">below_name</TextBox> 记分栏位处显示一个“NPC”文本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型与活体功能相同——它们可以手持、装备物品，有属性与效果，会受到伤害等</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家模型接受来自刷怪笼物品的 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件</Paragraph></ListItem>
+</List><Paragraph>数据字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">profile</TextBox> - 在实体上显示的档案。可以是玩家档案（与 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件格式相同），或一个有下列字段的玩家模型档案：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">texture</TextBox> - 要使用的皮肤纹理的带有命名空间的 ID</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">皮肤在以相对于 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 文件夹的路径区分，带有 <TextBox Style="{StaticResource InlineCode}">.png</TextBox> 后缀</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">entity/player/wide/steve</TextBox> 会使用默认史蒂夫皮肤</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">cape</TextBox> - 可选的要使用的披风的命名空间 ID</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定时使用与 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 字段相同格式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">缺省时玩家模型无披风</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">elytra</TextBox> - 可选的要使用的鞘翅的命名空间 ID</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定时使用与 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 字段相同格式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">缺省时使用披风对应的鞘翅纹理，如果披风也缺省则使用默认鞘翅纹理</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">module</TextBox> - 可选的模型类别，<TextBox Style="{StaticResource InlineCode}">wide</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">slim</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">缺省时使用 <TextBox Style="{StaticResource InlineCode}">wide</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hidden_layers</TextBox> - 隐藏的皮肤层列表</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有效值：<TextBox Style="{StaticResource InlineCode}">cape</TextBox>、 <TextBox Style="{StaticResource InlineCode}">jacket</TextBox>、 <TextBox Style="{StaticResource InlineCode}">left_sleeve</TextBox>、 <TextBox Style="{StaticResource InlineCode}">right_sleeve</TextBox>、 <TextBox Style="{StaticResource InlineCode}">left_pants_leg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">right_pants_leg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">hat</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">main_hand</TextBox> - 玩家模型的主手——<TextBox Style="{StaticResource InlineCode}">left</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">right</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界边界</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界边界现在是维度独立的</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着每个维度可以有自己的世界边界大小、位置等</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">文本渲染</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">object</TextBox> 文本组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的文本组件 <TextBox Style="{StaticResource InlineCode}">object</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个组件会显示一个非字符对象作为文本的一部分</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">精灵图总是以 8x8 像素矩形渲染</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">粗体与斜体样式被忽略</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">object</TextBox>: 对象的类型，字符串，值见下方</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">&lt;type-specific&gt;</TextBox>: 由对象类型决定的可选字段</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与 <TextBox Style="{StaticResource InlineCode}">nbt</TextBox> 文本组件相似，<TextBox Style="{StaticResource InlineCode}">object</TextBox> 字段可省略</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">然而，为了检查错误，推荐提供</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">atlas</TextBox> 对象类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与之前 <TextBox Style="{StaticResource InlineCode}">object</TextBox> 组件有相同的行为，但现在其分离为一个对象类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用与之前相同的格式</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">player</TextBox> 对象类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">渲染玩家的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果提供了部分档案，皮肤会以与玩家头上的 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件相同方式解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">player</TextBox>: 玩家档案</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">name</TextBox>: 玩家名称，可选字符串</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox>: 玩家 UUID，可选 UUID</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">properties</TextBox>: 档案属性，可选映射</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hat</TextBox>: 控制是否渲染帽子层，布尔，默认 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">run_command</TextBox> 点击事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前如果命令字段包含一个需要签名消息的命令（<TextBox Style="{StaticResource InlineCode}">/say</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/me</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/msg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/tell</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/w</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/teammsg</TextBox>、 <TextBox Style="{StaticResource InlineCode}">/tm</TextBox>），它会自动放弃</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在，会展示一个屏幕允许用户插入命令到聊天栏，如果窗口不能打开则会复制命令到剪贴板</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">summon</TextBox> 命令现在在尝试在和平难度召唤怪物时会失败</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">spawnpoint</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">setworldspawn</TextBox> 命令现在可以控制完整的玩家视角方向</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">angle</TextBox> 参数被移除</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了可选的 <TextBox Style="{StaticResource InlineCode}">rotation</TextBox> 参数，要求同时指定 <TextBox Style="{StaticResource InlineCode}">yaw</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">pitch</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">setworldspawn</TextBox> 命令不再限制在主世界</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着当玩家没有床或重生锚时可在下界等地重生</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">服务器命令现在默认从重生维度运行而不总是在主世界</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加 <TextBox Style="{StaticResource InlineCode}">fetchprofile</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了从 Minecraft 服务器上获取玩家档案内容的命令</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因为这个操作可能需要一些时间，它在工作时为异步进行</Paragraph></ListItem>
+<ListItem><Paragraph>当操作完成时结果会被打印，但游戏会一直不间断地运行</Paragraph></ListItem>
+<ListItem><Paragraph>在成功完成后，会显示一条消息以让用户复制的完全储存的 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件内容，或有着 <TextBox Style="{StaticResource InlineCode}">said</TextBox> 组件的 <TextBox Style="{StaticResource InlineCode}">/give @s minecraft:player_head</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因为命令执行不会立即产生结果，这个指令返回值恒为 1</Paragraph></ListItem>
+</List><Paragraph>语法:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fetchprofile name &lt;player name&gt;</TextBox> - 返回由玩家名（大小写不敏感）解析的档案</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fetchprofile id &lt;uuid&gt;</TextBox> - 返回由 id 解析的档案</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}">修改了 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前这个组件的内容会在档案被解析时永久的改变，例如在从 Minecraft 服务时</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为了避免这个意料之外的更改的问题，现在解析值不再存储，并且档案内容会一直保持不被更改</Paragraph></ListItem>
+<ListItem><Paragraph>这意味着这个组件现在有两个行为：</Paragraph><List>
+<ListItem><Paragraph>静态: 当其存在 <TextBox Style="{StaticResource InlineCode}">properties</TextBox> 字段时，或 <TextBox Style="{StaticResource InlineCode}">name</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 均设置或均未设置时</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在这个状态下，档案会直接渲染</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">properties</TextBox> 字段缺省，会使用默认皮肤（由 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 决定，与离线模式相同）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">只意味着在组件创建时皮肤变为只读</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个选项适合装饰用途</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>动态: 当没有 <TextBox Style="{StaticResource InlineCode}">name</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 时（但不是两个都没有）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当包含这个档案的物品在客户端渲染时，档案将会被解析为最近期的值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着这个物品将会一直渲染为目标玩家的当前皮肤</Paragraph></ListItem>
+<ListItem><Paragraph>注：如果玩家在游戏运行时更改了皮肤，其更改不可见直到客户端重启</Paragraph></ListItem>
+<ListItem><Paragraph>在解析时可能会造成延迟，在这时物品会渲染为默认皮肤</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当存在时，物品名称将会替换档案名称</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">只有 <TextBox Style="{StaticResource InlineCode}">id</TextBox> 的物品会显示默认名称</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">具有动态档案的物品会用提示栏与静态物品区分</Paragraph></ListItem>
+</List></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>物品堆叠基于精确的内容，所以即使动态组件与静态组件解析结果完全一样，它们也不会堆叠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在以前的地图上的未被新版本加载的玩家的头通常将会转为动态内容</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块实体数据</Paragraph><Paragraph Style="{StaticResource H4}">修改 <TextBox Style="{StaticResource InlineCode}">minecraft:skull</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">profile</TextBox> 字段被修改以匹配 <TextBox Style="{StaticResource InlineCode}">minecraft:profile</TextBox> 组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这意味着其不可修改并且只有在必要时才会解析</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">战利品表</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:entity_interact</TextBox> 战利品表类型，参数：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox> 被交互的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox> 可选，与 <TextBox Style="{StaticResource InlineCode}">target_entity</TextBox> 交互的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tool</TextBox> 用于交互的工具</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:block_interact</TextBox> 战利品表类型，参数：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block_state</TextBox> 被交互的方块实体的方块状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block_entity</TextBox> 可选，被交互的方块实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox> 可选，与 <TextBox Style="{StaticResource InlineCode}">block_state</TextBox> 交互的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tool</TextBox> 可选，用于与 <TextBox Style="{StaticResource InlineCode}">block_state</TextBox> 交互的工具</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在战利品表中指定目标实体的字段（如 <TextBox Style="{StaticResource InlineCode}">entity_properties.entity</TextBox>）现在还可以指定 <TextBox Style="{StaticResource InlineCode}">target_entity</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox> 参数类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">charged_creeper/root</TextBox> 战利品表用于被闪电苦力怕击杀时的掉落</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">该战利品表基于被击杀生物分派到以下战利品表：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">charged_creeper/piglin</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">charged_creeper/creeper</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">charged_creeper/skeleton</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">charged_creeper/wither_skeleton</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">charged_creeper/zombie</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一旦有被击杀生物从该战利品表掉落物品，同一个苦力怕击杀的其它生物不会再掉落</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">brush/armadillo</TextBox> 战利品表用于对犰狳刷子时的掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">gameplay/turtle_grow</TextBox> 战利品表用于海龟长大为成年时的掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">harvest/beehive</TextBox> 战利品表用于使用剪刀收获蜂箱或蜂巢时的掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">harvest/cave_vine</TextBox> 战利品表用于交互收获有发光浆果的洞穴藤蔓时的掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">harvest/sweet_berry_bush</TextBox> 战利品表用于交互收获有浆果的浆果丛时的掉落</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">carve/pumpkin</TextBox> 战利品表用于使用剪刀雕刻南瓜时的掉落</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">战利品函数</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:fill_player_head</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity</TextBox> 字段现在接受新的实体上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:set_lore</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity</TextBox> 字段现在接受新的上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:copy_custom_data</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">source</TextBox> 字段现在接受新的上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:copy_name</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">source</TextBox> 字段现在接受新的上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">direct_attacker</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:copy_components</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">source</TextBox> 字段现在接受新的上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">this</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attacker</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">direct_attacker</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attacking_player</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tool</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:entity_scores</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity</TextBox> 字段现在接受新的实体上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:entity_properties</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity</TextBox> 字段现在接受新的实体上下文值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target_entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">interacting_entity</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">附魔</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">explode</TextBox> 效果</Paragraph><Paragraph>新字段: <TextBox Style="{StaticResource InlineCode}">block_effects</TextBox> —— 指定每种方块的粒子。每个方块粒子会随机地基于权重选择。在每一个爆炸刻会生成一系列的方块粒子</Paragraph><Paragraph>格式: 一个入口点列表:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weight</TextBox>: 代表随机选择的权重的非负整型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle</TextBox>: 要生成的粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">scaling</TextBox>: 可选的在爆炸中心与方块位置之间的缩放，默认为 1.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">speed</TextBox>: 可选的粒子速度倍数，默认为 1.0</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">noise_settings</TextBox> 定义中的 <TextBox Style="{StaticResource InlineCode}">initial_density_without_jaggedness</TextBox> 字段被 <TextBox Style="{StaticResource InlineCode}">preliminary_surface_level</TextBox> 字段替换</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">initial_density_without_jaggedness</TextBox> 是一个三维密度函数，通过扫描第一个密度大于 0.390625 的点来决定一个近似的表面高度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">preliminary_surface_level</TextBox> 是一个二维密度函数，应产生近似表面的 y 级别</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:find_top_surface</TextBox> 密度函数可用于复现之前的扫描</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">密度函数</Paragraph><Paragraph>增加 <TextBox Style="{StaticResource InlineCode}">minecraft:find_top_surface</TextBox> —— 近似给定密度函数的最上层表面
+- 它从上界扫描到下界以找到密度从负变正的点
+  - 上界应尽可能接近实际表面以获得最佳性能
+  - 上界不应低于实际表面</Paragraph><Paragraph>字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">density</TextBox> - 要近似表面的密度函数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">upper_bound</TextBox> - 提供最高可能 y 值的二维密度函数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">lower_bound</TextBox> - 整数，最低可能 y 值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">cell_height</TextBox> - 正整数，定义扫描使用的网格分辨率</Paragraph></ListItem>
+</List><Paragraph>增加 <TextBox Style="{StaticResource InlineCode}">minecraft:invert</TextBox> —— 解析为 <TextBox Style="{StaticResource InlineCode}">1/argument</TextBox></Paragraph><Paragraph>字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">argument</TextBox> - 密度函数</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">拼图结构（Jigsaw）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">max_distance_from_center</TextBox> 字段现在可以为竖直轴与水平轴指定不同限制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可通过带有字段的对象指定：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">horizontal</TextBox> - 1 到 128 的必需整数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">vertical</TextBox> - 1 到 4096 的可选整数（默认 4096）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如: <TextBox Style="{StaticResource InlineCode}">&quot;max_distance_from_center&quot;: { &quot;horizontal&quot;: 20, &quot;vertical&quot;: 500 }</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">之前指定水平与竖直距离的单个内联值格式仍被支持</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper_chests</TextBox> - 所有铜箱方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper</TextBox> - 所有铜方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#incorrect_for_copper_tool</TextBox> - 使用铜工具不会掉落物品的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper_golem_statues</TextBox> - 所有铜傀儡像方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#chains</TextBox> - 所有锁链方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#lanterns</TextBox> - 所有灯笼方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#bars</TextBox> - 所有金属栏杆方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper_chests</TextBox> - 所有铜箱方块物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper</TextBox> - 所有铜方块物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper_tool_materials</TextBox> - 所有铜工具材料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#repairs_copper_armor</TextBox> - 所有修复铜护甲的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#copper_golem_statues</TextBox> - 所有铜傀儡像方块物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#chains</TextBox> - 所有锁链方块物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#lanterns</TextBox> - 所有灯笼方块物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#bars</TextBox> - 所有金属栏杆方块物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#shearable_from_copper_golem</TextBox> - 所有可以使用剪刀从铜傀儡的头部槽移除的物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">实体类型标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#cannot_be_pushed_onto_boats</TextBox> - 不能被推上船的生物，包括 枯焦、玩家 以及 所有非两栖水生生物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#accepts_iron_golem_gift</TextBox> - 会接受铁傀儡递交物品的生物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加 <TextBox Style="{StaticResource InlineCode}">#candidate_for_iron_golem_gift</TextBox> - 铁傀儡会尝试递交物品的生物，但不一定接受（见 <TextBox Style="{StaticResource InlineCode}">#accepts_iron_golem_gift</TextBox>）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dragon_breath</TextBox> 现在可选地使用 <TextBox Style="{StaticResource InlineCode}">power</TextBox> 参数（浮点，默认 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox>），在全部随机进行后乘到其初速度上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">instant_effect</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">effect</TextBox> 现在可选地使用 <TextBox Style="{StaticResource InlineCode}">power</TextBox>（浮点，默认 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox>）与 <TextBox Style="{StaticResource InlineCode}">color</TextBox>（RGB，默认 <TextBox Style="{StaticResource InlineCode}">0xFFFFFF</TextBox>）参数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">flash</TextBox> 现在需要 <TextBox Style="{StaticResource InlineCode}">color</TextBox> 参数（ARGB）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 64.0 至 69.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加新的显示变换 <TextBox Style="{StaticResource InlineCode}">on_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用于在展示架上展示物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块精灵图</Paragraph><Paragraph>增加了新方块的精灵图:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_left</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_right</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_left</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_right</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_left</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_right</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_left</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_right</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">acacia_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">bamboo_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">birch_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">cherry_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">crimson_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dark_oak_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">jungle_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">mangrove_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oak_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pale_oak_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">spruce_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">warped_shelf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_bars</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_torch</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_bars</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_torch</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_bars</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_torch</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_bars</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_torch</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品精灵图</Paragraph><Paragraph>增加了新物品的精灵图:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_axe</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_boots</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_chestplate</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_golem_spawn_egg</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_helmet</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_hoe</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_leggings</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_nugget</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_pickaxe</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_shovel</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_sword</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exposed_copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">oxidized_copper_lantern</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_chain</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weathered_copper_lantern</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的纹理:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">environment/end_flash.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">gui/container/villager.png</TextBox> 的输出槽向上移动了一个像素</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><Paragraph Style="{StaticResource H4}">音效事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了以下音效事件:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_chest.open</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_chest.close</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_chest_weathered.open</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_chest_weathered.close</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_chest_oxidized.open</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_chest_oxidized.close</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.step</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.spin</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_weathered.step</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_weathered.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_weathered.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_weathered.spin</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_oxidized.step</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_oxidized.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_oxidized.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_oxidized.spin</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.armor.equip_copper</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.spawn</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.no_item_get</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.no_item_not_get</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.item_drop</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem.item_no_drop</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.copper_golem_become_statue</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_golem_statue.break</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_golem_statue.place</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_golem_statue.hit</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_golem_statue.fall</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.copper_golem_statue.step</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.shelf.activate</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.shelf.deactivate</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.shelf.multi_swap</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.shelf.place_item</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.shelf.single_swap</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.shelf.take_item</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">weather.end_flash</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新粒子：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">copper_fire_flame</TextBox></Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">着色器与后处理效果</Paragraph><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 虽然在资源包中可以做到，覆盖核心着色器被视为不受支持并非预期的资源包特性。这些着色器是游戏内部实现的一部分，因此可能会随着内部演进随时改变。我们理解覆盖核心着色器被用于很多很酷的资源包特性，其中很多缺乏受支持的替代方案。我们希望未来提供更好且受支持的替代方案。</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H4}">着色器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列未使用的着色器被移除：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_lightmap.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_lightmap.fsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_tex_lightmap.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/position_color_tex_lightmap.fsh</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个新的标记 <TextBox Style="{StaticResource InlineCode}">PER_FACE_LIGHTING</TextBox> 被添加到下列着色器：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/entity.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/entity.fsh</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当设置时，正面和背面的基光照会被分别计算</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由于现在需要 OpenGL 3.3，我们将所有着色器版本从 <TextBox Style="{StaticResource InlineCode}">150</TextBox> bump 至 <TextBox Style="{StaticResource InlineCode}">330</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">全屏通道（Full Screen Passes）更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列顶点着色器被移除，用 <TextBox Style="{StaticResource InlineCode}">core/screenquad.vsh</TextBox> 替换：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/blit_screen.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">post/blit.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">post/blur.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">post/invert.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">post/sobel.vsh</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">post/screenquad.vsh</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">后处理效果以及光照贴图生成与全屏 blit 的顶点着色器不再传入 Position 属性，而是必须使用 <TextBox Style="{StaticResource InlineCode}">gl_VertexID</TextBox> 指定顶点坐标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些通道现在仅用 3 个顶点执行，而不是一个完整的四边形</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -158,11 +1005,11 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-09-29" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-10-01" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 
-<local:MyIconTextButton Text="启动" ToolTip="启动 1.21.9-rc1" EventType="启动游戏"
-    EventData="1.21.9-rc1" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 1.21.9" EventType="启动游戏"
+    EventData="1.21.9" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 
 
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
@@ -170,59 +1017,21 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/12b937eebe1a732f9dd1db9ae6443070e1d30045/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/11e54c2081420a4d49db3007e66c80a22579ff2a/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/Java版1.21.9-rc1" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/Java版1.21.9" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-1-21-9-release-candidate-1" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-java-edition-1-21-9" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-10-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
-</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="最新正式版 - 1.21.8" CanSwap="True" IsSwapped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource VersionImageBorder}">
-<local:MyImage Source="https://s21.ax1x.com/2025/07/20/pV8V5fU.png" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png"  Style="{StaticResource VersionImage}"/>
-</Border>
-<Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.21.8" />
-</Border><FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph>修复了几个 Bug。</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2025-09-29" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
-<WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
-
-<local:MyIconTextButton Text="启动" ToolTip="启动 1.21.8" EventType="启动游戏"
-    EventData="1.21.8" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
-
-
-<local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
-    LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
-
-
-<local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/6bce4ef400e4efaa63a13d5e6f6b500be969ef81/server.jar" Logo="{StaticResource CloudIcon}" />
-
-<local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/Java版1.21.8" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
-<local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-java-edition-1-21-8" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
-</WrapPanel>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
-</StackPanel>
-</local:MyCard><local:MyCard Margin="0,5">
+</local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Margin="0,5">
     <StackPanel Margin="15,10">
     <local:MyListItem Margin="0,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
     Logo="https://tc-new.z.wiki/autoupload/f/XTxqEIEXt3ek2iMfNVy0xHr9SBDGMOz2CzLFKIoBJwSyl5f0KlZfm6UsKj-HyTuv/20250913/9NA0/300X300/pVQXQTx.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
@@ -240,7 +1049,7 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-09-29" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-10-01" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -251,8 +1060,8 @@ M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.3333
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="1119dcf" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/1119dcfa9a10f03f76c839c152cb3f903d1c7d53"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="2f191fd" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/2f191fd60320c64cd084cb77b4e8709b6657e775"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
