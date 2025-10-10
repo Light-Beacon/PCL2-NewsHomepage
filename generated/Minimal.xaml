@@ -12,22 +12,462 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style  TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w41a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了鹦鹉螺以及僵尸鹦鹉螺</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了鹦鹉螺铠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了矛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了进度以包含鹦鹉螺、僵尸鹦鹉螺以及僵尸马</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">鹦鹉螺</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">鹦鹉螺是一个新的条件敌对水生生物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它生成在所有海洋生物群系</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果被激怒，会使用冲刺攻击</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">又是会使用冲刺攻击来攻击范围内的河豚</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">和骆驼一样有着冲刺的能力，使用跳跃键触发</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在陆地上受到窒息伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了“Breath of the Nautilus”状态效果施于骑乘在其身上的玩家</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鹦鹉螺可以被河豚以及河豚桶繁殖与驯服</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">驯服的鹦鹉螺：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用鞍骑乘</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">装备鞍的会在 16 格范围内游荡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">未装备鞍的会在 32 格范围内游荡</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">僵尸鹦鹉螺</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸鹦鹉螺是一个新的水下生物，会生成一个挥舞着三叉戟的溺尸骑在上面</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸鹦鹉螺仅在被敌对生物骑乘时会变为敌对</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸鹦鹉螺与鹦鹉螺行为相似，除了不能繁殖</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">鹦鹉螺铠</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以装备在 鹦鹉螺 和 僵尸鹦鹉螺 上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有铜、金、铁、钻石与下界合金版本</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">矛武器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的武器，可以合成木质、石质、铜、金、铁、钻石以及下界合金版本</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">每个材料拥有不同的时间参数，影响其使用速度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">拥有可造成伤害的最小范围，如果离目标过近无法造成伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">拥有比其它武器与工具更大的触及范围</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有两种攻击方式：戳刺和 charge</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸、尸壳、僵尸猪灵和猪灵在生成时可以手持矛</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">戳刺攻击</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">快速按下主要动作按键使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有击退，低伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有攻击冷却时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">木矛有更短的冷却时间，下界合金最长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以攻击多个敌人</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不能破坏方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Charge 攻击</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">按住次要动作按键使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">伤害取决于矛的材料，玩家视角，以及玩家与目标的速度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当按住按键时，攻击会经过三个阶段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Engaged：如果速度超过阈值，则可以造成伤害、击退，并使骑乘的生物强制脱离骑乘</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Tired：由矛旋转到垂直位置并晃动开始，如果速度超过阈值，则可以造成伤害、击退，但不可以使骑乘的生物强制脱离骑乘</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Disengaged：由矛放下，指向下方表示。如果速度超过阈值，则可以造成伤害，但不可以造成击退和使骑乘的生物强制脱离骑乘</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其他生物使用矛的距离是玩家的一半，但是它们可以以比玩家更低的速度造成伤害、使其脱离骑乘和造成击退</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸、尸壳和僵尸猪灵知道如何使用 Charge 攻击</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">Lunge 魔咒</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">矛的专属魔咒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅在戳刺攻击生效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当使用带有 Lunge 魔咒的戳刺攻击，会将玩家视角推到水平方向</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">视角需要完美调平才能达到最大 Lunge 距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">会对矛造成大量耐久度损耗</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">进度</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 “为什么会变成这样呢？” 进度以包含 Breath of the Nautilus 效果</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 “永恒的伙伴” 进度以包含鹦鹉螺、僵尸鹦鹉螺以及僵尸马</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 “我从哪儿来？” 进度以包含鹦鹉螺</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 “成双成对” 进度以包含鹦鹉螺</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 “怪物猎人” 进度以包含僵尸鹦鹉螺</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 “抖包袱”、 “瞄准目标” 以及 “它蔓延了” 进度以包含鹦鹉螺和僵尸鹦鹉螺</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸、尸壳、猪灵和僵尸猪灵现在可以手持矛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">猪灵现在会考虑金矛作为偏好物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">物品不再会 “bob” 当其耐久度改变，如在攻击时损失耐久度或者使用铁砧修复</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对调试渲染做出的一些更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">图形模式 “流畅”、“高品质” 以及 “极佳！” 已被替换为同样名称的图形预设</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在服务器中所有玩家的云有着相同的移动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下界合金材料在盔甲槽位上的护甲值由11增至19</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果在视频设置中启用，世界中的所有方块现在有了 Mipmap</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在之前方块没有 mipmap，例如不同的藤蔓、铁轨、 folliage (区别于 leaves)以及更多应该在远处有着更好外观的方块</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对大多数玩家来说，客户端 FPS 预计会提高</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">僵尸马</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马会在黑暗中生成，并会像其他不死生物一样在阳光下燃烧</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马现在会自然生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马计入敌对生物上限，并与其他敌对生物一同生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马对玩家本身不表现出任何敌对行为；其敌意仅来自其上的僵尸骑手</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">未驯服的僵尸马会像其他敌对生物一样消失</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被驯服的僵尸马为持久存在，不会消失</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马可用与普通马相同的方式进行驯服，随后可由玩家骑乘并控制</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马可用红色蘑菇进行治疗和驯服</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被驯服的僵尸马可以装备鞍和马铠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">马铠可使僵尸马免受阳光伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马拥有 25 点生命值（12.5 颗心）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马有可变的移动速度与跳跃力量，在其生成时确定</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马被杀死时掉落 2-3 个腐肉，每级掠夺额外 0-1 个</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骑乘僵尸马的僵尸现在有几率在死亡时掉落一个红色蘑菇</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马现在有机率生成在平原和热带草原生物群系类型上，生成时会其身上会骑一个手持铁矛的僵尸</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在世界各处的战利品箱中增加了多种矛</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铁矛可以在埋藏的宝藏箱中找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">铜矛与铁矛可以在村庄的武器匠箱中找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">石矛可以在海底遗迹的箱子中找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">钻石矛可以在堡垒遗迹与末地城的箱子中找到</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在有几率在以下结构的箱子中找到铜、铁、金与钻石的鹦鹉螺铠：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">埋藏的宝藏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">海底遗迹</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">沉船</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">状态效果</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">Breath of the Nautilus</TextBox> 效果</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">作用于骑乘中的玩家</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">暂停玩家氧气消耗（但不会恢复氧气）</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铁砧的破坏、落地、放置与使用音效现在以稍低的音量播放</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">辅助功能</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">访问调试特性的按键现在可以重新绑定</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">它属于按键绑定屏幕中的新的 <TextBox Style="{StaticResource InlineCode}">Debug</TextBox> 类别</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试修饰键现在可以与调试覆盖层按键分开绑定</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">切换 GUI 的按键现在可以重新绑定</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">切换旁观者着色器效果（例如旁观末影人时）的按键现在可以重新绑定</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">输入</Paragraph><Paragraph>在 Mac 上，若干使用 <TextBox Style="{StaticResource InlineCode}">cmd</TextBox> 键的操作已改为使用 <TextBox Style="{StaticResource InlineCode}">ctrl</TextBox>：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">丢弃全部物品的输入修饰键</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在拾取方块时包含所有数据的输入修饰键</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在“视频设置”屏幕中更改 GUI 缩放的输入修饰键</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">阻止配方书在同类物品变体之间循环的输入修饰键</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">调试渲染器更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与之前一样，请不要将调试渲染器视为受支持的功能，它们仅用于辅助开发</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以通过“调试设置”屏幕启用更多调试渲染器</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一些现有的渲染器得到了改进</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试渲染器的性能已显著提升</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">图形预设</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">“视频设置”屏幕中的设置已重新排序并拆分为 3 个部分：“显示”、“质量与性能”和“界面”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列与辅助功能设置重复的选项已从“视频设置”屏幕中移除：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“视角摆动”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“附魔闪烁速度”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“附魔闪烁强度”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“视野效果”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“扭曲效果”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">先前隐藏在“图形”设置后的若干微调已拆分，现可独立配置：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“透视树叶”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“显示暗角”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“天气效果半径” 用于配置雨雪可见的方块距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“改进透明度” 可在显著增加 GPU 开销的代价下解决部分透明几何体渲染问题，先前隐藏在“极佳！”之后</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在“质量与性能”部分顶部增加了了“预设”滑块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">顾名思义，符合游戏行业常见做法，预设会一次性控制大多数“质量与性能”设置，而不止是先前被“图形”设置隐藏的那些</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可用预设为“流畅”、“高品质”、“极佳！”与“自定义”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对于新玩家，默认预设为“高品质”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若是升级到该版本的玩家，则会将预设设为“自定义”以保留当前配置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用鼠标拖动后松开时，菜单滑块现在会“吸附”到最近的可用数值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用键盘更改滑块值时，方向键现在会将滑块移动到下一个可用数值，而非像之前那样仅移动一个像素</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调试选项屏幕中的 <TextBox Style="{StaticResource InlineCode}">inF3</TextBox> 按钮已重命名为 <TextBox Style="{StaticResource InlineCode}">inOverlay</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 89.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 70.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Minecraft 服务器管理协议版本现在为 1.1.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 ClientFps JFR 事件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当经验数据包不会改变玩家的经验进度或等级时，服务器将不再发送这些数据包</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Minecraft 服务器管理协议版本 1.1.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了通知 <TextBox Style="{StaticResource InlineCode}">server/activity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">表示已开始与服务器的网络连接</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">速率限制为每 30 秒 1 次通知</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 89.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">stopwatch</TextBox> 命令用于记录真实时间</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">stopwatch</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一条允许创建“秒表”的新命令，用于记录真实时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">秒表不依赖游戏刻</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它们仅在服务器/世界运行时计时，即使暂停亦然</Paragraph></ListItem>
+</List><Paragraph>语法：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">stopwatch &lt;id&gt; create</TextBox> - 使用给定的命名空间 ID 创建一个秒表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">stopwatch &lt;id&gt; query</TextBox> - 在聊天中显示指定秒表的已用时间（以秒为单位）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">stopwatch &lt;id&gt; restart</TextBox> - 重启指定秒表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">stopwatch &lt;id&gt; remove</TextBox> - 删除指定秒表</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 该命令用于取代使用世界边界来记录真实时间的需求。我们计划在后续快照中让世界边界依赖于游戏刻。如果你之前依赖这种方式来衡量真实时间的流逝，请切换到使用新命令，如有任何不符合预期之处请告知。谢谢！</Paragraph>
 
+</Section><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">execute</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了语法 <TextBox Style="{StaticResource InlineCode}">/execute if|unless stopwatch &lt;id&gt; &lt;range&gt;</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许将给定 Stopwatch 的经过时间与一个浮点值区间进行比较</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Stopwatch 的数值以秒为单位，精度最高可达毫秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">示例：<TextBox Style="{StaticResource InlineCode}">/execute if stopwatch foo:bar ..10 run say Stopwatch foo:bar has not reached 10 seconds yet</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品组件</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:use_effects</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">控制玩家在使用物品（鼠标右键）时的行为</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：对象，字段如下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">can_sprint</TextBox>: 布尔值，玩家在使用该物品时是否可以疾跑</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">speed_multiplier</TextBox>: 浮点数（0 到 1），玩家在使用该物品时应用的速度倍率</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0.2</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">use_effects={can_sprint:true,speed_multiplier:1.0}</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:minimum_attack_charge</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">设定用该物品进行攻击所需的最小攻击指示器蓄力</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：浮点数（0.0 到 1.0）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">0.0：无需蓄力</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">1.0：需要满蓄力</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:damage_type</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定该物品造成的伤害类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：字符串，伤害类型标识符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">damage_type=&apos;minecraft:spear&apos;</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:kinetic_weapon</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在使用该物品时（主要用于矛）启用 Charge 类攻击：在使用期间，每刻沿一条射线基于实体的相对速度造成伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：对象，字段如下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">min_reach</TextBox>: 浮点数，从攻击者到目标的以格数计的最小有效距离</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">max_reach</TextBox>: 浮点数，从攻击者到目标的以格数计的最大有效距离</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">3.0</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hitbox_margin</TextBox>: 浮点数，检测有效碰撞时应用于目标边界框的余量</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0.3</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">delay_ticks</TextBox>: 整数，武器生效前所需的刻数</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dismount_conditions</TextBox>、<TextBox Style="{StaticResource InlineCode}">knockback_conditions</TextBox>、<TextBox Style="{StaticResource InlineCode}">damage_conditions</TextBox>：分别指示何时应用取消骑乘、击退与伤害效果的条件。为对象，包含：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">max_duration_ticks</TextBox>: 整数，超过该刻数后将不再检查条件。该计时自 <TextBox Style="{StaticResource InlineCode}">delay</TextBox> 结束后开始</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">min_speed</TextBox>: 浮点数，攻击者沿其视线方向的以每秒格数计的最小速度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可选，默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">min_relative_speed</TextBox>: 浮点数，攻击者与目标之间沿攻击者视线方向的以每秒格数计的最小相对速度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可选，默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">forward_movement</TextBox>: 浮点数，动画期间物品自手中向前移动的距离</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">0.0</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">damage_multiplier</TextBox>: 浮点数，相对速度换算为最终伤害的倍率</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">1.0</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">sound</TextBox>: 可选 声音事件，在武器进入 Charge 状态时播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hit_sound</TextBox>: 可选 声音事件，在武器击中实体时播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">kinetic_weapon={max_reach:5.0,forward_movement:1.0,delay:20,damage_conditions:{max_duration:60},knockback_conditions:{max_duration:40},dismount_conditions:{max_duration:20}}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">造成的伤害计算为 <TextBox Style="{StaticResource InlineCode}">floor(relative_speed * velocity_multiplier)</TextBox>，其中 <TextBox Style="{StaticResource InlineCode}">relative_speed</TextBox> 为攻击者与目标速度向量在攻击者视线向量轴上的投影之差</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">附魔或属性修饰带来的额外伤害在该计算之后再叠加</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:piercing_weapon</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">启用一次快速攻击，沿一条射线伤害多个实体（主要用于矛）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：对象，字段如下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">min_reach</TextBox>、<TextBox Style="{StaticResource InlineCode}">max_reach</TextBox>、<TextBox Style="{StaticResource InlineCode}">hitbox_margin</TextBox>：同 <TextBox Style="{StaticResource InlineCode}">kinetic_weapon</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">deals_knockback</TextBox>: 布尔值，攻击是否会造成击退</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dismounts</TextBox>: 布尔值，攻击是否会令目标卸下骑乘</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">sound</TextBox>: 可选，声音事件，在玩家使用该武器攻击时播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hit_sound</TextBox>: 可选，声音事件，在武器击中实体时播放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">piercing_weapon={min_reach:0,max_reach:4,dismounts:true}</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:swing_animation</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定使用该物品进行攻击或交互时播放的挥动动画</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：对象，字段如下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">type</TextBox>: 字符串，动画标识符（<TextBox Style="{StaticResource InlineCode}">none</TextBox>、<TextBox Style="{StaticResource InlineCode}">whack</TextBox>、<TextBox Style="{StaticResource InlineCode}">stab</TextBox>）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：whack</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">duration</TextBox>: 整数，持续时间（以刻计）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：6</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">swing_animation={type:&apos;stab&apos;,duration:20}</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">更改了 <TextBox Style="{StaticResource InlineCode}">minecraft:consumable</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 <TextBox Style="{StaticResource InlineCode}">animation</TextBox> 字段：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">重命名 <TextBox Style="{StaticResource InlineCode}">spear</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">trident</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">spear</TextBox> 动画</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">更改了 <TextBox Style="{StaticResource InlineCode}">minecraft:intangible_projectile</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">具有此组件的物品现在会在其提示中显示相关信息</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">AngryAt</TextBox> 字段重命名为 <TextBox Style="{StaticResource InlineCode}">angry_at</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">AngerTime</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">anger_end_time</TextBox>（long）字段，包含愤怒结束的游戏刻时间</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">伤害类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:spear</TextBox> 伤害类型</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">组件谓词</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">组件谓词（方块、物品与实体谓词中的 <TextBox Style="{StaticResource InlineCode}">predicates</TextBox> 字段）现已包含用于检查每种组件类型是否存在的谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些谓词写作 <TextBox Style="{StaticResource InlineCode}">{&lt;component_type&gt;: {}}</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">只要组件存在，无论实际取值为何，该检查即视为通过</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">已有的针对具体组件的谓词保持不变</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">示例：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">{predicates:{written_book_content:{author:&quot;foo&quot;}}</TextBox> —— 既有的匹配书籍格式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">{predicates:{written_book_content:{}}</TextBox> —— 上述的特例，只要组件存在即可接受任意值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">{predicates:{instrument:{}}</TextBox> —— 检查组件 <TextBox Style="{StaticResource InlineCode}">minecraft:instrument</TextBox> 是否存在（此前不被允许）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">实体谓词</Paragraph><Paragraph><TextBox Style="{StaticResource InlineCode}">flags</TextBox> 谓词现支持新的值：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">is_in_water</TextBox>：当实体接触到水或气泡柱时</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">is_fall_flying</TextBox>：当实体使用鞘翅滑翔时</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品谓词</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">命令形式的物品谓词（<TextBox Style="{StaticResource InlineCode}">&lt;item&gt;[predicate~{...},component={...}]</TextBox>）已扩展为可接受任意组件类型的空谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与数据中的组件谓词类似，这些空条目仅检查组件是否存在</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">既有的更简短语法保持不变</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">即 <TextBox Style="{StaticResource InlineCode}">*[instrument]</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">*[instrument~{}]</TextBox> 等效</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">魔咒</Paragraph><Paragraph Style="{StaticResource H4}">魔咒组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:post_piercing_attack</TextBox>：在使用物品进行一次“穿刺攻击”后应用效果</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">附魔实体效果</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:apply_impulse</TextBox>：向目标实体施加一个冲量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">direction</TextBox> —— 第一步，将该向量作为局部坐标（与 <TextBox Style="{StaticResource InlineCode}">tp @s ^ ^ ^</TextBox> 使用相同坐标系）应用到实体视线向量上</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">coordinate_scale</TextBox> —— 第二步，在世界坐标中按该向量分别缩放上一结果的 X、Y、Z 分量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">magnitude</TextBox> —— 第三步，按此“基于魔咒等级的数值”缩放向量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:play_sound</TextBox>：现可支持一个声音事件标识符列表，每个附魔等级对应一个。若等级高于列表长度，则使用列表中的最后一个声音</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">exponent</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">将底数提升到指定幂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">base</TextBox> —— 表示指数运算底数的“基于等级的数值”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">power</TextBox> —— 表示指数幂的“基于等级的数值”</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#can_glide_through</TextBox> —— 可攀爬且可无阻滑行穿过的方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#nautilus_taming_items</TextBox> —— 可用于驯服鹦鹉螺与僵尸鹦鹉螺的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#nautilus_bucket_food</TextBox> —— 可用于喂食已驯服鹦鹉螺与僵尸鹦鹉螺的“桶装鱼”类物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#nautilus_food</TextBox> —— 可用于喂食鹦鹉螺与僵尸鹦鹉螺的所有物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#spears</TextBox> —— 所有“矛”武器</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#enchantable/lunge</TextBox> —— 可附加“Lunge”魔咒的所有物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#enchantable/melee_weapon</TextBox> —— 所有主要近战武器，包括剑与矛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">重命名 <TextBox Style="{StaticResource InlineCode}">#enchantable/sword</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">#enchantable/sweeping</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#can_wear_nautilus_armor</TextBox> —— 可装备鹦鹉螺铠的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#nautilus_hostiles</TextBox> —— 未被驯服时，鹦鹉螺会对其保持敌意的实体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了 <TextBox Style="{StaticResource InlineCode}">#not_scary_for_pufferfish</TextBox>，以包含鹦鹉螺与僵尸鹦鹉螺</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#burn_in_daylight</TextBox> —— 会在日光下燃烧的实体</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">附魔标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#lunge_exclusive</TextBox> —— 与 <TextBox Style="{StaticResource InlineCode}">lunge</TextBox> 魔咒互斥的所有附魔</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 70.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Unifont 已更新至 17.0.01</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">*.mcmeta</TextBox> 文件的 <TextBox Style="{StaticResource InlineCode}">texture</TextBox> 节增加了布尔字段 <TextBox Style="{StaticResource InlineCode}">darkened_cutout_mipmap</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对于在此版本之前就具有 mipmap 的方块纹理（所有树叶类型与红树根），该字段会被设置为 true</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若将该字段设为 <TextBox Style="{StaticResource InlineCode}">true</TextBox> 且纹理为“裁剪”（cutout）类型，则 mipmap 将被“加暗”，以模拟方块内部更暗的效果；这与本版本之前对“裁剪 + mipmap”方块的行为一致</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">留空或设为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> 将生成不加暗的 mipmap，适用于花、草、藤蔓、铁轨等内部并不阴暗的裁剪类方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在仅对方块的动画纹理启用 0 与 1 级 mipmap 的动画</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玻璃与玻璃板现在支持半透明纹理</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品精灵图</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了物品精灵图：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/nautilus_spawn_egg</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/zombie_nautilus_spawn_egg</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/copper_nautilus_armor</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/iron_nautilus_armor</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/golden_nautilus_armor</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/diamond_nautilus_armor</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/netherite_nautilus_armor</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为矛武器增加了以下物品精灵图：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">背包内显示：<TextBox Style="{StaticResource InlineCode}">item/wooden_spear</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/stone_spear</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/copper_spear</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/iron_spear</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/golden_spear</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/diamond_spear</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/netherite_spear</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">手持时显示：<TextBox Style="{StaticResource InlineCode}">item/wooden_spear_in_hand</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/stone_spear_in_hand</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/copper_spear_in_hand</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/iron_spear_in_hand</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/golden_spear_in_hand</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/diamond_spear_in_hand</TextBox>、<TextBox Style="{StaticResource InlineCode}">item/netherite_spear_in_hand</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI 精灵图</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 UI 精灵图：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">container/slot/nautilus_armor</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">container/slot/spear</TextBox> —— 锻造台界面中使用的矛图标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了九切片精灵图：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">container/inventory/effect_background</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">container/inventory/effect_background_ambient</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了以下精灵图：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">container/inventory/effect_background_large</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">container/inventory/effect_background_small</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">天体图集</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">celestials</TextBox> 图集，包含用于在天空中渲染的物体（如太阳与月亮）的精灵图</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">包含来自 <TextBox Style="{StaticResource InlineCode}">&lt;namespace&gt;:textures/environment/celestial/&lt;path&gt;.png</TextBox> 的精灵图</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下列纹理被移动或拆分：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">textures/environment/sun.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">sun</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">textures/environment/end_flash.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">end_flash</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">textures/environment/moon_phases</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">moon/full_moon</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/waning_gibbous</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/third_quarter</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/waning_crescent</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/new_moon</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/waxing_crescent</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/first_quarter</TextBox>、<TextBox Style="{StaticResource InlineCode}">moon/waxing_gibbous</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">状态效果精灵图</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了状态效果精灵图：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">breath_of_the_nautilus</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了实体纹理：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/nautilus/nautilus.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/nautilus/nautilus_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/nautilus/zombie_nautilus.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/nautilus_body/copper.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/nautilus_body/iron.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/nautilus_body/gold.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/nautilus_body/diamond.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/nautilus_body/netherite.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/nautilus_saddle/saddle.png</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为矛增加了音效：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear.hit</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear.use</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear.attack</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为木矛增加了专属音效：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear_wood.hit</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear_wood.use</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear_wood.attack</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为 Lunge 魔咒增加了音效事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear.lunge_1</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear.lunge_2</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.spear.lunge_3</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为鹦鹉螺增加了音效事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_nautilus.ambient</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_nautilus.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_nautilus.eat</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_nautilus.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_nautilus.swim</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.ambient</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.dash</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.dash_ready</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.eat</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.nautilus.swim</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.ambient</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.dash</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.dash_ready</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.eat</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_nautilus.swim</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.nautilus_armor.equip</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.nautilus_armor.unequip</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为僵尸马增加了音效事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.zombie_horse.angry</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品模型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为所有物品模型增加了选项：<TextBox Style="{StaticResource InlineCode}">swap_animation_scale</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值为 1.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">表示在快捷栏切换物品时，物品上/下移动的速度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">较大的速度可使占据屏幕空间更多的物品在切换至下一个物品前完全“下蹲”离开视野</Paragraph></ListItem>
+</List><Paragraph>增加了物品模型：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">spear_in_hand</TextBox> —— 手持矛时使用的模型。</Paragraph></ListItem>
+</List>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-10-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-10-10" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -49,7 +489,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2025-10-09" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2025-10-10" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
