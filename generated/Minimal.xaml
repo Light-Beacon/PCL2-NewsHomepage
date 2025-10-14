@@ -11,14 +11,396 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style  TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新正式版 - 1.21.10" CanSwap="True" IsSwapped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 25w42a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">水下生物群系雾的颜色以及雾的距离现在基于玩家在群系之间的位置混合，就像普通生物群系雾以及天空颜色那样</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了“金光闪闪”进度以包含金矛以及金鹦鹉螺铠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当骑乘在僵尸马上的生物被移除，僵尸马可以被拴绳拴住</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鹦鹉螺和僵尸鹦鹉螺在陆地上现在也可以被控制了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">突进不再不兼容经验修补</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 90</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 70.1</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议版本 1.1.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在网页浏览器中启用验证</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当打开 WebSocket 连接时通过在 Sec-WebSocket-Protocol 头中传递 token 验证</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">Sec-WebSocket-Protocol: minecraft-v1, &lt;token&gt;</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以这种方式进行验证的请求会受到 Origin 头检查。为此需要在服务器端通过配置 management-server-allowed-origins 指定允许的来源。默认值为空，这意味着基于 Sec-WebSocket-Protocol 的验证实际上被禁用</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 90</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">特定视觉效果以及游戏效果现在由环境属性控制</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源建议现在显示任何命名空间的结果，而不再仅为 minecraft</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">stopwatch 的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了 id 参数的位置</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例如： /stopwatch foo:bar create 现在为 /stopwatch create foo:bar</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">query 现在会返回被查询的数值，并接受一个新的 scale 参数</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">返回的数值会按该参数进行缩放并向下取整（截断）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">scale 为可选，缺省时默认为 1</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">示例：/stopwatch query foo:bar 20 获取经过的刻数</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">环境属性</Paragraph><Paragraph>环境属性提供了一种数据驱动的方式来控制多种视觉与游戏性系统。</Paragraph><Paragraph>每个环境属性控制一个特定的视觉或游戏效果：例如，<TextBox Style="{StaticResource InlineCode}">minecraft:visual/sky_color</TextBox> 控制天空的颜色，而 <TextBox Style="{StaticResource InlineCode}">minecraft:gameplay/water_evaporates</TextBox> 控制某位置是否可以放置水。</Paragraph><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 该系统及本次引入的许多属性应视为高度实验性，它们在后续快照与正式版本中仍可能发生显著变化。与此同时，一如既往，我们期待并欢迎你提出任何反馈或建议！</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H4}">来源</Paragraph><Paragraph>环境属性的数值可由以下环境属性来源提供（按优先级从低到高列出）：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">维度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">生物群系</Paragraph></ListItem>
+</List><Paragraph>环境属性的“有效”数值（即游戏中实际呈现的）将根据各来源的优先级，对它们提供的数值进行组合。</Paragraph><Paragraph>例如，以下情形：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">主世界维度提供 <TextBox Style="{StaticResource InlineCode}">sky_color = #00ff00</TextBox>（绿色）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">平原生物群系提供 <TextBox Style="{StaticResource InlineCode}">sky_color = #ff0000</TextBox>（红色）</Paragraph></ListItem>
+</List><Paragraph>当玩家处于平原群系时，会看到红色的 <TextBox Style="{StaticResource InlineCode}">sky_color</TextBox>；而在主世界的其他位置，则看到绿色。</Paragraph><Paragraph>当某个环境属性来源提供一个环境属性时，它可以：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">覆盖该数值，如上例中平原生物群系覆盖了主世界的 <TextBox Style="{StaticResource InlineCode}">sky_color</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对之前的数值应用一个修饰符（见下文“修饰符”章节）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">修饰符</Paragraph><Paragraph>如上例所述，一个环境属性来源可以直接覆盖某属性数值。然而，有时也希望对低优先级来源提供的数值施加一个修饰符，而非直接覆盖。</Paragraph><Paragraph>例如，以下情形：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">主世界维度提供 <TextBox Style="{StaticResource InlineCode}">water_fog_radius = 96.0</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">平原生物群系使用乘法修饰符（multiply 0.85）修改 <TextBox Style="{StaticResource InlineCode}">water_fog_radius</TextBox></Paragraph></ListItem>
+</List><Paragraph>当处于平原时，<TextBox Style="{StaticResource InlineCode}">water_fog_radius</TextBox> 解析为 <TextBox Style="{StaticResource InlineCode}">96.0 * 0.85 = 81.6</TextBox>；在主世界的任何其它群系则解析为 96.0。</Paragraph><Paragraph>可用的修饰符类型取决于环境属性的类型。最基础且每个环境属性都支持的修饰符是 override，它仅作为对前一个数值的覆盖。若来源未显式指定修饰符，则默认为 override。</Paragraph><Paragraph>所有可用修饰符及其行为的完整描述见下文“通用修饰符”章节。</Paragraph><Paragraph Style="{StaticResource H4}">插值</Paragraph><Paragraph>修饰符描述的是某来源提供的数值如何作用于先前来源的数值；而“插值”描述的是同一个来源内部多个数值之间的组合。插值发生在该来源的修饰符应用之后。</Paragraph><Paragraph>只有部分环境属性支持插值。支持插值可以在两个或多个数值之间平滑过渡，例如在两个生物群系之间移动时。</Paragraph><Paragraph>例如，以下情形：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">平原群系提供 <TextBox Style="{StaticResource InlineCode}">sky_color = #ff0000</TextBox>（红）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">沙漠群系提供 <TextBox Style="{StaticResource InlineCode}">sky_color = #ffff00</TextBox>（黄）</Paragraph></ListItem>
+</List><Paragraph><TextBox Style="{StaticResource InlineCode}">sky_color</TextBox> 就是一个会基于位置平滑过渡的属性：在上述情形中，玩家从平原移动到沙漠时，天空颜色会逐渐从红转为黄。而其它属性，如 <TextBox Style="{StaticResource InlineCode}">water_evaporates</TextBox>，表示离散值，不会进行平滑过渡 —— 只考虑玩家所在精确位置的那个群系。</Paragraph><Paragraph>生物群系之间的平滑过渡基于相机周围 8 格半径内的生物群系。占据该半径更大体积且更接近相机的群系，对最终插值结果影响更大。</Paragraph><Paragraph Style="{StaticResource H4}">环境属性映射</Paragraph><Paragraph>维度类型与生物群系定义包含一个新的 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段，允许它们定义环境属性。</Paragraph><Paragraph>该映射通常是一个对象，将环境属性 ID 映射到其对应取值，例如：</Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="&quot;attributes&quot;: {&#x000A;&quot;minecraft:visual/fog_color&quot;: &quot;#ffaa00&quot;,&#x000A;&quot;minecraft:gameplay/water_evaporates&quot;: true&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph>像上面这样直接定义的值，总是假定使用 override 修饰符。</Paragraph><Paragraph>不过，也可以展开值对象以表达不同的修饰符，格式为一个对象，字段如下：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">modifier: 可选 字符串修饰符 ID，取决于属性类型（见下文“通用修饰符”）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认：override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">argument: 修饰符参数（格式取决于所选修饰符）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">参数的使用方式也取决于修饰符类型</Paragraph></ListItem>
+</List><Paragraph>例如，以下定义表示将 <TextBox Style="{StaticResource InlineCode}">water_fog_radius</TextBox> 乘以 85%：</Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="&quot;attributes&quot;: {&#x000A;&quot;minecraft:visual/water_fog_radius&quot;: {&#x000A;&quot;modifier&quot;: &quot;multiply&quot;,&#x000A;&quot;argument&quot;: 0.85&#x000A;}&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph Style="{StaticResource H4}">通用数据类型</Paragraph><Paragraph>以下数据类型会在环境属性系统的多个部分复用，后续章节会引用它们。</Paragraph><Paragraph Style="{StaticResource H5}">RGB 颜色</Paragraph><Paragraph>格式可以是以下之一：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">十六进制 RGB 颜色字符串，形式 <TextBox Style="{StaticResource InlineCode}">#rrggbb</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">浮点数组，3 个分量，范围 0 到 1，形式 <TextBox Style="{StaticResource InlineCode}">[r, g, b]</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">打包 RGB 整数</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">ARGB 颜色</Paragraph><Paragraph>格式可以是以下之一：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">十六进制 ARGB 颜色字符串，形式 <TextBox Style="{StaticResource InlineCode}">#aarrggbb</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">浮点数组，4 个分量，范围 0 到 1，形式 <TextBox Style="{StaticResource InlineCode}">[a, r, g, b]</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">打包 ARGB 整数</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">粒子选项</Paragraph><Paragraph>一个粒子的完整定义，包括任何特定类型属性（类似 <TextBox Style="{StaticResource InlineCode}">/particle</TextBox> 命令）。</Paragraph><Paragraph>例如：</Paragraph><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;&quot;type&quot;: &quot;minecraft:block_crumble&quot;,&#x000A;&quot;block_state&quot;: {&#x000A;&quot;Name&quot;: &quot;minecraft:dirt&quot;&#x000A;}&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><Paragraph Style="{StaticResource H4}">通用修饰符</Paragraph><Paragraph>每个环境属性都有一个特定的“值类型”，它描述数值必须如何定义、支持哪些修饰符，以及如何插值。有些类型非常专用，另一些则被多个属性复用。</Paragraph><Paragraph>虽然下表并不穷尽，但以下属性类型在很多环境属性中常用：</Paragraph><Paragraph Style="{StaticResource H5}">布尔修饰符</Paragraph><Paragraph>参数格式：布尔值</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">and</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">nand</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">or</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">nor</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">xor</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">xnor</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">浮点修饰符</Paragraph><Paragraph>参数格式：float</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">add</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">subtract</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">multiply</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">minimum</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">maximum</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">颜色修饰符</Paragraph><Paragraph>参数格式：RGB 颜色（<TextBox Style="{StaticResource InlineCode}">alpha_blend</TextBox> 例外）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">add —— 分量逐项相加的颜色混合</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">subtract —— 分量逐项相减的颜色混合</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">multiply —— 分量逐项相乘的颜色混合</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">alpha_blend —— 常规的 α 混合（图像编辑软件常见）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">参数格式：ARGB 颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当参数 α 为 1 时，行为等同 override（不进行混合）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">新的环境属性</Paragraph><Paragraph Style="{StaticResource H5}">minecraft:visual/fog_color</Paragraph><Paragraph>（相机未沉浸在其它介质时的）雾颜色。注意：最终数值还会受时间、天气与药水效果影响。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: RGB 颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: #000000</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 颜色修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.fog_color</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/extra_fog</Paragraph><Paragraph>（相机未沉浸在其它介质时）控制是否使用稠密雾（如下界的那种）。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/water_fog_color</Paragraph><Paragraph>在水下时的雾颜色。注意：最终数值还受时间、天气与药水效果影响。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: RGB 颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: #050533</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 颜色修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.water_fog_color</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/water_fog_radius</Paragraph><Paragraph>从相机起始的距离，水下雾在该距离达到最大密度。
+注意：最终数值还受玩家在水下停留时长影响。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 非负浮点值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: 96.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 浮点修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系标签 #has_closer_water_fog</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/sky_color</Paragraph><Paragraph>天空颜色。仅在主世界天空中可见。注意：最终数值还受时间与天气影响。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: RGB 颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: #000000</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 颜色修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.sky_color</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/cloud_opacity</Paragraph><Paragraph>云的不透明度。若为 0，云完全禁用，并且快乐恶魂在云层高度不会更快恢复生命。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 0 到 1 之间的浮点值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: 0.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 浮点修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置或在快乐恶魂恢复生命的位置渲染</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/cloud_height</Paragraph><Paragraph>所有云出现的高度。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 浮点值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: 192.33</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 浮点修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 是</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置或在快乐恶魂恢复生命的位置渲染</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 cloud_height</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/default_dripstone_particle</Paragraph><Paragraph>当上方没有流体时，从钟乳石方块滴落的默认粒子。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 粒子选项</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: {type:&quot;minecraft:dripping_dripstone_water&quot;}</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在滴水石锥的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 ultrawarm</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:visual/ambient_particles</Paragraph><Paragraph>控制在相机周围随机生成的环境粒子。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象组成的列表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">particle: 要生成粒子的粒子选项</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">probability: 0 到 1 的浮点数，在一次随机刻中若该方块为空则生成粒子的概率</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: []</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.particle</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:audio/background_music</Paragraph><Paragraph>控制背景音乐的播放方式与曲目。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">default: 可选 对象，字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">sound: 要播放的声音事件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">min_delay: int，两次曲目之间的最小刻延迟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">max_delay: int，两次曲目之间的最大刻延迟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">replace_current_music: 可选布尔值，此曲目是否可替换当前正在播放的曲目</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若未定义且未被其它值覆盖，则该属性激活期间不会开始播放音乐</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">underwater: 可选 对象，与 default 格式相同 —— 若存在且玩家在水下，则覆盖 default</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">creative: 可选 对象，与 default 格式相同 —— 若存在且玩家处于创造模式，则覆盖 default</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: {}</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.music</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:audio/music_volume</Paragraph><Paragraph>音乐应播放的音量。任何正在播放的音乐会随着时间淡入/淡出至该值。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 0 到 1 之间的浮点值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: 1.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 浮点修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.music_volume</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:audio/ambient_sounds</Paragraph><Paragraph>控制相机周围播放的环境音及其触发方式。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">loop: 可选 声音事件，持续循环播放的声音</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">mood: 对象，字段；基于周围黑暗程度随机播放的氛围声音</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">sound: 要播放的声音事件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">tick_delay: int，两次氛围声音之间的刻数（假设光照等级为 0）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">block_search_extent: int，用于采样光照等级的半径</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">offset: double，对播放位置应用的额外距离偏移</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">additions: 对象列表，字段；随机播放的附加声音</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">sound: 要播放的声音事件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">tick_chance: 0 到 1 的浮点数，每刻播放给定声音的概率</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: {}</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.ambient_sound、 effects.mood_sound 以及 effects.additions_sound</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/can_start_raid</Paragraph><Paragraph>若为 false，拥有袭击之兆的玩家无法触发袭击。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: true</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在袭击将要开始的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 has_raids</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/water_evaporates</Paragraph><Paragraph>若为 true：无法用水桶放置水；融化的冰不会生成水；湿海绵放置后会变干；钟乳石不会从泥巴产生水。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在交互的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 ultrawarm</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/bed_rule</Paragraph><Paragraph>控制床是否可用于睡觉，以及是否可用于设置重生点。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">can_sleep: 取值之一：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">always —— 床总是可睡（前提：未被阻挡且附近无怪）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">when_dark —— 仅在全局天空光照等级 &lt; 4 时可睡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">never —— 不可睡</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">can_set_spawn —— 同 can_sleep</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">explodes —— 可选布尔值，若为 true，交互时床会爆炸</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">error_message: 可选文本组件，玩家无法睡觉或设置重生点时显示的信息</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: {type:&quot;can_sleep_when_dark&quot;,error_message:{translate:&quot;block.minecraft.bed.no_sleep&quot;}}</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在床头位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 bed_works</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/respawn_anchor_works</Paragraph><Paragraph>控制重生锚是否可用于设置重生（或实际重生）。若为 false，充能后会爆炸。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在重生锚的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 respawn_anchor_works</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/nether_portal_spawns_piglin</Paragraph><Paragraph>控制下界传送门方块是否会生成猪灵。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在随机一个下界传送门方块的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 natural</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/fast_lava</Paragraph><Paragraph>控制岩浆是否应流动得更快、更远，并在流动时对实体施加更强推力。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在整个维度位置解析，单个生物群系内无效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 ultrawarm</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/increased_fire_burnout</Paragraph><Paragraph>控制火是否会比正常更快熄灭。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在火的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 #increased_fire_burnout</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/piglins_zombify</Paragraph><Paragraph>控制猪灵与疣猪兽是否会僵尸化。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: true</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在正在僵尸化的实体的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 piglin_safe</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/snow_golem_melts</Paragraph><Paragraph>控制雪傀儡是否应受到伤害（融化）。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修饰符: 布尔修饰符</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在雪傀儡的位置解析</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系标签 #snow_golem_melts</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">维度类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为维度新增 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段以指定环境属性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式信息参见“环境属性”章节</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">多个字段迁移为环境属性：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">注意：这些属性的形式可能与原字段不完全相同</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">ultrawarm -&gt; minecraft:gameplay/water_evaporates, minecraft:gameplay/fast_lava, visual/default_dripstone_particle</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">bed_works -&gt; minecraft:gameplay/bed_rule</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">respawn_anchor_works -&gt; minecraft:gameplay/respawn_anchor_works</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">cloud_height -&gt; minecraft:visual/cloud_height</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">piglin_safe -&gt; minecraft:gameplay/piglins_zombify</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">has_raids -&gt; minecraft:gameplay/can_start_raid</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">natural（注：未移除） -&gt; minecraft:gameplay/nether_portal_spawns_piglin</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">生物群系</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为生物群系新增 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段以指定环境属性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式信息参见“环境属性”章节</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">注意：某些属性（如 gameplay/fast_lava）不按位置评估，因此不能在生物群系上设置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">effects</TextBox> 下的多个子字段迁移为环境属性：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">注意：这些属性的形式可能与原字段不完全相同</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">fog_color -&gt; minecraft:visual/fog_color</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">water_fog_color -&gt; minecraft:visual/water_fog_color</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">sky_color -&gt; minecraft:visual/sky_color</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">particle -&gt; minecraft:visual/ambient_particles</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">ambient_sound, mood_sound, additions_sound -&gt; minecraft:audio/ambient_sounds</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">music -&gt; minecraft:audio/background_music</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">music_volume -&gt; minecraft:audio/music_volume</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">物品组件</Paragraph><Paragraph Style="{StaticResource H4}">minecraft:kinetic_weapon</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">contact_cooldown_ticks: 整型，击中并与实体失去接触后再次可以命中的冷却刻数</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：10</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">生物群系标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">#snow_golem_melts</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">#increased_fire_burnout</TextBox> —— 由 <TextBox Style="{StaticResource InlineCode}">gameplay/snow_golem_melts</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">gameplay/increased_fire_burnout</TextBox> 环境属性替代</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">#plays_underwater_music</TextBox> —— 由 <TextBox Style="{StaticResource InlineCode}">audio/background_music</TextBox> 环境属性中的 <TextBox Style="{StaticResource InlineCode}">only_underwater</TextBox> 字段替代</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">#has_closer_water_fog</TextBox> —— 由 <TextBox Style="{StaticResource InlineCode}">visual/water_fog_radius</TextBox> 环境属性替代</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 70.1</Paragraph><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为鹦鹉螺新增音效事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">entity.nautilus.riding</Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+
+
+<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+<TextBlock Text="最后更新: 2025-10-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</StackPanel> -->
+
+</StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 1.21.10" CanSwap="True" IsSwapped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
