@@ -15,6 +15,8 @@ def strptime(date_str):
         return None
     if isinstance(date_str, datetime.datetime):
         return date_str
+    if isinstance(date_str, datetime.date):
+        return datetime.datetime.combine(date_str, datetime.datetime.min.time())
     try:
         return datetime.datetime.strptime(date_str, TIME_FORMAT)
     except ValueError:
