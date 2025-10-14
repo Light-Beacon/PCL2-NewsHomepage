@@ -30,7 +30,7 @@ def get_link(link_type,link_key=None,**kwargs):
     card = kwargs['card']
     context = kwargs['context']
     name:str = card['version-id']
-    if card.get('not_finished') == 'true' and link_type != 'Official':
+    if card.get('wip') == 'true' and link_type != 'Official':
         return ''
     data = context.data[f'{link_type}Link']
     if link_key:
