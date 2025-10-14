@@ -11,9 +11,27 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -33,30 +51,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style  TargetType="TextBox" x:Key="BlockCode">
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="TextWrapping" Value="Wrap" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 25w42a" CanSwap="True" IsSwapped="false" Style="{StaticResource Card}" >
@@ -125,10 +125,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel>
 </Border>
 </BlockUIContainer><Paragraph>像上面这样直接定义的值，总是假定使用 override 修饰符。</Paragraph><Paragraph>不过，也可以展开值对象以表达不同的修饰符，格式为一个对象，字段如下：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">modifier: 可选 字符串修饰符 ID，取决于属性类型（见下文“通用修饰符”）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">modifier: 可选 字符串修饰符 ID，取决于属性类型（见下文“通用修饰符”）</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认：override</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">argument: 修饰符参数（格式取决于所选修饰符）</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">argument: 修饰符参数（格式取决于所选修饰符）</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">参数的使用方式也取决于修饰符类型</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph>例如，以下定义表示将 <TextBox Style="{StaticResource InlineCode}">water_fog_radius</TextBox> 乘以 85%：</Paragraph><BlockUIContainer>
 <Border Style="{StaticResource BlockCodeBorder}" >
 <StackPanel Margin="0,2,0,0">
@@ -171,9 +173,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">add —— 分量逐项相加的颜色混合</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">subtract —— 分量逐项相减的颜色混合</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">multiply —— 分量逐项相乘的颜色混合</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">alpha_blend —— 常规的 α 混合（图像编辑软件常见）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">alpha_blend —— 常规的 α 混合（图像编辑软件常见）</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">参数格式：ARGB 颜色</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">当参数 α 为 1 时，行为等同 override（不进行混合）</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">新的环境属性</Paragraph><Paragraph Style="{StaticResource H5}">minecraft:visual/fog_color</Paragraph><Paragraph>（相机未沉浸在其它介质时的）雾颜色。注意：最终数值还会受时间、天气与药水效果影响。</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">值类型: RGB 颜色</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: #000000</Paragraph></ListItem>
@@ -230,26 +233,29 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">在滴水石锥的位置解析</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 ultrawarm</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H5}">minecraft:visual/ambient_particles</Paragraph><Paragraph>控制在相机周围随机生成的环境粒子。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象组成的列表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象组成的列表</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">particle: 要生成粒子的粒子选项</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">probability: 0 到 1 的浮点数，在一次随机刻中若该方块为空则生成粒子的概率</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: []</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.particle</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H5}">minecraft:audio/background_music</Paragraph><Paragraph>控制背景音乐的播放方式与曲目。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">default: 可选 对象，字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">default: 可选含有下列字段的对象：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">sound: 要播放的声音事件</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">min_delay: int，两次曲目之间的最小刻延迟</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">max_delay: int，两次曲目之间的最大刻延迟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">replace_current_music: 可选布尔值，此曲目是否可替换当前正在播放的曲目</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">replace_current_music: 可选布尔值，此曲目是否可替换当前正在播放的曲目</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">若未定义且未被其它值覆盖，则该属性激活期间不会开始播放音乐</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">underwater: 可选 对象，与 default 格式相同 —— 若存在且玩家在水下，则覆盖 default</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">creative: 可选 对象，与 default 格式相同 —— 若存在且玩家处于创造模式，则覆盖 default</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: {}</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
@@ -263,7 +269,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">在摄像机的位置解析</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系属性 effects.music_volume</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H5}">minecraft:audio/ambient_sounds</Paragraph><Paragraph>控制相机周围播放的环境音及其触发方式。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">loop: 可选 声音事件，持续循环播放的声音</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">mood: 对象，字段；基于周围黑暗程度随机播放的氛围声音</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">sound: 要播放的声音事件</Paragraph></ListItem>
@@ -274,6 +280,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">additions: 对象列表，字段；随机播放的附加声音</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">sound: 要播放的声音事件</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">tick_chance: 0 到 1 的浮点数，每刻播放给定声音的概率</Paragraph></ListItem>
+</List></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: {}</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
@@ -295,7 +302,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">在交互的位置解析</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">替代了维度类型属性 ultrawarm</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H5}">minecraft:gameplay/bed_rule</Paragraph><Paragraph>控制床是否可用于睡觉，以及是否可用于设置重生点。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">值类型: 含有下列字段的对象</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">can_sleep: 取值之一：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">always —— 床总是可睡（前提：未被阻挡且附近无怪）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">when_dark —— 仅在全局天空光照等级 &lt; 4 时可睡</Paragraph></ListItem>
@@ -306,6 +313,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: false</Paragraph></ListItem>
 </List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">error_message: 可选文本组件，玩家无法睡觉或设置重生点时显示的信息</Paragraph></ListItem>
+</List></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值: {type:&quot;can_sleep_when_dark&quot;,error_message:{translate:&quot;block.minecraft.bed.no_sleep&quot;}}</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">修饰符: override</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可插值: 否</Paragraph></ListItem>
@@ -354,9 +362,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">在雪傀儡的位置解析</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">替代了生物群系标签 #snow_golem_melts</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">维度类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为维度新增 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段以指定环境属性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为维度新增 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段以指定环境属性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">格式信息参见“环境属性”章节</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">多个字段迁移为环境属性：</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">多个字段迁移为环境属性：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">注意：这些属性的形式可能与原字段不完全相同</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">ultrawarm -&gt; minecraft:gameplay/water_evaporates, minecraft:gameplay/fast_lava, visual/default_dripstone_particle</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">bed_works -&gt; minecraft:gameplay/bed_rule</Paragraph></ListItem>
@@ -365,11 +374,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">piglin_safe -&gt; minecraft:gameplay/piglins_zombify</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">has_raids -&gt; minecraft:gameplay/can_start_raid</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">natural（注：未移除） -&gt; minecraft:gameplay/nether_portal_spawns_piglin</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">生物群系</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为生物群系新增 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段以指定环境属性</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为生物群系新增 <TextBox Style="{StaticResource InlineCode}">attributes</TextBox> 字段以指定环境属性</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">格式信息参见“环境属性”章节</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">注意：某些属性（如 gameplay/fast_lava）不按位置评估，因此不能在生物群系上设置</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">effects</TextBox> 下的多个子字段迁移为环境属性：</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">effects</TextBox> 下的多个子字段迁移为环境属性：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">注意：这些属性的形式可能与原字段不完全相同</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">fog_color -&gt; minecraft:visual/fog_color</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">water_fog_color -&gt; minecraft:visual/water_fog_color</Paragraph></ListItem>
@@ -378,9 +389,10 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">ambient_sound, mood_sound, additions_sound -&gt; minecraft:audio/ambient_sounds</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">music -&gt; minecraft:audio/background_music</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">music_volume -&gt; minecraft:audio/music_volume</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">物品组件</Paragraph><Paragraph Style="{StaticResource H4}">minecraft:kinetic_weapon</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增字段：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">contact_cooldown_ticks: 整型，击中并与实体失去接触后再次可以命中的冷却刻数</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">contact_cooldown_ticks: 整型，击中并与实体失去接触后再次可以命中的冷却刻数</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认值：10</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">生物群系标签</Paragraph><List>
@@ -388,8 +400,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">#plays_underwater_music</TextBox> —— 由 <TextBox Style="{StaticResource InlineCode}">audio/background_music</TextBox> 环境属性中的 <TextBox Style="{StaticResource InlineCode}">only_underwater</TextBox> 字段替代</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">#has_closer_water_fog</TextBox> —— 由 <TextBox Style="{StaticResource InlineCode}">visual/water_fog_radius</TextBox> 环境属性替代</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">资源包版本 70.1</Paragraph><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为鹦鹉螺新增音效事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为鹦鹉螺新增音效事件：</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">entity.nautilus.riding</Paragraph></ListItem>
+</List></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
