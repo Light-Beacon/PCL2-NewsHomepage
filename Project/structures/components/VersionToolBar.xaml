@@ -3,7 +3,7 @@ ${@IF|${args.HideLaunchButton}||
 <local:MyIconTextButton Text="启动" ToolTip="启动 ${version-id}" EventType="启动游戏"
     EventData="${version-id}" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 }
-${@IF|${args.HideDownloadButton}||
+${@IF|${args.ShowDownloadButton}|
 <local:MyIconTextButton Style="{StaticResource DownloadVersionButton}"
     LogoScale="0.85" Logo="{StaticResource DownloadIcon}"/>
 }
