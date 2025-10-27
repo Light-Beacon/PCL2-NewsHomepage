@@ -5,6 +5,7 @@ from homepagebuilder.interfaces import script,require,Logger
 
 mcv = require('minecraft_version') # 需求前置 MinecraftVersions
 latest_version = mcv.get_latest()
+assert latest_version is not None
 latest_type = mcv.get_version_type(latest_version)
 logger = Logger('MainPageVersions')
 

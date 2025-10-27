@@ -81,8 +81,9 @@ PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
 
-def get_version_type(version_id):
+def get_version_type(version_id:str) -> str:
     '''获取版本类型'''
+    assert isinstance(version_id, str)
     if re.match(SNAPSHOT_PATTERN,version_id):
         return 'snapshot'
     if re.match(PRE_RELEASE_PATTERN,version_id):
