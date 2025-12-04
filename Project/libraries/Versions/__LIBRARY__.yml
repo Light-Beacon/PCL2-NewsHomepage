@@ -13,3 +13,29 @@ default:
     - Simplex/VersionLatestCard
     - Simplex/VersionMarkdownCard
     - Raw
+  versiontype:
+    release:
+      name: 正式版
+      id: Release
+      wiki-link: https://zh.minecraft.wiki/w/Java版${version-id}
+      list-icon: "pack://application:,,,/images/Blocks/Grass.png"
+      important-version: true
+    snapshot:
+      name: 快照版
+      id: Snapshot
+      wiki-link: https://zh.minecraft.wiki/w/Java版${version-id}
+      list-icon: "pack://application:,,,/images/Blocks/GrassPath.png"
+      important-version: false
+    pre-release:
+      name: 预发布版
+      id: Pre-Release
+      wiki-link: https://zh.minecraft.wiki/w/Java版${version-id}
+      list-icon: "pack://application:,,,/images/Blocks/GrassPath.png"
+      important-version: false
+    release-candidate:
+      name: 发布候选版
+      id: Release-Candidate
+      wiki-link: https://zh.minecraft.wiki/w/Java版${version-id}
+      list-icon: "pack://application:,,,/images/Blocks/GrassPath.png"
+      important-version: false
+  important-version: false

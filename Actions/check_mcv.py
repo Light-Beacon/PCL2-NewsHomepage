@@ -6,10 +6,11 @@ from pathlib import Path
 
 LAUNCHER_MANIFSET_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest.json'
 
-SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Za-z]$')
+SNAPSHOT_PATTERN = re.compile(r'^\d{2}[w|W][0-9]{2}[A-Fa-f]$')
+NEW_SNAPSHOT_PATTERN = re.compile(r'^\d{2}-snapshot-\d+$')
 PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
 RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
-RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
+RELEASE_PATTERN = re.compile(r'^\d{1,2}\.\d+(\.\d+)?$')
 
 CURRENT_MAJOR_DEVELOPING_VERSION = "1.21"
 CURRENT_MINOR_DEVELOPING_VERSION = "1.21.11"
@@ -17,7 +18,7 @@ CURRENT_MINOR_DEVELOPING_VERSION = "1.21.11"
 require_update = False
 
 def get_version_type(vid:str):
-    if re.match(SNAPSHOT_PATTERN,vid):
+    if re.match(SNAPSHOT_PATTERN,vid) or re.match(NEW_SNAPSHOT_PATTERN,vid):
         return 'Snapshot'
     if re.match(PRE_RELEASE_PATTERN,vid):
         return 'Pre-Release'
@@ -28,15 +29,9 @@ def get_version_type(vid:str):
     return 'Others'
 
 def generate_filepath(ver_type:str, ver_id:str) -> Path:
-    if ver_type == 'Snapshot':
-        return Path(f'Snapshot/20{ver_id[:2]}/{ver_id}.md')
-    if ver_type == 'Pre-Release':
-        return Path(f'Pre-Release/{ver_id[:4]}/{ver_id}.md')
-    if ver_type == 'Release-Candidate':
-        return Path(f'Release-Candidate/{ver_id}.md')
-    if ver_type == 'Release':
-        return Path(f'Release/{ver_id}.md')
-    return Path(f'Others/{ver_id}.md')
+    major_id = ver_id.split("-")[0]
+    return Path(f'{major_id[:2]}/{major_id}/{ver_type.lower()}/{ver_id}.md')
+    #return Path(f'Others/{ver_id}.md')
 
 def update_library(version_mainfest, version_libloc:str, ver_type:str, ver_id:str):
     #gen content

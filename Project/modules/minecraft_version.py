@@ -76,15 +76,16 @@ def get_server_jar(version_id):
     response = requests.get(ver_info['url'],timeout=10000)
     return json.loads(response.content)['downloads']['server']['url']
 
-SNAPSHOT_PATTERN = re.compile(r'^[0-9]{2}[w|W][0-9]{2}[A-Fa-f]$')
-PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
-RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
-RELEASE_PATTERN = re.compile(r'^1\.[0-9]+(\.[0-9]+)?$')
+SNAPSHOT_PATTERN = re.compile(r'^\d{2}[w|W]\d{2}[A-Fa-f]$')
+NEW_SNAPSHOT_PATTERN = re.compile(r'^\d{2}-snapshot-\d+$')
+PRE_RELEASE_PATTERN = re.compile(r'^.*-pre\d+$')
+RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc\d+$')
+RELEASE_PATTERN = re.compile(r'^\d{1,2}\.\d+(\.\d+)?$')
 
 def get_version_type(version_id:str) -> str:
     '''获取版本类型'''
     assert isinstance(version_id, str)
-    if re.match(SNAPSHOT_PATTERN,version_id):
+    if re.match(SNAPSHOT_PATTERN,version_id) or re.match(NEW_SNAPSHOT_PATTERN,version_id):
         return 'snapshot'
     if re.match(PRE_RELEASE_PATTERN,version_id):
         return 'pre_release'
