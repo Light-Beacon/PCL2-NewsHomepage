@@ -30,6 +30,8 @@ def get_version_type(vid:str):
 
 def generate_filepath(ver_type:str, ver_id:str) -> Path:
     major_id = ver_id.split("-")[0]
+    if ver_id[0] == '1':
+        return Path(f'{major_id[:4]}/{major_id}/{ver_type.lower()}/{ver_id}.md')
     return Path(f'{major_id[:2]}/{major_id}/{ver_type.lower()}/{ver_id}.md')
     #return Path(f'Others/{ver_id}.md')
 

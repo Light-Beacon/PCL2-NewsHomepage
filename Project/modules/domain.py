@@ -3,8 +3,7 @@ from homepagebuilder.core.types import Context
 
 _PROTOCOL = config('NewsHomepage.Protocol', 'https', str)
 _DOMAIN = config('NewsHomepage.Domain', 'mcnews.meloong.com', str)
-_PORT = config('NewsHomepage.Port', '443', str)
-
+_PORT = str(config('NewsHomepage.Port', '443', (str, int)))
 logger = Logger('Domain')
 
 def _get_disp_port():
