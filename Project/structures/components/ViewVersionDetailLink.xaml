@@ -1,0 +1,3 @@
+<local:MyListItem Margin="10" ToolTip="点击查看该版本更新日志"
+	Logo="${list-icon}" Title="点击查看更新日志" Info="因为更新日志过长，已移至独立页面"
+	EventType="打开帮助" EventData="${@Link|VersionDetail.json?ver=${version-id}}" Type="Clickable" />

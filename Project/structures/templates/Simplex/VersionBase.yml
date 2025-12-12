@@ -2,7 +2,7 @@ components:
  - ${@IF|${warn}|Head/Warn}
  - ${@IF|${hint}|Head/Hint}
  - ${@IF|!${disable-versionimage}|${@IF|${version-image-link}|VersionHeaderImage}}
- - FlowDocumentViewer
+ - ${@IF|${in-main-page}|${@IF|${link-to-detail-on-main-page}|ViewVersionDetailLink|FlowDocumentViewer}|FlowDocumentViewer}
  - ${@IF|${args.HideWIP}||${@IF|${wip}|Loading}}
  - ${@IF|!${disable-translator}|TranslatorBar}
  - ${@IF|!${disable-lastupdate}|LastUpdateBox}
