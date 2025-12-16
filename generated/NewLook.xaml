@@ -29,7 +29,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel Margin="8,38,8,15">
 <local:MyListItem Margin="10,1,10,1" ToolTip="最新正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.11" Info="正式版"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.11" Type="Clickable" />
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.11" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="最新快照版 - 26.1-snapshot-1" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-1" Type="Clickable" />
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
 <local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
@@ -43,8 +45,8 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="386b3f1" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/386b3f127010485ff9e5832475eafd30dac81707"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="f8f72c9" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/f8f72c970400fe9c6a2702e87f18771032548347"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
