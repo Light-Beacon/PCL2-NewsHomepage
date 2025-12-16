@@ -11,17 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -41,6 +33,14 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -157,7 +157,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">random_sequence</TextBox>：可选的命名随机序列，用来决定会生成哪些交易</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认使用非确定性随机序列</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph>示例：从 <TextBox Style="{StaticResource InlineCode}">#minecraft:armorer/level_1</TextBox> 标签中提供 2 条交易，允许重复</Paragraph><BlockUIContainer>
+</List><Paragraph>示例：从 <TextBox Style="{StaticResource InlineCode}">#minecraft:armorer/level_1</TextBox> 标签中提供 2 条交易，允许重复：</Paragraph><BlockUIContainer>
 <Border Style="{StaticResource BlockCodeBorder}" >
 <StackPanel Margin="0,2,0,0">
 <TextBlock Foreground="White" FontSize="14" Text="JSON" Margin="10,4"/>
@@ -205,7 +205,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}">随机设置物品的 <TextBox Style="{StaticResource InlineCode}">minecraft:potion_contents</TextBox> 数据组件</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">字段：</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">conditions</TextBox>：应用该函数所需的条件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">options</TextBox>：可选，药水 ID、命名空间药水 ID 列表或带井号的药水标签，表示可选药水集合（</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">options</TextBox>：可选，药水 ID、命名空间药水 ID 列表或带井号的药水标签，表示可选药水集合</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">potions</TextBox> 注册表中的任意药水</Paragraph></ListItem>
 </List></ListItem>
 </List><Paragraph Style="{StaticResource H4}">更改 <TextBox Style="{StaticResource InlineCode}">minecraft:enchant_with_levels</TextBox></Paragraph><Paragraph>现在还接受以下字段：</Paragraph><List>
@@ -216,7 +216,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">include_additional_cost_component</TextBox> - 可选布尔值，表示是否基于附魔的成本，为物品添加 <TextBox Style="{StaticResource InlineCode}">minecraft:additional_cost_component</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">默认 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">该值由 <TextBox Style="{StaticResource InlineCode}">levels</TextBox> 选中的值决定，或使用通过公式计算的默认值：<TextBox Style="{StaticResource InlineCode}">2 + random(0, 5 + level * 10) + 3 * level</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">实体谓词</Paragraph><Paragraph>玩家子谓词— 新增可选字段：<TextBox Style="{StaticResource InlineCode}">food</TextBox> — 食物谓词
+</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">实体谓词</Paragraph><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">player</TextBox> 子谓词</Paragraph><Paragraph>— 新增可选字段：<TextBox Style="{StaticResource InlineCode}">food</TextBox> — 食物谓词
 - 格式：对象，字段如下：
   - <TextBox Style="{StaticResource InlineCode}">level</TextBox>：可选整型最小/最大范围，指定所需的饱食度等级
   - <TextBox Style="{StaticResource InlineCode}">saturation</TextBox>：可选浮点最小/最大范围，指定所需的饱和度等级</Paragraph><Paragraph Style="{StaticResource H4}">新增 <TextBox Style="{StaticResource InlineCode}">minecraft:sum</TextBox></Paragraph><List>
