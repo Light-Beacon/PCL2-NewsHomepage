@@ -10,8 +10,8 @@
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
-    <local:MyImage Margin="2" Source="https://i1.hdslb.com/bfs/new_dyn/e99efb617405ec301ea469da96e1081b277543816.png@1052w_!web-dynamic.avif"/>
-    <local:MyImage Margin="2" Source="https://i1.hdslb.com/bfs/new_dyn/ae62d18476b04e732aa3725d5a8e0199277543816.png@1052w_!web-dynamic.avif"/>
+    <local:MyImage Margin="2" Source="https://i1.hdslb.com/bfs/new_dyn/e99efb617405ec301ea469da96e1081b277543816.png"/>
+    <local:MyImage Margin="2" Source="https://i1.hdslb.com/bfs/new_dyn/ae62d18476b04e732aa3725d5a8e0199277543816.png"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,0,0,2">
     <local:MyIconTextButton HorizontalAlignment="Left" Text="GitHub" ToolTip="前往新闻主页 GitHub 页面" EventType="打开网页"
