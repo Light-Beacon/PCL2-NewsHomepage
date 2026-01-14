@@ -11,9 +11,48 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style  TargetType="TextBox" x:Key="BlockCode">
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
 <sys:String   x:Key="WikiIcon">
 M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
 </sys:String>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
 <Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
@@ -38,17 +77,19 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style  TargetType="local:MyImage" x:Key="VersionImage">
-  <Setter Property="Stretch" Value="UniformToFill" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-</Style>
-
+<sys:String   x:Key="CloudIcon">
+M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
+20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
+97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
+42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
+0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
+38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
+69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
+220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
+113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
+0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
+211.6 582.7 160 480 160z</sys:String>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -68,36 +109,11 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
-<sys:String   x:Key="CloudIcon">
-M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
-20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
-97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
-42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
-0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
-38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
-69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
-220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
-113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
-0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
-211.6 582.7 160 480 160z</sys:String>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style  TargetType="local:MyImage" x:Key="VersionImage">
+  <Setter Property="Stretch" Value="UniformToFill" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+</Style>
+
 <ControlTemplate  x:Key="Separator" TargetType="ContentControl">
   <Grid Margin="0,10">
     <Grid.ColumnDefinitions>
@@ -110,24 +126,8 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
   </Grid>
 </ControlTemplate>
-<Style  TargetType="TextBox" x:Key="BlockCode">
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="TextWrapping" Value="Wrap" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -141,242 +141,204 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="最新快照版 - 26.1-snapshot-2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 26.1-snapshot-3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
-<local:MyImage Source="https://test.fukit.cn/autoupload/f/eVhYusBtjOJG2qfZ4rUTz9iO_OyvX7mIgxFBfDMDErs/20260108/AJOX/1170X500/image.png/webp" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png@1052w_!web-dynamic.webp"  Style="{StaticResource VersionImage}"/>
+<local:MyImage Source="https://test.fukit.cn/autoupload/f/eVhYusBtjOJG2qfZ4rUTz9iO_OyvX7mIgxFBfDMDErs/20260114/tdu0/1170X500/image.png" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png@1052w_!web-dynamic.webp"  Style="{StaticResource VersionImage}"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="26.1-snapshot-2" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="26.1-snapshot-3" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">命名牌现在可以合成了，由一张纸和任意一个金属粒合成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马再受伤时不再会受惊</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了默认的 JVM 选项</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为狼、猫和猪的幼体增加了新的音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">改进了一些生物幼体的外形</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由于重塑了兔子的模型，Programmer Art 的兔子纹理被移除</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">幼体生物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了下列生物的模型与纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">牛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">羊</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">猪</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">猫</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">豹猫</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">哞菇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">狼</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">鸡</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了边界箱以贴合新的模型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">进一步微调 JVM 配置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">方块、物品与实体的微调</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">绊线的纹理现在以 Alpha 裁剪方式渲染，而非半透明</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><Paragraph Style="{StaticResource H4}">调试屏幕</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">从 <TextBox Style="{StaticResource InlineCode}">local_difficulty</TextBox> 中拆分出了独立的 <TextBox Style="{StaticResource InlineCode}">day_count</TextBox> 调试字段</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">游戏规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以通过暂停菜单上的全新“世界选项”屏幕在游戏内打开“游戏规则”屏幕</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在游戏内与创建世界屏幕的“游戏规则”页顶部新增了搜索栏</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">世界选项</Paragraph><Paragraph>暂停菜单中的难度按钮已被替换为跳转到新界面的按钮——“世界选项”。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">“世界选项”界面包含难度按钮与“更改游戏规则”的按钮</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">“游戏规则”界面对拥有 OP 权限的玩家可用，其他玩家不可用</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 97</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 78</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 97</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增方块标签</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增流体标签</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调整了 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令的格式以适配“世界时钟”与“时间线”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 <TextBox Style="{StaticResource InlineCode}">time_check</TextBox> 条件以指定世界时钟</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界时钟</Paragraph><Paragraph>世界时钟包含一个每刻递增的内部时间。可在数据包的 <TextBox Style="{StaticResource InlineCode}">world_clock</TextBox> 注册表下定义（位于 <TextBox Style="{StaticResource InlineCode}">data/&lt;namespace&gt;/world_clock/&lt;id&gt;.json</TextBox>）。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界时钟可以暂停或恢复，并可通过 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令修改或查询其时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：无字段对象</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">时间线</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">clock</TextBox> 字段：世界时钟 ID，指定该时间线绑定的世界时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">该字段为必填；为保持与旧行为一致，可使用 <TextBox Style="{StaticResource InlineCode}">minecraft:overworld</TextBox> 时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增可选 <TextBox Style="{StaticResource InlineCode}">time_markers</TextBox> 字段：一个映射，键为命名空间的时间标记 ID，值为整数或“时间标记对象”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">非负整数，表示该时间标记对应的刻数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">或对象，包含：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ticks</TextBox>：<TextBox Style="{StaticResource InlineCode}">0</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">period_ticks</TextBox> 之间的整数，表示该时间标记对应的刻数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">show_in_commands</TextBox>：可选布尔值，指定该时间标记是否在命令补全中显示</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认：<TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">兔子</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">成年与幼体变种都有了新的动画</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了边界箱以贴合新的模型</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在狼幼体上的狼铠以及在猪幼体上的鞍不再会渲染</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">默认 JVM 选项</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">游戏现在默认分配 4 GB 内存（之前为 2 GB）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">垃圾回收（GC）现在对兼容的设备从 G1GC 更改为 ZGC</Paragraph></ListItem>
-</List><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph> 为了使游戏更加流畅并减少卡顿，将默认内存分配从 2GB 提升到了 4GB。除此之外，现在还使用了下一时代的 ZGC，应该会使你的帧率更稳定，尤其是在操作比较吃内存的任务时。如果你需要在内存小于 4GB 的机器上运行 Minecraft ，请参阅<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://help.minecraft.net/hc/en-us/articles/39083573916941-Fix-Minecraft-Java-Edition-Game-Crashes-by-Checking-Memory-Allocation">这个帮助文章</local:MyTextButton></Underline>。如果你想要更改垃圾回收算法，请参阅<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://help.minecraft.net/hc/en-us/articles/41950300066573-Change-the-Garbage-Collector-for-Minecraft-Java-Edition">这个帮助文章</local:MyTextButton></Underline>。第三方启动器可能不支持这些更改。</Paragraph>
-
-</Section><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 96</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 77</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 96</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在 <TextBox Style="{StaticResource InlineCode}">wolf_sound_variant</TextBox> 中的狼音效变种音效事件已被移至新字段<TextBox Style="{StaticResource InlineCode}">adult_sounds</TextBox> 并增加了新字段 <TextBox Style="{StaticResource InlineCode}">baby_sounds</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">玩家的 <TextBox Style="{StaticResource InlineCode}">current_explosion_impact_pos</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">current_impulse_context_reset_grace_time</TextBox> 字段添加给了所有生物以及盔甲架</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了玩家的 <TextBox Style="{StaticResource InlineCode}">ignore_fall_damage_from_current_explosion</TextBox> 字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#metal_nuggets</TextBox> - 铜、铁以及金粒</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 77</Paragraph><Paragraph Style="{StaticResource H3}">实体纹理</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的实体纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_all_black_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_black_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_british_shorthair_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_calico_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_collar_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_jellie_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/ocelot_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_persian_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_ragdoll_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_red_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_siamese_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_tabby_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/cat_white_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken/chicken_cold_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken/chicken_temperate_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken/chicken_warm_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/cow_cold_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/cow_temperate_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/cow_warm_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/mooshroom_brown_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/mooshroom_red_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/pig/pig_cold_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/pig/pig_temperate_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/pig/pig_warm_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_black.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_brown.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_caerbannog.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_gold.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_salt.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_toast.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_white.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/rabbit/rabbit_white_splotched.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/sheep/sheep_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/sheep/sheep_wool_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_ashen_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_ashen_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_ashen_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_black_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_black_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_black_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_chestnut_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_chestnut_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_chestnut_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_collar_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_rusty_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_rusty_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_rusty_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_snowy_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_snowy_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_snowy_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_spotted_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_spotted_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_spotted_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_striped_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_striped_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_striped_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_woods_angry_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_woods_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wolf/wolf_woods_tame_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名了下列实体纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/armorstand/wood.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/armorstand/armorstand.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/all_black.png</TextBox>-&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_all_black.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/black.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_black.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/british_shorthair.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_british_shorthair.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/calico.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_calico.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/jellie.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_jellie.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/persian.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_persian.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/ragdoll.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_ragdoll.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/red.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_red.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/siamese.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_siamese.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/tabby.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_tabby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cat/white.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cat/cat_white.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken/cold_chicken.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/chicken/chicken_cold.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken/temperate_chicken.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/chicken/chicken_temperate.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/chicken/warm_chicken.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/chicken/chicken_warm.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/copper_golem/exposed_copper_golem.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/copper_golem/copper_golem_exposed.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/copper_golem/exposed_copper_golem_eyes.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/copper_golem/copper_golem_eyes_exposed.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/copper_golem/oxidized_copper_golem_eyes.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/copper_golem/copper_golem_eyes_oxidized.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/copper_golem/weathered_copper_golem_eyes.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/copper_golem/copper_golem_eyes_weathered.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/copper_golem/oxidized_copper_golem.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/copper_golem/copper_golem_oxidized.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/copper_golem/weathered_copper_golem.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/copper_golem/copper_golem_weathered.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/cold_cow.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cow/cow_cold.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/temperate_cow.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cow/cow_temperate.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/warm_cow.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cow/cow_warm.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/brown_mooshroom.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cow/mooshroom_brown.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/cow/red_mooshroom.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/cow/mooshroom_red.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fox/snow_fox.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/fox/fox_snow.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fox/snow_fox_sleep.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/fox/fox_snow_sleep.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/frog/cold_frog.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/frog/frog_cold.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/frog/temperate_frog.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/frog/frog_temperate.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/frog/warm_frog.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/frog/frog_warm.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/brown.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/llama/llama_brown.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/creamy.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/llama/llama_creamy.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/gray.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/llama/llama_gray.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/spit.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/llama/llama_spit.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/white.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/llama/llama_white.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/panda/aggressive_panda.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/panda/panda_aggressive.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/panda/brown_panda.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/panda/panda_brown.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/panda/lazy_panda.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/panda/panda_lazy.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/panda/playful_panda.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/panda/panda_playful.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/panda/weak_panda.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/panda/panda_weak.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/panda/worried_panda.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/panda/panda_worried.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/pig/cold_pig.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/pig/pig_cold.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/pig/temperate_pig.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/pig/pig_temperate.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/pig/warm_pig.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/pig/pig_warm.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/projectiles/spectral.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/projectiles/arrow_spectral.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/projectiles/tipped.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/projectiles/arrow_tipped.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/turtle/big_sea_turtle.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/turtle/turtle.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">移动了下列实体纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/armadillo.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/armadillo/armadillo.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/banner_base.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/banner/banner_base.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bat.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/bat/bat.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/beacon_beam.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/beacon/beacon_beam.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/blaze.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/blaze/blaze.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/dolphin.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/dolphin/dolphin.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/enchanting_table_book.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/enchantment/enchanting_table_book.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/end_gateway_beam.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/end_portal/end_gateway_beam.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/end_portal.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/end_portal/end_portal.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/endermite.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/endermite/endermite.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/experience_orb.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/experience/experience_orb.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fishing_hook.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/fishing/fishing_hook.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/guardian.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/guardian/guardian.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/guardian_beam.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/guardian/guardian_beam.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/guardian_elder.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/guardian/guardian_elder.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/lead_knot.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/lead_knot/lead_knot.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/minecart.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/minecart/minecart.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/phantom.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/phantom/phantom.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/phantom_eyes.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/phantom/phantom_eyes.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/shield_base.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/shield/shield_base.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/shield_base_nopattern.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/shield/shield_base_nopattern.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/silverfish.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/silverfish/silverfish.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/snow_golem.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/snow_golem/snow_golem.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/spider_eyes.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/spider/spider_eyes.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/trident.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/trident/trident.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/trident_riptide.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/trident/trident_riptide.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/wandering_trader.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/wandering_trader/wandering_trader.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/witch.png</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">entity/witch/witch.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为猫增加了新的实体音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.ambient</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.hiss</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.hurt</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.death</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.eat</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.beg_for_food</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.purr</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.purreow</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_cat.stray_ambient</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为猪增加了新的实体音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_pig.ambient</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_pig.hurt</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_pig.death</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_pig.step</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为狼增加了新的实体音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.ambient</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.growl</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.death</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.hurt</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.pant</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.whine</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_wolf.step</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">26.1 SNAPSHOT 2 修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-302734">MC-302734</local:MyTextButton></Underline> - Zombie horses constantly move in and out of water and burn to death</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-304361">MC-304361</local:MyTextButton></Underline> - The heads of zombie nautiluses have a massive empty gap on the back</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-304705">MC-304705</local:MyTextButton></Underline> - The E value in entity_render_stats in the debug overlay doesn&apos;t work</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-304761">MC-304761</local:MyTextButton></Underline> - Spears&apos; charge animation takes too long to rotate sideways for slower spears</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305040">MC-305040</local:MyTextButton></Underline> - Nautili spawned as a result of a player breeding two other nautili can despawn</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305104">MC-305104</local:MyTextButton></Underline> - The &quot;Programmer Art&quot; and &quot;High Contrast&quot; resource packs are listed as incompatible</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305121">MC-305121</local:MyTextButton></Underline> - Some expert level mason trades no longer generate</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305130">MC-305130</local:MyTextButton></Underline> - Farmers sell suspicious stews with 20 times the intended duration</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305131">MC-305131</local:MyTextButton></Underline> - Duplicate trade entries in journeyman level shepherd trades</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305132">MC-305132</local:MyTextButton></Underline> - Master level fletchers can now sell tipped arrows of thick, mundane, and awkward potions</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305164">MC-305164</local:MyTextButton></Underline> - Armorers now buy diamonds at expert level instead of journeyman</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305175">MC-305175</local:MyTextButton></Underline> - The Lunge enchantment now works at 6 hunger and above, instead of 7</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/browse/MC-305279">MC-305279</local:MyTextButton></Underline> - Expert cleric sells glowstone instead of ender pearl</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">时间标记</Paragraph><Paragraph>时间标记为特定世界时钟中的某个（可重复的）时间点指定一个名称。时间标记取代了先前 <TextBox Style="{StaticResource InlineCode}">/time set</TextBox> 可用的预定义名称（如 <TextBox Style="{StaticResource InlineCode}">day</TextBox>、<TextBox Style="{StaticResource InlineCode}">night</TextBox>）。</Paragraph><Paragraph>时间标记存在于特定世界时钟的上下文中。这意味着尽管不同的时间标记由不同的时间线定义，但对于某个世界时钟，同一 ID 仅能存在一个时间标记；同时，两个不同的世界时钟可以拥有相同名称的时间标记。</Paragraph><Paragraph Style="{StaticResource H4}">内部使用的时间标记</Paragraph><Paragraph>部分时间标记用于驱动原版玩法逻辑。通常它们被配置为不在 <TextBox Style="{StaticResource InlineCode}">/time</TextBox> 命令中显示。</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:wake_up_from_sleep</TextBox> —— 玩家在该维度睡醒后，默认时钟前进到的时间点</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:roll_village_siege</TextBox> —— 在到该维度默认时钟的此时间点时，会检定僵尸围城事件是否发生</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">swing</TextBox> 的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在两个参数都可缺省，并回调到如下默认值：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">实体选择器默认为 <TextBox Style="{StaticResource InlineCode}">@s</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">要挥动的手默认为 <TextBox Style="{StaticResource InlineCode}">mainhand</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令现基于“世界时钟”运作：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可使用 <TextBox Style="{StaticResource InlineCode}">time of &lt;clock&gt; ...</TextBox> 显式指定要操作的时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若未指定时钟（保持 <TextBox Style="{StaticResource InlineCode}">/time ...</TextBox> 的旧用法），则使用该维度的默认时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">set</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">add</TextBox> 子命令的返回值（例如用于 <TextBox Style="{StaticResource InlineCode}">/execute store</TextBox>）现在为该时钟的“已流逝总刻数”，而非“当前昼夜时间”</Paragraph></ListItem>
+</List><Paragraph>语法：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] set &lt;time&gt;</TextBox> —— 将该时钟的已流逝总刻数设置为指定值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] set &lt;timemarker&gt;</TextBox> —— 将该时钟推进到下一个指定时间标记出现的时刻</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对于 <TextBox Style="{StaticResource InlineCode}">minecraft:overworld</TextBox> 时钟，可用的时间标记有：<TextBox Style="{StaticResource InlineCode}">day</TextBox>、<TextBox Style="{StaticResource InlineCode}">noon</TextBox>、<TextBox Style="{StaticResource InlineCode}">night</TextBox>、<TextBox Style="{StaticResource InlineCode}">midnight</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] add &lt;time&gt;</TextBox> —— 为该时钟增加（或减少）刻数，允许负数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] pause</TextBox> —— 暂停该时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] resume</TextBox> —— 恢复该时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] query &lt;timeline&gt;</TextBox> —— 显示并返回该时间线周期内的当前刻数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] query &lt;timeline&gt; repetitions</TextBox> —— 显示并返回该时间线已重复的次数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] query time</TextBox> —— 显示并返回该时钟的已流逝总刻数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time query gametime</TextBox> —— 与以往一致，返回世界层面的已流逝总刻数（不受 <TextBox Style="{StaticResource InlineCode}">/time</TextBox> 修改时钟的影响）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏测试环境</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">clock_time</TextBox> 替代 <TextBox Style="{StaticResource InlineCode}">time_of_day</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增必填字段 <TextBox Style="{StaticResource InlineCode}">clock</TextBox>：世界时钟 ID，用于指定设置时间所依据的时钟（替代原有 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 字段）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:time_check</TextBox> 战利品表谓词</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">clock</TextBox> 字段：世界时钟 ID，指定进行时间检查所使用的世界时钟</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">配方</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> 字段在所有包含它的配方类型中现在更为一致：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在接受简写形式（如 <TextBox Style="{StaticResource InlineCode}">&quot;minecraft:foo&quot;</TextBox>，等价于 <TextBox Style="{StaticResource InlineCode}">{&quot;id&quot;:&quot;minecraft:foo&quot;, &quot;count&quot;: 1}</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">smelting</TextBox>、<TextBox Style="{StaticResource InlineCode}">blasting</TextBox>、<TextBox Style="{StaticResource InlineCode}">smoking</TextBox>、<TextBox Style="{StaticResource InlineCode}">campfire_cooking</TextBox> 等配方类型，该字段现在也接受 <TextBox Style="{StaticResource InlineCode}">count</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">维度类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">default_clock</TextBox>：可选，世界时钟 ID</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">指定用于 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令的默认时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，<TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令将需要显式提供时钟参数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">同时指定 <TextBox Style="{StaticResource InlineCode}">minecraft:wake_up_from_sleep</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">minecraft:roll_village_siege</TextBox> 时间标记所作用的时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，这些时间标记在该维度中将永不生效</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于决定某类植被可以放置并存活于哪些方块之上：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_vegetation</TextBox>：为以下方块提供支撑能力：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">矮草丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">高草丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蕨</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">大型蕨</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">向日葵</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丁香</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玫瑰丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">牡丹</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">眼眸花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">粉红色花簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">野花簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蒲公英</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">火把花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">虞美人</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">兰花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">绒球葱</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蓝花美耳草</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">红色郁金香</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">橙色郁金香</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白色郁金香</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">粉红色郁金香</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">滨菊</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">矢车菊</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">甜浆果丛</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">橡树树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">云杉树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">白桦树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">丛林树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">樱花树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树树苗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">苍白橡树树苗</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_crops</TextBox>：在所有生长阶段为以下农作物提供支撑：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">小麦</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">胡萝卜</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">马铃薯</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">甜菜根</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">火把花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_stem_crops</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_pumpkin_stem</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_melon_stem</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_sugar_cane</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_sugar_cane_adjacently</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">满足甘蔗相邻支撑条件的方块</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_cactus</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_chorus_plant</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_chorus_flower</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_nether_sprouts</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_azalea</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_warped_fungus</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_crimson_fungus</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_mangrove_propagule</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_hanging_mangrove_propagule</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_nether_wart</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_warped_roots</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_crimson_roots</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_wither_rose</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_cocoa</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_lily_pad</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_frogspawn</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为空</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#support_override_cactus_flower</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">即便顶部不为坚固面，仙人掌花也可放置于该标签内的方块上</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于决定哪些方块无法支撑特定类别的植被：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#cannot_support_seagrass</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#cannot_support_kelp</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为统一命名，重命名了以下标签：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#dry_vegetation_may_place_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_dry_vegetation</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#bamboo_plantable_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_bamboo</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#small_dripleaf_placeable</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_small_dripleaf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#big_dripleaf_placeable</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_big_dripleaf</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#mushroom_grow_block</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#overrides_mushroom_light_requirement</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">若不在上述标签内，蘑菇在光照等级不低于 13 时无法存活</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#snow_layer_can_survive_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#support_override_snow_layer</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">即便顶部不为完整面，雪也可放置于该标签内的方块上</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#snow_layer_cannot_survive_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#cannot_support_snow_layer</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#grows_crops</TextBox>，用于定义下方的方块允许以下作物生长：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">小麦</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">胡萝卜</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">马铃薯</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">甜菜根</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">火把花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">南瓜茎</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">西瓜茎</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签用于定义哪些方块可以生成特定类型的气泡柱：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#enables_bubble_column_drag_down</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认：岩浆块</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#enables_bubble_column_push_up</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认：灵魂沙</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}">流体标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于决定哪些流体可支撑以下方块：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_lily_pad</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_frogspawn</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#supports_sugar_cane_adjacently</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">满足甘蔗相邻支撑条件的流体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#bubble_columns_can_occupy</TextBox> 流体标签，用于定义气泡柱可以占据哪些流体（默认 <TextBox Style="{StaticResource InlineCode}">water</TextBox>）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 78</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">绊线的纹理现在以 Alpha 裁剪方式渲染，而非半透明</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -391,26 +353,26 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-01-07" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-01-14" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 
-<local:MyIconTextButton Text="启动" ToolTip="启动 26.1-snapshot-2" EventType="启动游戏"
-    EventData="26.1-snapshot-2" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 26.1-snapshot-3" EventType="启动游戏"
+    EventData="26.1-snapshot-3" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 
 
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/165c30e5076a13848404f41692ff1e0126d0a6f3/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/430ae0858fe2663346745a7be773cebc68a79e31/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/Java版26.1-snapshot-2" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/Java版26.1-snapshot-3" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-26-1-snapshot-2" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-26-1-snapshot-3" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -435,7 +397,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
 
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-01-07" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-01-14" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 
 <local:MyIconTextButton Text="启动" ToolTip="启动 1.21.11" EventType="启动游戏"
@@ -454,7 +416,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -476,7 +438,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-07" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -487,8 +449,8 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="047f964" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/047f964354b3aeea86d2b34bd7aecaeac2da679c"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="d77f51b" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/d77f51b3fe80b895f191b4cceb79fd8348d7fffb"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
