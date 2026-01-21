@@ -11,6 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -27,9 +30,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
 <Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
 <Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
@@ -53,212 +56,80 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </Setter>
 </Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 26.1-snapshot-3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 26.1-snapshot-4" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">进一步微调 JVM 配置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块、物品与实体的微调</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绊线的纹理现在以 Alpha 裁剪方式渲染，而非半透明</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><Paragraph Style="{StaticResource H4}">调试屏幕</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">从 <TextBox Style="{StaticResource InlineCode}">local_difficulty</TextBox> 中拆分出了独立的 <TextBox Style="{StaticResource InlineCode}">day_count</TextBox> 调试字段</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">游戏规则</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在可以通过暂停菜单上的全新“世界选项”屏幕在游戏内打开“游戏规则”屏幕</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在游戏内与创建世界屏幕的“游戏规则”页顶部新增了搜索栏</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">世界选项</Paragraph><Paragraph>暂停菜单中的难度按钮已被替换为跳转到新界面的按钮——“世界选项”。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">“世界选项”界面包含难度按钮与“更改游戏规则”的按钮</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">“游戏规则”界面对拥有 OP 权限的玩家可用，其他玩家不可用</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了幼年马的音效</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">重制了更多幼年生物的外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幼年鸡翅膀纹理已被更新/修复</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">幼年生物</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了下列幼年生物的模型与纹理：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">马</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年马的边界箱以适配新模型</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">驴</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骡</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年僵尸马的边界箱以适配新模型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能在创造模式或使用命令生成</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骷髅马</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年骷髅马的边界箱以适配新模型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅能在创造模式或使用命令生成</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 97</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 78</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 97</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增方块标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增流体标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">调整了 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令的格式以适配“世界时钟”与“时间线”</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 <TextBox Style="{StaticResource InlineCode}">time_check</TextBox> 条件以指定世界时钟</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界时钟</Paragraph><Paragraph>世界时钟包含一个每刻递增的内部时间。可在数据包的 <TextBox Style="{StaticResource InlineCode}">world_clock</TextBox> 注册表下定义（位于 <TextBox Style="{StaticResource InlineCode}">data/&lt;namespace&gt;/world_clock/&lt;id&gt;.json</TextBox>）。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">世界时钟可以暂停或恢复，并可通过 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令修改或查询其时间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：无字段对象</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">时间线</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">clock</TextBox> 字段：世界时钟 ID，指定该时间线绑定的世界时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">该字段为必填；为保持与旧行为一致，可使用 <TextBox Style="{StaticResource InlineCode}">minecraft:overworld</TextBox> 时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增可选 <TextBox Style="{StaticResource InlineCode}">time_markers</TextBox> 字段：一个映射，键为命名空间的时间标记 ID，值为整数或“时间标记对象”</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">非负整数，表示该时间标记对应的刻数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">或对象，包含：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ticks</TextBox>：<TextBox Style="{StaticResource InlineCode}">0</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">period_ticks</TextBox> 之间的整数，表示该时间标记对应的刻数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">show_in_commands</TextBox>：可选布尔值，指定该时间标记是否在命令补全中显示</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认：<TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">时间标记</Paragraph><Paragraph>时间标记为特定世界时钟中的某个（可重复的）时间点指定一个名称。时间标记取代了先前 <TextBox Style="{StaticResource InlineCode}">/time set</TextBox> 可用的预定义名称（如 <TextBox Style="{StaticResource InlineCode}">day</TextBox>、<TextBox Style="{StaticResource InlineCode}">night</TextBox>）。</Paragraph><Paragraph>时间标记存在于特定世界时钟的上下文中。这意味着尽管不同的时间标记由不同的时间线定义，但对于某个世界时钟，同一 ID 仅能存在一个时间标记；同时，两个不同的世界时钟可以拥有相同名称的时间标记。</Paragraph><Paragraph Style="{StaticResource H4}">内部使用的时间标记</Paragraph><Paragraph>部分时间标记用于驱动原版玩法逻辑。通常它们被配置为不在 <TextBox Style="{StaticResource InlineCode}">/time</TextBox> 命令中显示。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:wake_up_from_sleep</TextBox> —— 玩家在该维度睡醒后，默认时钟前进到的时间点</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:roll_village_siege</TextBox> —— 在到该维度默认时钟的此时间点时，会检定僵尸围城事件是否发生</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">swing</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在两个参数都可缺省，并回调到如下默认值：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">实体选择器默认为 <TextBox Style="{StaticResource InlineCode}">@s</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">要挥动的手默认为 <TextBox Style="{StaticResource InlineCode}">mainhand</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令现基于“世界时钟”运作：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可使用 <TextBox Style="{StaticResource InlineCode}">time of &lt;clock&gt; ...</TextBox> 显式指定要操作的时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若未指定时钟（保持 <TextBox Style="{StaticResource InlineCode}">/time ...</TextBox> 的旧用法），则使用该维度的默认时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">set</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">add</TextBox> 子命令的返回值（例如用于 <TextBox Style="{StaticResource InlineCode}">/execute store</TextBox>）现在为该时钟的“已流逝总刻数”，而非“当前昼夜时间”</Paragraph></ListItem>
-</List><Paragraph>语法：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] set &lt;time&gt;</TextBox> —— 将该时钟的已流逝总刻数设置为指定值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] set &lt;timemarker&gt;</TextBox> —— 将该时钟推进到下一个指定时间标记出现的时刻</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对于 <TextBox Style="{StaticResource InlineCode}">minecraft:overworld</TextBox> 时钟，可用的时间标记有：<TextBox Style="{StaticResource InlineCode}">day</TextBox>、<TextBox Style="{StaticResource InlineCode}">noon</TextBox>、<TextBox Style="{StaticResource InlineCode}">night</TextBox>、<TextBox Style="{StaticResource InlineCode}">midnight</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] add &lt;time&gt;</TextBox> —— 为该时钟增加（或减少）刻数，允许负数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] pause</TextBox> —— 暂停该时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] resume</TextBox> —— 恢复该时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] query &lt;timeline&gt;</TextBox> —— 显示并返回该时间线周期内的当前刻数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] query &lt;timeline&gt; repetitions</TextBox> —— 显示并返回该时间线已重复的次数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] query time</TextBox> —— 显示并返回该时钟的已流逝总刻数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time query gametime</TextBox> —— 与以往一致，返回世界层面的已流逝总刻数（不受 <TextBox Style="{StaticResource InlineCode}">/time</TextBox> 修改时钟的影响）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">游戏测试环境</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">clock_time</TextBox> 替代 <TextBox Style="{StaticResource InlineCode}">time_of_day</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增必填字段 <TextBox Style="{StaticResource InlineCode}">clock</TextBox>：世界时钟 ID，用于指定设置时间所依据的时钟（替代原有 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 字段）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:time_check</TextBox> 战利品表谓词</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">clock</TextBox> 字段：世界时钟 ID，指定进行时间检查所使用的世界时钟</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">配方</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> 字段在所有包含它的配方类型中现在更为一致：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在接受简写形式（如 <TextBox Style="{StaticResource InlineCode}">&quot;minecraft:foo&quot;</TextBox>，等价于 <TextBox Style="{StaticResource InlineCode}">{&quot;id&quot;:&quot;minecraft:foo&quot;, &quot;count&quot;: 1}</TextBox>）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">smelting</TextBox>、<TextBox Style="{StaticResource InlineCode}">blasting</TextBox>、<TextBox Style="{StaticResource InlineCode}">smoking</TextBox>、<TextBox Style="{StaticResource InlineCode}">campfire_cooking</TextBox> 等配方类型，该字段现在也接受 <TextBox Style="{StaticResource InlineCode}">count</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">维度类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增字段：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">default_clock</TextBox>：可选，世界时钟 ID</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">指定用于 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令的默认时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，<TextBox Style="{StaticResource InlineCode}">time</TextBox> 命令将需要显式提供时钟参数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">同时指定 <TextBox Style="{StaticResource InlineCode}">minecraft:wake_up_from_sleep</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">minecraft:roll_village_siege</TextBox> 时间标记所作用的时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，这些时间标记在该维度中将永不生效</Paragraph></ListItem>
-</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 97.1</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 78.1</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 97.1</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">村民与猪灵的物品栏槽现在仅能使用 <TextBox Style="{StaticResource InlineCode}">mob.inventory.*</TextBox> 访问， <TextBox Style="{StaticResource InlineCode}">villager.*</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">piglin.*</TextBox> 已被移除</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界时钟</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">向末地添加了 <TextBox Style="{StaticResource InlineCode}">minecraft:the_end</TextBox> 世界时钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在控制末地的天空闪光</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于决定某类植被可以放置并存活于哪些方块之上：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_vegetation</TextBox>：为以下方块提供支撑能力：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">灌木丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">矮草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">高草丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蕨</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">大型蕨</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">向日葵</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丁香</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">玫瑰丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">牡丹</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">眼眸花</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">萤火虫灌木丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">粉红色花簇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">野花簇</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蒲公英</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">火把花</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">虞美人</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">兰花</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">绒球葱</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">蓝花美耳草</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">红色郁金香</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">橙色郁金香</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">白色郁金香</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">粉红色郁金香</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">滨菊</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">矢车菊</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">甜浆果丛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">橡树树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">云杉树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">白桦树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">丛林树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">金合欢树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">樱花树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">深色橡树树苗</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">苍白橡树树苗</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_crops</TextBox>：在所有生长阶段为以下农作物提供支撑：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">小麦</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">胡萝卜</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">马铃薯</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">甜菜根</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">火把花</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_stem_crops</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_pumpkin_stem</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_melon_stem</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_sugar_cane</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_sugar_cane_adjacently</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">满足甘蔗相邻支撑条件的方块</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_cactus</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_chorus_plant</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_chorus_flower</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_nether_sprouts</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_azalea</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_warped_fungus</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_crimson_fungus</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_mangrove_propagule</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_hanging_mangrove_propagule</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_nether_wart</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_warped_roots</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_crimson_roots</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_wither_rose</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_cocoa</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_lily_pad</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_frogspawn</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认为空</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#support_override_cactus_flower</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">即便顶部不为坚固面，仙人掌花也可放置于该标签内的方块上</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于决定哪些方块无法支撑特定类别的植被：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#cannot_support_seagrass</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#cannot_support_kelp</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为统一命名，重命名了以下标签：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#dry_vegetation_may_place_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_dry_vegetation</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#bamboo_plantable_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_bamboo</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#small_dripleaf_placeable</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_small_dripleaf</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#big_dripleaf_placeable</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#supports_big_dripleaf</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#mushroom_grow_block</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#overrides_mushroom_light_requirement</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">若不在上述标签内，蘑菇在光照等级不低于 13 时无法存活</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#snow_layer_can_survive_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#support_override_snow_layer</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">即便顶部不为完整面，雪也可放置于该标签内的方块上</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#snow_layer_cannot_survive_on</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">#cannot_support_snow_layer</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#grows_crops</TextBox>，用于定义下方的方块允许以下作物生长：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">小麦</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">胡萝卜</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">马铃薯</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">甜菜根</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">火把花</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">南瓜茎</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">西瓜茎</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签用于定义哪些方块可以生成特定类型的气泡柱：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#enables_bubble_column_drag_down</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认：岩浆块</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#enables_bubble_column_push_up</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认：灵魂沙</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">流体标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于决定哪些流体可支撑以下方块：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_lily_pad</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_frogspawn</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#supports_sugar_cane_adjacently</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">满足甘蔗相邻支撑条件的流体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#bubble_columns_can_occupy</TextBox> 流体标签，用于定义气泡柱可以占据哪些流体（默认 <TextBox Style="{StaticResource InlineCode}">water</TextBox>）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 78</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">绊线的纹理现在以 Alpha 裁剪方式渲染，而非半透明</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了下列标签，以决定一类植被是否可以在这些方块上放置并生长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_stem_fruit</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_pumpkin_stem_fruit</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_melon_stem_fruit</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 78.1</Paragraph><Paragraph Style="{StaticResource H3}">实体纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的实体纹理:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/donkey_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_black_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_brown_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_chestnut_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_creamy_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_darkbrown_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_gray_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_blackdots_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_markings_white_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_markings_whitedots_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_markings_whitefield_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_skeleton_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_white_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_zombie_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">entity/horse/mule_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph>为马增加了下列音效事件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.ambient</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.angry</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.eat</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.fall</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.land</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.step</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.breathe</TextBox></Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -1678,7 +1549,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-14" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
