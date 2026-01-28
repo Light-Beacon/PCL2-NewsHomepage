@@ -11,9 +11,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -30,12 +36,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -55,81 +55,271 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 26.1-snapshot-4" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 26.1-snapshot-5" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了幼年马的音效</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">重制了更多幼年生物的外观</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">幼年鸡翅膀纹理已被更新/修复</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了幼年鸡的音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了金蒲公英</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">金蒲公英</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">金蒲公英是一种新的类型的花，可以用于阻止生物成长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对幼年生物使用金蒲公英可以使其停止成长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对已经停止成长的幼年生物使用金蒲公英可以使其继续成长</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">金蒲公英不能被用于敌对幼年生物以及村民</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以使用蒲公英和金粒合成</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">幼年生物</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">更新了下列幼年生物的模型与纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">马</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年马的边界箱以适配新模型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">海豚</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鱿鱼</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年鱿鱼的边界箱以适配新模型</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">驴</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">骡</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">僵尸马</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年僵尸马的边界箱以适配新模型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅能在创造模式或使用命令生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">发光鱿鱼</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年发光鱿鱼的边界箱以适配新模型</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">骷髅马</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年骷髅马的边界箱以适配新模型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅能在创造模式或使用命令生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">海龟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">美西螈</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">扩大了幼年美西螈的边界箱以适配新模型</Paragraph></ListItem>
 </List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><Paragraph Style="{StaticResource H4}">游戏规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">搜索栏现在除命名空间 ID 与名称外还会基于描述与分类选择游戏规则</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 97.1</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 78.1</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 97.1</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">村民与猪灵的物品栏槽现在仅能使用 <TextBox Style="{StaticResource InlineCode}">mob.inventory.*</TextBox> 访问， <TextBox Style="{StaticResource InlineCode}">villager.*</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">piglin.*</TextBox> 已被移除</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界时钟</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">向末地添加了 <TextBox Style="{StaticResource InlineCode}">minecraft:the_end</TextBox> 世界时钟</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在控制末地的天空闪光</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了下列标签，以决定一类植被是否可以在这些方块上放置并生长</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_stem_fruit</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_pumpkin_stem_fruit</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#supports_melon_stem_fruit</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 78.1</Paragraph><Paragraph Style="{StaticResource H3}">实体纹理</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的实体纹理:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/donkey_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_black_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_brown_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_chestnut_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_creamy_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_darkbrown_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_gray_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_blackdots_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_markings_white_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_markings_whitedots_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_markings_whitefield_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_skeleton_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_white_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/horse/horse_zombie_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph><TextBox Style="{StaticResource InlineCode}">entity/horse/mule_baby.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph>为马增加了下列音效事件</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.ambient</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.hurt</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.death</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.angry</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.eat</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.fall</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.land</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.step</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_horse.breathe</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 98</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 79</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由 <TextBox Style="{StaticResource InlineCode}">minecraft:nbt</TextBox> 文本组件，带有 <TextBox Style="{StaticResource InlineCode}">interpret: false</TextBox> 解析的标签，现在由更好地输出效果，而不再是被扁平化为单一的 <TextBox Style="{StaticResource InlineCode}">text</TextBox> 组件</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 98</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了一些自定义配方字段的语法</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 <TextBox Style="{StaticResource InlineCode}">gameplay/turtle_egg_hatch_chance</TextBox> 环境属性以使其默认值设为 <TextBox Style="{StaticResource InlineCode}">0.002</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">代表染料颜色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用于以前需要特定染料物品的各种地方, 包括对生物和方块的交互</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">注意：本组件存在本身并不能启用染料功能，必须对其被给予的功能做出明确允许，例如添加到标签或更改配方原料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：<TextBox Style="{StaticResource InlineCode}">white</TextBox>, <TextBox Style="{StaticResource InlineCode}">orange</TextBox>, <TextBox Style="{StaticResource InlineCode}">magenta</TextBox>, <TextBox Style="{StaticResource InlineCode}">light_blue</TextBox>, <TextBox Style="{StaticResource InlineCode}">yellow</TextBox>, <TextBox Style="{StaticResource InlineCode}">lime</TextBox>, <TextBox Style="{StaticResource InlineCode}">pink</TextBox>, <TextBox Style="{StaticResource InlineCode}">gray</TextBox>, <TextBox Style="{StaticResource InlineCode}">light_gray</TextBox>, <TextBox Style="{StaticResource InlineCode}">cyan</TextBox>, <TextBox Style="{StaticResource InlineCode}">purple</TextBox>, <TextBox Style="{StaticResource InlineCode}">blue</TextBox>, <TextBox Style="{StaticResource InlineCode}">brown</TextBox>, <TextBox Style="{StaticResource InlineCode}">green</TextBox>, <TextBox Style="{StaticResource InlineCode}">red</TextBox>, <TextBox Style="{StaticResource InlineCode}">black</TextBox> 其中之一</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">战利品表条件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:set_random_dyes</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">不再仅生效于带有 <TextBox Style="{StaticResource InlineCode}">#dyeable</TextBox> 标签的物品</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">配方</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_mapcloning</TextBox> 配方类型已被移除，其功能已被 <TextBox Style="{StaticResource InlineCode}">minecraft:crafting_transmute</TextBox> 包含</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的与在 <TextBox Style="{StaticResource InlineCode}">minecraft:crafting_shaped</TextBox> 中有着相同功能的 <TextBox Style="{StaticResource InlineCode}">show_notification</TextBox> 字段被添加到下列配方类型中：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_shapeless</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_shaped</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_transmute</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:smelting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:blasting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:smoking</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:campfire_cooking</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:smithing_transform</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:smithing_trim</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">从不在配方书里的配方中移除了未使用的 <TextBox Style="{StaticResource InlineCode}">group</TextBox> 字段：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:smithing_transform</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:smithing_trim</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">重命名了下列切石机配方，连同相关进度：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:chiseled_stone_bricks_stone_from_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:chiseled_stone_bricks_from_stone_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:end_stone_brick_slab_from_end_stone_brick_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:end_stone_brick_slab_from_end_stone_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:end_stone_brick_stairs_from_end_stone_brick_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:end_stone_brick_stairs_from_end_stone_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:end_stone_brick_wall_from_end_stone_brick_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:end_stone_brick_wall_from_end_stone_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:mossy_stone_brick_slab_from_mossy_stone_brick_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:mossy_stone_brick_slab_from_mossy_stone_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:mossy_stone_brick_stairs_from_mossy_stone_brick_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:mossy_stone_brick_stairs_from_mossy_stone_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:mossy_stone_brick_wall_from_mossy_stone_brick_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:mossy_stone_brick_wall_from_mossy_stone_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:prismarine_brick_slab_from_prismarine_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:prismarine_brick_slab_from_prismarine_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:prismarine_brick_stairs_from_prismarine_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:prismarine_brick_stairs_from_prismarine_bricks_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:quartz_slab_from_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:quartz_slab_from_quartz_block_stonecutting</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:stone_brick_walls_from_stone_stonecutting</TextBox> 重命名为<TextBox Style="{StaticResource InlineCode}">minecraft:stone_brick_wall_from_stone_stonecutting</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_transmute</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有着这个类型的配方现在接受与 <TextBox Style="{StaticResource InlineCode}">material</TextBox> 原料匹配的多种物品</Paragraph></ListItem>
+</List><Paragraph>新增字段:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">material_count</TextBox> - 整数范围，用于描述与 <TextBox Style="{StaticResource InlineCode}">material</TextBox> 原料匹配的物品数量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">必须为 <TextBox Style="{StaticResource InlineCode}">[2,8]</TextBox> 的子区间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：<TextBox Style="{StaticResource InlineCode}">[1,1]</TextBox>（即恰好一个物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">add_material_count_to_result</TextBox> - 布尔字段（默认：<TextBox Style="{StaticResource InlineCode}">false</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当为 <TextBox Style="{StaticResource InlineCode}">true</TextBox> 时，与 <TextBox Style="{StaticResource InlineCode}">material</TextBox> 原料匹配的物品所在槽位数量会被加入到最终结果堆叠数量中</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_dye</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了 <TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_armordye</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">本配方会将由 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品上 <TextBox Style="{StaticResource InlineCode}">minecraft:dyed_color</TextBox> 组件的当前值，与由 <TextBox Style="{StaticResource InlineCode}">dye</TextBox> 原料匹配物品上的 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件值进行混合</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将通过把 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品转化为 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 物品堆叠，并应用新的 <TextBox Style="{StaticResource InlineCode}">minecraft:dyed_color</TextBox> 组件值来构建</Paragraph></ListItem>
+</List><Paragraph>字段:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">category</TextBox> - 配方书类别，<TextBox Style="{StaticResource InlineCode}">building</TextBox>、<TextBox Style="{StaticResource InlineCode}">redstone</TextBox>、<TextBox Style="{StaticResource InlineCode}">equipment</TextBox>、<TextBox Style="{StaticResource InlineCode}">misc</TextBox> 之一；默认：<TextBox Style="{StaticResource InlineCode}">misc</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">group</TextBox> - 用于在配方书中分组的字符串；默认：空字符串</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">show_notification</TextBox> - 可选布尔值，描述在解锁该配方时是否显示弹窗；默认：<TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox> - 原料（过去被硬编码为 <TextBox Style="{StaticResource InlineCode}">#dyeable</TextBox> 标签）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dye</TextBox> - 原料（过去被硬编码为染料物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配物品必须包含 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件，否则整个配方不匹配</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去总是复制 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_imbue</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">替代了 <TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_tippedarrow</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配一个被八个 <TextBox Style="{StaticResource InlineCode}">material</TextBox> 原料环绕的 <TextBox Style="{StaticResource InlineCode}">source</TextBox> 原料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">本配方会将 <TextBox Style="{StaticResource InlineCode}">source</TextBox> 原料匹配物品上的 <TextBox Style="{StaticResource InlineCode}">minecraft:potion_contents</TextBox> 组件值复制到结果堆叠</Paragraph></ListItem>
+</List><Paragraph>字段:</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">category</TextBox> - 配方书类别，<TextBox Style="{StaticResource InlineCode}">building</TextBox>、<TextBox Style="{StaticResource InlineCode}">redstone</TextBox>、<TextBox Style="{StaticResource InlineCode}">equipment</TextBox>、<TextBox Style="{StaticResource InlineCode}">misc</TextBox> 之一；默认：<TextBox Style="{StaticResource InlineCode}">misc</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">group</TextBox> - 用于在配方书中分组的字符串；默认：空字符串</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">show_notification</TextBox> - 可选布尔值，描述在解锁该配方时是否显示弹窗；默认：<TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">source</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:lingering_potion</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">material</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:arrow</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去硬编码为八个 <TextBox Style="{StaticResource InlineCode}">minecraft:tipped_arrow</TextBox>）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_bannerduplicate</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以限制原料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方仍仅适用于旗帜物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">banner</TextBox> - 作为源与目标物品使用的原料（过去硬编码为任意旗帜物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去总是复制带有非空图案的旗帜）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方会找到第一个与 <TextBox Style="{StaticResource InlineCode}">banner</TextBox> 原料匹配的旗帜物品，并将其视为源旗帜</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将通过把源旗帜转化为 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 物品堆叠来构建</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">源旗帜会保留在工作台中</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_bookcloning</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原料与输出现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">source</TextBox> - 作为源书籍的原料</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配物品必须包含 <TextBox Style="{StaticResource InlineCode}">minecraft:written_book_contents</TextBox> 组件，否则整个配方不匹配</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">material</TextBox> - 目标被克隆的物品的原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">#book_cloning_target</TextBox> 标签）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">allowed_generations</TextBox> - 整数范围，描述 <TextBox Style="{StaticResource InlineCode}">material</TextBox> 原料匹配物品上 <TextBox Style="{StaticResource InlineCode}">minecraft:written_book_contents</TextBox> 组件的 <TextBox Style="{StaticResource InlineCode}">generation</TextBox> 字段允许的值</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">必须为 <TextBox Style="{StaticResource InlineCode}">[0,2]</TextBox> 的子区间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认：<TextBox Style="{StaticResource InlineCode}">[0,1]</TextBox>（即接受原版和第一代副本，不接受副本的副本）</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去总是复制 <TextBox Style="{StaticResource InlineCode}">source</TextBox> 原料匹配的物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方将首先取 <TextBox Style="{StaticResource InlineCode}">source</TextBox> 原料匹配物品上 <TextBox Style="{StaticResource InlineCode}">minecraft:written_book_contents</TextBox> 组件的值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:written_book_contents</TextBox> 的 <TextBox Style="{StaticResource InlineCode}">generation</TextBox> 字段将加一</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">若 <TextBox Style="{StaticResource InlineCode}">generation</TextBox> 值为 <TextBox Style="{StaticResource InlineCode}">2</TextBox> 或更高，配方将不会产生结果</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将通过把 <TextBox Style="{StaticResource InlineCode}">source</TextBox> 原料匹配的物品转化为 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 物品堆叠，并应用新的 <TextBox Style="{StaticResource InlineCode}">minecraft:written_book_contents</TextBox> 组件值来构建</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">除第一个之外，<TextBox Style="{StaticResource InlineCode}">material</TextBox> 原料匹配的物品数量将被加入到结果堆叠大小</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">原始的 <TextBox Style="{StaticResource InlineCode}">source</TextBox> 原料匹配物品会保留在工作台中</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_decorated_pot</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">Ingredients and result can now be configured</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Removed unused <TextBox Style="{StaticResource InlineCode}">category</TextBox> field</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">back</TextBox>, <TextBox Style="{StaticResource InlineCode}">left</TextBox>, <TextBox Style="{StaticResource InlineCode}">right</TextBox>, <TextBox Style="{StaticResource InlineCode}">front</TextBox> - ingredients (was hardcoded to <TextBox Style="{StaticResource InlineCode}">#decorated_pot_ingredients</TextBox>)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - resulting item stack (was hardcoded to a single <TextBox Style="{StaticResource InlineCode}">minecraft:decorated_pot</TextBox>)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其它功能保持不变，即与原料匹配的物品将被添加到结果堆叠的 <TextBox Style="{StaticResource InlineCode}">minecraft:pot_decorations</TextBox> 组件相应字段中</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_firework_rocket</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原料与结果现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">shell</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:paper</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fuel</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:gunpowder</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">star</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_star</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去硬编码为三个 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_rocket</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">必须恰好存在一个与 <TextBox Style="{StaticResource InlineCode}">shell</TextBox> 原料匹配的堆叠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与 <TextBox Style="{StaticResource InlineCode}">fuel</TextBox> 原料匹配的堆叠数量将控制 <TextBox Style="{StaticResource InlineCode}">flight_duration</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将从与 <TextBox Style="{StaticResource InlineCode}">star</TextBox> 原料匹配物品上的 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_explosion</TextBox> 组件复制 <TextBox Style="{StaticResource InlineCode}">explosions</TextBox> 字段（如果有）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_firework_star_fade</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原料现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方现在使用 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件而非染料物品到颜色的硬编码映射</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_star</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dye</TextBox> - 原料（过去硬编码为染料物品）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配物品必须包含 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件，否则整个配方不匹配</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去总是复制 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">本配方会取 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配物品上 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_explosion</TextBox> 组件的当前值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fade_colors</TextBox> 字段将设置为由 <TextBox Style="{StaticResource InlineCode}">dye</TextBox> 原料匹配物品上的 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件的值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将通过把 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品转化为 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 物品堆叠，并应用新的 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_explosion</TextBox> 组件值来构建</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_firework_star</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原料与结果现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">trail</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:diamond</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">twinkle</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:glowstone_dust</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fuel</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:gunpowder</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dye</TextBox> - 原料（过去硬编码为染料物品）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配物品必须包含 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件，否则整个配方不匹配</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">shapes</TextBox> - 将形状映射到原料的映射</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许的键与 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_explosion</TextBox> 组件的 <TextBox Style="{StaticResource InlineCode}">shape</TextBox> 字段相同（即 <TextBox Style="{StaticResource InlineCode}">small_ball</TextBox>、<TextBox Style="{StaticResource InlineCode}">large_ball</TextBox>、<TextBox Style="{StaticResource InlineCode}">star</TextBox>、<TextBox Style="{StaticResource InlineCode}">creeper</TextBox>、<TextBox Style="{StaticResource InlineCode}">burst</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">过去硬编码为：<TextBox Style="{StaticResource InlineCode}">minecraft:fire_charge</TextBox> - <TextBox Style="{StaticResource InlineCode}">large_ball</TextBox>、<TextBox Style="{StaticResource InlineCode}">minecraft:feather</TextBox> - <TextBox Style="{StaticResource InlineCode}">burst</TextBox>、<TextBox Style="{StaticResource InlineCode}">minecraft:gold_nugget</TextBox> - <TextBox Style="{StaticResource InlineCode}">star</TextBox>、任意头颅或头颅方块 - <TextBox Style="{StaticResource InlineCode}">creeper</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去硬编码为三个 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_star</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方现在使用 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件而非染料物品到颜色的硬编码映射</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">必须恰好存在一个与 <TextBox Style="{StaticResource InlineCode}">fuel</TextBox> 原料匹配的堆叠</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将基于 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 字段，并按照如下值构建 <TextBox Style="{StaticResource InlineCode}">minecraft:firework_explosion</TextBox> 组件内容：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">与 <TextBox Style="{StaticResource InlineCode}">dye</TextBox> 原料匹配物品上的 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件的值将加入到 <TextBox Style="{StaticResource InlineCode}">colors</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若存在与 <TextBox Style="{StaticResource InlineCode}">trail</TextBox> 原料匹配的物品，则 <TextBox Style="{StaticResource InlineCode}">has_trail</TextBox> 字段设为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若存在与 <TextBox Style="{StaticResource InlineCode}">twinkle</TextBox> 原料匹配的物品，则 <TextBox Style="{StaticResource InlineCode}">has_twinkle</TextBox> 字段设为 <TextBox Style="{StaticResource InlineCode}">true</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">shape</TextBox> 字段将根据匹配 <TextBox Style="{StaticResource InlineCode}">shape</TextBox> 字段中任一原料的物品来设置（若未找到则为 <TextBox Style="{StaticResource InlineCode}">small_ball</TextBox>）</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_mapextending</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原料与输出现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">map</TextBox> - 原料（过去硬编码为带有 <TextBox Style="{StaticResource InlineCode}">minecraft:map_id</TextBox> 组件的 <TextBox Style="{StaticResource InlineCode}">minecraft:filled_map</TextBox>）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配的地图物品必须包含 <TextBox Style="{StaticResource InlineCode}">minecraft:map_id</TextBox> 组件，否则整个配方不匹配</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">material</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:paper</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去总是复制 <TextBox Style="{StaticResource InlineCode}">map</TextBox> 原料匹配的物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">配方会找到带有 <TextBox Style="{StaticResource InlineCode}">minecraft:map_id</TextBox> 组件的、与 <TextBox Style="{StaticResource InlineCode}">map</TextBox> 原料匹配的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将通过把源物品转化为 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 物品堆叠来构建</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在结果物品上设置 <TextBox Style="{StaticResource InlineCode}">minecraft:map_post_processing</TextBox> 组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">源物品会保留在工作台中</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:crafting_special_shielddecoration</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">原料与输出现在可配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了未使用的 <TextBox Style="{StaticResource InlineCode}">category</TextBox> 字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">banner</TextBox> - 原料（过去硬编码为任意旗帜物品）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅当物品为旗帜时才匹配</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">target</TextBox> - 原料（过去硬编码为 <TextBox Style="{StaticResource InlineCode}">minecraft:shield</TextBox>）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">匹配的物品其 <TextBox Style="{StaticResource InlineCode}">minecraft:banner_patterns</TextBox> 组件必须未设置或为空，否则整个配方不匹配</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">result</TextBox> - 结果物品堆叠（过去总是复制 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">功能保持不变，即该配方会对由 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配物品的副本应用以下更改：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">输出:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">结果将通过把 <TextBox Style="{StaticResource InlineCode}">target</TextBox> 原料匹配的物品转化为 <TextBox Style="{StaticResource InlineCode}">result</TextBox> 物品堆叠，并且：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">从与 <TextBox Style="{StaticResource InlineCode}">banner</TextBox> 原料匹配的物品复制 <TextBox Style="{StaticResource InlineCode}">minecraft:banner_patterns</TextBox> 组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">根据与 <TextBox Style="{StaticResource InlineCode}">banner</TextBox> 原料匹配的旗帜类型设置 <TextBox Style="{StaticResource InlineCode}">minecraft:base_color</TextBox> 组件</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#dyes</TextBox> —— 包含原版染料的辅助标签</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#loom_dyes</TextBox> —— 允许在织布机界面中设置图案颜色的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">织布机界面还要求物品堆叠上存在 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#loom_patterns</TextBox> —— 允许在织布机界面中解锁图案的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">织布机界面还要求物品堆叠上存在 <TextBox Style="{StaticResource InlineCode}">minecraft:provides_banner_patterns</TextBox> 组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#cat_collar_dyes</TextBox> —— 可用于给宠物猫项圈染色的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">颜色将取自所用物品堆叠的 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#wolf_collar_dyes</TextBox> —— 可用于给宠物狼项圈染色的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">颜色将取自所用物品堆叠的 <TextBox Style="{StaticResource InlineCode}">minecraft:dye</TextBox> 组件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#cauldron_can_remove_dye</TextBox> —— 可用于在装满水的炼药锅上移除 <TextBox Style="{StaticResource InlineCode}">minecraft:dyed_color</TextBox> 组件的物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除 <TextBox Style="{StaticResource InlineCode}">#dyeable</TextBox> 标签</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#cannot_be_age_locked</TextBox> ，用于定义哪些幼年生物的成长不能通过金蒲公英停止</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 79</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">发光鱿鱼、避雷针，以及方块被打蜡、去蜡和除锈时发出的发光粒子现在按不透明方式渲染，因为它们实际上从未使用过半透明方式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 <TextBox Style="{StaticResource InlineCode}">demo_background.png</TextBox>，改用 <TextBox Style="{StaticResource InlineCode}">popup/background.png</TextBox> 精灵图</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Block Sprites</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增方块纹理：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/golden_dandelion.png</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Sounds</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为鸡新增以下声音事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_chicken.ambient</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_chicken.hurt</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.baby_chicken.death</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为金蒲公英新增以下声音事件：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.golden_dandelion.use</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item.golden_dandelion.unuse</TextBox></Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -1549,7 +1739,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-01-20" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-01-28" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
