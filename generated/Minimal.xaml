@@ -30,13 +30,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -53,23 +48,211 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="最新快照版 - 26.1-snapshot-6" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">重制了更多幼年生物的外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幼年北极熊现在不再攻击狐狸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幼年美西螈不再播放死亡动画</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修复了幼年鸡翅膀以及热带鸡的条纹</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">幼年生物</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了下列生物的模型与纹理：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">蜜蜂</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">狐狸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">山羊</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骆驼</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">犰狳</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">北极熊</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">羊驼</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在幼年骆驼上的鞍不再会被渲染</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骆驼尸壳不再拥有幼年模型</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">随本次版本对世界数据格式的大幅更改，需升级的世界现在会显示“升级并打开”，而不是“进入选中的世界”；在世界升级完成之前，“编辑世界”与“重新创建世界”按钮将被禁用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增了一个界面用于显示升级进度</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> 鉴于升级世界存在额外风险，在此快照周期中，首次加载你的世界时我们将强制进行备份。升级完成后，你将无法在旧版本中加载该世界。</Paragraph>
 
+</Section><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 99</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 80</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 99</Paragraph><Paragraph Style="{StaticResource H3}">世界存档</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有默认维度现在存储于 <TextBox Style="{StaticResource InlineCode}">dimensions</TextBox> 子文件夹</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">主世界的数据已从根目录移动到 <TextBox Style="{StaticResource InlineCode}">dimensions/minecraft/overworld</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">包括 <TextBox Style="{StaticResource InlineCode}">region</TextBox>、<TextBox Style="{StaticResource InlineCode}">entities</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">poi</TextBox> 文件夹，以及 <TextBox Style="{StaticResource InlineCode}">data</TextBox> 中的相关文件</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下界的数据已从 <TextBox Style="{StaticResource InlineCode}">DIM-1</TextBox> 移动到 <TextBox Style="{StaticResource InlineCode}">dimensions/minecraft/the_nether</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地的数据已从 <TextBox Style="{StaticResource InlineCode}">DIM1</TextBox> 移动到 <TextBox Style="{StaticResource InlineCode}">dimensions/minecraft/the_end</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">顶层的 <TextBox Style="{StaticResource InlineCode}">data</TextBox> 文件夹如今仅用于跨维度共享的数据，不再包含主世界的数据</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">玩家存储已移动到 <TextBox Style="{StaticResource InlineCode}">players</TextBox> 子目录</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">advancements</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">players/advancements</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">playerdata</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">players/data</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">stats</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">players/stats</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">世界资源包（<TextBox Style="{StaticResource InlineCode}">resources.zip</TextBox>）已移动到 <TextBox Style="{StaticResource InlineCode}">resourcepacks</TextBox> 子目录</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">data</TextBox> 文件夹中保存的数据现已使用命名空间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">意味着所有该类数据将存放在相应 <TextBox Style="{StaticResource InlineCode}">data</TextBox> 文件夹内的命名空间子目录中</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">所有原版数据文件已据此移动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例：<TextBox Style="{StaticResource InlineCode}">data/scoreboard.dat</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">data/minecraft/scoreboard.dat</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">命令存储现改为在命名空间子目录中存放，而非以命名空间后缀命名</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">例：<TextBox Style="{StaticResource InlineCode}">data/command_storage_foo.dat</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">data/foo/command_storage.dat</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">chunks.dat</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">chunk_tickets.dat</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">地图数据现在存放在 <TextBox Style="{StaticResource InlineCode}">data/minecraft/maps</TextBox> 子目录中</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">地图索引文件改为仅使用数字命名</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">例：<TextBox Style="{StaticResource InlineCode}">map_1.dat</TextBox> -&gt; <TextBox Style="{StaticResource InlineCode}">1.dat</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">idcounts.dat</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">last_id.dat</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不再存在 <TextBox Style="{StaticResource InlineCode}">raids_end.dat</TextBox> 的特殊情况</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">末地同样使用 <TextBox Style="{StaticResource InlineCode}">raids.dat</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由结构方块保存的结构由 <TextBox Style="{StaticResource InlineCode}">generated/namespace/structures</TextBox> 移动到 <TextBox Style="{StaticResource InlineCode}">generated/namespace/structure</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">level.dat</TextBox> 的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Player</TextBox> 标签已被 <TextBox Style="{StaticResource InlineCode}">singleplayer_uuid</TextBox> 标签取代，用于引用要使用的玩家数据文件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">与难度相关的设置已移动到 <TextBox Style="{StaticResource InlineCode}">difficulty_settings</TextBox> 标签</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">difficulty</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Difficulty</TextBox>）现为字符串而非整数</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许值：<TextBox Style="{StaticResource InlineCode}">peaceful</TextBox>、<TextBox Style="{StaticResource InlineCode}">easy</TextBox>、<TextBox Style="{StaticResource InlineCode}">normal</TextBox>、<TextBox Style="{StaticResource InlineCode}">hard</TextBox></Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">locked</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">DifficultyLocked</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末影龙战斗的相关数据已移至数据文件夹</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现可在 <TextBox Style="{StaticResource InlineCode}">dimensions/minecraft/the_end/data/minecraft/ender_dragon_fight.dat</TextBox> 找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">末影龙战斗可在其他维度中被激活，详见下方维度类型部分</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据更改：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">needs_state_scanning</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">NeedsStateScanning</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dragon_killed</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">DragonKilled</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">previously_killed</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">PreviouslyKilled</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">respawn_stage</TextBox>（取代 <TextBox Style="{StaticResource InlineCode}">IsRespawning</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许值：<TextBox Style="{StaticResource InlineCode}">start</TextBox>、<TextBox Style="{StaticResource InlineCode}">preparing_to_summon_pillars</TextBox>、<TextBox Style="{StaticResource InlineCode}">summoning_pillars</TextBox>、<TextBox Style="{StaticResource InlineCode}">summoning_dragon</TextBox>、<TextBox Style="{StaticResource InlineCode}">end</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">dragon_uuid</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Dragon</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">exit_portal_location</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">ExitPortalLocation</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">gateways</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Gateways</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">respawn_time</TextBox> —— 自当前重生阶段开始以来已流逝的时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">respawn_crystals</TextBox> —— 触发重生流程所用末地水晶的 UUID 列表</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">流浪商人数据已移至数据文件夹</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现可在 <TextBox Style="{StaticResource InlineCode}">data/minecraft/wandering_trader.dat</TextBox> 找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据更改：移除 <TextBox Style="{StaticResource InlineCode}">WanderingTraderId</TextBox>；<TextBox Style="{StaticResource InlineCode}">WanderingTraderSpawnChance</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">spawn_chance</TextBox>；<TextBox Style="{StaticResource InlineCode}">WanderingTraderSpawnDelay</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">spawn_delay</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">CustomBossEvents</TextBox> 已移至数据文件夹（<TextBox Style="{StaticResource InlineCode}">data/minecraft/custom_boss_events.dat</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">天气相关数据已移至数据文件夹（<TextBox Style="{StaticResource InlineCode}">data/minecraft/weather.dat</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更名：<TextBox Style="{StaticResource InlineCode}">clear_weather_time</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">clearWeatherTime</TextBox>）、<TextBox Style="{StaticResource InlineCode}">rain_time</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">rainTime</TextBox>）、<TextBox Style="{StaticResource InlineCode}">thunder_time</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">thunderTime</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ScheduledEvents</TextBox> 已移至数据文件夹（<TextBox Style="{StaticResource InlineCode}">data/minecraft/scheduled_events.dat</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更名：<TextBox Style="{StaticResource InlineCode}">id</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Name</TextBox>）、<TextBox Style="{StaticResource InlineCode}">trigger_time</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">TriggerTime</TextBox>）、<TextBox Style="{StaticResource InlineCode}">callback</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Callback</TextBox>）</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">其内部字段更名：<TextBox Style="{StaticResource InlineCode}">type</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Type</TextBox>）、<TextBox Style="{StaticResource InlineCode}">id</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">Name</TextBox>）</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">game_rules</TextBox> 已移至数据文件夹（<TextBox Style="{StaticResource InlineCode}">data/minecraft/game_rules.dat</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">WorldGenSettings</TextBox> 已移至数据文件夹（<TextBox Style="{StaticResource InlineCode}">data/minecraft/world_gen_settings.dat</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更名：<TextBox Style="{StaticResource InlineCode}">generate_structures</TextBox>（原 <TextBox Style="{StaticResource InlineCode}">generate_features</TextBox>）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">world_clocks</TextBox> 已移至数据文件夹（<TextBox Style="{StaticResource InlineCode}">data/minecraft/world_clocks.dat</TextBox>）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">基于规则的方块状态提供器现已将 <TextBox Style="{StaticResource InlineCode}">fallback</TextBox> 改为可选并允许为空</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若触发了空的 fallback，使用它的特征将不会放置任何内容</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当前使用基于规则的方块状态提供器的配置为 <TextBox Style="{StaticResource InlineCode}">disk</TextBox> 特征中的 <TextBox Style="{StaticResource InlineCode}">state_provider</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">forest_rock</TextBox> 特征重命名为 <TextBox Style="{StaticResource InlineCode}">block_blob</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block_blob</TextBox> 特征配置现支持以下参数：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">state</TextBox>：岩石所用的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">can_place_on</TextBox>：定义岩石可放置于哪些方块之上的方块谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">ice_spike</TextBox> 特征重命名为 <TextBox Style="{StaticResource InlineCode}">spike</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">spike</TextBox> 特征配置现支持以下参数：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">state</TextBox>：尖（冰）刺所用的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">can_place_on</TextBox>：定义尖刺可放置于哪些方块之上的方块谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">can_replace</TextBox>：定义尖刺可替换哪些方块的方块谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">huge_red_mushroom</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">huge_brown_mushroom</TextBox> 特征配置新增参数：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">can_place_on</TextBox>：定义巨型蘑菇可放置于哪些方块之上的方块谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">alter_ground</TextBox> 树木装饰器配置更改：<TextBox Style="{StaticResource InlineCode}">provider</TextBox> 现为基于规则的方块状态提供器</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tree</TextBox> 特征配置用单个 <TextBox Style="{StaticResource InlineCode}">below_trunk_provider</TextBox> 基于规则的方块状态提供器取代了 <TextBox Style="{StaticResource InlineCode}">force_dirt</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">dirt_provider</TextBox> 参数：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fallback</TextBox>：可选的方块状态提供器</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">rules</TextBox>：规则列表</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">if_true</TextBox>：在提供方块之前检查方块位置的方块谓词</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">then</TextBox>：方块状态提供器</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值：</Paragraph></ListItem>
+</List><BlockUIContainer>
+<Border Style="{StaticResource BlockCodeBorder}" >
+<StackPanel Margin="0,2,0,0">
+<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
+<TextBox Style="{StaticResource BlockCode}" Text="&quot;below_trunk_provider&quot;: {&#x000A;    &quot;rules&quot;: [&#x000A;        {&#x000A;            &quot;if_true&quot;: {&#x000A;                &quot;type&quot;: &quot;minecraft:not&quot;,&#x000A;                &quot;predicate&quot;: {&#x000A;                    &quot;type&quot;: &quot;minecraft:matching_block_tag&quot;,&#x000A;                    &quot;tag&quot;: &quot;minecraft:cannot_replace_below_tree_trunk&quot;&#x000A;                }&#x000A;            },&#x000A;            &quot;then&quot;: {&#x000A;                &quot;type&quot;: &quot;minecraft:simple_state_provider&quot;,&#x000A;                &quot;state&quot;: {&#x000A;                    &quot;Name&quot;: &quot;minecraft:dirt&quot;&#x000A;                }&#x000A;            }&#x000A;        }&#x000A;    ]&#x000A;}"/>
+</StackPanel>
+</Border>
+</BlockUIContainer><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">先前使用 <TextBox Style="{StaticResource InlineCode}">force_dirt</TextBox> 的所有树木现在拥有一个始终提供 <TextBox Style="{StaticResource InlineCode}">dirt</TextBox> 方块的 <TextBox Style="{StaticResource InlineCode}">below_trunk_provider</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">维度类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">has_ender_dragon_fight</TextBox>：布尔值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">控制该维度是否可能存在末影龙战</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">#dirt</TextBox> 拆分为多个方块标签</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#dirt</TextBox> 现仅包含泥土、粗泥土与缠根泥土</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#mud</TextBox> 包含泥与红树林泥根</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#moss_blocks</TextBox> 包含苔藓方块与苍白苔藓方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#grass_blocks</TextBox> 包含草方块、菌丝与灰化土</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#substrate_overworld</TextBox>，其包含 <TextBox Style="{StaticResource InlineCode}">#dirt</TextBox>、<TextBox Style="{StaticResource InlineCode}">#mud</TextBox>、<TextBox Style="{StaticResource InlineCode}">#moss_blocks</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">#grass_blocks</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用作世界生成条件的集合</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，用于定义可在适用的树或竹子下方被替换为灰化土的地面方块：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#beneath_tree_podzol_replaceable</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#beneath_bamboo_podzol_replaceable</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#cannot_replace_below_tree_trunk</TextBox>，其包含 <TextBox Style="{StaticResource InlineCode}">#dirt</TextBox>、<TextBox Style="{StaticResource InlineCode}">#mud</TextBox>、<TextBox Style="{StaticResource InlineCode}">#moss_blocks</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">podzol</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，定义各自特征可放置于哪些方块之上：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#forest_rock_can_place_on</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#huge_brown_mushroom_can_place_on</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#huge_red_mushroom_can_place_on</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#ice_spike_replaceable</TextBox>，定义冰刺特征可替换的方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增以下标签，其内容与对应的方块标签镜像：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#mud</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#moss_blocks</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#grass_blocks</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 80</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增幼年鸡行走的音效事件</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">实体纹理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">新增实体纹理：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bee/bee_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bee/bee_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bee/bee_angry_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bee/bee_nectar_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bee/bee_angry_nectar_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fox/fox_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fox/fox_snow_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fox/fox_sleep_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/fox/fox_snow_sleep_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/camel/camel_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/goat/goat_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/armadillo/armadillo_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/bear/polarbear_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/llama_creamy_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/llama_white_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/llama_brown_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/llama/llama_gray_baby.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/equipment/llama_body/trader_llama_baby.png</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">着色器与后处理</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/rendertype_item_entity_translucent_cull</TextBox> 着色器已移除，改用 <TextBox Style="{StaticResource InlineCode}">core/entity</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/rendertype_entity_alpha</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">core/rendertype_entity_decal</TextBox> 着色器已被 <TextBox Style="{StaticResource InlineCode}">core/entity</TextBox> 中实现的 <TextBox Style="{StaticResource InlineCode}">DISSOLVE</TextBox> 标志取代</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">物品渲染（UI 与世界中）已从 <TextBox Style="{StaticResource InlineCode}">core/entity</TextBox> 分离到新的 <TextBox Style="{StaticResource InlineCode}">core/item</TextBox> 着色器</Paragraph></ListItem>
+</List>
 </FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
+</FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-02-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-02-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -1489,7 +1672,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-02-03" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-02-04" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
