@@ -15,38 +15,110 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Resources>
 <local:MyCard Title="版本列表" Margin="0,0">
     <StackPanel Margin="20,40,20,15">
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Active_Trial_Spawner_JE4_BE3813f27e2213dec08.png" Title="棘巧试炼 | 1.21" Info="加入了试炼密室"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/1.21_archive.json" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Cherry_Leaves_JE29cc390fd9b51333d.png" Title="足迹与故事 | 1.20 " Info="加入了考古学与樱花树"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/1.20_archive.json" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Sculk_JE1_BE141e57ad22b2b968e.png" Title="荒野更新 | 1.19" Info="加入了深暗之域与远古城市，以及红树林沼泽"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/1.19_archive.json" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Deepslate_JE3_BE227b47de799b509d8.png" Title="洞穴与山崖（第二部分） | 1.18" Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/1.18_archive_confirm.json" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Block_of_Amethyst_JE3_BE14f18267120f7bf34.png" Title="洞穴与山崖（第一部分） | 1.17" Info="加入了繁茂洞穴、紫晶洞"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/1.17_archive_confirm.json" Type="Clickable" />
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1" EventType="打开帮助" Type="Clickable"
+		Logo="pack://application:,,,/images/Blocks/GrassPath.png"
+		Title="小鬼当家 | 26.1"
+		Info="更新了兔子和绝大部分幼年生物的新外观，加入了金蒲公英、命名牌的合成配方、音符盒的小号音色"
+		EventData="https://mcnews.meloong.com/versions/list/tiny_takeover.json"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/dH54/800X800/MOUNTS_OF_MAYHEM.png?imageMogr2/thumbnail/300x"
+		Title="群骑纷争 | 1.21.11"
+		Info="加入了鹦鹉螺、僵尸鹦鹉螺、鹦鹉螺铠、焦骸、骆驼尸壳、矛和下界合金马铠，并允许僵尸马自然生成"
+		EventData="https://mcnews.meloong.com/versions/list/mounts_of_mayhem.json"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/7ZT2/800X800/THE_COPPER_AGE.png?imageMogr2/thumbnail/300x"
+		Title="铜器时代 | 1.21.9-1.21.10"
+		Info="加入了铜傀儡、铜傀儡像、铜箱子、铜粒、展示架以及铜盔甲和铜质工具"
+		EventData="https://mcnews.meloong.com/versions/list/the_copper_age.json"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/D2H2/800X800/CHASE_THE_SKIES.png?imageMogr2/thumbnail/300x"
+		Title="追逐天空 | 1.21.6-1.21.8"
+		Info="加入了快乐恶魂"
+		EventData="https://mcnews.meloong.com/versions/list/chase_the_skies.json"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/zwev/800X800/SPRING_TO_LIFE.png?imageMogr2/thumbnail/300x"
+		Title="春意盎然 | 1.21.5"
+		Info="加入了一些新的植物，以及猪、牛、鸡、绵羊和鸡蛋的新变种"
+		EventData="https://mcnews.meloong.com/versions/list/the_garden_awakens.json"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/m7hs/2048X2048/TheGardenAwakens.png?imageMogr2/thumbnail/300x"
+		Title="苍园觉醒 | 1.21.2"
+		Info="加入了苍白之园、嘎枝及一系列相关方块"
+		EventData="https://mcnews.meloong.com/versions/list/the_garden_awakens.json"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/kOyC/2048X2048/BUNDLES_OF_BRAVERY.png?imageMogr2/thumbnail/300x"
+		Title="勇气之袋 | 1.21.2-1.21.3"
+		Info="加入了收纳袋"
+		EventData="https://mcnews.meloong.com/versions/list/bundles_of_bravery.json"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/Qj6K/2048X2048/trickytrials.png?imageMogr2/thumbnail/300x"
+		Title="棘巧试炼 | 1.21"
+		Info="加入了试炼密室"
+		EventData="https://mcnews.meloong.com/versions/list/tricky_trials.json"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/CAC3/2048X2048/TNT.png?imageMogr2/thumbnail/300x"
+		Title="足迹与故事 | 1.20 "
+		Info="加入了考古学与樱花树"
+		EventData="https://mcnews.meloong.com/1.20_archive.json"
+ 	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable" 
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/B90C/2048X2048/WILD_UPDATE.png?imageMogr2/thumbnail/300x"
+		Title="荒野更新 | 1.19"
+		Info="加入了深暗之域与远古城市，以及红树林沼泽"
+		EventData="https://mcnews.meloong.com/1.19_archive.json"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/4moJ/2048X2048/CAC2.png?imageMogr2/thumbnail/300x"
+		Title="洞穴与山崖（第二部分） | 1.18"
+		Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
+		EventData="https://mcnews.meloong.com/1.18_archive_confirm.json"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/NIjb/2048X2048/CAC1.png?imageMogr2/thumbnail/300x"
+		Title="洞穴与山崖（第一部分） | 1.17" 
+		Info="加入了繁茂洞穴、紫晶洞"
+	 	EventData="https://mcnews.meloong.com/1.17_archive_confirm.json"
+	/>
+
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.23"
      HorizontalAlignment="Center" Stretch="Fill" Margin="2"/>
-	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Locked_Chest_JE108f3a29ad950e185.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1"
+	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
 	EventType="打开帮助" EventData="https://mcnews.meloong.com/april_fools_archive.json" Type="Clickable" />
     </StackPanel>
+
 </local:MyCard><local:MyCard Margin="0,10">
     <StackPanel Margin="15,10">
-    <local:MyListItem Margin="0,1,0,1" ToolTip="点击跳转至 Java版版本记录 页面" LogoScale="1.3"
-	Logo="https://img.picgo.net/2025/02/15/mcw_logo_textless73a208d55c979a7e.png" Title="在 Minecraft Wiki 上查看更多日志" Info="浏览 Java 版版本记录"
+    <local:MyListItem Margin="0,1,0,1" ToolTip="点击跳转至 Java版版本记录 页面" LogoScale="1.1"
+	Logo="M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z" Title="在 Minecraft Wiki 上查看更多日志" Info="浏览 Java 版版本记录"
 	EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Java版版本记录" Type="Clickable" />
     </StackPanel>
 </local:MyCard><local:MyCard Margin="0,2,0,10">
 <Grid Margin="10,6">
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" Margin="-4,0,0,0">
-    <local:MyIconTextButton HorizontalAlignment="Left" Text="fcf8b49" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/fcf8b4992a414c8966ba596192dd2fb896f9ed6f"
+    <local:MyIconTextButton HorizontalAlignment="Left" Text="79ac445" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/79ac445fcd7febe8ff3b199bf3490d6332ea8d1c"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" Margin="-4,0,0,0">

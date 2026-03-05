@@ -26,15 +26,33 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="april_fools 及其开发版本" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="26.1 及其开发版本" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
-<StackPanel Margin="8,0,8,0"><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="25w14craftmine" Info="2025 - 终于是时候变得更加庞大并无所不合！"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=25w14craftmine" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="24w14potato" Info="2024 - 你有没有想过成为一只...毒马铃薯？"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=24w14potato" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="23w13a_or_b" Info="2023 - 在 Minecraft 的世界中作出更多选择！"
-	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=23w13a_or_b" Type="Clickable" /></StackPanel>
+<StackPanel Margin="8,0,8,0"><local:MyListItem Margin="10,1,10,1" ToolTip="版本尚未发布"
+	Logo="pack://application:,,,/images/Blocks/Cobblestone.png" Title="尚未发布的版本" Info="未来的正式版" 
+	EventType="弹出窗口" EventData="未来的正式版|该版本尚未发布" Type="Clickable"/><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-11" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-11" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-10" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-10" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-9" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-9" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-8" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-8" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-7" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-7" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-6" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-6" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-5" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-5" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-4" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-4" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-3" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-3" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-2" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-2" Type="Clickable" /><local:MyListItem Margin="40,1,10,1" ToolTip="快照版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="26.1-snapshot-1" Info="快照版"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26.1-snapshot-1" Type="Clickable" /></StackPanel>
 
 
 </StackPanel>
