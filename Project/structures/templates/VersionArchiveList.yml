@@ -2,7 +2,7 @@ components:
  - $VersionArchiveList|${cat}
 base: Card
 default:
-   title: 版本列表
+   title: ${cat} 及其开发版本
 override:
    canswap: false
    isswaped: false

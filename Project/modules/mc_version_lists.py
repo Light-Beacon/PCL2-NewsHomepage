@@ -16,10 +16,11 @@ def version_achive_list(cat_name,context,card,**_):
     cat_name = format_code(code = cat_name,data=card)
     cards = list(filter(lambda card:isinstance(card.get('cats'),list)
            and cat_name in card.get('cats'), context.project.get_all_card()))
-    code = '<StackPanel Margin="8,2,8,15">'
+    code = '<StackPanel Margin="8,0,8,0">'
     cards.sort(key=lambda card:ID_LIST.index(format_code(card['version-id'],
                                                          data=card)))
-    if len(cards) > 0 and cards[0]['version-type-id'] not in ['Release','April-Fools']:
+    first_card_version_type = format_code(cards[0]['version-type-id'], cards[0])
+    if len(cards) > 0 and first_card_version_type not in ['Release','April-Fools']:
         code += components['VersionLinks/Future'].toxaml(card={})
     for vercard in cards:
         if vercard.get('lack'):

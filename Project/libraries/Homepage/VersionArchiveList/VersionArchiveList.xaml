@@ -1,24 +1,96 @@
 <local:MyCard Title="版本列表" Margin="0,0">
     <StackPanel Margin="20,40,20,15">
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Active_Trial_Spawner_JE4_BE3813f27e2213dec08.png" Title="棘巧试炼 | 1.21" Info="加入了试炼密室"
-	EventType="打开帮助" EventData="${@Link|1.21_archive}" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Cherry_Leaves_JE29cc390fd9b51333d.png" Title="足迹与故事 | 1.20 " Info="加入了考古学与樱花树"
-	EventType="打开帮助" EventData="${@Link|1.20_archive}" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Sculk_JE1_BE141e57ad22b2b968e.png" Title="荒野更新 | 1.19" Info="加入了深暗之域与远古城市，以及红树林沼泽"
-	EventType="打开帮助" EventData="${@Link|1.19_archive}" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Deepslate_JE3_BE227b47de799b509d8.png" Title="洞穴与山崖（第二部分） | 1.18" Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
-	EventType="打开帮助" EventData="${@Link|1.18_archive_confirm}" Type="Clickable" />
-    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Block_of_Amethyst_JE3_BE14f18267120f7bf34.png" Title="洞穴与山崖（第一部分） | 1.17" Info="加入了繁茂洞穴、紫晶洞"
-	EventType="打开帮助" EventData="${@Link|1.17_archive_confirm}" Type="Clickable" />
-	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1" EventType="打开帮助" Type="Clickable"
+		Logo="pack://application:,,,/images/Blocks/GrassPath.png"
+		Title="小鬼当家 | 26.1"
+		Info="更新了兔子和绝大部分幼年生物的新外观，加入了金蒲公英、命名牌的合成配方、音符盒的小号音色"
+		EventData="${@Link|versions/list/tiny_takeover}"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/dH54/800X800/MOUNTS_OF_MAYHEM.png?imageMogr2/thumbnail/300x"
+		Title="群骑纷争 | 1.21.11"
+		Info="加入了鹦鹉螺、僵尸鹦鹉螺、鹦鹉螺铠、焦骸、骆驼尸壳、矛和下界合金马铠，并允许僵尸马自然生成"
+		EventData="${@Link|versions/list/mounts_of_mayhem}"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/7ZT2/800X800/THE_COPPER_AGE.png?imageMogr2/thumbnail/300x"
+		Title="铜器时代 | 1.21.9-1.21.10"
+		Info="加入了铜傀儡、铜傀儡像、铜箱子、铜粒、展示架以及铜盔甲和铜质工具"
+		EventData="${@Link|versions/list/the_copper_age}"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/D2H2/800X800/CHASE_THE_SKIES.png?imageMogr2/thumbnail/300x"
+		Title="追逐天空 | 1.21.6-1.21.8"
+		Info="加入了快乐恶魂"
+		EventData="${@Link|versions/list/chase_the_skies}"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/zwev/800X800/SPRING_TO_LIFE.png?imageMogr2/thumbnail/300x"
+		Title="春意盎然 | 1.21.5"
+		Info="加入了一些新的植物，以及猪、牛、鸡、绵羊和鸡蛋的新变种"
+		EventData="${@Link|versions/list/the_garden_awakens}"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/m7hs/2048X2048/TheGardenAwakens.png?imageMogr2/thumbnail/300x"
+		Title="苍园觉醒 | 1.21.2"
+		Info="加入了苍白之园、嘎枝及一系列相关方块"
+		EventData="${@Link|versions/list/the_garden_awakens}"
+	/>
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/kOyC/2048X2048/BUNDLES_OF_BRAVERY.png?imageMogr2/thumbnail/300x"
+		Title="勇气之袋 | 1.21.2-1.21.3"
+		Info="加入了收纳袋"
+		EventData="${@Link|versions/list/bundles_of_bravery}"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/Qj6K/2048X2048/trickytrials.png?imageMogr2/thumbnail/300x"
+		Title="棘巧试炼 | 1.21"
+		Info="加入了试炼密室"
+		EventData="${@Link|versions/list/tricky_trials}"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/CAC3/2048X2048/TNT.png?imageMogr2/thumbnail/300x"
+		Title="足迹与故事 | 1.20 "
+		Info="加入了考古学与樱花树"
+		EventData="${@Link|1.20_archive}"
+ 	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable" 
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/B90C/2048X2048/WILD_UPDATE.png?imageMogr2/thumbnail/300x"
+		Title="荒野更新 | 1.19"
+		Info="加入了深暗之域与远古城市，以及红树林沼泽"
+		EventData="${@Link|1.19_archive}"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/4moJ/2048X2048/CAC2.png?imageMogr2/thumbnail/300x"
+		Title="洞穴与山崖（第二部分） | 1.18"
+		Info="扩展地下，大幅更改洞穴生成，加入新的山地生物群系"
+		EventData="${@Link|1.18_archive_confirm}"
+	/>
+
+    <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
+		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260305/NIjb/2048X2048/CAC1.png?imageMogr2/thumbnail/300x"
+		Title="洞穴与山崖（第一部分） | 1.17" 
+		Info="加入了繁茂洞穴、紫晶洞"
+	 	EventData="${@Link|1.17_archive_confirm}"
+	/>
+
+	<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.23"
      HorizontalAlignment="Center" Stretch="Fill" Margin="2"/>
-	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.04"
-	Logo="https://img.picgo.net/2025/02/15/Locked_Chest_JE108f3a29ad950e185.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
+
+	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1"
+	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="愚人节快照" Info="23w13a_or_b、24w14potato"
 	EventType="打开帮助" EventData="${@Link|april_fools_archive}" Type="Clickable" />
     </StackPanel>
+
 </local:MyCard>
