@@ -13,17 +13,7 @@ logger = Logger('MainPageVersions')
 def mainPageVersion(page_area,**_):
     '''脚本体'''
     if page_area == 'new':
-        result = f"{latest_version} | latest = true | s = false"
-        if latest_type == 'snapshot' and latest_version[5] != 'a':
-            i_version = latest_version
-            index = 2
-            while True: # 循环添加该周发布的所有版本
-                i_version = mcv.get_latest('snapshot', index)
-                result += f';{i_version} | s = false'
-                if (mcv.get_version_type(i_version) != 'snapshot') or (i_version[5] == 'a'):
-                    break
-                index += 1
-        return result
+        return f"{latest_version} | latest = true | s = false"
     else:
         if latest_type == 'release':
             return ''
