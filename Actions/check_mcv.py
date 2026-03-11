@@ -8,8 +8,8 @@ LAUNCHER_MANIFSET_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest
 
 SNAPSHOT_PATTERN = re.compile(r'^\d{2}[w|W][0-9]{2}[A-Fa-f]$')
 NEW_SNAPSHOT_PATTERN = re.compile(r'^\d{2}(\.\d+)*-snapshot-\d+$')
-PRE_RELEASE_PATTERN = re.compile(r'^.*-pre[0-9]+$')
-RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc[0-9]+$')
+PRE_RELEASE_PATTERN = re.compile(r'^.*-pre-[0-9]+$')
+RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc-[0-9]+$')
 RELEASE_PATTERN = re.compile(r'^\d{1,2}\.\d+(\.\d+)?$')
 
 require_update = False

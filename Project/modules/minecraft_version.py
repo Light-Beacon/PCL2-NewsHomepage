@@ -78,8 +78,8 @@ def get_server_jar(version_id):
 
 SNAPSHOT_PATTERN = re.compile(r'^\d{2}[w|W]\d{2}[A-Fa-f]$')
 NEW_SNAPSHOT_PATTERN = re.compile(r'^\d{2}-snapshot-\d+$')
-PRE_RELEASE_PATTERN = re.compile(r'^.*-pre\d+$')
-RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc\d+$')
+PRE_RELEASE_PATTERN = re.compile(r'^.*-pre-\d+$')
+RELEASE_CANDIDATE_PATTERN = re.compile(r'^.*-rc-\d+$')
 RELEASE_PATTERN = re.compile(r'^\d{1,2}\.\d+(\.\d+)?$')
 
 def get_version_type(version_id:str) -> str:
