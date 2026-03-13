@@ -11,11 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
 <Style  TargetType="TextBox" x:Key="BlockCode">
     <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
     <Setter Property="FontSize" Value="14" />
@@ -32,9 +30,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -54,79 +50,40 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新预发布版 - 26.1-pre-1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新预发布版 - 26.1-pre-2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了主菜单的背景全景图</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 101</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 84</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:nbt</TextBox> 文本组件格式的更改</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:selector</TextBox>、 <TextBox Style="{StaticResource InlineCode}">minecraft:nbt</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">minecraft:object</TextBox> 文本组件格式的更改</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 101</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">&quot;默认组件&quot; 报告生成器不再为没有任何组件的实体输出文件</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">time</TextBox> 的更改</Paragraph><Paragraph>语法:</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">time [of &lt;clock&gt;] rate &lt;rate&gt;</TextBox> - 设置该时钟使用的速率倍率</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">注意：这只会改变世界时钟以及所有依赖该时钟的时间线推进其内部计时器的速率</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如，对于 <TextBox Style="{StaticResource InlineCode}">minecraft:overworld</TextBox> 时钟，更大的值会让昼夜循环过得更快，但实际游戏模拟速度不会提升（不同于 <TextBox Style="{StaticResource InlineCode}">/tick rate</TextBox>）</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">rate</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">1</TextBox> 时表示正常速度</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">rate</TextBox> 是一个介于 <TextBox Style="{StaticResource InlineCode}">0</TextBox>（不含） 和 <TextBox Style="{StaticResource InlineCode}">1000</TextBox>（含）之间的浮点数</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:provides_banner_patterns</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">该组件现在除了标签外，也接受单个 ID 或 ID 列表</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:blocks_attacks</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">bypassed_by</TextBox> 字段现在除了标签外，也接受单个 ID 或 ID 列表</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:damage_resistant</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">types</TextBox> 字段现在除了标签外，也接受单个 ID 或 ID 列表</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">战利品表函数</Paragraph><Paragraph Style="{StaticResource H4}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:set_instrument</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">options</TextBox> 字段现在除了标签外，也接受单个 ID 或 ID 列表</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">新增 <TextBox Style="{StaticResource InlineCode}">minecraft:environment_attribute_check</TextBox> 战利品表谓词</Paragraph><Paragraph>精确匹配给定位置上的某个环境属性值。注意：只要该环境属性会因位置不同而变化，此谓词就要求上下文中设置 <TextBox Style="{StaticResource InlineCode}">origin</TextBox> 位置。</Paragraph><Paragraph>格式：具有以下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox> - 要检测的环境属性 ID</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">value</TextBox> - 要精确匹配的环境属性值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">{condition: &apos;environment_attribute_check&apos;, attribute: &apos;gameplay/piglins_zombify&apos;, value: true}</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">数字提供器</Paragraph><Paragraph Style="{StaticResource H4}">新增 <TextBox Style="{StaticResource InlineCode}">minecraft:environment_attribute</TextBox></Paragraph><Paragraph>获取并提供某个环境属性的值（前提是该值可以表示为数字）。注意：只要该环境属性会因位置不同而变化，此提供器就要求上下文中设置 <TextBox Style="{StaticResource InlineCode}">origin</TextBox> 位置。</Paragraph><Paragraph>格式：具有以下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox> - 要获取的环境属性 ID</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">{type: &apos;environment_attribute&apos;, attribute: &apos;gameplay/sky_light_level&apos;}</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">Flower 地物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">由骨粉生成的地物现在不再局限于 <TextBox Style="{StaticResource InlineCode}">flower</TextBox> 地物类型，而是改由配置地物标签 <TextBox Style="{StaticResource InlineCode}">#can_spawn_from_bone_meal</TextBox> 控制</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">flower</TextBox>、<TextBox Style="{StaticResource InlineCode}">flower_no_bonemeal</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">random_patch</TextBox> 地物类型已被移除</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在可改为使用一系列 <TextBox Style="{StaticResource InlineCode}">count</TextBox> 与 <TextBox Style="{StaticResource InlineCode}">random_offset</TextBox> 放置修饰器来表示这类簇状分布</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">整数提供器</Paragraph><Paragraph>新增梯形整数提供器，可按梯形分布随机选取一个值，类似于 <TextBox Style="{StaticResource InlineCode}">trapezoid</TextBox> 浮点数提供器。</Paragraph><Paragraph>格式：具有以下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">min</TextBox>：整数，生成值的最小值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">max</TextBox>：整数，生成值的最大值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">plateau</TextBox>：整数，分布中“平台”部分的宽度，在该范围内所有值出现的概率相同</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">值为 <TextBox Style="{StaticResource InlineCode}">0</TextBox> 时等价于三角分布</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">值为 <TextBox Style="{StaticResource InlineCode}">max-min</TextBox> 时等价于均匀分布</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">配置地物标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增 <TextBox Style="{StaticResource InlineCode}">#can_spawn_from_bone_meal</TextBox> - 被加入某个生物群系后，可在该生物群系中使用骨粉生成的地物</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">文本组件</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:object</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新增一个名为 <TextBox Style="{StaticResource InlineCode}">fallback</TextBox> 的可选字段，其中包含一个文本组件，当对象组件本身无法显示时使用（例如在服务器日志中打印消息或进行旁白时）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">player</TextBox> 类型的对象（玩家头颅）现在不能再用于服务器状态消息（Motd）中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">该类型的所有组件都会被替换为回退文本</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 84</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 Pup 的纹理，以修复纹理重叠的问题</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品模型</Paragraph><Paragraph Style="{StaticResource H4}"><TextBox Style="{StaticResource InlineCode}">minecraft:end_cube</TextBox> 特殊模型类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一种新的特殊模型类型，可渲染具有与末地传送门方块和末地折跃门方块相同纹理效果的立方体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">字段：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">effect</TextBox> - 要应用的纹理效果，可选值为：<TextBox Style="{StaticResource InlineCode}">portal</TextBox>、<TextBox Style="{StaticResource InlineCode}">gateway</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">方块状态渲染</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">末地折跃门和末地传送门现在在方块展示实体上渲染时，应与它们在世界中放置时的外观一致</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">着色器与后处理效果</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/rendertype_translucent_moving_block</TextBox> 着色器已被移除，改用 <TextBox Style="{StaticResource InlineCode}">core/block</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了矛使取消骑乘状态的速度阈值以匹配基岩版</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">修复了幼年美西螈右后腿不会在游泳时正确移动的问题</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幼年猫现在变大了以匹配幼年豹猫的大小</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幼年马模型不再略微变大    </Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">UI</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了一个新的显示选项名为“独占全屏”，用于控制在全屏模式下是否应该完全控制该显示器</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox> (即非独占模式)</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅当游戏重启后更改才会生效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">警告：独占全屏模式可能会阻止 IME 输入法编辑器的使用</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">交易</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">大师级图书管理员现在会有三项可用的交易，以确保在使用“村民交易的平衡性调整”实验性内容时总能提供一个附魔书交易</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><Paragraph Style="{StaticResource H3}">文本组件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在服务器状态消息（MOTD）的嵌套超过 16 次的组件现在会发起嵌套并使用省略号代替</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-03-11" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-03-13" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
@@ -1546,7 +1503,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 
 <!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-03-11" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Text="最后更新: 2026-03-13" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </StackPanel> -->
 
 </StackPanel>
