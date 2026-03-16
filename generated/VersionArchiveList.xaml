@@ -48,7 +48,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 		Logo="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260304/zwev/800X800/SPRING_TO_LIFE.png?imageMogr2/thumbnail/300x"
 		Title="春意盎然 | 1.21.5"
 		Info="加入了一些新的植物，以及猪、牛、鸡、绵羊和鸡蛋的新变种"
-		EventData="https://mcnews.meloong.com/versions/list/the_garden_awakens.json"
+		EventData="https://mcnews.meloong.com/versions/list/spring_to_life.json"
 	/>
 
 	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1.23" EventType="打开帮助" Type="Clickable"
@@ -117,8 +117,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </local:MyCard><local:MyCard Margin="0,2,0,10">
 <Grid Margin="10,6">
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Left" Margin="-4,0,0,0">
-    <local:MyIconTextButton HorizontalAlignment="Left" Text="9008558" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/900855891a51676704add51a73260dfe95d9faa7"
+    <local:MyIconTextButton HorizontalAlignment="Left" Text="1e19c57" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/1e19c57ace8d189557521dc3111852a88280b339"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right" Margin="-4,0,0,0">
