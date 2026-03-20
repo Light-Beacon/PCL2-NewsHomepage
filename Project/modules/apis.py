@@ -7,14 +7,20 @@ from homepagebuilder.interfaces import page_class_handles, require
 from homepagebuilder.core.page import CodeBasedPage
 from homepagebuilder.core.types import Context
 
+mcv = require('minecraft_versions')  # 需求前置 MinecraftVersions
+MCVM = mcv.MCVM
+
+
 def get_args(context):
     if setter := context.setter:
         return setter.override.get('args', {})
     return {}
 
-def is_true(string:str):
-    return string and isinstance(string,str) and string.lower() != 'false'
-    
+
+def is_true(string: str) -> bool:
+    return bool(string and isinstance(string, str) and string.lower() != 'false')
+
+
 @page_class_handles('apis/status')
 class StatusPage(CodeBasedPage):
 
@@ -25,22 +31,20 @@ class StatusPage(CodeBasedPage):
     def generate(self, *args, **kwargs):
         return 'ok'
 
-    def get_content_type(self, setter, *args, **kwargs):
+    def get_content_type(self, *args, **kwargs):
         return 'text/plain'
 
-mcv = require('minecraft_version') # 需求前置 MinecraftVersions
-latest_version = mcv.get_latest()
 
 @page_class_handles('apis/versions/latest')
 class LatestVersionAPI(CodeBasedPage):
 
     def __init__(self, project):
         super().__init__(project)
-        self.latest_release = self.project.base_library.get_card(mcv.get_latest('release'),False)
-        if latest_snap_shot_id := mcv.get_latest('snapshot'):
-            self.latest_snapshot = self.project.base_library.get_card(latest_snap_shot_id,False)
+        self.latest_release = self.project.base_library.get_card(MCVM.get_latest_version('release').id, False)
+        if latest_developing := MCVM.get_latest_version('developing'):
+            self.latest_developing = self.project.base_library.get_card(latest_developing.id, False)
         else:
-            self.latest_snapshot = None
+            self.latest_developing = None
         self.respond = None
 
     @property
@@ -49,41 +53,42 @@ class LatestVersionAPI(CodeBasedPage):
 
     def pregen_respond(self):
         respond = {}
-        if self.latest_snapshot:
-            respond['snapshot'] = self.extract_version_info(self.latest_snapshot)
+        if self.latest_developing:
+            respond['snapshot'] = self.extract_version_info(self.latest_developing)
         respond['release'] = self.extract_version_info(self.latest_release)
         self.respond = respond
-    
-    def extract_version_info(self,card):
+
+    def extract_version_info(self, card):
         respond = {}
         context = Context.get_current_context()
-        expendedcard = context.builder.template_manager.expend_card_placeholders(card,'')
-        self.copyinfo(respond,expendedcard,'version-type')
-        self.copyinfo(respond,expendedcard,'intro')
-        self.copyinfo(respond,expendedcard,'version-image-link')
-        self.copyinfo(respond,expendedcard,'server-jar')
-        self.copyinfo(respond,expendedcard,'translator')
-        self.copyinfo(respond,expendedcard,'official-link')
-        self.copyinfo(respond,expendedcard,'wiki-link')
-        self.copyinfo(respond,expendedcard,'version-id')
-        self.copyinfo(respond,expendedcard,'title')
+        expendedcard = context.builder.template_manager.expend_card_placeholders(card, '')
+        self.copyinfo(respond, expendedcard, 'version-type')
+        self.copyinfo(respond, expendedcard, 'intro')
+        self.copyinfo(respond, expendedcard, 'version-image-link')
+        self.copyinfo(respond, expendedcard, 'server-jar')
+        self.copyinfo(respond, expendedcard, 'translator')
+        self.copyinfo(respond, expendedcard, 'official-link')
+        self.copyinfo(respond, expendedcard, 'wiki-link')
+        self.copyinfo(respond, expendedcard, 'version-id')
+        self.copyinfo(respond, expendedcard, 'title')
         respond['homepage-json-link'] = f"https://news.bugjump.net/VersionDetail.json?ver={expendedcard['version-id']}"
         return respond
 
-    def copyinfo(self,respond,card,key):
+    def copyinfo(self, respond, card, key):
         respond[key] = card.get(key)
 
     def generate(self, *args, **kwargs):
         context = Context.get_current_context()
         args = get_args(context)
-        ensure_ascii = is_true(args.get('ascii',False))
+        ensure_ascii = is_true(args.get('ascii', False))
         print(args)
         if not self.respond:
             self.pregen_respond()
-        return json.dumps(self.respond,ensure_ascii=ensure_ascii)
+        return json.dumps(self.respond, ensure_ascii=ensure_ascii)
 
-    def get_content_type(self, setter, *args, **kwargs):
+    def get_content_type(self, *args, **kwargs):
         return 'application/json'
+
 
 @page_class_handles('apis/versions/latest-card')
 class LatestVersionCardAPI(CodeBasedPage):
@@ -94,5 +99,5 @@ class LatestVersionCardAPI(CodeBasedPage):
         card = setter.decorate(card)
         return context.builder.template_manager.build(card)
 
-    def get_content_type(self, setter, *args, **kwargs):
+    def get_content_type(self, *args, **kwargs):
         return 'application/xml'
