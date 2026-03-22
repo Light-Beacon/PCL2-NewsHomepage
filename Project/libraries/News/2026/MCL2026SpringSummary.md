@@ -8,7 +8,7 @@ title: Minecraft Live 总结
 __以下括号内非最终译名，仅用于方便理解__
 
 * 小鬼当家小更新将于 3 月 24 日发布正式版
-* Minecraft Expirience 即将上线更多城市
+* Minecraft Experience 即将上线更多城市
 * Minecraft World 主题乐园消息
     * 包含 MC 过山车
     * 2027 年开放
