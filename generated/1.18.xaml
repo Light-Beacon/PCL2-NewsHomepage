@@ -22,12 +22,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Paragraph>新闻主页古老版本（1.17、1.18）的页面由于年久失修不兼容新版构建器已放弃维护。这些版本的更新日志并不是单独存放的，而是作为整整一个页面呈现。打开这些页面有可能会使 PCL 出现卡顿等情况。如要继续访问请点击下方按钮。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
-
-
-<!--<StackPanel Margin="0,4,6,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-<TextBlock Text="最后更新: 2026-03-25" FontSize="12" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-</StackPanel> -->
-
 </StackPanel>
 </local:MyCard><local:MyCard Margin="0,10">
     <StackPanel Margin="15,10">
