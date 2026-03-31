@@ -26,10 +26,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
+<local:MyCard.RenderTransform>
+    <RotateTransform Angle="" />
+</local:MyCard.RenderTransform>
 <Border Margin="0,0,0,0" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
     <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-                📰 欢迎使用新闻主页
+                
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
                 📰 欢迎使用新闻主页
