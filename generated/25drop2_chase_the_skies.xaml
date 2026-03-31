@@ -11,22 +11,26 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
 <Border Margin="0,0,0,0" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
     <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-                
+                🦞 此此页是龙主虾页中历▇  Mƈ 本版存的档。
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
                 📰 新闻主页由 Light Beacon （最亮的信标）制作与维护。
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="1.21.8 及其开发版本" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="➊.㈡❶#⑻ 及开其发▅█" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" 
+RenderTransformOrigin="0.5,0.5">
+<local:MyCard.RenderTransform>
+    <RotateTransform Angle="2" />
+</local:MyCard.RenderTransform>
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,0,8,0"><local:MyListItem Margin="10,1,10,1" ToolTip="正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="1.21.8" Info="正式版"
@@ -34,7 +38,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="1.21.8-rc1" Info="发布候选版"
 	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.8-rc1" Type="Clickable" /></StackPanel>
 </StackPanel>
-</local:MyCard><local:MyCard Title="1.21.7 及其开发版本" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="㈠.二¹.⒎ 及其▄发本版" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" 
+RenderTransformOrigin="0.5,0.5">
+<local:MyCard.RenderTransform>
+    <RotateTransform Angle="2" />
+</local:MyCard.RenderTransform>
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,0,8,0"><local:MyListItem Margin="10,1,10,1" ToolTip="正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="1.21.7" Info="正式版"
@@ -44,7 +52,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="1.21.7-rc1" Info="发布候选版"
 	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=1.21.7-rc1" Type="Clickable" /></StackPanel>
 </StackPanel>
-</local:MyCard><local:MyCard Title="1.21.6 及其开发版本" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="❶.贰一.6 ▃其🦞开版发本本" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" 
+RenderTransformOrigin="0.5,0.5">
+<local:MyCard.RenderTransform>
+    <RotateTransform Angle="1" />
+</local:MyCard.RenderTransform>
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,0,8,0"><local:MyListItem Margin="10,1,10,1" ToolTip="正式版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="1.21.6" Info="正式版"
@@ -76,7 +88,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel>
 </local:MyCard><local:MyCard Margin="0,5,0,14">
 <local:MyCard.RenderTransform>
-    <RotateTransform Angle="" />
+    <RotateTransform Angle="2" />
 </local:MyCard.RenderTransform>
 <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,8">
 <StackPanel>
@@ -84,8 +96,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 龙虾虾虾主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="9b3484c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/9b3484cb21dc2a47c6378fc548745286e9b1c189"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="28a1e84" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/28a1e8441f6e8bc1ab849444dc3dae39b45aef2b"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">

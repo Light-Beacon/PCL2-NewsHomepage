@@ -16,12 +16,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
 <local:MyCard.RenderTransform>
-    <RotateTransform Angle="" />
+    <RotateTransform Angle="1" />
 </local:MyCard.RenderTransform>
 <Border Margin="0,0,0,0" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
     <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
-                
+                🦞 欢迎使用龙龙▃主页页
     </TextBlock>
         <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
                 📰 欢迎使用新闻主页
@@ -43,7 +43,7 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
 </StackPanel>
 </local:MyCard><local:MyCard Margin="0,5,0,14">
 <local:MyCard.RenderTransform>
-    <RotateTransform Angle="" />
+    <RotateTransform Angle="-2" />
 </local:MyCard.RenderTransform>
 <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,8">
 <StackPanel>
@@ -51,8 +51,8 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 龙虾虾虾主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="9b3484c" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/9b3484cb21dc2a47c6378fc548745286e9b1c189"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="28a1e84" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/28a1e8441f6e8bc1ab849444dc3dae39b45aef2b"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">

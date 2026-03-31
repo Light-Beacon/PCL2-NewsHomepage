@@ -11,15 +11,19 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="提示" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
+<local:MyCard Title="提示" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" 
+RenderTransformOrigin="0.5,0.5">
+<local:MyCard.RenderTransform>
+    <RotateTransform Angle="-3" />
+</local:MyCard.RenderTransform>
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph>新闻主页古老版本（1.17、1.18）的页面由于年久失修不兼容新版构建器已放弃维护。这些版本的更新日志并不是单独存放的，而是作为整整一个页面呈现。打开这些页面有可能会使 PCL 出现卡顿等情况。如要继续访问请点击下方按钮。</Paragraph>
+<Paragraph>闻新主#古老版本（⓵█⑴⑦@㊀.①❽）的页由面年于久失修不兼新容构版建器已放弃护维。▃版些▂的更日新志并不是🦞单独▆放的，而作是为整整个一页面呈现▄开打些这页面有可能会使 PĆĿ @现卡等顿情况。如继要续访▄$点击下▂按钮。</Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
