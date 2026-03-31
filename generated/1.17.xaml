@@ -15,11 +15,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="提示" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" 
-RenderTransformOrigin="0.5,0.5">
-<local:MyCard.RenderTransform>
-    <RotateTransform Angle="1" />
-</local:MyCard.RenderTransform>
+<local:MyCard Title="提示" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>

@@ -15,9 +15,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
-<local:MyCard.RenderTransform>
-    <RotateTransform Angle="3" />
-</local:MyCard.RenderTransform>
 <Border Margin="0,0,0,0" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
     <Grid Margin="10,0,0,0">
         <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
@@ -42,17 +39,14 @@ Logo="https://tc-new.z.wiki/autoupload/f/XTxqEIEXt3ek2iMfNVy0xHr9SBDGMOz2CzLFKIo
 EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveList.json" Type="Clickable" />
 </StackPanel>
 </local:MyCard><local:MyCard Margin="0,5,0,14">
-<local:MyCard.RenderTransform>
-    <RotateTransform Angle="-2" />
-</local:MyCard.RenderTransform>
 <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,8">
 <StackPanel>
   <Grid Margin="20,18,20,4">
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 龙虾虾虾主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="d2886f3" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/d2886f3cf54c4bdad417e1825f658f21fc3e05de"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="6621a91" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/6621a911a2df4c4d40a5b0e001dd048565fedda6"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
