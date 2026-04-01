@@ -29,6 +29,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </local:MyCard><local:MyCard Title="ạpŖîĹƑ_őõsĽ 其及🦞开发本版" CanSwap="False" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel Margin="8,0,8,0"><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
+	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="26w14a" Info="2026 - 可以和你的物品栏说拜拜了"
+	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=26w14a" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="25w14craftmine" Info="2025 - 终于是时候变得更加庞大并无所不合！"
 	EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionDetail.json?ver=25w14craftmine" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="愚人节版 点击查看该版本更新日志"
 	Logo="pack://application:,,,/images/Blocks/GoldBlock.png" Title="24w14potato" Info="2024 - 你有没有想过成为一只...毒马铃薯？"
@@ -43,8 +45,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 龙虾虾虾主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="9b1e3a8" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/9b1e3a893bfdfa50d9b1e1668ba50863794003e7"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="88eecf1" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/88eecf1fbc8ce67144a96e994cbd91aed4576feb"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
