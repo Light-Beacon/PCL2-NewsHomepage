@@ -11,30 +11,21 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<sys:String   x:Key="CreeperIcon">
+M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
+</sys:String>
+<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
 <Style  x:Key="imgTitle" TargetType="TextBlock">
   <Setter Property="FontSize" Value="14" />
   <Setter Property="Foreground" Value="#FF777777" />
   <Setter Property="HorizontalAlignment" Value="Center" />
   <Setter Property="Margin" Value="0,0,0,15" />
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<sys:String   x:Key="CreeperIcon">
-M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
-</sys:String>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <sys:String   x:Key="WikiIcon">
 M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
 </sys:String>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <sys:String   x:Key="CloudIcon">
 M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
@@ -47,18 +38,7 @@ M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
 113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
 0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
 211.6 582.7 160 480 160z</sys:String>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<Style  TargetType="local:MyImage" x:Key="VersionImage">
-  <Setter Property="Stretch" Value="UniformToFill" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-</Style>
-
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -82,9 +62,29 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style  TargetType="local:MyImage" x:Key="VersionImage">
+  <Setter Property="Stretch" Value="UniformToFill" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+</Style>
+
+<Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="㊀.❷⓪" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<local:MyCard Title="1.20" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
 <local:MyImage Source="https://i0.hdslb.com/bfs/archive/6763ff4d82fa5afbf5608fb88a67fdb961448714.png" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png@1052w_!web-dynamic.webp"  Style="{StaticResource VersionImage}"/>
@@ -93,153 +93,80 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <TextBlock Style="{StaticResource VersionTitleBlock}" Text="1.20" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新性特</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">&quot;㊀.②㊉更新&quot;的实验性数据中包特的性和和更改在现已全经实部装到▄戏中中</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">加添▅考学古</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添了加嗅探、兽火把▇和瓶█草</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">加添了驼骆</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了锻模造@，并重新设设计了锻造的台能功</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">加添新了的盔纹甲饰系统，▂用使式各各样的的装饰来自义定盔甲的外观</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">更改改#下界合▂装备合的成成方式</Paragraph></ListItem>
-
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">&quot;1.20更新&quot;的实验性数据包中的特性和更改现在已经全部实装到游戏中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了考古学</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了嗅探兽、火把花和瓶子草</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了骆驼</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了锻造模板，并重新设计了锻造台的功能</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的盔甲纹饰系统，以使用各式各样的装饰来自定义盔甲的外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了下界合金装备的合成方式</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▆▅了樱花林树生物物群▄和▃木花装套</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加@#制套装</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加雕了▅书架架块方</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添添加悬了挂式式告牌示</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">优化告了牌示的自定选义项</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">加添了校频幽感匿测测体</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">为紫水晶添块加了共振功能</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">为在放音盒符上的物生头颅添加了可播▄🦞的生物音效</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添▆了灵猪头的</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">为花樱树林林$沙漠、林丛、恶▄和█华森$▄加了了的新█音景乐</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了足《与迹故事▁的新▂度</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">现现在开支始持 WƝidọws ẦȁƗhč六❹/ȀŔM6❹ ▆台</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">考#学</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▅加了可以成合的刷子品物</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加可了疑沙的子和可疑疑的砾砂</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">可疑疑沙的子可以以沙在漠神神$、沙漠井水和热海带底废墟中▅现现</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">🦞可疑砂的可砾以在寒海带▆墟废，，以古及迹废墟中中发现</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">这脆些弱的方块难难聚易易散▁定一要小！心</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">用刷子刷▄疑疑的沙▁▃可的疑砂砂▂会让封尘年多的件物现重#你前眼</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了樱花树林生物群系和樱花木套装</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了竹制套装</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了雕纹书架方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了悬挂式告示牌</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">优化了告示牌的自定义选项</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了校频幽匿感测体</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为紫水晶块添加了共振功能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为放在音符盒上的生物头颅添加了可播放的生物音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了猪灵的头</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为樱花树林、沙漠、丛林、恶地和繁华森林添加了新的背景音乐</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了《足迹与故事》的新进度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在开始支持 Windows Aarch64/ARM64 平台</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">考古学</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了可以合成的刷子物品</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了可疑的沙子和可疑的砂砾</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可疑的沙子可以在沙漠神殿、沙漠水井和热带海底废墟中发现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可疑的砂砾可以在寒带海底废墟，以及古迹废墟中发现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这些脆弱的方块难聚易散，一定要小心！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">用刷子刷可疑的沙子或可疑的砂砾会让尘封多年的物件重现在你眼前</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加古了迹废墟，是这一个失消的明文留下的结构，█▅埋于地下</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">你可在以这找里四到种甲盔纹饰锻模造▂</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">古迹废墟可🦞以在#林叶、雪积针叶、林所有原始森林群系系和丛林中被被现发</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">轻拭结构构中的可疑的方块，你以可发现种一新音的乐唱片</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它唱在机片中会▅放 ẨƗảőƝ ĈƕếŘƎƑ▆的的 $éŘĻîċ&quot;</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了古迹废墟，这是一个消失的文明留下的结构，被掩埋于地下</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">你可以在这里找到四种盔甲纹饰锻造模板</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">古迹废墟可以在针叶林、积雪针叶林、所有原始森林群系和丛林中被发现</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">轻拭结构中的可疑的方块，你可以发现一种新的音乐唱片</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">它在唱片机中会播放 Aaron Cherof 的 &quot;Relic&quot;</Paragraph></ListItem>
 </List></ListItem>
-
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▆了加陶片</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▃片上上画有图案</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▁❺考种遗古址中落散█②❿种陶片▆沙漠水水、井▁神漠▂、寒带海底废墟墟、、温温带底海▅墟和古废迹墟</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">们它无法法合成，▅轻有拭可疑█沙子或疑可的▆砾▄能获得</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了陶片</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">陶片上画有图案</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在5种考古遗址中散落着20种陶片：沙漠水井、沙漠神殿、寒带海底废墟、温带海底废墟和古迹废墟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它们无法合成，只有轻拭可疑的沙子或可疑的砂砾方能获得</Paragraph></ListItem>
 </List></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">饰饰纹陶罐</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">█用四种片陶合成个一饰饰纹罐陶，，会使其每每个一面都有同不▇案图</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在饰纹陶的罐成合配方中，陶片可以用砖红代#</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">用用红砖砌成的面面有没█案</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H4}">饰纹陶罐</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用四种陶片合成一个饰纹陶罐，会使其每一个面都有不同的图案</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在饰纹陶罐的合成配方中，陶片可以用红砖代替</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">用红砖砌成的面没有图案</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">#任何▆▇坏破块方工的具🦞打饰碎纹🦞陶罐，都可以▂分其解回原有的陶片</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">空🦞手击打它，用精准集采▆工具，或▇#其他何任物品击打它它，会都▁落个一完的整罐陶</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">用任何可以破坏方块的工具打碎饰纹陶罐，都可以将其分解回原有的陶片</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">空手击打它，用精准采集的工具，或者用其他任何物品击打它，都会掉落一个完整的陶罐</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">成合的陶@如果至少有一▆有图案，在其▆🦞品示提中中会显示它使用的的陶片片或#的砖原料列表</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">探嗅兽</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▇探是兽 MńĭểcƗâƑt Ĺvįȇ ②0②⑵█的选票出胜生物</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">嗅▇兽是被动、#的好生物</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">嗅▁兽嗅会探空气，有时时会尝尝挖试掘种子，并▃出火花把种子▃瓶草子荚#</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽只会▇草掘方块块和类似泥于▆的块方</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽可使用把火花@子驯及服繁殖</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">▇探兽@</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">以可过通擦拭拭热#底海废墟可的疑的沙沙子获得</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">当两头探嗅@繁殖时，它它们不会立刻生出小嗅探兽；实际上，们它会生一出嗅个▅兽蛋</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在界世放中🦞置置时，嗅嗅探蛋兽会在一一段间时内孵化</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">放▅苔藓块上时，孵嗅化探探兽蛋需要要大约➀㊉分分钟</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">放在其方他上块时，孵化探嗅兽兽蛋要需大约⒉零分钟</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">合成的陶罐如果至少有一面有图案，在其物品提示中会显示它使用的陶片或红砖的原料列表</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">嗅探兽</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽是 Minecraft Live 2022 的票选胜出生物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽是被动、友好的生物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽会嗅探空气，有时会尝试挖掘种子，并产出火把花种子或瓶子草荚果</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽只会挖掘草方块和类似于泥土的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽可使用火把花种子驯服及繁殖</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">嗅探兽蛋</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以通过擦拭热带海底废墟的可疑的沙子获得</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当两头嗅探兽繁殖时，它们不会立刻生出小嗅探兽；实际上，它们会生出一个嗅探兽蛋</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在世界中放置时，嗅探兽蛋会在一段时间内孵化</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">放在苔藓块上时，孵化嗅探兽蛋需要大约10分钟</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">放在其他方块上时，孵化嗅探兽蛋需要大约20分钟</Paragraph></ListItem>
 </List></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">把火花</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">有时，🦞嗅探兽会嗅嗅火出把把种花子，，它可用使于一对▄兽探繁殖殖</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">火花把种子可以以耕在上地耕耕种，并长成把火花</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">#熟火的把花以可收被割重并新植种</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">火把▂可以▃成橙色染料</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">子瓶草</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▂探探兽有时时会嗅瓶出子草草荚果</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">子瓶草荚种果耕在地时上，会▅成瓶子草植物</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">瓶草子植物有五个长生阶阶▅</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">子瓶草成熟熟即时可收割，此时它长长成了格两高#瓶瓶▇草</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">瓶瓶草子可$▄成青色染染料
+</List><Paragraph Style="{StaticResource H4}">火把花</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有时，嗅探兽会嗅出火把花种子，它可用于使一对嗅探兽繁殖</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">火把花种子可以在耕地上耕种，并长成火把花</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">成熟的火把花可以被收割并重新种植</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">火把花可以合成橙色染料</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">瓶子草</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">嗅探兽有时会嗅出瓶子草荚果</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草荚果种在耕地上时，会长成瓶子草植物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草植物有五个生长阶段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草成熟时即可收割，此时它长成了两格高的瓶子草</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">瓶子草可以合成青色染料
 </Paragraph><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0c4a.jpg"/>
 <TextBlock Text="沙漠神殿中的考古学" Style="{StaticResource imgTitle}" />
@@ -256,140 +183,73 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d9a661c6c8e5470bc06.jpg"/>
 <TextBlock Text="找到嗅探兽蛋了！" Style="{StaticResource imgTitle}" />
 </StackPanel></BlockUIContainer></ListItem>
-
 </List><Paragraph Style="{StaticResource H3}">骆驼</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">骆驼可以装▄鞍，，并▇名两玩家骑乘</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">骆驼▂然生成▂沙漠漠村庄生时成</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">持手▄人掌可可使骆跟驼随</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▃▁驼喂食人仙▄以使其繁殖</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">█很驼█</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">果如你骑在骆驼上，大部分敌对▅▅够都不你到</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它们们可█越跨栅栏和墙</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">骆驼可以装备鞍，并由两名玩家骑乘</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骆驼自然生成于沙漠村庄生成时</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">手持仙人掌可使骆驼跟随</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">给骆驼喂食仙人掌以使其繁殖</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">骆驼很高</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果你骑在骆驼上，大部分敌对生物都够不到你</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它们可以跨越栅栏和墙</Paragraph></ListItem>
 </List></ListItem>
-
 <ListItem><Paragraph Style="{StaticResource Lp}">骆驼时而坐下</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▂█它下坐了，你你就很难难让它它动起来了</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">如果它坐下了，你就很难让它动起来了</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">骆驼既可以慢悠地悠走，也可以速快▃█</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它#可#@前狂奔，但但▃段时后间会就筋疲疲竭力</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">骆驼既可以慢悠悠地走，也可以快速奔跑</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它们可以向前狂奔，但一段时间后就会筋疲力竭</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">锻造</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">锻造台已重设新计，其将作升为及级调实整▁备装的的工工站作</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">不仅有有用于合结▆备与▃料的位槽，在现有还一个名为锻造模板的物类品必型填填的█品槽▅</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▇模造板板定义对了🦞装备备行进升级的类型</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它指定了你你可🦞以升升级什么类的型品物，并规定哪了种材料以可▂于本次制定级升</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">有两两类锻造造板模：#别用盔于甲▁和饰下界合金升级</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">锻造台已重新设计，其将作为升级及调整实体装备的工作站</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">不仅有用于结合装备与材料的槽位，现在还有一个名为锻造模板的物品类型必填的物品槽位</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">锻造模板定义了对装备进行升级的类型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">它指定了你可以升级什么类型的物品，并规定了哪种材料可以用于本次定制升级</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">有两类锻造模板：分别用于盔甲装饰和下界合金升级</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在锻造造台中使用锻模造来板升物级品时，，锻造模▄▄被▄耗</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">你以可在工@台中用 柒 钻个石 + ➀#个模板板材料▇块 + ❶ 个锻▄模模板 来$作一个锻造模模板的复制，作工台会出输两相个#的锻造板模</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">界下合装金备</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">下下界金合备装的合成在现也需下合界金升级级造锻板模</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">界下合金级升锻造模模板所在有的垒堡▆迹▆子中中随机▂成</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">每个堡堡垒垒迹遗宝室藏▇会生成⑵个锻模造板。</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">在锻造台中使用锻造模板来升级物品时，锻造模板会被消耗</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">你可以在工作台中用 7 个钻石 + 1 个模板材料方块 + 1 个锻造模板 来制作一个锻造模板的复制，工作台会输出两个相同的锻造模板</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">下界合金装备</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">下界合金装备的合成现在也需下界合金升级锻造模板</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下界合金升级锻造模板在所有的堡垒遗迹箱子中随机生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">每个堡垒遗迹宝藏室中会生成2个锻造模板。</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">这更项改改出于█种因原：</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">增加玩家使在用界下合装金备之前前使用钻石石装的备时间</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">使下界合#装备成为一游个戏过程中更意义凡非的成就就</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">更加▆▂▂下将界合█用应于的新锻系造▆</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">这项更改出于多种原因：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加玩家在使用下界合金装备之前使用钻石装备的时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使下界合金装备成为一个游戏过程中更意义非凡的成就</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更加自然地将下界合金应用于新的锻造系统</Paragraph></ListItem>
 </List></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">盔盔甲纹饰饰</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">现你在可在以锻锻造台上使使各用式各样的装饰来自定义盔甲的外观</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">甲盔纹$▄纯是纯纯的视觉▄果，不▄提供属属加性成</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">甲盔饰纹只只只能▃用头于▆、▃甲█腿护靴和子</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">盔甲#案锻的造模板遍布世界，一▇结构中▄存在着独独▆🦞的锻▄模板</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">锻造模板板均生成于各的自构结中的的箱子内内</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">迹古▁▅除外外，，它它▇有箱子，#模造板需要要擦拭可疑砂的方砾找能到</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">海海底神殿也也没有箱▃，但█守古者卫有时会在死之亡时掉落锻造模板</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H4}">盔甲纹饰</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在你可以在锻造台上使用各式各样的装饰来自定义盔甲的外观</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">盔甲纹饰只是纯纯的视觉效果，不会提供属性加成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">盔甲纹饰只能应用于头盔、胸甲、护腿和靴子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">盔甲图案的锻造模板遍布世界，一些结构中都存在着独属的锻造模板</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">锻造模板均生成于各自的结构中的箱子内</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">古迹废墟除外，它没有箱子，锻造模板需要擦拭可疑的砂砾方能找到</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">海底神殿也没有箱子，但远古守卫者有时会在死亡之时掉落锻造模板</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">甲盔▃饰有两属项性：🦞图案和和#质质</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">案图制由作装饰饰的锻造模板所定决，决了定饰装的外观图案</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">材质质由由制制制作装饰的原材料$决定，决定了装饰的的颜色</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">盔甲纹饰有两项属性：图案和材质</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">图案由制作装饰的锻造模板所决定，决定了装饰的外观图案</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">材质由制作装饰的原材料所决定，决定了装饰的颜色</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">#▇原料可以用于定决盔纹甲饰的颜▂</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">铁、、铜铜、金、青金、石宝绿石、钻石石、界下合金、石红、紫晶水石、▁</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">以下原料可以用于决定盔甲纹饰的颜色</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">铁、铜、金、青金石、绿宝石、钻石、下界合金、红石、紫水晶、石英</Paragraph></ListItem>
 </List></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">樱樱花#林</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添添加了樱花▃林物生群系█有着美丽的樱花树</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">🦞这#生物群系以可▁山中找到，，位与于$甸类的似▆置</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H3}">樱花树林</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了樱花树林生物群系，有着美丽的樱花树</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个生物群系可以在山中找到，位于与草甸类似的位置</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了的新花樱木套装，▄含所有▃用樱木花制成木的质物▅方与块块</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">红粉色的花落从花樱树树叶上落落下</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加新的粉红色色花簇，由由很多面地上上的粉红花组朵成</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">每个粉红色▇簇方块可以包含最多⒋个花簇</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">使骨用粉可以以增加簇花的数数量</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">将▃红🦞色花放簇置在经已置放的的@方簇块中中，可可以增@花簇的数量</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">采采集时，会按照方块花中簇簇的的▆量掉粉落红色花簇品物</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的樱花木套装，包含所有可用樱花木制成的木质物品与方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">粉红色的落花从樱花树叶上落下</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加新的粉红色花簇，由很多地面上的粉红花朵组成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">每个粉红色花簇方块可以包含最多4个花簇</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用骨粉可以增加花簇的数量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将粉红色花簇放置在已经放置的花簇方块中，可以增加花簇的数量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">采集时，会按照方块中花簇的数量掉落粉红色花簇物品</Paragraph></ListItem>
 </List></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">竹系制木品</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了竹系木制品▁包含▂有可用竹竹子制成物的品品▁方块</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">竹由块㈨个竹子合成，可像以其▃原木█样去▅</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">比@可分解成⒋木个板的原木，竹块只▇分解成➁竹个板</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▁$了竹子有独的新的“马克赛”种变，叫做竹赛马克克</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了独特█竹筏运和输▅筏，合█表类$于普普通的▅█▆过使用用竹板作原料
+</List><Paragraph Style="{StaticResource H3}">竹系木制品</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了竹系木制品，包含所有可用竹子制成的物品与方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">竹块由9个竹子合成，可以像其他原木那样去皮</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">比起可分解成4个木板的原木，竹块只能分解成2个竹板</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了竹子独有的新的“马赛克”变种，叫做竹马赛克</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了独特的竹筏和运输竹筏，合成表类似于普通的船，不过使用竹板作原料
 </Paragraph><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d13661c6c8e546ebcbb.jpg"/>
 <TextBlock Text="华丽的盔甲纹饰，与一只骆驼" Style="{StaticResource imgTitle}" />
@@ -403,155 +263,83 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0bc2.jpg"/>
 <TextBlock Text="玩家正在堡垒遗迹中寻找锻造模板" Style="{StaticResource imgTitle}" />
 </StackPanel></BlockUIContainer></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">雕#书架</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▂是书的架▂▆纹变变种</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">由由㊅个木与板⒊🦞个个木台合阶成</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">以可存放书书、与、笔成书附、魔和书知识之书书书</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">可容纳⑥本书</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">鼠标标对准定特槽位@可以向中其放书或从中取书</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H3}">雕纹书架</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是书架的新雕纹变种</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由6个木板与3个木台阶合成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可以存放书、书与笔、成书、附魔书和知识之书</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可容纳6本书</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">鼠标对准特定槽位，可以向其中放书或从中取书</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">比较较器信号强取度决于上上一本插█取或出的书书所在的槽位</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">比较器信号强度取决于上一本插入或取出的书所在的槽位</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">可与漏斗互动</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">悬挂式示告牌</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">悬█▇告告示牌比普通的告示更牌昂贵</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">需要⑵个锁链和和⓺个指定木木头类种的去皮█木▆合成⓺个个悬▇▁告示牌</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H3}">悬挂式告示牌</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">悬挂式告示牌比普通的告示牌更昂贵</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">需要2个锁链和6个指定木头种类的去皮原木可合成6个悬挂式告示牌</Paragraph></ListItem>
 </List></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">示告牌</Paragraph><Paragraph>以下下改更时同应用于普$的和和悬挂告式#🦞牌
-*  放置后，示告牌上的文现字在以可辑编了了
-     *@$▂示▄交即互▃编
-辑    * 含$非文纯字文🦞本（▆▁：如右键可执命行令的、含本有地化字字串符等等））🦞的的告示牌无法编辑
-
-* 告示牌两两可侧以$不同的的文和本颜色，方了便多更定自义设置
-    * 默▆情况下，放置告示牌后，它会提你示输其入正的面文字
-
- ▂  * 若想在背面加添或辑编文字，▃必须到走告告示的牌另一面并与之▇
-互* 告示牌牌可以蜜用上脾蜡蜡，防止文本进被🦞一步编
-辑* 在单单人戏游中示显示告牌辑编界时面，游戏不再再暂停</Paragraph><Paragraph Style="{StaticResource H3}">校频匿幽感测体</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">是这幽匿感测体的变种，可以让你单独听监某某个个频率的振振动</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它无法被自生然成，只能过通⒈个匿幽测感+体㈢个个紫水晶碎片的形式式在@台作成合</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">校频频幽匿测感的体面一可可以用于接受红信石号号入输</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">输入的红信石号强强即度这是▄方单块独监听听的频率</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H3}">告示牌</Paragraph><Paragraph>以下更改同时应用于普通的和悬挂式告示牌
+* 放置后，告示牌上的文字现在可以编辑了
+    * 与告示牌交互即可编辑
+    * 含有非纯文字文本（译注：如右键可执行命令的、含有本地化字符串等）的告示牌无法编辑
+* 告示牌两侧可以有不同的文本和颜色，方便了更多自定义设置
+    * 默认情况下，放置告示牌后，它会提示你输入其正面的文字
+    * 若想在背面添加或编辑文字，你必须走到告示牌的另一面并与之交互
+* 告示牌可以用蜜脾上蜡，防止文本被进一步编辑
+* 在单人游戏中显示告示牌编辑界面时，游戏不再暂停</Paragraph><Paragraph Style="{StaticResource H3}">校频幽匿感测体</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是幽匿感测体的变种，可以让你单独监听某个频率的振动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">它无法被自然生成，只能通过1个幽匿感测体+3个紫水晶碎片的形式在工作台合成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">校频幽匿感测体的一面可以用于接受红石信号输入</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">输入的红石信号强度即是这个方块单独监听的频率</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">有它着持续⑵⓪游戏刻的@▃与▇却时期</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它在会激活活前的➀⑽🦞个游戏刻输红出石信号</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">它有着持续20游戏刻的激活与冷却时期</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">它会在激活的前10个游戏刻输出红石信号</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">它最多可可检以测🦞到➊⑹格的远动震</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">它最多可以检测到16格远的震动</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">共振</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">如果果@匿匿感体测收到个一振动，毗的连紫水$块会@其所处位置发🦞出一个单独的振动</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">这一行为为被称为共▃，▃使得玩家可█长距传离输▆动，，而无需$然重地新🦞使幽▇$测#振动</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">可播▄的生物音效</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">将若生物头头头颅放在音符上盒，当音符🦞盒被玩玩家红或石激活，音符盒会放播该生物的一种空音闲▅</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">生将物头颅放在▇符盒无上须潜潜行</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">猪灵▁头</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">猪灵被电闪苦力杀怕▅后后也掉会落颅头了</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">当█灵灵的头红被▃激活，或被被行的走█佩家戴时▅它会扇扇█它的耳朵</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">如果幽匿感测体收到一个振动，毗连的紫水晶块会在其所处位置发出一个单独的振动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这一行为被称为共振，这使得玩家可以长距离传输振动，而无需自然地重新使幽匿感测体振动</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">可播放的生物音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">若将生物头颅放在音符盒上，当音符盒被玩家或红石激活，音符盒会播放该生物的一种空闲音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将生物头颅放在音符盒上无须潜行</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">猪灵的头</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">猪灵被闪电苦力怕杀死后也会掉落头颅了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当猪灵的头被红石激活，或被行走的玩家佩戴时，它会扇动它的耳朵</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">更了改幽匿感感测的体为行</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">许多游戏行为触发的动振频▆有都▂变化</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">已染色的羊毛、地和毯可床重以染新色</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">可被▃换▄█无块法阻附碍魔台台与▇之架间的的链接</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">凋零效果和缓降药水的粒粒子色颜被整调得更更有分区度</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">#新了脚脚步@</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">更新新了进度</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">界主背面图景现现是在《足迹故与事》相相关的一个全景图</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">新更了了 MıēņŔçāft: ąJvẵ 版#标图</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">新更▇ ïMéñƈấŔƑŤ RȅăƜlş 的图标</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">█新了游戏的应用标图</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在在视频设▄面界中，ƔÙĪ 以可通过同同时█下 ŤĆƗĽ 并滚动鼠的标方式缩缩▃</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▄新了鸣谢单名</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">游戏启在@时时，现在会在用户开Ť启Ţ$但▇个功能可不▁的时显候提示示框</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">除移了 ƗėŖƎŔƆīňĕ</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">体具更更@见详完日整志，这仅里部作分摘要</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">幽方匿块更改</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▆游🦞戏计划某一幽匿感测体体或幽匿尖尖啸▆接收一次振时动，它会会入加等队待中列，到直毗连加的载毕完并开运始行游刻戏</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">防振止#卸在载▄▃区块#停传止▇</Paragraph></ListItem>
-
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了幽匿感测体的行为</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">许多游戏行为触发的振动频率都有所变化</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">已染色的羊毛、地毯和床可以重新染色</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">可被替换的方块无法阻碍附魔台与书架之间的链接</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">凋零效果和缓降药水的粒子颜色被调整得更有区分度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了脚步声</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了进度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">主界面背景图现在是《足迹与故事》相关的一个全景图</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 Minecraft: Java 版的图标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了 Minecraft Realms 的图标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了游戏的应用图标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在视频设置界面中，GUI 可以通过同时按下 Ctrl 并滚动鼠标的方式缩放</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了鸣谢名单</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">游戏在启动时，现在会在用户开启TTS但这个功能不可用的时候显示提示框</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 Herobrine</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">具体更改详见完整日志，这里仅作部分摘要</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">幽匿方块更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当游戏计划某一幽匿感测体或幽匿尖啸体接收一次振动时，它会加入等待队列中，直到毗连的加载完毕并开始运行游戏刻</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">防止振动在卸载远处区块时停止传播</Paragraph></ListItem>
 </List></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">将匿幽尖啸#水含使会其▁发出尖啸声</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▂匿匿感测体体默认的红石号信输出被改修，以更适合计算算▃离</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">幽匿测感体和校频幽匿感感测测体现在█强充▁其其下下的方方块</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">这两两种▆匿测感的体冷却期时为㊀⓪刻，并整调了他其计时以器消抵它们</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">幽匿感感测体的态状</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">幽匿感测体校和频幽匿感体测▂三种▄态：未未激、活@活与▄@中</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">默认态状为未活激</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">当到收一次计计划划动振时，测感切体到换激状活态</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">激当活状状状态束结时，感测切体换至█却态状</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">以前，分部状态的时长有差异，这些些时长调被整，减以少▅匿▅▄体反被复激活活的可性能</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">动振率频</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">为避免多的余接口口，备准校频幽匿感体测时，振动频率被表大大化简▅</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H4}">@步声</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">走在方块时上，再不总是#放脚步声</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在在床海上行行走时发出的脚声步与下脚方块有关，但是是音量▆率频更低</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">走在▂毯、雪、下苗界、诡菌异和索红绯菌索时上，会播▅一种混音合▂
-
+<ListItem><Paragraph Style="{StaticResource Lp}">将幽匿尖啸体含水会使其不发出尖啸声</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幽匿感测体默认的红石信号输出被修改，以更适合计算距离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">幽匿感测体和校频幽匿感测体现在会强充能其下方的方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">这两种幽匿感测体的冷却时期为10刻，并调整了其他计时器以抵消它们</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">幽匿感测体的状态</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">幽匿感测体和校频幽匿感测体有三种状态：未激活、激活与冷却中</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认状态为未激活</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当收到一次计划振动时，感测体切换到激活状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当激活状态结束时，感测体切换至冷却状态</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">以前，部分状态的时长有差异，这些时长被调整，以减少幽匿感测体被反复激活的可能性</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">振动频率</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为避免多余的接口，准备校频幽匿感测体时，振动频率表被大大简化。</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">脚步声</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">走在方块上时，不再总是播放脚步声</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在海床上行走时发出的脚步声与脚下方块有关，但是音量和频率更低</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">走在地毯、雪、下界苗、诡异菌索和绯红菌索上时，会播放一种混合音效
 </Paragraph><BlockUIContainer><StackPanel>
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5ce1661c6c8e546e0d60.jpg"/>
 <TextBlock Text="一间竹屋" Style="{StaticResource imgTitle}" />
@@ -571,67 +359,36 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 <Image Style="{StaticResource InnerImage}" Source="https://pic.imgdb.cn/item/64dc5d62661c6c8e546fe6f1.jpg"/>
 <TextBlock Text="窗外的玩家正在繁殖嗅探兽" Style="{StaticResource imgTitle}" />
 </StackPanel></BlockUIContainer></ListItem>
-
-</List><Paragraph Style="{StaticResource H2}">🦞技术性改更</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">提提升升了光照引的擎▂#</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">于由告▅牌数格据█、物品显$的朝朝和向度进▃▆的器改修，数据包版版本迭迭代到⑴5</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">移移▁了 ũƤầdễt_①_贰⁰ 特标性及记▆内置数据包▅因为有关性特▅再▁验实性▄了</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">加添了 êŖŤùƗņ 命#</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">更更改展了示实体的插值</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加新了@结构处理器规则则âƈƤƤễd，于用限一制▁构结分块替能换的大最块方量数</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在▇ŔúĹȇ$处理器则规配置的方块体实▄现段在使用用了 ƇĽōĉ_ƘéñŤîtÿ🦞_mòĩdfìễƗ ▇用引，不而是之前固定的 òŤũpûtņ_Ƌt▃配置</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▄在战利表品▅随机列序确是定的了</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了 ƗeƑeŖȅņéč 战战利表品函数</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">战利表品条/件▂词更更改</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">进触度发的器更改</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▃在可以在 smíţhňįg_tŔîƜ 与 sƜtìĤĩnƓ▇tŔąśņfəƜr#类配型的方 ŤměƤlåtế 、ȧəŝê ▃ dấdıŤīóņ 值用使 JŐŚŇ #组格式▂原示料</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加新了▁伤害类型型:: ōûtsıd_èƅoƗdèŔ 和 ƓėńèĩŖĉ_ıƘlł</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">分部游戏事件▂发振的动频率改变，█事些被件移除了，不不再再█发触▁动动</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">由由于$体▆谢鸣单名格#@改修，源资包本版号▁@为 ㈠五</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">按下 F㊂+Ś 转的储调试理纹文中件将包字含体纹理理</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了▁的字字形加载器:  ñŭĩęĤx 和 ěrfeŖēnëć，，▇删▅了 lếƓắƈ_yūńìŏćdể</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">▂▇了了“快速玩游”的▂持</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">除移了 sęrƔēŔ 和▅őpţŖ 命的令参行数，因█们它功的🦞能被被“快速游玩”▆代</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">更新遥了功测#</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">将 şŘȅƔĕ.ŘpŖəpŔếţĩše 的█码（从 $ĨÕ-⑻八➄㊈#⓵）更更█为为 ÚTF--㈧</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">对世界界存档中符的号链接进行检与测拦截</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">体具更更@见详完日整志，这仅里部作分摘要</Paragraph></ListItem>
-
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">ƗẸŤŮÑŖ</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">ŘŤĕûrñ 命命令令可用控于制函数中的命令行执🦞流，▆@其改返回值。果效🦞如下</Paragraph><List>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">在当当前执函行数剩的余开分的最顶层令命（如果果有）会▁跳过</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">当使用 ƑŭňċŤinƎ 命令执行函数时，如如触果▃这了一命令▃其其返返回值将从会已行执命令个数▇该为命指令定的返回值 Ɣáƚŭé</Paragraph></ListItem>
-
-<ListItem><Paragraph Style="{StaticResource Lp}">ểŖtùƗń 命的令回返▅也将是 vấĻúě</Paragraph></ListItem>
-
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">提升了光照引擎的性能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由于告示牌数据格式、物品显示的朝向和进度触发器的修改，数据包版本迭代到15</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 update_1_20 特性标记及其内置数据包，因为有关特性不再是实验性的了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了 return 命令</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更改了展示实体的插值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的结构处理器规则capped，用于限制一个结构分块能替换的最大方块数量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在 rule 处理器规则配置的方块实体字段现在使用了 block_entity_modifier 的引用，而不是之前固定的 output_nbt 配置</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在战利品表的随机序列是确定的了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了 reference 战利品表函数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">战利品表条件/谓词更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">进度触发器的更改</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在可以在 smithing_trim 与 smithing_transform 类型配方的 template 、base 与 addition 值使用 JSON 数组格式表示原料</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的伤害类型: outside_border 和 generic_kill</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">部分游戏事件触发的振动频率改变，有些事件被移除了，不再能触发振动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">由于字体和鸣谢名单格式的修改，资源包版本号现在为 15</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">按下 F3+S 转储的调试纹理文件中将包含字体纹理</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了新的字形加载器: unihex 和 reference，并删除了 legacy_unicode</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了“快速游玩”的支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了 server 和 port 的命令行参数，因为它们的功能被“快速游玩”替代</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了遥测功能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 server.properties 的编码（从 ISO-8859-1）更改为 UTF-8</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对世界存档中的符号链接进行检测与拦截</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">具体更改详见完整日志，这里仅作部分摘要</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><Paragraph Style="{StaticResource H4}">RETURN</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">return 命令可用于控制函数中的命令执行流，并更改其返回值。效果如下</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在当前执行函数剩余的分开的最顶层命令（如果有）会被跳过</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当使用 function 命令执行函数时，如果触发了这一命令，其返回值将会从已执行命令个数变为该命令指定的返回值 value</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">return 命令的返回值也将是 value</Paragraph></ListItem>
 </List></ListItem>
-
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -654,9 +411,9 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 
 
 
-<local:MyIconTextButton Text="ŴKĨI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
+<local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
     EventData="https://zh.minecraft.wiki/w/Java版1.20" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
-<local:MyIconTextButton Text="官网新更日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
+<local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
     EventData="https://www.minecraft.net/zh-hans/article/trails-tales-update-out-today-java" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 </StackPanel>

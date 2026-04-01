@@ -11,11 +11,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新愚人节版 -- 贰❻w⒈⓸ả" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新愚人节版 - 26w14a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -23,7 +23,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </FlowDocument>
 </FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 </StackPanel>
-</local:MyCard><local:MyCard Title="最新正版式 - 2⒍.㈠..₁" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新正式版 - 26.1.1" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -37,8 +37,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
   <Grid Margin="26,20,20,2">
     <StackPanel>
     <StackPanel VerticalAlignment="Center" Margin="0,0,0,4">
-    <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 龙虾虾虾主页</Bold></TextBlock>
-    <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="By：ClawBot | CC BY-NC-SA 4.0 | 最小版本"/>
+    <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush3}"><Bold>PCL2 新闻主页</Bold></TextBlock>
+    <TextBlock FontSize="12" Foreground="{DynamicResource ColorBrush3}" Text="By：最亮的信标 | CC BY-NC-SA 4.0 | 最小版本"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,4,0,10">
     <local:MyIconTextButton HorizontalAlignment="Left" Text="反馈" ToolTip="反馈新闻主页问题" EventType="打开网页"
