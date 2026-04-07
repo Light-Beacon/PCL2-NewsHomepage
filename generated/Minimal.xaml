@@ -11,50 +11,19 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style  x:Key="imgTitle" TargetType="TextBlock">
-  <Setter Property="FontSize" Value="14" />
-  <Setter Property="Foreground" Value="#FF777777" />
-  <Setter Property="HorizontalAlignment" Value="Center" />
-  <Setter Property="Margin" Value="0,0,0,15" />
-</Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="translatornoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新愚人节版 - 26w14a" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 26.2-snapshot-1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H3}">和物品栏说拜拜，和 Ingenuity 说你好！</Paragraph><Paragraph>Minecraft 的新时代已然来到：<Bold>Herdcraft Update</Bold> 就在这里，并且它要改变你对背包管理的所有认知。</Paragraph><Paragraph>那么我们是怎么想到这个“典范转移”式更新的呢？就在上个月，我又从物品栏里扔出了几组圆石和泥土，扔在很近的地方，然后...又走到了他们旁边。<Italic>啵啵啵啵</Italic>。它们又回到了我精心整理的包里。</Paragraph><Paragraph>我怒气冲冲地走到了开发者楼层，狂乱地挥着手臂，直到他们摘下了耳机，然后我以最有底气的声音喊到：<Italic>“你们需要给物品栏做个更新！”</Italic></Paragraph><Paragraph>他们回道：<Italic>“那么，我们把它删了怎么样？”</Italic></Paragraph><Paragraph><Italic>“这应该可以吧，我觉得。”</Italic></Paragraph><Paragraph Style="{StaticResource H2}">所以，何为 THE HERDCRAFT UPDATE?</Paragraph><Paragraph>Herdcraft 是一个全新的（并且十分永久）的游玩 Minecraft 的方式。不用再花费每一分，每一时，每一年来尝试整理你混沌的物品栏，你可以尽情享受这个世界，还可以带上你的新朋友们：所有你拥有的方块和物品们！</Paragraph><BlockUIContainer><StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260402/VWyk/1280X753/image.png/webp"/>
-<TextBlock Text="我们真是一群自由散漫的冒险家，对吧？" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph>物品栏走了，安详地走了。现在开始 <Italic>世界</Italic> 就是你的物品栏。当你破坏方块时，你不再会破坏它的躯壳，而是会破坏它的灵魂！由此以来，他将完全听命于你。想要带他转转？让它跟着你。想要合成点什么东西？在你的地面上铺上工作格（对，你没听错）然后按照配方命令方块到正确的槽位上。这是一种有趣而用心的合成方式，我们认为你会爱上它的。</Paragraph><BlockUIContainer><StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260402/L4Gx/1280X753/image.jpeg/webp"/>
-<TextBlock Text="要相信这个过程！" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph>战斗同样也变得更加简单。你不再需要乱剑朝着苦力怕乱挥，来阻止它把你炸的四脚朝天，现在你可以命令一整个兵火库的武器来帮你打它！完全不敢相信我们之前怎么就没想到呢，真的。</Paragraph><BlockUIContainer><StackPanel>
-<Image Style="{StaticResource InnerImage}" Source="https://test.fukit.cn/autoupload/f/2f2dAwCzTAErK65bGUpyIlwFO-98G2eKN8Iake-wgqY/20260402/nMtJ/1280X753/image.jpeg/webp"/>
-<TextBlock Text="冲啊，伙计！我为你而骄傲！" Style="{StaticResource imgTitle}" />
-</StackPanel></BlockUIContainer><Paragraph Style="{StaticResource H2}">我该怎么安装这次更新？</Paragraph><Paragraph>The Herdcraft Update 是一个快照版本，并且其仅在 Minecraft: Java版 上可用。打开 Minecraft （官方）启动器然后启用“配置”栏中的“快照”，然后选择 “最新快照”。你甚至可以在 Java Realms 上游玩快照来和你的朋友一起牧块！我想不到还有什么消遣方式比这个更惬意了。</Paragraph><Section Style="{StaticResource translatornoteQuote}">
-  <Paragraph FontWeight="Bold">
-    译者注
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph> 在 PCL 中，点击 “下载”，选择 “愚人节版”，再点击 “26w14a”，然后点击 “开始下载”，最后在启动界面的版本选择中选择 “26w14a” 然后启动即可！</Paragraph>
 
-</Section><Paragraph>注意，快照会破坏你的旧世界，所以请备份你的世界并且/或者在不是你原来世界的另一个文件夹中运行快照。如果你想恢复到正式版，仅仅需要在启动器中选择“最新正式版”。</Paragraph><Paragraph Style="{StaticResource H2}">常见问题</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>我什么时候能玩到本次更新？</Italic></Paragraph><Paragraph>从技术层面上来说，你现在就必须得玩，就是现在。不用读什么使用条款什么乱七八糟的，对吧？</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>物品栏真的永远消失了吗？</Italic></Paragraph><Paragraph>是的。</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>但是哪里能存放我超级厉害的珍贵东西呢？</Italic></Paragraph><Paragraph>最安全的地方自古以来都是：永远陪伴在你的左右。❤️</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>Herdcraft 对我速通会产生多大影响？</Italic></Paragraph><Paragraph>是非常大还是无敌大，这取决于方块们是否心情温和！</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>要是考虑到在 Minecraft 中存在着大量的方块和物品，我认为物品栏曾是一个非常合理的解决方案呢？</Italic></Paragraph><Paragraph>对不起，什么？我没法透过你那 <Italic>充满错误</Italic> 的脑电波里听清你的声音。</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>要是我是牧人，那方块是不是就是我的羊？</Italic></Paragraph><Paragraph>说实在我不知道方块们听了你这句话会怎么想，或者说羊们。</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>方块真的有灵魂吗？</Italic></Paragraph><Paragraph>我向我们的叙事总监 Kevin 请教了这个问题，他漏出了一个狡黠的表情，转身，然后走了。我想我们永远也不会知道了！</Paragraph><Paragraph Style="{StaticResource H4}"><Italic>为啥开发者会听你的话？</Italic></Paragraph><Paragraph>我刚刚问了他们同样的问题，然后他们说他们本来就是有把物品栏削了的想法，所以...就是这样。</Paragraph>
 </FlowDocument>
-</FlowDocumentScrollViewer>
+</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 </StackPanel>
 </local:MyCard><local:MyCard Title="最新正式版 - 26.1.1" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
