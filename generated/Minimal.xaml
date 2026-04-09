@@ -11,16 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -40,9 +33,23 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新发布候选版 - 26.1.2-rc-1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 26.2-snapshot-2" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">性能改进</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在升级来自于 26.1 之前的特定的世界变得更快了</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">F3 调试界面中的 <TextBox Style="{StaticResource InlineCode}">fps</TextBox> 项现在会报告所使用的呈现模式类型（例如 <TextBox Style="{StaticResource InlineCode}">mailbox</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">fifo relaxed</TextBox>），而不再只显示 <TextBox Style="{StaticResource InlineCode}">vsync</TextBox></Paragraph></ListItem>
+</List>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="最新正式版 - 26.1.2" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -51,319 +58,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新快照版 - 26.2-snapshot-1" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了使用 Vulkan 渲染游戏的支持</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在视频设置里增加了新的 &quot;Graphics API&quot; 选项</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Sulfur Cube 生物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Sulfur Cube 生物</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会生成在新的 Sulfur 洞穴生物群系中</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当玩家手持方块与其交互时，Sulfur Cube 会吸收该方块，并禁用其 AI</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当方块在其体内时，玩家可以使用剪刀与 Sulfur Cube 交互，将方块剪出，并重新启用其 AI</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Sulfur Cube 会跟随拿着其可吸收方块的玩家</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Sulfur Cube 还会寻找附近的方块掉落实体，并移动过去将其吸收</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当被击杀时，Sulfur Cube 会分裂成两个更小的 Sulfur Cube</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">小型 Sulfur Cube 可以被黏液球吸引，使用黏液球喂食可以使其变为大型 Sulfur Cube</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">体内有方块时，Sulfur Cube 不会受到摔落伤害或玩家伤害，并会变成一个可以被玩家击打和推动的实体物体</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">体内有方块时，它会获得下文列出的某一种原型，并根据所吸收方块改变自身的物理属性</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">玩家可以使用空铁桶捡起大型 Sulfur Cube</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">发射器现在可以为 Sulfur Cube 放入或更换体内的方块，也可以使用剪刀将其体内的方块剪出</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">发射器可以使用装有 Sulfur Cube 的铁桶来生成 Sulfur Cube</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">Sulfur Cube 原型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">每种原型的特征在于：被击中时球的速度、与方块和可碰撞实体发生碰撞时的弹性、地面摩擦力、空气阻力，以及是否会在液体中漂浮</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">目前有如下几种原型：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">普通：中等速度、中等弹性、中等地面摩擦力以及较低的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">会在液体中漂浮</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收石头和矿物方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">弹性：高速、高弹性、中等地面摩擦力以及较低的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">会在液体中漂浮</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收木质方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">缓慢平移：低速、低弹性、中等地面摩擦力以及中等空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收金属方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">快速平移：高速、低弹性、中等地面摩擦力以及较低的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收有机方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">轻盈：低速、高弹性、中等地面摩擦力以及较高的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">会在液体中漂浮</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收所有羊毛方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">快速滑行：高速、无弹性、较低的地面摩擦力以及较低的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收冰类方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">缓慢滑行：低速、无弹性、较低的地面摩擦力以及较低的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收蘑菇方块时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">此外还有两种特殊原型：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">高阻力：速度极慢、阻力较低、弹性较低但地面摩擦力极高</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收灵魂沙和灵魂土时</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">黏性：与高尔夫球具有相同的属性，但拥有极高的地面摩擦力且完全没有弹性，以模拟黏性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">用于吸收蜜脾块时</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Cinnabar 和 Sulfur 系列方块</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Cinnabar 和 Sulfur 石头方块系列</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">每一个都有其磨制和砖块变种</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Each 变种 has its Slabs, 楼梯 and 墙 blocks</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 Chiseled Cinnabar 和 Chiseled Sulfur 方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Sulfur 洞穴生物群系</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 sulfur 洞穴地下生物群系</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在会自然生成于丘陵和山脉的地下</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">sulfur 洞穴生物群系有很多 sulfur 和 cinnabar</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会生成新的 Sulfur Cube 生物和洞穴蜘蛛</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会生成包含 Potent Sulfur 的 Sulfur Pools</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Potent Sulfur</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">是一种会在 sulfur 洞穴生物群系内水池中自然生成的新方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会产生气泡，气泡可以上升到其上方最多 4 格水源方块处</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当其下方最多有 4 格水源方块时，会在水面上生成一团会导致反胃的毒气云</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">这团云会在相邻的水面上扩散，最大半径为 3 格</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以由 9 个 Sulfur Block 合成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Potent Sulfur Block 可以再合成为 4 个 Sulfur Block</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Sulfur Spring</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新的地物，会自然在 sulfur 洞穴生物群系上方生成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">由 Sulfur、 Potent Sulfur 和岩浆块组成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Sulfur Spring 有四种大小变种:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">小型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">中型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">大型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">超大型</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Vulkan 支持</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">正如<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://www.minecraft.net/article/another-step-towards-vibrant-visuals-for-java-edition">之前公告</local:MyTextButton></Underline>所说，我们计划将游戏从 OpenGL 迁移到 Vulkan</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">旧硬件或旧版驱动程序可能并不支持 Vulkan——在这些情况下将会回退使用 OpenGL</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">目前的最低要求是支持 dynamic rendering 和 push descriptors 的 Vulkan 1.2，但这一要求未来可能会上调或下调</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">目前这是一个实验性的渲染后端，性能或稳定性可能不如现有方案。如果你在使用过程中发现任何漏洞，请在<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://bugs.mojang.com/">我们的漏洞追踪器</local:MyTextButton></Underline>中进行反馈！</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在 Vulkan 模式下，我们会优先使用你的<Bold>独立显卡</Bold>而不是集成显卡，这一点与 OpenGL 下的行为不同</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">你可以在按下 F3 打开的调试信息界面的 <TextBox Style="{StaticResource InlineCode}">system_specs</TextBox> 部分查看当前正在使用哪个渲染后端</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">在 MacOS 上，我们通过 MoltenVK 将 Vulkan 转译为 Metal</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">&quot;Graphics API&quot; 视频设置</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在“视频设置”中新增的一个可用选项</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">共有三个取值：<Bold>Default</Bold>、<Bold>Prefer Vulkan</Bold> 和 <Bold>Prefer OpenGL</Bold></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">“Default” 的含义可能会在未来根据我们的判断进行调整；除非你遇到问题需要切换，否则我们推荐所有玩家使用此选项</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">目前，“Default” 和 “Prefer Vulkan” 的行为相同</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">“Prefer Vulkan” 将优先尝试使用 Vulkan 渲染，如果失败则回退到 OpenGL</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">“Prefer OpenGL” 将优先尝试使用 OpenGL 渲染，如果失败则回退到 Vulkan</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">幼年疣猪兽和僵尸疣猪兽的左耳纹理以正确镜像</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">对方块、物品和实体的微调</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当实体从方块或其他可碰撞实体上弹开时，会发出频率为 2 的震动</Paragraph></ListItem>
-</List><Section Style="{StaticResource devnoteQuote}">
-  <Paragraph FontWeight="Bold">
-    开发者注释
-    <Paragraph.Foreground>
-      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
-    </Paragraph.Foreground>
-  </Paragraph>
-  
-<Paragraph> <Italic>我们调整了床和黏液块在碰撞后恢复实体速度的方式。例如，当通过实体属性移除空气阻力时，史莱姆方块现在可以正确地让生物无限弹跳。这可能会影响玩家对床和史莱姆方块弹性的主观感受。</Italic></Paragraph>
-
-</Section><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Sulfur、Potent Sulfur 和 Cinnabar 增加了方块音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Sulfur Cube 和 Small Sulfur Cube 增加了生物音效</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 101.2</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 85</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用 Tracy 对游戏进行性能分析（以 <TextBox Style="{StaticResource InlineCode}">--tracy</TextBox> 启动）现在也会包含 GPU 计时信息</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">渲染现在改用反向深度缓冲，这有助于在大多数硬件上缓解 Z-fighting 问题</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 101.2</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_archetype</TextBox> 注册表，其中包括以下取值：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">regular</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">bouncy</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">slow_flat</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fast_flat</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">light</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fast_sliding</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">slow_sliding</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">high_resistance</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">sticky</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">条目格式：包含以下字段的对象：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">items</TextBox>：物品标签，包含所有可以喂给该原型 Sulfur Cube 的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">buoyant</TextBox>：布尔值，表示该原型的 Sulfur Cube 是否会在液体中漂浮</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute_modifiers</TextBox>：对象列表，每个对象包含以下字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute</TextBox>：要修改的属性</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox>：此修饰符的唯一标识符</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">amount</TextBox>：对该属性进行修改的数值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">operation</TextBox>：属性的修改方式，可选 <TextBox Style="{StaticResource InlineCode}">add_value</TextBox>、<TextBox Style="{StaticResource InlineCode}">add_multiplied_base</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">add_multiplied_total</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当授予或移除一些进度时，命令输出将会报告所有玩家受影响的进度状态更改数量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当对多个玩家授予或移除进度或其条件时，命令输出将在会报告有多少玩家发生了变化</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">属性</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:bounciness</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">决定实体在与方块或可碰撞实体发生碰撞后，有多少速度会被保留</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当实体落在床或史莱姆方块等具有弹性的方块上时，会取方块和实体二者中更高的弹性值进行计算</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">接受介于 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox> 之间的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值： <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> - 不会恢复任何速度</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">最大值：<TextBox Style="{StaticResource InlineCode}">1.0</TextBox> - 完全恢复速度，与方块和可碰撞实体的碰撞不会降低速度</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:friction_modifier</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">决定根据实体所站立的方块，对实体施加多少地面摩擦</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">接受介于 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">2048.0</TextBox> 之间的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值： <TextBox Style="{StaticResource InlineCode}">1.0</TextBox> - 不修改方块本身的摩擦力</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">最小值: <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> - 将方块的摩擦力视为 0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">大于 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox> 的数值会增加实体从其所处方块上所受的摩擦力</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:air_drag_modifier</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">决定实体在空气中移动时会受到多少空气阻力</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">接受介于 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">2048.0</TextBox> 之间的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值： <TextBox Style="{StaticResource InlineCode}">1.0</TextBox> - 实体在空气中移动时会使用现有的阻力数值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">最小值: <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> - 实体不会受到任何空气阻力</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">大于 <TextBox Style="{StaticResource InlineCode}">1.0</TextBox> 的数值会增加实体在空气中移动时所受的空气阻力</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">更新了 <TextBox Style="{StaticResource InlineCode}">minecraft:knockback_resistance</TextBox> 的最小值</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">最小值从 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 更改为 <TextBox Style="{StaticResource InlineCode}">-2.0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">数据组件</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_content</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">表示被 Sulfur Cube 吸收的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：被 Sulfur Cube 吸收的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例如：<TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_content=green_wool</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">滴水石锥地物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">pointed_dripstone</TextBox> 地物类型重命名为 <TextBox Style="{StaticResource InlineCode}">speleothem</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">base_block</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">方块状态，描述构成石笋基座的方块</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">pointed_block</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">方块状态，描述生成石笋柱体的方块</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">replaceable_blocks</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">方块 ID、方块 ID 列表或带井号前缀的方块标签，用于描述该地物可以生成在哪些方块上</Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名了字段 <TextBox Style="{StaticResource InlineCode}">chance_of_taller_dripstone</TextBox> to <TextBox Style="{StaticResource InlineCode}">chance_of_taller_generation</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名了 Feature Type <TextBox Style="{StaticResource InlineCode}">dripstone_cluster</TextBox> to <TextBox Style="{StaticResource InlineCode}">speleothem_cluster</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">base_block</TextBox> - 方块状态，描述构成石笋基座的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">pointed_block</TextBox> - 方块状态，描述生成石笋柱体的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">replaceable_blocks</TextBox> - 方块 ID、方块 ID 列表或带井号前缀的方块标签，用于描述该地物可以生成在哪些方块上</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名了字段 <TextBox Style="{StaticResource InlineCode}">dripstone_block_layer_thickness</TextBox> 为<TextBox Style="{StaticResource InlineCode}">speleothem_block_layer_thickness</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名了字段 <TextBox Style="{StaticResource InlineCode}">chance_of_dripstone_column_at_max_distance_from_center</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">chance_of_speleothem_at_max_distance_from_center</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名了字段 <TextBox Style="{StaticResource InlineCode}">max_distance_from_edge_affecting_chance_of_dripstone_column</TextBox> to <TextBox Style="{StaticResource InlineCode}">max_distance_from_edge_affecting_chance_of_speleothem</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Adjusted Feature Type <TextBox Style="{StaticResource InlineCode}">large_dripstone</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">replaceable_blocks</TextBox> - 方块 ID、方块 ID 列表或带井号前缀的方块标签，用于描述该地物可以生成在哪些方块上</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">noise_gradient</TextBox> 表面规则</Paragraph><Paragraph>会基于指定的噪声和梯度列表替换方块。</Paragraph><Paragraph>格式：包含如下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">noise</TextBox>：噪声 ID，用于采样的噪声</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">gradient</TextBox>：非空对象列表，根据噪声值进行采样：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">state</TextBox>（可选）：在该索引处选择的方块状态</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果未定义该字段，则在采样到此项时不会替换任何方块</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">sequence</TextBox> 地物类型</Paragraph><Paragraph>按顺序生成一系列已放置地物。如果列表中有任意一个地物未能生成，后续地物也会被跳过。</Paragraph><Paragraph>格式：包含如下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">features</TextBox>：已放置地物列表或带井号前缀的已放置地物标签，即要生成的地物</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">template</TextBox> 地物类型</Paragraph><Paragraph>从给定的加权标识符列表中随机选择一个结构模板进行放置。默认情况下，模板会以随机旋转的方式生成，并以原点为中心对齐。</Paragraph><Paragraph>格式：包含如下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">templates</TextBox>：结构模板的加权列表。每个结构模板条目由一个标识符以及可供随机选择的旋转列表组成</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">id</TextBox>：模板的标识符</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">rotations</TextBox>：可选的旋转列表，当该模板被选中时会从中随机选择一个应用到模板上</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">允许的取值：<TextBox Style="{StaticResource InlineCode}">none</TextBox>、<TextBox Style="{StaticResource InlineCode}">clockwise_90</TextBox>、<TextBox Style="{StaticResource InlineCode}">180</TextBox>、<TextBox Style="{StaticResource InlineCode}">counterclockwise_90</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，则默认为使用全部允许的取值</Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H4}">维度类型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">字段 <TextBox Style="{StaticResource InlineCode}">infiniburn</TextBox> 现在也可以接受一个 ID 或 ID 列表，指向一个标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">已配置地物</Paragraph><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:geode</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在地物配置的 <TextBox Style="{StaticResource InlineCode}">blocks</TextBox> 部分中，字段 <TextBox Style="{StaticResource InlineCode}">cannot_replace</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">invalid_blocks</TextBox> 现在也可以接受一个 ID 或 ID 列表，指向一个标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:root_system</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在该地物配置中，字段 <TextBox Style="{StaticResource InlineCode}">root_replaceable</TextBox> 现在也可以接受一个 ID 或 ID 列表，指向一个标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:vegetation_patch</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在该地物配置中，字段 <TextBox Style="{StaticResource InlineCode}">replaceable</TextBox> 现在也可以接受一个 ID 或 ID 列表，指向一个标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:waterlogged_vegetation_patch</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在该地物配置中，字段 <TextBox Style="{StaticResource InlineCode}">replaceable</TextBox> 现在也可以接受一个 ID 或 ID 列表，指向一个标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">结构处理器</Paragraph><Paragraph Style="{StaticResource H5}"><TextBox Style="{StaticResource InlineCode}">minecraft:protected_blocks</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">除标签外，字段 <TextBox Style="{StaticResource InlineCode}">value</TextBox> 现在也接受一个 ID 或 ID 列表</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#suppresses_bounce</TextBox> - 所有与实体碰撞时抑制实体反弹的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#glazed_terracotta</TextBox>, <TextBox Style="{StaticResource InlineCode}">#concrete</TextBox> 方块集合标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#concrete_powder</TextBox> 集合标签已被重命名为 <TextBox Style="{StaticResource InlineCode}">#concrete_powders</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#shears_extreme_breaking_speed</TextBox> 用于所有可以使用剪刀以 15 的速度破坏的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#shears_major_breaking_speed</TextBox> 用于所有可以使用剪刀以 5 的速度破坏的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#shears_minor_breaking_speed</TextBox> 用于所有可以使用剪刀以 2 的速度破坏的方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#glazed_terracotta</TextBox>、 <TextBox Style="{StaticResource InlineCode}">#concrete</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">#concrete_powders</TextBox> 物品集合标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#sulfur_cube_food</TextBox> - 所有能喂给小 Sulfur Cube 的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#sulfur_cube_swallowable</TextBox> - 所有可以放在大 Sulfur Cube 体内的物品</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为放在 Sulfur Cube 体内可以决定其原型的物品增加了下列标签：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/regular</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/bouncy</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/slow_flat</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/fast_flat</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/light</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/fast_sliding</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/slow_sliding</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/high_resistance</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/sticky</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">实体标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube</TextBox> 已被添加至 <TextBox Style="{StaticResource InlineCode}">non_controlling_rider</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_with_block_immune_to</TextBox>，所有在 Sulfur Cubes 已吸收方块时免疫的伤害类型</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了 <TextBox Style="{StaticResource InlineCode}">not_scary_for_pufferfish</TextBox> 以包含 Sulfur Cube</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">游戏事件</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:bounce</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当实体从方块或反弹非零的的实体反弹时触发</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">震动频率为 <TextBox Style="{StaticResource InlineCode}">2</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">sulfur_cube_goo</TextBox> - 粒子，当 Sulfur Cube 生物跳跃时显示</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 85</Paragraph><Paragraph Style="{StaticResource H3}">方块精灵图</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的方块纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/chiseled_cinnabar.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/chiseled_sulfur.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/cinnabar.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/cinnabar_bricks.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/polished_cinnabar.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/polished_sulfur.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/potent_sulfur.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_bricks.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品精灵图</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的物品精灵图：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/sulfur_cube_bucket.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">实体纹理</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的实体纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/sulfur_cube/sulfur_cube_outer.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity/sulfur_cube/sulfur_cube_inner.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Sulfur Block 增加了音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sulfur.break</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sulfur.hit</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sulfur.place</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sulfur.step</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.sulfur.fall</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Potent Sulfur Block 增加了音效；</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.break</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.hit</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.place</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.step</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.fall</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.noxious_gas</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Cinnabar Block 增加了音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.cinnabar.break</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.cinnabar.hit</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.cinnabar.place</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.cinnabar.step</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.cinnabar.fall</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Sulfur Cube 增加了音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.jump</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.squish</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.hurt</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.death</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.absorb</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.eject</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.bounce</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.hit</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.sulfur_cube.push</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">为 Small Sulfur Cube 增加了音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.small_sulfur_cube.jump</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.small_sulfur_cube.squish</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.small_sulfur_cube.hurt</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">entity.small_sulfur_cube.death</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">着色器与后处理器效果</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">core/rendertype_text</TextBox>、 <TextBox Style="{StaticResource InlineCode}">core/rendertype_text_see_through</TextBox>、 <TextBox Style="{StaticResource InlineCode}">core/rendertype_text_intensity</TextBox>、 <TextBox Style="{StaticResource InlineCode}">core/rendertype_text_intensity_see_through</TextBox>、 <TextBox Style="{StaticResource InlineCode}">core/rendertype_text_background</TextBox> 以及 <TextBox Style="{StaticResource InlineCode}">core/rendertype_text_background_see_through</TextBox> 着色器已被 <TextBox Style="{StaticResource InlineCode}">core/text</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">core/text_background</TextBox> 替代</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">变种现在由下列着色器定义控制： <TextBox Style="{StaticResource InlineCode}">IS_GUI</TextBox>、 <TextBox Style="{StaticResource InlineCode}">IS_SEE_THROUGH</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">IS_GRAYSCALE</TextBox></Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-</StackPanel>
-</local:MyCard><local:MyCard Title="最新正式版 - 26.1.1" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
-<StackPanel Style="{StaticResource ContentStack}">
-<FlowDocumentScrollViewer >
-<FlowDocument>
-<Paragraph Style="{StaticResource H2}">修复的漏洞</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">MC-307140 - 当聊天在启用状态下，聊天消息无法被举报</Paragraph></ListItem>
-</List>
-</FlowDocument>
-</FlowDocumentScrollViewer><local:MyLoading Margin="0,8" Text="翻译施工中"/>
 </StackPanel>
 </local:MyCard><local:MyCard Margin="0,10,0,14">
 <Border BorderBrush="{DynamicResource ColorBrush3}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,4">
