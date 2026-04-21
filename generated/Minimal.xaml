@@ -11,22 +11,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style  TargetType="TextBox" x:Key="BlockCode">
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="TextWrapping" Value="Wrap" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush7}" Opacity="0.8" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="0,0,5,5" Padding="16,8,16,12"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -46,128 +33,60 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="BlockCodeBorder" TargetType="Border"><Setter Property="Background" Value="{DynamicResource ColorBrush4}"/><Setter Property="Opacity" Value="0.8"/><Setter Property="CornerRadius" Value="5"/><Setter Property="Margin" Value="2"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 26.2-snapshot-3" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 26.2-snapshot-4" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H2}">新特性</Paragraph><Paragraph Style="{StaticResource H3}">Sulfur Spike</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一个可以自然生成于硫黄洞穴生物群系内的硫黄上的新的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">放置在天花板上时会形成钟乳石，放置在地面上时会形成石笋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">可以相接，组合成更长的钟乳石和石笋</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当尖端互相紧挨时，钟乳石和石笋会合并为一体，除非在放置时按 Shift</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">石笋下无方块支撑时会被破坏</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">钟乳石上无方块连接时会落下</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">被落下的钟乳石砸到会受伤，而且它们非常锋利！</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">向其投掷三叉戟可以破环</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">烈性硫黄方块不再能还原成硫黄方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了纹理下列方块的纹理：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Chiseled Cinnabar</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Chiseled Sulfur</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Cinnabar</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Cinnabar Bricks</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Polished Cinnabar</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Polished Sulfur</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">Sulfur Bricks</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Sulfur Cube 生物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">不再能上船了</Paragraph></ListItem>
+<Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了瑞士法语的支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了楚瓦什语的支持</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">硫方怪</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">自然生成的小型硫方怪现在有了正确的大小</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新了硫方怪的外部纹理</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">硫黄洞穴</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">花岗岩和凝灰岩现在会散布在硫黄和朱砂之间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">略微缩短了 Sulfur Spike Clusters 的平均长度</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">疣猪兽、猪灵和硫方怪现在可以在和平难度下生成</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了鹦鹉螺喷进和恢复体力的音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">添加了用桶装起硫方怪时的音效</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 102.0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 86.0</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 102.0</Paragraph><Paragraph Style="{StaticResource H3}">方块实体数据</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:bed</TextBox> 方块实体已被移除</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">实体谓词</Paragraph><Paragraph>实体谓词格式已从有着多个可选字段的结构改成一个与数据组件相似的映射。</Paragraph><Paragraph>例如，之前 <TextBox Style="{StaticResource InlineCode}">effects</TextBox> 是一个可选字段：</Paragraph><BlockUIContainer>
-<Border Style="{StaticResource BlockCodeBorder}" >
-<StackPanel Margin="0,2,0,0">
-<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
-<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;    &quot;effects&quot;: {...}&#x000A;}"/>
-</StackPanel>
-</Border>
-</BlockUIContainer><Paragraph>
-在本版本中，其变为类似组件的子谓词条目：</Paragraph><BlockUIContainer>
-<Border Style="{StaticResource BlockCodeBorder}" >
-<StackPanel Margin="0,2,0,0">
-<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
-<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;    &quot;minecraft:effects&quot;: {...}&#x000A;}"/>
-</StackPanel>
-</Border>
-</BlockUIContainer><Paragraph>主要功能更改如下：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">所有在实体谓词里的键现在为 ID</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">因为 ID 可以不带命名空间（默认为 <TextBox Style="{StaticResource InlineCode}">minecraft</TextBox> 命名空间），现存的字段依旧生效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">例外: 字段 <TextBox Style="{StaticResource InlineCode}">type</TextBox> 已被重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:entity_type</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">无法识别的子谓词组件现在会被拒绝（此前未知的字段会被忽略）</Paragraph></ListItem>
-</List><Paragraph>现有的类型特定子谓词已被重命名并移动到顶层。</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:lightning</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/lightning</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:fishing_hook</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/fishing_hook</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:player</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/player</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:raider</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/raider</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:sheep</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/sheep</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:slime</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:cube_mob</TextBox> 因为其包含史莱姆、岩浆怪和新的 Sulfur Cube</Paragraph></ListItem>
-</List><Paragraph>例如：</Paragraph><BlockUIContainer>
-<Border Style="{StaticResource BlockCodeBorder}" >
-<StackPanel Margin="0,2,0,0">
-<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
-<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;type_specific&quot;: {&#x000A;    &quot;type&quot;: &quot;minecraft:player&quot;,&#x000A;    &quot;looking_at&quot;: {&#x000A;      &quot;type&quot;: &quot;minecraft:ender_dragon&quot;&#x000A;    }&#x000A;  }&#x000A;}"/>
-</StackPanel>
-</Border>
-</BlockUIContainer><Paragraph>
-变为</Paragraph><BlockUIContainer>
-<Border Style="{StaticResource BlockCodeBorder}" >
-<StackPanel Margin="0,2,0,0">
-<TextBlock Foreground="White" FontSize="14" Text="" Margin="10,4"/>
-<TextBox Style="{StaticResource BlockCode}" Text="{}{&#x000A;  &quot;minecraft:type_specific/player&quot;: {&#x000A;    &quot;looking_at&quot;: {&#x000A;      &quot;minecraft:type&quot;: &quot;minecraft:ender_dragon&quot;&#x000A;    }&#x000A;  }&#x000A;}"/>
-</StackPanel>
-</Border>
-</BlockUIContainer><Paragraph Style="{StaticResource H5}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:entity_tags</TextBox> 实体子谓词</Paragraph><Paragraph>这个谓词匹配实体标签 (例如，在 <TextBox Style="{StaticResource InlineCode}">/tag</TextBox> 命令中设置的标签)。</Paragraph><Paragraph>字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">any_of</TextBox> - 可选字符串列表, 选中的实体必须有列表中任一标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">all_of</TextBox> - 可选字符串列表, 选中的实体必须有列表中全部标签</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">none_of</TextBox> - 可选字符串列表, 选中的实体必须没有列表中的所有标签</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">主世界地物</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">调整了地物类型 <TextBox Style="{StaticResource InlineCode}">lake</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">can_place_feature</TextBox> - 方块谓词, 描述可以放置该地物的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">can_replace_with_air_or_fluid</TextBox> - 方块谓词, 描述地物可以替换成空气或在 <TextBox Style="{StaticResource InlineCode}">fluid</TextBox> 中提供的方块</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了字段 <TextBox Style="{StaticResource InlineCode}">can_replace_with_barrier</TextBox> - 方块谓词, 描述该地物可以用提供的 <TextBox Style="{StaticResource InlineCode}">barrier</TextBox> 替换哪些方块</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">#speleothems</TextBox> ，包含类似于石锥的方块，如小型滴水石锥和 Sulfur Spike</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 86.0</Paragraph><Paragraph Style="{StaticResource H3}">方块精灵图</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的方块纹理:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_down_base.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_down_frustum.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_down_middle.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_down_tip.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_down_tip_merge.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_up_base.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_up_frustum.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_up_middle.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_up_tip.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/sulfur_spike_up_tip_merge.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">床现在使用方块模型和纹理，<TextBox Style="{StaticResource InlineCode}">&lt;color&gt;</TextBox> 会替换为床的颜色名称</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/bed_down.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/bed_head_north.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_foot_east.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_foot_south.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_foot_up.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_foot_west.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_head_east.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_head_up.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block/&lt;color&gt;_bed_head_west.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品精灵图</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的物品精灵图:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">item/sulfur_spike.png</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">物品模型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:bed</TextBox> 特殊模型类型已被移除</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 103.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 86.1</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 103.0</Paragraph><Paragraph Style="{StaticResource H3}">属性</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:nameplate_distance</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">控制实体 nameplate 在几格之内可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若实体不可见， nameplate 也不可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">接受 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">512.0</TextBox> 之间的值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: <TextBox Style="{StaticResource InlineCode}">64.0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:below_name_distance</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">控制实体 <TextBox Style="{StaticResource InlineCode}">below_name</TextBox> 记分板显示在几格之内可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若实体不可见， nameplate 也不可见</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">接受 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">512.0</TextBox> 之间的值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">默认值: <TextBox Style="{StaticResource InlineCode}">10.0</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">实体谓词</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">史莱姆子谓词从 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/slime</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/cube_mob</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 86.1</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:beds</TextBox> 图集已被移除</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">遥测</Paragraph><Paragraph Style="{StaticResource H4}">新必要事件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">graphics_capabilities</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个新的事件，在启动时推送，用于告知我们用于进行游戏的图形设备的功能</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_name</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这项值为 <TextBox Style="{StaticResource InlineCode}">Vulkan</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">OpenGL</TextBox>，这会帮助我们了解玩家正在使用哪个图形 API 进行游戏</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_failure_reason</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是一个错误代码列表，例如 <TextBox Style="{StaticResource InlineCode}">vulkan_device_version_too_low</TextBox>，这将帮助我们识别对 Vulkan 需求的问题</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_failure_message</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是一个简短且模糊的信息，例如 <TextBox Style="{StaticResource InlineCode}">Failed to find the GLFW platform surface extensions</TextBox>，如果玩家正在使用 Vulkan 时发生问题，这将帮助我们缩小问题范围</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_failure_missing_capabilities</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这是一个缺失 Vulkan 的功能的列表，例如 <TextBox Style="{StaticResource InlineCode}">VULKAN_CORE_1_2, VK_KHR_dynamic_rendering</TextBox>，这将帮助我们了解玩家使用 Vulkan 需要用到哪些功能</Paragraph></ListItem>
+</List></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
