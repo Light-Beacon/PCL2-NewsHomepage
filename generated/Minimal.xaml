@@ -11,11 +11,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -35,58 +31,175 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="最新快照版 - 26.2-snapshot-4" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+<local:MyCard Title="最新快照版 - 26.2-snapshot-5" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了瑞士法语的支持</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了楚瓦什语的支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的硫方怪原型: Explosive</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">烈性硫黄现在可以形成间歇泉</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">硫方怪</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">自然生成的小型硫方怪现在有了正确的大小</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">更新了硫方怪的外部纹理</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">硫黄洞穴</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">花岗岩和凝灰岩现在会散布在硫黄和朱砂之间</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">略微缩短了 Sulfur Spike Clusters 的平均长度</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">疣猪兽、猪灵和硫方怪现在可以在和平难度下生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当内部有方块时，现在会免疫爆炸</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">硫方怪原型</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在为有了三种特殊原型：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">Explosive: 和普通有着相似的属性，但有着更高的空气阻力</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当吸收 TNT 方块时使用</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被吸收的 TNT 可以被红石、火源（包含有打火石的发射器）或附近的爆炸激活</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当被火或红石激活时，被吸收的 TNT 引爆时间为 6 秒</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当被爆炸激活时，被吸收的 TNT 引爆时间为 0.75 到 3 秒之间的随机数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">硫方怪吸收了被激活的 TNT，其不能被铁桶收集</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">硫方怪吸收了被激活的 TNT，其不会收到伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">被吸收的被激活的 TNT 不可以使用剪刀取出</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当爆炸时，不会生成小型硫方怪</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">烈性硫黄</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当放在岩浆块上方并且顶部为 1-4 格水源方块时，其会产生间歇泉</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">间歇泉会在随机间隔后喷发，向上喷出一缕水粒子并向上推动上方实体</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">微调了许多生物的碰撞箱，眼睛位置以及骑乘位置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">疣猪兽现在被认为是敌对生物并且不会在和平难度生成</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">添加了用桶装起硫方怪时的音效</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 103.0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 86.1</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 103.0</Paragraph><Paragraph Style="{StaticResource H3}">属性</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:nameplate_distance</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">控制实体 nameplate 在几格之内可见</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若实体不可见， nameplate 也不可见</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">接受 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">512.0</TextBox> 之间的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值: <TextBox Style="{StaticResource InlineCode}">64.0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:below_name_distance</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">控制实体 <TextBox Style="{StaticResource InlineCode}">below_name</TextBox> 记分板显示在几格之内可见</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若实体不可见， nameplate 也不可见</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">接受 <TextBox Style="{StaticResource InlineCode}">0.0</TextBox> 到 <TextBox Style="{StaticResource InlineCode}">512.0</TextBox> 之间的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">默认值: <TextBox Style="{StaticResource InlineCode}">10.0</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">谓词</Paragraph><Paragraph Style="{StaticResource H4}">实体谓词</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">史莱姆子谓词从 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/slime</TextBox> 重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:type_specific/cube_mob</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 86.1</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:beds</TextBox> 图集已被移除</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">遥测</Paragraph><Paragraph Style="{StaticResource H4}">新必要事件</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">graphics_capabilities</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">一个新的事件，在启动时推送，用于告知我们用于进行游戏的图形设备的功能</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_name</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这项值为 <TextBox Style="{StaticResource InlineCode}">Vulkan</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">OpenGL</TextBox>，这会帮助我们了解玩家正在使用哪个图形 API 进行游戏</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了间歇泉喷发音效</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">硫黄尖锥现在有了独立的音效事件</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">设置</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">移除了触屏模式</Paragraph></ListItem>
+</List><Section Style="{StaticResource devnoteQuote}">
+  <Paragraph FontWeight="Bold">
+    开发者注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph> <Italic>触屏模式长期以来实现都不完善，也没有得到正确支持。我们计划在本次发布中弃用这一功能。若要就此提供反馈，请前往 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mctouchscreenjavafeedback">反馈网站</local:MyTextButton></Underline>。</Italic></Paragraph>
+
+</Section><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 104.0</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 86.2</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当玩家没有该记分板项时玩家分数不再会显示在玩家 TAB 界面上</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议 3.0.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">管理服务器现在会在 Minecraft 服务器启动前启动</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">尤其是，这意味着世界在加载以及潜在的在升级时会发送心跳</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">rpc.discover</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">notification/server/status</TextBox> 方法现在在专用服务器启动前就可访问</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当此时访问其他方法时服务器会返回错误</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">数据包版本 104.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_archetype</TextBox> 注册表条目新增了一个字段：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">explosion_fuse</TextBox>：可选整数；如果存在，则该原型的硫方怪在被点燃时会以该引信时间爆炸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">geyser</TextBox>、<TextBox Style="{StaticResource InlineCode}">geyser_poof</TextBox>、<TextBox Style="{StaticResource InlineCode}">geyser_base</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">geyser_plume</TextBox> 粒子</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">队伍颜色参数（用于 <TextBox Style="{StaticResource InlineCode}">team modify [name] color</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">waypoint modify [name] color</TextBox>）现在只接受带下划线的小写名称</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">也就是说，只接受 <TextBox Style="{StaticResource InlineCode}">dark_purple</TextBox>，不接受 <TextBox Style="{StaticResource InlineCode}">darkpurple</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">DarkPurple</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">值现在会匹配文本组件中的颜色名称</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">更改了 <TextBox Style="{StaticResource InlineCode}">minecraft:nameplate_distance</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:name_tag_distance</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">matching_biomes</TextBox> 世界生成类型方块谓词，用于检查方块位置是否匹配指定的某个生物群系</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">biomes</TextBox> - 生物群系 ID、生物群系列表，或以 <TextBox Style="{StaticResource InlineCode}">#</TextBox> 开头的生物群系标签：要匹配的生物群系</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_failure_reason</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这是一个错误代码列表，例如 <TextBox Style="{StaticResource InlineCode}">vulkan_device_version_too_low</TextBox>，这将帮助我们识别对 Vulkan 需求的问题</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tree</TextBox> 特性配置中的 <TextBox Style="{StaticResource InlineCode}">below_trunk_provider</TextBox> 方块状态提供器不再有默认值</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">已配置地物</Paragraph><Paragraph Style="{StaticResource H5}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:multiface_growth</TextBox> 的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">字段 <TextBox Style="{StaticResource InlineCode}">block</TextBox> 现在是必填项（此前默认值为 <TextBox Style="{StaticResource InlineCode}">minecraft:grow_lichen</TextBox>）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">密度函数</Paragraph><Paragraph Style="{StaticResource H5}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:interval_select</TextBox></Paragraph><Paragraph>根据输入的密度函数和一组阈值，在多个密度函数之间进行选择。</Paragraph><Paragraph>格式：带有以下字段的对象：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">input</TextBox> - 密度函数，用于与给定 <TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> 比较的值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> - 非空浮点数列表，用于与 <TextBox Style="{StaticResource InlineCode}">input</TextBox> 比较的阈值</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">input &lt; thresholds[i]</TextBox>，则选择 <TextBox Style="{StaticResource InlineCode}">functions[i]</TextBox> 的结果</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">如果输入大于最后一个阈值，则选择最后一个函数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> 的数量必须比 <TextBox Style="{StaticResource InlineCode}">functions</TextBox> 少 1</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">functions</TextBox> - 至少包含 2 个密度函数的列表，用于从中选择结果函数</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">functions</TextBox> 的数量必须比 <TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> 多 1</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">移除了 <TextBox Style="{StaticResource InlineCode}">minecraft:weird_scaled_sampler</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">这个密度函数已被移除，其功能已由 <TextBox Style="{StaticResource InlineCode}">interval_select</TextBox> 取代</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 <TextBox Style="{StaticResource InlineCode}">rarity_value_mapper</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">type_1</TextBox> 时，等价于：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用阈值 <TextBox Style="{StaticResource InlineCode}">-0.75, -0.5, 0.5, 0.75</TextBox> 的 <TextBox Style="{StaticResource InlineCode}">interval_select</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">选中的函数形式为：<TextBox Style="{StaticResource InlineCode}">abs(rarity * noise(x/rarity, y/rarity, z/rarity))</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对应的稀有度值：<TextBox Style="{StaticResource InlineCode}">0.5, 0.75, 1.0, 2.0, 3.0</TextBox></Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_failure_message</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这是一个简短且模糊的信息，例如 <TextBox Style="{StaticResource InlineCode}">Failed to find the GLFW platform surface extensions</TextBox>，如果玩家正在使用 Vulkan 时发生问题，这将帮助我们缩小问题范围</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当 <TextBox Style="{StaticResource InlineCode}">rarity_value_mapper</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">type_2</TextBox> 时，等价于：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">使用阈值 <TextBox Style="{StaticResource InlineCode}">-0.5, 0.0, 0.5</TextBox> 的 <TextBox Style="{StaticResource InlineCode}">interval_select</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">选中的函数形式为：<TextBox Style="{StaticResource InlineCode}">abs(rarity * noise(x/rarity, y/rarity, z/rarity))</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">对应的稀有度值：<TextBox Style="{StaticResource InlineCode}">0.75, 1.0, 1.5, 2.0</TextBox></Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的属性: <TextBox Style="{StaticResource InlineCode}">backend_failure_missing_capabilities</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这是一个缺失 Vulkan 的功能的列表，例如 <TextBox Style="{StaticResource InlineCode}">VULKAN_CORE_1_2, VK_KHR_dynamic_rendering</TextBox>，这将帮助我们了解玩家使用 Vulkan 需要用到哪些功能</Paragraph></ListItem>
-</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为部分生物免疫的方块增加了以下标签。这些标签会影响取消骑乘，以及某些生物生成放置时的有效周围方块，但不会影响寻路。</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#fox_immune_to</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#polar_bear_immune_to</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#snow_golem_immune_to</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#stray_immune_to</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#wither_immune_to</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#wither_skeleton_immune_to</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#default_immune_to</TextBox> - this tag is intentionally left empty</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser_base</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在喷发中的烈性硫黄方块底部生成云状粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">burst_impulse_base</TextBox> - 浮点数，缩放初始喷发冲量</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser_poof</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在喷发中的烈性硫黄方块底部生成云状粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">burst_impulse_base</TextBox> - 浮点数，缩放初始喷发冲量</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser_plume</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">在喷发中的烈性硫黄方块上方生成向上的水流粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser</TextBox></Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">一个发射器粒子，会在喷发中的烈性硫黄方块上方生成 <TextBox Style="{StaticResource InlineCode}">geyser_base</TextBox>、<TextBox Style="{StaticResource InlineCode}">geyser_poof</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">geyser_plume</TextBox> 粒子</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">游戏测试环境</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:difficulty</TextBox></Paragraph><Paragraph>设置游戏测试环境的难度。字段：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">difficulty</TextBox>: 要设置的难度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">其中之一: <TextBox Style="{StaticResource InlineCode}">peaceful</TextBox>, <TextBox Style="{StaticResource InlineCode}">easy</TextBox>, <TextBox Style="{StaticResource InlineCode}">normal</TextBox>, <TextBox Style="{StaticResource InlineCode}">hard</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">资源包版本 86.2</Paragraph><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为间歇泉喷发增加了音效：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.geyser_eruption</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.geyser_eruption_active</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的粒子纹理:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_01.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_02.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_03.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_04.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_05.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_06.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_07.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_08.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_01.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_02.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_03.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_04.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_05.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_06.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_07.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_08.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_01.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_02.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_03.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_04.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_05.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_06.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_07.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_08.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_01.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_02.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_03.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_04.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_05.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_06.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_07.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_08.png</TextBox></Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
