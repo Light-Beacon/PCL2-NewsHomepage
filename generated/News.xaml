@@ -11,14 +11,82 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style  TargetType="TextBox" x:Key="InlineCode">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="IsReadOnly" Value="True" />
+    <Setter Property="Margin" Value="2,0,2,-4" />
+    <Setter Property="FontFamily" Value="Consolas" />
+    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="TextBox">
+                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
+                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                </Border>
+                <ControlTemplate.Triggers>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+<sys:String   x:Key="WikiIcon">
+M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
+</sys:String>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style  TargetType="local:MyImage" x:Key="VersionImage">
+  <Setter Property="Stretch" Value="UniformToFill" />
+  <Setter Property="VerticalAlignment" Value="Center" />
+</Style>
+
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<sys:String   x:Key="LaunchIcon">
+M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
+415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
+345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
+442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
+10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
+295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
 <Style x:Key="ServerJarDownloadButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="服务端"/><Setter Property="ToolTip" Value="下载服务端"/><Setter Property="EventType" Value="下载文件"/></Style>
+<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
+<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
+<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
+<sys:String   x:Key="CloudIcon">
+M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
+20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
+97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
+42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
+0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
+38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
+69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
+220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
+113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
+0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
+211.6 582.7 160 480 160z</sys:String>
+<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <sys:String   x:Key="CreeperIcon">
 M213.333333 128a85.333333 85.333333 0 0 0-85.333333 85.333333v597.333334a85.333333 85.333333 0 0 0 85.333333 85.333333h597.333334a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333H213.333333z m0 64h597.333334c11.754667 0 21.333333 9.578667 21.333333 21.333333v597.333334c0 11.754667-9.578667 21.333333-21.333333 21.333333H213.333333c-11.754667 0-21.333333-9.578667-21.333333-21.333333V213.333333c0-11.754667 9.578667-21.333333 21.333333-21.333333z m64 106.666667a21.333333 21.333333 0 0 0-21.333333 21.333333v128a21.333333 21.333333 0 0 0 21.333333 21.333333h149.333334v-149.333333a21.333333 21.333333 0 0 0-21.333334-21.333333h-128z m149.333334 170.666666v85.333334h-64a21.333333 21.333333 0 0 0-21.333334 21.333333v160a32 32 0 1 0 64 0V704h213.333334v32a32 32 0 1 0 64 0V576a21.333333 21.333333 0 0 0-21.333334-21.333333h-64v-85.333334h-170.666666z m170.666666 0h149.333334a21.333333 21.333333 0 0 0 21.333333-21.333333v-128a21.333333 21.333333 0 0 0-21.333333-21.333333h-128a21.333333 21.333333 0 0 0-21.333334 21.333333v149.333333z
 </sys:String>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/><Setter Property="MaxHeight" Value="140"/></Style>
-<Style x:Key="VersionTitleBlock" TargetType="TextBlock"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="TextAlignment" Value="Center"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush7}"/><Setter Property="Width" Value="180"/><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="FontSize" Value="18"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
 <sys:String   x:Key="DownloadIcon">
 M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-14-6.3-14-14V664c0-5.5-4.5-10-10-10h-50c-5.5
@@ -42,75 +110,7 @@ M802 664v146c0 7.7-6.3 14-14 14H236c-7.7
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.2-0.2
 0-0.4-0.1-0.6-0.1-0.4-0.1-0.7-0.2-1.1-0.3-0.2-0.1-0.4-0.1-0.6-0.2-0.3-0.1-0.6-0.2-1-0.3-0.2-0.1-0.5-0.1-0.7-0.2l-0.9-0.3c-0.3-0.1-0.5-0.2-0.8-0.3-0.2-0.1-0.5-0.2-0.7-0.3-0.3-0.1-0.6-0.3-0.8-0.4l-0.6-0.3c-0.3-0.2-0.6-0.3-0.9-0.5-0.2-0.1-0.4-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-1-0.6-0.2-0.1-0.3-0.2-0.5-0.3-0.3-0.2-0.6-0.4-0.9-0.7-0.2-0.1-0.3-0.3-0.5-0.4-0.3-0.2-0.5-0.4-0.8-0.6-0.2-0.2-0.4-0.4-0.7-0.6-0.2-0.2-0.4-0.4-0.6-0.5l-1.2-1.2-233.1-233.1c-13.7-13.7-13.7-35.8 0-49.5 13.7-13.7
 35.8-13.7 49.5 0L477 612.5V163c0-19.3 15.7-35 35-35s35 15.7 35 35z</sys:String>
-<Style x:Key="VersionTitleBorder" TargetType="Border"><Setter Property="Margin" Value="0,-20,-1,-2"/><Setter Property="Background" Value="{DynamicResource ColorBrush3}"/><Setter Property="Width" Value="170"/><Setter Property="Height" Value="30"/><Setter Property="CornerRadius" Value="7"/><Setter Property="BorderThickness" Value="0,0,0,2"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}"/></Style>
-<sys:String   x:Key="WikiIcon">
-M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z
-</sys:String>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style  TargetType="local:MyImage" x:Key="VersionImage">
-  <Setter Property="Stretch" Value="UniformToFill" />
-  <Setter Property="VerticalAlignment" Value="Center" />
-</Style>
-
-<Style  TargetType="TextBox" x:Key="InlineCode">
-    <Setter Property="FontSize" Value="14" />
-    <Setter Property="IsReadOnly" Value="True" />
-    <Setter Property="Margin" Value="2,0,2,-4" />
-    <Setter Property="FontFamily" Value="Consolas" />
-    <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
-    <Setter Property="Height" Value="18" />
-    <Setter Property="Template">
-        <Setter.Value>
-            <ControlTemplate TargetType="TextBox">
-                <Border Background="{DynamicResource ColorBrush6}" Opacity="0.9" BorderBrush="{DynamicResource ColorBrush4}" BorderThickness="0" CornerRadius="5" Padding="4,0.2"> 
-                    <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
-                </Border>
-                <ControlTemplate.Triggers>
-                </ControlTemplate.Triggers>
-            </ControlTemplate>
-        </Setter.Value>
-    </Setter>
-</Style>
-<Style x:Key="H5" TargetType="Paragraph"><Setter Property="FontSize" Value="14"/><Setter Property="Margin" Value="0,8,0,1"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="DownloadVersionButton" TargetType="local:MyIconTextButton"><Setter Property="Text" Value="下载"/><Setter Property="ToolTip" Value="转到下载页面"/><Setter Property="EventType" Value="切换页面"/><Setter Property="EventData" Value="1|1"/></Style>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
-<sys:String   x:Key="CloudIcon">
-M480 224c43 0 84.7 11.6 120.6 33.5 34.6 21.1 62.5 50.9 80.6 86 10.4
-20.1 30.6 33.3 53.2 34.6C796 381.6 853 407 895.2 449.7c41.7 42.1 64.6
-97.2 64.6 155 0 30.8-5.9 60.6-17.7 88.7-11.3 27.1-27.5 51.4-48.2 72.3-42.3
-42.8-98.4 66.3-158 66.3h-478c-53.3-3.1-102.6-24-139-58.8-35.3-33.6-54.7-77.2-54.7-122.5
-0-38.5 13.7-75.3 39.7-106.4 12.9-15.5 28.5-29.1 46.3-40.3 18.3-11.6
-38.4-20.4 59.9-26.3 26.1-7.1 44.9-29.9 47-56.9 4-52.9 28.6-102.1
-69.4-138.7C368.1 244.6 422.6 224 480 224m0-64c-139.2 0-255.2 94.9-281.9
-220.8-4.4 20.8-18.5 38.3-38.2 46.3C65.8 465.6 0.2 551.2 0.2 650.7 0.2 781.3
-113.4 888.6 256.1 896H736c158.9 0 287.9-130.5 287.9-291.3
-0-145.4-111.1-265.5-256.2-287.4-18.1-2.7-34.1-13-44.2-28.2C672.5
-211.6 582.7 160 480 160z</sys:String>
-<sys:String   x:Key="LaunchIcon">
-M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
-415-415S741.2 97 512 97z m-1 759c-190.5 0-345-154.5-345-345s154.5-345
-345-345 345 154.5 345 345-154.5 345-345 345z M442.1 408.2L621.9 512
-442.1 615.8V408.2m-59.9-113.9c-5.2 0-10 4.2-10 10v415.4c0 5.8 4.8 10
-10 10 1.7 0 3.4-0.4 5-1.4l359.7-207.7c6.7-3.8 6.7-13.5 0-17.3L387.1
-295.7c-1.6-1-3.3-1.4-4.9-1.4z</sys:String>
-<Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,0"/><Setter Property="Margin" Value="0,12"/></Style>
-<Style x:Key="typedQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="Padding" Value="10,2"/></Style>
-<Style x:Key="devnoteQuote" BasedOn="{StaticResource typedQuote}" TargetType="Section"><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="Background" Value="{StaticResource ColorBrush6}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard CanSwap="False" IsSwaped="false" Margin="0,-2,0,6">
@@ -124,44 +124,38 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     </TextBlock>
     </Grid>
 </Border>
-</local:MyCard><local:MyCard Title="最新快照版 - 26.2-snapshot-5" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
+</local:MyCard><local:MyCard Title="最新快照版 - 26.2-snapshot-6" CanSwap="True" IsSwaped="false" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <Border Style="{StaticResource VersionImageBorder}">
-<local:MyImage Source="https://image.bugjump.net/news/version/26.2/26.2-snapshot-5.jpeg" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png@1052w_!web-dynamic.webp"  Style="{StaticResource VersionImage}"/>
+<local:MyImage Source="https://image.bugjump.net/news/version/26.2/26.2-snapshot-6.jpeg" FallbackSource="https://i0.hdslb.com/bfs/new_dyn/763ab8491d106d98434c00c07c74597a277543816.png@1052w_!web-dynamic.webp"  Style="{StaticResource VersionImage}"/>
 </Border>
 <Border Style="{StaticResource VersionTitleBorder}">
-<TextBlock Style="{StaticResource VersionTitleBlock}" Text="26.2-snapshot-5" />
+<TextBlock Style="{StaticResource VersionTitleBlock}" Text="26.2-snapshot-6" />
 </Border><FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H2}">新特性</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">新的硫方怪原型: Explosive</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">烈性硫黄现在可以形成间歇泉</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">硫方怪</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当内部有方块时，现在会免疫爆炸</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的硫方怪原型：缓慢弹性和高温</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了加洛语的支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了乌兹别克语的支持</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">向游戏增加了沃罗语的支持</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">硫方怪生物</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">向硫方怪增加了新的缓慢弹性和高温原型</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H4}">硫方怪原型</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">现在为有了三种特殊原型：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">Explosive: 和普通有着相似的属性，但有着更高的空气阻力</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当吸收 TNT 方块时使用</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">被吸收的 TNT 可以被红石、火源（包含有打火石的发射器）或附近的爆炸激活</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当被火或红石激活时，被吸收的 TNT 引爆时间为 6 秒</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当被爆炸激活时，被吸收的 TNT 引爆时间为 0.75 到 3 秒之间的随机数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">硫方怪吸收了被激活的 TNT，其不能被铁桶收集</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">硫方怪吸收了被激活的 TNT，其不会收到伤害</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">被吸收的被激活的 TNT 不可以使用剪刀取出</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当爆炸时，不会生成小型硫方怪</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新的原型:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">缓慢弹性：慢速，高弹性，中摩擦力，中空气阻力</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">有浮力</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">当吸收石头使用</Paragraph></ListItem>
 </List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">烈性硫黄</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当放在岩浆块上方并且顶部为 1-4 格水源方块时，其会产生间歇泉</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">间歇泉会在随机间隔后喷发，向上喷出一缕水粒子并向上推动上方实体</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">微调了许多生物的碰撞箱，眼睛位置以及骑乘位置</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">生物生成</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">疣猪兽现在被认为是敌对生物并且不会在和平难度生成</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了间歇泉喷发音效</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">硫黄尖锥现在有了独立的音效事件</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">设置</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">移除了触屏模式</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">还有个新的特殊原型:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">高温：和 普通原型的属性相同，当时会在接触实体时像岩浆块一样伤害它们</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">当岩浆块时使用</Paragraph></ListItem>
+</List></ListItem>
+</List><Paragraph Style="{StaticResource H3}">进度</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的 &quot;Uh Oh&quot; 农牧业进度：让硫方怪吸收 TNT 方块</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">更改</Paragraph><Paragraph Style="{StaticResource H3}">硫黄洞穴生物群系</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">重新设计了所有地表硫黄涌泉地物</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">减少了硫黄洞穴生物群系在海下、丘陵和山脉的生成</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">硫黄洞穴不再生成凝灰岩和花岗岩</Paragraph></ListItem>
 </List><Section Style="{StaticResource devnoteQuote}">
   <Paragraph FontWeight="Bold">
     开发者注释
@@ -170,141 +164,77 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     </Paragraph.Foreground>
   </Paragraph>
   
-<Paragraph> <Italic>触屏模式长期以来实现都不完善，也没有得到正确支持。我们计划在本次发布中弃用这一功能。若要就此提供反馈，请前往 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://aka.ms/mctouchscreenjavafeedback">反馈网站</local:MyTextButton></Underline>。</Italic></Paragraph>
+<Paragraph> <Italic>感谢玩家们的反馈，我们已经决定撤销对在硫磺洞穴中生成凝灰岩和花岗岩的更改，以支持生成更多硫黄以增加生成池塘的概率。硫黄尖锥不受此次改动影响。</Italic></Paragraph>
 
-</Section><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">数据包版本现在为 104.0</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">资源包版本现在为 86.2</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当玩家没有该记分板项时玩家分数不再会显示在玩家 TAB 界面上</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Minecraft 服务端管理协议 3.0.0</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">管理服务器现在会在 Minecraft 服务器启动前启动</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">尤其是，这意味着世界在加载以及潜在的在升级时会发送心跳</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">rpc.discover</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">notification/server/status</TextBox> 方法现在在专用服务器启动前就可访问</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当此时访问其他方法时服务器会返回错误</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">数据包版本 104.0</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_archetype</TextBox> 注册表条目新增了一个字段：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">explosion_fuse</TextBox>：可选整数；如果存在，则该原型的硫方怪在被点燃时会以该引信时间爆炸</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">geyser</TextBox>、<TextBox Style="{StaticResource InlineCode}">geyser_poof</TextBox>、<TextBox Style="{StaticResource InlineCode}">geyser_base</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">geyser_plume</TextBox> 粒子</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">命令</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">队伍颜色参数（用于 <TextBox Style="{StaticResource InlineCode}">team modify [name] color</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">waypoint modify [name] color</TextBox>）现在只接受带下划线的小写名称</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">也就是说，只接受 <TextBox Style="{StaticResource InlineCode}">dark_purple</TextBox>，不接受 <TextBox Style="{StaticResource InlineCode}">darkpurple</TextBox> 或 <TextBox Style="{StaticResource InlineCode}">DarkPurple</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">值现在会匹配文本组件中的颜色名称</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">更改了 <TextBox Style="{StaticResource InlineCode}">minecraft:nameplate_distance</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">重命名为 <TextBox Style="{StaticResource InlineCode}">minecraft:name_tag_distance</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">matching_biomes</TextBox> 世界生成类型方块谓词，用于检查方块位置是否匹配指定的某个生物群系</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">biomes</TextBox> - 生物群系 ID、生物群系列表，或以 <TextBox Style="{StaticResource InlineCode}">#</TextBox> 开头的生物群系标签：要匹配的生物群系</Paragraph></ListItem>
+</Section><Paragraph Style="{StaticResource H3}">烈性硫黄</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">间歇泉在开始喷发和结束喷发的游戏事件可以被幽匿感测体探测到</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为硫黄涌泉更新了喷发音效</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性更改</Paragraph><Paragraph Style="{StaticResource H2}">数据包版本 105.0</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_archetype</TextBox> 注册表字段:</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">hot</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">slow_bouncy</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">minecraft:sulfur_cube_archetype</TextBox> 注册表的字段格式已更新：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">explosion_fuse</TextBox> 已被 <TextBox Style="{StaticResource InlineCode}">explosion</TextBox> 取代：一个可选字段；如果存在，则该原型的硫方怪会发生爆炸：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">fuse</TextBox>：正整数，点燃时的引信时间</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">power</TextBox>：非负整数，爆炸威力</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">causes_fire</TextBox>：布尔值，爆炸是否会引起火焰</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">contact_damage</TextBox>：可选字段；如果存在，该原型的硫方怪在与实体接触时会造成伤害</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">amount</TextBox>：非负浮点数，造成的伤害量</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">damage_type</TextBox>：伤害类型</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">attribute_to_source</TextBox>：布尔值，指示伤害是否归因于硫方怪</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了 <TextBox Style="{StaticResource InlineCode}">knockback_modifiers</TextBox>：用于包含硫方怪击退大小和方向各类修正项的字段</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">horizontal_power</TextBox>：浮点数，表示击退的水平分量强度</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">vertical_power</TextBox>：浮点数，表示击退的垂直分量强度</Paragraph></ListItem>
 </List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">tree</TextBox> 特性配置中的 <TextBox Style="{StaticResource InlineCode}">below_trunk_provider</TextBox> 方块状态提供器不再有默认值</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">已配置地物</Paragraph><Paragraph Style="{StaticResource H5}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:multiface_growth</TextBox> 的更改</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">字段 <TextBox Style="{StaticResource InlineCode}">block</TextBox> 现在是必填项（此前默认值为 <TextBox Style="{StaticResource InlineCode}">minecraft:grow_lichen</TextBox>）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">密度函数</Paragraph><Paragraph Style="{StaticResource H5}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:interval_select</TextBox></Paragraph><Paragraph>根据输入的密度函数和一组阈值，在多个密度函数之间进行选择。</Paragraph><Paragraph>格式：带有以下字段的对象：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">input</TextBox> - 密度函数，用于与给定 <TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> 比较的值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> - 非空浮点数列表，用于与 <TextBox Style="{StaticResource InlineCode}">input</TextBox> 比较的阈值</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果 <TextBox Style="{StaticResource InlineCode}">input &lt; thresholds[i]</TextBox>，则选择 <TextBox Style="{StaticResource InlineCode}">functions[i]</TextBox> 的结果</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">如果输入大于最后一个阈值，则选择最后一个函数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> 的数量必须比 <TextBox Style="{StaticResource InlineCode}">functions</TextBox> 少 1</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">functions</TextBox> - 至少包含 2 个密度函数的列表，用于从中选择结果函数</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">functions</TextBox> 的数量必须比 <TextBox Style="{StaticResource InlineCode}">thresholds</TextBox> 多 1</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H5}">移除了 <TextBox Style="{StaticResource InlineCode}">minecraft:weird_scaled_sampler</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">这个密度函数已被移除，其功能已由 <TextBox Style="{StaticResource InlineCode}">interval_select</TextBox> 取代</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当 <TextBox Style="{StaticResource InlineCode}">rarity_value_mapper</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">type_1</TextBox> 时，等价于：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用阈值 <TextBox Style="{StaticResource InlineCode}">-0.75, -0.5, 0.5, 0.75</TextBox> 的 <TextBox Style="{StaticResource InlineCode}">interval_select</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">选中的函数形式为：<TextBox Style="{StaticResource InlineCode}">abs(rarity * noise(x/rarity, y/rarity, z/rarity))</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">对应的稀有度值：<TextBox Style="{StaticResource InlineCode}">0.5, 0.75, 1.0, 2.0, 3.0</TextBox></Paragraph></ListItem>
-</List></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">当 <TextBox Style="{StaticResource InlineCode}">rarity_value_mapper</TextBox> 为 <TextBox Style="{StaticResource InlineCode}">type_2</TextBox> 时，等价于：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">使用阈值 <TextBox Style="{StaticResource InlineCode}">-0.5, 0.0, 0.5</TextBox> 的 <TextBox Style="{StaticResource InlineCode}">interval_select</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">选中的函数形式为：<TextBox Style="{StaticResource InlineCode}">abs(rarity * noise(x/rarity, y/rarity, z/rarity))</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">对应的稀有度值：<TextBox Style="{StaticResource InlineCode}">0.75, 1.0, 1.5, 2.0</TextBox></Paragraph></ListItem>
-</List></ListItem>
-</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">方块标签</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为部分生物免疫的方块增加了以下标签。这些标签会影响取消骑乘，以及某些生物生成放置时的有效周围方块，但不会影响寻路。</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#fox_immune_to</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#polar_bear_immune_to</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#snow_golem_immune_to</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#stray_immune_to</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#wither_immune_to</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#wither_skeleton_immune_to</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#default_immune_to</TextBox> - this tag is intentionally left empty</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser_base</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在喷发中的烈性硫黄方块底部生成云状粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">burst_impulse_base</TextBox> - 浮点数，缩放初始喷发冲量</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser_poof</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在喷发中的烈性硫黄方块底部生成云状粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">burst_impulse_base</TextBox> - 浮点数，缩放初始喷发冲量</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser_plume</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">在喷发中的烈性硫黄方块上方生成向上的水流粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:geyser</TextBox></Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">一个发射器粒子，会在喷发中的烈性硫黄方块上方生成 <TextBox Style="{StaticResource InlineCode}">geyser_base</TextBox>、<TextBox Style="{StaticResource InlineCode}">geyser_poof</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">geyser_plume</TextBox> 粒子</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">格式：带有以下字段的对象：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">water_blocks</TextBox> - 正整数，缩放粒子大小及其喷发冲量</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">游戏测试环境</Paragraph><Paragraph Style="{StaticResource H4}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:difficulty</TextBox></Paragraph><Paragraph>设置游戏测试环境的难度。字段：</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">difficulty</TextBox>: 要设置的难度</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">其中之一: <TextBox Style="{StaticResource InlineCode}">peaceful</TextBox>, <TextBox Style="{StaticResource InlineCode}">easy</TextBox>, <TextBox Style="{StaticResource InlineCode}">normal</TextBox>, <TextBox Style="{StaticResource InlineCode}">hard</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H2}">资源包版本 86.2</Paragraph><Paragraph Style="{StaticResource H3}">音效</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为间歇泉喷发增加了音效：</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.geyser_eruption</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">block.potent_sulfur.geyser_eruption_active</TextBox></Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">粒子</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的粒子纹理:</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_01.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_02.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_03.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_04.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_05.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_06.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_07.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/noxious_gas_08.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_01.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_02.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_03.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_04.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_05.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_06.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_07.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_base_08.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_01.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_02.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_03.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_04.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_05.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_06.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_07.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_plume_08.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_01.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_02.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_03.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_04.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_05.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_06.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_07.png</TextBox></Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">particle/geyser_poof_08.png</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">从活体中移除了 <TextBox Style="{StaticResource InlineCode}">HurtByTimestamp</TextBox> 标签，应改为使用 <TextBox Style="{StaticResource InlineCode}">ticks_since_last_hurt_by_mob</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">世界生成</Paragraph><Paragraph Style="{StaticResource H4}">表面规则</Paragraph><Paragraph Style="{StaticResource H5}">更改了 <TextBox Style="{StaticResource InlineCode}">noise_threshold</TextBox> 表面规则条件</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">增加了新的 <TextBox Style="{StaticResource InlineCode}">is_3d</TextBox> 字段 - 布尔值，指示是否应在 3D 中评估噪声</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若未指定，默认为 <TextBox Style="{StaticResource InlineCode}">false</TextBox></Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">移除了 <TextBox Style="{StaticResource InlineCode}">noise_gradient</TextBox> 表面规则</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">可用 <TextBox Style="{StaticResource InlineCode}">noise_threshold</TextBox> 替代</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H4}">已配置地物</Paragraph><Paragraph Style="{StaticResource H5}">增加了 <TextBox Style="{StaticResource InlineCode}">minecraft:weighted_random_selector</TextBox> 地物类型</Paragraph><Paragraph>基于权重在提供的地物之中随机选取其一生成。</Paragraph><Paragraph>格式：具有下列字段的对象：</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">features</TextBox> - 已放置的地物及其权重列表</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H5}">对 <TextBox Style="{StaticResource InlineCode}">minecraft:large_dripstone</TextBox> 的更改</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">将 <TextBox Style="{StaticResource InlineCode}">column_radius</TextBox> 的最大允许值从 19 降至 16，以防止地物超出相邻区块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在对风偏移进行限制，以确保整个滴水石（半径 + 风偏移）保持在相邻区块范围内</Paragraph></ListItem>
+</List><Paragraph>对 <TextBox Style="{StaticResource InlineCode}">minecraft:root_system</TextBox> 的更改：新增字段 <TextBox Style="{StaticResource InlineCode}">level_test_distance</TextBox>，用于指示根系会在距离起点多远的位置检查现有地形
+- 新增字段 <TextBox Style="{StaticResource InlineCode}">max_level_deviation</TextBox>，用于指示在这些检测位置地面高度可以相对于原始地面偏离多少</Paragraph><Paragraph Style="{StaticResource H4}">结构处理器</Paragraph><Paragraph Style="{StaticResource H5}">更改了 <TextBox Style="{StaticResource InlineCode}">minecraft:block_rot</TextBox> 结构处理器</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在会评估链中先前方块处理器产生的方块状态，而不是始终使用结构中定义的原始方块</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">链中的第一个处理器仍然总是相对于结构定义的原始方块进行评估</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H3}">标签</Paragraph><Paragraph Style="{StaticResource H4}">物品标签</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为可以放置在硫方怪内部以决定其原型的的物品增加了下列标签：</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/hot</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}"><TextBox Style="{StaticResource InlineCode}">#sulfur_cube_archetype/slow_bouncy</TextBox></Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-04-30" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<Grid VerticalAlignment="Center" Margin="6,10,0,0" HorizontalAlignment="Right">
+<Grid.ColumnDefinitions >
+<ColumnDefinition Width="45"/>
+<ColumnDefinition />
+</Grid.ColumnDefinitions>
+<Path Grid.Column="0" Margin="8,0" Width="18" Height="18" Fill="{DynamicResource ColorBrush4}"
+                    Stretch="Uniform"
+                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
+<TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="最亮的信标" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
+</Grid>
+
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-05-06" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 
-<local:MyIconTextButton Text="启动" ToolTip="启动 26.2-snapshot-5" EventType="启动游戏"
-    EventData="26.2-snapshot-5" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
+<local:MyIconTextButton Text="启动" ToolTip="启动 26.2-snapshot-6" EventType="启动游戏"
+    EventData="26.2-snapshot-6" LogoScale="0.85" Logo="{StaticResource LaunchIcon}" />
 
 
 
 <local:MyIconTextButton Style="{StaticResource ServerJarDownloadButton}"
-    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/dbcd57afe4cdba19be8c9e658d1e3a176d53a5db/server.jar" Logo="{StaticResource CloudIcon}" />
+    LogoScale="1.05" EventData="https://piston-data.mojang.com/v1/objects/8bdae5a048cd361668da1df06e81c4e590a36064/server.jar" Logo="{StaticResource CloudIcon}" />
 
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该版本" EventType="打开网页"
-    EventData="https://zh.minecraft.wiki/w/Java版26.2-snapshot-5" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
+    EventData="https://zh.minecraft.wiki/w/Java版26.2-snapshot-6" LogoScale="1.05" Logo="{StaticResource WikiIcon}" />
 <local:MyIconTextButton Text="官网更新日志" ToolTip="在官网查看该版本更新日志" EventType="打开网页"
-    EventData="https://minecraft.net/article/minecraft-26-2-snapshot-5" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
+    EventData="https://minecraft.net/article/minecraft-26-2-snapshot-6" LogoScale="0.85" Logo="{StaticResource CreeperIcon}" />
 </WrapPanel>
 </StackPanel>
 </local:MyCard><ContentControl Content="历  史  版  本" Template="{StaticResource Separator}"/><local:MyCard Title="最新正式版 - 26.1.2" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
@@ -321,7 +251,7 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-04-30" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-05-06" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <WrapPanel Margin="-2,2" Orientation="Horizontal" VerticalAlignment="Center">
 
 <local:MyIconTextButton Text="启动" ToolTip="启动 26.1.2" EventType="启动游戏"
@@ -361,8 +291,8 @@ M512 97C282.8 97 97 282.8 97 512s185.8 415 415 415 415-185.8
     <StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
     <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}"><Bold>PCL2 新闻主页</Bold></TextBlock>
-    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="f7524e1" ToolTip="当前 Commit 版本" EventType="打开网页"
-    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/f7524e1110e14e20378f976568e2d3171389d281"
+    <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="6267f0b" ToolTip="当前 Commit 版本" EventType="打开网页"
+    EventData="https://github.com/Light-Beacon/PCL2-NewsHomepage/tree/6267f0b687a92666d915df1e0173d7a647ddeff3"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-4,0,0,10" Height="46">
