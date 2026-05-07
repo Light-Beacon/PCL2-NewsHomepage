@@ -7,12 +7,16 @@ import json
 from homepagebuilder.interfaces import require
 from homepagebuilder.interfaces.Events import on
 from homepagebuilder.core.types import Context
+from homepagebuilder.core.logger import Logger
 from typing import NamedTuple
+import time
 
 mcv = require('minecraft_versions')  # 需求前置 MinecraftVersions
 MCVM = mcv.MCVM
 
 rest_apis_routes = []
+
+logger = Logger('API')
 
 # region API Routes
 
@@ -29,10 +33,18 @@ def api(path, version=None, methods=None):
                           api_object.generate, methods))
     return deco
 
-@on('server.setup_routes.return')
-def set_up_routes(server, *_, **__):
+@on('project.import.return')
+def set_up_routes(*_, **__):
+    app = Context.get_current_context().flask_app
+    if not app:
+        return
+    exist_endpoints = app.view_functions.keys()
     for route in rest_apis_routes:
-        server.app.add_url_rule('/api' + route[0], route[1], route[2], methods=route[3])
+        if route[1] in exist_endpoints:
+            app.view_functions[route[1]] = route[2]
+        else:
+            app.add_url_rule('/api' + route[0], route[1], route[2], methods=route[3])
+    logger.debug('routes setuped')
 
 # endregion
 
@@ -164,6 +176,7 @@ class LatestVersionAPI(RESTAPI):
         if self.latest_developing:
             respond['snapshot'] = self.extract_version_info(self.latest_developing)
         respond['release'] = self.extract_version_info(self.latest_release)
+        respond['cache-time'] = time.time()
         self.respond = respond
 
     def extract_version_info(self, card):
@@ -235,8 +248,6 @@ class MCVersionListAPI(RESTAPI):
         if self._cache is None:
             self._cache = self.get_list()
         return self._cache
-
-
 
 @api('/<path:path>')
 class DefaultNotFoundAPI(RESTAPI):

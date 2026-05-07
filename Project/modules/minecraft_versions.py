@@ -27,10 +27,9 @@ LAUNCHER_MANIFEST_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest
 # region 官网更新日志重载词典
 OFFICIAL_CHANGE_LOG_OVERRIDE_LINKS: dict[str, str] = {}
 
-
 @on('project.import.return')
 def setup_official_changelog_override_links(*_, **__) -> None:
-    global OFFICIAL_CHANGE_LOG_OVERRIDE_LINKS
+    global OFFICIAL_CHANGE_LOG_OVERRIDE_LINKS, MCVM
     OFFICIAL_CHANGE_LOG_OVERRIDE_LINKS = Context.get_current_context().data.get('OfficialLink')
 # endregion
 
@@ -139,7 +138,7 @@ class MinecraftVersionManager:
     __version_ids: list[str] = []
 
     def __init__(self):
-        self.__manifest = self.fetch_manifest()
+        self.refresh_manifest()
         self.__latest_development_version_id = self.__manifest['latest']['snapshot']
         self.__latest_release_version_id = self.__manifest['latest']['release']
         self.__manifest_versions = self.__manifest.get('versions', [])
@@ -203,6 +202,9 @@ class MinecraftVersionManager:
             current_major_version_branches.add(version.major_version)
             latest_development_versions.append(version)
         return latest_development_versions
+
+    def refresh_manifest(self):
+        self.__manifest = self.fetch_manifest()
 
     @classmethod
     def fetch_manifest(cls) -> MinecraftManifest:
