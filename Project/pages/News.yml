@@ -5,7 +5,6 @@ alias:
  - 主界面
 cards:
  - animated_noticebar | s = false
- - MCLNowOnAir
  - ${@IF|${args.debug}|debug}
  - ${@NewsList}
  - ${@MainPageVersions|new}
