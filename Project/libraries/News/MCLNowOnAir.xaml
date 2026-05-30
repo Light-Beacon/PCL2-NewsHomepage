@@ -20,6 +20,9 @@
     <InlineUIContainer><Ellipse x:Name="LiveDot" Width="11" Height="11" Fill="#FFE81818" Margin="2,0,2,0"/></InlineUIContainer>
     <Span x:Name="LiveText" FontSize="14">Minecraft Live 正在直播中</Span>
     </TextBlock>
+    <TextBlock Foreground="#AAE21111" FontWeight="Bold" Margin="18,10,0,0">
+    <Run>Twitch 观看直播掉落 Builder 披风！千万别错过！</Run>
+    </TextBlock>
     <Line X1="0" X2="100" Stroke="#DDCC1111" StrokeThickness="2" HorizontalAlignment="Center" Stretch="Fill" Margin="15,8,15,1"/>
     <Grid Margin="16,10,16,10">
     <Grid.ColumnDefinitions>
@@ -31,7 +34,7 @@
             EventData="https://live.bilibili.com/53303"><Run FontWeight="Bold" FontSize="14">观看转播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(B站UP: WuGuangYao)</Span></local:MyButton>
     <local:MyButton Margin="6,2" TextBlock.TextAlignment="Center"
             Grid.Column="1" EventType="打开网页" Height="56"
-            EventData="https://www.youtube.com/watch?v=dn05oTt6OsY"><Run FontWeight="Bold" FontSize="14">观看直播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(Youtube)</Span></local:MyButton>
+            EventData="https://live.bilibili.com/53303"><Run FontWeight="Bold" FontSize="14">观看直播</Run><LineBreak/><Span Foreground="#555" FontSize="12">(Twitch)</Span></local:MyButton>
     </Grid>
     </StackPanel>
     </Border>
