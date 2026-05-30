@@ -15,7 +15,9 @@ __以下括号内非最终译名，仅用于方便理解__
     * 新的结构 Abandoned Camp（遗弃营地）
     * 各种颜色的羊毛楼梯 & 台阶
 
-![](https://image.bugjump.net/news/live/2026/falldrop.jpg)
+![](https://image.bugjump.net/news/live/2026/falldrop.jpg "斑驳森林与使用羊毛楼梯的遗弃营地")
+
+![](https://image.bugjump.net/news/live/2026/poplar_woodsert.jpg "白杨树系列方块展示")
 
 * 提了嘴 Minecraft Dungeons 2，里边有个生物是 Twisted Warden（扭曲监守者）
 * Minecraft 大电影 2 定名为《A Minecraft Movie Squared》（Squared为“方形”和“平方”的双关）
