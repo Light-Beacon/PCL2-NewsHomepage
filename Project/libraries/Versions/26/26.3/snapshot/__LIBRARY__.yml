@@ -1,0 +1,7 @@
+name: snapshots
+default:
+  version-type-id: ${versiontype.snapshot.id}
+  version-type: ${versiontype.snapshot.name}
+  wiki-link: ${versiontype.snapshot.wiki-link}
+  list-icon: ${versiontype.snapshot.list-icon}
+  important-version: ${versiontype.snapshot.important-version}

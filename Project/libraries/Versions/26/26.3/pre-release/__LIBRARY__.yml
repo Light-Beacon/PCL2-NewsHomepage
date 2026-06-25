@@ -1,0 +1,7 @@
+name: pre-releases
+default:
+  version-type-id: ${versiontype.pre-release.id}
+  version-type: ${versiontype.pre-release.name}
+  wiki-link: ${versiontype.pre-release.wiki-link}
+  list-icon: ${versiontype.pre-release.list-icon}
+  important-version: ${versiontype.pre-release.important-version}

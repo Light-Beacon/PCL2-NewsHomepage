@@ -1,0 +1,7 @@
+name: release-candidates
+default:
+  version-type-id: ${versiontype.release-candidate.id}
+  version-type: ${versiontype.release-candidate.name}
+  wiki-link: ${versiontype.release-candidate.wiki-link}
+  list-icon: ${versiontype.release-candidate.list-icon}
+  important-version: ${versiontype.release-candidate.important-version}
