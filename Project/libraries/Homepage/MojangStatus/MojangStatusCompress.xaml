@@ -1,0 +1,19 @@
+<local:MyCard Margin="0,3,0,5">
+    <Grid Margin="10,10,12,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+        <TextBlock Margin="5,0,8,0" IsHitTestVisible="False" FontSize="12" FontWeight="Bold">
+            <InlineUIContainer>
+                <Border Background="${@MojangMajorStatusColor}" CornerRadius="2" Height="10px" Width="10px"/>
+            </InlineUIContainer>
+            <Run Text=" Mojang 服务状态：${@MojangMajorStatusText}" />
+        </TextBlock>
+        <local:MyIconButton HorizontalAlignment="Right" ToolTip="数据由 mcstate.net 提供" EventType="打开网页" EventData="https://www.mcstate.net/mojang-status" Height="14" Width="14"
+                        LogoScale="3.2" Logo="M509.92 795.84c157.904 0 285.92-128.016 285.92-285.92C795.84 352 667.808 224 509.92 224 352 224 224 352 224 509.92c0 157.904 128 285.92 285.92 285.92z m0 48C325.504 843.84 176 694.32 176 509.92 176 325.504 325.504 176 509.92 176c184.416 0 333.92 149.504 333.92 333.92 0 184.416-149.504 333.92-333.92 333.92z m-2.448-400.704h16a16 16 0 0 1 16 16v201.728a16 16 0 0 1-16 16h-16a16 16 0 0 1-16-16V459.136a16 16 0 0 1 16-16z m0-100.176h16a16 16 0 0 1 16 16v23.648a16 16 0 0 1-16 16h-16a16 16 0 0 1-16-16v-23.648a16 16 0 0 1 16-16z"/>
+        </StackPanel>
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,10,0" Foreground="#888" FontSize="12" Text="更新时间：${@MojangStatusTimeCompressed}" />
+    </Grid>
+</local:MyCard>
