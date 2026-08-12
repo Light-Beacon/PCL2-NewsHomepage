@@ -60,8 +60,8 @@ def get_change_log_url(version_id: str) -> str:
             f"MC 版本 {version_id} 没有更新日志链接"
         )
 
-    print(f"版本: {version.id}")
-    print(f"更新日志: {url}")
+    #print(f"版本: {version.id}")
+    #print(f"更新日志: {url}")
 
     return url
 
@@ -71,7 +71,7 @@ def get_change_log_url(version_id: str) -> str:
 # ============================================================
 
 def download_html(url: str) -> str:
-    print("[1/4] 下载 HTML...")
+    #print("[1/4] 下载 HTML...")
 
     headers = {
         "User-Agent": USER_AGENT,
@@ -95,7 +95,7 @@ def download_html(url: str) -> str:
     return response.text
 
 def find_hero_image(html: str, page_url: str) -> str:
-    print("[2/4] 获取图片路径...")
+    #print("[2/4] 获取图片路径...")
 
     soup = BeautifulSoup(
         html,
@@ -134,7 +134,7 @@ def find_hero_image(html: str, page_url: str) -> str:
         src,
     )
 
-    print(f"图片: {image_url}")
+    #print(f"图片: {image_url}")
 
     return image_url
 
@@ -143,7 +143,7 @@ def download_image(
     page_url: str,
 ) -> tuple[bytes, str]:
 
-    print("[3/4] 下载图片...")
+    #print("[3/4] 下载图片...")
 
     headers = {
         "User-Agent": USER_AGENT,
@@ -167,13 +167,6 @@ def download_image(
         "application/octet-stream",
     )
 
-    print(
-        f"Content-Type: {content_type}"
-    )
-    print(
-        f"大小: {len(response.content):,} bytes"
-    )
-
     return response.content, content_type
 
 def upload_to_r2(
@@ -182,7 +175,7 @@ def upload_to_r2(
     object_key: str,
     content_type: str,
 ):
-    print("[4/4] 上传 Cloudflare R2...")
+    #print("[4/4] 上传 Cloudflare R2...")
 
     s3 = create_r2_client()
     s3.put_object(
