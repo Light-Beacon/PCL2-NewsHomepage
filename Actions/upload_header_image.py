@@ -210,7 +210,7 @@ def upload_header_image(version):
         object_key,
         content_type,
     )
-    return f"https://images.bugjump.net/{object_key}"
+    return f"https://image.bugjump.net/{object_key}"
     
 
 def main():
