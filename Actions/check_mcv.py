@@ -3,6 +3,8 @@ import requests
 import re
 import os
 from pathlib import Path
+from minecraft_version import MCVM
+from upload_header_image import upload_header_image
 
 LAUNCHER_MANIFSET_URL = 'https://piston-meta.mojang.com/mc/game/version_manifest.json'
 
@@ -34,24 +36,28 @@ def generate_filepath(ver_type:str, ver_id:str) -> Path:
 
 def update_library(version_mainfest, version_libloc:str, ver_type:str, ver_id:str):
     #gen content
+    filepath = Path(version_libloc) / generate_filepath(ver_type, ver_id)
+    if os.path.exists(filepath):
+        #print(f'版本库内已存在 {ver_type} 版 {ver_id} 的文件，跳过添加')
+        return False
+    header_image_link = 'null'
+    try:
+        header_image_link = upload_header_image(version=ver_id)
+    finally:
+        pass
     content = '---\n'
-    content += 'version-image-link: null\n'
+    content += f'version-image-link: {header_image_link}\n'
     #content += 'version-image-link-fallback: null\n'
     content += 'wip: true\n'
     content += f'server-jar: {get_server_jar(version_mainfest, ver_id)}\n'
     content += 'translator: null\n'
     content += f"cats: ['{ver_id[:4]}']\n"
     content += '---\n'
-    #write file
-    filepath = Path(version_libloc) / generate_filepath(ver_type, ver_id)
-    if os.path.exists(filepath):
-        #print(f'版本库内已存在 {ver_type} 版 {ver_id} 的文件，跳过添加')
-        return False
-    else:
-        with open(filepath.absolute(), "w", encoding='UTF-8') as file:
-            file.write(content)
-        #print(f'已添加 {ver_type} 版 {ver_id} 的文件到版本库')
-        return True
+    upload_header_image(version=ver_id)
+    with open(filepath.absolute(), "w", encoding='UTF-8') as file:
+        file.write(content)
+    #print(f'已添加 {ver_type} 版 {ver_id} 的文件到版本库')
+    return True
 
 def get_server_jar(version_mainfest,version_id):
     versions = version_mainfest.get('versions')

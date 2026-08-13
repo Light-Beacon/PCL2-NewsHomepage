@@ -1,7 +1,7 @@
 <local:MyCard Margin="0,5">
     <StackPanel Margin="15,10">
-    <local:MyListItem Margin="0,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
-    Logo="https://test.fukit.cn/autoupload/f/eVhYusBtjOJG2qfZ4rUTz9iO_OyvX7mIgxFBfDMDErs/20260204/PKqV/300X300/Bookshelf_JE4_BE2.png/webp" Title="历史版本更新日志" Info="点击查看更多更新日志"
+    <local:MyListItem Margin="0,1" ToolTip="点击跳转到列表界面" LogoScale="0.9"
+    Logo="https://image.bugjump.net/news/homepage/books.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
     EventType="打开帮助" EventData="${@Link|VersionArchiveList}" Type="Clickable" />
     </StackPanel>
 </local:MyCard>

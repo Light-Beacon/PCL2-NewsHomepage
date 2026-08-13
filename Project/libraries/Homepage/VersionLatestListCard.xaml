@@ -3,8 +3,8 @@
 ${@VersionLatestList}
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
-<local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
-Logo="https://image.bugjump.net/news/lectern.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
+<local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="0.9"
+Logo="https://image.bugjump.net/news/homepage/books.png" Title="历史版本更新日志" Info="点击查看更多更新日志"
 EventType="打开帮助" EventData="${@Link|VersionArchiveList}" Type="Clickable" />
 </StackPanel>
 </local:MyCard>

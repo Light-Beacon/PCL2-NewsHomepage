@@ -1,0 +1,74 @@
+<local:MyCard Margin="0,0,0,5" CanSwap="False">
+    <local:MyCard.Inlines>
+        <InlineUIContainer>
+            <Border Background="${@MojangMajorStatusColor}" CornerRadius="2" Height="10px" Width="10px"/>
+        </InlineUIContainer>
+        <Run Text=" Mojang 服务状态：${@MojangMajorStatusText}"/>
+    </local:MyCard.Inlines>
+    <StackPanel  Margin="25,45,25,15">
+    <WrapPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5" Width="170">
+            <Border Background="${@MojangStatusColor|session}" CornerRadius="2" Height="14px" Width="14px" Margin="5"/>
+            <TextBlock Margin="5,0,10,0">
+                <Run Text="会话服务器"/>
+                <Run Text="${@MojangStatusText|session}" Foreground="${@MojangStatusColor|session}" />
+                <LineBreak/>
+                <Run Text="多人游戏验证" Foreground="#888" FontSize="12" />
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5" Width="170">
+            <Border Background="${@MojangStatusColor|api}" CornerRadius="2" Height="14px" Width="14px" Margin="5"/>
+            <TextBlock Margin="5,0,10,0">
+                <Run Text="Mojang API"  />
+                <Run Text="${@MojangStatusText|api}" Foreground="${@MojangStatusColor|api}" />
+                <LineBreak/>
+                <Run Text="玩家登录与信息查询" Foreground="#888" FontSize="12" />
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5" Width="170">
+            <Border Background="${@MojangStatusColor|microsoft}" CornerRadius="2" Height="14px" Width="14px" Margin="5"/>
+            <TextBlock Margin="5,0,10,0">
+                <Run Text="微软认证服务器" />
+                <Run Text="${@MojangStatusText|microsoft}" Foreground="${@MojangStatusColor|microsoft}" />
+                <LineBreak/>
+                <Run Text="微软登录认证" Foreground="#888" FontSize="12" />
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5" Width="170">
+            <Border Background="${@MojangStatusColor|accounts}" CornerRadius="2" Height="14px" Width="14px" Margin="5"/>
+            <TextBlock Margin="5,0,10,0">
+                <Run Text="账户服务器" />
+                <Run Text="${@MojangStatusText|accounts}" Foreground="${@MojangStatusColor|accounts}" />
+                <LineBreak/>
+                <Run Text="账户管理" Foreground="#888" FontSize="12" />
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5" Width="170">
+            <Border Background="${@MojangStatusColor|textures}" CornerRadius="2" Height="14px" Width="14px" Margin="5"/>
+            <TextBlock Margin="5,0,10,0">
+                <Run Text="纹理服务器" />
+                <Run Text="${@MojangStatusText|textures}" Foreground="${@MojangStatusColor|textures}" />
+                <LineBreak/>
+                <Run Text="皮肤与披风资源" Foreground="#888" FontSize="12" />
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5" Width="170">
+            <Border Background="${@MojangStatusColor|website}" CornerRadius="2" Height="14px" Width="14px" Margin="5"/>
+            <TextBlock Margin="5,0,10,0">
+                <Run Text="Minecraft 官网" />
+                <Run Text="${@MojangStatusText|website}" Foreground="${@MojangStatusColor|website}" />
+                <LineBreak/>
+                <Run Text="设置、博文与更新日志" Foreground="#888" FontSize="12" />
+            </TextBlock>
+        </StackPanel>
+    </WrapPanel>
+    <WrapPanel Margin="0,10,0,0">
+    <TextBlock TextWrapping="Wrap" Margin="0,0,10,0" Foreground="#888" FontSize="12" VerticalAlignment="Center"
+                Text="信息更新时间：${@MojangStatusTime}" />
+    <TextBlock TextWrapping="Wrap" Margin="0,0,10,0" Foreground="#888" FontSize="12" VerticalAlignment="Center">
+        数据由<local:MyTextButton Margin="2,0,2,-2" Text="mcstate.net" EventType="打开网页" 
+    EventData="https://www.mcstate.net/mojang-status"/>提供
+    </TextBlock>
+    </WrapPanel>
+    </StackPanel>
+</local:MyCard>
