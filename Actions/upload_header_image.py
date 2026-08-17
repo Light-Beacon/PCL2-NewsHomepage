@@ -5,6 +5,8 @@ import boto3
 import requests
 from bs4 import BeautifulSoup
 from botocore.config import Config
+from io import BytesIO
+from PIL import Image
 
 from minecraft_version import MCVM, MinecraftVersion
 
@@ -131,7 +133,7 @@ def find_hero_image(html: str, page_url: str) -> str:
 
     image_url = urljoin(
         page_url,
-        src,
+        str(src),
     )
 
     #print(f"图片: {image_url}")
@@ -167,7 +169,20 @@ def download_image(
         "application/octet-stream",
     )
 
-    return response.content, content_type
+    image = Image.open(BytesIO(response.content))
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+
+    output = BytesIO()
+    image.save(
+        output,
+        format="JPEG",
+        quality=95,
+        optimize=True,
+    )
+    jpeg_data = output.getvalue()
+
+    return jpeg_data, "image/jpeg"
 
 def upload_to_r2(
     data: bytes,
@@ -203,7 +218,7 @@ def upload_header_image(version):
         change_log_url,
     )
     bucket = "images"
-    object_key = f"news/version/{version.major_version}/{version.id}.webp"
+    object_key = f"news/version/{version.major_version}/{version.id}.jpg"
     upload_to_r2(
         image_data,
         bucket,

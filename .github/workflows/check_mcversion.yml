@@ -23,6 +23,7 @@ jobs:
             pip install botocore
             pip install boto3
             pip install beautifulsoup4
+            pip install Pillow
        - name: 运行更新脚本
          id: run_script
          run: python Actions/check_mcv.py >> "$GITHUB_ENV"
