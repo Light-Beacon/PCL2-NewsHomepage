@@ -1,0 +1,7 @@
+name: releases
+default:
+  version-type-id: ${versiontype.release.id}
+  version-type: ${versiontype.release.name}
+  wiki-link: ${versiontype.release.wiki-link}
+  list-icon: ${versiontype.release.list-icon}
+  important-version: ${versiontype.release.important-version}
