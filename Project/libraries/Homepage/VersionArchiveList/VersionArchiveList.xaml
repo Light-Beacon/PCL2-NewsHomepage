@@ -2,9 +2,9 @@
     <StackPanel Margin="20,40,20,15">
     <local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1" EventType="打开帮助" Type="Clickable"
 		Logo="pack://application:,,,/images/Blocks/GrassPath.png"
-		Title="即将到来的更新 | 26.3"
-		Info="更新了硫磺洞穴、间歇泉、硫磺系列方块、朱砂系列方块、硫方怪"
-		EventData="${@Link|versions/list/26drop3}"
+		Title="奔赴荒野 | 26.3"
+		Info="更新了斑驳森林、废弃营地、麦秆床、坐垫以及杨树及其系列方块"
+		EventData="${@Link|versions/list/wilderness_bound}"
 	/>
 	<local:MyListItem Margin="0,2" ToolTip="点击查看该版本更新日志列表" LogoScale="1" EventType="打开帮助" Type="Clickable"
 		Logo="https://image.bugjump.net/news/minecraft/updates/chaos_cubed.png"
