@@ -1,0 +1,12 @@
+<local:MyCard Margin="0,5" CanSwap="True" Title="PCL 老师的 RIP 纪念专栏" IsSwaped="false">
+    <Grid Margin="10,50,10,30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+         <local:MyImage Grid.Column="0" Source="https://image.bugjump.net/news/rip/lm.jpg" MaxHeight="180" Stretch="Uniform"/>
+        <local:MyImage Grid.Column="1" Source="https://image.bugjump.net/news/rip/pclls.png" MaxHeight="180" Stretch="Uniform"/>
+         <local:MyImage Grid.Column="2" Source="https://image.bugjump.net/news/rip/lm.jpg" MaxHeight="180" Stretch="Uniform"/>
+    </Grid>
+</local:MyCard>

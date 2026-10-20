@@ -6,6 +6,7 @@ alias:
 cards:
  - animated_noticebar | s = false
  - ${@IF|${args.debug}|debug}
+ - pcl_downloader_rip
 # - ${@MojangStatusCardReference} 因为上游 API 接口防护弃用
  - ${@NewsList}
  - ${@MainPageVersions|new}
