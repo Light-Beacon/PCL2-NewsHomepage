@@ -15,3 +15,12 @@ output.xaml
 /.idea/*
 /local/*
 /Tools/*
+# Local translation packets and headless converter dependencies
+.translation-work/
+Actions/translation/node_modules/
+
+# AI instructions and prompts must remain local
+.translation-local/
+Actions/translation/README.md
+Actions/translation/prompts/
+Actions/translation/*.prompt.*
