@@ -15,6 +15,16 @@ class PipelineTests(unittest.TestCase):
             with self.assertRaises(RuntimeError): p.sync_after_detection()
             run.assert_not_called()
 
+    def test_official_curl_headers_and_error_page(self):
+        with patch.object(p.subprocess, 'check_output', return_value='<div class="MC_Layout_Article"></div>') as run:
+            p.fetch_official('https://www.minecraft.net/en-us/article/test')
+            command = run.call_args.args[0]
+            self.assertEqual(command[0], 'curl')
+            self.assertIn('sec-ch-ua-mobile: ?0', command)
+            self.assertIn('--fail', command)
+        with patch.object(p.subprocess, 'check_output', return_value='<html>Access Denied</html>'):
+            with self.assertRaises(RuntimeError): p.fetch_official('https://www.minecraft.net/en-us/article/test')
+
     def test_paths(self):
         cases = {'26.3-snapshot-2':'26/26.3/snapshot/26.3-snapshot-2.md',
                  '1.21.11-pre1':'1.21/1.21.11/pre-release/1.21.11-pre1.md',

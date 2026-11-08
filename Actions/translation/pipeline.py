@@ -22,6 +22,24 @@ def fetch(url):
         return response.read().decode('utf-8')
 
 
+def fetch_official(url):
+    headers = {
+        'Upgrade-Insecure-Requests': '1',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0',
+        'sec-ch-ua': '\"Not-A.Brand\";v=\"99\", \"Microsoft Edge\";v=\"157\", \"Chromium\";v=\"157\"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '\"macOS\"',
+    }
+    command = ['curl', '--url', url, '--location', '--fail', '--silent', '--show-error',
+               '--connect-timeout', '15', '--max-time', '45']
+    for name, value in headers.items():
+        command.extend(['-H', f'{name}: {value}'])
+    html = subprocess.check_output(command, text=True, timeout=50)
+    if 'MC_Layout_Article' not in html:
+        raise RuntimeError('Official response is not a supported article page')
+    return html
+
+
 def version_info(vid):
     if re.fullmatch(r'\d+(?:\.\d+){1,2}', vid):
         base, kind, slug = vid, 'release', 'java-edition-' + vid.replace('.', '-')
@@ -85,7 +103,7 @@ def prepare(days):
                 continue  # Never overwrite existing completed/manual translations.
             folder = WORK / vid
             folder.mkdir(exist_ok=True)
-            html = fetch(official)
+            html = fetch_official(official)
             (folder/'official.html').write_text(html)
             source = WORK/'spxx'
             if not source.exists():
@@ -93,7 +111,7 @@ def prepare(days):
             subprocess.run(['git','-C',str(source),'checkout','--detach',SPXX_SHA],check=True)
             subprocess.run(['node',str(Path(__file__).with_name('convert.mjs')),str(source),str(folder/'official.html'),official,str(folder/'source.md')],check=True)
             title = 'Java版' + vid
-            api = 'https://zh.minecraft.wiki/api.php?' + urllib.parse.urlencode({'action':'parse','page':title,'prop':'wikitext','format':'json','redirects':1})
+            api = 'https://zh.minecraft.wiki/api.php?' + urllib.parse.urlencode({'action':'parse','page':title,'prop':'wikitext|revid','format':'json','redirects':1})
             wiki = json.loads(fetch(api))
             if 'error' in wiki:
                 raise RuntimeError('Chinese Wiki page unavailable; retry next run')
